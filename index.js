@@ -44,18 +44,31 @@ app.get('/update', async function(req, res) {
             res.status(404).send(err.message);
         }
         data = JSON.parse(data);
+
+        var html = "";
         Object.entries(data).forEach(([key, val]) => {
             if (val!=='') {
                 var url = BASE_URL;
                 url += val;
-                url += "&geo=" + geo.join("&geo=");
-                url += "&format=" + formatt;
-                url += "&lang=" + langg;
-                url += "&sinceTimePeriod=" + sinceTimePeriod;
-                console.log(key + ":\n--------------------------\n" + url + '\n');
+                if(url.slice(-1) === '?') {
+                    url += "geo=" + geo.join("&geo=");
+                } else {
+                    url += "&geo=" + geo.join("&geo=");
+                }
+                if(!url.includes("format=")) {
+                    url += "&format=" + formatt;
+                }
+                if(!url.includes("lang=")) {
+                    url += "&lang=" + langg;
+                }
+                if(!url.includes("sinceTimePeriod=")) {
+                    url += "&sinceTimePeriod=" + sinceTimePeriod;
+                }
+                html += '<p><a target="_blank" href=' + url + '>' + key + '</a></p>';
+
             }
         });
-        res.send(data);
+        res.send(html);
     });
 });
 
