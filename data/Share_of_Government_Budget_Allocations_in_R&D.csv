@@ -1,0 +1,386 @@
+TIME,COUNTRY,VALUE
+2010,Belgium,1.21
+2010,Bulgaria,0.72
+2010,Czechia,1.3
+2010,Denmark,1.74
+2010,Germany (until 1990 former territory of the FRG),1.86
+2010,Estonia,1.73
+2010,Ireland,0.76
+2010,Greece,0.58
+2010,Spain,1.68
+2010,France,1.44
+2010,Croatia,1.47
+2010,Italy,1.19
+2010,Cyprus,0.99
+2010,Latvia,0.35
+2010,Lithuania,0.99
+2010,Luxembourg,1.22
+2010,Hungary,0.72
+2010,Malta,0.52
+2010,Netherlands,1.59
+2010,Austria,1.45
+2010,Poland,0.79
+2010,Portugal,1.05
+2010,Romania,0.7
+2010,Slovenia,1.19
+2010,Slovakia,0.87
+2010,Finland,2.04
+2010,Sweden,1.64
+2010,Iceland,1.93
+2010,Norway,1.85
+2010,Switzerland,2.3
+2010,United Kingdom,1.23
+2010,Russia,1.31
+2010,United States,1.86
+2010,Japan,1.81
+2010,South Korea,3.49
+2011,Belgium,1.15
+2011,Bulgaria,0.69
+2011,Czechia,1.47
+2011,Denmark,1.78
+2011,Germany (until 1990 former territory of the FRG),1.95
+2011,Estonia,2.02
+2011,Ireland,0.97
+2011,Greece,0.58
+2011,Spain,1.48
+2011,France,1.45
+2011,Croatia,1.5
+2011,Italy,1.13
+2011,Cyprus,0.96
+2011,Latvia,0.36
+2011,Lithuania,0.95
+2011,Luxembourg,1.37
+2011,Hungary,0.59
+2011,Malta,0.5
+2011,Netherlands,1.63
+2011,Austria,1.54
+2011,Poland,0.7
+2011,Portugal,0.89
+2011,Romania,0.68
+2011,Slovenia,1.16
+2011,Slovakia,1.09
+2011,Finland,1.95
+2011,Sweden,1.56
+2011,Iceland,1.86
+2011,Norway,1.82
+2011,Switzerland,0
+2011,United Kingdom,1.2
+2011,Russia,1.47
+2011,United States,1.75
+2011,Japan,1.82
+2011,South Korea,3.45
+2012,Belgium,1.14
+2012,Bulgaria,0.7
+2012,Czechia,1.43
+2012,Denmark,1.73
+2012,Germany (until 1990 former territory of the FRG),1.95
+2012,Estonia,2.07
+2012,Ireland,1.01
+2012,Greece,0.69
+2012,Spain,1.23
+2012,France,1.27
+2012,Croatia,1.48
+2012,Italy,1.07
+2012,Cyprus,0.85
+2012,Latvia,0.38
+2012,Lithuania,0.99
+2012,Luxembourg,1.37
+2012,Hungary,0.69
+2012,Malta,0.64
+2012,Netherlands,1.53
+2012,Austria,1.5
+2012,Poland,0.82
+2012,Portugal,0.72
+2012,Romania,0.58
+2012,Slovenia,1.06
+2012,Slovakia,0.97
+2012,Finland,1.85
+2012,Sweden,1.63
+2012,Iceland,2.03
+2012,Norway,1.81
+2012,Switzerland,2.59
+2012,United Kingdom,1.17
+2012,Russia,1.49
+2012,United States,1.81
+2012,Japan,1.83
+2012,South Korea,3.55
+2013,Belgium,1.14
+2013,Bulgaria,0.65
+2013,Czechia,1.51
+2013,Denmark,1.83
+2013,Germany (until 1990 former territory of the FRG),2.01
+2013,Estonia,2.12
+2013,Ireland,0.99
+2013,Greece,0.76
+2013,Spain,1.22
+2013,France,1.24
+2013,Croatia,1.26
+2013,Italy,1.03
+2013,Cyprus,0.78
+2013,Latvia,0.37
+2013,Lithuania,1.01
+2013,Luxembourg,1.48
+2013,Hungary,1.29
+2013,Malta,0.66
+2013,Netherlands,1.56
+2013,Austria,1.55
+2013,Poland,0.85
+2013,Portugal,0.79
+2013,Romania,0.58
+2013,Slovenia,0.79
+2013,Slovakia,0.91
+2013,Finland,1.74
+2013,Sweden,1.59
+2013,Iceland,2.2
+2013,Norway,1.83
+2013,Switzerland,0
+2013,United Kingdom,1.28
+2013,Russia,1.62
+2013,United States,1.7
+2013,Japan,1.76
+2013,South Korea,3.78
+2014,Belgium,1.22
+2014,Bulgaria,0.57
+2014,Czechia,1.47
+2014,Denmark,1.81
+2014,Germany (until 1990 former territory of the FRG),1.97
+2014,Estonia,1.87
+2014,Ireland,0.99
+2014,Greece,0.87
+2014,Spain,1.24
+2014,France,1.2
+2014,Croatia,1.44
+2014,Italy,1.02
+2014,Cyprus,0.72
+2014,Latvia,0.42
+2014,Lithuania,0.99
+2014,Luxembourg,1.51
+2014,Hungary,0.55
+2014,Malta,0.54
+2014,Netherlands,1.58
+2014,Austria,1.52
+2014,Poland,1.01
+2014,Portugal,0.7
+2014,Romania,0.6
+2014,Slovenia,0.84
+2014,Slovakia,0.88
+2014,Finland,1.69
+2014,Sweden,1.62
+2014,Iceland,1.81
+2014,Norway,1.85
+2014,Switzerland,2.58
+2014,United Kingdom,1.27
+2014,Russia,1.43
+2014,United States,1.7
+2014,Japan,1.76
+2014,South Korea,3.74
+2015,Belgium,1.13
+2015,Bulgaria,0.59
+2015,Czechia,1.43
+2015,Denmark,1.84
+2015,Germany (until 1990 former territory of the FRG),1.99
+2015,Estonia,1.72
+2015,Ireland,0.96
+2015,Greece,0.97
+2015,Spain,1.28
+2015,France,1.14
+2015,Croatia,1.64
+2015,Italy,1.01
+2015,Cyprus,0.82
+2015,Latvia,0.49
+2015,Lithuania,0.93
+2015,Luxembourg,1.53
+2015,Hungary,0.55
+2015,Malta,0.65
+2015,Netherlands,1.58
+2015,Austria,1.56
+2015,Poland,0.98
+2015,Portugal,0.79
+2015,Romania,0.71
+2015,Slovenia,0.84
+2015,Slovakia,0.91
+2015,Finland,1.68
+2015,Sweden,1.58
+2015,Iceland,1.96
+2015,Norway,1.89
+2015,Switzerland,2.62
+2015,United Kingdom,1.25
+2015,Russia,1.53
+2015,United States,1.69
+2015,Japan,1.66
+2015,South Korea,3.74
+2016,Belgium,1.18
+2016,Bulgaria,0.57
+2016,Czechia,1.47
+2016,Denmark,1.72
+2016,Germany (until 1990 former territory of the FRG),2.04
+2016,Estonia,1.69
+2016,Ireland,0.95
+2016,Greece,1.09
+2016,Spain,1.28
+2016,France,1.11
+2016,Croatia,1.55
+2016,Italy,1.05
+2016,Cyprus,0.84
+2016,Latvia,0.55
+2016,Lithuania,0.92
+2016,Luxembourg,1.49
+2016,Hungary,0.83
+2016,Malta,0.54
+2016,Netherlands,1.6
+2016,Austria,1.61
+2016,Poland,0.8
+2016,Portugal,0.85
+2016,Romania,0.81
+2016,Slovenia,0.87
+2016,Slovakia,0.87
+2016,Finland,1.52
+2016,Sweden,1.57
+2016,Iceland,2
+2016,Norway,1.94
+2016,Switzerland,0
+2016,United Kingdom,1.24
+2016,Russia,0
+2016,United States,0
+2016,Japan,0
+2016,South Korea,0
+2017,Belgium,1.27
+2017,Bulgaria,0.6
+2017,Czechia,1.54
+2017,Denmark,1.75
+2017,Germany (until 1990 former territory of the FRG),2.09
+2017,Estonia,1.53
+2017,Ireland,0.95
+2017,Greece,1.03
+2017,Spain,1.25
+2017,France,1.14
+2017,Croatia,1.59
+2017,Italy,1.04
+2017,Cyprus,0.84
+2017,Latvia,0.57
+2017,Lithuania,0.94
+2017,Luxembourg,1.45
+2017,Hungary,0.74
+2017,Malta,0.53
+2017,Netherlands,1.58
+2017,Austria,1.59
+2017,Poland,0.87
+2017,Portugal,0.82
+2017,Romania,0.56
+2017,Slovenia,0.9
+2017,Slovakia,0.92
+2017,Finland,1.55
+2017,Sweden,1.61
+2017,Iceland,2.13
+2017,Norway,2.04
+2017,Switzerland,2.97
+2017,United Kingdom,1.27
+2017,Russia,0
+2017,United States,0
+2017,Japan,0
+2017,South Korea,0
+2018,Belgium,1.21
+2018,Bulgaria,0.55
+2018,Czechia,1.52
+2018,Denmark,1.76
+2018,Germany (until 1990 former territory of the FRG),2.13
+2018,Estonia,1.79
+2018,Ireland,0.93
+2018,Greece,1.28
+2018,Spain,1.25
+2018,France,1.18
+2018,Croatia,1.65
+2018,Italy,1.05
+2018,Cyprus,0.73
+2018,Latvia,0.56
+2018,Lithuania,0.86
+2018,Luxembourg,1.4
+2018,Hungary,0.65
+2018,Malta,0.56
+2018,Netherlands,1.69
+2018,Austria,1.55
+2018,Poland,0.69
+2018,Portugal,0.84
+2018,Romania,0.49
+2018,Slovenia,0.96
+2018,Slovakia,0.92
+2018,Finland,1.57
+2018,Sweden,1.56
+2018,Iceland,2.18
+2018,Norway,2.02
+2018,Switzerland,2.86
+2018,United Kingdom,1.33
+2018,Russia,0
+2018,United States,0
+2018,Japan,0
+2018,South Korea,0
+2019,Belgium,1.34
+2019,Bulgaria,0.63
+2019,Czechia,1.51
+2019,Denmark,1.8
+2019,Germany (until 1990 former territory of the FRG),2.18
+2019,Estonia,1.6
+2019,Ireland,0.93
+2019,Greece,1.47
+2019,Spain,1.24
+2019,France,1.13
+2019,Croatia,1.65
+2019,Italy,1.13
+2019,Cyprus,0.91
+2019,Latvia,0.59
+2019,Lithuania,0.9
+2019,Luxembourg,1.43
+2019,Hungary,0.59
+2019,Malta,0.6
+2019,Netherlands,1.65
+2019,Austria,1.56
+2019,Poland,1.06
+2019,Portugal,0.82
+2019,Romania,0.53
+2019,Slovenia,1.05
+2019,Slovakia,0.94
+2019,Finland,1.57
+2019,Sweden,1.49
+2019,Iceland,2.11
+2019,Norway,1.99
+2019,Switzerland,2.91
+2019,United Kingdom,1.36
+2019,Russia,0
+2019,United States,0
+2019,Japan,0
+2019,South Korea,0
+2020,Belgium,1.26
+2020,Bulgaria,0.57
+2020,Czechia,1.42
+2020,Denmark,1.81
+2020,Germany (until 1990 former territory of the FRG),2.17
+2020,Estonia,1.52
+2020,Ireland,0.85
+2020,Greece,1.48
+2020,Spain,1.18
+2020,France,1.12
+2020,Croatia,1.44
+2020,Italy,1.17
+2020,Cyprus,1.21
+2020,Latvia,0.62
+2020,Lithuania,0.77
+2020,Luxembourg,1.26
+2020,Hungary,1.04
+2020,Malta,0.5
+2020,Netherlands,1.58
+2020,Austria,1.52
+2020,Poland,0.9
+2020,Portugal,0.75
+2020,Romania,0.43
+2020,Slovenia,1.01
+2020,Slovakia,0.92
+2020,Finland,1.68
+2020,Sweden,1.47
+2020,Iceland,0
+2020,Norway,1.98
+2020,Switzerland,2.72
+2020,United Kingdom,0
+2020,Russia,0
+2020,United States,0
+2020,Japan,0
+2020,South Korea,0

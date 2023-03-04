@@ -1,0 +1,1021 @@
+TIME,COUNTRY,DEG_URB,VALUE
+2011,Belgium,Cities,21.9
+2011,Belgium,Towns and suburbs,8.4
+2011,Belgium,Rural areas,6.3
+2011,Bulgaria,Cities,35.0
+2011,Bulgaria,Towns and suburbs,31.6
+2011,Bulgaria,Rural areas,19.8
+2011,Czechia,Cities,22.7
+2011,Czechia,Towns and suburbs,12.2
+2011,Czechia,Rural areas,9.9
+2011,Denmark,Cities,21.9
+2011,Denmark,Towns and suburbs,12.9
+2011,Denmark,Rural areas,11.6
+2011,Germany (until 1990 former territory of the FRG),Cities,18.2
+2011,Germany (until 1990 former territory of the FRG),Towns and suburbs,8.4
+2011,Germany (until 1990 former territory of the FRG),Rural areas,6.6
+2011,Estonia,Cities,20.5
+2011,Estonia,Towns and suburbs,9.9
+2011,Estonia,Rural areas,9.5
+2011,Ireland,Cities,16.4
+2011,Ireland,Towns and suburbs,10.7
+2011,Ireland,Rural areas,4.8
+2011,Greece,Cities,28.1
+2011,Greece,Towns and suburbs,25.7
+2011,Greece,Rural areas,10.6
+2011,Spain,Cities,13.2
+2011,Spain,Towns and suburbs,11.3
+2011,Spain,Rural areas,6.0
+2011,France,Cities,22.0
+2011,France,Towns and suburbs,10.1
+2011,France,Rural areas,5.7
+2011,Croatia,Cities,6.6
+2011,Croatia,Towns and suburbs,3.1
+2011,Croatia,Rural areas,1.8
+2011,Italy,Cities,21.7
+2011,Italy,Towns and suburbs,10.8
+2011,Italy,Rural areas,4.2
+2011,Cyprus,Cities,15.7
+2011,Cyprus,Towns and suburbs,16.2
+2011,Cyprus,Rural areas,12.9
+2011,Latvia,Cities,27.2
+2011,Latvia,Towns and suburbs,1.5
+2011,Latvia,Rural areas,12.5
+2011,Lithuania,Cities,8.7
+2011,Lithuania,Towns and suburbs,0
+2011,Lithuania,Rural areas,1.9
+2011,Luxembourg,Cities,15.2
+2011,Luxembourg,Towns and suburbs,9.6
+2011,Luxembourg,Rural areas,3.9
+2011,Hungary,Cities,13.5
+2011,Hungary,Towns and suburbs,11.4
+2011,Hungary,Rural areas,9.1
+2011,Malta,Cities,13.7
+2011,Malta,Towns and suburbs,4.4
+2011,Malta,Rural areas,0
+2011,Netherlands,Cities,22.2
+2011,Netherlands,Towns and suburbs,11.7
+2011,Netherlands,Rural areas,10.3
+2011,Austria,Cities,20.7
+2011,Austria,Towns and suburbs,9.2
+2011,Austria,Rural areas,5.7
+2011,Poland,Cities,11.7
+2011,Poland,Towns and suburbs,2.9
+2011,Poland,Rural areas,2.7
+2011,Portugal,Cities,17.8
+2011,Portugal,Towns and suburbs,4.8
+2011,Portugal,Rural areas,2.6
+2011,Romania,Cities,23.2
+2011,Romania,Towns and suburbs,0.2
+2011,Romania,Rural areas,12.5
+2011,Slovenia,Cities,17.7
+2011,Slovenia,Towns and suburbs,7.9
+2011,Slovenia,Rural areas,5.4
+2011,Slovakia,Cities,18.5
+2011,Slovakia,Towns and suburbs,8.8
+2011,Slovakia,Rural areas,5.9
+2011,Finland,Cities,14.7
+2011,Finland,Towns and suburbs,8.5
+2011,Finland,Rural areas,5.4
+2011,Sweden,Cities,19.0
+2011,Sweden,Towns and suburbs,12.1
+2011,Sweden,Rural areas,8.3
+2011,Iceland,Cities,3.2
+2011,Iceland,Towns and suburbs,0
+2011,Iceland,Rural areas,0.9
+2011,Norway,Cities,6.7
+2011,Norway,Towns and suburbs,3.5
+2011,Norway,Rural areas,2.6
+2011,Switzerland,Cities,15.6
+2011,Switzerland,Towns and suburbs,10.4
+2011,Switzerland,Rural areas,4.5
+2011,United Kingdom,Cities,25.3
+2011,United Kingdom,Towns and suburbs,16.4
+2011,United Kingdom,Rural areas,12.0
+2011,North Macedonia,Cities,9.8
+2011,North Macedonia,Towns and suburbs,3.0
+2011,North Macedonia,Rural areas,0
+2011,Albania,Cities,0
+2011,Albania,Towns and suburbs,0
+2011,Albania,Rural areas,0
+2011,Serbia,Cities,0
+2011,Serbia,Towns and suburbs,0
+2011,Serbia,Rural areas,0
+2012,Belgium,Cities,24.8
+2012,Belgium,Towns and suburbs,10.7
+2012,Belgium,Rural areas,8.1
+2012,Bulgaria,Cities,36.8
+2012,Bulgaria,Towns and suburbs,22.4
+2012,Bulgaria,Rural areas,17.5
+2012,Czechia,Cities,19.0
+2012,Czechia,Towns and suburbs,13.0
+2012,Czechia,Rural areas,8.7
+2012,Denmark,Cities,16.0
+2012,Denmark,Towns and suburbs,8.1
+2012,Denmark,Rural areas,6.3
+2012,Germany (until 1990 former territory of the FRG),Cities,21.4
+2012,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.2
+2012,Germany (until 1990 former territory of the FRG),Rural areas,5.5
+2012,Estonia,Cities,22.2
+2012,Estonia,Towns and suburbs,14.1
+2012,Estonia,Rural areas,9.8
+2012,Ireland,Cities,16.3
+2012,Ireland,Towns and suburbs,9.6
+2012,Ireland,Rural areas,6.4
+2012,Greece,Cities,29.5
+2012,Greece,Towns and suburbs,15.7
+2012,Greece,Rural areas,9.9
+2012,Spain,Cities,13.4
+2012,Spain,Towns and suburbs,8.5
+2012,Spain,Rural areas,5.5
+2012,France,Cities,20.0
+2012,France,Towns and suburbs,14.1
+2012,France,Rural areas,8.0
+2012,Croatia,Cities,6.8
+2012,Croatia,Towns and suburbs,2.6
+2012,Croatia,Rural areas,1.5
+2012,Italy,Cities,21.8
+2012,Italy,Towns and suburbs,11.7
+2012,Italy,Rural areas,4.0
+2012,Cyprus,Cities,16.7
+2012,Cyprus,Towns and suburbs,18.2
+2012,Cyprus,Rural areas,10.9
+2012,Latvia,Cities,22.7
+2012,Latvia,Towns and suburbs,7.7
+2012,Latvia,Rural areas,13.1
+2012,Lithuania,Cities,9.2
+2012,Lithuania,Towns and suburbs,4.0
+2012,Lithuania,Rural areas,1.5
+2012,Luxembourg,Cities,15.9
+2012,Luxembourg,Towns and suburbs,22.3
+2012,Luxembourg,Rural areas,7.4
+2012,Hungary,Cities,10.5
+2012,Hungary,Towns and suburbs,11.2
+2012,Hungary,Rural areas,9.7
+2012,Malta,Cities,13.3
+2012,Malta,Towns and suburbs,7.2
+2012,Malta,Rural areas,0
+2012,Netherlands,Cities,23.1
+2012,Netherlands,Towns and suburbs,16.1
+2012,Netherlands,Rural areas,8.8
+2012,Austria,Cities,20.9
+2012,Austria,Towns and suburbs,10.4
+2012,Austria,Rural areas,5.9
+2012,Poland,Cities,12.5
+2012,Poland,Towns and suburbs,5.4
+2012,Poland,Rural areas,2.0
+2012,Portugal,Cities,16.9
+2012,Portugal,Towns and suburbs,7.9
+2012,Portugal,Rural areas,4.9
+2012,Romania,Cities,18.9
+2012,Romania,Towns and suburbs,12.7
+2012,Romania,Rural areas,10.2
+2012,Slovenia,Cities,17.2
+2012,Slovenia,Towns and suburbs,6.7
+2012,Slovenia,Rural areas,5.3
+2012,Slovakia,Cities,15.6
+2012,Slovakia,Towns and suburbs,9.4
+2012,Slovakia,Rural areas,6.4
+2012,Finland,Cities,13.8
+2012,Finland,Towns and suburbs,10.6
+2012,Finland,Rural areas,5.9
+2012,Sweden,Cities,18.3
+2012,Sweden,Towns and suburbs,11.6
+2012,Sweden,Rural areas,7.8
+2012,Iceland,Cities,4.4
+2012,Iceland,Towns and suburbs,0
+2012,Iceland,Rural areas,1.6
+2012,Norway,Cities,8.0
+2012,Norway,Towns and suburbs,5.0
+2012,Norway,Rural areas,3.1
+2012,Switzerland,Cities,24.2
+2012,Switzerland,Towns and suburbs,15.3
+2012,Switzerland,Rural areas,9.9
+2012,United Kingdom,Cities,24.2
+2012,United Kingdom,Towns and suburbs,15.9
+2012,United Kingdom,Rural areas,9.4
+2012,North Macedonia,Cities,0
+2012,North Macedonia,Towns and suburbs,0
+2012,North Macedonia,Rural areas,0
+2012,Albania,Cities,0
+2012,Albania,Towns and suburbs,0
+2012,Albania,Rural areas,0
+2012,Serbia,Cities,0
+2012,Serbia,Towns and suburbs,0
+2012,Serbia,Rural areas,0
+2013,Belgium,Cities,31.9
+2013,Belgium,Towns and suburbs,14.5
+2013,Belgium,Rural areas,13.4
+2013,Bulgaria,Cities,32.2
+2013,Bulgaria,Towns and suburbs,24.3
+2013,Bulgaria,Rural areas,18.7
+2013,Czechia,Cities,17.5
+2013,Czechia,Towns and suburbs,15.8
+2013,Czechia,Rural areas,9.4
+2013,Denmark,Cities,15.6
+2013,Denmark,Towns and suburbs,6.9
+2013,Denmark,Rural areas,5.3
+2013,Germany (until 1990 former territory of the FRG),Cities,22.9
+2013,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.5
+2013,Germany (until 1990 former territory of the FRG),Rural areas,4.8
+2013,Estonia,Cities,15.4
+2013,Estonia,Towns and suburbs,11.0
+2013,Estonia,Rural areas,10.1
+2013,Ireland,Cities,16.7
+2013,Ireland,Towns and suburbs,10.1
+2013,Ireland,Rural areas,8.6
+2013,Greece,Cities,28.4
+2013,Greece,Towns and suburbs,23.7
+2013,Greece,Rural areas,8.7
+2013,Spain,Cities,19.3
+2013,Spain,Towns and suburbs,10.2
+2013,Spain,Rural areas,8.4
+2013,France,Cities,23.7
+2013,France,Towns and suburbs,15.1
+2013,France,Rural areas,8.5
+2013,Croatia,Cities,6.6
+2013,Croatia,Towns and suburbs,1.1
+2013,Croatia,Rural areas,2.0
+2013,Italy,Cities,22.0
+2013,Italy,Towns and suburbs,13.4
+2013,Italy,Rural areas,5.4
+2013,Cyprus,Cities,14.4
+2013,Cyprus,Towns and suburbs,17.0
+2013,Cyprus,Rural areas,15.5
+2013,Latvia,Cities,18.2
+2013,Latvia,Towns and suburbs,14.8
+2013,Latvia,Rural areas,6.1
+2013,Lithuania,Cities,10.1
+2013,Lithuania,Towns and suburbs,5.6
+2013,Lithuania,Rural areas,3.3
+2013,Luxembourg,Cities,14.3
+2013,Luxembourg,Towns and suburbs,16.4
+2013,Luxembourg,Rural areas,9.6
+2013,Hungary,Cities,14.0
+2013,Hungary,Towns and suburbs,12.7
+2013,Hungary,Rural areas,11.5
+2013,Malta,Cities,13.4
+2013,Malta,Towns and suburbs,9.0
+2013,Malta,Rural areas,0
+2013,Netherlands,Cities,22.9
+2013,Netherlands,Towns and suburbs,15.7
+2013,Netherlands,Rural areas,9.0
+2013,Austria,Cities,21.2
+2013,Austria,Towns and suburbs,9.4
+2013,Austria,Rural areas,5.5
+2013,Poland,Cities,12.8
+2013,Poland,Towns and suburbs,5.7
+2013,Poland,Rural areas,2.3
+2013,Portugal,Cities,19.1
+2013,Portugal,Towns and suburbs,10.5
+2013,Portugal,Rural areas,6.7
+2013,Romania,Cities,17.7
+2013,Romania,Towns and suburbs,14.6
+2013,Romania,Rural areas,14.8
+2013,Slovenia,Cities,17.2
+2013,Slovenia,Towns and suburbs,8.1
+2013,Slovenia,Rural areas,6.3
+2013,Slovakia,Cities,12.1
+2013,Slovakia,Towns and suburbs,10.8
+2013,Slovakia,Rural areas,6.1
+2013,Finland,Cities,12.7
+2013,Finland,Towns and suburbs,8.6
+2013,Finland,Rural areas,5.7
+2013,Sweden,Cities,14.2
+2013,Sweden,Towns and suburbs,8.6
+2013,Sweden,Rural areas,6.7
+2013,Iceland,Cities,2.6
+2013,Iceland,Towns and suburbs,0
+2013,Iceland,Rural areas,1.6
+2013,Norway,Cities,6.1
+2013,Norway,Towns and suburbs,3.7
+2013,Norway,Rural areas,2.8
+2013,Switzerland,Cities,21.3
+2013,Switzerland,Towns and suburbs,13.2
+2013,Switzerland,Rural areas,9.6
+2013,United Kingdom,Cities,22.1
+2013,United Kingdom,Towns and suburbs,12.7
+2013,United Kingdom,Rural areas,8.5
+2013,North Macedonia,Cities,0
+2013,North Macedonia,Towns and suburbs,0
+2013,North Macedonia,Rural areas,0
+2013,Albania,Cities,0
+2013,Albania,Towns and suburbs,0
+2013,Albania,Rural areas,0
+2013,Serbia,Cities,29.3
+2013,Serbia,Towns and suburbs,18.1
+2013,Serbia,Rural areas,12.8
+2014,Belgium,Cities,26.9
+2014,Belgium,Towns and suburbs,12.5
+2014,Belgium,Rural areas,10.1
+2014,Bulgaria,Cities,33.4
+2014,Bulgaria,Towns and suburbs,25.8
+2014,Bulgaria,Rural areas,19.9
+2014,Czechia,Cities,20.1
+2014,Czechia,Towns and suburbs,13.7
+2014,Czechia,Rural areas,7.6
+2014,Denmark,Cities,15.8
+2014,Denmark,Towns and suburbs,6.4
+2014,Denmark,Rural areas,5.3
+2014,Germany (until 1990 former territory of the FRG),Cities,22.0
+2014,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.7
+2014,Germany (until 1990 former territory of the FRG),Rural areas,5.3
+2014,Estonia,Cities,14.1
+2014,Estonia,Towns and suburbs,20.6
+2014,Estonia,Rural areas,7.3
+2014,Ireland,Cities,15.1
+2014,Ireland,Towns and suburbs,10.7
+2014,Ireland,Rural areas,7.6
+2014,Greece,Cities,24.1
+2014,Greece,Towns and suburbs,13.8
+2014,Greece,Rural areas,9.5
+2014,Spain,Cities,15.6
+2014,Spain,Towns and suburbs,8.4
+2014,Spain,Rural areas,7.7
+2014,France,Cities,21.2
+2014,France,Towns and suburbs,12.6
+2014,France,Rural areas,8.6
+2014,Croatia,Cities,6.7
+2014,Croatia,Towns and suburbs,1.4
+2014,Croatia,Rural areas,1.0
+2014,Italy,Cities,23.6
+2014,Italy,Towns and suburbs,15.9
+2014,Italy,Rural areas,7.8
+2014,Cyprus,Cities,13.6
+2014,Cyprus,Towns and suburbs,13.3
+2014,Cyprus,Rural areas,7.7
+2014,Latvia,Cities,19.9
+2014,Latvia,Towns and suburbs,11.3
+2014,Latvia,Rural areas,6.9
+2014,Lithuania,Cities,6.3
+2014,Lithuania,Towns and suburbs,5.5
+2014,Lithuania,Rural areas,3.3
+2014,Luxembourg,Cities,18.4
+2014,Luxembourg,Towns and suburbs,22.7
+2014,Luxembourg,Rural areas,11.9
+2014,Hungary,Cities,16.9
+2014,Hungary,Towns and suburbs,12.1
+2014,Hungary,Rural areas,13.2
+2014,Malta,Cities,12.7
+2014,Malta,Towns and suburbs,8.5
+2014,Malta,Rural areas,0
+2014,Netherlands,Cities,24.0
+2014,Netherlands,Towns and suburbs,15.3
+2014,Netherlands,Rural areas,10.8
+2014,Austria,Cities,24.6
+2014,Austria,Towns and suburbs,11.2
+2014,Austria,Rural areas,6.9
+2014,Poland,Cities,12.4
+2014,Poland,Towns and suburbs,5.3
+2014,Poland,Rural areas,2.5
+2014,Portugal,Cities,16.0
+2014,Portugal,Towns and suburbs,10.8
+2014,Portugal,Rural areas,5.3
+2014,Romania,Cities,18.0
+2014,Romania,Towns and suburbs,14.3
+2014,Romania,Rural areas,12.2
+2014,Slovenia,Cities,18.9
+2014,Slovenia,Towns and suburbs,9.2
+2014,Slovenia,Rural areas,7.2
+2014,Slovakia,Cities,13.3
+2014,Slovakia,Towns and suburbs,10.1
+2014,Slovakia,Rural areas,5.0
+2014,Finland,Cities,10.0
+2014,Finland,Towns and suburbs,6.8
+2014,Finland,Rural areas,4.0
+2014,Sweden,Cities,15.5
+2014,Sweden,Towns and suburbs,10.0
+2014,Sweden,Rural areas,5.8
+2014,Iceland,Cities,2.5
+2014,Iceland,Towns and suburbs,2.2
+2014,Iceland,Rural areas,0.1
+2014,Norway,Cities,0
+2014,Norway,Towns and suburbs,0
+2014,Norway,Rural areas,0
+2014,Switzerland,Cities,20.4
+2014,Switzerland,Towns and suburbs,13.9
+2014,Switzerland,Rural areas,10.2
+2014,United Kingdom,Cities,20.4
+2014,United Kingdom,Towns and suburbs,13.1
+2014,United Kingdom,Rural areas,7.6
+2014,North Macedonia,Cities,0
+2014,North Macedonia,Towns and suburbs,0
+2014,North Macedonia,Rural areas,0
+2014,Albania,Cities,0
+2014,Albania,Towns and suburbs,0
+2014,Albania,Rural areas,0
+2014,Serbia,Cities,31.4
+2014,Serbia,Towns and suburbs,21.6
+2014,Serbia,Rural areas,10.5
+2015,Belgium,Cities,25.7
+2015,Belgium,Towns and suburbs,12.2
+2015,Belgium,Rural areas,12.1
+2015,Bulgaria,Cities,33.7
+2015,Bulgaria,Towns and suburbs,22.1
+2015,Bulgaria,Rural areas,19.7
+2015,Czechia,Cities,17.4
+2015,Czechia,Towns and suburbs,12.8
+2015,Czechia,Rural areas,6.8
+2015,Denmark,Cities,12.2
+2015,Denmark,Towns and suburbs,6.1
+2015,Denmark,Rural areas,5.0
+2015,Germany (until 1990 former territory of the FRG),Cities,23.3
+2015,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.3
+2015,Germany (until 1990 former territory of the FRG),Rural areas,5.1
+2015,Estonia,Cities,15.0
+2015,Estonia,Towns and suburbs,16.0
+2015,Estonia,Rural areas,6.9
+2015,Ireland,Cities,16.3
+2015,Ireland,Towns and suburbs,9.8
+2015,Ireland,Rural areas,7.3
+2015,Greece,Cities,19.6
+2015,Greece,Towns and suburbs,13.3
+2015,Greece,Rural areas,5.0
+2015,Spain,Cities,13.8
+2015,Spain,Towns and suburbs,7.2
+2015,Spain,Rural areas,4.9
+2015,France,Cities,19.9
+2015,France,Towns and suburbs,13.4
+2015,France,Rural areas,6.9
+2015,Croatia,Cities,7.6
+2015,Croatia,Towns and suburbs,2.0
+2015,Croatia,Rural areas,0.8
+2015,Italy,Cities,29.0
+2015,Italy,Towns and suburbs,14.9
+2015,Italy,Rural areas,13.1
+2015,Cyprus,Cities,10.1
+2015,Cyprus,Towns and suburbs,18.2
+2015,Cyprus,Rural areas,10.6
+2015,Latvia,Cities,21.3
+2015,Latvia,Towns and suburbs,5.3
+2015,Latvia,Rural areas,4.6
+2015,Lithuania,Cities,7.0
+2015,Lithuania,Towns and suburbs,0.0
+2015,Lithuania,Rural areas,3.0
+2015,Luxembourg,Cities,20.4
+2015,Luxembourg,Towns and suburbs,17.6
+2015,Luxembourg,Rural areas,11.2
+2015,Hungary,Cities,11.3
+2015,Hungary,Towns and suburbs,12.6
+2015,Hungary,Rural areas,9.4
+2015,Malta,Cities,12.0
+2015,Malta,Towns and suburbs,2.4
+2015,Malta,Rural areas,0
+2015,Netherlands,Cities,23.0
+2015,Netherlands,Towns and suburbs,14.2
+2015,Netherlands,Rural areas,9.2
+2015,Austria,Cities,22.6
+2015,Austria,Towns and suburbs,10.8
+2015,Austria,Rural areas,7.3
+2015,Poland,Cities,12.1
+2015,Poland,Towns and suburbs,4.4
+2015,Poland,Rural areas,2.0
+2015,Portugal,Cities,14.3
+2015,Portugal,Towns and suburbs,10.0
+2015,Portugal,Rural areas,4.8
+2015,Romania,Cities,16.4
+2015,Romania,Towns and suburbs,13.7
+2015,Romania,Rural areas,10.4
+2015,Slovenia,Cities,16.2
+2015,Slovenia,Towns and suburbs,9.4
+2015,Slovenia,Rural areas,6.3
+2015,Slovakia,Cities,10.6
+2015,Slovakia,Towns and suburbs,7.8
+2015,Slovakia,Rural areas,5.0
+2015,Finland,Cities,11.0
+2015,Finland,Towns and suburbs,6.3
+2015,Finland,Rural areas,3.7
+2015,Sweden,Cities,15.0
+2015,Sweden,Towns and suburbs,9.6
+2015,Sweden,Rural areas,7.8
+2015,Iceland,Cities,2.8
+2015,Iceland,Towns and suburbs,1.8
+2015,Iceland,Rural areas,0.2
+2015,Norway,Cities,9.8
+2015,Norway,Towns and suburbs,4.8
+2015,Norway,Rural areas,3.3
+2015,Switzerland,Cities,17.9
+2015,Switzerland,Towns and suburbs,11.3
+2015,Switzerland,Rural areas,6.7
+2015,United Kingdom,Cities,20.7
+2015,United Kingdom,Towns and suburbs,12.1
+2015,United Kingdom,Rural areas,9.8
+2015,North Macedonia,Cities,0
+2015,North Macedonia,Towns and suburbs,0
+2015,North Macedonia,Rural areas,0
+2015,Albania,Cities,0
+2015,Albania,Towns and suburbs,0
+2015,Albania,Rural areas,0
+2015,Serbia,Cities,26.4
+2015,Serbia,Towns and suburbs,15.9
+2015,Serbia,Rural areas,8.6
+2016,Belgium,Cities,23.8
+2016,Belgium,Towns and suburbs,9.2
+2016,Belgium,Rural areas,9.0
+2016,Bulgaria,Cities,33.5
+2016,Bulgaria,Towns and suburbs,20.2
+2016,Bulgaria,Rural areas,17.2
+2016,Czechia,Cities,17.3
+2016,Czechia,Towns and suburbs,12.1
+2016,Czechia,Rural areas,6.6
+2016,Denmark,Cities,13.9
+2016,Denmark,Towns and suburbs,7.5
+2016,Denmark,Rural areas,4.0
+2016,Germany (until 1990 former territory of the FRG),Cities,22.4
+2016,Germany (until 1990 former territory of the FRG),Towns and suburbs,11.2
+2016,Germany (until 1990 former territory of the FRG),Rural areas,5.9
+2016,Estonia,Cities,12.7
+2016,Estonia,Towns and suburbs,9.1
+2016,Estonia,Rural areas,5.3
+2016,Ireland,Cities,14.4
+2016,Ireland,Towns and suburbs,10.0
+2016,Ireland,Rural areas,5.7
+2016,Greece,Cities,18.1
+2016,Greece,Towns and suburbs,11.4
+2016,Greece,Rural areas,4.7
+2016,Spain,Cities,12.8
+2016,Spain,Towns and suburbs,9.2
+2016,Spain,Rural areas,6.3
+2016,France,Cities,20.8
+2016,France,Towns and suburbs,13.9
+2016,France,Rural areas,7.9
+2016,Croatia,Cities,6.7
+2016,Croatia,Towns and suburbs,2.9
+2016,Croatia,Rural areas,0.8
+2016,Italy,Cities,23.2
+2016,Italy,Towns and suburbs,11.5
+2016,Italy,Rural areas,8.4
+2016,Cyprus,Cities,12.4
+2016,Cyprus,Towns and suburbs,6.6
+2016,Cyprus,Rural areas,7.7
+2016,Latvia,Cities,17.8
+2016,Latvia,Towns and suburbs,6.3
+2016,Latvia,Rural areas,3.4
+2016,Lithuania,Cities,5.3
+2016,Lithuania,Towns and suburbs,0.0
+2016,Lithuania,Rural areas,2.0
+2016,Luxembourg,Cities,14.1
+2016,Luxembourg,Towns and suburbs,15.2
+2016,Luxembourg,Rural areas,9.4
+2016,Hungary,Cities,9.8
+2016,Hungary,Towns and suburbs,12.3
+2016,Hungary,Rural areas,8.4
+2016,Malta,Cities,10.9
+2016,Malta,Towns and suburbs,5.6
+2016,Malta,Rural areas,0
+2016,Netherlands,Cities,21.6
+2016,Netherlands,Towns and suburbs,12.2
+2016,Netherlands,Rural areas,8.1
+2016,Austria,Cities,22.0
+2016,Austria,Towns and suburbs,11.1
+2016,Austria,Rural areas,6.2
+2016,Poland,Cities,10.9
+2016,Poland,Towns and suburbs,5.2
+2016,Poland,Rural areas,2.0
+2016,Portugal,Cities,10.7
+2016,Portugal,Towns and suburbs,7.2
+2016,Portugal,Rural areas,3.5
+2016,Romania,Cities,20.1
+2016,Romania,Towns and suburbs,12.5
+2016,Romania,Rural areas,10.8
+2016,Slovenia,Cities,15.6
+2016,Slovenia,Towns and suburbs,8.6
+2016,Slovenia,Rural areas,5.5
+2016,Slovakia,Cities,9.5
+2016,Slovakia,Towns and suburbs,8.1
+2016,Slovakia,Rural areas,4.3
+2016,Finland,Cities,9.0
+2016,Finland,Towns and suburbs,6.4
+2016,Finland,Rural areas,3.5
+2016,Sweden,Cities,17.5
+2016,Sweden,Towns and suburbs,11.0
+2016,Sweden,Rural areas,9.4
+2016,Iceland,Cities,2.8
+2016,Iceland,Towns and suburbs,2.0
+2016,Iceland,Rural areas,0.5
+2016,Norway,Cities,7.8
+2016,Norway,Towns and suburbs,4.1
+2016,Norway,Rural areas,2.3
+2016,Switzerland,Cities,17.4
+2016,Switzerland,Towns and suburbs,9.3
+2016,Switzerland,Rural areas,7.3
+2016,United Kingdom,Cities,21.5
+2016,United Kingdom,Towns and suburbs,11.7
+2016,United Kingdom,Rural areas,7.5
+2016,North Macedonia,Cities,9.5
+2016,North Macedonia,Towns and suburbs,3.3
+2016,North Macedonia,Rural areas,2.9
+2016,Albania,Cities,0
+2016,Albania,Towns and suburbs,0
+2016,Albania,Rural areas,0
+2016,Serbia,Cities,29.0
+2016,Serbia,Towns and suburbs,18.3
+2016,Serbia,Rural areas,8.1
+2017,Belgium,Cities,21.0
+2017,Belgium,Towns and suburbs,8.9
+2017,Belgium,Rural areas,10.0
+2017,Bulgaria,Cities,30.8
+2017,Bulgaria,Towns and suburbs,18.5
+2017,Bulgaria,Rural areas,17.8
+2017,Czechia,Cities,15.8
+2017,Czechia,Towns and suburbs,9.0
+2017,Czechia,Rural areas,4.2
+2017,Denmark,Cities,13.1
+2017,Denmark,Towns and suburbs,6.5
+2017,Denmark,Rural areas,4.0
+2017,Germany (until 1990 former territory of the FRG),Cities,23.6
+2017,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.6
+2017,Germany (until 1990 former territory of the FRG),Rural areas,5.7
+2017,Estonia,Cities,11.0
+2017,Estonia,Towns and suburbs,4.7
+2017,Estonia,Rural areas,4.2
+2017,Ireland,Cities,16.3
+2017,Ireland,Towns and suburbs,7.7
+2017,Ireland,Rural areas,5.0
+2017,Greece,Cities,22.1
+2017,Greece,Towns and suburbs,12.6
+2017,Greece,Rural areas,4.6
+2017,Spain,Cities,12.2
+2017,Spain,Towns and suburbs,5.2
+2017,Spain,Rural areas,4.7
+2017,France,Cities,19.0
+2017,France,Towns and suburbs,14.3
+2017,France,Rural areas,6.8
+2017,Croatia,Cities,6.2
+2017,Croatia,Towns and suburbs,2.6
+2017,Croatia,Rural areas,1.3
+2017,Italy,Cities,18.8
+2017,Italy,Towns and suburbs,10.5
+2017,Italy,Rural areas,7.0
+2017,Cyprus,Cities,15.3
+2017,Cyprus,Towns and suburbs,10.0
+2017,Cyprus,Rural areas,9.2
+2017,Latvia,Cities,13.2
+2017,Latvia,Towns and suburbs,5.7
+2017,Latvia,Rural areas,3.5
+2017,Lithuania,Cities,13.1
+2017,Lithuania,Towns and suburbs,1.2
+2017,Lithuania,Rural areas,4.6
+2017,Luxembourg,Cities,16.4
+2017,Luxembourg,Towns and suburbs,13.3
+2017,Luxembourg,Rural areas,9.3
+2017,Hungary,Cities,8.8
+2017,Hungary,Towns and suburbs,7.0
+2017,Hungary,Rural areas,5.7
+2017,Malta,Cities,10.6
+2017,Malta,Towns and suburbs,4.8
+2017,Malta,Rural areas,0
+2017,Netherlands,Cities,19.1
+2017,Netherlands,Towns and suburbs,10.7
+2017,Netherlands,Rural areas,8.1
+2017,Austria,Cities,19.4
+2017,Austria,Towns and suburbs,9.1
+2017,Austria,Rural areas,5.6
+2017,Poland,Cities,10.9
+2017,Poland,Towns and suburbs,5.5
+2017,Poland,Rural areas,1.6
+2017,Portugal,Cities,11.1
+2017,Portugal,Towns and suburbs,6.6
+2017,Portugal,Rural areas,4.1
+2017,Romania,Cities,14.9
+2017,Romania,Towns and suburbs,11.6
+2017,Romania,Rural areas,8.8
+2017,Slovenia,Cities,14.1
+2017,Slovenia,Towns and suburbs,8.2
+2017,Slovenia,Rural areas,5.3
+2017,Slovakia,Cities,8.9
+2017,Slovakia,Towns and suburbs,7.6
+2017,Slovakia,Rural areas,3.5
+2017,Finland,Cities,9.4
+2017,Finland,Towns and suburbs,5.3
+2017,Finland,Rural areas,3.1
+2017,Sweden,Cities,16.9
+2017,Sweden,Towns and suburbs,10.8
+2017,Sweden,Rural areas,9.5
+2017,Iceland,Cities,2.3
+2017,Iceland,Towns and suburbs,1.9
+2017,Iceland,Rural areas,1.1
+2017,Norway,Cities,6.2
+2017,Norway,Towns and suburbs,3.3
+2017,Norway,Rural areas,2.1
+2017,Switzerland,Cities,13.1
+2017,Switzerland,Towns and suburbs,7.8
+2017,Switzerland,Rural areas,6.0
+2017,United Kingdom,Cities,26.1
+2017,United Kingdom,Towns and suburbs,14.2
+2017,United Kingdom,Rural areas,7.3
+2017,North Macedonia,Cities,6.0
+2017,North Macedonia,Towns and suburbs,4.3
+2017,North Macedonia,Rural areas,2.2
+2017,Albania,Cities,0.6
+2017,Albania,Towns and suburbs,0.5
+2017,Albania,Rural areas,0.7
+2017,Serbia,Cities,21.1
+2017,Serbia,Towns and suburbs,13.4
+2017,Serbia,Rural areas,8.1
+2018,Belgium,Cities,21.2
+2018,Belgium,Towns and suburbs,7.7
+2018,Belgium,Rural areas,12.0
+2018,Bulgaria,Cities,28.0
+2018,Bulgaria,Towns and suburbs,15.6
+2018,Bulgaria,Rural areas,17.5
+2018,Czechia,Cities,12.5
+2018,Czechia,Towns and suburbs,8.5
+2018,Czechia,Rural areas,3.4
+2018,Denmark,Cities,13.2
+2018,Denmark,Towns and suburbs,5.4
+2018,Denmark,Rural areas,3.8
+2018,Germany (until 1990 former territory of the FRG),Cities,23.0
+2018,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.2
+2018,Germany (until 1990 former territory of the FRG),Rural areas,5.2
+2018,Estonia,Cities,8.7
+2018,Estonia,Towns and suburbs,6.2
+2018,Estonia,Rural areas,5.4
+2018,Ireland,Cities,16.3
+2018,Ireland,Towns and suburbs,9.6
+2018,Ireland,Rural areas,4.7
+2018,Greece,Cities,22.8
+2018,Greece,Towns and suburbs,12.1
+2018,Greece,Rural areas,2.9
+2018,Spain,Cities,14.8
+2018,Spain,Towns and suburbs,7.7
+2018,Spain,Rural areas,6.1
+2018,France,Cities,20.4
+2018,France,Towns and suburbs,13.7
+2018,France,Rural areas,7.2
+2018,Croatia,Cities,4.6
+2018,Croatia,Towns and suburbs,2.7
+2018,Croatia,Rural areas,1.0
+2018,Italy,Cities,17.2
+2018,Italy,Towns and suburbs,9.4
+2018,Italy,Rural areas,6.3
+2018,Cyprus,Cities,15.8
+2018,Cyprus,Towns and suburbs,14.2
+2018,Cyprus,Rural areas,7.8
+2018,Latvia,Cities,17.2
+2018,Latvia,Towns and suburbs,3.1
+2018,Latvia,Rural areas,1.4
+2018,Lithuania,Cities,5.0
+2018,Lithuania,Towns and suburbs,2.0
+2018,Lithuania,Rural areas,2.8
+2018,Luxembourg,Cities,19.0
+2018,Luxembourg,Towns and suburbs,11.4
+2018,Luxembourg,Rural areas,8.6
+2018,Hungary,Cities,5.6
+2018,Hungary,Towns and suburbs,4.7
+2018,Hungary,Rural areas,4.0
+2018,Malta,Cities,13.4
+2018,Malta,Towns and suburbs,4.0
+2018,Malta,Rural areas,0
+2018,Netherlands,Cities,22.2
+2018,Netherlands,Towns and suburbs,12.4
+2018,Netherlands,Rural areas,8.1
+2018,Austria,Cities,16.8
+2018,Austria,Towns and suburbs,8.0
+2018,Austria,Rural areas,5.2
+2018,Poland,Cities,8.3
+2018,Poland,Towns and suburbs,4.7
+2018,Poland,Rural areas,2.1
+2018,Portugal,Cities,9.3
+2018,Portugal,Towns and suburbs,5.3
+2018,Portugal,Rural areas,2.9
+2018,Romania,Cities,14.6
+2018,Romania,Towns and suburbs,10.9
+2018,Romania,Rural areas,10.0
+2018,Slovenia,Cities,11.6
+2018,Slovenia,Towns and suburbs,8.4
+2018,Slovenia,Rural areas,6.0
+2018,Slovakia,Cities,6.0
+2018,Slovakia,Towns and suburbs,6.4
+2018,Slovakia,Rural areas,3.0
+2018,Finland,Cities,10.7
+2018,Finland,Towns and suburbs,6.1
+2018,Finland,Rural areas,3.2
+2018,Sweden,Cities,17.8
+2018,Sweden,Towns and suburbs,13.0
+2018,Sweden,Rural areas,10.4
+2018,Iceland,Cities,3.6
+2018,Iceland,Towns and suburbs,2.0
+2018,Iceland,Rural areas,0.9
+2018,Norway,Cities,7.4
+2018,Norway,Towns and suburbs,3.7
+2018,Norway,Rural areas,1.9
+2018,Switzerland,Cities,11.4
+2018,Switzerland,Towns and suburbs,7.1
+2018,Switzerland,Rural areas,3.9
+2018,United Kingdom,Cities,30.8
+2018,United Kingdom,Towns and suburbs,16.6
+2018,United Kingdom,Rural areas,10.4
+2018,North Macedonia,Cities,8.6
+2018,North Macedonia,Towns and suburbs,4.7
+2018,North Macedonia,Rural areas,2.2
+2018,Albania,Cities,0.5
+2018,Albania,Towns and suburbs,1.7
+2018,Albania,Rural areas,1.2
+2018,Serbia,Cities,20.6
+2018,Serbia,Towns and suburbs,15.4
+2018,Serbia,Rural areas,8.8
+2019,Belgium,Cities,20.4
+2019,Belgium,Towns and suburbs,10.1
+2019,Belgium,Rural areas,11.0
+2019,Bulgaria,Cities,27.8
+2019,Bulgaria,Towns and suburbs,13.5
+2019,Bulgaria,Rural areas,14.3
+2019,Czechia,Cities,13.7
+2019,Czechia,Towns and suburbs,7.5
+2019,Czechia,Rural areas,3.2
+2019,Denmark,Cities,12.8
+2019,Denmark,Towns and suburbs,4.9
+2019,Denmark,Rural areas,3.9
+2019,Germany (until 1990 former territory of the FRG),Cities,21.9
+2019,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.7
+2019,Germany (until 1990 former territory of the FRG),Rural areas,5.2
+2019,Estonia,Cities,9.5
+2019,Estonia,Towns and suburbs,2.7
+2019,Estonia,Rural areas,4.7
+2019,Ireland,Cities,12.8
+2019,Ireland,Towns and suburbs,11.7
+2019,Ireland,Rural areas,3.5
+2019,Greece,Cities,27.0
+2019,Greece,Towns and suburbs,16.4
+2019,Greece,Rural areas,5.7
+2019,Spain,Cities,16.4
+2019,Spain,Towns and suburbs,7.2
+2019,Spain,Rural areas,6.6
+2019,France,Cities,22.1
+2019,France,Towns and suburbs,14.7
+2019,France,Rural areas,7.5
+2019,Croatia,Cities,4.2
+2019,Croatia,Towns and suburbs,3.1
+2019,Croatia,Rural areas,1.1
+2019,Italy,Cities,13.9
+2019,Italy,Towns and suburbs,7.5
+2019,Italy,Rural areas,5.4
+2019,Cyprus,Cities,15.2
+2019,Cyprus,Towns and suburbs,10.9
+2019,Cyprus,Rural areas,8.5
+2019,Latvia,Cities,10.9
+2019,Latvia,Towns and suburbs,4.5
+2019,Latvia,Rural areas,1.3
+2019,Lithuania,Cities,4.9
+2019,Lithuania,Towns and suburbs,0.2
+2019,Lithuania,Rural areas,1.9
+2019,Luxembourg,Cities,14.8
+2019,Luxembourg,Towns and suburbs,13.3
+2019,Luxembourg,Rural areas,6.9
+2019,Hungary,Cities,5.1
+2019,Hungary,Towns and suburbs,5.3
+2019,Hungary,Rural areas,5.6
+2019,Malta,Cities,14.7
+2019,Malta,Towns and suburbs,4.1
+2019,Malta,Rural areas,0
+2019,Netherlands,Cities,20.7
+2019,Netherlands,Towns and suburbs,11.1
+2019,Netherlands,Rural areas,9.4
+2019,Austria,Cities,16.4
+2019,Austria,Towns and suburbs,7.2
+2019,Austria,Rural areas,3.0
+2019,Poland,Cities,8.8
+2019,Poland,Towns and suburbs,3.2
+2019,Poland,Rural areas,1.6
+2019,Portugal,Cities,9.0
+2019,Portugal,Towns and suburbs,6.0
+2019,Portugal,Rural areas,3.3
+2019,Romania,Cities,12.9
+2019,Romania,Towns and suburbs,8.4
+2019,Romania,Rural areas,8.2
+2019,Slovenia,Cities,12.4
+2019,Slovenia,Towns and suburbs,7.7
+2019,Slovenia,Rural areas,6.2
+2019,Slovakia,Cities,5.1
+2019,Slovakia,Towns and suburbs,7.8
+2019,Slovakia,Rural areas,4.0
+2019,Finland,Cities,9.1
+2019,Finland,Towns and suburbs,5.6
+2019,Finland,Rural areas,3.7
+2019,Sweden,Cities,17.7
+2019,Sweden,Towns and suburbs,10.2
+2019,Sweden,Rural areas,9.1
+2019,Iceland,Cities,0
+2019,Iceland,Towns and suburbs,0
+2019,Iceland,Rural areas,0
+2019,Norway,Cities,7.6
+2019,Norway,Towns and suburbs,3.3
+2019,Norway,Rural areas,1.6
+2019,Switzerland,Cities,11.3
+2019,Switzerland,Towns and suburbs,6.5
+2019,Switzerland,Rural areas,2.6
+2019,United Kingdom,Cities,0
+2019,United Kingdom,Towns and suburbs,0
+2019,United Kingdom,Rural areas,0
+2019,North Macedonia,Cities,7.1
+2019,North Macedonia,Towns and suburbs,6.7
+2019,North Macedonia,Rural areas,5.3
+2019,Albania,Cities,1.3
+2019,Albania,Towns and suburbs,0.3
+2019,Albania,Rural areas,0.5
+2019,Serbia,Cities,16.7
+2019,Serbia,Towns and suburbs,11.1
+2019,Serbia,Rural areas,5.0
+2020,Belgium,Cities,19.8
+2020,Belgium,Towns and suburbs,6.6
+2020,Belgium,Rural areas,8.3
+2020,Bulgaria,Cities,26.6
+2020,Bulgaria,Towns and suburbs,13.0
+2020,Bulgaria,Rural areas,12.9
+2020,Czechia,Cities,10.5
+2020,Czechia,Towns and suburbs,5.5
+2020,Czechia,Rural areas,3.1
+2020,Denmark,Cities,11.1
+2020,Denmark,Towns and suburbs,5.5
+2020,Denmark,Rural areas,4.6
+2020,Germany (until 1990 former territory of the FRG),Cities,14.1
+2020,Germany (until 1990 former territory of the FRG),Towns and suburbs,5.3
+2020,Germany (until 1990 former territory of the FRG),Rural areas,1.4
+2020,Estonia,Cities,6.3
+2020,Estonia,Towns and suburbs,5.6
+2020,Estonia,Rural areas,4.3
+2020,Ireland,Cities,17.5
+2020,Ireland,Towns and suburbs,11.3
+2020,Ireland,Rural areas,5.7
+2020,Greece,Cities,28.8
+2020,Greece,Towns and suburbs,17.8
+2020,Greece,Rural areas,6.2
+2020,Spain,Cities,17.4
+2020,Spain,Towns and suburbs,12.1
+2020,Spain,Rural areas,9.5
+2020,France,Cities,27.0
+2020,France,Towns and suburbs,15.2
+2020,France,Rural areas,9.2
+2020,Croatia,Cities,3.4
+2020,Croatia,Towns and suburbs,3.1
+2020,Croatia,Rural areas,0.9
+2020,Italy,Cities,12.6
+2020,Italy,Towns and suburbs,6.8
+2020,Italy,Rural areas,4.2
+2020,Cyprus,Cities,8.6
+2020,Cyprus,Towns and suburbs,16.2
+2020,Cyprus,Rural areas,9.1
+2020,Latvia,Cities,8.8
+2020,Latvia,Towns and suburbs,2.9
+2020,Latvia,Rural areas,2.6
+2020,Lithuania,Cities,4.5
+2020,Lithuania,Towns and suburbs,3.0
+2020,Lithuania,Rural areas,2.1
+2020,Luxembourg,Cities,12.5
+2020,Luxembourg,Towns and suburbs,13.0
+2020,Luxembourg,Rural areas,7.2
+2020,Hungary,Cities,5.2
+2020,Hungary,Towns and suburbs,5.0
+2020,Hungary,Rural areas,5.6
+2020,Malta,Cities,12.5
+2020,Malta,Towns and suburbs,2.6
+2020,Malta,Rural areas,0
+2020,Netherlands,Cities,20.2
+2020,Netherlands,Towns and suburbs,10.5
+2020,Netherlands,Rural areas,7.5
+2020,Austria,Cities,11.4
+2020,Austria,Towns and suburbs,4.1
+2020,Austria,Rural areas,2.4
+2020,Poland,Cities,0
+2020,Poland,Towns and suburbs,0
+2020,Poland,Rural areas,0
+2020,Portugal,Cities,8.7
+2020,Portugal,Towns and suburbs,5.1
+2020,Portugal,Rural areas,4.4
+2020,Romania,Cities,11.0
+2020,Romania,Towns and suburbs,7.4
+2020,Romania,Rural areas,8.2
+2020,Slovenia,Cities,12.5
+2020,Slovenia,Towns and suburbs,6.9
+2020,Slovenia,Rural areas,5.4
+2020,Slovakia,Cities,5.3
+2020,Slovakia,Towns and suburbs,5.1
+2020,Slovakia,Rural areas,3.2
+2020,Finland,Cities,10.8
+2020,Finland,Towns and suburbs,5.8
+2020,Finland,Rural areas,3.3
+2020,Sweden,Cities,19.9
+2020,Sweden,Towns and suburbs,10.4
+2020,Sweden,Rural areas,8.4
+2020,Iceland,Cities,0
+2020,Iceland,Towns and suburbs,0
+2020,Iceland,Rural areas,0
+2020,Norway,Cities,6.4
+2020,Norway,Towns and suburbs,3.7
+2020,Norway,Rural areas,2.1
+2020,Switzerland,Cities,11.8
+2020,Switzerland,Towns and suburbs,5.9
+2020,Switzerland,Rural areas,2.9
+2020,United Kingdom,Cities,0
+2020,United Kingdom,Towns and suburbs,0
+2020,United Kingdom,Rural areas,0
+2020,North Macedonia,Cities,0
+2020,North Macedonia,Towns and suburbs,0
+2020,North Macedonia,Rural areas,0
+2020,Albania,Cities,1.1
+2020,Albania,Towns and suburbs,0.5
+2020,Albania,Rural areas,0.4
+2020,Serbia,Cities,16.2
+2020,Serbia,Towns and suburbs,7.3
+2020,Serbia,Rural areas,5.0

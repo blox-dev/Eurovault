@@ -1,0 +1,187 @@
+{
+    "files": {
+        "Gross_domestic_product_(GDP)": {
+            "x":"Year",
+            "y":"Euro per capita",
+            "values": {
+
+            },
+            "view":"Positive",
+            "description":"GDP (gross domestic product) is an indicator for a nation's economic situation. It reflects the total value of all goods and services produced less the value of goods and services used for intermediate consumption in their production. Expressing GDP in PPS (purchasing power standards) eliminates differences in price levels between countries, and calculations on a per head basis allows for the comparison of economies significantly different in absolute size." 
+        },
+        "Mobile_students_from_abroad": {
+            "x":"Year",
+            "y":"Number of students",
+            "values": {
+                "ISCEDF13": ["Total","Education","Arts and humanities","Social sciences journalism and information","Business administration and law","Natural sciences mathematics and statistics","Biology","Biochemistry","Environment","Physical sciences","Mathematics and statistics","Information and Communication Technologies","Engineering manufacturing and construction","Engineering and engineering trades","Manufacturing and processing","Architecture and construction","Agriculture forestry fisheries and veterinary","Health and welfare","Health","Dental studies","Medicine therapy and rehabilitation","Welfare","Care of the elderly and of disabled adults","Child care and youth services","Social work and counselling","Services","Domestic services","Hair and beauty services","Hotel restaurants and catering","Sports","Travel tourism and leisure","Transport services"]
+            },
+            "view":"Positive",
+            "description":"The number of students that are enrolled in education in a certain country, but live somewhere else." 
+        },
+        "Youth_participation_in_cultural_activities_2015": {
+            "x":"Year",
+            "y":"Number of people",
+            "values": {
+                "FREQUENCY" : ["Not in the last 12 months","From 1 to 3 times","At least once","At least 4 times"],
+                "SEX": ["Total","Males","Females"],
+                "AGE": ["From 16 to 24 years","From 16 to 29 years","From 25 to 34 years"],
+                "EVENT": ["Cinema","Live performances (theatre concerts ballet)","Cultural sites (historical monuments museums art galleries or archaeological sites)","Sports events"],
+                "ISCED11": ["All ISCED 2011 levels","Upper secondary and post-secondary non-tertiary education (levels 3 and 4)","Tertiary education (levels 5-8)"]
+            },
+            "view":"Positive",
+            "description": "The number of your people that participated in the past 12 months to certain cultural events. Data collected in 2015\n\nISCED - International Standard Classification of Education"
+        },
+        "Youth_population": {
+            "x":"Year",
+            "y":"Number of people",
+            "values": {
+                "AGE": ["From 15 to 29 years","From 15 to 19 years","From 20 to 24 years","From 25 to 29 years"]
+            },
+            "view":"Positive",
+            "description": "Number of people reported alive at the 1st of January."
+        },
+        "Mean_monthly_earnings_2018" : {
+            "x":"Year",
+            "y":"Monthly earnings",
+            "values": {
+                "SEX" : ["Total","Males","Females"],
+                "UNIT": ["Euro","Purchasing power standard (PPS)"],
+                "NACE_R2" : ["Industry construction and services (except public administration defense compulsory social security)","Business economy","Industry and construction","Industry (except construction)","Mining and quarrying","Manufacturing","Electricity gas steam and air conditioning supply","Water supply; sewerage waste management and remediation activities","Construction","Services (except activities of households as employers and extra-territorial organisations and bodies)","Wholesale and retail trade; repair of motor vehicles and motorcycles","Transportation and storage","Accommodation and food service activities","Information and communication","Financial and insurance activities","Real estate activities","Professional scientific and technical activities","Administrative and support service activities","Public administration and defence; compulsory social security","Education","Human health and social work activities","Arts entertainment and recreation","Other service activities"]
+            },
+            "view":"Positive",
+            "description": "Mean montly earnings recorded in 2018 by field, age and currency."
+        },
+        "Harmonised_index_consumer_prices": {
+            "x":"Year",
+            "y":"Harmonised consumer price index",
+            "values": {
+
+            },
+            "view":"Positive",
+            "description":"The Harmonised Indices of Consumer Prices (HICP) measure the changes over time in the prices of consumer goods and services acquired by households.\n\nThey give a comparable measure of inflation as they are calculated according to harmonised definitions." 
+        },
+        "House_price_index": {
+            "x":"Year",
+            "y":"House price index",
+            "values": {
+                
+            },
+            "view":"Positive",
+            "description":"The House Price Index (HPI) measures the changes in the transaction prices of residential properties, both newly built and existing, purchased by households\n\nAs a means of accurate comparison, the index valued 100 for all countries in 2010." 
+        },
+        "Crime_violence_and_vandalism": {
+            "x":"Year",
+            "y":"Crime percentage",
+            "values": {
+                "DEG_URB": ["Cities","Towns and suburbs","Rural areas"]
+            },
+            "view":"Negative",
+            "description":"Number of reported crimes as percentage of country population\n\nDEG_URB - divided by density of population" 
+        },
+        "Employment_expectations_indicator": {
+            "x":"Year",
+            "y":"Employment expectations indicator",
+            "values": {
+
+            },
+            "view":"Positive",
+            "description":"The employment expectations indicator summarises managers' employment plans in the four surveyed business sectors (industry, services, retail trade, construction) and thus provides a timely indication of changes in expected dependent employment at Member states, EU and euro area levels.\n\nValues greater than 100 indicate that managers’ employment expectations are high by historical standards, while the opposite holds true for values below 100." 
+        },
+        "Employment_rates_by_sex_and_citizenship": {
+            "x":"Year",
+            "y":"Employment rate",
+            "values": {
+                "CITIZEN" : ["EU27 countries (from 2020) except reporting country","Reporting country"],
+                "SEX": ["Total","Males","Females"]
+            },
+            "view":"Positive",
+            "description":"Employment rates in a country, divided by sex and citizenship, as percentage of the total population.\n\nEU27 countries except reporting country - percentage of foreigners that reside and are actively working in a country.\n\nReporting country - citizens of a country that are actively working." 
+        },
+        "Employment_rates_by_sex": {
+            "x":"Year",
+            "y":"Employment rate",
+            "values": {
+                "SEX": ["Total","Males","Females"]
+            },
+            "view":"Positive",
+            "description":"Employment rates in a country, divided by sex, as percentage of the total population." 
+        },
+        "Median_net_income_by_age": {
+            "x":"Year",
+            "y":"Median net income (in euros)",
+            "values": {
+                "AGE" : ["Total","Less than 16 years","From 16 to 24 years","16 years or over","Less than 18 years","From 18 to 24 years","18 years or over","From 25 to 49 years","From 25 to 54 years","60 years or over","65 years or over","75 years or over"]
+            },
+            "view":"Positive",
+            "description":"The median net income of all working people in a country, divided by age groups and measured in euros. Keep in mind that your earnings can only be seen in context of your living costs." 
+        },
+        "Expenditure_on_education_as_percent_of_GDP": {
+            "x":"Year",
+            "y":"Education expenditure (percentage of GDP)",
+            "values": {
+                "ISCED11": ["Pre-primary to tertiary education", "Tertiary education (levels 5-8)"]
+            },
+            "view":"Positive",
+            "description":"Government expenditure on education, as percentage of the total Gross Domestic Product(GDP).\n\nTertiary education(levels 5-8) - university and higher studies." 
+        },
+        "Electricity_prices_for_household_consumers": {
+            "x":"Year",
+            "y":"Electricity prices for household consumers",
+            "values": {
+                "TAX": ["Excluding taxes and levies","All taxes and levies included"],
+                "CURRENCY": ["Euro","Purchasing Power Standard"]
+            },
+            "view":"Negative",
+            "description":"Prices of one kilowatt-hour of energy, measured in Euro or Purchasing Power Standard(PPS).\n\nThe purchasing power standard, abbreviated as PPS, is an artificial currency unit.\nTheoretically, one PPS can buy the same amount of goods and services in each country. However, price differences across borders mean that different amounts of national currency units are needed for the same goods and services depending on the country." 
+        },
+        "Gas_prices_for_household_consumers": {
+            "x":"Year",
+            "y":"Gas prices for household consumers",
+            "values": {
+                "TAX": ["Excluding taxes and levies","All taxes and levies included"],
+                "CURRENCY": ["Euro","Purchasing Power Standard"]
+            },
+            "view":"Negative",
+            "description":"Prices of one cubic meter of natural gas, measured in Euro or Purchasing Power Standard(PPS).\n\nThe purchasing power standard, abbreviated as PPS, is an artificial currency unit.\nTheoretically, one PPS can buy the same amount of goods and services in each country. However, price differences across borders mean that different amounts of national currency units are needed for the same goods and services depending on the country." 
+        },
+        "General_government_expenditure_by_sector": {
+            "x":"Year",
+            "y":"Government expenditure (percentage of GDP)",
+            "values": {
+                "COFOG99":["Total","General public services","Defence","Public order and safety","Economic affairs","Fuel and energy","Transport","Environmental protection","Housing and community amenities","Health","Medical products appliances and equipment","Outpatient services","Hospital services","Recreation culture and religion","Recreational and sporting services","Cultural services","Education","Tertiary education","Social protection","Sickness and disability","Old age","Family and children","Unemployment","Housing","Social exclusion n.e.c."]
+            },
+            "view":"Positive",
+            "description":"Government expenditure on different fields and sectors, as percentage of the total Gross Domestic Product(GDP).\n\nCOFOG99 - Classification of the functions of government" 
+        },
+        "Gross_domestic_expenditure_on_R&D_by_sector": {
+            "x":"Year",
+            "y":"Expenditure on R&D (percentage of GDP)",
+            "values": {
+                "SECT_PERF":["Business enterprise sector", "Government sector", "Higher education sector","Private non-profit sector","All sectors"]
+            },
+            "view":"Positive",
+            "description":"Government expenditure on Research and Development(R&D), as percentage of the total Gross Domestic Product." 
+        },
+        "R&D_personnel_by_sector_field_and_sex": {
+            "x":"Year",
+            "y":"Number of R&D workers",
+            "values": {
+                "SECTPERF": ["All sectors","Business enterprise sector","Government sector","Higher education sector","Private non-profit sector"],
+                "PROF_POS": ["Total","Researchers"],
+                "SEX": ["Total","Females"],
+                "FORD": ["Total","Natural sciences","Engineering and technology","Medical and health sciences","Agricultural sciences","Social sciences","Humanities"]
+            },
+            "view":"Positive",
+            "description":"The number of Research and Development(R&D) workers in a certain domain.\n\nPROF_POS - Total - includes teachers and assistants\n\nFORD - Fields of Research and Development" 
+        },
+        "Share_of_Government_Budget_Allocations_in_R&D": {
+            "x":"Year",
+            "y":"Percentage of government expenditure",
+            "values": {
+                
+            },
+            "view":"Positive",
+            "description":"Share of goverment budget allocations in Research and Development(R&D), as percent of GDP." 
+        }
+    }
+}

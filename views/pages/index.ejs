@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en" class="w-100 h-100">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Europe vault</title>
+
+  <!-- leaflet -->
+  <link rel="stylesheet" href="public/lib/leafletjs/leaflet.css" />
+  <script src="public/lib/leafletjs/leaflet.js"></script>
+
+  <!-- danfojs -->
+  <script src="public/lib/danfojs/bundle.js"></script>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="public/lib/bootstrap/css/bootstrap.min.css" />
+  <script src="public/lib/bootstrap/js/bootstrap.min.js"></script>
+
+  <style>
+    .info {
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    .info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+
+    .legend {
+      line-height: 18px;
+      color: #555;
+    }
+
+    .legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
+    /* Credit: https://tutorialzine.com/2014/07/css-inline-help-tips */
+    /* --------------------------*
+     *      Inline help tip      *
+     * --------------------------*/
+
+    .tool-tip {
+      text-align: center;
+      background-color: #BCDBEA;
+      border-radius: 50%;
+      width: 24px;
+      height: 24px;
+      font-size: 14px;
+      line-height: 26px;
+      cursor: default;
+    }
+
+    .tool-tip:before {
+      content: '?';
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .tooltip-description {
+      top: 65px;
+      position: absolute;
+      display: none;
+      z-index: auto;
+      background-color: white;
+      padding: 10px;
+      width: 300px;
+      position: absolute;
+      border-radius: 3px;
+      right: 0px;
+      color: black;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body class="h-100 w-100 px-4 py-2" style="background-color:#EFEFEF">
+  <div class="row h-100 w-100">
+    <div class="col-12 col-xl-6 h-100">
+      <div class="row" style="height:8%;">
+
+        <div class="col-12 col-lg-6">
+          <div id="select_file_div">
+
+            <select id="select_file_dropdown">
+            </select>
+
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="comparison_toggle"
+              onchange="switch_comparison_mode(this.checked);">
+            <label class="form-check-label" for="comparison_toggle">
+              Comparison mode
+            </label>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="row" style="height:92%;">
+        <div id="map" class="h-100 w-100">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <div class="row">
+        <div id="chart_dropdown">
+
+        </div>
+      </div>
+
+      <div class="row" style="height:90%;">
+        <div id="bar_chart">
+          <div id="intro_data">
+            <h1>Europe vault</h1>
+            <p>Visualisation tool for students that want to move to Europe.</p>
+            <p>Click on a country to begin exploring the data.</p>
+            <p>Toggle comparison mode for choosing the country that fits you best.</p>
+            <small>Big thanks to <a href="https://ec.europa.eu/eurostat/">Eurostat</a> for providing the best quality <a
+                href="https://ec.europa.eu/eurostat/data/database">european datasets</a>!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const range = (start, end, step = 1) => {
+      let output = [];
+      if (typeof end === 'undefined') {
+        end = start;
+        start = 0;
+      }
+      for (let i = start; i < end; i += step) {
+        output.push(i);
+      }
+      return output;
+    };
+
+
+    //create european map and set its center
+    var map = L.map("map").setView([56.105, 13.609], 4);
+
+    //map zoom options
+    map.options.minZoom = 3;
+    map.options.maxZoom = 8;
+
+    //place the map into view
+    map.setMaxBounds([
+      //south west
+      [33.312, -11.427],
+      //north east
+      [73.1, 47.725],
+    ]);
+
+    function decodeHTML(html) {
+      var txt = document.createElement("textarea");
+      txt.innerHTML = html;
+      return txt.value;
+    }
+
+    // the country data
+    var myGeoJson;
+
+    var all_tables = [];
+
+    function switch_comparison_mode(isActive) {
+      comparing_mode = isActive;
+
+      //reset selected countries
+      current_selected_country = "";
+      previous_selected_country = "";
+    }
+
+    var displayed_year;
+    var comparing_mode = false;
+    var current_filename = "";
+    var current_selected_country = "";
+    var previous_selected_country = "";
+    var hasVaryingAttributes = false;
+    var color_matrix;
+    var value_matrix;
+    var min_value;
+    var max_value;
+    var updatef;
+
+    //get maximum from array
+    function getMax(arr) {
+      if (!arr) {
+        return null;
+      }
+      if (!Array.isArray(arr)) {
+        return null;
+      }
+
+      var maxV = arr[0];
+      for (a of arr) {
+        if (a > maxV) maxV = a;
+      }
+      return maxV;
+    }
+
+    //get minimum from array, different then 0
+    function getMinNotNull(arr) {
+      if (!arr) {
+        return null;
+      }
+
+      if (!Array.isArray(arr)) {
+        return null;
+      }
+
+      var minV = arr[0];
+      for (a of arr) {
+        if (a < minV & a != 0) minV = a;
+      }
+      return minV;
+    }
+
+    //return the map color of a data point, based on a predefined color scheme
+    function getColor(d) {
+      let dif = max_value - min_value;
+      let step = dif / 8;
+
+      //which color scheme to use
+      const view = all_tables[current_filename].meta.view;
+
+      //if data is null, set the color to gray
+      if (d == 0)
+        return '#bbbbbb';
+
+      if (view == 'Positive') {
+        return d > min_value + step * 7 ? '#084594' :
+          d > min_value + step * 6 ? '#2171b5' :
+            d > min_value + step * 5 ? '#4292c6' :
+              d > min_value + step * 4 ? '#6baed6' :
+                d > min_value + step * 3 ? '#9ecae1' :
+                  d > min_value + step * 2 ? '#c6dbef' :
+                    d > min_value + step ? '#deebf7' :
+                      '#f7fbff';
+      };
+      if (view == 'Negative') {
+        return d > min_value + step * 7 ? '#800026' :
+          d > min_value + step * 6 ? '#BD0026' :
+            d > min_value + step * 5 ? '#E31A1C' :
+              d > min_value + step * 4 ? '#FC4E2A' :
+                d > min_value + step * 3 ? '#FD8D3C' :
+                  d > min_value + step * 2 ? '#FEB24C' :
+                    d > min_value + step ? '#FED976' :
+                      '#FFEDA0';
+      };
+    };
+
+    function mapColor(c) {
+      const found = color_matrix.find(element => element[0] == c);
+      if (typeof found !== 'undefined' && found[1] != 0) {
+        return found[1]
+      } else {
+        return '#bbbbbb'
+      }
+    }
+
+    function mapValue(c) {
+      const found = value_matrix.find(element => element[0] == c);
+      //console.log(found);
+      if (typeof found !== 'undefined' && found[1] != 0) {
+        return found[1];
+      } else {
+        return 'NO DATA FOR ' + displayed_year;
+      }
+    }
+
+    //fetch the metadata
+    fetch("./public/countries.geojson")
+      .then(resp => resp.json())
+      .then(geoInfo => {
+        myGeoJson = geoInfo;
+
+        fetch("./data/metadata.json")
+          .then(response => response.json())
+          .then(metadata => {
+
+            //the file representation in metadata.json with all relevant details inside
+            const files = metadata.files;
+
+            var selectFile = document.getElementById("select_file_dropdown");
+
+            //when the selected file changes, update the map
+            selectFile.onchange = (e) => { updateMap(selectFile.value, true); };
+
+            var first = true;
+
+            //iterate through files
+            Object.keys(files).forEach(key => {
+              var meta = files[key];
+              //console.log(meta);
+              //create option for the file
+              var option = document.createElement('option');
+              option.value = key;
+              option.innerText = key.replaceAll('_', ' ');
+
+              selectFile.append(option);
+
+              //read the file with the data and append the values into all_tables
+              dfd.readCSV('./data/' + key + '.csv').then(df => {
+                all_tables[key] = { df: df, meta: meta };
+              }).then(() => {
+                //update the map with the first file that loads
+                if (first) {
+                  first = false;
+                  updateMap(key, false);
+                }
+              });
+            });
+          });
+      })
+
+    async function load_file2() {
+
+      let df = all_tables[current_filename].df;
+      let meta = all_tables[current_filename].meta;
+
+      //get the time column from the dataset and convert it to array
+      let time = df.column("TIME");
+      let timeArray = time.values;
+
+      //get the most recent year from the dataset
+      let most_recent_year = getMax(timeArray);
+      displayed_year = most_recent_year;
+
+      // filter the rows by the most recent year
+      let rows = df["TIME"].eq(most_recent_year);
+
+      // add more filters according to the dropdown values
+      if (hasVaryingAttributes) {
+        Object.keys(meta.values).forEach(key => {
+          // console.log("dropdown:");
+          const dropdown = document.getElementById(key);
+
+          //console.log(key + ": " + dropdown.value);
+
+          //add condition to row selection
+          rows = rows.and(df[key].eq(dropdown.value));
+        });
+      }
+
+      //select only the relevant rows
+      let cox = df.loc({
+        rows: rows,
+        columns: ["COUNTRY", "VALUE"]
+      });
+
+      let cox2 = cox.column("VALUE");
+
+      min_value = getMinNotNull(cox2.values);
+      max_value = getMax(cox2.values);
+
+      value_matrix = cox.values;
+
+      color_matrix = value_matrix.map(x => [x[0], getColor(x[1])]);
+    };
+
+    function style(feature) {
+      return {
+        fillColor: mapColor(feature.properties.ADMIN),
+        weight: 2,
+        opacity: 1,
+        color: 'black',
+        dashArray: '',
+        fillOpacity: 1
+      };
+    }
+
+    async function mapFunction(clearmap) {
+
+      let view = all_tables[current_filename].meta.view;
+
+      var geoMap;
+
+      await load_file2();
+
+      var bordercolor = 'white';
+      var borderfill = 'white';
+
+      function highlightFeature(e) {
+        var layer = e.target;
+
+        if (view === 'Positive') {
+          bordercolor = '#4a1486';
+          borderfill = '#4a1486';
+        }
+
+        layer.setStyle({
+          //weight: 5,
+          color: borderfill,
+          weight: 4,
+          opacity: 1,
+          color: bordercolor,
+          dashArray: '4',
+          fillOpacity: 0.9
+        });
+
+        if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+          layer.bringToFront();
+        }
+
+        info.update([layer.feature.properties.ADMIN, mapValue(layer.feature.properties.ADMIN)]);
+      }
+
+      function resetHighlight(e) {
+        geoMap.resetStyle(e.target);
+        info.update();
+      }
+
+      function graphData(e) {
+        const country = e.target.feature.properties.ADMIN;
+
+
+        if (current_selected_country != "") {
+          previous_selected_country = current_selected_country;
+        }
+        current_selected_country = country;
+
+        if (comparing_mode)
+          info.update();
+
+        //console.log("ccc" + country);
+
+        //plot data for {country} in div with id 'bar_chart'
+        //bindBarChart(country, 'bar_chart');
+        if (previous_selected_country != "" & comparing_mode == true) {
+          bindLineChart(current_selected_country, previous_selected_country, 'bar_chart');
+        } else {
+          bindBarChart(country, 'bar_chart');
+        }
+      }
+
+      function onEachFeature(feature, layer) {
+        layer.on({
+          mouseover: highlightFeature,
+          mouseout: resetHighlight,
+          click: graphData
+        });
+      }
+
+      geoMap = L.geoJson(myGeoJson, {
+        onEachFeature: onEachFeature,
+        style: style,
+      }).addTo(map);
+
+      // HOVER BOX
+      var info = L.control();
+
+      info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+        this.update();
+        return this._div;
+      };
+
+      // method that we will use to update the control based on feature properties passed
+      info.update = function (props) {
+
+        this._div.innerHTML = '<h5>' + current_filename.replaceAll('_', ' ') + '</h5>' +
+
+          ((current_selected_country != '' && previous_selected_country == '' && comparing_mode) ? ("<b>Click on another country to compare</b>") : ((props) ? '<b>' + props[0] + '</b><br />' + props[1] : 'Hover over a country'))
+
+          + '<div id="tooltip-description" class="tooltip-description" style="display:none"><p>'
+          + all_tables[current_filename].meta.description.replaceAll("\n", "<br>") + '</p></div>';
+      };
+
+      info.addTo(map);
+
+      // LEGEND
+      var legend = L.control({ position: 'bottomright' });
+
+      legend.onAdd = function (map) {
+
+        function toRoundOrNotToRound(x) {
+          if (x > 100) {
+            return Math.round(x)
+          }
+          else if (x > 1) {
+            return Math.round(x * 10) / 10
+          }
+          else {
+            return Math.round(x * 100) / 100
+          }
+        };
+
+        var div = L.DomUtil.create('div', 'info legend'),
+          grades = range(min_value, max_value, (max_value - min_value) / 8),
+          labels = [];
+
+        div.innerHTML += 'Data from ' + displayed_year + "  " +
+          `<span class="tool-tip" style="display:inline-block" \
+onmouseover="document.getElementById('tooltip-description').style.display='block';" \
+onmouseleave="document.getElementById('tooltip-description').style.display='none';" \
+></span><br>`;
+
+        for (var i = 0; i < grades.length; i++) {
+          div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 0.0001) + '"></i> ' +
+            toRoundOrNotToRound(grades[i]) + (grades[i + 1] ? ' - ' + toRoundOrNotToRound(grades[i + 1]) + '<br>' : '+');
+        }
+
+        return div;
+      };
+
+
+      //check if this does something
+      if (clearmap) {
+        map.removeControl(legend);
+        map.removeControl(info);
+      }
+
+      info.addTo(map);
+      legend.addTo(map);
+
+      //remove current legend, info
+      function remove() {
+        map.removeControl(legend);
+        map.removeControl(info);
+      }
+
+      updatef = remove;
+    }
+
+    function updateMap(filename, clear) {
+      //update current filename
+      current_filename = filename;
+
+
+      const data = all_tables[filename];
+      // console.log("data:")
+      // console.log(data)
+
+      //also update the table-specific dropdowns
+
+      const values = data.meta.values;
+      // console.log("values:");
+      // console.log(values);
+
+      //get all table specific dropdowns
+      const dropdownDiv = document.getElementById("chart_dropdown");
+
+      //deletes all children
+      dropdownDiv.textContent = '';
+
+      //if there is at least a varying attribute
+      if (Object.keys(values).length != 0) {
+        hasVaryingAttributes = true;
+
+        Object.keys(values).forEach(key => {
+          //add as many dropdowns as there are varying attributes
+          var labelElem = document.createElement('label');
+          labelElem.innerHTML = key + ": ";
+
+          var selectElem = document.createElement('select');
+          selectElem.id = key;
+          selectElem.onchange = (e) => {
+            if (comparing_mode)
+              bindLineChart(current_selected_country, previous_selected_country, "bar_chart"); //TODO: aggregate one
+            else
+              bindBarChart(current_selected_country, "bar_chart");
+            updatef();
+            mapFunction(true);
+          };
+
+          //for all varying values
+          values[key].forEach(opt => {
+            var optionElem = document.createElement('option');
+            optionElem.value = opt;
+            optionElem.innerText = opt;
+
+            selectElem.append(optionElem);
+          });
+
+          labelElem.append(selectElem);
+          dropdownDiv.append(labelElem);
+        });
+      }
+      else {
+        hasVaryingAttributes = false;
+      }
+
+      //also update the heatmap
+      if (clear) {
+        updatef();
+      }
+
+      mapFunction(clear);
+
+      //also update the current graph
+      if (comparing_mode) {
+        if (previous_selected_country != "") {
+          bindLineChart(current_selected_country, previous_selected_country, 'bar_chart');
+        }
+      } else {
+        bindBarChart(current_selected_country, 'bar_chart');
+      }
+    }
+
+    function bindLineChart(country, country2, targetDivID) {
+      //delete current line chart
+      targetDivID.textContent = '';
+
+      if (country == '' || country2 == '') {
+        return;
+      }
+
+      //array destructuring
+      const data = all_tables[current_filename];
+
+      //line chart style
+      const layout = {
+        title: {
+          text: "Comparison of " + current_filename.replaceAll("_", " ") + " in " + country + " and " + country2,
+        },
+        legend: {
+          x: 0,
+          y: -0.3,
+          borderwidth: 1,
+          font: { family: "Arial", size: 10, color: "#000" },
+        },
+        width: '800px',
+        // width: '100%',
+        // height: '100%',
+        yaxis: {
+          title: data.meta.y,
+        },
+        xaxis: {
+          title: data.meta.x,
+        },
+      };
+
+      //restrict rows to have the country attribute as the selected country
+      var rows = data.df["COUNTRY"].eq(country);
+      var rows2 = data.df["COUNTRY"].eq(country2);
+
+      //check for multiple attributes
+      if (hasVaryingAttributes) {
+        Object.keys(data.meta.values).forEach(key => {
+          const dropdown = document.getElementById(key);
+
+          //add condition to row selection
+          rows = rows.and(data.df[key].eq(dropdown.value));
+          rows2 = rows2.and(data.df[key].eq(dropdown.value));
+        });
+      }
+
+      //select the actual data we're gonna use in the the line chart
+      let linechart_data = data.df.loc({
+        columns: ["TIME", "VALUE"],
+        rows: rows,
+      });
+
+      let linechart_data2 = data.df.loc({
+        columns: ["TIME", "VALUE"],
+        rows: rows2,
+      });
+
+      const max_time = getMax(linechart_data.column("TIME").values);
+      console.log(max_time);
+
+      const min_time = getMinNotNull(linechart_data.column("TIME").values);
+      console.log(min_time);
+
+      if (max_time != 'undefined' && max_time === min_time) {
+        document.getElementById(targetDivID).innerHTML = "<h3>Not enough data</h3><p>Explore the map instead!</p>";
+        return;
+      }
+
+      const nr_rows = linechart_data.count({ axis: 1 }).count();
+
+      //there is data for the selected country
+      if (nr_rows != 0) {
+        document.getElementById(targetDivID).innerHTML = "";
+        linechart_data.setIndex({ column: "TIME", inplace: true });
+
+        //set the target dataframe with the actual country names
+        let dataa = {};
+        dataa[country] = linechart_data["VALUE"].values;
+        dataa[country2] = linechart_data2["VALUE"].values;
+
+        const df = new dfd.DataFrame(dataa, { index: linechart_data["TIME"].values });
+
+        df.plot(targetDivID).line({ layout: layout });
+      }
+      //no data for the selected country
+      else {
+        document.getElementById(targetDivID).innerHTML = "<3>No data for " + country + "</h3>";
+      }
+    }
+
+    function bindBarChart(country, targetDivID) {
+      //delete current bar chart
+      targetDivID.textContent = '';
+
+      if (country == '') {
+
+        return;
+      }
+
+      //array destructuring
+      const data = all_tables[current_filename];
+      //const [labelX,labelY,values,dd,view] = all_tables[current_filename];
+
+      //barchart style
+      const layout = {
+        title: {
+          text: current_filename.replaceAll("_", " ") + " in " + country,
+        },
+        width: '800',
+        //width: '100%'
+        //height: '100%',
+        yaxis: {
+          title: data.meta.y,
+        },
+        xaxis: {
+          title: data.meta.x,
+        },
+      };
+
+      //restrict rows to have the country attribute as the selected country
+      var rows = data.df["COUNTRY"].eq(country);
+
+      if (hasVaryingAttributes) {
+        Object.keys(data.meta.values).forEach(key => {
+          const dropdown = document.getElementById(key);
+
+          console.log(key + ": " + dropdown.value);
+
+          //add condition to row selection
+          rows = rows.and(data.df[key].eq(dropdown.value));
+        });
+      }
+
+      //select the actual data we're gonna use in the bar_chart
+      let barchart_data = data.df.loc({
+        columns: ["TIME", "VALUE"],
+        rows: rows,
+      });
+
+      const max_time = getMax(barchart_data.column("TIME").values);
+      console.log(max_time);
+
+      const min_time = getMinNotNull(barchart_data.column("TIME").values);
+      console.log(min_time);
+
+      if (max_time != 'undefined' && max_time === min_time) {
+        document.getElementById(targetDivID).innerHTML = "<h3>Not enough data</h3><p>Explore the map instead!</p>";
+        return;
+      }
+
+      const nr_rows = barchart_data.count({ axis: 1 }).count();
+
+      //there is data for the selected country
+      if (nr_rows != 0) {
+        document.getElementById(targetDivID).innerHTML = "";
+        barchart_data.setIndex({ column: "TIME", inplace: true });
+
+        //barchart_data.print();
+
+        barchart_data["VALUE"].plot(targetDivID).bar({ layout: layout });
+      }
+      //no data for the selected country
+      else {
+        document.getElementById(targetDivID).innerHTML = "<h3>No data for " + country + " :(</h3>";
+        return;
+      }
+    }
+  </script>
+</body>
+
+</html>

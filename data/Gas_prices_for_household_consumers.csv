@@ -1,0 +1,1793 @@
+TIME,COUNTRY,TAX,CURRENCY,VALUE
+2015S1,Belgium,Excluding taxes and levies,Euro,0.0478
+2015S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0430
+2015S1,Belgium,All taxes and levies included,Euro,0.0584
+2015S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0526
+2015S1,Bulgaria,Excluding taxes and levies,Euro,0.0398
+2015S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0843
+2015S1,Bulgaria,All taxes and levies included,Euro,0.0477
+2015S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.1012
+2015S1,Czechia,Excluding taxes and levies,Euro,0.0474
+2015S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0739
+2015S1,Czechia,All taxes and levies included,Euro,0.0574
+2015S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0894
+2015S1,Denmark,Excluding taxes and levies,Euro,0.0415
+2015S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0319
+2015S1,Denmark,All taxes and levies included,Euro,0.0920
+2015S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0707
+2015S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0509
+2015S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0488
+2015S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0676
+2015S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0649
+2015S1,Estonia,Excluding taxes and levies,Euro,0.0358
+2015S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0480
+2015S1,Estonia,All taxes and levies included,Euro,0.0456
+2015S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0611
+2015S1,Ireland,Excluding taxes and levies,Euro,0.0555
+2015S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0498
+2015S1,Ireland,All taxes and levies included,Euro,0.0673
+2015S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0604
+2015S1,Greece,Excluding taxes and levies,Euro,0.0545
+2015S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0657
+2015S1,Greece,All taxes and levies included,Euro,0.0681
+2015S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0821
+2015S1,Spain,Excluding taxes and levies,Euro,0.0581
+2015S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0650
+2015S1,Spain,All taxes and levies included,Euro,0.0731
+2015S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0818
+2015S1,France,Excluding taxes and levies,Euro,0.0560
+2015S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0511
+2015S1,France,All taxes and levies included,Euro,0.0701
+2015S1,France,All taxes and levies included,Purchasing Power Standard,0.0638
+2015S1,Croatia,Excluding taxes and levies,Euro,0.0378
+2015S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0596
+2015S1,Croatia,All taxes and levies included,Euro,0.0473
+2015S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0745
+2015S1,Italy,Excluding taxes and levies,Euro,0.0504
+2015S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0502
+2015S1,Italy,All taxes and levies included,Euro,0.0766
+2015S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0763
+2015S1,Latvia,Excluding taxes and levies,Euro,0.0392
+2015S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0572
+2015S1,Latvia,All taxes and levies included,Euro,0.0496
+2015S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0723
+2015S1,Lithuania,Excluding taxes and levies,Euro,0.0350
+2015S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0567
+2015S1,Lithuania,All taxes and levies included,Euro,0.0423
+2015S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0687
+2015S1,Luxembourg,Excluding taxes and levies,Euro,0.0435
+2015S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0365
+2015S1,Luxembourg,All taxes and levies included,Euro,0.0496
+2015S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0416
+2015S1,Hungary,Excluding taxes and levies,Euro,0.0278
+2015S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0489
+2015S1,Hungary,All taxes and levies included,Euro,0.0353
+2015S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0621
+2015S1,Netherlands,Excluding taxes and levies,Euro,0.0422
+2015S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0389
+2015S1,Netherlands,All taxes and levies included,Euro,0.0756
+2015S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0697
+2015S1,Austria,Excluding taxes and levies,Euro,0.0539
+2015S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0488
+2015S1,Austria,All taxes and levies included,Euro,0.0730
+2015S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0661
+2015S1,Poland,Excluding taxes and levies,Euro,0.0407
+2015S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0696
+2015S1,Poland,All taxes and levies included,Euro,0.0501
+2015S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0856
+2015S1,Portugal,Excluding taxes and levies,Euro,0.0753
+2015S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0969
+2015S1,Portugal,All taxes and levies included,Euro,0.0976
+2015S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.1254
+2015S1,Romania,Excluding taxes and levies,Euro,0.0150
+2015S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0292
+2015S1,Romania,All taxes and levies included,Euro,0.0311
+2015S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0606
+2015S1,Slovenia,Excluding taxes and levies,Euro,0.0452
+2015S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0565
+2015S1,Slovenia,All taxes and levies included,Euro,0.0629
+2015S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0787
+2015S1,Slovakia,Excluding taxes and levies,Euro,0.0413
+2015S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0620
+2015S1,Slovakia,All taxes and levies included,Euro,0.0496
+2015S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0745
+2015S1,Sweden,Excluding taxes and levies,Euro,0.0611
+2015S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0482
+2015S1,Sweden,All taxes and levies included,Euro,0.1131
+2015S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0892
+2015S1,Liechtenstein,Excluding taxes and levies,Euro,0.0743
+2015S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2015S1,Liechtenstein,All taxes and levies included,Euro,0.0913
+2015S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2015S1,United Kingdom,Excluding taxes and levies,Euro,0.0592
+2015S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0470
+2015S1,United Kingdom,All taxes and levies included,Euro,0.0635
+2015S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0504
+2015S1,North Macedonia,Excluding taxes and levies,Euro,0
+2015S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0
+2015S1,North Macedonia,All taxes and levies included,Euro,0
+2015S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0
+2015S1,Serbia,Excluding taxes and levies,Euro,0.0424
+2015S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0902
+2015S1,Serbia,All taxes and levies included,Euro,0.0466
+2015S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0992
+2015S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0407
+2015S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0842
+2015S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0514
+2015S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.1063
+2015S1,Moldova,Excluding taxes and levies,Euro,0.0297
+2015S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2015S1,Moldova,All taxes and levies included,Euro,0.0320
+2015S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2015S1,Ukraine,Excluding taxes and levies,Euro,0
+2015S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2015S1,Ukraine,All taxes and levies included,Euro,0
+2015S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2015S1,Georgia,Excluding taxes and levies,Euro,0
+2015S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2015S1,Georgia,All taxes and levies included,Euro,0
+2015S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2015S2,Belgium,Excluding taxes and levies,Euro,0.0478
+2015S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0433
+2015S2,Belgium,All taxes and levies included,Euro,0.0621
+2015S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0562
+2015S2,Bulgaria,Excluding taxes and levies,Euro,0.0326
+2015S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0705
+2015S2,Bulgaria,All taxes and levies included,Euro,0.0391
+2015S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0846
+2015S2,Czechia,Excluding taxes and levies,Euro,0.0482
+2015S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0748
+2015S2,Czechia,All taxes and levies included,Euro,0.0583
+2015S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0905
+2015S2,Denmark,Excluding taxes and levies,Euro,0.0384
+2015S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0296
+2015S2,Denmark,All taxes and levies included,Euro,0.0881
+2015S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0678
+2015S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0513
+2015S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0492
+2015S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0681
+2015S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0653
+2015S2,Estonia,Excluding taxes and levies,Euro,0.0287
+2015S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0396
+2015S2,Estonia,All taxes and levies included,Euro,0.0384
+2015S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0530
+2015S2,Ireland,Excluding taxes and levies,Euro,0.0601
+2015S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0539
+2015S2,Ireland,All taxes and levies included,Euro,0.0724
+2015S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0650
+2015S2,Greece,Excluding taxes and levies,Euro,0.0605
+2015S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0741
+2015S2,Greece,All taxes and levies included,Euro,0.0750
+2015S2,Greece,All taxes and levies included,Purchasing Power Standard,0.0917
+2015S2,Spain,Excluding taxes and levies,Euro,0.0767
+2015S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0867
+2015S2,Spain,All taxes and levies included,Euro,0.0956
+2015S2,Spain,All taxes and levies included,Purchasing Power Standard,0.1080
+2015S2,France,Excluding taxes and levies,Euro,0.0582
+2015S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0529
+2015S2,France,All taxes and levies included,Euro,0.0733
+2015S2,France,All taxes and levies included,Purchasing Power Standard,0.0666
+2015S2,Croatia,Excluding taxes and levies,Euro,0.0368
+2015S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0580
+2015S2,Croatia,All taxes and levies included,Euro,0.0459
+2015S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0725
+2015S2,Italy,Excluding taxes and levies,Euro,0.0584
+2015S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0580
+2015S2,Italy,All taxes and levies included,Euro,0.0905
+2015S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0899
+2015S2,Latvia,Excluding taxes and levies,Euro,0.0383
+2015S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0568
+2015S2,Latvia,All taxes and levies included,Euro,0.0485
+2015S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0718
+2015S2,Lithuania,Excluding taxes and levies,Euro,0.0360
+2015S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0597
+2015S2,Lithuania,All taxes and levies included,Euro,0.0436
+2015S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0723
+2015S2,Luxembourg,Excluding taxes and levies,Euro,0.0414
+2015S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0345
+2015S2,Luxembourg,All taxes and levies included,Euro,0.0482
+2015S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0402
+2015S2,Hungary,Excluding taxes and levies,Euro,0.0277
+2015S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0495
+2015S2,Hungary,All taxes and levies included,Euro,0.0352
+2015S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0629
+2015S2,Netherlands,Excluding taxes and levies,Euro,0.0460
+2015S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0424
+2015S2,Netherlands,All taxes and levies included,Euro,0.0803
+2015S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0740
+2015S2,Austria,Excluding taxes and levies,Euro,0.0523
+2015S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0482
+2015S2,Austria,All taxes and levies included,Euro,0.0711
+2015S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0655
+2015S2,Poland,Excluding taxes and levies,Euro,0.0405
+2015S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0711
+2015S2,Poland,All taxes and levies included,Euro,0.0498
+2015S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0875
+2015S2,Portugal,Excluding taxes and levies,Euro,0.0758
+2015S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0973
+2015S2,Portugal,All taxes and levies included,Euro,0.0982
+2015S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.1260
+2015S2,Romania,Excluding taxes and levies,Euro,0.0179
+2015S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0360
+2015S2,Romania,All taxes and levies included,Euro,0.0340
+2015S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0683
+2015S2,Slovenia,Excluding taxes and levies,Euro,0.0435
+2015S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0544
+2015S2,Slovenia,All taxes and levies included,Euro,0.0609
+2015S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0761
+2015S2,Slovakia,Excluding taxes and levies,Euro,0.0412
+2015S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0623
+2015S2,Slovakia,All taxes and levies included,Euro,0.0495
+2015S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0748
+2015S2,Sweden,Excluding taxes and levies,Euro,0.0645
+2015S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0504
+2015S2,Sweden,All taxes and levies included,Euro,0.1173
+2015S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0916
+2015S2,Liechtenstein,Excluding taxes and levies,Euro,0.0759
+2015S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2015S2,Liechtenstein,All taxes and levies included,Euro,0.0925
+2015S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2015S2,United Kingdom,Excluding taxes and levies,Euro,0.0623
+2015S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0486
+2015S2,United Kingdom,All taxes and levies included,Euro,0.0668
+2015S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0521
+2015S2,North Macedonia,Excluding taxes and levies,Euro,0
+2015S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0
+2015S2,North Macedonia,All taxes and levies included,Euro,0
+2015S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0
+2015S2,Serbia,Excluding taxes and levies,Euro,0.0364
+2015S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0816
+2015S2,Serbia,All taxes and levies included,Euro,0.0400
+2015S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0897
+2015S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0407
+2015S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0863
+2015S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0514
+2015S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.1089
+2015S2,Moldova,Excluding taxes and levies,Euro,0.0294
+2015S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2015S2,Moldova,All taxes and levies included,Euro,0.0315
+2015S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2015S2,Ukraine,Excluding taxes and levies,Euro,0
+2015S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2015S2,Ukraine,All taxes and levies included,Euro,0
+2015S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2015S2,Georgia,Excluding taxes and levies,Euro,0
+2015S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2015S2,Georgia,All taxes and levies included,Euro,0
+2015S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2016S1,Belgium,Excluding taxes and levies,Euro,0.0415
+2016S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0384
+2016S1,Belgium,All taxes and levies included,Euro,0.0547
+2016S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0505
+2016S1,Bulgaria,Excluding taxes and levies,Euro,0.0307
+2016S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0665
+2016S1,Bulgaria,All taxes and levies included,Euro,0.0368
+2016S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0798
+2016S1,Czechia,Excluding taxes and levies,Euro,0.0482
+2016S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0753
+2016S1,Czechia,All taxes and levies included,Euro,0.0583
+2016S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0911
+2016S1,Denmark,Excluding taxes and levies,Euro,0.0344
+2016S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0257
+2016S1,Denmark,All taxes and levies included,Euro,0.0833
+2016S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0621
+2016S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0496
+2016S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0481
+2016S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0661
+2016S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0641
+2016S1,Estonia,Excluding taxes and levies,Euro,0.0262
+2016S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0368
+2016S1,Estonia,All taxes and levies included,Euro,0.0346
+2016S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0486
+2016S1,Ireland,Excluding taxes and levies,Euro,0.0538
+2016S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0484
+2016S1,Ireland,All taxes and levies included,Euro,0.0652
+2016S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0587
+2016S1,Greece,Excluding taxes and levies,Euro,0.0442
+2016S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0553
+2016S1,Greece,All taxes and levies included,Euro,0.0564
+2016S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0706
+2016S1,Spain,Excluding taxes and levies,Euro,0.0536
+2016S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0606
+2016S1,Spain,All taxes and levies included,Euro,0.0677
+2016S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0765
+2016S1,France,Excluding taxes and levies,Euro,0.0503
+2016S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0465
+2016S1,France,All taxes and levies included,Euro,0.0650
+2016S1,France,All taxes and levies included,Purchasing Power Standard,0.0601
+2016S1,Croatia,Excluding taxes and levies,Euro,0.0343
+2016S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0546
+2016S1,Croatia,All taxes and levies included,Euro,0.0428
+2016S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0683
+2016S1,Italy,Excluding taxes and levies,Euro,0.0474
+2016S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0482
+2016S1,Italy,All taxes and levies included,Euro,0.0731
+2016S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0744
+2016S1,Latvia,Excluding taxes and levies,Euro,0.0333
+2016S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0500
+2016S1,Latvia,All taxes and levies included,Euro,0.0424
+2016S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0637
+2016S1,Lithuania,Excluding taxes and levies,Euro,0.0341
+2016S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0564
+2016S1,Lithuania,All taxes and levies included,Euro,0.0413
+2016S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0683
+2016S1,Luxembourg,Excluding taxes and levies,Euro,0.0393
+2016S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0334
+2016S1,Luxembourg,All taxes and levies included,Euro,0.0454
+2016S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0386
+2016S1,Hungary,Excluding taxes and levies,Euro,0.0271
+2016S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0482
+2016S1,Hungary,All taxes and levies included,Euro,0.0344
+2016S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0613
+2016S1,Netherlands,Excluding taxes and levies,Euro,0.0375
+2016S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0345
+2016S1,Netherlands,All taxes and levies included,Euro,0.0779
+2016S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0718
+2016S1,Austria,Excluding taxes and levies,Euro,0.0506
+2016S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0471
+2016S1,Austria,All taxes and levies included,Euro,0.0690
+2016S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0642
+2016S1,Poland,Excluding taxes and levies,Euro,0.0318
+2016S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0588
+2016S1,Poland,All taxes and levies included,Euro,0.0392
+2016S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0724
+2016S1,Portugal,Excluding taxes and levies,Euro,0.0698
+2016S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0896
+2016S1,Portugal,All taxes and levies included,Euro,0.0913
+2016S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.1172
+2016S1,Romania,Excluding taxes and levies,Euro,0.0175
+2016S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0358
+2016S1,Romania,All taxes and levies included,Euro,0.0332
+2016S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0677
+2016S1,Slovenia,Excluding taxes and levies,Euro,0.0426
+2016S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0541
+2016S1,Slovenia,All taxes and levies included,Euro,0.0599
+2016S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0761
+2016S1,Slovakia,Excluding taxes and levies,Euro,0.0383
+2016S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0586
+2016S1,Slovakia,All taxes and levies included,Euro,0.0460
+2016S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0703
+2016S1,Sweden,Excluding taxes and levies,Euro,0.0609
+2016S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0473
+2016S1,Sweden,All taxes and levies included,Euro,0.1129
+2016S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0876
+2016S1,Liechtenstein,Excluding taxes and levies,Euro,0.0646
+2016S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2016S1,Liechtenstein,All taxes and levies included,Euro,0.0845
+2016S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2016S1,United Kingdom,Excluding taxes and levies,Euro,0.0514
+2016S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0434
+2016S1,United Kingdom,All taxes and levies included,Euro,0.0553
+2016S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0467
+2016S1,North Macedonia,Excluding taxes and levies,Euro,0
+2016S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0
+2016S1,North Macedonia,All taxes and levies included,Euro,0
+2016S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0
+2016S1,Serbia,Excluding taxes and levies,Euro,0.0341
+2016S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0769
+2016S1,Serbia,All taxes and levies included,Euro,0.0375
+2016S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0846
+2016S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0291
+2016S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0616
+2016S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0391
+2016S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0827
+2016S1,Moldova,Excluding taxes and levies,Euro,0.0279
+2016S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2016S1,Moldova,All taxes and levies included,Euro,0.0302
+2016S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2016S1,Ukraine,Excluding taxes and levies,Euro,0.0151
+2016S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2016S1,Ukraine,All taxes and levies included,Euro,0.0182
+2016S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2016S1,Georgia,Excluding taxes and levies,Euro,0
+2016S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2016S1,Georgia,All taxes and levies included,Euro,0
+2016S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2016S2,Belgium,Excluding taxes and levies,Euro,0.0409
+2016S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0382
+2016S2,Belgium,All taxes and levies included,Euro,0.0534
+2016S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0499
+2016S2,Bulgaria,Excluding taxes and levies,Euro,0.0260
+2016S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0560
+2016S2,Bulgaria,All taxes and levies included,Euro,0.0311
+2016S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0672
+2016S2,Czechia,Excluding taxes and levies,Euro,0.0466
+2016S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0734
+2016S2,Czechia,All taxes and levies included,Euro,0.0563
+2016S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0888
+2016S2,Denmark,Excluding taxes and levies,Euro,0.0367
+2016S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0273
+2016S2,Denmark,All taxes and levies included,Euro,0.0858
+2016S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0639
+2016S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0480
+2016S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0463
+2016S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0642
+2016S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0619
+2016S2,Estonia,Excluding taxes and levies,Euro,0.0243
+2016S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0342
+2016S2,Estonia,All taxes and levies included,Euro,0.0328
+2016S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0460
+2016S2,Ireland,Excluding taxes and levies,Euro,0.0560
+2016S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0520
+2016S2,Ireland,All taxes and levies included,Euro,0.0678
+2016S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0629
+2016S2,Greece,Excluding taxes and levies,Euro,0.0520
+2016S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0630
+2016S2,Greece,All taxes and levies included,Euro,0.0652
+2016S2,Greece,All taxes and levies included,Purchasing Power Standard,0.0790
+2016S2,Spain,Excluding taxes and levies,Euro,0.0685
+2016S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0767
+2016S2,Spain,All taxes and levies included,Euro,0.0857
+2016S2,Spain,All taxes and levies included,Purchasing Power Standard,0.0959
+2016S2,France,Excluding taxes and levies,Euro,0.0520
+2016S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0485
+2016S2,France,All taxes and levies included,Euro,0.0676
+2016S2,France,All taxes and levies included,Purchasing Power Standard,0.0631
+2016S2,Croatia,Excluding taxes and levies,Euro,0.0296
+2016S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0469
+2016S2,Croatia,All taxes and levies included,Euro,0.0370
+2016S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0587
+2016S2,Italy,Excluding taxes and levies,Euro,0.0529
+2016S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0543
+2016S2,Italy,All taxes and levies included,Euro,0.0838
+2016S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0861
+2016S2,Latvia,Excluding taxes and levies,Euro,0.0318
+2016S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0480
+2016S2,Latvia,All taxes and levies included,Euro,0.0406
+2016S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0613
+2016S2,Lithuania,Excluding taxes and levies,Euro,0.0320
+2016S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0537
+2016S2,Lithuania,All taxes and levies included,Euro,0.0387
+2016S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0651
+2016S2,Luxembourg,Excluding taxes and levies,Euro,0.0352
+2016S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0298
+2016S2,Luxembourg,All taxes and levies included,Euro,0.0418
+2016S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0354
+2016S2,Hungary,Excluding taxes and levies,Euro,0.0283
+2016S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0502
+2016S2,Hungary,All taxes and levies included,Euro,0.0360
+2016S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0638
+2016S2,Netherlands,Excluding taxes and levies,Euro,0.0398
+2016S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0369
+2016S2,Netherlands,All taxes and levies included,Euro,0.0808
+2016S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0748
+2016S2,Austria,Excluding taxes and levies,Euro,0.0493
+2016S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0462
+2016S2,Austria,All taxes and levies included,Euro,0.0674
+2016S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0631
+2016S2,Poland,Excluding taxes and levies,Euro,0.0359
+2016S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0662
+2016S2,Poland,All taxes and levies included,Euro,0.0441
+2016S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0814
+2016S2,Portugal,Excluding taxes and levies,Euro,0.0623
+2016S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0796
+2016S2,Portugal,All taxes and levies included,Euro,0.0815
+2016S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.1042
+2016S2,Romania,Excluding taxes and levies,Euro,0.0167
+2016S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0344
+2016S2,Romania,All taxes and levies included,Euro,0.0323
+2016S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0665
+2016S2,Slovenia,Excluding taxes and levies,Euro,0.0396
+2016S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0506
+2016S2,Slovenia,All taxes and levies included,Euro,0.0563
+2016S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0719
+2016S2,Slovakia,Excluding taxes and levies,Euro,0.0371
+2016S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0571
+2016S2,Slovakia,All taxes and levies included,Euro,0.0445
+2016S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0685
+2016S2,Sweden,Excluding taxes and levies,Euro,0.0629
+2016S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0507
+2016S2,Sweden,All taxes and levies included,Euro,0.1142
+2016S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0921
+2016S2,Liechtenstein,Excluding taxes and levies,Euro,0.0624
+2016S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2016S2,Liechtenstein,All taxes and levies included,Euro,0.0823
+2016S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2016S2,United Kingdom,Excluding taxes and levies,Euro,0.0466
+2016S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0434
+2016S2,United Kingdom,All taxes and levies included,Euro,0.0501
+2016S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0467
+2016S2,North Macedonia,Excluding taxes and levies,Euro,0
+2016S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0
+2016S2,North Macedonia,All taxes and levies included,Euro,0
+2016S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0
+2016S2,Serbia,Excluding taxes and levies,Euro,0.0296
+2016S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0674
+2016S2,Serbia,All taxes and levies included,Euro,0.0326
+2016S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0741
+2016S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0244
+2016S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0516
+2016S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0336
+2016S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0710
+2016S2,Moldova,Excluding taxes and levies,Euro,0.0273
+2016S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2016S2,Moldova,All taxes and levies included,Euro,0.0295
+2016S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2016S2,Ukraine,Excluding taxes and levies,Euro,0.0198
+2016S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2016S2,Ukraine,All taxes and levies included,Euro,0.0238
+2016S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2016S2,Georgia,Excluding taxes and levies,Euro,0
+2016S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2016S2,Georgia,All taxes and levies included,Euro,0
+2016S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2017S1,Belgium,Excluding taxes and levies,Euro,0.0413
+2017S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0365
+2017S1,Belgium,All taxes and levies included,Euro,0.0522
+2017S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0463
+2017S1,Bulgaria,Excluding taxes and levies,Euro,0.0275
+2017S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0547
+2017S1,Bulgaria,All taxes and levies included,Euro,0.0330
+2017S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0656
+2017S1,Czechia,Excluding taxes and levies,Euro,0.0454
+2017S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0672
+2017S1,Czechia,All taxes and levies included,Euro,0.0550
+2017S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0813
+2017S1,Denmark,Excluding taxes and levies,Euro,0.0397
+2017S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0295
+2017S1,Denmark,All taxes and levies included,Euro,0.0888
+2017S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0660
+2017S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0454
+2017S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0419
+2017S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0611
+2017S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0564
+2017S1,Estonia,Excluding taxes and levies,Euro,0.0310
+2017S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0398
+2017S1,Estonia,All taxes and levies included,Euro,0.0418
+2017S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0537
+2017S1,Ireland,Excluding taxes and levies,Euro,0.0520
+2017S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0450
+2017S1,Ireland,All taxes and levies included,Euro,0.0632
+2017S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0546
+2017S1,Greece,Excluding taxes and levies,Euro,0.0470
+2017S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0561
+2017S1,Greece,All taxes and levies included,Euro,0.0560
+2017S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0668
+2017S1,Spain,Excluding taxes and levies,Euro,0.0528
+2017S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0574
+2017S1,Spain,All taxes and levies included,Euro,0.0667
+2017S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0726
+2017S1,France,Excluding taxes and levies,Euro,0.0479
+2017S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0427
+2017S1,France,All taxes and levies included,Euro,0.0639
+2017S1,France,All taxes and levies included,Purchasing Power Standard,0.0570
+2017S1,Croatia,Excluding taxes and levies,Euro,0.0287
+2017S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0442
+2017S1,Croatia,All taxes and levies included,Euro,0.0359
+2017S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0552
+2017S1,Italy,Excluding taxes and levies,Euro,0.0449
+2017S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0447
+2017S1,Italy,All taxes and levies included,Euro,0.0704
+2017S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0701
+2017S1,Latvia,Excluding taxes and levies,Euro,0.0296
+2017S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0419
+2017S1,Latvia,All taxes and levies included,Euro,0.0378
+2017S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0535
+2017S1,Lithuania,Excluding taxes and levies,Euro,0.0302
+2017S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0468
+2017S1,Lithuania,All taxes and levies included,Euro,0.0365
+2017S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0566
+2017S1,Luxembourg,Excluding taxes and levies,Euro,0.0376
+2017S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0305
+2017S1,Luxembourg,All taxes and levies included,Euro,0.0418
+2017S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0338
+2017S1,Hungary,Excluding taxes and levies,Euro,0.0277
+2017S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0433
+2017S1,Hungary,All taxes and levies included,Euro,0.0352
+2017S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0550
+2017S1,Netherlands,Excluding taxes and levies,Euro,0.0356
+2017S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0313
+2017S1,Netherlands,All taxes and levies included,Euro,0.0763
+2017S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0670
+2017S1,Austria,Excluding taxes and levies,Euro,0.0514
+2017S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0455
+2017S1,Austria,All taxes and levies included,Euro,0.0674
+2017S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0597
+2017S1,Poland,Excluding taxes and levies,Euro,0.0338
+2017S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0569
+2017S1,Poland,All taxes and levies included,Euro,0.0417
+2017S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0700
+2017S1,Portugal,Excluding taxes and levies,Euro,0.0566
+2017S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0675
+2017S1,Portugal,All taxes and levies included,Euro,0.0773
+2017S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.0922
+2017S1,Romania,Excluding taxes and levies,Euro,0.0254
+2017S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0491
+2017S1,Romania,All taxes and levies included,Euro,0.0303
+2017S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0585
+2017S1,Slovenia,Excluding taxes and levies,Euro,0.0386
+2017S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0465
+2017S1,Slovenia,All taxes and levies included,Euro,0.0553
+2017S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0666
+2017S1,Slovakia,Excluding taxes and levies,Euro,0.0351
+2017S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0467
+2017S1,Slovakia,All taxes and levies included,Euro,0.0421
+2017S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0560
+2017S1,Sweden,Excluding taxes and levies,Euro,0.0682
+2017S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0508
+2017S1,Sweden,All taxes and levies included,Euro,0.1212
+2017S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0903
+2017S1,Liechtenstein,Excluding taxes and levies,Euro,0.0550
+2017S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2017S1,Liechtenstein,All taxes and levies included,Euro,0.0744
+2017S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2017S1,United Kingdom,Excluding taxes and levies,Euro,0.0437
+2017S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0377
+2017S1,United Kingdom,All taxes and levies included,Euro,0.0469
+2017S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0405
+2017S1,North Macedonia,Excluding taxes and levies,Euro,0.0408
+2017S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.0911
+2017S1,North Macedonia,All taxes and levies included,Euro,0.0482
+2017S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1074
+2017S1,Serbia,Excluding taxes and levies,Euro,0.0291
+2017S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0605
+2017S1,Serbia,All taxes and levies included,Euro,0.0321
+2017S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0665
+2017S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0263
+2017S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0518
+2017S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0307
+2017S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0606
+2017S1,Moldova,Excluding taxes and levies,Euro,0.0285
+2017S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2017S1,Moldova,All taxes and levies included,Euro,0.0308
+2017S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2017S1,Ukraine,Excluding taxes and levies,Euro,0.0193
+2017S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2017S1,Ukraine,All taxes and levies included,Euro,0.0231
+2017S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2017S1,Georgia,Excluding taxes and levies,Euro,0
+2017S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2017S1,Georgia,All taxes and levies included,Euro,0
+2017S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2017S2,Belgium,Excluding taxes and levies,Euro,0.0437
+2017S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0387
+2017S2,Belgium,All taxes and levies included,Euro,0.0552
+2017S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0488
+2017S2,Bulgaria,Excluding taxes and levies,Euro,0.0313
+2017S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0621
+2017S2,Bulgaria,All taxes and levies included,Euro,0.0375
+2017S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0745
+2017S2,Czechia,Excluding taxes and levies,Euro,0.0468
+2017S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0669
+2017S2,Czechia,All taxes and levies included,Euro,0.0566
+2017S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0810
+2017S2,Denmark,Excluding taxes and levies,Euro,0.0387
+2017S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0287
+2017S2,Denmark,All taxes and levies included,Euro,0.0875
+2017S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0650
+2017S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0453
+2017S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0417
+2017S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0609
+2017S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0562
+2017S2,Estonia,Excluding taxes and levies,Euro,0.0306
+2017S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0392
+2017S2,Estonia,All taxes and levies included,Euro,0.0413
+2017S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0530
+2017S2,Ireland,Excluding taxes and levies,Euro,0.0535
+2017S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0463
+2017S2,Ireland,All taxes and levies included,Euro,0.0649
+2017S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0561
+2017S2,Greece,Excluding taxes and levies,Euro,0
+2017S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0
+2017S2,Greece,All taxes and levies included,Euro,0
+2017S2,Greece,All taxes and levies included,Purchasing Power Standard,0
+2017S2,Spain,Excluding taxes and levies,Euro,0.0692
+2017S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0753
+2017S2,Spain,All taxes and levies included,Euro,0.0865
+2017S2,Spain,All taxes and levies included,Purchasing Power Standard,0.0942
+2017S2,France,Excluding taxes and levies,Euro,0.0521
+2017S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0465
+2017S2,France,All taxes and levies included,Euro,0.0695
+2017S2,France,All taxes and levies included,Purchasing Power Standard,0.0620
+2017S2,Croatia,Excluding taxes and levies,Euro,0.0293
+2017S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0452
+2017S2,Croatia,All taxes and levies included,Euro,0.0366
+2017S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0565
+2017S2,Italy,Excluding taxes and levies,Euro,0.0558
+2017S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0556
+2017S2,Italy,All taxes and levies included,Euro,0.0874
+2017S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0870
+2017S2,Latvia,Excluding taxes and levies,Euro,0.0307
+2017S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0434
+2017S2,Latvia,All taxes and levies included,Euro,0.0393
+2017S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0556
+2017S2,Lithuania,Excluding taxes and levies,Euro,0.0290
+2017S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0449
+2017S2,Lithuania,All taxes and levies included,Euro,0.0395
+2017S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0613
+2017S2,Luxembourg,Excluding taxes and levies,Euro,0.0357
+2017S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0289
+2017S2,Luxembourg,All taxes and levies included,Euro,0.0398
+2017S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0322
+2017S2,Hungary,Excluding taxes and levies,Euro,0.0287
+2017S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0448
+2017S2,Hungary,All taxes and levies included,Euro,0.0365
+2017S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0569
+2017S2,Netherlands,Excluding taxes and levies,Euro,0.0399
+2017S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0350
+2017S2,Netherlands,All taxes and levies included,Euro,0.0815
+2017S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0716
+2017S2,Austria,Excluding taxes and levies,Euro,0.0513
+2017S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0454
+2017S2,Austria,All taxes and levies included,Euro,0.0698
+2017S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0619
+2017S2,Poland,Excluding taxes and levies,Euro,0.0359
+2017S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0600
+2017S2,Poland,All taxes and levies included,Euro,0.0442
+2017S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0739
+2017S2,Portugal,Excluding taxes and levies,Euro,0.0585
+2017S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0698
+2017S2,Portugal,All taxes and levies included,Euro,0.0799
+2017S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.0953
+2017S2,Romania,Excluding taxes and levies,Euro,0.0259
+2017S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0507
+2017S2,Romania,All taxes and levies included,Euro,0.0308
+2017S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0603
+2017S2,Slovenia,Excluding taxes and levies,Euro,0.0369
+2017S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0445
+2017S2,Slovenia,All taxes and levies included,Euro,0.0532
+2017S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0640
+2017S2,Slovakia,Excluding taxes and levies,Euro,0.0371
+2017S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0493
+2017S2,Slovakia,All taxes and levies included,Euro,0.0445
+2017S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0592
+2017S2,Sweden,Excluding taxes and levies,Euro,0.0615
+2017S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0461
+2017S2,Sweden,All taxes and levies included,Euro,0.1125
+2017S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0845
+2017S2,Liechtenstein,Excluding taxes and levies,Euro,0.0560
+2017S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2017S2,Liechtenstein,All taxes and levies included,Euro,0.0746
+2017S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2017S2,United Kingdom,Excluding taxes and levies,Euro,0.0438
+2017S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0392
+2017S2,United Kingdom,All taxes and levies included,Euro,0.0479
+2017S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0429
+2017S2,North Macedonia,Excluding taxes and levies,Euro,0.0432
+2017S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.0963
+2017S2,North Macedonia,All taxes and levies included,Euro,0.0510
+2017S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1136
+2017S2,Serbia,Excluding taxes and levies,Euro,0.0308
+2017S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0619
+2017S2,Serbia,All taxes and levies included,Euro,0.0339
+2017S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0681
+2017S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0279
+2017S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0551
+2017S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0327
+2017S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0645
+2017S2,Moldova,Excluding taxes and levies,Euro,0.0288
+2017S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2017S2,Moldova,All taxes and levies included,Euro,0.0311
+2017S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2017S2,Ukraine,Excluding taxes and levies,Euro,0.0181
+2017S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2017S2,Ukraine,All taxes and levies included,Euro,0.0217
+2017S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2017S2,Georgia,Excluding taxes and levies,Euro,0
+2017S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2017S2,Georgia,All taxes and levies included,Euro,0
+2017S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2018S1,Belgium,Excluding taxes and levies,Euro,0.0422
+2018S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0374
+2018S1,Belgium,All taxes and levies included,Euro,0.0536
+2018S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0475
+2018S1,Bulgaria,Excluding taxes and levies,Euro,0.0316
+2018S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0615
+2018S1,Bulgaria,All taxes and levies included,Euro,0.0379
+2018S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0738
+2018S1,Czechia,Excluding taxes and levies,Euro,0.0475
+2018S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0664
+2018S1,Czechia,All taxes and levies included,Euro,0.0575
+2018S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0803
+2018S1,Denmark,Excluding taxes and levies,Euro,0.0383
+2018S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0286
+2018S1,Denmark,All taxes and levies included,Euro,0.0872
+2018S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0650
+2018S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0452
+2018S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0416
+2018S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0608
+2018S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0560
+2018S1,Estonia,Excluding taxes and levies,Euro,0.0287
+2018S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0360
+2018S1,Estonia,All taxes and levies included,Euro,0.0401
+2018S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0504
+2018S1,Ireland,Excluding taxes and levies,Euro,0.0520
+2018S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0446
+2018S1,Ireland,All taxes and levies included,Euro,0.0632
+2018S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0542
+2018S1,Greece,Excluding taxes and levies,Euro,0.0458
+2018S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0551
+2018S1,Greece,All taxes and levies included,Euro,0.0532
+2018S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0640
+2018S1,Spain,Excluding taxes and levies,Euro,0.0526
+2018S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0565
+2018S1,Spain,All taxes and levies included,Euro,0.0665
+2018S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0714
+2018S1,France,Excluding taxes and levies,Euro,0.0481
+2018S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0432
+2018S1,France,All taxes and levies included,Euro,0.0665
+2018S1,France,All taxes and levies included,Purchasing Power Standard,0.0597
+2018S1,Croatia,Excluding taxes and levies,Euro,0.0294
+2018S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0448
+2018S1,Croatia,All taxes and levies included,Euro,0.0368
+2018S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0560
+2018S1,Italy,Excluding taxes and levies,Euro,0.0459
+2018S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0457
+2018S1,Italy,All taxes and levies included,Euro,0.0714
+2018S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0712
+2018S1,Latvia,Excluding taxes and levies,Euro,0.0301
+2018S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0416
+2018S1,Latvia,All taxes and levies included,Euro,0.0385
+2018S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0532
+2018S1,Lithuania,Excluding taxes and levies,Euro,0.0285
+2018S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0432
+2018S1,Lithuania,All taxes and levies included,Euro,0.0399
+2018S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0606
+2018S1,Luxembourg,Excluding taxes and levies,Euro,0.0369
+2018S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0295
+2018S1,Luxembourg,All taxes and levies included,Euro,0.0411
+2018S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0329
+2018S1,Hungary,Excluding taxes and levies,Euro,0.0282
+2018S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0431
+2018S1,Hungary,All taxes and levies included,Euro,0.0358
+2018S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0548
+2018S1,Netherlands,Excluding taxes and levies,Euro,0.0379
+2018S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0331
+2018S1,Netherlands,All taxes and levies included,Euro,0.0815
+2018S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0713
+2018S1,Austria,Excluding taxes and levies,Euro,0.0488
+2018S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0433
+2018S1,Austria,All taxes and levies included,Euro,0.0669
+2018S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0594
+2018S1,Poland,Excluding taxes and levies,Euro,0.0343
+2018S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0563
+2018S1,Poland,All taxes and levies included,Euro,0.0423
+2018S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0694
+2018S1,Portugal,Excluding taxes and levies,Euro,0.0567
+2018S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0673
+2018S1,Portugal,All taxes and levies included,Euro,0.0759
+2018S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.0900
+2018S1,Romania,Excluding taxes and levies,Euro,0.0269
+2018S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0509
+2018S1,Romania,All taxes and levies included,Euro,0.0321
+2018S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0605
+2018S1,Slovenia,Excluding taxes and levies,Euro,0.0381
+2018S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0455
+2018S1,Slovenia,All taxes and levies included,Euro,0.0547
+2018S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0652
+2018S1,Slovakia,Excluding taxes and levies,Euro,0.0356
+2018S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0464
+2018S1,Slovakia,All taxes and levies included,Euro,0.0427
+2018S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0556
+2018S1,Sweden,Excluding taxes and levies,Euro,0.0646
+2018S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0501
+2018S1,Sweden,All taxes and levies included,Euro,0.1153
+2018S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0895
+2018S1,Liechtenstein,Excluding taxes and levies,Euro,0.0484
+2018S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2018S1,Liechtenstein,All taxes and levies included,Euro,0.0681
+2018S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2018S1,United Kingdom,Excluding taxes and levies,Euro,0.0425
+2018S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0371
+2018S1,United Kingdom,All taxes and levies included,Euro,0.0465
+2018S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0406
+2018S1,North Macedonia,Excluding taxes and levies,Euro,0.0345
+2018S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.0756
+2018S1,North Macedonia,All taxes and levies included,Euro,0.0407
+2018S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.0892
+2018S1,Serbia,Excluding taxes and levies,Euro,0.0304
+2018S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0596
+2018S1,Serbia,All taxes and levies included,Euro,0.0335
+2018S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0655
+2018S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0278
+2018S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0547
+2018S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0326
+2018S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0640
+2018S1,Moldova,Excluding taxes and levies,Euro,0.0235
+2018S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2018S1,Moldova,All taxes and levies included,Euro,0.0254
+2018S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2018S1,Ukraine,Excluding taxes and levies,Euro,0.0174
+2018S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2018S1,Ukraine,All taxes and levies included,Euro,0.0209
+2018S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2018S1,Georgia,Excluding taxes and levies,Euro,0.0128
+2018S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2018S1,Georgia,All taxes and levies included,Euro,0.0151
+2018S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2018S2,Belgium,Excluding taxes and levies,Euro,0.0495
+2018S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0438
+2018S2,Belgium,All taxes and levies included,Euro,0.0625
+2018S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0554
+2018S2,Bulgaria,Excluding taxes and levies,Euro,0.0364
+2018S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0709
+2018S2,Bulgaria,All taxes and levies included,Euro,0.0437
+2018S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0850
+2018S2,Czechia,Excluding taxes and levies,Euro,0.0470
+2018S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0664
+2018S2,Czechia,All taxes and levies included,Euro,0.0569
+2018S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0804
+2018S2,Denmark,Excluding taxes and levies,Euro,0.0417
+2018S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0311
+2018S2,Denmark,All taxes and levies included,Euro,0.0913
+2018S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0682
+2018S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0451
+2018S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0415
+2018S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0608
+2018S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0559
+2018S2,Estonia,Excluding taxes and levies,Euro,0.0306
+2018S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0384
+2018S2,Estonia,All taxes and levies included,Euro,0.0425
+2018S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0533
+2018S2,Ireland,Excluding taxes and levies,Euro,0.0634
+2018S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0543
+2018S2,Ireland,All taxes and levies included,Euro,0.0761
+2018S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0652
+2018S2,Greece,Excluding taxes and levies,Euro,0.0565
+2018S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0680
+2018S2,Greece,All taxes and levies included,Euro,0.0654
+2018S2,Greece,All taxes and levies included,Purchasing Power Standard,0.0786
+2018S2,Spain,Excluding taxes and levies,Euro,0.0699
+2018S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0750
+2018S2,Spain,All taxes and levies included,Euro,0.0875
+2018S2,Spain,All taxes and levies included,Purchasing Power Standard,0.0938
+2018S2,France,Excluding taxes and levies,Euro,0.0553
+2018S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0496
+2018S2,France,All taxes and levies included,Euro,0.0763
+2018S2,France,All taxes and levies included,Purchasing Power Standard,0.0685
+2018S2,Croatia,Excluding taxes and levies,Euro,0.0288
+2018S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0438
+2018S2,Croatia,All taxes and levies included,Euro,0.0360
+2018S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0548
+2018S2,Italy,Excluding taxes and levies,Euro,0.0621
+2018S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0620
+2018S2,Italy,All taxes and levies included,Euro,0.0951
+2018S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0949
+2018S2,Latvia,Excluding taxes and levies,Euro,0.0355
+2018S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0491
+2018S2,Latvia,All taxes and levies included,Euro,0.0450
+2018S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0622
+2018S2,Lithuania,Excluding taxes and levies,Euro,0.0297
+2018S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0451
+2018S2,Lithuania,All taxes and levies included,Euro,0.0405
+2018S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0614
+2018S2,Luxembourg,Excluding taxes and levies,Euro,0.0385
+2018S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0309
+2018S2,Luxembourg,All taxes and levies included,Euro,0.0429
+2018S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0343
+2018S2,Hungary,Excluding taxes and levies,Euro,0.0273
+2018S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0430
+2018S2,Hungary,All taxes and levies included,Euro,0.0347
+2018S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0546
+2018S2,Netherlands,Excluding taxes and levies,Euro,0.0416
+2018S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0364
+2018S2,Netherlands,All taxes and levies included,Euro,0.0861
+2018S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0752
+2018S2,Austria,Excluding taxes and levies,Euro,0.0514
+2018S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0456
+2018S2,Austria,All taxes and levies included,Euro,0.0701
+2018S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0622
+2018S2,Poland,Excluding taxes and levies,Euro,0.0364
+2018S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0608
+2018S2,Poland,All taxes and levies included,Euro,0.0450
+2018S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0751
+2018S2,Portugal,Excluding taxes and levies,Euro,0.0586
+2018S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0695
+2018S2,Portugal,All taxes and levies included,Euro,0.0784
+2018S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.0930
+2018S2,Romania,Excluding taxes and levies,Euro,0.0297
+2018S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0562
+2018S2,Romania,All taxes and levies included,Euro,0.0354
+2018S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0668
+2018S2,Slovenia,Excluding taxes and levies,Euro,0.0406
+2018S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0485
+2018S2,Slovenia,All taxes and levies included,Euro,0.0577
+2018S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0688
+2018S2,Slovakia,Excluding taxes and levies,Euro,0.0383
+2018S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0498
+2018S2,Slovakia,All taxes and levies included,Euro,0.0459
+2018S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0598
+2018S2,Sweden,Excluding taxes and levies,Euro,0.0707
+2018S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0561
+2018S2,Sweden,All taxes and levies included,Euro,0.1223
+2018S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0970
+2018S2,Liechtenstein,Excluding taxes and levies,Euro,0.0606
+2018S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2018S2,Liechtenstein,All taxes and levies included,Euro,0.0817
+2018S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2018S2,United Kingdom,Excluding taxes and levies,Euro,0.0464
+2018S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0409
+2018S2,United Kingdom,All taxes and levies included,Euro,0.0518
+2018S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0457
+2018S2,North Macedonia,Excluding taxes and levies,Euro,0.0514
+2018S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.1125
+2018S2,North Macedonia,All taxes and levies included,Euro,0.0606
+2018S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1328
+2018S2,Serbia,Excluding taxes and levies,Euro,0.0311
+2018S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0609
+2018S2,Serbia,All taxes and levies included,Euro,0.0342
+2018S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0669
+2018S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0278
+2018S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0547
+2018S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0326
+2018S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0640
+2018S2,Moldova,Excluding taxes and levies,Euro,0.0267
+2018S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2018S2,Moldova,All taxes and levies included,Euro,0.0289
+2018S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2018S2,Ukraine,Excluding taxes and levies,Euro,0.0207
+2018S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2018S2,Ukraine,All taxes and levies included,Euro,0.0248
+2018S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2018S2,Georgia,Excluding taxes and levies,Euro,0.0128
+2018S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2018S2,Georgia,All taxes and levies included,Euro,0.0151
+2018S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2019S1,Belgium,Excluding taxes and levies,Euro,0.0438
+2019S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0389
+2019S1,Belgium,All taxes and levies included,Euro,0.0554
+2019S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0491
+2019S1,Bulgaria,Excluding taxes and levies,Euro,0.0374
+2019S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0703
+2019S1,Bulgaria,All taxes and levies included,Euro,0.0449
+2019S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0844
+2019S1,Czechia,Excluding taxes and levies,Euro,0.0483
+2019S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0665
+2019S1,Czechia,All taxes and levies included,Euro,0.0586
+2019S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0807
+2019S1,Denmark,Excluding taxes and levies,Euro,0.0373
+2019S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0281
+2019S1,Denmark,All taxes and levies included,Euro,0.0855
+2019S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0644
+2019S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0472
+2019S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0426
+2019S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0632
+2019S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0571
+2019S1,Estonia,Excluding taxes and levies,Euro,0.0322
+2019S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0396
+2019S1,Estonia,All taxes and levies included,Euro,0.0458
+2019S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0564
+2019S1,Ireland,Excluding taxes and levies,Euro,0.0565
+2019S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0470
+2019S1,Ireland,All taxes and levies included,Euro,0.0683
+2019S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0568
+2019S1,Greece,Excluding taxes and levies,Euro,0.0482
+2019S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0584
+2019S1,Greece,All taxes and levies included,Euro,0.0555
+2019S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0672
+2019S1,Spain,Excluding taxes and levies,Euro,0.0548
+2019S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0588
+2019S1,Spain,All taxes and levies included,Euro,0.0736
+2019S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0790
+2019S1,France,Excluding taxes and levies,Euro,0.0527
+2019S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0484
+2019S1,France,All taxes and levies included,Euro,0.0738
+2019S1,France,All taxes and levies included,Purchasing Power Standard,0.0678
+2019S1,Croatia,Excluding taxes and levies,Euro,0.0300
+2019S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0457
+2019S1,Croatia,All taxes and levies included,Euro,0.0375
+2019S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0572
+2019S1,Italy,Excluding taxes and levies,Euro,0.0477
+2019S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0479
+2019S1,Italy,All taxes and levies included,Euro,0.0769
+2019S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0773
+2019S1,Latvia,Excluding taxes and levies,Euro,0.0351
+2019S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0475
+2019S1,Latvia,All taxes and levies included,Euro,0.0446
+2019S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0603
+2019S1,Lithuania,Excluding taxes and levies,Euro,0.0321
+2019S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0479
+2019S1,Lithuania,All taxes and levies included,Euro,0.0450
+2019S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0671
+2019S1,Luxembourg,Excluding taxes and levies,Euro,0.0403
+2019S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0320
+2019S1,Luxembourg,All taxes and levies included,Euro,0.0448
+2019S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0355
+2019S1,Hungary,Excluding taxes and levies,Euro,0.0272
+2019S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0409
+2019S1,Hungary,All taxes and levies included,Euro,0.0346
+2019S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0519
+2019S1,Netherlands,Excluding taxes and levies,Euro,0.0407
+2019S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0348
+2019S1,Netherlands,All taxes and levies included,Euro,0.0921
+2019S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0787
+2019S1,Austria,Excluding taxes and levies,Euro,0.0481
+2019S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0423
+2019S1,Austria,All taxes and levies included,Euro,0.0660
+2019S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0581
+2019S1,Poland,Excluding taxes and levies,Euro,0.0380
+2019S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0620
+2019S1,Poland,All taxes and levies included,Euro,0.0473
+2019S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0772
+2019S1,Portugal,Excluding taxes and levies,Euro,0.0568
+2019S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0676
+2019S1,Portugal,All taxes and levies included,Euro,0.0760
+2019S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.0905
+2019S1,Romania,Excluding taxes and levies,Euro,0.0292
+2019S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0549
+2019S1,Romania,All taxes and levies included,Euro,0.0347
+2019S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0653
+2019S1,Slovenia,Excluding taxes and levies,Euro,0.0402
+2019S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0480
+2019S1,Slovenia,All taxes and levies included,Euro,0.0572
+2019S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0683
+2019S1,Slovakia,Excluding taxes and levies,Euro,0.0374
+2019S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0475
+2019S1,Slovakia,All taxes and levies included,Euro,0.0449
+2019S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0570
+2019S1,Sweden,Excluding taxes and levies,Euro,0.0674
+2019S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0536
+2019S1,Sweden,All taxes and levies included,Euro,0.1183
+2019S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0941
+2019S1,Liechtenstein,Excluding taxes and levies,Euro,0.0545
+2019S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2019S1,Liechtenstein,All taxes and levies included,Euro,0.0752
+2019S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2019S1,United Kingdom,Excluding taxes and levies,Euro,0.0451
+2019S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0387
+2019S1,United Kingdom,All taxes and levies included,Euro,0.0493
+2019S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0423
+2019S1,North Macedonia,Excluding taxes and levies,Euro,0.0507
+2019S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.1113
+2019S1,North Macedonia,All taxes and levies included,Euro,0.0598
+2019S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1314
+2019S1,Serbia,Excluding taxes and levies,Euro,0.0304
+2019S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0586
+2019S1,Serbia,All taxes and levies included,Euro,0.0335
+2019S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0645
+2019S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0286
+2019S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0558
+2019S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0335
+2019S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0653
+2019S1,Moldova,Excluding taxes and levies,Euro,0.0275
+2019S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2019S1,Moldova,All taxes and levies included,Euro,0.0297
+2019S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2019S1,Ukraine,Excluding taxes and levies,Euro,0.0223
+2019S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2019S1,Ukraine,All taxes and levies included,Euro,0.0267
+2019S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2019S1,Georgia,Excluding taxes and levies,Euro,0.0128
+2019S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2019S1,Georgia,All taxes and levies included,Euro,0.0151
+2019S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2019S2,Belgium,Excluding taxes and levies,Euro,0.0454
+2019S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0403
+2019S2,Belgium,All taxes and levies included,Euro,0.0573
+2019S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0508
+2019S2,Bulgaria,Excluding taxes and levies,Euro,0.0368
+2019S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0692
+2019S2,Bulgaria,All taxes and levies included,Euro,0.0442
+2019S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0831
+2019S2,Czechia,Excluding taxes and levies,Euro,0.0485
+2019S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0667
+2019S2,Czechia,All taxes and levies included,Euro,0.0588
+2019S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0808
+2019S2,Denmark,Excluding taxes and levies,Euro,0.0307
+2019S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0231
+2019S2,Denmark,All taxes and levies included,Euro,0.0771
+2019S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0581
+2019S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0431
+2019S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0390
+2019S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0588
+2019S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0532
+2019S2,Estonia,Excluding taxes and levies,Euro,0.0311
+2019S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0383
+2019S2,Estonia,All taxes and levies included,Euro,0.0446
+2019S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0548
+2019S2,Ireland,Excluding taxes and levies,Euro,0.0636
+2019S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0530
+2019S2,Ireland,All taxes and levies included,Euro,0.0764
+2019S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0636
+2019S2,Greece,Excluding taxes and levies,Euro,0.0541
+2019S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0655
+2019S2,Greece,All taxes and levies included,Euro,0.0587
+2019S2,Greece,All taxes and levies included,Purchasing Power Standard,0.0711
+2019S2,Spain,Excluding taxes and levies,Euro,0.0783
+2019S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0840
+2019S2,Spain,All taxes and levies included,Euro,0.1021
+2019S2,Spain,All taxes and levies included,Purchasing Power Standard,0.1095
+2019S2,France,Excluding taxes and levies,Euro,0.0606
+2019S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0557
+2019S2,France,All taxes and levies included,Euro,0.0839
+2019S2,France,All taxes and levies included,Purchasing Power Standard,0.0772
+2019S2,Croatia,Excluding taxes and levies,Euro,0.0325
+2019S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0494
+2019S2,Croatia,All taxes and levies included,Euro,0.0406
+2019S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0618
+2019S2,Italy,Excluding taxes and levies,Euro,0.0610
+2019S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0612
+2019S2,Italy,All taxes and levies included,Euro,0.0934
+2019S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0939
+2019S2,Latvia,Excluding taxes and levies,Euro,0.0273
+2019S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0369
+2019S2,Latvia,All taxes and levies included,Euro,0.0351
+2019S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0474
+2019S2,Lithuania,Excluding taxes and levies,Euro,0.0287
+2019S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0427
+2019S2,Lithuania,All taxes and levies included,Euro,0.0406
+2019S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0605
+2019S2,Luxembourg,Excluding taxes and levies,Euro,0.0371
+2019S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0295
+2019S2,Luxembourg,All taxes and levies included,Euro,0.0414
+2019S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0328
+2019S2,Hungary,Excluding taxes and levies,Euro,0.0263
+2019S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0407
+2019S2,Hungary,All taxes and levies included,Euro,0.0334
+2019S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0517
+2019S2,Netherlands,Excluding taxes and levies,Euro,0.0444
+2019S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0379
+2019S2,Netherlands,All taxes and levies included,Euro,0.0965
+2019S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0825
+2019S2,Austria,Excluding taxes and levies,Euro,0.0493
+2019S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0434
+2019S2,Austria,All taxes and levies included,Euro,0.0674
+2019S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0593
+2019S2,Poland,Excluding taxes and levies,Euro,0.0374
+2019S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0613
+2019S2,Poland,All taxes and levies included,Euro,0.0465
+2019S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0761
+2019S2,Portugal,Excluding taxes and levies,Euro,0.0584
+2019S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0695
+2019S2,Portugal,All taxes and levies included,Euro,0.0776
+2019S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.0924
+2019S2,Romania,Excluding taxes and levies,Euro,0.0279
+2019S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0527
+2019S2,Romania,All taxes and levies included,Euro,0.0332
+2019S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0627
+2019S2,Slovenia,Excluding taxes and levies,Euro,0.0393
+2019S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0470
+2019S2,Slovenia,All taxes and levies included,Euro,0.0561
+2019S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0670
+2019S2,Slovakia,Excluding taxes and levies,Euro,0.0401
+2019S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0509
+2019S2,Slovakia,All taxes and levies included,Euro,0.0481
+2019S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0611
+2019S2,Sweden,Excluding taxes and levies,Euro,0.0665
+2019S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0536
+2019S2,Sweden,All taxes and levies included,Euro,0.1167
+2019S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0941
+2019S2,Liechtenstein,Excluding taxes and levies,Euro,0.0622
+2019S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2019S2,Liechtenstein,All taxes and levies included,Euro,0.0841
+2019S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2019S2,United Kingdom,Excluding taxes and levies,Euro,0.0448
+2019S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0387
+2019S2,United Kingdom,All taxes and levies included,Euro,0.0504
+2019S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0436
+2019S2,North Macedonia,Excluding taxes and levies,Euro,0.0487
+2019S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.1070
+2019S2,North Macedonia,All taxes and levies included,Euro,0.0575
+2019S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1263
+2019S2,Serbia,Excluding taxes and levies,Euro,0.0315
+2019S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0604
+2019S2,Serbia,All taxes and levies included,Euro,0.0348
+2019S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0667
+2019S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0285
+2019S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0554
+2019S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0333
+2019S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0648
+2019S2,Moldova,Excluding taxes and levies,Euro,0.0279
+2019S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2019S2,Moldova,All taxes and levies included,Euro,0.0301
+2019S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2019S2,Ukraine,Excluding taxes and levies,Euro,0.0189
+2019S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2019S2,Ukraine,All taxes and levies included,Euro,0.0227
+2019S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2019S2,Georgia,Excluding taxes and levies,Euro,0.0121
+2019S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2019S2,Georgia,All taxes and levies included,Euro,0.0143
+2019S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2020S1,Belgium,Excluding taxes and levies,Euro,0.0389
+2020S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0345
+2020S1,Belgium,All taxes and levies included,Euro,0.0496
+2020S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0439
+2020S1,Bulgaria,Excluding taxes and levies,Euro,0.0330
+2020S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0621
+2020S1,Bulgaria,All taxes and levies included,Euro,0.0396
+2020S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0745
+2020S1,Czechia,Excluding taxes and levies,Euro,0.0472
+2020S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0667
+2020S1,Czechia,All taxes and levies included,Euro,0.0573
+2020S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0809
+2020S1,Denmark,Excluding taxes and levies,Euro,0.0287
+2020S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0216
+2020S1,Denmark,All taxes and levies included,Euro,0.0750
+2020S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0565
+2020S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0439
+2020S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0397
+2020S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0597
+2020S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0540
+2020S1,Estonia,Excluding taxes and levies,Euro,0.0307
+2020S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0378
+2020S1,Estonia,All taxes and levies included,Euro,0.0441
+2020S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0543
+2020S1,Ireland,Excluding taxes and levies,Euro,0.0552
+2020S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0460
+2020S1,Ireland,All taxes and levies included,Euro,0.0669
+2020S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0557
+2020S1,Greece,Excluding taxes and levies,Euro,0.0441
+2020S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0535
+2020S1,Greece,All taxes and levies included,Euro,0.0483
+2020S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0585
+2020S1,Spain,Excluding taxes and levies,Euro,0.0537
+2020S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0576
+2020S1,Spain,All taxes and levies included,Euro,0.0718
+2020S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0770
+2020S1,France,Excluding taxes and levies,Euro,0.0511
+2020S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0470
+2020S1,France,All taxes and levies included,Euro,0.0720
+2020S1,France,All taxes and levies included,Purchasing Power Standard,0.0662
+2020S1,Croatia,Excluding taxes and levies,Euro,0.0311
+2020S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0481
+2020S1,Croatia,All taxes and levies included,Euro,0.0389
+2020S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0601
+2020S1,Italy,Excluding taxes and levies,Euro,0.0440
+2020S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0442
+2020S1,Italy,All taxes and levies included,Euro,0.0728
+2020S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0732
+2020S1,Latvia,Excluding taxes and levies,Euro,0.0243
+2020S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0329
+2020S1,Latvia,All taxes and levies included,Euro,0.0315
+2020S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0426
+2020S1,Lithuania,Excluding taxes and levies,Euro,0.0272
+2020S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0406
+2020S1,Lithuania,All taxes and levies included,Euro,0.0361
+2020S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0539
+2020S1,Luxembourg,Excluding taxes and levies,Euro,0.0370
+2020S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0293
+2020S1,Luxembourg,All taxes and levies included,Euro,0.0412
+2020S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0327
+2020S1,Hungary,Excluding taxes and levies,Euro,0.0251
+2020S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0407
+2020S1,Hungary,All taxes and levies included,Euro,0.0319
+2020S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0517
+2020S1,Netherlands,Excluding taxes and levies,Euro,0.0402
+2020S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0344
+2020S1,Netherlands,All taxes and levies included,Euro,0.0995
+2020S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0851
+2020S1,Austria,Excluding taxes and levies,Euro,0.0471
+2020S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0415
+2020S1,Austria,All taxes and levies included,Euro,0.0648
+2020S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0570
+2020S1,Poland,Excluding taxes and levies,Euro,0.0341
+2020S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0573
+2020S1,Poland,All taxes and levies included,Euro,0.0425
+2020S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0714
+2020S1,Portugal,Excluding taxes and levies,Euro,0.0564
+2020S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0671
+2020S1,Portugal,All taxes and levies included,Euro,0.0785
+2020S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.0935
+2020S1,Romania,Excluding taxes and levies,Euro,0.0272
+2020S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0521
+2020S1,Romania,All taxes and levies included,Euro,0.0324
+2020S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0620
+2020S1,Slovenia,Excluding taxes and levies,Euro,0.0414
+2020S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0494
+2020S1,Slovenia,All taxes and levies included,Euro,0.0586
+2020S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0700
+2020S1,Slovakia,Excluding taxes and levies,Euro,0.0381
+2020S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0484
+2020S1,Slovakia,All taxes and levies included,Euro,0.0457
+2020S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0581
+2020S1,Sweden,Excluding taxes and levies,Euro,0.0665
+2020S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0536
+2020S1,Sweden,All taxes and levies included,Euro,0.0980
+2020S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0790
+2020S1,Liechtenstein,Excluding taxes and levies,Euro,0.0567
+2020S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2020S1,Liechtenstein,All taxes and levies included,Euro,0.0787
+2020S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2020S1,United Kingdom,Excluding taxes and levies,Euro,0.0431
+2020S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0.0370
+2020S1,United Kingdom,All taxes and levies included,Euro,0.0476
+2020S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0.0409
+2020S1,North Macedonia,Excluding taxes and levies,Euro,0.0461
+2020S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.1014
+2020S1,North Macedonia,All taxes and levies included,Euro,0.0544
+2020S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1197
+2020S1,Serbia,Excluding taxes and levies,Euro,0.0305
+2020S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0585
+2020S1,Serbia,All taxes and levies included,Euro,0.0337
+2020S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0646
+2020S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0320
+2020S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0622
+2020S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0374
+2020S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0728
+2020S1,Moldova,Excluding taxes and levies,Euro,0.0280
+2020S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2020S1,Moldova,All taxes and levies included,Euro,0.0302
+2020S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2020S1,Ukraine,Excluding taxes and levies,Euro,0.0151
+2020S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2020S1,Ukraine,All taxes and levies included,Euro,0.0181
+2020S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2020S1,Georgia,Excluding taxes and levies,Euro,0.0118
+2020S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2020S1,Georgia,All taxes and levies included,Euro,0.0139
+2020S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2020S2,Belgium,Excluding taxes and levies,Euro,0.0391
+2020S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0347
+2020S2,Belgium,All taxes and levies included,Euro,0.0498
+2020S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0441
+2020S2,Bulgaria,Excluding taxes and levies,Euro,0.0290
+2020S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0545
+2020S2,Bulgaria,All taxes and levies included,Euro,0.0348
+2020S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0654
+2020S2,Czechia,Excluding taxes and levies,Euro,0.0461
+2020S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0656
+2020S2,Czechia,All taxes and levies included,Euro,0.0558
+2020S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0796
+2020S2,Denmark,Excluding taxes and levies,Euro,0.0284
+2020S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0213
+2020S2,Denmark,All taxes and levies included,Euro,0.0747
+2020S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0561
+2020S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0471
+2020S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0426
+2020S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0620
+2020S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0560
+2020S2,Estonia,Excluding taxes and levies,Euro,0.0305
+2020S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0375
+2020S2,Estonia,All taxes and levies included,Euro,0.0411
+2020S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0506
+2020S2,Ireland,Excluding taxes and levies,Euro,0.0574
+2020S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0478
+2020S2,Ireland,All taxes and levies included,Euro,0.0701
+2020S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0584
+2020S2,Greece,Excluding taxes and levies,Euro,0.0475
+2020S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0575
+2020S2,Greece,All taxes and levies included,Euro,0.0517
+2020S2,Greece,All taxes and levies included,Purchasing Power Standard,0.0627
+2020S2,Spain,Excluding taxes and levies,Euro,0.0679
+2020S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0729
+2020S2,Spain,All taxes and levies included,Euro,0.0890
+2020S2,Spain,All taxes and levies included,Purchasing Power Standard,0.0955
+2020S2,France,Excluding taxes and levies,Euro,0.0536
+2020S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0493
+2020S2,France,All taxes and levies included,Euro,0.0751
+2020S2,France,All taxes and levies included,Purchasing Power Standard,0.0691
+2020S2,Croatia,Excluding taxes and levies,Euro,0.0302
+2020S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0468
+2020S2,Croatia,All taxes and levies included,Euro,0.0377
+2020S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0584
+2020S2,Italy,Excluding taxes and levies,Euro,0.0570
+2020S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0572
+2020S2,Italy,All taxes and levies included,Euro,0.0897
+2020S2,Italy,All taxes and levies included,Purchasing Power Standard,0.0901
+2020S2,Latvia,Excluding taxes and levies,Euro,0.0214
+2020S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0290
+2020S2,Latvia,All taxes and levies included,Euro,0.0280
+2020S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0378
+2020S2,Lithuania,Excluding taxes and levies,Euro,0.0218
+2020S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0324
+2020S2,Lithuania,All taxes and levies included,Euro,0.0295
+2020S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0440
+2020S2,Luxembourg,Excluding taxes and levies,Euro,0.0327
+2020S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0253
+2020S2,Luxembourg,All taxes and levies included,Euro,0.0366
+2020S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0283
+2020S2,Hungary,Excluding taxes and levies,Euro,0.0243
+2020S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0406
+2020S2,Hungary,All taxes and levies included,Euro,0.0308
+2020S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0516
+2020S2,Netherlands,Excluding taxes and levies,Euro,0.0414
+2020S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0354
+2020S2,Netherlands,All taxes and levies included,Euro,0.1010
+2020S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0863
+2020S2,Austria,Excluding taxes and levies,Euro,0.0478
+2020S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0421
+2020S2,Austria,All taxes and levies included,Euro,0.0656
+2020S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0577
+2020S2,Poland,Excluding taxes and levies,Euro,0.0336
+2020S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0572
+2020S2,Poland,All taxes and levies included,Euro,0.0419
+2020S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0714
+2020S2,Portugal,Excluding taxes and levies,Euro,0.0561
+2020S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0668
+2020S2,Portugal,All taxes and levies included,Euro,0.0783
+2020S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.0932
+2020S2,Romania,Excluding taxes and levies,Euro,0.0269
+2020S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0519
+2020S2,Romania,All taxes and levies included,Euro,0.0320
+2020S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0618
+2020S2,Slovenia,Excluding taxes and levies,Euro,0.0384
+2020S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0458
+2020S2,Slovenia,All taxes and levies included,Euro,0.0549
+2020S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0656
+2020S2,Slovakia,Excluding taxes and levies,Euro,0.0400
+2020S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0508
+2020S2,Slovakia,All taxes and levies included,Euro,0.0480
+2020S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0609
+2020S2,Sweden,Excluding taxes and levies,Euro,0.0735
+2020S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0574
+2020S2,Sweden,All taxes and levies included,Euro,0.1073
+2020S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.0837
+2020S2,Liechtenstein,Excluding taxes and levies,Euro,0.0560
+2020S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2020S2,Liechtenstein,All taxes and levies included,Euro,0.0776
+2020S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2020S2,United Kingdom,Excluding taxes and levies,Euro,0
+2020S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0
+2020S2,United Kingdom,All taxes and levies included,Euro,0
+2020S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0
+2020S2,North Macedonia,Excluding taxes and levies,Euro,0.0384
+2020S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.0847
+2020S2,North Macedonia,All taxes and levies included,Euro,0.0454
+2020S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.0999
+2020S2,Serbia,Excluding taxes and levies,Euro,0.0311
+2020S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0596
+2020S2,Serbia,All taxes and levies included,Euro,0.0344
+2020S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0659
+2020S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0295
+2020S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0575
+2020S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0346
+2020S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0673
+2020S2,Moldova,Excluding taxes and levies,Euro,0.0242
+2020S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2020S2,Moldova,All taxes and levies included,Euro,0.0261
+2020S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2020S2,Ukraine,Excluding taxes and levies,Euro,0.0215
+2020S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2020S2,Ukraine,All taxes and levies included,Euro,0.0258
+2020S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2020S2,Georgia,Excluding taxes and levies,Euro,0.0106
+2020S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2020S2,Georgia,All taxes and levies included,Euro,0.0125
+2020S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2021S1,Belgium,Excluding taxes and levies,Euro,0.0363
+2021S1,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0323
+2021S1,Belgium,All taxes and levies included,Euro,0.0468
+2021S1,Belgium,All taxes and levies included,Purchasing Power Standard,0.0416
+2021S1,Bulgaria,Excluding taxes and levies,Euro,0.0306
+2021S1,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.0570
+2021S1,Bulgaria,All taxes and levies included,Euro,0.0368
+2021S1,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.0684
+2021S1,Czechia,Excluding taxes and levies,Euro,0.0463
+2021S1,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0632
+2021S1,Czechia,All taxes and levies included,Euro,0.0562
+2021S1,Czechia,All taxes and levies included,Purchasing Power Standard,0.0767
+2021S1,Denmark,Excluding taxes and levies,Euro,0.0395
+2021S1,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0298
+2021S1,Denmark,All taxes and levies included,Euro,0.0895
+2021S1,Denmark,All taxes and levies included,Purchasing Power Standard,0.0674
+2021S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0435
+2021S1,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0390
+2021S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0647
+2021S1,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0579
+2021S1,Estonia,Excluding taxes and levies,Euro,0.0325
+2021S1,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0408
+2021S1,Estonia,All taxes and levies included,Euro,0.0435
+2021S1,Estonia,All taxes and levies included,Purchasing Power Standard,0.0547
+2021S1,Ireland,Excluding taxes and levies,Euro,0.0500
+2021S1,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0426
+2021S1,Ireland,All taxes and levies included,Euro,0.0620
+2021S1,Ireland,All taxes and levies included,Purchasing Power Standard,0.0528
+2021S1,Greece,Excluding taxes and levies,Euro,0.0411
+2021S1,Greece,Excluding taxes and levies,Purchasing Power Standard,0.0505
+2021S1,Greece,All taxes and levies included,Euro,0.0449
+2021S1,Greece,All taxes and levies included,Purchasing Power Standard,0.0552
+2021S1,Spain,Excluding taxes and levies,Euro,0.0526
+2021S1,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0560
+2021S1,Spain,All taxes and levies included,Euro,0.0691
+2021S1,Spain,All taxes and levies included,Purchasing Power Standard,0.0736
+2021S1,France,Excluding taxes and levies,Euro,0.0489
+2021S1,France,Excluding taxes and levies,Purchasing Power Standard,0.0449
+2021S1,France,All taxes and levies included,Euro,0.0691
+2021S1,France,All taxes and levies included,Purchasing Power Standard,0.0635
+2021S1,Croatia,Excluding taxes and levies,Euro,0.0300
+2021S1,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0471
+2021S1,Croatia,All taxes and levies included,Euro,0.0374
+2021S1,Croatia,All taxes and levies included,Purchasing Power Standard,0.0589
+2021S1,Italy,Excluding taxes and levies,Euro,0.0414
+2021S1,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0417
+2021S1,Italy,All taxes and levies included,Euro,0.0703
+2021S1,Italy,All taxes and levies included,Purchasing Power Standard,0.0709
+2021S1,Latvia,Excluding taxes and levies,Euro,0.0229
+2021S1,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0317
+2021S1,Latvia,All taxes and levies included,Euro,0.0297
+2021S1,Latvia,All taxes and levies included,Purchasing Power Standard,0.0412
+2021S1,Lithuania,Excluding taxes and levies,Euro,0.0201
+2021S1,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0297
+2021S1,Lithuania,All taxes and levies included,Euro,0.0279
+2021S1,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0412
+2021S1,Luxembourg,Excluding taxes and levies,Euro,0.0355
+2021S1,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0276
+2021S1,Luxembourg,All taxes and levies included,Euro,0.0438
+2021S1,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0342
+2021S1,Hungary,Excluding taxes and levies,Euro,0.0241
+2021S1,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0390
+2021S1,Hungary,All taxes and levies included,Euro,0.0307
+2021S1,Hungary,All taxes and levies included,Purchasing Power Standard,0.0495
+2021S1,Netherlands,Excluding taxes and levies,Euro,0.0350
+2021S1,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0303
+2021S1,Netherlands,All taxes and levies included,Euro,0.0961
+2021S1,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0830
+2021S1,Austria,Excluding taxes and levies,Euro,0.0462
+2021S1,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0404
+2021S1,Austria,All taxes and levies included,Euro,0.0636
+2021S1,Austria,All taxes and levies included,Purchasing Power Standard,0.0556
+2021S1,Poland,Excluding taxes and levies,Euro,0.0301
+2021S1,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0512
+2021S1,Poland,All taxes and levies included,Euro,0.0376
+2021S1,Poland,All taxes and levies included,Purchasing Power Standard,0.0640
+2021S1,Portugal,Excluding taxes and levies,Euro,0.0544
+2021S1,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0638
+2021S1,Portugal,All taxes and levies included,Euro,0.0762
+2021S1,Portugal,All taxes and levies included,Purchasing Power Standard,0.0894
+2021S1,Romania,Excluding taxes and levies,Euro,0.0266
+2021S1,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0509
+2021S1,Romania,All taxes and levies included,Euro,0.0317
+2021S1,Romania,All taxes and levies included,Purchasing Power Standard,0.0606
+2021S1,Slovenia,Excluding taxes and levies,Euro,0.0382
+2021S1,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0458
+2021S1,Slovenia,All taxes and levies included,Euro,0.0547
+2021S1,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0656
+2021S1,Slovakia,Excluding taxes and levies,Euro,0.0342
+2021S1,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0434
+2021S1,Slovakia,All taxes and levies included,Euro,0.0411
+2021S1,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0521
+2021S1,Sweden,Excluding taxes and levies,Euro,0.0861
+2021S1,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.0665
+2021S1,Sweden,All taxes and levies included,Euro,0.1234
+2021S1,Sweden,All taxes and levies included,Purchasing Power Standard,0.0953
+2021S1,Liechtenstein,Excluding taxes and levies,Euro,0.0503
+2021S1,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2021S1,Liechtenstein,All taxes and levies included,Euro,0.0713
+2021S1,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2021S1,United Kingdom,Excluding taxes and levies,Euro,0
+2021S1,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0
+2021S1,United Kingdom,All taxes and levies included,Euro,0
+2021S1,United Kingdom,All taxes and levies included,Purchasing Power Standard,0
+2021S1,North Macedonia,Excluding taxes and levies,Euro,0.0414
+2021S1,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.0905
+2021S1,North Macedonia,All taxes and levies included,Euro,0.0488
+2021S1,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1068
+2021S1,Serbia,Excluding taxes and levies,Euro,0.0305
+2021S1,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0582
+2021S1,Serbia,All taxes and levies included,Euro,0.0337
+2021S1,Serbia,All taxes and levies included,Purchasing Power Standard,0.0643
+2021S1,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0274
+2021S1,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0540
+2021S1,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0321
+2021S1,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0632
+2021S1,Moldova,Excluding taxes and levies,Euro,0.0225
+2021S1,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2021S1,Moldova,All taxes and levies included,Euro,0.0243
+2021S1,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2021S1,Ukraine,Excluding taxes and levies,Euro,0.0228
+2021S1,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2021S1,Ukraine,All taxes and levies included,Euro,0.0273
+2021S1,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2021S1,Georgia,Excluding taxes and levies,Euro,0.0100
+2021S1,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2021S1,Georgia,All taxes and levies included,Euro,0.0117
+2021S1,Georgia,All taxes and levies included,Purchasing Power Standard,0
+2021S2,Belgium,Excluding taxes and levies,Euro,0.0540
+2021S2,Belgium,Excluding taxes and levies,Purchasing Power Standard,0.0484
+2021S2,Belgium,All taxes and levies included,Euro,0.0676
+2021S2,Belgium,All taxes and levies included,Purchasing Power Standard,0.0606
+2021S2,Bulgaria,Excluding taxes and levies,Euro,0.0639
+2021S2,Bulgaria,Excluding taxes and levies,Purchasing Power Standard,0.1185
+2021S2,Bulgaria,All taxes and levies included,Euro,0.0708
+2021S2,Bulgaria,All taxes and levies included,Purchasing Power Standard,0.1313
+2021S2,Czechia,Excluding taxes and levies,Euro,0.0486
+2021S2,Czechia,Excluding taxes and levies,Purchasing Power Standard,0.0645
+2021S2,Czechia,All taxes and levies included,Euro,0.0554
+2021S2,Czechia,All taxes and levies included,Purchasing Power Standard,0.0737
+2021S2,Denmark,Excluding taxes and levies,Euro,0.0677
+2021S2,Denmark,Excluding taxes and levies,Purchasing Power Standard,0.0507
+2021S2,Denmark,All taxes and levies included,Euro,0.1247
+2021S2,Denmark,All taxes and levies included,Purchasing Power Standard,0.0934
+2021S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Euro,0.0474
+2021S2,Germany (until 1990 former territory of the FRG),Excluding taxes and levies,Purchasing Power Standard,0.0429
+2021S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Euro,0.0692
+2021S2,Germany (until 1990 former territory of the FRG),All taxes and levies included,Purchasing Power Standard,0.0627
+2021S2,Estonia,Excluding taxes and levies,Euro,0.0587
+2021S2,Estonia,Excluding taxes and levies,Purchasing Power Standard,0.0731
+2021S2,Estonia,All taxes and levies included,Euro,0.0750
+2021S2,Estonia,All taxes and levies included,Purchasing Power Standard,0.0934
+2021S2,Ireland,Excluding taxes and levies,Euro,0.0633
+2021S2,Ireland,Excluding taxes and levies,Purchasing Power Standard,0.0528
+2021S2,Ireland,All taxes and levies included,Euro,0.0783
+2021S2,Ireland,All taxes and levies included,Purchasing Power Standard,0.0653
+2021S2,Greece,Excluding taxes and levies,Euro,0.0951
+2021S2,Greece,Excluding taxes and levies,Purchasing Power Standard,0.1150
+2021S2,Greece,All taxes and levies included,Euro,0.1014
+2021S2,Greece,All taxes and levies included,Purchasing Power Standard,0.1226
+2021S2,Spain,Excluding taxes and levies,Euro,0.0849
+2021S2,Spain,Excluding taxes and levies,Purchasing Power Standard,0.0904
+2021S2,Spain,All taxes and levies included,Euro,0.1082
+2021S2,Spain,All taxes and levies included,Purchasing Power Standard,0.1153
+2021S2,France,Excluding taxes and levies,Euro,0.0569
+2021S2,France,Excluding taxes and levies,Purchasing Power Standard,0.0523
+2021S2,France,All taxes and levies included,Euro,0.0788
+2021S2,France,All taxes and levies included,Purchasing Power Standard,0.0724
+2021S2,Croatia,Excluding taxes and levies,Euro,0.0318
+2021S2,Croatia,Excluding taxes and levies,Purchasing Power Standard,0.0491
+2021S2,Croatia,All taxes and levies included,Euro,0.0398
+2021S2,Croatia,All taxes and levies included,Purchasing Power Standard,0.0614
+2021S2,Italy,Excluding taxes and levies,Euro,0.0737
+2021S2,Italy,Excluding taxes and levies,Purchasing Power Standard,0.0742
+2021S2,Italy,All taxes and levies included,Euro,0.1005
+2021S2,Italy,All taxes and levies included,Purchasing Power Standard,0.1011
+2021S2,Latvia,Excluding taxes and levies,Euro,0.0340
+2021S2,Latvia,Excluding taxes and levies,Purchasing Power Standard,0.0461
+2021S2,Latvia,All taxes and levies included,Euro,0.0432
+2021S2,Latvia,All taxes and levies included,Purchasing Power Standard,0.0586
+2021S2,Lithuania,Excluding taxes and levies,Euro,0.0309
+2021S2,Lithuania,Excluding taxes and levies,Purchasing Power Standard,0.0453
+2021S2,Lithuania,All taxes and levies included,Euro,0.0410
+2021S2,Lithuania,All taxes and levies included,Purchasing Power Standard,0.0601
+2021S2,Luxembourg,Excluding taxes and levies,Euro,0.0541
+2021S2,Luxembourg,Excluding taxes and levies,Purchasing Power Standard,0.0418
+2021S2,Luxembourg,All taxes and levies included,Euro,0.0639
+2021S2,Luxembourg,All taxes and levies included,Purchasing Power Standard,0.0494
+2021S2,Hungary,Excluding taxes and levies,Euro,0.0240
+2021S2,Hungary,Excluding taxes and levies,Purchasing Power Standard,0.0387
+2021S2,Hungary,All taxes and levies included,Euro,0.0305
+2021S2,Hungary,All taxes and levies included,Purchasing Power Standard,0.0492
+2021S2,Netherlands,Excluding taxes and levies,Euro,0.0463
+2021S2,Netherlands,Excluding taxes and levies,Purchasing Power Standard,0.0399
+2021S2,Netherlands,All taxes and levies included,Euro,0.1097
+2021S2,Netherlands,All taxes and levies included,Purchasing Power Standard,0.0947
+2021S2,Austria,Excluding taxes and levies,Euro,0.0510
+2021S2,Austria,Excluding taxes and levies,Purchasing Power Standard,0.0446
+2021S2,Austria,All taxes and levies included,Euro,0.0695
+2021S2,Austria,All taxes and levies included,Purchasing Power Standard,0.0608
+2021S2,Poland,Excluding taxes and levies,Euro,0.0380
+2021S2,Poland,Excluding taxes and levies,Purchasing Power Standard,0.0650
+2021S2,Poland,All taxes and levies included,Euro,0.0473
+2021S2,Poland,All taxes and levies included,Purchasing Power Standard,0.0810
+2021S2,Portugal,Excluding taxes and levies,Euro,0.0561
+2021S2,Portugal,Excluding taxes and levies,Purchasing Power Standard,0.0660
+2021S2,Portugal,All taxes and levies included,Euro,0.0773
+2021S2,Portugal,All taxes and levies included,Purchasing Power Standard,0.0908
+2021S2,Romania,Excluding taxes and levies,Euro,0.0399
+2021S2,Romania,Excluding taxes and levies,Purchasing Power Standard,0.0771
+2021S2,Romania,All taxes and levies included,Euro,0.0475
+2021S2,Romania,All taxes and levies included,Purchasing Power Standard,0.0918
+2021S2,Slovenia,Excluding taxes and levies,Euro,0.0415
+2021S2,Slovenia,Excluding taxes and levies,Purchasing Power Standard,0.0494
+2021S2,Slovenia,All taxes and levies included,Euro,0.0587
+2021S2,Slovenia,All taxes and levies included,Purchasing Power Standard,0.0699
+2021S2,Slovakia,Excluding taxes and levies,Euro,0.0353
+2021S2,Slovakia,Excluding taxes and levies,Purchasing Power Standard,0.0438
+2021S2,Slovakia,All taxes and levies included,Euro,0.0423
+2021S2,Slovakia,All taxes and levies included,Purchasing Power Standard,0.0526
+2021S2,Sweden,Excluding taxes and levies,Euro,0.1358
+2021S2,Sweden,Excluding taxes and levies,Purchasing Power Standard,0.1054
+2021S2,Sweden,All taxes and levies included,Euro,0.1855
+2021S2,Sweden,All taxes and levies included,Purchasing Power Standard,0.1440
+2021S2,Liechtenstein,Excluding taxes and levies,Euro,0.0511
+2021S2,Liechtenstein,Excluding taxes and levies,Purchasing Power Standard,0
+2021S2,Liechtenstein,All taxes and levies included,Euro,0.0726
+2021S2,Liechtenstein,All taxes and levies included,Purchasing Power Standard,0
+2021S2,United Kingdom,Excluding taxes and levies,Euro,0
+2021S2,United Kingdom,Excluding taxes and levies,Purchasing Power Standard,0
+2021S2,United Kingdom,All taxes and levies included,Euro,0
+2021S2,United Kingdom,All taxes and levies included,Purchasing Power Standard,0
+2021S2,North Macedonia,Excluding taxes and levies,Euro,0.0483
+2021S2,North Macedonia,Excluding taxes and levies,Purchasing Power Standard,0.1051
+2021S2,North Macedonia,All taxes and levies included,Euro,0.0570
+2021S2,North Macedonia,All taxes and levies included,Purchasing Power Standard,0.1240
+2021S2,Serbia,Excluding taxes and levies,Euro,0.0310
+2021S2,Serbia,Excluding taxes and levies,Purchasing Power Standard,0.0583
+2021S2,Serbia,All taxes and levies included,Euro,0.0342
+2021S2,Serbia,All taxes and levies included,Purchasing Power Standard,0.0644
+2021S2,Bosnia and Herzegovina,Excluding taxes and levies,Euro,0.0311
+2021S2,Bosnia and Herzegovina,Excluding taxes and levies,Purchasing Power Standard,0.0607
+2021S2,Bosnia and Herzegovina,All taxes and levies included,Euro,0.0364
+2021S2,Bosnia and Herzegovina,All taxes and levies included,Purchasing Power Standard,0.0710
+2021S2,Moldova,Excluding taxes and levies,Euro,0.0435
+2021S2,Moldova,Excluding taxes and levies,Purchasing Power Standard,0
+2021S2,Moldova,All taxes and levies included,Euro,0.0470
+2021S2,Moldova,All taxes and levies included,Purchasing Power Standard,0
+2021S2,Ukraine,Excluding taxes and levies,Euro,0
+2021S2,Ukraine,Excluding taxes and levies,Purchasing Power Standard,0
+2021S2,Ukraine,All taxes and levies included,Euro,0
+2021S2,Ukraine,All taxes and levies included,Purchasing Power Standard,0
+2021S2,Georgia,Excluding taxes and levies,Euro,0.0117
+2021S2,Georgia,Excluding taxes and levies,Purchasing Power Standard,0
+2021S2,Georgia,All taxes and levies included,Euro,0.0139
+2021S2,Georgia,All taxes and levies included,Purchasing Power Standard,0
