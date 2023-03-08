@@ -22,13 +22,6 @@ app.get('/', async function (_req, res) {
 // EUROSTAT_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nama_10_gdp?format=JSON&lang=EN&time=2019"
 
 BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/";
-SOME_URL = BASE_URL + "nama_10_gdp?format=JSON&lang=EN&na_item=B1GQ&unit=CLV_I15&sinceTimePeriod=2000";
-OTHER_URL = BASE_URL + "SDG_08_10?format=JSON&lang=EN";
-
-// Relevant fields codes
-iscedf13 = ["F01", "F02", "F03", "F04", "F05", "F0511", "F0512", "F052", "F053", "F054", "F06", "F07", "F071",
-"F072", "F073", "F08", "F09", "F091", "F0911", "F092", "F0921", "F0922", "F0923", "F10", "F1011", "F1012",
-"F1013", "F1014", "F1015", "F104"];
 
 // Relevant countries codes
 geo = ["BE","BG","CZ","DK","DE","EE","IE","EL","ES","FR","HR","IT","CY","LV","LT","LU","HU","MT","NL","AT","PL",
@@ -39,54 +32,61 @@ sinceTimePeriod = 2000;
 formatt = 'JSON';
 langg = 'EN';
 
-urls = [];
+app.get('/links', async function(req, res) {
+    fs.readFile('./data/pull_metadata.json', (err, data) => {
+        if (err) {
+            res.status(404).send(err.message);
+        }
+        html = getHtml(JSON.parse(data));
+        res.send(html);
+    });
+});
+
+metaData = {};
 
 app.get('/update', async function(req, res) {
     fs.readFile('./data/pull_metadata.json', (err, data) => {
         if (err) {
             res.status(404).send(err.message);
         }
-        data = JSON.parse(data);
+        metaData = JSON.parse(data);
+        html = getHtml(metaData);
 
-        var html = "";
-        Object.entries(data).forEach(([key, val]) => {
-            if (val!=='') {
-                var url = BASE_URL;
-                url += val;
-                if(url.slice(-1) === '?') {
-                    url += "geo=" + geo.join("&geo=");
-                } else {
-                    url += "&geo=" + geo.join("&geo=");
-                }
-                if(!url.includes("format=")) {
-                    url += "&format=" + formatt;
-                }
-                if(!url.includes("lang=")) {
-                    url += "&lang=" + langg;
-                }
-                if(!url.includes("sinceTimePeriod=")) {
-                    url += "&sinceTimePeriod=" + sinceTimePeriod;
-                }
-                urls.push(url);
-                html += '<p>' + key + ': <a target="_blank" href=' + url + '>JSON</a> - <a target="_blank" href="https://ec.europa.eu/eurostat/databrowser/view/' + val.split('?',1)[0].toLowerCase() + '/default/table?lang=en">DATABASE</a></p>';
-            }
-        });
-
-        urls.slice(0,1).forEach((url) => {
-            fetch(url)
+        Object.values(metaData).forEach((file) => {
+            fetch(file.url)
             .then(res => res.json())
             .then(data => {
-                const filename = "dataa/" + url.split('?',1)[0].split('/').slice(-1);
+                const filename = data.extension.id;
+                const filepath = "dataa/" + filename;
                 console.log(filename);
 
-                fs.writeFile(filename + ".json", JSON.stringify(data), err => {
+                fs.writeFile(filepath + ".json", JSON.stringify(data), err => {
                     if (err) throw err;
                     console.log('Data written to file ' + filename + ".json");
                 });
 
+
+                var vals = {};
+                var dims = Object.assign({}, data.dimension);
+                delete dims['geo'];
+                delete dims['time'];
+            
+                Object.entries(dims).forEach( ([k,v]) => {
+                    if(Object.values(v.category.label).length > 1) {
+                        vals[k] = Object.values(v.category.label);
+                    }
+                });
+
+                metaData[filename] = {
+                    ...metaData[filename],
+                    "label": data.label,
+                    "values": vals,
+                    "description": data.extension.description || data.label,
+                }
+
                 const csvData = JSON2CSV(data);
 
-                fs.writeFile(filename + ".csv", csvData, err => {
+                fs.writeFile(filepath + ".csv", csvData, err => {
                     if (err) throw err;
                     console.log('Data written to file ' + filename + ".csv");
                 });
@@ -134,4 +134,32 @@ function JSON2CSV(data) {
     // var columns = data.id.filter((_,i) => data.size[i] > 1);
     // columns.push("value");
     return csvText;
+}
+
+function getHtml(data) {
+    var html = "";
+    Object.entries(data).forEach(function ([fileName, file]) {
+        const paramNames = Object.keys(file.params);
+
+        var params = [];
+        if(!paramNames.includes("geo")) {
+            params.push("geo=" + geo.join("&geo="));
+        }
+        if(!paramNames.includes("format")) {
+            params.push("format=" + formatt);
+        }
+        if(!paramNames.includes("lang")) {
+            params.push("lang=" + langg);
+        }
+        if(!paramNames.includes("sinceTimePeriod")) {
+            params.push("sinceTimePeriod=" + sinceTimePeriod);
+        }
+        Object.entries(file.params).forEach(([k,v]) => {
+            params.push(k + "=" + v.join("&" + k + "="))
+        })
+        const url = BASE_URL + fileName + "?" + params.join("&");
+        file["url"] = url;
+        html += '<p>' + fileName + ': <a target="_blank" href=' + url + '>JSON</a> - <a target="_blank" href="https://ec.europa.eu/eurostat/databrowser/view/' + fileName + '/default/table?lang=en">DATABASE</a></p>';
+    });
+    return html;
 }
