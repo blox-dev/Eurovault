@@ -17,6 +17,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Belgium,Cities,21.2
 2019,Belgium,Cities,20.4
 2020,Belgium,Cities,19.8
+2023,Belgium,Cities,23.2
 2005,Bulgaria,Cities,36.2
 2006,Bulgaria,Cities,36.2
 2007,Bulgaria,Cities,38.7
@@ -33,6 +34,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Bulgaria,Cities,28
 2019,Bulgaria,Cities,27.8
 2020,Bulgaria,Cities,26.6
+2023,Bulgaria,Cities,22.4
 2005,Czechia,Cities,23.7
 2006,Czechia,Cities,23
 2007,Czechia,Cities,21.3
@@ -49,6 +51,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Czechia,Cities,12.5
 2019,Czechia,Cities,13.7
 2020,Czechia,Cities,10.5
+2023,Czechia,Cities,12
 2003,Denmark,Cities,14.2
 2004,Denmark,Cities,19
 2005,Denmark,Cities,19.6
@@ -67,22 +70,24 @@ TIME,GEO,DEG_URB,VALUE
 2018,Denmark,Cities,13.2
 2019,Denmark,Cities,12.8
 2020,Denmark,Cities,11.1
-2005,Germany (until 1990 former territory of the FRG),Cities,14.3
-2006,Germany (until 1990 former territory of the FRG),Cities,18.7
-2007,Germany (until 1990 former territory of the FRG),Cities,17.7
-2008,Germany (until 1990 former territory of the FRG),Cities,19
-2009,Germany (until 1990 former territory of the FRG),Cities,18.7
-2010,Germany (until 1990 former territory of the FRG),Cities,17.5
-2011,Germany (until 1990 former territory of the FRG),Cities,18.2
-2012,Germany (until 1990 former territory of the FRG),Cities,21.4
-2013,Germany (until 1990 former territory of the FRG),Cities,22.9
-2014,Germany (until 1990 former territory of the FRG),Cities,22
-2015,Germany (until 1990 former territory of the FRG),Cities,23.3
-2016,Germany (until 1990 former territory of the FRG),Cities,22.4
-2017,Germany (until 1990 former territory of the FRG),Cities,23.6
-2018,Germany (until 1990 former territory of the FRG),Cities,23
-2019,Germany (until 1990 former territory of the FRG),Cities,21.9
-2020,Germany (until 1990 former territory of the FRG),Cities,14.3
+2023,Denmark,Cities,10.9
+2005,Germany,Cities,14.3
+2006,Germany,Cities,18.7
+2007,Germany,Cities,17.7
+2008,Germany,Cities,19
+2009,Germany,Cities,18.7
+2010,Germany,Cities,17.5
+2011,Germany,Cities,18.2
+2012,Germany,Cities,21.4
+2013,Germany,Cities,22.9
+2014,Germany,Cities,22
+2015,Germany,Cities,23.3
+2016,Germany,Cities,22.4
+2017,Germany,Cities,23.6
+2018,Germany,Cities,23
+2019,Germany,Cities,21.9
+2020,Germany,Cities,14.3
+2023,Germany,Cities,17.1
 2004,Estonia,Cities,36.9
 2005,Estonia,Cities,30.8
 2006,Estonia,Cities,28.2
@@ -100,6 +105,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Estonia,Cities,8.7
 2019,Estonia,Cities,9.5
 2020,Estonia,Cities,6.3
+2023,Estonia,Cities,6.7
 2003,Ireland,Cities,26
 2004,Ireland,Cities,24.1
 2005,Ireland,Cities,24.6
@@ -116,8 +122,8 @@ TIME,GEO,DEG_URB,VALUE
 2016,Ireland,Cities,14.4
 2017,Ireland,Cities,16.3
 2018,Ireland,Cities,16.3
-2019,Ireland,Cities,12.8
-2020,Ireland,Cities,17.5
+2019,Ireland,Cities,12.1
+2020,Ireland,Cities,17.3
 2003,Greece,Cities,14.8
 2004,Greece,Cities,12.7
 2005,Greece,Cities,14.3
@@ -136,6 +142,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Greece,Cities,22.8
 2019,Greece,Cities,27
 2020,Greece,Cities,28.8
+2023,Greece,Cities,26.9
 2004,Spain,Cities,25.4
 2005,Spain,Cities,25.1
 2006,Spain,Cities,25.6
@@ -153,6 +160,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Spain,Cities,14.8
 2019,Spain,Cities,16.4
 2020,Spain,Cities,17.4
+2023,Spain,Cities,16.6
 2004,France,Cities,30.9
 2005,France,Cities,24.9
 2006,France,Cities,23.1
@@ -170,6 +178,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,France,Cities,20.4
 2019,France,Cities,22.1
 2020,France,Cities,27
+2023,France,Cities,23
 2010,Croatia,Cities,9.4
 2011,Croatia,Cities,6.6
 2012,Croatia,Cities,6.8
@@ -181,6 +190,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Croatia,Cities,4.6
 2019,Croatia,Cities,4.2
 2020,Croatia,Cities,3.4
+2023,Croatia,Cities,2.6
 2004,Italy,Cities,26.9
 2005,Italy,Cities,25.1
 2006,Italy,Cities,25.8
@@ -198,6 +208,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Italy,Cities,17.2
 2019,Italy,Cities,13.9
 2020,Italy,Cities,12.6
+2023,Italy,Cities,10.6
 2005,Cyprus,Cities,8.3
 2006,Cyprus,Cities,13.7
 2007,Cyprus,Cities,13.8
@@ -214,6 +225,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Cyprus,Cities,15.8
 2019,Cyprus,Cities,15.2
 2020,Cyprus,Cities,8.6
+2023,Cyprus,Cities,10.4
 2005,Latvia,Cities,32.4
 2006,Latvia,Cities,31
 2007,Latvia,Cities,33.7
@@ -230,6 +242,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Latvia,Cities,17.2
 2019,Latvia,Cities,10.9
 2020,Latvia,Cities,8.8
+2023,Latvia,Cities,11.3
 2005,Lithuania,Cities,14.1
 2006,Lithuania,Cities,12
 2007,Lithuania,Cities,13.1
@@ -246,6 +259,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Lithuania,Cities,5
 2019,Lithuania,Cities,4.9
 2020,Lithuania,Cities,4.5
+2023,Lithuania,Cities,4.2
 2003,Luxembourg,Cities,20.6
 2004,Luxembourg,Cities,16.9
 2005,Luxembourg,Cities,18.4
@@ -264,6 +278,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Luxembourg,Cities,19
 2019,Luxembourg,Cities,14.8
 2020,Luxembourg,Cities,12.5
+2023,Luxembourg,Cities,19.5
 2005,Hungary,Cities,22.1
 2006,Hungary,Cities,16.4
 2007,Hungary,Cities,17.7
@@ -280,6 +295,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Hungary,Cities,5.6
 2019,Hungary,Cities,5.1
 2020,Hungary,Cities,5.2
+2023,Hungary,Cities,5
 2005,Malta,Cities,14.5
 2006,Malta,Cities,13.3
 2007,Malta,Cities,10.7
@@ -296,6 +312,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Malta,Cities,13.4
 2019,Malta,Cities,14.7
 2020,Malta,Cities,12.5
+2023,Malta,Cities,8.5
 2005,Netherlands,Cities,22.4
 2006,Netherlands,Cities,20.2
 2007,Netherlands,Cities,21.3
@@ -312,6 +329,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Netherlands,Cities,22.2
 2019,Netherlands,Cities,20.7
 2020,Netherlands,Cities,20.2
+2023,Netherlands,Cities,21.4
 2004,Austria,Cities,19.2
 2005,Austria,Cities,22.9
 2006,Austria,Cities,21.3
@@ -329,6 +347,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Austria,Cities,16.8
 2019,Austria,Cities,16.4
 2020,Austria,Cities,11.4
+2023,Austria,Cities,14.4
 2005,Poland,Cities,19.7
 2006,Poland,Cities,17.1
 2007,Poland,Cities,15.2
@@ -344,6 +363,7 @@ TIME,GEO,DEG_URB,VALUE
 2017,Poland,Cities,10.9
 2018,Poland,Cities,8.3
 2019,Poland,Cities,8.8
+2023,Poland,Cities,6.1
 2004,Portugal,Cities,22.9
 2005,Portugal,Cities,23.8
 2006,Portugal,Cities,21.3
@@ -361,6 +381,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Portugal,Cities,9.3
 2019,Portugal,Cities,9
 2020,Portugal,Cities,8.7
+2023,Portugal,Cities,10.2
 2007,Romania,Cities,19.7
 2008,Romania,Cities,19.4
 2009,Romania,Cities,23.2
@@ -375,6 +396,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Romania,Cities,14.6
 2019,Romania,Cities,12.9
 2020,Romania,Cities,11
+2023,Romania,Cities,6.8
 2005,Slovenia,Cities,27.9
 2006,Slovenia,Cities,21.1
 2007,Slovenia,Cities,22.1
@@ -391,6 +413,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovenia,Cities,11.6
 2019,Slovenia,Cities,12.4
 2020,Slovenia,Cities,12.5
+2023,Slovenia,Cities,10.9
 2005,Slovakia,Cities,17.8
 2006,Slovakia,Cities,17.8
 2007,Slovakia,Cities,17.3
@@ -407,6 +430,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovakia,Cities,6
 2019,Slovakia,Cities,5.1
 2020,Slovakia,Cities,5.3
+2023,Slovakia,Cities,6
 2004,Finland,Cities,27.1
 2005,Finland,Cities,27.8
 2006,Finland,Cities,24.6
@@ -424,6 +448,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Finland,Cities,10.7
 2019,Finland,Cities,9.1
 2020,Finland,Cities,10.8
+2023,Finland,Cities,16.7
 2004,Sweden,Cities,13.9
 2005,Sweden,Cities,14.6
 2006,Sweden,Cities,21.8
@@ -441,6 +466,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Sweden,Cities,17.8
 2019,Sweden,Cities,17.7
 2020,Sweden,Cities,19.9
+2023,Sweden,Cities,13.3
 2004,Iceland,Cities,5
 2005,Iceland,Cities,4.8
 2006,Iceland,Cities,3.3
@@ -456,6 +482,7 @@ TIME,GEO,DEG_URB,VALUE
 2016,Iceland,Cities,2.8
 2017,Iceland,Cities,2.3
 2018,Iceland,Cities,3.6
+2019,Iceland,Cities,3.3
 2004,Norway,Cities,7.4
 2005,Norway,Cities,7
 2006,Norway,Cities,4.9
@@ -472,6 +499,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Norway,Cities,7.4
 2019,Norway,Cities,7.6
 2020,Norway,Cities,6.4
+2023,Norway,Cities,9.5
 2007,Switzerland,Cities,16.9
 2008,Switzerland,Cities,15.8
 2009,Switzerland,Cities,16.6
@@ -537,6 +565,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Belgium,Towns and suburbs,7.7
 2019,Belgium,Towns and suburbs,10.1
 2020,Belgium,Towns and suburbs,6.6
+2023,Belgium,Towns and suburbs,8.3
 2005,Bulgaria,Towns and suburbs,30.3
 2006,Bulgaria,Towns and suburbs,30.3
 2007,Bulgaria,Towns and suburbs,22.9
@@ -553,6 +582,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Bulgaria,Towns and suburbs,15.6
 2019,Bulgaria,Towns and suburbs,13.5
 2020,Bulgaria,Towns and suburbs,13
+2023,Bulgaria,Towns and suburbs,11
 2005,Czechia,Towns and suburbs,16.6
 2006,Czechia,Towns and suburbs,13.4
 2007,Czechia,Towns and suburbs,11.3
@@ -569,6 +599,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Czechia,Towns and suburbs,8.5
 2019,Czechia,Towns and suburbs,7.5
 2020,Czechia,Towns and suburbs,5.5
+2023,Czechia,Towns and suburbs,6
 2003,Denmark,Towns and suburbs,9
 2004,Denmark,Towns and suburbs,14.5
 2005,Denmark,Towns and suburbs,12.8
@@ -587,22 +618,24 @@ TIME,GEO,DEG_URB,VALUE
 2018,Denmark,Towns and suburbs,5.4
 2019,Denmark,Towns and suburbs,4.9
 2020,Denmark,Towns and suburbs,5.5
-2005,Germany (until 1990 former territory of the FRG),Towns and suburbs,5.8
-2006,Germany (until 1990 former territory of the FRG),Towns and suburbs,7.1
-2007,Germany (until 1990 former territory of the FRG),Towns and suburbs,7.1
-2008,Germany (until 1990 former territory of the FRG),Towns and suburbs,7.1
-2009,Germany (until 1990 former territory of the FRG),Towns and suburbs,6.5
-2010,Germany (until 1990 former territory of the FRG),Towns and suburbs,6.9
-2011,Germany (until 1990 former territory of the FRG),Towns and suburbs,8.4
-2012,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.2
-2013,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.5
-2014,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.7
-2015,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.3
-2016,Germany (until 1990 former territory of the FRG),Towns and suburbs,11.2
-2017,Germany (until 1990 former territory of the FRG),Towns and suburbs,10.6
-2018,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.2
-2019,Germany (until 1990 former territory of the FRG),Towns and suburbs,9.7
-2020,Germany (until 1990 former territory of the FRG),Towns and suburbs,5.2
+2023,Denmark,Towns and suburbs,5.2
+2005,Germany,Towns and suburbs,5.8
+2006,Germany,Towns and suburbs,7.1
+2007,Germany,Towns and suburbs,7.1
+2008,Germany,Towns and suburbs,7.1
+2009,Germany,Towns and suburbs,6.5
+2010,Germany,Towns and suburbs,6.9
+2011,Germany,Towns and suburbs,8.4
+2012,Germany,Towns and suburbs,9.2
+2013,Germany,Towns and suburbs,10.5
+2014,Germany,Towns and suburbs,9.7
+2015,Germany,Towns and suburbs,10.3
+2016,Germany,Towns and suburbs,11.2
+2017,Germany,Towns and suburbs,10.6
+2018,Germany,Towns and suburbs,9.2
+2019,Germany,Towns and suburbs,9.7
+2020,Germany,Towns and suburbs,5.2
+2023,Germany,Towns and suburbs,7.3
 2004,Estonia,Towns and suburbs,34.4
 2005,Estonia,Towns and suburbs,22.7
 2006,Estonia,Towns and suburbs,12.5
@@ -620,6 +653,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Estonia,Towns and suburbs,6.2
 2019,Estonia,Towns and suburbs,2.7
 2020,Estonia,Towns and suburbs,5.6
+2023,Estonia,Towns and suburbs,2.5
 2003,Ireland,Towns and suburbs,15.9
 2004,Ireland,Towns and suburbs,16
 2005,Ireland,Towns and suburbs,15.9
@@ -636,8 +670,8 @@ TIME,GEO,DEG_URB,VALUE
 2016,Ireland,Towns and suburbs,10
 2017,Ireland,Towns and suburbs,7.7
 2018,Ireland,Towns and suburbs,9.6
-2019,Ireland,Towns and suburbs,11.7
-2020,Ireland,Towns and suburbs,11.3
+2019,Ireland,Towns and suburbs,11.4
+2020,Ireland,Towns and suburbs,10.7
 2003,Greece,Towns and suburbs,14.7
 2004,Greece,Towns and suburbs,0
 2005,Greece,Towns and suburbs,17.8
@@ -656,6 +690,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Greece,Towns and suburbs,12.1
 2019,Greece,Towns and suburbs,16.4
 2020,Greece,Towns and suburbs,17.8
+2023,Greece,Towns and suburbs,16.7
 2004,Spain,Towns and suburbs,15
 2005,Spain,Towns and suburbs,16.7
 2006,Spain,Towns and suburbs,16.5
@@ -673,6 +708,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Spain,Towns and suburbs,7.7
 2019,Spain,Towns and suburbs,7.2
 2020,Spain,Towns and suburbs,12.1
+2023,Spain,Towns and suburbs,10.9
 2004,France,Towns and suburbs,16.9
 2005,France,Towns and suburbs,13.2
 2006,France,Towns and suburbs,11.7
@@ -690,6 +726,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,France,Towns and suburbs,13.7
 2019,France,Towns and suburbs,14.7
 2020,France,Towns and suburbs,15.4
+2023,France,Towns and suburbs,13.3
 2010,Croatia,Towns and suburbs,3.2
 2011,Croatia,Towns and suburbs,3.1
 2012,Croatia,Towns and suburbs,2.6
@@ -701,6 +738,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Croatia,Towns and suburbs,2.7
 2019,Croatia,Towns and suburbs,3.1
 2020,Croatia,Towns and suburbs,3.1
+2023,Croatia,Towns and suburbs,1.4
 2004,Italy,Towns and suburbs,8.1
 2005,Italy,Towns and suburbs,7.9
 2006,Italy,Towns and suburbs,7.9
@@ -718,6 +756,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Italy,Towns and suburbs,9.4
 2019,Italy,Towns and suburbs,7.5
 2020,Italy,Towns and suburbs,6.8
+2023,Italy,Towns and suburbs,4.5
 2005,Cyprus,Towns and suburbs,6.1
 2006,Cyprus,Towns and suburbs,9.2
 2007,Cyprus,Towns and suburbs,12.6
@@ -734,6 +773,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Cyprus,Towns and suburbs,14.2
 2019,Cyprus,Towns and suburbs,10.9
 2020,Cyprus,Towns and suburbs,16.2
+2023,Cyprus,Towns and suburbs,7.4
 2005,Latvia,Towns and suburbs,11.9
 2006,Latvia,Towns and suburbs,3.5
 2007,Latvia,Towns and suburbs,18.9
@@ -750,6 +790,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Latvia,Towns and suburbs,3.1
 2019,Latvia,Towns and suburbs,4.5
 2020,Latvia,Towns and suburbs,2.9
+2023,Latvia,Towns and suburbs,3.4
 2012,Lithuania,Towns and suburbs,4
 2013,Lithuania,Towns and suburbs,5.6
 2014,Lithuania,Towns and suburbs,5.5
@@ -759,6 +800,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Lithuania,Towns and suburbs,2
 2019,Lithuania,Towns and suburbs,0.2
 2020,Lithuania,Towns and suburbs,3
+2023,Lithuania,Towns and suburbs,2.5
 2003,Luxembourg,Towns and suburbs,18.6
 2004,Luxembourg,Towns and suburbs,15.3
 2005,Luxembourg,Towns and suburbs,13.5
@@ -777,6 +819,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Luxembourg,Towns and suburbs,11.4
 2019,Luxembourg,Towns and suburbs,13.3
 2020,Luxembourg,Towns and suburbs,13
+2023,Luxembourg,Towns and suburbs,5.7
 2005,Hungary,Towns and suburbs,12.1
 2006,Hungary,Towns and suburbs,8.6
 2007,Hungary,Towns and suburbs,12.1
@@ -793,6 +836,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Hungary,Towns and suburbs,4.7
 2019,Hungary,Towns and suburbs,5.3
 2020,Hungary,Towns and suburbs,5
+2023,Hungary,Towns and suburbs,6.9
 2005,Malta,Towns and suburbs,2.9
 2006,Malta,Towns and suburbs,5.5
 2007,Malta,Towns and suburbs,6
@@ -809,6 +853,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Malta,Towns and suburbs,4
 2019,Malta,Towns and suburbs,4.1
 2020,Malta,Towns and suburbs,2.6
+2023,Malta,Towns and suburbs,6.5
 2005,Netherlands,Towns and suburbs,12.8
 2006,Netherlands,Towns and suburbs,10.9
 2007,Netherlands,Towns and suburbs,11.8
@@ -825,6 +870,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Netherlands,Towns and suburbs,12.4
 2019,Netherlands,Towns and suburbs,11.1
 2020,Netherlands,Towns and suburbs,10.5
+2023,Netherlands,Towns and suburbs,10.4
 2004,Austria,Towns and suburbs,7.7
 2005,Austria,Towns and suburbs,9.6
 2006,Austria,Towns and suburbs,10.8
@@ -842,6 +888,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Austria,Towns and suburbs,8
 2019,Austria,Towns and suburbs,7.2
 2020,Austria,Towns and suburbs,4.1
+2023,Austria,Towns and suburbs,4.9
 2005,Poland,Towns and suburbs,4.1
 2006,Poland,Towns and suburbs,4.2
 2007,Poland,Towns and suburbs,3.6
@@ -857,6 +904,7 @@ TIME,GEO,DEG_URB,VALUE
 2017,Poland,Towns and suburbs,5.5
 2018,Poland,Towns and suburbs,4.7
 2019,Poland,Towns and suburbs,3.2
+2023,Poland,Towns and suburbs,1.8
 2004,Portugal,Towns and suburbs,8.7
 2005,Portugal,Towns and suburbs,8
 2006,Portugal,Towns and suburbs,7.6
@@ -874,6 +922,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Portugal,Towns and suburbs,5.3
 2019,Portugal,Towns and suburbs,6
 2020,Portugal,Towns and suburbs,5.1
+2023,Portugal,Towns and suburbs,4.6
 2007,Romania,Towns and suburbs,12.6
 2008,Romania,Towns and suburbs,0.3
 2009,Romania,Towns and suburbs,2.7
@@ -888,6 +937,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Romania,Towns and suburbs,10.9
 2019,Romania,Towns and suburbs,8.4
 2020,Romania,Towns and suburbs,7.4
+2023,Romania,Towns and suburbs,6.4
 2005,Slovenia,Towns and suburbs,9.2
 2006,Slovenia,Towns and suburbs,9.3
 2007,Slovenia,Towns and suburbs,10.6
@@ -904,6 +954,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovenia,Towns and suburbs,8.4
 2019,Slovenia,Towns and suburbs,7.7
 2020,Slovenia,Towns and suburbs,6.9
+2023,Slovenia,Towns and suburbs,6.6
 2005,Slovakia,Towns and suburbs,8.5
 2006,Slovakia,Towns and suburbs,6.6
 2007,Slovakia,Towns and suburbs,5.5
@@ -920,6 +971,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovakia,Towns and suburbs,6.4
 2019,Slovakia,Towns and suburbs,7.8
 2020,Slovakia,Towns and suburbs,5.1
+2023,Slovakia,Towns and suburbs,2.9
 2004,Finland,Towns and suburbs,19.7
 2005,Finland,Towns and suburbs,22.6
 2006,Finland,Towns and suburbs,18.6
@@ -937,6 +989,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Finland,Towns and suburbs,6.1
 2019,Finland,Towns and suburbs,5.6
 2020,Finland,Towns and suburbs,5.8
+2023,Finland,Towns and suburbs,10
 2004,Sweden,Towns and suburbs,11.2
 2005,Sweden,Towns and suburbs,10.2
 2006,Sweden,Towns and suburbs,13.6
@@ -954,11 +1007,13 @@ TIME,GEO,DEG_URB,VALUE
 2018,Sweden,Towns and suburbs,13
 2019,Sweden,Towns and suburbs,10.2
 2020,Sweden,Towns and suburbs,10.4
+2023,Sweden,Towns and suburbs,7.1
 2014,Iceland,Towns and suburbs,2.2
 2015,Iceland,Towns and suburbs,1.8
 2016,Iceland,Towns and suburbs,2
 2017,Iceland,Towns and suburbs,1.9
 2018,Iceland,Towns and suburbs,2
+2019,Iceland,Towns and suburbs,2.6
 2004,Norway,Towns and suburbs,6.2
 2005,Norway,Towns and suburbs,4.8
 2006,Norway,Towns and suburbs,5.8
@@ -975,6 +1030,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Norway,Towns and suburbs,3.7
 2019,Norway,Towns and suburbs,3.3
 2020,Norway,Towns and suburbs,3.7
+2023,Norway,Towns and suburbs,5.6
 2007,Switzerland,Towns and suburbs,9.8
 2008,Switzerland,Towns and suburbs,10
 2009,Switzerland,Towns and suburbs,8.2
@@ -1040,6 +1096,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Belgium,Rural areas,12
 2019,Belgium,Rural areas,11
 2020,Belgium,Rural areas,8.3
+2023,Belgium,Rural areas,6.2
 2005,Bulgaria,Rural areas,14.7
 2006,Bulgaria,Rural areas,14.7
 2007,Bulgaria,Rural areas,19.7
@@ -1056,6 +1113,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Bulgaria,Rural areas,17.5
 2019,Bulgaria,Rural areas,14.3
 2020,Bulgaria,Rural areas,12.9
+2023,Bulgaria,Rural areas,9.3
 2005,Czechia,Rural areas,10.4
 2006,Czechia,Rural areas,7.8
 2007,Czechia,Rural areas,7.2
@@ -1072,6 +1130,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Czechia,Rural areas,3.4
 2019,Czechia,Rural areas,3.2
 2020,Czechia,Rural areas,3.1
+2023,Czechia,Rural areas,2.6
 2003,Denmark,Rural areas,6.8
 2004,Denmark,Rural areas,9.7
 2005,Denmark,Rural areas,10.1
@@ -1090,22 +1149,24 @@ TIME,GEO,DEG_URB,VALUE
 2018,Denmark,Rural areas,3.8
 2019,Denmark,Rural areas,3.9
 2020,Denmark,Rural areas,4.6
-2005,Germany (until 1990 former territory of the FRG),Rural areas,6.7
-2006,Germany (until 1990 former territory of the FRG),Rural areas,6.2
-2007,Germany (until 1990 former territory of the FRG),Rural areas,6.9
-2008,Germany (until 1990 former territory of the FRG),Rural areas,6.1
-2009,Germany (until 1990 former territory of the FRG),Rural areas,7.1
-2010,Germany (until 1990 former territory of the FRG),Rural areas,6.5
-2011,Germany (until 1990 former territory of the FRG),Rural areas,6.6
-2012,Germany (until 1990 former territory of the FRG),Rural areas,5.5
-2013,Germany (until 1990 former territory of the FRG),Rural areas,4.8
-2014,Germany (until 1990 former territory of the FRG),Rural areas,5.3
-2015,Germany (until 1990 former territory of the FRG),Rural areas,5.1
-2016,Germany (until 1990 former territory of the FRG),Rural areas,5.9
-2017,Germany (until 1990 former territory of the FRG),Rural areas,5.7
-2018,Germany (until 1990 former territory of the FRG),Rural areas,5.2
-2019,Germany (until 1990 former territory of the FRG),Rural areas,5.2
-2020,Germany (until 1990 former territory of the FRG),Rural areas,1.5
+2023,Denmark,Rural areas,2.4
+2005,Germany,Rural areas,6.7
+2006,Germany,Rural areas,6.2
+2007,Germany,Rural areas,6.9
+2008,Germany,Rural areas,6.1
+2009,Germany,Rural areas,7.1
+2010,Germany,Rural areas,6.5
+2011,Germany,Rural areas,6.6
+2012,Germany,Rural areas,5.5
+2013,Germany,Rural areas,4.8
+2014,Germany,Rural areas,5.3
+2015,Germany,Rural areas,5.1
+2016,Germany,Rural areas,5.9
+2017,Germany,Rural areas,5.7
+2018,Germany,Rural areas,5.2
+2019,Germany,Rural areas,5.2
+2020,Germany,Rural areas,1.5
+2023,Germany,Rural areas,3.2
 2004,Estonia,Rural areas,20.1
 2005,Estonia,Rural areas,16.6
 2006,Estonia,Rural areas,13.2
@@ -1123,6 +1184,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Estonia,Rural areas,5.4
 2019,Estonia,Rural areas,4.7
 2020,Estonia,Rural areas,4.3
+2023,Estonia,Rural areas,2.4
 2003,Ireland,Rural areas,5
 2004,Ireland,Rural areas,5
 2005,Ireland,Rural areas,4.4
@@ -1140,7 +1202,7 @@ TIME,GEO,DEG_URB,VALUE
 2017,Ireland,Rural areas,5
 2018,Ireland,Rural areas,4.7
 2019,Ireland,Rural areas,3.5
-2020,Ireland,Rural areas,5.7
+2020,Ireland,Rural areas,5.4
 2003,Greece,Rural areas,4.1
 2004,Greece,Rural areas,4.6
 2005,Greece,Rural areas,4.2
@@ -1159,6 +1221,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Greece,Rural areas,2.9
 2019,Greece,Rural areas,5.7
 2020,Greece,Rural areas,6.2
+2023,Greece,Rural areas,16.4
 2004,Spain,Rural areas,8.9
 2005,Spain,Rural areas,8.9
 2006,Spain,Rural areas,9.6
@@ -1176,6 +1239,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Spain,Rural areas,6.1
 2019,Spain,Rural areas,6.6
 2020,Spain,Rural areas,9.5
+2023,Spain,Rural areas,7.9
 2004,France,Rural areas,9.2
 2005,France,Rural areas,5.7
 2006,France,Rural areas,6
@@ -1193,6 +1257,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,France,Rural areas,7.2
 2019,France,Rural areas,7.5
 2020,France,Rural areas,9.2
+2023,France,Rural areas,7
 2010,Croatia,Rural areas,2
 2011,Croatia,Rural areas,1.8
 2012,Croatia,Rural areas,1.5
@@ -1204,6 +1269,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Croatia,Rural areas,1
 2019,Croatia,Rural areas,1.1
 2020,Croatia,Rural areas,0.9
+2023,Croatia,Rural areas,0.4
 2004,Italy,Rural areas,3.3
 2005,Italy,Rural areas,2.7
 2006,Italy,Rural areas,3.2
@@ -1221,6 +1287,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Italy,Rural areas,6.3
 2019,Italy,Rural areas,5.4
 2020,Italy,Rural areas,4.2
+2023,Italy,Rural areas,2.7
 2005,Cyprus,Rural areas,11.1
 2006,Cyprus,Rural areas,13.1
 2007,Cyprus,Rural areas,13.5
@@ -1237,6 +1304,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Cyprus,Rural areas,7.8
 2019,Cyprus,Rural areas,8.5
 2020,Cyprus,Rural areas,9.1
+2023,Cyprus,Rural areas,9.9
 2005,Latvia,Rural areas,14.2
 2006,Latvia,Rural areas,24.6
 2007,Latvia,Rural areas,21.9
@@ -1253,6 +1321,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Latvia,Rural areas,1.4
 2019,Latvia,Rural areas,1.3
 2020,Latvia,Rural areas,2.6
+2023,Latvia,Rural areas,1.4
 2005,Lithuania,Rural areas,5.5
 2006,Lithuania,Rural areas,4.7
 2007,Lithuania,Rural areas,2.9
@@ -1269,6 +1338,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Lithuania,Rural areas,2.8
 2019,Lithuania,Rural areas,1.9
 2020,Lithuania,Rural areas,2.1
+2023,Lithuania,Rural areas,1.3
 2003,Luxembourg,Rural areas,12.1
 2004,Luxembourg,Rural areas,11.4
 2005,Luxembourg,Rural areas,11.6
@@ -1287,6 +1357,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Luxembourg,Rural areas,8.6
 2019,Luxembourg,Rural areas,6.9
 2020,Luxembourg,Rural areas,7.2
+2023,Luxembourg,Rural areas,2.9
 2005,Hungary,Rural areas,5.8
 2006,Hungary,Rural areas,6.3
 2007,Hungary,Rural areas,10
@@ -1303,9 +1374,11 @@ TIME,GEO,DEG_URB,VALUE
 2018,Hungary,Rural areas,4
 2019,Hungary,Rural areas,5.6
 2020,Hungary,Rural areas,5.6
+2023,Hungary,Rural areas,6.2
 2014,Malta,Rural areas,0
 2015,Malta,Rural areas,0
 2016,Malta,Rural areas,0
+2023,Malta,Rural areas,4.8
 2005,Netherlands,Rural areas,11.6
 2006,Netherlands,Rural areas,8
 2007,Netherlands,Rural areas,7.5
@@ -1322,6 +1395,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Netherlands,Rural areas,8.1
 2019,Netherlands,Rural areas,9.4
 2020,Netherlands,Rural areas,7.5
+2023,Netherlands,Rural areas,9.1
 2004,Austria,Rural areas,2.9
 2005,Austria,Rural areas,4.8
 2006,Austria,Rural areas,4.6
@@ -1339,6 +1413,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Austria,Rural areas,5.2
 2019,Austria,Rural areas,3
 2020,Austria,Rural areas,2.4
+2023,Austria,Rural areas,2.4
 2005,Poland,Rural areas,3.8
 2006,Poland,Rural areas,3.2
 2007,Poland,Rural areas,3.3
@@ -1354,6 +1429,7 @@ TIME,GEO,DEG_URB,VALUE
 2017,Poland,Rural areas,1.6
 2018,Poland,Rural areas,2.1
 2019,Poland,Rural areas,1.6
+2023,Poland,Rural areas,1
 2004,Portugal,Rural areas,3.3
 2005,Portugal,Rural areas,3.6
 2006,Portugal,Rural areas,3
@@ -1371,6 +1447,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Portugal,Rural areas,2.9
 2019,Portugal,Rural areas,3.3
 2020,Portugal,Rural areas,4.4
+2023,Portugal,Rural areas,3
 2007,Romania,Rural areas,12.9
 2008,Romania,Rural areas,9.6
 2009,Romania,Rural areas,12.1
@@ -1385,6 +1462,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Romania,Rural areas,10
 2019,Romania,Rural areas,8.2
 2020,Romania,Rural areas,8.2
+2023,Romania,Rural areas,4.9
 2005,Slovenia,Rural areas,4.7
 2006,Slovenia,Rural areas,5.5
 2007,Slovenia,Rural areas,5.4
@@ -1401,6 +1479,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovenia,Rural areas,6
 2019,Slovenia,Rural areas,6.2
 2020,Slovenia,Rural areas,5.4
+2023,Slovenia,Rural areas,5.1
 2005,Slovakia,Rural areas,5.5
 2006,Slovakia,Rural areas,4.8
 2007,Slovakia,Rural areas,4.6
@@ -1417,6 +1496,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Slovakia,Rural areas,3
 2019,Slovakia,Rural areas,4
 2020,Slovakia,Rural areas,3.2
+2023,Slovakia,Rural areas,2.6
 2004,Finland,Rural areas,10.9
 2005,Finland,Rural areas,10.6
 2006,Finland,Rural areas,10
@@ -1434,6 +1514,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Finland,Rural areas,3.2
 2019,Finland,Rural areas,3.7
 2020,Finland,Rural areas,3.3
+2023,Finland,Rural areas,5.5
 2004,Sweden,Rural areas,8.5
 2005,Sweden,Rural areas,8.2
 2006,Sweden,Rural areas,10.9
@@ -1451,6 +1532,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Sweden,Rural areas,10.4
 2019,Sweden,Rural areas,9.1
 2020,Sweden,Rural areas,8.4
+2023,Sweden,Rural areas,6
 2004,Iceland,Rural areas,1.9
 2005,Iceland,Rural areas,1.8
 2006,Iceland,Rural areas,0.9
@@ -1466,6 +1548,7 @@ TIME,GEO,DEG_URB,VALUE
 2016,Iceland,Rural areas,0.5
 2017,Iceland,Rural areas,1.1
 2018,Iceland,Rural areas,0.9
+2019,Iceland,Rural areas,0.9
 2004,Norway,Rural areas,2.9
 2005,Norway,Rural areas,1.7
 2006,Norway,Rural areas,1.6
@@ -1482,6 +1565,7 @@ TIME,GEO,DEG_URB,VALUE
 2018,Norway,Rural areas,1.9
 2019,Norway,Rural areas,1.6
 2020,Norway,Rural areas,2.1
+2023,Norway,Rural areas,2.4
 2007,Switzerland,Rural areas,6.4
 2008,Switzerland,Rural areas,6.2
 2009,Switzerland,Rural areas,5.3

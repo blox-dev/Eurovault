@@ -7,6 +7,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Belgium,Primary and lower secondary education (levels 1 and 2),2.39
 2018,Belgium,Primary and lower secondary education (levels 1 and 2),2.4
 2019,Belgium,Primary and lower secondary education (levels 1 and 2),2.37
+2020,Belgium,Primary and lower secondary education (levels 1 and 2),2.57
+2021,Belgium,Primary and lower secondary education (levels 1 and 2),2.41
 2012,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.39
 2013,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.59
 2014,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.64
@@ -15,6 +17,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.61
 2018,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.6
 2019,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.65
+2020,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.79
+2021,Bulgaria,Primary and lower secondary education (levels 1 and 2),1.89
 2012,Czechia,Primary and lower secondary education (levels 1 and 2),1.7
 2013,Czechia,Primary and lower secondary education (levels 1 and 2),1.61
 2014,Czechia,Primary and lower secondary education (levels 1 and 2),1.62
@@ -23,20 +27,26 @@ TIME,GEO,ISCED11,VALUE
 2017,Czechia,Primary and lower secondary education (levels 1 and 2),1.74
 2018,Czechia,Primary and lower secondary education (levels 1 and 2),1.85
 2019,Czechia,Primary and lower secondary education (levels 1 and 2),2.06
+2020,Czechia,Primary and lower secondary education (levels 1 and 2),2.2
+2021,Czechia,Primary and lower secondary education (levels 1 and 2),2.17
 2013,Denmark,Primary and lower secondary education (levels 1 and 2),3.25
 2014,Denmark,Primary and lower secondary education (levels 1 and 2),3.31
 2016,Denmark,Primary and lower secondary education (levels 1 and 2),2.72
 2017,Denmark,Primary and lower secondary education (levels 1 and 2),2.67
 2018,Denmark,Primary and lower secondary education (levels 1 and 2),2.63
 2019,Denmark,Primary and lower secondary education (levels 1 and 2),2.56
-2012,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.88
-2013,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.87
-2014,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.85
-2015,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.81
-2016,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.8
-2017,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.79
-2018,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.83
-2019,Germany (until 1990 former territory of the FRG),Primary and lower secondary education (levels 1 and 2),1.89
+2020,Denmark,Primary and lower secondary education (levels 1 and 2),2.87
+2021,Denmark,Primary and lower secondary education (levels 1 and 2),2.62
+2012,Germany,Primary and lower secondary education (levels 1 and 2),1.88
+2013,Germany,Primary and lower secondary education (levels 1 and 2),1.87
+2014,Germany,Primary and lower secondary education (levels 1 and 2),1.85
+2015,Germany,Primary and lower secondary education (levels 1 and 2),1.81
+2016,Germany,Primary and lower secondary education (levels 1 and 2),1.8
+2017,Germany,Primary and lower secondary education (levels 1 and 2),1.79
+2018,Germany,Primary and lower secondary education (levels 1 and 2),1.83
+2019,Germany,Primary and lower secondary education (levels 1 and 2),1.89
+2020,Germany,Primary and lower secondary education (levels 1 and 2),2.04
+2021,Germany,Primary and lower secondary education (levels 1 and 2),2.04
 2012,Estonia,Primary and lower secondary education (levels 1 and 2),2.01
 2013,Estonia,Primary and lower secondary education (levels 1 and 2),2.2
 2014,Estonia,Primary and lower secondary education (levels 1 and 2),1.81
@@ -45,6 +55,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Estonia,Primary and lower secondary education (levels 1 and 2),1.99
 2018,Estonia,Primary and lower secondary education (levels 1 and 2),2.14
 2019,Estonia,Primary and lower secondary education (levels 1 and 2),2.38
+2020,Estonia,Primary and lower secondary education (levels 1 and 2),2.55
+2021,Estonia,Primary and lower secondary education (levels 1 and 2),2.38
 2012,Ireland,Primary and lower secondary education (levels 1 and 2),3.31
 2013,Ireland,Primary and lower secondary education (levels 1 and 2),2.82
 2014,Ireland,Primary and lower secondary education (levels 1 and 2),2.6
@@ -53,6 +65,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Ireland,Primary and lower secondary education (levels 1 and 2),1.69
 2018,Ireland,Primary and lower secondary education (levels 1 and 2),1.65
 2019,Ireland,Primary and lower secondary education (levels 1 and 2),1.61
+2020,Ireland,Primary and lower secondary education (levels 1 and 2),1.65
+2021,Ireland,Primary and lower secondary education (levels 1 and 2),1.51
 2012,Greece,Primary and lower secondary education (levels 1 and 2),1.83
 2013,Greece,Primary and lower secondary education (levels 1 and 2),1.88
 2014,Greece,Primary and lower secondary education (levels 1 and 2),1.94
@@ -69,6 +83,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Spain,Primary and lower secondary education (levels 1 and 2),1.86
 2018,Spain,Primary and lower secondary education (levels 1 and 2),1.85
 2019,Spain,Primary and lower secondary education (levels 1 and 2),1.87
+2020,Spain,Primary and lower secondary education (levels 1 and 2),2.17
+2021,Spain,Primary and lower secondary education (levels 1 and 2),2.14
 2012,France,Primary and lower secondary education (levels 1 and 2),2.37
 2013,France,Primary and lower secondary education (levels 1 and 2),2.38
 2014,France,Primary and lower secondary education (levels 1 and 2),2.38
@@ -77,8 +93,12 @@ TIME,GEO,ISCED11,VALUE
 2017,France,Primary and lower secondary education (levels 1 and 2),2.35
 2018,France,Primary and lower secondary education (levels 1 and 2),2.34
 2019,France,Primary and lower secondary education (levels 1 and 2),2.34
+2020,France,Primary and lower secondary education (levels 1 and 2),2.51
+2021,France,Primary and lower secondary education (levels 1 and 2),2.4
 2016,Croatia,Primary and lower secondary education (levels 1 and 2),1.64
 2019,Croatia,Primary and lower secondary education (levels 1 and 2),1.66
+2020,Croatia,Primary and lower secondary education (levels 1 and 2),1.88
+2021,Croatia,Primary and lower secondary education (levels 1 and 2),1.73
 2012,Italy,Primary and lower secondary education (levels 1 and 2),1.69
 2013,Italy,Primary and lower secondary education (levels 1 and 2),1.71
 2014,Italy,Primary and lower secondary education (levels 1 and 2),1.69
@@ -87,6 +107,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Italy,Primary and lower secondary education (levels 1 and 2),1.66
 2018,Italy,Primary and lower secondary education (levels 1 and 2),1.63
 2019,Italy,Primary and lower secondary education (levels 1 and 2),1.71
+2020,Italy,Primary and lower secondary education (levels 1 and 2),1.84
+2021,Italy,Primary and lower secondary education (levels 1 and 2),1.76
 2012,Cyprus,Primary and lower secondary education (levels 1 and 2),3.22
 2013,Cyprus,Primary and lower secondary education (levels 1 and 2),3.22
 2014,Cyprus,Primary and lower secondary education (levels 1 and 2),3.27
@@ -95,6 +117,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Cyprus,Primary and lower secondary education (levels 1 and 2),2.98
 2018,Cyprus,Primary and lower secondary education (levels 1 and 2),2.96
 2019,Cyprus,Primary and lower secondary education (levels 1 and 2),2.92
+2020,Cyprus,Primary and lower secondary education (levels 1 and 2),3.2
+2021,Cyprus,Primary and lower secondary education (levels 1 and 2),2.93
 2012,Latvia,Primary and lower secondary education (levels 1 and 2),2.76
 2013,Latvia,Primary and lower secondary education (levels 1 and 2),2.18
 2014,Latvia,Primary and lower secondary education (levels 1 and 2),2.33
@@ -103,6 +127,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Latvia,Primary and lower secondary education (levels 1 and 2),1.98
 2018,Latvia,Primary and lower secondary education (levels 1 and 2),1.88
 2019,Latvia,Primary and lower secondary education (levels 1 and 2),1.91
+2020,Latvia,Primary and lower secondary education (levels 1 and 2),1.95
+2021,Latvia,Primary and lower secondary education (levels 1 and 2),1.82
 2012,Lithuania,Primary and lower secondary education (levels 1 and 2),2.02
 2013,Lithuania,Primary and lower secondary education (levels 1 and 2),6.47
 2014,Lithuania,Primary and lower secondary education (levels 1 and 2),1.81
@@ -111,6 +137,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Lithuania,Primary and lower secondary education (levels 1 and 2),1.75
 2018,Lithuania,Primary and lower secondary education (levels 1 and 2),1.72
 2019,Lithuania,Primary and lower secondary education (levels 1 and 2),1.78
+2020,Lithuania,Primary and lower secondary education (levels 1 and 2),1.97
+2021,Lithuania,Primary and lower secondary education (levels 1 and 2),1.83
 2012,Luxembourg,Primary and lower secondary education (levels 1 and 2),2.32
 2013,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.96
 2014,Luxembourg,Primary and lower secondary education (levels 1 and 2),2.04
@@ -119,6 +147,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.79
 2018,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.77
 2019,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.91
+2020,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.97
+2021,Luxembourg,Primary and lower secondary education (levels 1 and 2),1.91
 2012,Hungary,Primary and lower secondary education (levels 1 and 2),1.52
 2013,Hungary,Primary and lower secondary education (levels 1 and 2),1.5
 2014,Hungary,Primary and lower secondary education (levels 1 and 2),1.17
@@ -127,6 +157,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Hungary,Primary and lower secondary education (levels 1 and 2),1.31
 2018,Hungary,Primary and lower secondary education (levels 1 and 2),1.29
 2019,Hungary,Primary and lower secondary education (levels 1 and 2),1.53
+2020,Hungary,Primary and lower secondary education (levels 1 and 2),1.48
+2021,Hungary,Primary and lower secondary education (levels 1 and 2),1.4
 2012,Malta,Primary and lower secondary education (levels 1 and 2),1.78
 2013,Malta,Primary and lower secondary education (levels 1 and 2),1.85
 2014,Malta,Primary and lower secondary education (levels 1 and 2),1.68
@@ -135,6 +167,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Malta,Primary and lower secondary education (levels 1 and 2),1.68
 2018,Malta,Primary and lower secondary education (levels 1 and 2),1.81
 2019,Malta,Primary and lower secondary education (levels 1 and 2),1.79
+2020,Malta,Primary and lower secondary education (levels 1 and 2),2.12
+2021,Malta,Primary and lower secondary education (levels 1 and 2),2.01
 2012,Netherlands,Primary and lower secondary education (levels 1 and 2),2.68
 2013,Netherlands,Primary and lower secondary education (levels 1 and 2),2.55
 2014,Netherlands,Primary and lower secondary education (levels 1 and 2),2.43
@@ -143,6 +177,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Netherlands,Primary and lower secondary education (levels 1 and 2),2.26
 2018,Netherlands,Primary and lower secondary education (levels 1 and 2),2.25
 2019,Netherlands,Primary and lower secondary education (levels 1 and 2),2.21
+2020,Netherlands,Primary and lower secondary education (levels 1 and 2),2.33
+2021,Netherlands,Primary and lower secondary education (levels 1 and 2),2.32
 2012,Austria,Primary and lower secondary education (levels 1 and 2),2.13
 2013,Austria,Primary and lower secondary education (levels 1 and 2),2.14
 2014,Austria,Primary and lower secondary education (levels 1 and 2),2.1
@@ -151,6 +187,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Austria,Primary and lower secondary education (levels 1 and 2),2.08
 2018,Austria,Primary and lower secondary education (levels 1 and 2),1.99
 2019,Austria,Primary and lower secondary education (levels 1 and 2),1.93
+2020,Austria,Primary and lower secondary education (levels 1 and 2),2.07
+2021,Austria,Primary and lower secondary education (levels 1 and 2),2.05
 2012,Poland,Primary and lower secondary education (levels 1 and 2),2.3
 2013,Poland,Primary and lower secondary education (levels 1 and 2),2.29
 2014,Poland,Primary and lower secondary education (levels 1 and 2),2.3
@@ -159,6 +197,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Poland,Primary and lower secondary education (levels 1 and 2),2.08
 2018,Poland,Primary and lower secondary education (levels 1 and 2),2.14
 2019,Poland,Primary and lower secondary education (levels 1 and 2),2.08
+2020,Poland,Primary and lower secondary education (levels 1 and 2),2.09
+2021,Poland,Primary and lower secondary education (levels 1 and 2),2.01
 2012,Portugal,Primary and lower secondary education (levels 1 and 2),2.63
 2013,Portugal,Primary and lower secondary education (levels 1 and 2),2.8
 2014,Portugal,Primary and lower secondary education (levels 1 and 2),2.7
@@ -167,6 +207,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Portugal,Primary and lower secondary education (levels 1 and 2),2.61
 2018,Portugal,Primary and lower secondary education (levels 1 and 2),2.47
 2019,Portugal,Primary and lower secondary education (levels 1 and 2),2.43
+2020,Portugal,Primary and lower secondary education (levels 1 and 2),2.53
+2021,Portugal,Primary and lower secondary education (levels 1 and 2),2.5
 2012,Romania,Primary and lower secondary education (levels 1 and 2),0.97
 2013,Romania,Primary and lower secondary education (levels 1 and 2),1.03
 2014,Romania,Primary and lower secondary education (levels 1 and 2),1.07
@@ -175,6 +217,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Romania,Primary and lower secondary education (levels 1 and 2),1
 2018,Romania,Primary and lower secondary education (levels 1 and 2),1.06
 2019,Romania,Primary and lower secondary education (levels 1 and 2),1.21
+2020,Romania,Primary and lower secondary education (levels 1 and 2),1.2
+2021,Romania,Primary and lower secondary education (levels 1 and 2),1.11
 2012,Slovenia,Primary and lower secondary education (levels 1 and 2),2.47
 2013,Slovenia,Primary and lower secondary education (levels 1 and 2),2.35
 2014,Slovenia,Primary and lower secondary education (levels 1 and 2),2.31
@@ -183,18 +227,25 @@ TIME,GEO,ISCED11,VALUE
 2017,Slovenia,Primary and lower secondary education (levels 1 and 2),2.1
 2018,Slovenia,Primary and lower secondary education (levels 1 and 2),2.19
 2019,Slovenia,Primary and lower secondary education (levels 1 and 2),2.17
+2020,Slovenia,Primary and lower secondary education (levels 1 and 2),2.37
+2021,Slovenia,Primary and lower secondary education (levels 1 and 2),2.39
 2013,Slovakia,Primary and lower secondary education (levels 1 and 2),1.7
 2014,Slovakia,Primary and lower secondary education (levels 1 and 2),1.72
 2015,Slovakia,Primary and lower secondary education (levels 1 and 2),1.76
 2016,Slovakia,Primary and lower secondary education (levels 1 and 2),1.72
 2017,Slovakia,Primary and lower secondary education (levels 1 and 2),1.78
 2018,Slovakia,Primary and lower secondary education (levels 1 and 2),1.84
+2019,Slovakia,Primary and lower secondary education (levels 1 and 2),2
+2020,Slovakia,Primary and lower secondary education (levels 1 and 2),2.21
+2021,Slovakia,Primary and lower secondary education (levels 1 and 2),2.2
 2014,Finland,Primary and lower secondary education (levels 1 and 2),2.46
 2015,Finland,Primary and lower secondary education (levels 1 and 2),2.56
 2016,Finland,Primary and lower secondary education (levels 1 and 2),2.52
 2017,Finland,Primary and lower secondary education (levels 1 and 2),2.39
 2018,Finland,Primary and lower secondary education (levels 1 and 2),2.41
 2019,Finland,Primary and lower secondary education (levels 1 and 2),2.53
+2020,Finland,Primary and lower secondary education (levels 1 and 2),2.59
+2021,Finland,Primary and lower secondary education (levels 1 and 2),2.52
 2012,Sweden,Primary and lower secondary education (levels 1 and 2),2.62
 2013,Sweden,Primary and lower secondary education (levels 1 and 2),2.56
 2014,Sweden,Primary and lower secondary education (levels 1 and 2),2.58
@@ -203,6 +254,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Sweden,Primary and lower secondary education (levels 1 and 2),2.79
 2018,Sweden,Primary and lower secondary education (levels 1 and 2),2.84
 2019,Sweden,Primary and lower secondary education (levels 1 and 2),2.84
+2020,Sweden,Primary and lower secondary education (levels 1 and 2),2.93
+2021,Sweden,Primary and lower secondary education (levels 1 and 2),2.78
 2012,Iceland,Primary and lower secondary education (levels 1 and 2),3.42
 2013,Iceland,Primary and lower secondary education (levels 1 and 2),3.24
 2014,Iceland,Primary and lower secondary education (levels 1 and 2),3.38
@@ -211,6 +264,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Iceland,Primary and lower secondary education (levels 1 and 2),3.21
 2018,Iceland,Primary and lower secondary education (levels 1 and 2),3.34
 2019,Iceland,Primary and lower secondary education (levels 1 and 2),3.24
+2020,Iceland,Primary and lower secondary education (levels 1 and 2),3.64
+2021,Iceland,Primary and lower secondary education (levels 1 and 2),3.47
 2012,Norway,Primary and lower secondary education (levels 1 and 2),2.43
 2013,Norway,Primary and lower secondary education (levels 1 and 2),2.46
 2014,Norway,Primary and lower secondary education (levels 1 and 2),2.44
@@ -219,12 +274,16 @@ TIME,GEO,ISCED11,VALUE
 2017,Norway,Primary and lower secondary education (levels 1 and 2),2.68
 2018,Norway,Primary and lower secondary education (levels 1 and 2),2.69
 2019,Norway,Primary and lower secondary education (levels 1 and 2),2.78
+2020,Norway,Primary and lower secondary education (levels 1 and 2),2.89
+2021,Norway,Primary and lower secondary education (levels 1 and 2),2.42
 2012,Switzerland,Primary and lower secondary education (levels 1 and 2),2.52
 2014,Switzerland,Primary and lower secondary education (levels 1 and 2),2.52
 2015,Switzerland,Primary and lower secondary education (levels 1 and 2),2.41
 2016,Switzerland,Primary and lower secondary education (levels 1 and 2),2.39
 2017,Switzerland,Primary and lower secondary education (levels 1 and 2),2.39
 2018,Switzerland,Primary and lower secondary education (levels 1 and 2),2.26
+2020,Switzerland,Primary and lower secondary education (levels 1 and 2),2.49
+2021,Switzerland,Primary and lower secondary education (levels 1 and 2),2.4
 2013,United Kingdom,Primary and lower secondary education (levels 1 and 2),2.76
 2014,United Kingdom,Primary and lower secondary education (levels 1 and 2),2.87
 2015,United Kingdom,Primary and lower secondary education (levels 1 and 2),2.76
@@ -242,6 +301,7 @@ TIME,GEO,ISCED11,VALUE
 2017,Türkiye,Primary and lower secondary education (levels 1 and 2),1.48
 2018,Türkiye,Primary and lower secondary education (levels 1 and 2),1.47
 2019,Türkiye,Primary and lower secondary education (levels 1 and 2),1.69
+2020,Türkiye,Primary and lower secondary education (levels 1 and 2),1.5
 2012,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.86
 2013,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.9
 2014,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.87
@@ -250,6 +310,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.76
 2018,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.71
 2019,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.67
+2020,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.8
+2021,Belgium,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.63
 2012,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.74
 2013,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.8
 2014,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.83
@@ -258,6 +320,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.74
 2018,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.78
 2019,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.82
+2020,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
+2021,Bulgaria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
 2012,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.03
 2013,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
 2014,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.87
@@ -266,6 +330,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.8
 2018,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.91
 2019,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
+2020,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
+2021,Czechia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.9
 2012,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.65
 2013,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.62
 2014,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.84
@@ -273,14 +339,18 @@ TIME,GEO,ISCED11,VALUE
 2017,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.11
 2018,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.08
 2019,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.05
-2012,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.06
-2013,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.04
-2014,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.01
-2015,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
-2016,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
-2017,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
-2018,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
-2019,Germany (until 1990 former territory of the FRG),Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
+2020,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.1
+2021,Denmark,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
+2012,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.06
+2013,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.04
+2014,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.01
+2015,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
+2016,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
+2017,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
+2018,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
+2019,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
+2020,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.05
+2021,Germany,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
 2012,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.23
 2013,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
 2014,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.87
@@ -289,6 +359,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.81
 2018,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.84
 2019,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.7
+2020,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.64
+2021,Estonia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.65
 2012,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.42
 2013,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.25
 2014,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.19
@@ -297,6 +369,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.7
 2018,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.67
 2019,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.66
+2020,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.66
+2021,Ireland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.57
 2012,Greece,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.82
 2013,Greece,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.79
 2014,Greece,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.76
@@ -313,6 +387,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Spain,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.83
 2018,Spain,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.82
 2019,Spain,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.84
+2020,Spain,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
+2021,Spain,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
 2012,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.2
 2013,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.19
 2014,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.19
@@ -321,10 +397,14 @@ TIME,GEO,ISCED11,VALUE
 2017,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.17
 2018,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.15
 2019,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.13
+2020,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.17
+2021,France,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.11
 2016,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.86
 2017,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.86
 2018,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
 2019,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.83
+2020,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.95
+2021,Croatia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.87
 2012,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.16
 2013,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.18
 2014,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.13
@@ -333,6 +413,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.16
 2018,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.37
 2019,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.13
+2020,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.24
+2021,Italy,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.18
 2012,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.43
 2013,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.42
 2014,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.43
@@ -341,6 +423,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.3
 2018,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.27
 2019,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.15
+2020,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.26
+2021,Cyprus,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.13
 2012,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.34
 2013,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.95
 2014,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
@@ -349,6 +433,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.9
 2018,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.87
 2019,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.88
+2020,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
+2021,Latvia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.87
 2012,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.78
 2013,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),2.71
 2014,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.72
@@ -357,6 +443,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.55
 2018,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.52
 2019,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.52
+2020,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.58
+2021,Lithuania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.56
 2012,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
 2013,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
 2014,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.88
@@ -365,6 +453,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.84
 2018,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.81
 2019,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.84
+2020,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.88
+2021,Luxembourg,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
 2012,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.08
 2013,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
 2014,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.65
@@ -373,6 +463,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.35
 2018,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.29
 2019,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.96
+2020,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.95
+2021,Hungary,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
 2012,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.47
 2013,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.57
 2014,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.33
@@ -381,6 +473,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.09
 2018,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.2
 2019,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.1
+2020,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.22
+2021,Malta,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.11
 2012,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.11
 2013,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.04
 2014,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.04
@@ -389,6 +483,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
 2018,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.05
 2019,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
+2020,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.03
+2021,Netherlands,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.06
 2012,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.12
 2013,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.08
 2014,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.03
@@ -397,6 +493,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.96
 2018,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.93
 2019,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.86
+2020,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.95
+2021,Austria,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
 2012,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.9
 2013,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.86
 2014,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.82
@@ -405,6 +503,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.73
 2018,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.71
 2019,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.76
+2020,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
+2021,Poland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.81
 2012,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.06
 2013,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.09
 2014,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
@@ -413,6 +513,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.09
 2018,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
 2019,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.05
+2020,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.07
+2021,Portugal,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.02
 2012,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.6
 2013,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.62
 2014,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.67
@@ -421,6 +523,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.66
 2018,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.68
 2019,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.76
+2020,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.76
+2021,Romania,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.71
 2012,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.07
 2013,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.04
 2014,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
@@ -429,12 +533,17 @@ TIME,GEO,ISCED11,VALUE
 2017,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
 2018,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
 2019,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.91
+2020,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.97
+2021,Slovenia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.98
 2013,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.9
 2014,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.91
 2015,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.94
 2016,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.83
 2017,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.84
 2018,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.83
+2019,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.88
+2020,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.99
+2021,Slovakia,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1
 2012,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.71
 2013,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.63
 2014,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.59
@@ -443,6 +552,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.29
 2018,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.24
 2019,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.25
+2020,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.31
+2021,Finland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.34
 2012,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.47
 2013,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.36
 2014,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.32
@@ -451,6 +562,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.27
 2018,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.33
 2019,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.32
+2020,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.39
+2021,Sweden,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.34
 2012,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.29
 2013,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.2
 2014,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.18
@@ -459,6 +572,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.13
 2018,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.12
 2019,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.12
+2020,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.19
+2021,Iceland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.08
 2012,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.45
 2013,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.35
 2014,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.31
@@ -467,12 +582,16 @@ TIME,GEO,ISCED11,VALUE
 2017,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.43
 2018,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.39
 2019,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.43
+2020,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.51
+2021,Norway,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.27
 2013,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.92
 2014,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.91
 2015,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.91
 2016,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.9
 2017,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.89
 2018,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.82
+2020,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.85
+2021,Switzerland,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),0.81
 2012,United Kingdom,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.49
 2013,United Kingdom,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.38
 2014,United Kingdom,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.43
@@ -493,6 +612,7 @@ TIME,GEO,ISCED11,VALUE
 2017,Türkiye,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.05
 2018,Türkiye,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.06
 2019,Türkiye,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.11
+2020,Türkiye,Upper secondary and post-secondary non-tertiary education (levels 3 and 4),1.01
 2012,Belgium,Tertiary education (levels 5-8),1.43
 2013,Belgium,Tertiary education (levels 5-8),1.5
 2014,Belgium,Tertiary education (levels 5-8),1.49
@@ -501,6 +621,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Belgium,Tertiary education (levels 5-8),1.47
 2018,Belgium,Tertiary education (levels 5-8),1.49
 2019,Belgium,Tertiary education (levels 5-8),1.53
+2020,Belgium,Tertiary education (levels 5-8),1.62
+2021,Belgium,Tertiary education (levels 5-8),1.52
 2012,Bulgaria,Tertiary education (levels 5-8),0.66
 2013,Bulgaria,Tertiary education (levels 5-8),0.65
 2014,Bulgaria,Tertiary education (levels 5-8),0.7
@@ -509,6 +631,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Bulgaria,Tertiary education (levels 5-8),0.81
 2018,Bulgaria,Tertiary education (levels 5-8),0.76
 2019,Bulgaria,Tertiary education (levels 5-8),0.8
+2020,Bulgaria,Tertiary education (levels 5-8),0.83
+2021,Bulgaria,Tertiary education (levels 5-8),0.83
 2012,Czechia,Tertiary education (levels 5-8),1.05
 2013,Czechia,Tertiary education (levels 5-8),0.88
 2014,Czechia,Tertiary education (levels 5-8),0.8
@@ -517,20 +641,26 @@ TIME,GEO,ISCED11,VALUE
 2017,Czechia,Tertiary education (levels 5-8),0.7
 2018,Czechia,Tertiary education (levels 5-8),0.92
 2019,Czechia,Tertiary education (levels 5-8),0.93
+2020,Czechia,Tertiary education (levels 5-8),0.86
+2021,Czechia,Tertiary education (levels 5-8),0.87
 2013,Denmark,Tertiary education (levels 5-8),2.28
 2014,Denmark,Tertiary education (levels 5-8),2.35
 2016,Denmark,Tertiary education (levels 5-8),2.63
 2017,Denmark,Tertiary education (levels 5-8),2.39
 2018,Denmark,Tertiary education (levels 5-8),2.35
 2019,Denmark,Tertiary education (levels 5-8),2.31
-2012,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.28
-2013,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.27
-2014,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.27
-2015,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.25
-2016,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.26
-2017,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.25
-2018,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.27
-2019,Germany (until 1990 former territory of the FRG),Tertiary education (levels 5-8),1.28
+2020,Denmark,Tertiary education (levels 5-8),2.41
+2021,Denmark,Tertiary education (levels 5-8),2.36
+2012,Germany,Tertiary education (levels 5-8),1.28
+2013,Germany,Tertiary education (levels 5-8),1.27
+2014,Germany,Tertiary education (levels 5-8),1.27
+2015,Germany,Tertiary education (levels 5-8),1.25
+2016,Germany,Tertiary education (levels 5-8),1.26
+2017,Germany,Tertiary education (levels 5-8),1.25
+2018,Germany,Tertiary education (levels 5-8),1.27
+2019,Germany,Tertiary education (levels 5-8),1.28
+2020,Germany,Tertiary education (levels 5-8),1.39
+2021,Germany,Tertiary education (levels 5-8),1.35
 2012,Estonia,Tertiary education (levels 5-8),1.03
 2013,Estonia,Tertiary education (levels 5-8),1.37
 2014,Estonia,Tertiary education (levels 5-8),1.51
@@ -539,6 +669,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Estonia,Tertiary education (levels 5-8),1.13
 2018,Estonia,Tertiary education (levels 5-8),1.18
 2019,Estonia,Tertiary education (levels 5-8),1.09
+2020,Estonia,Tertiary education (levels 5-8),1.13
+2021,Estonia,Tertiary education (levels 5-8),1.12
 2012,Ireland,Tertiary education (levels 5-8),1.32
 2013,Ireland,Tertiary education (levels 5-8),1.14
 2014,Ireland,Tertiary education (levels 5-8),1.03
@@ -547,6 +679,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Ireland,Tertiary education (levels 5-8),0.97
 2018,Ireland,Tertiary education (levels 5-8),0.91
 2019,Ireland,Tertiary education (levels 5-8),0.86
+2020,Ireland,Tertiary education (levels 5-8),0.84
+2021,Ireland,Tertiary education (levels 5-8),0.78
 2012,Greece,Tertiary education (levels 5-8),0.75
 2013,Greece,Tertiary education (levels 5-8),0.66
 2014,Greece,Tertiary education (levels 5-8),0.65
@@ -562,6 +696,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Spain,Tertiary education (levels 5-8),0.93
 2018,Spain,Tertiary education (levels 5-8),0.92
 2019,Spain,Tertiary education (levels 5-8),0.94
+2020,Spain,Tertiary education (levels 5-8),1.08
+2021,Spain,Tertiary education (levels 5-8),1.09
 2012,France,Tertiary education (levels 5-8),1.24
 2013,France,Tertiary education (levels 5-8),1.24
 2014,France,Tertiary education (levels 5-8),1.25
@@ -570,10 +706,14 @@ TIME,GEO,ISCED11,VALUE
 2017,France,Tertiary education (levels 5-8),1.23
 2018,France,Tertiary education (levels 5-8),1.23
 2019,France,Tertiary education (levels 5-8),1.21
+2020,France,Tertiary education (levels 5-8),1.28
+2021,France,Tertiary education (levels 5-8),1.23
 2016,Croatia,Tertiary education (levels 5-8),0.81
 2017,Croatia,Tertiary education (levels 5-8),0.86
 2018,Croatia,Tertiary education (levels 5-8),0.86
 2019,Croatia,Tertiary education (levels 5-8),0.86
+2020,Croatia,Tertiary education (levels 5-8),0.97
+2021,Croatia,Tertiary education (levels 5-8),0.88
 2012,Italy,Tertiary education (levels 5-8),0.79
 2013,Italy,Tertiary education (levels 5-8),0.81
 2014,Italy,Tertiary education (levels 5-8),0.8
@@ -582,6 +722,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Italy,Tertiary education (levels 5-8),0.75
 2018,Italy,Tertiary education (levels 5-8),0.77
 2019,Italy,Tertiary education (levels 5-8),0.78
+2020,Italy,Tertiary education (levels 5-8),0.88
+2021,Italy,Tertiary education (levels 5-8),0.85
 2012,Cyprus,Tertiary education (levels 5-8),1.07
 2013,Cyprus,Tertiary education (levels 5-8),1.15
 2014,Cyprus,Tertiary education (levels 5-8),1.08
@@ -590,6 +732,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Cyprus,Tertiary education (levels 5-8),1.16
 2018,Cyprus,Tertiary education (levels 5-8),0.95
 2019,Cyprus,Tertiary education (levels 5-8),0.89
+2020,Cyprus,Tertiary education (levels 5-8),0.91
+2021,Cyprus,Tertiary education (levels 5-8),0.89
 2012,Latvia,Tertiary education (levels 5-8),1.36
 2013,Latvia,Tertiary education (levels 5-8),0.96
 2014,Latvia,Tertiary education (levels 5-8),1.13
@@ -598,6 +742,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Latvia,Tertiary education (levels 5-8),0.69
 2018,Latvia,Tertiary education (levels 5-8),0.74
 2019,Latvia,Tertiary education (levels 5-8),0.82
+2020,Latvia,Tertiary education (levels 5-8),0.85
+2021,Latvia,Tertiary education (levels 5-8),0.85
 2012,Lithuania,Tertiary education (levels 5-8),1.4
 2013,Lithuania,Tertiary education (levels 5-8),4.58
 2014,Lithuania,Tertiary education (levels 5-8),1.33
@@ -606,6 +752,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Lithuania,Tertiary education (levels 5-8),0.75
 2018,Lithuania,Tertiary education (levels 5-8),0.79
 2019,Lithuania,Tertiary education (levels 5-8),0.8
+2020,Lithuania,Tertiary education (levels 5-8),0.93
+2021,Lithuania,Tertiary education (levels 5-8),0.85
 2012,Luxembourg,Tertiary education (levels 5-8),0.45
 2014,Luxembourg,Tertiary education (levels 5-8),0.51
 2015,Luxembourg,Tertiary education (levels 5-8),0.51
@@ -613,6 +761,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Luxembourg,Tertiary education (levels 5-8),0.46
 2018,Luxembourg,Tertiary education (levels 5-8),0.41
 2019,Luxembourg,Tertiary education (levels 5-8),0.45
+2020,Luxembourg,Tertiary education (levels 5-8),0.46
+2021,Luxembourg,Tertiary education (levels 5-8),0.46
 2012,Hungary,Tertiary education (levels 5-8),0.82
 2013,Hungary,Tertiary education (levels 5-8),0.9
 2014,Hungary,Tertiary education (levels 5-8),0.77
@@ -621,6 +771,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Hungary,Tertiary education (levels 5-8),0.82
 2018,Hungary,Tertiary education (levels 5-8),0.81
 2019,Hungary,Tertiary education (levels 5-8),0.74
+2020,Hungary,Tertiary education (levels 5-8),0.76
+2021,Hungary,Tertiary education (levels 5-8),1.32
 2012,Malta,Tertiary education (levels 5-8),1.66
 2013,Malta,Tertiary education (levels 5-8),1.75
 2014,Malta,Tertiary education (levels 5-8),1.67
@@ -629,6 +781,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Malta,Tertiary education (levels 5-8),1.21
 2018,Malta,Tertiary education (levels 5-8),1.28
 2019,Malta,Tertiary education (levels 5-8),1.33
+2020,Malta,Tertiary education (levels 5-8),1.49
+2021,Malta,Tertiary education (levels 5-8),1.35
 2012,Netherlands,Tertiary education (levels 5-8),1.7
 2013,Netherlands,Tertiary education (levels 5-8),1.62
 2014,Netherlands,Tertiary education (levels 5-8),1.69
@@ -637,6 +791,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Netherlands,Tertiary education (levels 5-8),1.59
 2018,Netherlands,Tertiary education (levels 5-8),1.71
 2019,Netherlands,Tertiary education (levels 5-8),1.61
+2020,Netherlands,Tertiary education (levels 5-8),1.68
+2021,Netherlands,Tertiary education (levels 5-8),1.74
 2012,Austria,Tertiary education (levels 5-8),1.89
 2013,Austria,Tertiary education (levels 5-8),1.8
 2014,Austria,Tertiary education (levels 5-8),1.79
@@ -645,6 +801,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Austria,Tertiary education (levels 5-8),1.71
 2018,Austria,Tertiary education (levels 5-8),1.7
 2019,Austria,Tertiary education (levels 5-8),1.56
+2020,Austria,Tertiary education (levels 5-8),1.86
+2021,Austria,Tertiary education (levels 5-8),1.85
 2012,Poland,Tertiary education (levels 5-8),1.15
 2013,Poland,Tertiary education (levels 5-8),1.21
 2014,Poland,Tertiary education (levels 5-8),1.18
@@ -653,6 +811,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Poland,Tertiary education (levels 5-8),1.08
 2018,Poland,Tertiary education (levels 5-8),1.06
 2019,Poland,Tertiary education (levels 5-8),1.1
+2020,Poland,Tertiary education (levels 5-8),1.14
+2021,Poland,Tertiary education (levels 5-8),1.08
 2013,Portugal,Tertiary education (levels 5-8),0.9
 2014,Portugal,Tertiary education (levels 5-8),0.91
 2015,Portugal,Tertiary education (levels 5-8),0.9
@@ -660,6 +820,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Portugal,Tertiary education (levels 5-8),0.8
 2018,Portugal,Tertiary education (levels 5-8),0.78
 2019,Portugal,Tertiary education (levels 5-8),0.79
+2020,Portugal,Tertiary education (levels 5-8),0.87
+2021,Portugal,Tertiary education (levels 5-8),0.85
 2012,Romania,Tertiary education (levels 5-8),0.78
 2013,Romania,Tertiary education (levels 5-8),0.72
 2014,Romania,Tertiary education (levels 5-8),0.68
@@ -668,6 +830,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Romania,Tertiary education (levels 5-8),0.72
 2018,Romania,Tertiary education (levels 5-8),0.75
 2019,Romania,Tertiary education (levels 5-8),0.81
+2020,Romania,Tertiary education (levels 5-8),0.81
+2021,Romania,Tertiary education (levels 5-8),0.75
 2012,Slovenia,Tertiary education (levels 5-8),1.23
 2013,Slovenia,Tertiary education (levels 5-8),1.13
 2014,Slovenia,Tertiary education (levels 5-8),1.05
@@ -676,12 +840,17 @@ TIME,GEO,ISCED11,VALUE
 2017,Slovenia,Tertiary education (levels 5-8),0.95
 2018,Slovenia,Tertiary education (levels 5-8),1.01
 2019,Slovenia,Tertiary education (levels 5-8),1.02
+2020,Slovenia,Tertiary education (levels 5-8),1.16
+2021,Slovenia,Tertiary education (levels 5-8),1.12
 2013,Slovakia,Tertiary education (levels 5-8),0.97
 2014,Slovakia,Tertiary education (levels 5-8),0.97
 2015,Slovakia,Tertiary education (levels 5-8),1.39
 2016,Slovakia,Tertiary education (levels 5-8),0.83
 2017,Slovakia,Tertiary education (levels 5-8),0.79
 2018,Slovakia,Tertiary education (levels 5-8),0.76
+2019,Slovakia,Tertiary education (levels 5-8),0.78
+2020,Slovakia,Tertiary education (levels 5-8),0.9
+2021,Slovakia,Tertiary education (levels 5-8),0.97
 2013,Finland,Tertiary education (levels 5-8),2.01
 2014,Finland,Tertiary education (levels 5-8),2
 2015,Finland,Tertiary education (levels 5-8),1.89
@@ -689,6 +858,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Finland,Tertiary education (levels 5-8),1.66
 2018,Finland,Tertiary education (levels 5-8),1.54
 2019,Finland,Tertiary education (levels 5-8),1.51
+2020,Finland,Tertiary education (levels 5-8),1.59
+2021,Finland,Tertiary education (levels 5-8),1.53
 2012,Sweden,Tertiary education (levels 5-8),2.01
 2013,Sweden,Tertiary education (levels 5-8),1.96
 2014,Sweden,Tertiary education (levels 5-8),1.94
@@ -697,6 +868,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Sweden,Tertiary education (levels 5-8),1.79
 2018,Sweden,Tertiary education (levels 5-8),1.79
 2019,Sweden,Tertiary education (levels 5-8),1.78
+2020,Sweden,Tertiary education (levels 5-8),1.88
+2021,Sweden,Tertiary education (levels 5-8),1.84
 2012,Iceland,Tertiary education (levels 5-8),1.6
 2013,Iceland,Tertiary education (levels 5-8),1.5
 2014,Iceland,Tertiary education (levels 5-8),1.49
@@ -705,6 +878,8 @@ TIME,GEO,ISCED11,VALUE
 2017,Iceland,Tertiary education (levels 5-8),1.36
 2018,Iceland,Tertiary education (levels 5-8),1.23
 2019,Iceland,Tertiary education (levels 5-8),1.28
+2020,Iceland,Tertiary education (levels 5-8),1.47
+2021,Iceland,Tertiary education (levels 5-8),1.42
 2012,Norway,Tertiary education (levels 5-8),1.98
 2013,Norway,Tertiary education (levels 5-8),1.91
 2014,Norway,Tertiary education (levels 5-8),2.19
@@ -713,12 +888,16 @@ TIME,GEO,ISCED11,VALUE
 2017,Norway,Tertiary education (levels 5-8),2.11
 2018,Norway,Tertiary education (levels 5-8),2.08
 2019,Norway,Tertiary education (levels 5-8),2.15
+2020,Norway,Tertiary education (levels 5-8),2.31
+2021,Norway,Tertiary education (levels 5-8),1.91
 2013,Switzerland,Tertiary education (levels 5-8),1.32
 2014,Switzerland,Tertiary education (levels 5-8),1.34
 2015,Switzerland,Tertiary education (levels 5-8),1.36
 2016,Switzerland,Tertiary education (levels 5-8),1.33
 2017,Switzerland,Tertiary education (levels 5-8),1.36
 2018,Switzerland,Tertiary education (levels 5-8),1.29
+2020,Switzerland,Tertiary education (levels 5-8),1.41
+2021,Switzerland,Tertiary education (levels 5-8),1.3
 2013,United Kingdom,Tertiary education (levels 5-8),1.45
 2014,United Kingdom,Tertiary education (levels 5-8),1.34
 2015,United Kingdom,Tertiary education (levels 5-8),1.38
@@ -737,3 +916,4 @@ TIME,GEO,ISCED11,VALUE
 2017,Türkiye,Tertiary education (levels 5-8),1.59
 2018,Türkiye,Tertiary education (levels 5-8),1.49
 2019,Türkiye,Tertiary education (levels 5-8),1.34
+2020,Türkiye,Tertiary education (levels 5-8),1.26

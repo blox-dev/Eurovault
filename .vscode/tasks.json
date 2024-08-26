@@ -1,0 +1,10 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "open-browser",
+        "type": "shell",
+        "command": "sleep 2; start http://localhost:3000"
+      }
+    ]
+  }

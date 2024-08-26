@@ -290,13 +290,16 @@
       .then(resp => resp.json())
       .then(geoInfo => {
         myGeoJson = geoInfo;
-
+        // TODO: check if metadataaa.json exists
         fetch("./data/metadata.json")
           .then(response => response.json())
-          .then(metadata => {
-
+          .then(metaData => {
+            console.log(metaData);
+            // TODO: get the files from metadata 2 and /dataa
+            // display it nicely into the map
+            // console.log(metadata2);
             //the file representation in metadata.json with all relevant details inside
-            const files = metadata.files;
+            const files = metaData.files;
 
             var selectFile = document.getElementById("select_file_dropdown");
 
@@ -317,6 +320,7 @@
               selectFile.append(option);
 
               //read the file with the data and append the values into all_tables
+              // TODO: replace dataa
               dfd.readCSV('./data/' + key + '.csv').then(df => {
                 all_tables[key] = { df: df, meta: meta };
               }).then(() => {

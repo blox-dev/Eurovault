@@ -19,9 +19,10 @@ TIME,GEO,VALUE
 2017,Belgium,35050
 2018,Belgium,35510
 2019,Belgium,36110
-2020,Belgium,34010
-2021,Belgium,35950
-2022,Belgium,36740
+2020,Belgium,34050
+2021,Belgium,36260
+2022,Belgium,37050
+2023,Belgium,37300
 2000,Bulgaria,2990
 2001,Bulgaria,3210
 2002,Bulgaria,3420
@@ -42,78 +43,82 @@ TIME,GEO,VALUE
 2017,Bulgaria,6120
 2018,Bulgaria,6330
 2019,Bulgaria,6630
-2020,Bulgaria,6410
+2020,Bulgaria,6400
 2021,Bulgaria,6950
-2022,Bulgaria,7250
-2000,Czechia,11230
-2001,Czechia,11620
-2002,Czechia,11830
-2003,Czechia,12260
-2004,Czechia,12840
-2005,Czechia,13650
-2006,Czechia,14530
-2007,Czechia,15250
-2008,Czechia,15500
-2009,Czechia,14690
-2010,Czechia,15020
-2011,Czechia,15310
-2012,Czechia,15170
-2013,Czechia,15160
-2014,Czechia,15480
-2015,Czechia,16290
-2016,Czechia,16670
-2017,Czechia,17490
-2018,Czechia,17990
-2019,Czechia,18460
-2020,Czechia,17400
-2021,Czechia,18020
-2022,Czechia,18470
-2000,Denmark,42190
-2001,Denmark,42390
-2002,Denmark,42430
-2003,Denmark,42490
-2004,Denmark,43520
-2005,Denmark,44400
-2006,Denmark,45990
-2007,Denmark,46210
-2008,Denmark,45700
-2009,Denmark,43220
-2010,Denmark,43840
-2011,Denmark,44240
-2012,Denmark,44170
-2013,Denmark,44410
-2014,Denmark,44890
-2015,Denmark,45630
-2016,Denmark,46720
-2017,Denmark,47740
-2018,Denmark,48450
-2019,Denmark,48970
-2020,Denmark,47890
-2021,Denmark,50010
-2022,Denmark,51370
-2000,Germany (until 1990 former territory of the FRG),28910
-2001,Germany (until 1990 former territory of the FRG),29370
-2002,Germany (until 1990 former territory of the FRG),29290
-2003,Germany (until 1990 former territory of the FRG),29100
-2004,Germany (until 1990 former territory of the FRG),29470
-2005,Germany (until 1990 former territory of the FRG),29730
-2006,Germany (until 1990 former territory of the FRG),30930
-2007,Germany (until 1990 former territory of the FRG),31920
-2008,Germany (until 1990 former territory of the FRG),32320
-2009,Germany (until 1990 former territory of the FRG),30580
-2010,Germany (until 1990 former territory of the FRG),31940
-2011,Germany (until 1990 former territory of the FRG),33200
-2012,Germany (until 1990 former territory of the FRG),33280
-2013,Germany (until 1990 former territory of the FRG),33330
-2014,Germany (until 1990 former territory of the FRG),33920
-2015,Germany (until 1990 former territory of the FRG),34130
-2016,Germany (until 1990 former territory of the FRG),34610
-2017,Germany (until 1990 former territory of the FRG),35410
-2018,Germany (until 1990 former territory of the FRG),35650
-2019,Germany (until 1990 former territory of the FRG),35950
-2020,Germany (until 1990 former territory of the FRG),34590
-2021,Germany (until 1990 former territory of the FRG),35480
-2022,Germany (until 1990 former territory of the FRG),35860
+2022,Bulgaria,7680
+2023,Bulgaria,7850
+2000,Czechia,11440
+2001,Czechia,11830
+2002,Czechia,12040
+2003,Czechia,12430
+2004,Czechia,13020
+2005,Czechia,13810
+2006,Czechia,14680
+2007,Czechia,15400
+2008,Czechia,15640
+2009,Czechia,14800
+2010,Czechia,15170
+2011,Czechia,15470
+2012,Czechia,15330
+2013,Czechia,15330
+2014,Czechia,15670
+2015,Czechia,16440
+2016,Czechia,16860
+2017,Czechia,17720
+2018,Czechia,18200
+2019,Czechia,18820
+2020,Czechia,17900
+2021,Czechia,18620
+2022,Czechia,18690
+2023,Czechia,18480
+2000,Denmark,42220
+2001,Denmark,42480
+2002,Denmark,42520
+2003,Denmark,42600
+2004,Denmark,43670
+2005,Denmark,44580
+2006,Denmark,46120
+2007,Denmark,46380
+2008,Denmark,45910
+2009,Denmark,43390
+2010,Denmark,43880
+2011,Denmark,44270
+2012,Denmark,44110
+2013,Denmark,44540
+2014,Denmark,44870
+2015,Denmark,45500
+2016,Denmark,46520
+2017,Denmark,47640
+2018,Denmark,48290
+2019,Denmark,48920
+2020,Denmark,47940
+2021,Denmark,51260
+2022,Denmark,51600
+2023,Denmark,52510
+2000,Germany,28910
+2001,Germany,29370
+2002,Germany,29290
+2003,Germany,29100
+2004,Germany,29470
+2005,Germany,29730
+2006,Germany,30930
+2007,Germany,31920
+2008,Germany,32320
+2009,Germany,30580
+2010,Germany,31940
+2011,Germany,33200
+2012,Germany,33280
+2013,Germany,33330
+2014,Germany,33920
+2015,Germany,34130
+2016,Germany,34610
+2017,Germany,35410
+2018,Germany,35650
+2019,Germany,35950
+2020,Germany,34550
+2021,Germany,35630
+2022,Germany,36010
+2023,Germany,35630
 2000,Estonia,7540
 2001,Estonia,8040
 2002,Estonia,8640
@@ -133,33 +138,35 @@ TIME,GEO,VALUE
 2016,Estonia,13620
 2017,Estonia,14410
 2018,Estonia,14920
-2019,Estonia,15410
-2020,Estonia,15280
-2021,Estonia,16490
+2019,Estonia,15450
+2020,Estonia,15260
+2021,Estonia,16350
 2022,Estonia,16250
-2000,Ireland,33280
-2001,Ireland,34510
-2002,Ireland,35910
-2003,Ireland,36390
-2004,Ireland,38190
-2005,Ireland,39480
-2006,Ireland,40390
-2007,Ireland,41270
-2008,Ireland,38580
-2009,Ireland,36270
-2010,Ireland,36710
-2011,Ireland,36860
-2012,Ireland,36710
-2013,Ireland,36940
-2014,Ireland,39860
-2015,Ireland,49110
-2016,Ireland,49540
-2017,Ireland,53400
-2018,Ireland,57260
-2019,Ireland,59560
-2020,Ireland,62570
-2021,Ireland,70530
-2022,Ireland,77490
+2023,Estonia,15370
+2000,Ireland,33300
+2001,Ireland,34520
+2002,Ireland,35930
+2003,Ireland,36400
+2004,Ireland,38200
+2005,Ireland,39500
+2006,Ireland,40400
+2007,Ireland,41290
+2008,Ireland,38590
+2009,Ireland,36280
+2010,Ireland,36720
+2011,Ireland,37170
+2012,Ireland,36870
+2013,Ireland,37500
+2014,Ireland,40710
+2015,Ireland,50270
+2016,Ireland,50280
+2017,Ireland,54540
+2018,Ireland,57820
+2019,Ireland,59800
+2020,Ireland,63220
+2021,Ireland,72670
+2022,Ireland,77300
+2023,Ireland,71700
 2000,Greece,17430
 2001,Greece,18050
 2002,Greece,18690
@@ -180,9 +187,10 @@ TIME,GEO,VALUE
 2017,Greece,17110
 2018,Greece,17430
 2019,Greece,17780
-2020,Greece,16210
-2021,Greece,17670
-2022,Greece,18830
+2020,Greece,16150
+2021,Greece,17600
+2022,Greece,18690
+2023,Greece,19150
 2000,Spain,21460
 2001,Spain,22190
 2002,Spain,22430
@@ -203,55 +211,57 @@ TIME,GEO,VALUE
 2017,Spain,24440
 2018,Spain,24890
 2019,Spain,25180
-2020,Spain,22210
-2021,Spain,23450
-2022,Spain,24590
-2000,France,28930
-2001,France,29290
-2002,France,29410
-2003,France,29440
-2004,France,30050
-2005,France,30320
-2006,France,30850
-2007,France,31400
-2008,France,31310
-2009,France,30250
-2010,France,30690
-2011,France,31210
-2012,France,31160
-2013,France,31170
-2014,France,31320
-2015,France,31540
-2016,France,31770
-2017,France,32360
-2018,France,32800
-2019,France,33250
-2020,France,30550
-2021,France,32530
-2022,France,33230
+2020,Spain,22260
+2021,Spain,23670
+2022,Spain,24810
+2023,Spain,25210
+2000,France,28770
+2001,France,29110
+2002,France,29210
+2003,France,29290
+2004,France,29910
+2005,France,30250
+2006,France,30870
+2007,France,31460
+2008,France,31410
+2009,France,30370
+2010,France,30830
+2011,France,31430
+2012,France,31340
+2013,France,31430
+2014,France,31580
+2015,France,31780
+2016,France,31930
+2017,France,32470
+2018,France,32850
+2019,France,33390
+2020,France,30800
+2021,France,32800
+2022,France,33540
+2023,France,33750
 2000,Croatia,7940
 2001,Croatia,8510
-2002,Croatia,9000
+2002,Croatia,8990
 2003,Croatia,9500
 2004,Croatia,9890
 2005,Croatia,10310
-2006,Croatia,10810
-2007,Croatia,11350
-2008,Croatia,11580
-2009,Croatia,10760
-2010,Croatia,10650
-2011,Croatia,10680
-2012,Croatia,10460
-2013,Croatia,10450
-2014,Croatia,10460
-2015,Croatia,10790
-2016,Croatia,11270
-2017,Croatia,11770
-2018,Croatia,12220
-2019,Croatia,12710
-2020,Croatia,11680
-2021,Croatia,13500
-2022,Croatia,14540
+2006,Croatia,10830
+2007,Croatia,11380
+2008,Croatia,11610
+2009,Croatia,10790
+2010,Croatia,10680
+2011,Croatia,10710
+2012,Croatia,10490
+2013,Croatia,10500
+2014,Croatia,10510
+2015,Croatia,10850
+2016,Croatia,11340
+2017,Croatia,11840
+2018,Croatia,12310
+2019,Croatia,12810
+2020,Croatia,11770
+2021,Croatia,13610
+2022,Croatia,14750
 2000,Italy,27430
 2001,Italy,27950
 2002,Italy,27960
@@ -273,8 +283,9 @@ TIME,GEO,VALUE
 2018,Italy,27030
 2019,Italy,27230
 2020,Italy,24910
-2021,Italy,26780
-2022,Italy,27860
+2021,Italy,27120
+2022,Italy,28250
+2023,Italy,28520
 2000,Cyprus,20130
 2001,Cyprus,20700
 2002,Cyprus,21230
@@ -294,10 +305,11 @@ TIME,GEO,VALUE
 2016,Cyprus,22410
 2017,Cyprus,23470
 2018,Cyprus,24500
-2019,Cyprus,25500
-2020,Cyprus,24110
-2021,Cyprus,25480
-2022,Cyprus,26550
+2019,Cyprus,25510
+2020,Cyprus,24350
+2021,Cyprus,26520
+2022,Cyprus,27480
+2023,Cyprus,27720
 2000,Latvia,5250
 2001,Latvia,5650
 2002,Latvia,6120
@@ -317,10 +329,11 @@ TIME,GEO,VALUE
 2016,Latvia,11110
 2017,Latvia,11590
 2018,Latvia,12140
-2019,Latvia,12540
-2020,Latvia,12340
-2021,Latvia,12970
-2022,Latvia,13200
+2019,Latvia,12300
+2020,Latvia,11940
+2021,Latvia,12870
+2022,Latvia,13220
+2023,Latvia,13220
 2000,Lithuania,5230
 2001,Lithuania,5620
 2002,Lithuania,6050
@@ -341,9 +354,10 @@ TIME,GEO,VALUE
 2017,Lithuania,12760
 2018,Lithuania,13400
 2019,Lithuania,14060
-2020,Lithuania,14050
-2021,Lithuania,14820
-2022,Lithuania,14970
+2020,Lithuania,14060
+2021,Lithuania,14870
+2022,Lithuania,15100
+2023,Lithuania,14840
 2000,Luxembourg,72530
 2001,Luxembourg,73930
 2002,Luxembourg,75500
@@ -363,9 +377,11 @@ TIME,GEO,VALUE
 2016,Luxembourg,84750
 2017,Luxembourg,84020
 2018,Luxembourg,83390
-2019,Luxembourg,83590
-2020,Luxembourg,81660
-2021,Luxembourg,84490
+2019,Luxembourg,84070
+2020,Luxembourg,82030
+2021,Luxembourg,86540
+2022,Luxembourg,85850
+2023,Luxembourg,83320
 2000,Hungary,7910
 2001,Hungary,8250
 2002,Hungary,8670
@@ -386,9 +402,10 @@ TIME,GEO,VALUE
 2017,Hungary,12020
 2018,Hungary,12690
 2019,Hungary,13310
-2020,Hungary,12730
+2020,Hungary,12740
 2021,Hungary,13690
 2022,Hungary,14360
+2023,Hungary,14370
 2000,Malta,13750
 2001,Malta,13480
 2002,Malta,13730
@@ -401,40 +418,42 @@ TIME,GEO,VALUE
 2009,Malta,15660
 2010,Malta,16440
 2011,Malta,16450
-2012,Malta,16970
-2013,Malta,17650
-2014,Malta,18610
-2015,Malta,19920
-2016,Malta,20130
-2017,Malta,21700
-2018,Malta,22250
-2019,Malta,22890
-2020,Malta,20470
-2021,Malta,22760
-2022,Malta,23770
-2000,Netherlands,35060
-2001,Netherlands,35610
-2002,Netherlands,35460
-2003,Netherlands,35350
-2004,Netherlands,35920
-2005,Netherlands,36570
-2006,Netherlands,37780
-2007,Netherlands,39120
-2008,Netherlands,39810
-2009,Netherlands,38160
-2010,Netherlands,38470
-2011,Netherlands,38880
-2012,Netherlands,38340
-2013,Netherlands,38180
-2014,Netherlands,38580
-2015,Netherlands,39170
-2016,Netherlands,39810
-2017,Netherlands,40730
-2018,Netherlands,41450
-2019,Netherlands,41980
-2020,Netherlands,40130
-2021,Netherlands,41860
-2022,Netherlands,43310
+2012,Malta,16990
+2013,Malta,17680
+2014,Malta,18650
+2015,Malta,19960
+2016,Malta,20180
+2017,Malta,21760
+2018,Malta,22550
+2019,Malta,23190
+2020,Malta,20850
+2021,Malta,23340
+2022,Malta,24570
+2023,Malta,25200
+2000,Netherlands,35240
+2001,Netherlands,35790
+2002,Netherlands,35650
+2003,Netherlands,35510
+2004,Netherlands,36100
+2005,Netherlands,36750
+2006,Netherlands,37990
+2007,Netherlands,39380
+2008,Netherlands,40060
+2009,Netherlands,38390
+2010,Netherlands,38700
+2011,Netherlands,39200
+2012,Netherlands,38680
+2013,Netherlands,38550
+2014,Netherlands,39030
+2015,Netherlands,39680
+2016,Netherlands,40430
+2017,Netherlands,41310
+2018,Netherlands,42000
+2019,Netherlands,42680
+2020,Netherlands,40800
+2021,Netherlands,43140
+2022,Netherlands,44870
+2023,Netherlands,44460
 2000,Austria,31710
 2001,Austria,31990
 2002,Austria,32360
@@ -454,10 +473,11 @@ TIME,GEO,VALUE
 2016,Austria,36390
 2017,Austria,36980
 2018,Austria,37690
-2019,Austria,38090
-2020,Austria,35480
-2021,Austria,36950
-2022,Austria,38360
+2019,Austria,38070
+2020,Austria,35390
+2021,Austria,36740
+2022,Austria,38080
+2023,Austria,37460
 2000,Poland,6450
 2001,Poland,6530
 2002,Poland,6660
@@ -479,8 +499,9 @@ TIME,GEO,VALUE
 2018,Poland,12500
 2019,Poland,13070
 2020,Poland,12810
-2021,Poland,13760
-2022,Poland,14560
+2021,Poland,13770
+2022,Poland,14670
+2023,Poland,14750
 2000,Portugal,16230
 2001,Portugal,16430
 2002,Portugal,16470
@@ -502,8 +523,11 @@ TIME,GEO,VALUE
 2018,Portugal,18190
 2019,Portugal,18670
 2020,Portugal,17100
-2021,Portugal,18060
-2022,Portugal,19300
+2021,Portugal,18090
+2022,Portugal,19310
+2023,Portugal,19720
+2000,Romania,3780
+2001,Romania,3980
 2002,Romania,4350
 2003,Romania,4470
 2004,Romania,4970
@@ -522,9 +546,10 @@ TIME,GEO,VALUE
 2017,Romania,8360
 2018,Romania,8910
 2019,Romania,9300
-2020,Romania,9020
-2021,Romania,9610
-2022,Romania,10110
+2020,Romania,9000
+2021,Romania,9600
+2022,Romania,10030
+2023,Romania,10250
 2000,Slovenia,13980
 2001,Slovenia,14410
 2002,Slovenia,14900
@@ -544,10 +569,11 @@ TIME,GEO,VALUE
 2016,Slovenia,18550
 2017,Slovenia,19440
 2018,Slovenia,20240
-2019,Slovenia,20770
-2020,Slovenia,19740
-2021,Slovenia,21310
-2022,Slovenia,22450
+2019,Slovenia,20780
+2020,Slovenia,19770
+2021,Slovenia,21350
+2022,Slovenia,21870
+2023,Slovenia,22090
 2000,Slovakia,7780
 2001,Slovakia,8060
 2002,Slovakia,8430
@@ -569,8 +595,9 @@ TIME,GEO,VALUE
 2018,Slovakia,15580
 2019,Slovakia,15960
 2020,Slovakia,15400
-2021,Slovakia,15920
-2022,Slovakia,16010
+2021,Slovakia,16200
+2022,Slovakia,16360
+2023,Slovakia,16490
 2000,Finland,30510
 2001,Finland,31230
 2002,Finland,31690
@@ -592,54 +619,57 @@ TIME,GEO,VALUE
 2018,Finland,36740
 2019,Finland,37150
 2020,Finland,36220
-2021,Finland,37250
-2022,Finland,37900
-2000,Sweden,33960
-2001,Sweden,34360
-2002,Sweden,35000
-2003,Sweden,35680
-2004,Sweden,37080
-2005,Sweden,37990
-2006,Sweden,39540
+2021,Finland,37170
+2022,Finland,37560
+2023,Finland,36990
+2000,Sweden,34240
+2001,Sweden,34600
+2002,Sweden,35270
+2003,Sweden,35810
+2004,Sweden,37160
+2005,Sweden,38060
+2006,Sweden,39590
 2007,Sweden,40590
-2008,Sweden,40100
-2009,Sweden,38030
-2010,Sweden,39950
-2011,Sweden,40920
-2012,Sweden,40380
-2013,Sweden,40510
-2014,Sweden,41180
-2015,Sweden,42580
-2016,Sweden,42920
-2017,Sweden,43430
-2018,Sweden,43760
-2019,Sweden,44180
-2020,Sweden,42910
-2021,Sweden,44950
-2022,Sweden,45830
+2008,Sweden,39900
+2009,Sweden,37880
+2010,Sweden,39710
+2011,Sweden,40660
+2012,Sweden,40200
+2013,Sweden,40310
+2014,Sweden,40820
+2015,Sweden,42180
+2016,Sweden,42660
+2017,Sweden,42820
+2018,Sweden,43130
+2019,Sweden,43760
+2020,Sweden,42580
+2021,Sweden,44850
+2022,Sweden,45030
+2023,Sweden,44650
 2000,Iceland,28570
-2001,Iceland,29310
-2002,Iceland,29220
-2003,Iceland,29670
-2004,Iceland,31620
-2005,Iceland,33190
-2006,Iceland,34310
-2007,Iceland,36360
-2008,Iceland,36230
-2009,Iceland,33480
-2010,Iceland,32650
-2011,Iceland,33150
-2012,Iceland,33330
-2013,Iceland,34510
-2014,Iceland,34710
-2015,Iceland,35870
-2016,Iceland,37610
-2017,Iceland,38280
-2018,Iceland,39090
-2019,Iceland,38920
-2020,Iceland,35520
-2021,Iceland,36460
-2022,Iceland,38030
+2001,Iceland,29320
+2002,Iceland,29230
+2003,Iceland,29650
+2004,Iceland,31680
+2005,Iceland,33100
+2006,Iceland,34370
+2007,Iceland,36340
+2008,Iceland,36460
+2009,Iceland,33550
+2010,Iceland,32990
+2011,Iceland,33840
+2012,Iceland,33980
+2013,Iceland,35160
+2014,Iceland,35350
+2015,Iceland,36570
+2016,Iceland,38310
+2017,Iceland,38970
+2018,Iceland,39870
+2019,Iceland,39920
+2020,Iceland,36690
+2021,Iceland,38000
+2022,Iceland,40430
+2023,Iceland,41030
 2000,Norway,62040
 2001,Norway,63000
 2002,Norway,63530
@@ -661,8 +691,9 @@ TIME,GEO,VALUE
 2018,Norway,69840
 2019,Norway,70150
 2020,Norway,68850
-2021,Norway,71150
-2022,Norway,72820
+2021,Norway,71160
+2022,Norway,72640
+2023,Norway,71870
 2000,Switzerland,51950
 2001,Switzerland,52510
 2002,Switzerland,52100
@@ -674,7 +705,7 @@ TIME,GEO,VALUE
 2008,Switzerland,58310
 2009,Switzerland,56340
 2010,Switzerland,57730
-2011,Switzerland,58220
+2011,Switzerland,58240
 2012,Switzerland,58290
 2013,Switzerland,58650
 2014,Switzerland,59300
@@ -683,9 +714,10 @@ TIME,GEO,VALUE
 2017,Switzerland,60420
 2018,Switzerland,61690
 2019,Switzerland,61950
-2020,Switzerland,60040
-2021,Switzerland,62100
-2022,Switzerland,62820
+2020,Switzerland,60190
+2021,Switzerland,62950
+2022,Switzerland,64030
+2023,Switzerland,63680
 2000,United Kingdom,27130
 2001,United Kingdom,27770
 2002,United Kingdom,28250
@@ -722,26 +754,29 @@ TIME,GEO,VALUE
 2019,Montenegro,6480
 2020,Montenegro,5490
 2021,Montenegro,6230
+2022,Montenegro,6650
 2000,North Macedonia,2620
 2001,North Macedonia,2530
 2002,North Macedonia,2580
-2003,North Macedonia,2630
-2004,North Macedonia,2750
-2005,North Macedonia,2870
-2006,North Macedonia,3010
-2007,North Macedonia,3200
-2008,North Macedonia,3370
-2009,North Macedonia,3350
-2010,North Macedonia,3460
-2011,North Macedonia,3530
-2012,North Macedonia,3510
-2013,North Macedonia,3610
-2014,North Macedonia,3740
-2015,North Macedonia,3870
-2016,North Macedonia,3980
-2017,North Macedonia,4020
-2018,North Macedonia,4130
-2020,North Macedonia,4100
+2003,North Macedonia,2640
+2004,North Macedonia,2770
+2005,North Macedonia,2920
+2006,North Macedonia,3080
+2007,North Macedonia,3300
+2008,North Macedonia,3500
+2009,North Macedonia,3510
+2010,North Macedonia,3650
+2011,North Macedonia,3750
+2012,North Macedonia,3750
+2013,North Macedonia,3880
+2014,North Macedonia,4030
+2015,North Macedonia,4190
+2016,North Macedonia,4330
+2017,North Macedonia,4390
+2018,North Macedonia,4540
+2019,North Macedonia,4750
+2020,North Macedonia,4580
+2021,North Macedonia,4830
 2000,Albania,1700
 2001,Albania,1850
 2002,Albania,1940
@@ -784,8 +819,9 @@ TIME,GEO,VALUE
 2018,Serbia,5200
 2019,Serbia,5460
 2020,Serbia,5440
-2021,Serbia,5910
-2022,Serbia,6100
+2021,Serbia,5920
+2022,Serbia,6230
+2023,Serbia,6430
 2000,Türkiye,6130
 2001,Türkiye,5700
 2002,Türkiye,5990
@@ -804,7 +840,8 @@ TIME,GEO,VALUE
 2015,Türkiye,10520
 2016,Türkiye,10730
 2017,Türkiye,11380
-2018,Türkiye,11560
-2019,Türkiye,11490
+2018,Türkiye,11570
+2019,Türkiye,11500
 2020,Türkiye,11600
-2021,Türkiye,12800
+2021,Türkiye,12810
+2022,Türkiye,13380

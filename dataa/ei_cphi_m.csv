@@ -96,7 +96,24 @@ TIME,GEO,VALUE
 2022-11,Belgium,128.07
 2022-12,Belgium,127.77
 2023-01,Belgium,125.66
-2023-02,Belgium,126.03
+2023-02,Belgium,125.99
+2023-03,Belgium,126.23
+2023-04,Belgium,124.65
+2023-05,Belgium,124.91
+2023-06,Belgium,124.79
+2023-07,Belgium,124.05
+2023-08,Belgium,127.2
+2023-09,Belgium,126.73
+2023-10,Belgium,127.15
+2023-11,Belgium,127.05
+2023-12,Belgium,128.45
+2024-01,Belgium,127.51
+2024-02,Belgium,130.54
+2024-03,Belgium,131.05
+2024-04,Belgium,130.72
+2024-05,Belgium,130.98
+2024-06,Belgium,131.56
+2024-07,Belgium,130.76
 2015-01,Bulgaria,99.8
 2015-02,Bulgaria,99.86
 2015-03,Bulgaria,100.19
@@ -193,7 +210,25 @@ TIME,GEO,VALUE
 2022-10,Bulgaria,127.87
 2022-11,Bulgaria,128.68
 2022-12,Bulgaria,129.69
-2023-01,Bulgaria,130.97
+2023-01,Bulgaria,131.2
+2023-02,Bulgaria,132.12
+2023-03,Bulgaria,132.9
+2023-04,Bulgaria,133.63
+2023-05,Bulgaria,133.3
+2023-06,Bulgaria,133.45
+2023-07,Bulgaria,134.99
+2023-08,Bulgaria,135.61
+2023-09,Bulgaria,135.18
+2023-10,Bulgaria,135.44
+2023-11,Bulgaria,135.77
+2023-12,Bulgaria,136.16
+2024-01,Bulgaria,136.29
+2024-02,Bulgaria,136.72
+2024-03,Bulgaria,137.05
+2024-04,Bulgaria,136.93
+2024-05,Bulgaria,136.93
+2024-06,Bulgaria,137.15
+2024-07,Bulgaria,138.75
 2015-01,Czechia,99.5
 2015-02,Czechia,99.6
 2015-03,Czechia,99.8
@@ -291,6 +326,24 @@ TIME,GEO,VALUE
 2022-11,Czechia,137.1
 2022-12,Czechia,137.1
 2023-01,Czechia,146.2
+2023-02,Czechia,147.3
+2023-03,Czechia,147.7
+2023-04,Czechia,147.5
+2023-05,Czechia,147.9
+2023-06,Czechia,148.4
+2023-07,Czechia,149
+2023-08,Czechia,149.3
+2023-09,Czechia,148.1
+2023-10,Czechia,148.1
+2023-11,Czechia,148.1
+2023-12,Czechia,147.5
+2024-01,Czechia,150.1
+2024-02,Czechia,150.6
+2024-03,Czechia,150.9
+2024-04,Czechia,152.1
+2024-05,Czechia,152
+2024-06,Czechia,151.6
+2024-07,Czechia,152.7
 2015-01,Denmark,98.9
 2015-02,Denmark,99.7
 2015-03,Denmark,100.2
@@ -388,103 +441,139 @@ TIME,GEO,VALUE
 2022-11,Denmark,117.3
 2022-12,Denmark,116.5
 2023-01,Denmark,117.1
-2015-01,Germany (until 1990 former territory of the FRG),98.1
-2015-02,Germany (until 1990 former territory of the FRG),99
-2015-03,Germany (until 1990 former territory of the FRG),99.7
-2015-04,Germany (until 1990 former territory of the FRG),100.2
-2015-05,Germany (until 1990 former territory of the FRG),100.6
-2015-06,Germany (until 1990 former territory of the FRG),100.5
-2015-07,Germany (until 1990 former territory of the FRG),100.9
-2015-08,Germany (until 1990 former territory of the FRG),100.8
-2015-09,Germany (until 1990 former territory of the FRG),100.5
-2015-10,Germany (until 1990 former territory of the FRG),100.5
-2015-11,Germany (until 1990 former territory of the FRG),99.5
-2015-12,Germany (until 1990 former territory of the FRG),99.6
-2016-01,Germany (until 1990 former territory of the FRG),98.5
-2016-02,Germany (until 1990 former territory of the FRG),98.9
-2016-03,Germany (until 1990 former territory of the FRG),99.8
-2016-04,Germany (until 1990 former territory of the FRG),99.9
-2016-05,Germany (until 1990 former territory of the FRG),100.5
-2016-06,Germany (until 1990 former territory of the FRG),100.6
-2016-07,Germany (until 1990 former territory of the FRG),101.2
-2016-08,Germany (until 1990 former territory of the FRG),101.1
-2016-09,Germany (until 1990 former territory of the FRG),101.1
-2016-10,Germany (until 1990 former territory of the FRG),101.2
-2016-11,Germany (until 1990 former territory of the FRG),100.3
-2016-12,Germany (until 1990 former territory of the FRG),101.2
-2017-01,Germany (until 1990 former territory of the FRG),100.2
-2017-02,Germany (until 1990 former territory of the FRG),101
-2017-03,Germany (until 1990 former territory of the FRG),101.3
-2017-04,Germany (until 1990 former territory of the FRG),101.9
-2017-05,Germany (until 1990 former territory of the FRG),101.8
-2017-06,Germany (until 1990 former territory of the FRG),102.3
-2017-07,Germany (until 1990 former territory of the FRG),102.9
-2017-08,Germany (until 1990 former territory of the FRG),103
-2017-09,Germany (until 1990 former territory of the FRG),103
-2017-10,Germany (until 1990 former territory of the FRG),102.7
-2017-11,Germany (until 1990 former territory of the FRG),102
-2017-12,Germany (until 1990 former territory of the FRG),102.7
-2018-01,Germany (until 1990 former territory of the FRG),101.7
-2018-02,Germany (until 1990 former territory of the FRG),102.2
-2018-03,Germany (until 1990 former territory of the FRG),103
-2018-04,Germany (until 1990 former territory of the FRG),103.2
-2018-05,Germany (until 1990 former territory of the FRG),104.3
-2018-06,Germany (until 1990 former territory of the FRG),104.4
-2018-07,Germany (until 1990 former territory of the FRG),105.2
-2018-08,Germany (until 1990 former territory of the FRG),105.2
-2018-09,Germany (until 1990 former territory of the FRG),105.3
-2018-10,Germany (until 1990 former territory of the FRG),105.4
-2018-11,Germany (until 1990 former territory of the FRG),104.2
-2018-12,Germany (until 1990 former territory of the FRG),104.4
-2019-01,Germany (until 1990 former territory of the FRG),103.4
-2019-02,Germany (until 1990 former territory of the FRG),103.9
-2019-03,Germany (until 1990 former territory of the FRG),104.4
-2019-04,Germany (until 1990 former territory of the FRG),105.4
-2019-05,Germany (until 1990 former territory of the FRG),105.7
-2019-06,Germany (until 1990 former territory of the FRG),106
-2019-07,Germany (until 1990 former territory of the FRG),106.4
-2019-08,Germany (until 1990 former territory of the FRG),106.3
-2019-09,Germany (until 1990 former territory of the FRG),106.2
-2019-10,Germany (until 1990 former territory of the FRG),106.3
-2019-11,Germany (until 1990 former territory of the FRG),105.4
-2019-12,Germany (until 1990 former territory of the FRG),106
-2020-01,Germany (until 1990 former territory of the FRG),105.1
-2020-02,Germany (until 1990 former territory of the FRG),105.7
-2020-03,Germany (until 1990 former territory of the FRG),105.8
-2020-04,Germany (until 1990 former territory of the FRG),106.2
-2020-05,Germany (until 1990 former territory of the FRG),106.2
-2020-06,Germany (until 1990 former territory of the FRG),106.9
-2020-07,Germany (until 1990 former territory of the FRG),106.4
-2020-08,Germany (until 1990 former territory of the FRG),106.2
-2020-09,Germany (until 1990 former territory of the FRG),105.8
-2020-10,Germany (until 1990 former territory of the FRG),105.8
-2020-11,Germany (until 1990 former territory of the FRG),104.7
-2020-12,Germany (until 1990 former territory of the FRG),105.3
-2021-01,Germany (until 1990 former territory of the FRG),106.8
-2021-02,Germany (until 1990 former territory of the FRG),107.4
-2021-03,Germany (until 1990 former territory of the FRG),107.9
-2021-04,Germany (until 1990 former territory of the FRG),108.4
-2021-05,Germany (until 1990 former territory of the FRG),108.7
-2021-06,Germany (until 1990 former territory of the FRG),109.1
-2021-07,Germany (until 1990 former territory of the FRG),109.7
-2021-08,Germany (until 1990 former territory of the FRG),109.8
-2021-09,Germany (until 1990 former territory of the FRG),110.1
-2021-10,Germany (until 1990 former territory of the FRG),110.7
-2021-11,Germany (until 1990 former territory of the FRG),111
-2021-12,Germany (until 1990 former territory of the FRG),111.3
-2022-01,Germany (until 1990 former territory of the FRG),112.3
-2022-02,Germany (until 1990 former territory of the FRG),113.3
-2022-03,Germany (until 1990 former territory of the FRG),116.1
-2022-04,Germany (until 1990 former territory of the FRG),116.9
-2022-05,Germany (until 1990 former territory of the FRG),118.2
-2022-06,Germany (until 1990 former territory of the FRG),118.1
-2022-07,Germany (until 1990 former territory of the FRG),119
-2022-08,Germany (until 1990 former territory of the FRG),119.5
-2022-09,Germany (until 1990 former territory of the FRG),122.1
-2022-10,Germany (until 1990 former territory of the FRG),123.5
-2022-11,Germany (until 1990 former territory of the FRG),123.5
-2022-12,Germany (until 1990 former territory of the FRG),122
-2023-01,Germany (until 1990 former territory of the FRG),122.6
+2023-02,Denmark,118
+2023-03,Denmark,117.8
+2023-04,Denmark,118.1
+2023-05,Denmark,116.3
+2023-06,Denmark,116.7
+2023-07,Denmark,119.1
+2023-08,Denmark,118.1
+2023-09,Denmark,117.8
+2023-10,Denmark,118.1
+2023-11,Denmark,117.6
+2023-12,Denmark,117
+2024-01,Denmark,118.2
+2024-02,Denmark,118.7
+2024-03,Denmark,118.7
+2024-04,Denmark,118.7
+2024-05,Denmark,118.7
+2024-06,Denmark,118.8
+2024-07,Denmark,120.3
+2015-01,Germany,98.1
+2015-02,Germany,99
+2015-03,Germany,99.7
+2015-04,Germany,100.2
+2015-05,Germany,100.6
+2015-06,Germany,100.5
+2015-07,Germany,100.9
+2015-08,Germany,100.8
+2015-09,Germany,100.5
+2015-10,Germany,100.5
+2015-11,Germany,99.5
+2015-12,Germany,99.6
+2016-01,Germany,98.5
+2016-02,Germany,98.9
+2016-03,Germany,99.8
+2016-04,Germany,99.9
+2016-05,Germany,100.5
+2016-06,Germany,100.6
+2016-07,Germany,101.2
+2016-08,Germany,101.1
+2016-09,Germany,101.1
+2016-10,Germany,101.2
+2016-11,Germany,100.3
+2016-12,Germany,101.2
+2017-01,Germany,100.2
+2017-02,Germany,101
+2017-03,Germany,101.3
+2017-04,Germany,101.9
+2017-05,Germany,101.8
+2017-06,Germany,102.3
+2017-07,Germany,102.9
+2017-08,Germany,103
+2017-09,Germany,103
+2017-10,Germany,102.7
+2017-11,Germany,102
+2017-12,Germany,102.7
+2018-01,Germany,101.7
+2018-02,Germany,102.2
+2018-03,Germany,103
+2018-04,Germany,103.2
+2018-05,Germany,104.3
+2018-06,Germany,104.4
+2018-07,Germany,105.2
+2018-08,Germany,105.2
+2018-09,Germany,105.3
+2018-10,Germany,105.4
+2018-11,Germany,104.2
+2018-12,Germany,104.4
+2019-01,Germany,103.4
+2019-02,Germany,103.9
+2019-03,Germany,104.4
+2019-04,Germany,105.4
+2019-05,Germany,105.7
+2019-06,Germany,106
+2019-07,Germany,106.4
+2019-08,Germany,106.3
+2019-09,Germany,106.2
+2019-10,Germany,106.3
+2019-11,Germany,105.4
+2019-12,Germany,106
+2020-01,Germany,105.1
+2020-02,Germany,105.7
+2020-03,Germany,105.8
+2020-04,Germany,106.2
+2020-05,Germany,106.2
+2020-06,Germany,106.9
+2020-07,Germany,106.4
+2020-08,Germany,106.2
+2020-09,Germany,105.8
+2020-10,Germany,105.8
+2020-11,Germany,104.7
+2020-12,Germany,105.3
+2021-01,Germany,106.8
+2021-02,Germany,107.4
+2021-03,Germany,107.9
+2021-04,Germany,108.4
+2021-05,Germany,108.7
+2021-06,Germany,109.1
+2021-07,Germany,109.7
+2021-08,Germany,109.8
+2021-09,Germany,110.1
+2021-10,Germany,110.7
+2021-11,Germany,111
+2021-12,Germany,111.3
+2022-01,Germany,112.3
+2022-02,Germany,113.3
+2022-03,Germany,116.1
+2022-04,Germany,116.9
+2022-05,Germany,118.2
+2022-06,Germany,118.1
+2022-07,Germany,119
+2022-08,Germany,119.5
+2022-09,Germany,122.1
+2022-10,Germany,123.5
+2022-11,Germany,123.5
+2022-12,Germany,122
+2023-01,Germany,122.6
+2023-02,Germany,123.8
+2023-03,Germany,125.1
+2023-04,Germany,125.8
+2023-05,Germany,125.6
+2023-06,Germany,126.1
+2023-07,Germany,126.7
+2023-08,Germany,127.2
+2023-09,Germany,127.4
+2023-10,Germany,127.2
+2023-11,Germany,126.3
+2023-12,Germany,126.6
+2024-01,Germany,126.4
+2024-02,Germany,127.2
+2024-03,Germany,128
+2024-04,Germany,128.8
+2024-05,Germany,129.1
+2024-06,Germany,129.3
+2024-07,Germany,130
 2015-01,Estonia,98.78
 2015-02,Estonia,99.3
 2015-03,Estonia,99.95
@@ -582,7 +671,24 @@ TIME,GEO,VALUE
 2022-11,Estonia,144.49
 2022-12,Estonia,144.3
 2023-01,Estonia,145.16
-2023-02,Estonia,146.15
+2023-02,Estonia,146.14
+2023-03,Estonia,147.2
+2023-04,Estonia,150.04
+2023-05,Estonia,150.08
+2023-06,Estonia,151.3
+2023-07,Estonia,150.56
+2023-08,Estonia,151.25
+2023-09,Estonia,151.17
+2023-10,Estonia,150.45
+2023-11,Estonia,150.48
+2023-12,Estonia,150.45
+2024-01,Estonia,152.35
+2024-02,Estonia,152.54
+2024-03,Estonia,153.2
+2024-04,Estonia,154.76
+2024-05,Estonia,154.76
+2024-06,Estonia,155.48
+2024-07,Estonia,155.82
 2015-01,Ireland,98.7
 2015-02,Ireland,99.3
 2015-03,Ireland,100
@@ -680,7 +786,24 @@ TIME,GEO,VALUE
 2022-11,Ireland,115.5
 2022-12,Ireland,115.2
 2023-01,Ireland,114.1
-2023-02,Ireland,115.7
+2023-02,Ireland,115.8
+2023-03,Ireland,116.9
+2023-04,Ireland,117.2
+2023-05,Ireland,117.5
+2023-06,Ireland,118.4
+2023-07,Ireland,118.6
+2023-08,Ireland,119.2
+2023-09,Ireland,119.3
+2023-10,Ireland,119.5
+2023-11,Ireland,118.4
+2023-12,Ireland,118.9
+2024-01,Ireland,117.2
+2024-02,Ireland,118.5
+2024-03,Ireland,118.9
+2024-04,Ireland,119.1
+2024-05,Ireland,119.8
+2024-06,Ireland,120.2
+2024-07,Ireland,120.4
 2015-01,Greece,98.42
 2015-02,Greece,98.21
 2015-03,Greece,100.07
@@ -778,7 +901,24 @@ TIME,GEO,VALUE
 2022-11,Greece,113.55
 2022-12,Greece,112.81
 2023-01,Greece,112.29
-2023-02,Greece,112.53
+2023-02,Greece,112.51
+2023-03,Greece,114.28
+2023-04,Greece,115.55
+2023-05,Greece,116.17
+2023-06,Greece,117.23
+2023-07,Greece,116.08
+2023-08,Greece,115.87
+2023-09,Greece,118.04
+2023-10,Greece,118.17
+2023-11,Greece,116.86
+2023-12,Greece,116.97
+2024-01,Greece,115.89
+2024-02,Greece,116.04
+2024-03,Greece,118.13
+2024-04,Greece,119.24
+2024-05,Greece,118.9
+2024-06,Greece,120.11
+2024-07,Greece,119.55
 2015-01,Spain,98.04
 2015-02,Spain,98.18
 2015-03,Spain,100.15
@@ -876,7 +1016,24 @@ TIME,GEO,VALUE
 2022-11,Spain,117.22
 2022-12,Spain,117.22
 2023-01,Spain,116.72
-2023-02,Spain,117.88
+2023-02,Spain,117.82
+2023-03,Spain,119.06
+2023-04,Spain,119.61
+2023-05,Spain,119.44
+2023-06,Spain,120.13
+2023-07,Spain,120.03
+2023-08,Spain,120.68
+2023-09,Spain,121.38
+2023-10,Spain,121.69
+2023-11,Spain,121.05
+2023-12,Spain,121.06
+2024-01,Spain,120.82
+2024-02,Spain,121.29
+2024-03,Spain,122.93
+2024-04,Spain,123.67
+2024-05,Spain,123.95
+2024-06,Spain,124.44
+2024-07,Spain,123.51
 2015-01,France,98.7
 2015-02,France,99.42
 2015-03,France,100.17
@@ -974,7 +1131,24 @@ TIME,GEO,VALUE
 2022-11,France,116.81
 2022-12,France,116.7
 2023-01,France,117.22
-2023-02,France,118.41
+2023-02,France,118.55
+2023-03,France,119.76
+2023-04,France,120.55
+2023-05,France,120.46
+2023-06,France,120.71
+2023-07,France,120.77
+2023-08,France,122.1
+2023-09,France,121.4
+2023-10,France,121.61
+2023-11,France,121.32
+2023-12,France,121.49
+2024-01,France,121.2
+2024-02,France,122.35
+2024-03,France,122.65
+2024-04,France,123.41
+2024-05,France,123.59
+2024-06,France,123.78
+2024-07,France,124.03
 2015-01,Croatia,98.77
 2015-02,Croatia,98.88
 2015-03,Croatia,99.72
@@ -1072,7 +1246,24 @@ TIME,GEO,VALUE
 2022-11,Croatia,122.19
 2022-12,Croatia,122.03
 2023-01,Croatia,122.34
-2023-02,Croatia,122.63
+2023-02,Croatia,122.68
+2023-03,Croatia,123.73
+2023-04,Croatia,125.16
+2023-05,Croatia,125.88
+2023-06,Croatia,127.91
+2023-07,Croatia,129.36
+2023-08,Croatia,130
+2023-09,Croatia,129.15
+2023-10,Croatia,129.52
+2023-11,Croatia,128.95
+2023-12,Croatia,128.56
+2024-01,Croatia,128.19
+2024-02,Croatia,128.57
+2024-03,Croatia,129.74
+2024-04,Croatia,131.06
+2024-05,Croatia,131.31
+2024-06,Croatia,132.34
+2024-07,Croatia,133.69
 2015-01,Italy,98
 2015-02,Italy,98.2
 2015-03,Italy,100.3
@@ -1170,7 +1361,24 @@ TIME,GEO,VALUE
 2022-11,Italy,120.8
 2022-12,Italy,121.1
 2023-01,Italy,119.3
-2023-02,Italy,119.5
+2023-02,Italy,119.4
+2023-03,Italy,120.3
+2023-04,Italy,121.3
+2023-05,Italy,121.7
+2023-06,Italy,121.8
+2023-07,Italy,119.9
+2023-08,Italy,120.1
+2023-09,Italy,122.1
+2023-10,Italy,122.2
+2023-11,Italy,121.5
+2023-12,Italy,121.7
+2024-01,Italy,120.4
+2024-02,Italy,120.4
+2024-03,Italy,121.8
+2024-04,Italy,122.4
+2024-05,Italy,122.7
+2024-06,Italy,122.9
+2024-07,Italy,121.8
 2015-01,Cyprus,98.31
 2015-02,Cyprus,98.83
 2015-03,Cyprus,99.51
@@ -1268,7 +1476,24 @@ TIME,GEO,VALUE
 2022-11,Cyprus,112.81
 2022-12,Cyprus,111.93
 2023-01,Cyprus,110.33
-2023-02,Cyprus,111.16
+2023-02,Cyprus,111.23
+2023-03,Cyprus,112.64
+2023-04,Cyprus,113.67
+2023-05,Cyprus,114.07
+2023-06,Cyprus,114.41
+2023-07,Cyprus,115.97
+2023-08,Cyprus,117.28
+2023-09,Cyprus,117.48
+2023-10,Cyprus,117.32
+2023-11,Cyprus,115.51
+2023-12,Cyprus,114.09
+2024-01,Cyprus,112.67
+2024-02,Cyprus,113.6
+2024-03,Cyprus,114.46
+2024-04,Cyprus,116.07
+2024-05,Cyprus,117.46
+2024-06,Cyprus,117.88
+2024-07,Cyprus,118.76
 2015-01,Latvia,98.94
 2015-02,Latvia,99.3
 2015-03,Latvia,100.09
@@ -1366,7 +1591,24 @@ TIME,GEO,VALUE
 2022-11,Latvia,141.2
 2022-12,Latvia,140.57
 2023-01,Latvia,141.3
-2023-02,Latvia,142.14
+2023-02,Latvia,142.19
+2023-03,Latvia,143.26
+2023-04,Latvia,143.83
+2023-05,Latvia,145.92
+2023-06,Latvia,143.9
+2023-07,Latvia,144.99
+2023-08,Latvia,144.2
+2023-09,Latvia,143.48
+2023-10,Latvia,142.93
+2023-11,Latvia,142.81
+2023-12,Latvia,141.77
+2024-01,Latvia,142.87
+2024-02,Latvia,142.99
+2024-03,Latvia,144.67
+2024-04,Latvia,145.43
+2024-05,Latvia,145.99
+2024-06,Latvia,145.99
+2024-07,Latvia,146.09
 2015-01,Lithuania,98.96
 2015-02,Lithuania,98.82
 2015-03,Lithuania,99.63
@@ -1464,6 +1706,24 @@ TIME,GEO,VALUE
 2022-11,Lithuania,146.63
 2022-12,Lithuania,146.82
 2023-01,Lithuania,147.75
+2023-02,Lithuania,148.73
+2023-03,Lithuania,149.7
+2023-04,Lithuania,150
+2023-05,Lithuania,149.82
+2023-06,Lithuania,149.67
+2023-07,Lithuania,149.35
+2023-08,Lithuania,149.13
+2023-09,Lithuania,150.17
+2023-10,Lithuania,150.68
+2023-11,Lithuania,150.07
+2023-12,Lithuania,149.17
+2024-01,Lithuania,149.34
+2024-02,Lithuania,150.38
+2024-03,Lithuania,150.27
+2024-04,Lithuania,150.66
+2024-05,Lithuania,151.11
+2024-06,Lithuania,151.18
+2024-07,Lithuania,151
 2015-01,Luxembourg,97.69
 2015-02,Luxembourg,99.68
 2015-03,Luxembourg,100.11
@@ -1562,6 +1822,23 @@ TIME,GEO,VALUE
 2022-12,Luxembourg,119.09
 2023-01,Luxembourg,118.78
 2023-02,Luxembourg,120.45
+2023-03,Luxembourg,120.67
+2023-04,Luxembourg,121.5
+2023-05,Luxembourg,121.27
+2023-06,Luxembourg,121.81
+2023-07,Luxembourg,121.46
+2023-08,Luxembourg,123.75
+2023-09,Luxembourg,124.21
+2023-10,Luxembourg,124.12
+2023-11,Luxembourg,123.36
+2023-12,Luxembourg,122.85
+2024-01,Luxembourg,122.31
+2024-02,Luxembourg,124.34
+2024-03,Luxembourg,124.55
+2024-04,Luxembourg,125.13
+2024-05,Luxembourg,125.2
+2024-06,Luxembourg,125.19
+2024-07,Luxembourg,124.68
 2015-01,Hungary,98.56
 2015-02,Hungary,99.06
 2015-03,Hungary,99.7
@@ -1659,6 +1936,24 @@ TIME,GEO,VALUE
 2022-11,Hungary,150.48
 2022-12,Hungary,153.14
 2023-01,Hungary,156.81
+2023-02,Hungary,158.08
+2023-03,Hungary,159.42
+2023-04,Hungary,160.57
+2023-05,Hungary,159.99
+2023-06,Hungary,160.55
+2023-07,Hungary,161.12
+2023-08,Hungary,162.37
+2023-09,Hungary,162.49
+2023-10,Hungary,162.1
+2023-11,Hungary,162.07
+2023-12,Hungary,161.55
+2024-01,Hungary,162.62
+2024-02,Hungary,163.78
+2024-03,Hungary,165.12
+2024-04,Hungary,166.34
+2024-05,Hungary,166.3
+2024-06,Hungary,166.33
+2024-07,Hungary,167.72
 2015-01,Malta,96.29
 2015-02,Malta,96.75
 2015-03,Malta,97.64
@@ -1756,7 +2051,24 @@ TIME,GEO,VALUE
 2022-11,Malta,114.06
 2022-12,Malta,114.08
 2023-01,Malta,113.58
-2023-02,Malta,114.59
+2023-02,Malta,114.6
+2023-03,Malta,116.15
+2023-04,Malta,119.74
+2023-05,Malta,121.68
+2023-06,Malta,123.54
+2023-07,Malta,123.96
+2023-08,Malta,124.49
+2023-09,Malta,123.65
+2023-10,Malta,121.96
+2023-11,Malta,118.48
+2023-12,Malta,118.3
+2024-01,Malta,117.77
+2024-02,Malta,118.06
+2024-03,Malta,119.23
+2024-04,Malta,122.57
+2024-05,Malta,124.53
+2024-06,Malta,126.23
+2024-07,Malta,126.87
 2015-01,Netherlands,97.82
 2015-02,Netherlands,98.62
 2015-03,Netherlands,99.88
@@ -1853,8 +2165,25 @@ TIME,GEO,VALUE
 2022-10,Netherlands,130.92
 2022-11,Netherlands,125.81
 2022-12,Netherlands,126.64
-2023-01,Netherlands,124.24
-2023-02,Netherlands,125.91
+2023-01,Netherlands,124.23
+2023-02,Netherlands,125.9
+2023-03,Netherlands,126.16
+2023-04,Netherlands,128.17
+2023-05,Netherlands,128.41
+2023-06,Netherlands,127.78
+2023-07,Netherlands,129.25
+2023-08,Netherlands,129.9
+2023-09,Netherlands,128.81
+2023-10,Netherlands,129.56
+2023-11,Netherlands,127.63
+2023-12,Netherlands,127.88
+2024-01,Netherlands,128.08
+2024-02,Netherlands,129.29
+2024-03,Netherlands,130.09
+2024-04,Netherlands,131.47
+2024-05,Netherlands,131.85
+2024-06,Netherlands,132.07
+2024-07,Netherlands,133.73
 2015-01,Austria,98.48
 2015-02,Austria,98.75
 2015-03,Austria,100.15
@@ -1951,7 +2280,25 @@ TIME,GEO,VALUE
 2022-10,Austria,126.09
 2022-11,Austria,126.31
 2022-12,Austria,125.96
-2023-01,Austria,127.01
+2023-01,Austria,127.11
+2023-02,Austria,128.15
+2023-03,Austria,128.88
+2023-04,Austria,129.88
+2023-05,Austria,130.06
+2023-06,Austria,130.42
+2023-07,Austria,130.17
+2023-08,Austria,130.59
+2023-09,Austria,131.75
+2023-10,Austria,132.24
+2023-11,Austria,132.46
+2023-12,Austria,133.08
+2024-01,Austria,132.6
+2024-02,Austria,133.26
+2024-03,Austria,134.12
+2024-04,Austria,134.27
+2024-05,Austria,134.39
+2024-06,Austria,134.44
+2024-07,Austria,133.96
 2015-01,Poland,99.7
 2015-02,Poland,99.6
 2015-03,Poland,99.9
@@ -2049,6 +2396,24 @@ TIME,GEO,VALUE
 2022-11,Poland,136.5
 2022-12,Poland,136.8
 2023-01,Poland,139.5
+2023-02,Poland,141.1
+2023-03,Poland,142.7
+2023-04,Poland,143.8
+2023-05,Poland,144.1
+2023-06,Poland,144.2
+2023-07,Poland,143.8
+2023-08,Poland,143.9
+2023-09,Poland,143.7
+2023-10,Poland,144.2
+2023-11,Poland,145.1
+2023-12,Poland,145.3
+2024-01,Poland,145.8
+2024-02,Poland,146.3
+2024-03,Poland,146.6
+2024-04,Poland,148.1
+2024-05,Poland,148.2
+2024-06,Poland,148.4
+2024-07,Poland,149.6
 2015-01,Portugal,98.09
 2015-02,Portugal,98.11
 2015-03,Portugal,100.01
@@ -2146,7 +2511,24 @@ TIME,GEO,VALUE
 2022-11,Portugal,116.82
 2022-12,Portugal,116.36
 2023-01,Portugal,115.44
-2023-02,Portugal,115.9
+2023-02,Portugal,115.89
+2023-03,Portugal,118.22
+2023-04,Portugal,119.75
+2023-05,Portugal,119.27
+2023-06,Portugal,119.79
+2023-07,Portugal,119.33
+2023-08,Portugal,120.24
+2023-09,Portugal,121.18
+2023-10,Portugal,120.65
+2023-11,Portugal,119.39
+2023-12,Portugal,118.56
+2024-01,Portugal,118.36
+2024-02,Portugal,118.54
+2024-03,Portugal,121.26
+2024-04,Portugal,122.55
+2024-05,Portugal,123.83
+2024-06,Portugal,123.46
+2024-07,Portugal,122.52
 2015-01,Romania,100.46
 2015-02,Romania,100.84
 2015-03,Romania,101.3
@@ -2244,6 +2626,24 @@ TIME,GEO,VALUE
 2022-11,Romania,135.39
 2022-12,Romania,135.55
 2023-01,Romania,136.61
+2023-02,Romania,137.95
+2023-03,Romania,139.13
+2023-04,Romania,140.21
+2023-05,Romania,140.89
+2023-06,Romania,141.55
+2023-07,Romania,141.76
+2023-08,Romania,142.86
+2023-09,Romania,144.04
+2023-10,Romania,144.87
+2023-11,Romania,144.72
+2023-12,Romania,145.05
+2024-01,Romania,146.64
+2024-02,Romania,147.78
+2024-03,Romania,148.44
+2024-04,Romania,148.97
+2024-05,Romania,149.02
+2024-06,Romania,149.11
+2024-07,Romania,149.98
 2015-01,Slovenia,99.08
 2015-02,Slovenia,99.24
 2015-03,Slovenia,100.1
@@ -2342,6 +2742,23 @@ TIME,GEO,VALUE
 2022-12,Slovenia,121.64
 2023-01,Slovenia,121.47
 2023-02,Slovenia,122.22
+2023-03,Slovenia,122.87
+2023-04,Slovenia,124.14
+2023-05,Slovenia,125.25
+2023-06,Slovenia,126.43
+2023-07,Slovenia,126.48
+2023-08,Slovenia,126.75
+2023-09,Slovenia,127.6
+2023-10,Slovenia,128.05
+2023-11,Slovenia,126.99
+2023-12,Slovenia,126.29
+2024-01,Slovenia,125.57
+2024-02,Slovenia,126.34
+2024-03,Slovenia,127.04
+2024-04,Slovenia,127.89
+2024-05,Slovenia,128.4
+2024-06,Slovenia,128.44
+2024-07,Slovenia,128.22
 2015-01,Slovakia,99.87
 2015-02,Slovakia,99.68
 2015-03,Slovakia,99.87
@@ -2439,7 +2856,24 @@ TIME,GEO,VALUE
 2022-11,Slovakia,131.12
 2022-12,Slovakia,131.31
 2023-01,Slovakia,135.05
-2023-02,Slovakia,136.65
+2023-02,Slovakia,136.59
+2023-03,Slovakia,138.31
+2023-04,Slovakia,139.16
+2023-05,Slovakia,139.07
+2023-06,Slovakia,139.39
+2023-07,Slovakia,139.06
+2023-08,Slovakia,139.18
+2023-09,Slovakia,139.62
+2023-10,Slovakia,139.89
+2023-11,Slovakia,140.14
+2023-12,Slovakia,139.96
+2024-01,Slovakia,141.02
+2024-02,Slovakia,141.82
+2024-03,Slovakia,142
+2024-04,Slovakia,142.53
+2024-05,Slovakia,142.72
+2024-06,Slovakia,142.79
+2024-07,Slovakia,143.24
 2015-01,Finland,99.49
 2015-02,Finland,99.83
 2015-03,Finland,100.2
@@ -2537,7 +2971,24 @@ TIME,GEO,VALUE
 2022-11,Finland,117.48
 2022-12,Finland,117.06
 2023-01,Finland,117.69
-2023-02,Finland,118.38
+2023-02,Finland,118.46
+2023-03,Finland,118.98
+2023-04,Finland,119.05
+2023-05,Finland,119.14
+2023-06,Finland,118.96
+2023-07,Finland,119.28
+2023-08,Finland,117.96
+2023-09,Finland,118.66
+2023-10,Finland,118.93
+2023-11,Finland,118.34
+2023-12,Finland,118.61
+2024-01,Finland,119.01
+2024-02,Finland,119.8
+2024-03,Finland,119.64
+2024-04,Finland,119.74
+2024-05,Finland,119.67
+2024-06,Finland,119.61
+2024-07,Finland,119.91
 2015-01,Sweden,98.71
 2015-02,Sweden,99.54
 2015-03,Sweden,99.66
@@ -2635,6 +3086,24 @@ TIME,GEO,VALUE
 2022-11,Sweden,123.47
 2022-12,Sweden,126.04
 2023-01,Sweden,123.81
+2023-02,Sweden,125
+2023-03,Sweden,125.57
+2023-04,Sweden,125.82
+2023-05,Sweden,125.91
+2023-06,Sweden,127.17
+2023-07,Sweden,126.93
+2023-08,Sweden,126.72
+2023-09,Sweden,127.19
+2023-10,Sweden,127.29
+2023-11,Sweden,127.52
+2023-12,Sweden,128.38
+2024-01,Sweden,128.05
+2024-02,Sweden,128.31
+2024-03,Sweden,128.48
+2024-04,Sweden,128.82
+2024-05,Sweden,129.02
+2024-06,Sweden,128.92
+2024-07,Sweden,129.11
 2015-01,Iceland,98.02
 2015-02,Iceland,98.45
 2015-03,Iceland,99.58
@@ -2732,6 +3201,24 @@ TIME,GEO,VALUE
 2022-11,Iceland,115.12
 2022-12,Iceland,115.78
 2023-01,Iceland,116.94
+2023-02,Iceland,118.94
+2023-03,Iceland,119.78
+2023-04,Iceland,120.64
+2023-05,Iceland,120.98
+2023-06,Iceland,122.93
+2023-07,Iceland,123.75
+2023-08,Iceland,124.38
+2023-09,Iceland,124.32
+2023-10,Iceland,123.69
+2023-11,Iceland,123.59
+2023-12,Iceland,123.78
+2024-01,Iceland,123.54
+2024-02,Iceland,125.28
+2024-03,Iceland,125.88
+2024-04,Iceland,126.21
+2024-05,Iceland,127.26
+2024-06,Iceland,129.05
+2024-07,Iceland,130
 2015-01,Norway,98.5
 2015-02,Norway,98.9
 2015-03,Norway,99.2
@@ -2829,6 +3316,24 @@ TIME,GEO,VALUE
 2022-11,Norway,128.2
 2022-12,Norway,128.1
 2023-01,Norway,128
+2023-02,Norway,128.5
+2023-03,Norway,129.7
+2023-04,Norway,131.2
+2023-05,Norway,131.8
+2023-06,Norway,132.7
+2023-07,Norway,133.1
+2023-08,Norway,131.8
+2023-09,Norway,131.6
+2023-10,Norway,133.1
+2023-11,Norway,134
+2023-12,Norway,134.1
+2024-01,Norway,133.9
+2024-02,Norway,134.2
+2024-03,Norway,134.4
+2024-04,Norway,135.6
+2024-05,Norway,135.3
+2024-06,Norway,135.7
+2024-07,Norway,136.3
 2015-01,Switzerland,100.28
 2015-02,Switzerland,99.92
 2015-03,Switzerland,100.39
@@ -2926,6 +3431,24 @@ TIME,GEO,VALUE
 2022-11,Switzerland,104.49
 2022-12,Switzerland,104.3
 2023-01,Switzerland,104.99
+2023-02,Switzerland,105.54
+2023-03,Switzerland,105.53
+2023-04,Switzerland,105.8
+2023-05,Switzerland,106.03
+2023-06,Switzerland,106.1
+2023-07,Switzerland,106.58
+2023-08,Switzerland,106.75
+2023-09,Switzerland,106.57
+2023-10,Switzerland,106.72
+2023-11,Switzerland,106.17
+2023-12,Switzerland,106.44
+2024-01,Switzerland,106.57
+2024-02,Switzerland,106.8
+2024-03,Switzerland,106.74
+2024-04,Switzerland,107.3
+2024-05,Switzerland,107.58
+2024-06,Switzerland,107.44
+2024-07,Switzerland,107.89
 2015-01,United Kingdom,99.3
 2015-02,United Kingdom,99.5
 2015-03,United Kingdom,99.7
@@ -3094,6 +3617,24 @@ TIME,GEO,VALUE
 2022-11,Montenegro,126.99
 2022-12,Montenegro,127.16
 2023-01,Montenegro,127.6
+2023-02,Montenegro,128.21
+2023-03,Montenegro,127.54
+2023-04,Montenegro,128.01
+2023-05,Montenegro,129.06
+2023-06,Montenegro,131.07
+2023-07,Montenegro,133.34
+2023-08,Montenegro,135.59
+2023-09,Montenegro,135.59
+2023-10,Montenegro,134.6
+2023-11,Montenegro,133.99
+2023-12,Montenegro,133.39
+2024-01,Montenegro,134
+2024-02,Montenegro,134.51
+2024-03,Montenegro,135.16
+2024-04,Montenegro,135.41
+2024-05,Montenegro,135.63
+2024-06,Montenegro,136.23
+2024-07,Montenegro,137.39
 2015-01,North Macedonia,99.41
 2015-02,North Macedonia,99.52
 2015-03,North Macedonia,99.93
@@ -3191,6 +3732,24 @@ TIME,GEO,VALUE
 2022-11,North Macedonia,134.33
 2022-12,North Macedonia,133.21
 2023-01,North Macedonia,133.05
+2023-02,North Macedonia,133.9
+2023-03,North Macedonia,134.3
+2023-04,North Macedonia,135.11
+2023-05,North Macedonia,136.41
+2023-06,North Macedonia,137.89
+2023-07,North Macedonia,138.8
+2023-08,North Macedonia,140.63
+2023-09,North Macedonia,140.85
+2023-10,North Macedonia,138.22
+2023-11,North Macedonia,138.4
+2023-12,North Macedonia,138.22
+2024-01,North Macedonia,138.44
+2024-02,North Macedonia,139.08
+2024-03,North Macedonia,140.31
+2024-04,North Macedonia,141.29
+2024-05,North Macedonia,142.62
+2024-06,North Macedonia,142.15
+2024-07,North Macedonia,143.73
 2015-12,Albania,100
 2016-01,Albania,101
 2016-02,Albania,102.28
@@ -3277,6 +3836,24 @@ TIME,GEO,VALUE
 2022-11,Albania,122.39
 2022-12,Albania,122.89
 2023-01,Albania,124.26
+2023-02,Albania,125.9
+2023-03,Albania,127.25
+2023-04,Albania,127.44
+2023-05,Albania,127.14
+2023-06,Albania,126.88
+2023-07,Albania,126.65
+2023-08,Albania,127.14
+2023-09,Albania,128.19
+2023-10,Albania,128.36
+2023-11,Albania,127.89
+2023-12,Albania,128.42
+2024-01,Albania,128.98
+2024-02,Albania,129.39
+2024-03,Albania,130.36
+2024-04,Albania,130.37
+2024-05,Albania,130.32
+2024-06,Albania,130.07
+2024-07,Albania,129.83
 2015-01,Serbia,98.1
 2015-02,Serbia,98.7
 2015-03,Serbia,99.4
@@ -3374,6 +3951,24 @@ TIME,GEO,VALUE
 2022-11,Serbia,136.3
 2022-12,Serbia,136.9
 2023-01,Serbia,138.7
+2023-02,Serbia,140.5
+2023-03,Serbia,141.7
+2023-04,Serbia,142.8
+2023-05,Serbia,144.2
+2023-06,Serbia,145.2
+2023-07,Serbia,145.2
+2023-08,Serbia,145.7
+2023-09,Serbia,146.1
+2023-10,Serbia,146.5
+2023-11,Serbia,147.1
+2023-12,Serbia,147.2
+2024-01,Serbia,147.6
+2024-02,Serbia,148.5
+2024-03,Serbia,149
+2024-04,Serbia,150
+2024-05,Serbia,150.7
+2024-06,Serbia,150.9
+2024-07,Serbia,151.5
 2015-01,Türkiye,96.12
 2015-02,Türkiye,96.96
 2015-03,Türkiye,98.13
@@ -3471,88 +4066,118 @@ TIME,GEO,VALUE
 2022-11,Türkiye,427.41
 2022-12,Türkiye,432.46
 2023-01,Türkiye,461.35
-2015-12,Kosovo (under United Nations Security Council Resolution 1244/99),100.02
-2016-01,Kosovo (under United Nations Security Council Resolution 1244/99),100.47
-2016-02,Kosovo (under United Nations Security Council Resolution 1244/99),100.66
-2016-03,Kosovo (under United Nations Security Council Resolution 1244/99),100.76
-2016-04,Kosovo (under United Nations Security Council Resolution 1244/99),99.77
-2016-05,Kosovo (under United Nations Security Council Resolution 1244/99),99.62
-2016-06,Kosovo (under United Nations Security Council Resolution 1244/99),99.56
-2016-07,Kosovo (under United Nations Security Council Resolution 1244/99),99.58
-2016-08,Kosovo (under United Nations Security Council Resolution 1244/99),99.77
-2016-09,Kosovo (under United Nations Security Council Resolution 1244/99),99.95
-2016-10,Kosovo (under United Nations Security Council Resolution 1244/99),100.86
-2016-11,Kosovo (under United Nations Security Council Resolution 1244/99),100.95
-2016-12,Kosovo (under United Nations Security Council Resolution 1244/99),101.32
-2017-01,Kosovo (under United Nations Security Council Resolution 1244/99),102.16
-2017-02,Kosovo (under United Nations Security Council Resolution 1244/99),102.33
-2017-03,Kosovo (under United Nations Security Council Resolution 1244/99),102.28
-2017-04,Kosovo (under United Nations Security Council Resolution 1244/99),101.98
-2017-05,Kosovo (under United Nations Security Council Resolution 1244/99),101.16
-2017-06,Kosovo (under United Nations Security Council Resolution 1244/99),101.47
-2017-07,Kosovo (under United Nations Security Council Resolution 1244/99),101.26
-2017-08,Kosovo (under United Nations Security Council Resolution 1244/99),101.48
-2017-09,Kosovo (under United Nations Security Council Resolution 1244/99),101.62
-2017-10,Kosovo (under United Nations Security Council Resolution 1244/99),101.78
-2017-11,Kosovo (under United Nations Security Council Resolution 1244/99),101.84
-2017-12,Kosovo (under United Nations Security Council Resolution 1244/99),101.82
-2018-01,Kosovo (under United Nations Security Council Resolution 1244/99),101.98
-2018-02,Kosovo (under United Nations Security Council Resolution 1244/99),102.31
-2018-03,Kosovo (under United Nations Security Council Resolution 1244/99),102.38
-2018-04,Kosovo (under United Nations Security Council Resolution 1244/99),102.4
-2018-05,Kosovo (under United Nations Security Council Resolution 1244/99),102.16
-2018-06,Kosovo (under United Nations Security Council Resolution 1244/99),102.29
-2018-07,Kosovo (under United Nations Security Council Resolution 1244/99),102.52
-2018-08,Kosovo (under United Nations Security Council Resolution 1244/99),102.97
-2018-09,Kosovo (under United Nations Security Council Resolution 1244/99),103.08
-2018-10,Kosovo (under United Nations Security Council Resolution 1244/99),103.25
-2018-11,Kosovo (under United Nations Security Council Resolution 1244/99),103.95
-2018-12,Kosovo (under United Nations Security Council Resolution 1244/99),104.77
-2019-01,Kosovo (under United Nations Security Council Resolution 1244/99),105.18
-2019-02,Kosovo (under United Nations Security Council Resolution 1244/99),105.57
-2019-03,Kosovo (under United Nations Security Council Resolution 1244/99),105.73
-2019-04,Kosovo (under United Nations Security Council Resolution 1244/99),105.86
-2019-05,Kosovo (under United Nations Security Council Resolution 1244/99),105.66
-2019-06,Kosovo (under United Nations Security Council Resolution 1244/99),105.31
-2019-07,Kosovo (under United Nations Security Council Resolution 1244/99),105.19
-2019-08,Kosovo (under United Nations Security Council Resolution 1244/99),105.71
-2019-09,Kosovo (under United Nations Security Council Resolution 1244/99),105.58
-2019-10,Kosovo (under United Nations Security Council Resolution 1244/99),105.54
-2019-11,Kosovo (under United Nations Security Council Resolution 1244/99),105.75
-2019-12,Kosovo (under United Nations Security Council Resolution 1244/99),106
-2020-01,Kosovo (under United Nations Security Council Resolution 1244/99),106.81
-2020-02,Kosovo (under United Nations Security Council Resolution 1244/99),106.6
-2020-03,Kosovo (under United Nations Security Council Resolution 1244/99),106.51
-2020-04,Kosovo (under United Nations Security Council Resolution 1244/99),106.17
-2020-05,Kosovo (under United Nations Security Council Resolution 1244/99),105.86
-2020-06,Kosovo (under United Nations Security Council Resolution 1244/99),105.43
-2020-07,Kosovo (under United Nations Security Council Resolution 1244/99),105.08
-2020-08,Kosovo (under United Nations Security Council Resolution 1244/99),105.19
-2020-09,Kosovo (under United Nations Security Council Resolution 1244/99),105.12
-2020-10,Kosovo (under United Nations Security Council Resolution 1244/99),105.32
-2020-11,Kosovo (under United Nations Security Council Resolution 1244/99),105.43
-2020-12,Kosovo (under United Nations Security Council Resolution 1244/99),106.09
-2021-01,Kosovo (under United Nations Security Council Resolution 1244/99),106.59
-2021-02,Kosovo (under United Nations Security Council Resolution 1244/99),107.38
-2021-03,Kosovo (under United Nations Security Council Resolution 1244/99),107.82
-2021-04,Kosovo (under United Nations Security Council Resolution 1244/99),108.18
-2021-05,Kosovo (under United Nations Security Council Resolution 1244/99),107.94
-2021-06,Kosovo (under United Nations Security Council Resolution 1244/99),107.92
-2021-07,Kosovo (under United Nations Security Council Resolution 1244/99),108.76
-2021-08,Kosovo (under United Nations Security Council Resolution 1244/99),110.12
-2021-09,Kosovo (under United Nations Security Council Resolution 1244/99),110.23
-2021-10,Kosovo (under United Nations Security Council Resolution 1244/99),111.32
-2021-11,Kosovo (under United Nations Security Council Resolution 1244/99),112.7
-2021-12,Kosovo (under United Nations Security Council Resolution 1244/99),113.21
-2022-01,Kosovo (under United Nations Security Council Resolution 1244/99),114.19
-2022-02,Kosovo (under United Nations Security Council Resolution 1244/99),115.46
-2022-03,Kosovo (under United Nations Security Council Resolution 1244/99),118.62
-2022-04,Kosovo (under United Nations Security Council Resolution 1244/99),120.35
-2022-05,Kosovo (under United Nations Security Council Resolution 1244/99),121.41
-2022-06,Kosovo (under United Nations Security Council Resolution 1244/99),123.11
-2022-07,Kosovo (under United Nations Security Council Resolution 1244/99),124.2
-2022-08,Kosovo (under United Nations Security Council Resolution 1244/99),124.47
-2022-09,Kosovo (under United Nations Security Council Resolution 1244/99),124.25
-2022-10,Kosovo (under United Nations Security Council Resolution 1244/99),125.42
-2022-11,Kosovo (under United Nations Security Council Resolution 1244/99),125.77
-2022-12,Kosovo (under United Nations Security Council Resolution 1244/99),126.87
+2023-02,Türkiye,475.88
+2023-03,Türkiye,486.83
+2023-04,Türkiye,498.51
+2023-05,Türkiye,498.7
+2023-06,Türkiye,518.27
+2023-07,Türkiye,567.63
+2023-08,Türkiye,619.09
+2023-09,Türkiye,648.45
+2023-10,Türkiye,670.67
+2023-11,Türkiye,692.75
+2023-12,Türkiye,713.14
+2024-01,Türkiye,760.88
+2024-02,Türkiye,795.41
+2024-03,Türkiye,820.57
+2024-04,Türkiye,846.64
+2024-05,Türkiye,875.21
+2024-06,Türkiye,889.52
+2024-07,Türkiye,918.24
+2015-12,Kosovo*,100.02
+2016-01,Kosovo*,100.47
+2016-02,Kosovo*,100.66
+2016-03,Kosovo*,100.76
+2016-04,Kosovo*,99.77
+2016-05,Kosovo*,99.62
+2016-06,Kosovo*,99.56
+2016-07,Kosovo*,99.58
+2016-08,Kosovo*,99.77
+2016-09,Kosovo*,99.95
+2016-10,Kosovo*,100.86
+2016-11,Kosovo*,100.95
+2016-12,Kosovo*,101.32
+2017-01,Kosovo*,102.16
+2017-02,Kosovo*,102.33
+2017-03,Kosovo*,102.28
+2017-04,Kosovo*,101.98
+2017-05,Kosovo*,101.16
+2017-06,Kosovo*,101.47
+2017-07,Kosovo*,101.26
+2017-08,Kosovo*,101.48
+2017-09,Kosovo*,101.62
+2017-10,Kosovo*,101.78
+2017-11,Kosovo*,101.84
+2017-12,Kosovo*,101.82
+2018-01,Kosovo*,101.98
+2018-02,Kosovo*,102.31
+2018-03,Kosovo*,102.38
+2018-04,Kosovo*,102.4
+2018-05,Kosovo*,102.16
+2018-06,Kosovo*,102.29
+2018-07,Kosovo*,102.52
+2018-08,Kosovo*,102.97
+2018-09,Kosovo*,103.08
+2018-10,Kosovo*,103.25
+2018-11,Kosovo*,103.95
+2018-12,Kosovo*,104.77
+2019-01,Kosovo*,105.18
+2019-02,Kosovo*,105.57
+2019-03,Kosovo*,105.73
+2019-04,Kosovo*,105.86
+2019-05,Kosovo*,105.66
+2019-06,Kosovo*,105.31
+2019-07,Kosovo*,105.19
+2019-08,Kosovo*,105.71
+2019-09,Kosovo*,105.58
+2019-10,Kosovo*,105.54
+2019-11,Kosovo*,105.75
+2019-12,Kosovo*,106
+2020-01,Kosovo*,106.81
+2020-02,Kosovo*,106.6
+2020-03,Kosovo*,106.51
+2020-04,Kosovo*,106.17
+2020-05,Kosovo*,105.86
+2020-06,Kosovo*,105.43
+2020-07,Kosovo*,105.08
+2020-08,Kosovo*,105.19
+2020-09,Kosovo*,105.12
+2020-10,Kosovo*,105.32
+2020-11,Kosovo*,105.43
+2020-12,Kosovo*,106.09
+2021-01,Kosovo*,106.59
+2021-02,Kosovo*,107.38
+2021-03,Kosovo*,107.82
+2021-04,Kosovo*,108.18
+2021-05,Kosovo*,107.94
+2021-06,Kosovo*,107.92
+2021-07,Kosovo*,108.76
+2021-08,Kosovo*,110.12
+2021-09,Kosovo*,110.23
+2021-10,Kosovo*,111.32
+2021-11,Kosovo*,112.7
+2021-12,Kosovo*,113.21
+2022-01,Kosovo*,114.19
+2022-02,Kosovo*,115.46
+2022-03,Kosovo*,118.62
+2022-04,Kosovo*,120.35
+2022-05,Kosovo*,121.41
+2022-06,Kosovo*,123.11
+2022-07,Kosovo*,124.2
+2022-08,Kosovo*,124.47
+2022-09,Kosovo*,124.25
+2022-10,Kosovo*,125.42
+2022-11,Kosovo*,125.77
+2022-12,Kosovo*,126.87
+2023-01,Kosovo*,127.94
+2023-02,Kosovo*,127.58
+2023-03,Kosovo*,127.04
+2023-04,Kosovo*,127.03
+2023-05,Kosovo*,126.62
+2023-06,Kosovo*,126.58
+2023-07,Kosovo*,127.12
+2023-08,Kosovo*,128.42
+2023-09,Kosovo*,129.52
+2023-10,Kosovo*,129.5
+2023-11,Kosovo*,129.38
+2023-12,Kosovo*,129.79
