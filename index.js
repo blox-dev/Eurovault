@@ -46,6 +46,7 @@ app.get('/', async function (_req, res) {
                 }
                 var metaData = JSON.parse(data);
                 res.render('pages/index', { metaData: JSON.stringify(metaData), geoData: geoData});
+                // res.render('pages/index2', { metaData: JSON.stringify(metaData), geoData: geoData});
             });
         } else {
             fs.readFile("./data/pull_metadata.json", (err, data) => {
@@ -58,6 +59,7 @@ app.get('/', async function (_req, res) {
                 getHtml(metaData);
 
                 res.render('pages/index', { metaData: JSON.stringify(metaData), geoData: geoData});
+                // res.render('pages/index2', { metaData: JSON.stringify(metaData), geoData: geoData});
                 updateDatabase(metaData);
             });
         }
