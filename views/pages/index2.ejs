@@ -101,8 +101,7 @@
 
                 <div class="col-12 col-lg-6">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="comparison_toggle"
-                            onchange="switch_comparison_mode(this.checked);">
+                        <input class="form-check-input" type="checkbox" value="" id="comparison_toggle">
                         <label class="form-check-label" for="comparison_toggle">
                             Comparison mode
                         </label>
@@ -155,25 +154,44 @@
 
         // MAIN
 
-        class EuroMap {
+        class View {
 
             // MAP DATA
             geoJSON = null;
 
             // MAP COMPONENTS
             m_map = null;
+            geoMap = null;
             info = null;
             legend = null;
             data_comp = null;
+
+            // OTHER COMPONENTS
+            dropdownDiv = null;
+            file_select = null;
+            barchart_div = null;
+            comparison_box = null;
+            dropdowns = [];
+            
+
+            // VARS
+            current_country = null;
+            last_country = null;
+
 
             set_data(data) {
                 this.data_comp = data;
             }
 
-
             constructor(geoJSON) {
                 this.geoJSON = geoJSON;
 
+                // UI STUFF
+                this.dropdownDiv = document.getElementById("chart_dropdown");
+                this.file_select = document.getElementById("select_file_dropdown");
+                this.comparison_box = document.getElementById("comparison_toggle"); // comparison_box.checked
+                this.barchart_div = document.getElementById("bar_chart");
+                
                 // MAP STUFF
 
                 //create european map and set its center
@@ -191,8 +209,7 @@
                     [73.1, 47.725],
                 ]);
 
-                // let geoMap = L.geoJson(this.geoJSON, {
-                L.geoJson(this.geoJSON, {
+                this.geoMap = L.geoJson(this.geoJSON, {
                     onEachFeature: this.onEachFeature.bind(this),
                     style: this.style.bind(this),
                 }).addTo(map);
@@ -208,7 +225,7 @@
 
                 // method that we will use to update the control based on feature properties passed
                 info.update = function (props) {
-
+                    // TODO: THIS
                     // this._div.innerHTML = '<h5>' + current_filename.replaceAll('_', ' ') + '</h5>' +
 
                     //   ((current_selected_country != '' && previous_selected_country == '' && comparing_mode) ? ("<b>Click on another country to compare</b>") : ((props) ? '<b>' + props[0] + '</b><br />' + props[1] : 'Hover over a country'))
@@ -217,7 +234,7 @@
                     //   + all_tables[current_filename].meta.description.replaceAll("\n", "<br>") + '</p></div>';
                 };
 
-                info.addTo(map);
+                // info.addTo(map);
 
                 // LEGEND
                 let legend = L.control({ position: 'bottomright' });
@@ -271,14 +288,76 @@
                 this.m_map = map;
             }
 
+            is_comparing() {
+                return this.comparison_box.checked;
+            }
+
+            get_current_file() {
+                return this.file_select.value;
+            }
+            // update_map
+            display_data(e) {
+                // TODO: UPDATE THE MAP HERE
+                console.log(this);
+                console.log(e);
+                console.log(e.target.value);
+
+                const file = this.get_current_file();
+                const ddVals = this.getDropdownValues();
+                
+                const [df, [year_min, year_max], [value_min, values_max]] = this.data_comp.get_data(file, ddVals);
+            }
+
+            getDropdownValues() {
+                return this.dropdowns.map((dd) => [dd.id, dd.value]);
+            }
+
+            createDropdowns() {
+                let file = this.get_current_file();
+                const options = this.data_comp.get_options(file);
+                console.log(options);
+
+                // Reset dropdowns
+                this.dropdowns = [];
+                this.dropdownDiv.textContent = '';
+                
+                Object.entries(options).forEach(([key, values]) => {
+                    // if there is only one value, do not create a dropdown for it
+                    if (Object.keys(values).length <= 1) {
+                        return;
+                    }
+                    console.log(key, values);
+                    const dd = document.createElement('select');
+                    dd.id = key;
+                    Object.entries(values).forEach(([id, label]) => {
+                        const opt = document.createElement('option');
+                        opt.value = id;
+                        opt.innerText = label;
+                        dd.appendChild(opt); 
+                    })
+                    
+                    dd.onchange = this.display_data.bind(this);
+
+                    this.dropdowns.push(dd);
+                    this.dropdownDiv.appendChild(dd);
+                })
+            }
+
             resetHighlight(e) {
-                this.m_map.resetStyle(e.target);
-                info.update();
+                this.geoMap.resetStyle(e.target);
+                this.info.update();
             }
 
             highlightFeature(e) {
                 var layer = e.target;
-                // let view = all_tables[current_filename].meta.view;
+
+                const data = this.data_comp.get_current_file_data();
+                console.log(data);
+                
+                const view = data.meta?.view || "Positive";
+
+                var bordercolor = 'white';
+                var borderfill = 'white';
 
                 if (view === 'Positive') {
                     bordercolor = '#4a1486';
@@ -299,11 +378,24 @@
                     layer.bringToFront();
                 }
 
-                info.update([layer.feature.properties.ADMIN, mapValue(layer.feature.properties.ADMIN)]);
+                function mapValue(c) {
+                    // TODO
+                    const found = undefined;
+                    // const found = value_matrix.find(element => element[0] == c);
+                    //console.log(found);
+                    if (typeof found !== 'undefined' && found[1] != 0) {
+                        return found[1];
+                    } else {
+                        return 'NO DATA FOR ' + '2000'; //  TODO: displayed_year;
+                    }
+                }
+
+                this.info.update([layer.feature.properties.ADMIN, mapValue(layer.feature.properties.ADMIN)]);
             }
 
             graphData(e) {
-                this.data_comp.make_data(e.target.feature.properties.ISO_A3 || e.target.feature.properties.ADMIN);
+                // console.log(this);
+                this.data_comp.make_data(e.target.feature.properties.ADMIN || e.target.feature.properties.ISO_A3);
                 // const country = e.target.feature.properties.ADMIN; // ISO_A3
 
                 // if (current_selected_country != "") {
@@ -350,35 +442,21 @@
             // DATA
             data_map = {};
             metadata = {};
-            europe_map = null;
+            view = null;
             geoJSON = {};
 
             // COMPONENTS
             barchart_div = null;
             file_select = null;
 
-            // VARS
-            comparing_mode = false;
-            current_country = null;
-            last_country = null;
-
-            constructor(europe_map) {
-                this.europe_map = europe_map;
-                this.geoJSON = this.europe_map.geoJSON;
-
-                // ADD HTML HOOKS
-                const comparison_box = document.getElementById("comparison_toggle");
-                comparison_box.onchange = (e) => {
-                    e.preventDefault();
-                    this.toggle_comparison(comparison_box.checked);
-                }
-
-                this.barchart = document.getElementById("bar_chart");
-                this.file_select = document.getElementById("select_file_dropdown");
+            constructor(view) {
+                this.view = view;
+                this.geoJSON = this.view.geoJSON;
             }
 
-            toggle_comparison(checked) {
-                this.comparing_mode = checked;
+            get_current_file_data() {
+                const current_file = this.view.get_current_file();
+                return this.data_map[current_file];
             }
 
             set_metadata(metadata) {
@@ -387,6 +465,34 @@
 
             add_data(key, value) {
                 this.data_map[key] = value;
+            }
+
+            get_options(file) {
+                const meta = this.metadata[file];
+                return meta.values;
+            }
+
+            get_data(file, ddVals) {
+                let data = this.data_map[file];
+                console.log(data);
+                console.log(ddVals);
+
+                let df = data.df.copy();
+                console.log(df);
+
+                // TODO: this fails for some reason??? indexes are wrong
+                for (let i =0 ; i<ddVals.length ; ++i) {
+                    const [column_name, value] = ddVals[i];
+                    df = df.query(df[column_name.toUpperCase()].eq(value));
+                }
+                // ddVals.forEach(([column_name, value]) => {
+                //     console.log(column_name, value);
+                //     df = df.query(df[column_name.toUpperCase()].eq(value));
+                // })
+                
+                df.print();
+
+                return [undefined, [undefined, undefined], [undefined, undefined]];
             }
 
             make_data(country) {
@@ -492,7 +598,7 @@
                 }
                 //no data for the selected country
                 else {
-                    document.getElementById(targetDivID).innerHTML = "<3>No data for " + country + "</h3>";
+                    document.getElementById(targetDivID).innerHTML = "<h3>No data for " + country + "</h3>";
                 }
             }
 
@@ -511,7 +617,7 @@
                 //barchart style
                 const layout = {
                     title: {
-                        text: current_filename.replaceAll("_", " ") + " in " + country,
+                        text: metadata.label + " in " + country,
                     },
                     width: '800',
                     //width: '100%'
@@ -525,9 +631,9 @@
                 };
 
                 //restrict rows to have the country attribute as the selected country
-                var rows = data.df["COUNTRY"].eq(country);
+                var rows = data.df["GEO"].eq(country);
 
-                if (hasVaryingAttributes) {
+                if (Object.keys(metadata.values).length) {
                     Object.keys(data.meta.values).forEach(key => {
                         const dropdown = document.getElementById(key);
 
@@ -578,9 +684,9 @@
         fetch("./public/countries.geojson")
             .then(resp => resp.json())
             .then(geoInfo => {
-                let europe_map = new EuroMap(geoInfo);
-                let data = new Data(europe_map);
-                europe_map.set_data(data);
+                let view = new View(geoInfo);
+                let data = new Data(view);
+                view.set_data(data);
 
                 // TODO: check if metadataaa.json exists
                 fetch("./data/metadataaa.json")
@@ -592,7 +698,12 @@
                         let selectFile = document.getElementById("select_file_dropdown");
 
                         //when the selected file changes, update the map
-                        selectFile.onchange = (e) => { };//updateMap(selectFile.value, true); };
+                        function cd(e) {
+                            console.log(this);
+                            view.createDropdowns();
+                        }
+
+                        selectFile.onchange = cd;//updateMap(selectFile.value, true); };
 
                         let first = true;
 
@@ -613,6 +724,7 @@
                                 //update the map with the first file that loads
                                 if (first) {
                                     first = false;
+                                    view.createDropdowns();
                                     // data.update(key);
                                     // updateMap(key, false);
                                 }
