@@ -129,7 +129,7 @@ function updateDatabase(metaData) {
 
                     Object.entries(dims).forEach(([k, v]) => {
                         if (Object.values(v.category.label).length > 1) {
-                            vals[k] = Object.values(v.category.label);
+                            vals[k] = Object.assign({}, v.category.label);
                         }
                     });
 
@@ -189,7 +189,8 @@ function JSON2CSV(data) {
 
     const dimLabels = Object.entries(data.dimension)
         .filter(([k, v]) => impColumns.includes(k))
-        .map(([k, v]) => Object.values(v.category.label))
+        // .map(([k, v]) => Object.values(v.category.label))
+        .map(([k, v]) => Object.keys(v.category.label))
         .reverse();
 
     var csvText = impColumns.map(i => i.toUpperCase()).join(',');
@@ -208,7 +209,8 @@ function JSON2CSV(data) {
         }
         i = 0;
         while (i < n) {
-            csvText += (dimLabels[i][colNames[i]]).toString().replace(',', ' ').replace(/\s+/g, ' ').trim() + ',';
+            // csvText += (dimLabels[i][colNames[i]]).toString().replace(',', ' ').replace(/\s+/g, ' ').trim() + ',';
+            csvText += dimLabels[i][colNames[i]] + ',';
             i += 1;
         }
         csvText += value.toString() + '\n';

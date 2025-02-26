@@ -1,1613 +1,1616 @@
 TIME,GEO,DEG_URB,VALUE
-2003,Belgium,Cities,26.4
-2004,Belgium,Cities,25.7
-2005,Belgium,Cities,24.1
-2006,Belgium,Cities,23.9
-2007,Belgium,Cities,23.5
-2008,Belgium,Cities,22.5
-2009,Belgium,Cities,22.4
-2010,Belgium,Cities,22.7
-2011,Belgium,Cities,21.9
-2012,Belgium,Cities,24.8
-2013,Belgium,Cities,31.9
-2014,Belgium,Cities,26.9
-2015,Belgium,Cities,25.7
-2016,Belgium,Cities,23.8
-2017,Belgium,Cities,21
-2018,Belgium,Cities,21.2
-2019,Belgium,Cities,20.4
-2020,Belgium,Cities,19.8
-2023,Belgium,Cities,23.2
-2005,Bulgaria,Cities,36.2
-2006,Bulgaria,Cities,36.2
-2007,Bulgaria,Cities,38.7
-2008,Bulgaria,Cities,34.1
-2009,Bulgaria,Cities,37.4
-2010,Bulgaria,Cities,34.8
-2011,Bulgaria,Cities,35
-2012,Bulgaria,Cities,36.8
-2013,Bulgaria,Cities,32.2
-2014,Bulgaria,Cities,33.4
-2015,Bulgaria,Cities,33.7
-2016,Bulgaria,Cities,33.5
-2017,Bulgaria,Cities,30.8
-2018,Bulgaria,Cities,28
-2019,Bulgaria,Cities,27.8
-2020,Bulgaria,Cities,26.6
-2023,Bulgaria,Cities,22.4
-2005,Czechia,Cities,23.7
-2006,Czechia,Cities,23
-2007,Czechia,Cities,21.3
-2008,Czechia,Cities,22.1
-2009,Czechia,Cities,28.9
-2010,Czechia,Cities,24.8
-2011,Czechia,Cities,22.7
-2012,Czechia,Cities,19
-2013,Czechia,Cities,17.5
-2014,Czechia,Cities,20.1
-2015,Czechia,Cities,17.4
-2016,Czechia,Cities,17.3
-2017,Czechia,Cities,15.8
-2018,Czechia,Cities,12.5
-2019,Czechia,Cities,13.7
-2020,Czechia,Cities,10.5
-2023,Czechia,Cities,12
-2003,Denmark,Cities,14.2
-2004,Denmark,Cities,19
-2005,Denmark,Cities,19.6
-2006,Denmark,Cities,18.3
-2007,Denmark,Cities,19.5
-2008,Denmark,Cities,22.1
-2009,Denmark,Cities,25.7
-2010,Denmark,Cities,20
-2011,Denmark,Cities,21.9
-2012,Denmark,Cities,16
-2013,Denmark,Cities,15.6
-2014,Denmark,Cities,15.8
-2015,Denmark,Cities,12.2
-2016,Denmark,Cities,13.9
-2017,Denmark,Cities,13.1
-2018,Denmark,Cities,13.2
-2019,Denmark,Cities,12.8
-2020,Denmark,Cities,11.1
-2023,Denmark,Cities,10.9
-2005,Germany,Cities,14.3
-2006,Germany,Cities,18.7
-2007,Germany,Cities,17.7
-2008,Germany,Cities,19
-2009,Germany,Cities,18.7
-2010,Germany,Cities,17.5
-2011,Germany,Cities,18.2
-2012,Germany,Cities,21.4
-2013,Germany,Cities,22.9
-2014,Germany,Cities,22
-2015,Germany,Cities,23.3
-2016,Germany,Cities,22.4
-2017,Germany,Cities,23.6
-2018,Germany,Cities,23
-2019,Germany,Cities,21.9
-2020,Germany,Cities,14.3
-2023,Germany,Cities,17.1
-2004,Estonia,Cities,36.9
-2005,Estonia,Cities,30.8
-2006,Estonia,Cities,28.2
-2007,Estonia,Cities,30.7
-2008,Estonia,Cities,22.6
-2009,Estonia,Cities,28.1
-2010,Estonia,Cities,24
-2011,Estonia,Cities,20.5
-2012,Estonia,Cities,22.2
-2013,Estonia,Cities,15.4
-2014,Estonia,Cities,14.1
-2015,Estonia,Cities,15
-2016,Estonia,Cities,12.7
-2017,Estonia,Cities,11
-2018,Estonia,Cities,8.7
-2019,Estonia,Cities,9.5
-2020,Estonia,Cities,6.3
-2023,Estonia,Cities,6.7
-2003,Ireland,Cities,26
-2004,Ireland,Cities,24.1
-2005,Ireland,Cities,24.6
-2006,Ireland,Cities,26
-2007,Ireland,Cities,24
-2008,Ireland,Cities,18.5
-2009,Ireland,Cities,21
-2010,Ireland,Cities,16.6
-2011,Ireland,Cities,16.4
-2012,Ireland,Cities,16.3
-2013,Ireland,Cities,16.7
-2014,Ireland,Cities,15.1
-2015,Ireland,Cities,16.3
-2016,Ireland,Cities,14.4
-2017,Ireland,Cities,16.3
-2018,Ireland,Cities,16.3
-2019,Ireland,Cities,12.1
-2020,Ireland,Cities,17.3
-2003,Greece,Cities,14.8
-2004,Greece,Cities,12.7
-2005,Greece,Cities,14.3
-2006,Greece,Cities,13.9
-2007,Greece,Cities,18.1
-2008,Greece,Cities,20.9
-2009,Greece,Cities,25.7
-2010,Greece,Cities,33.3
-2011,Greece,Cities,28.1
-2012,Greece,Cities,29.5
-2013,Greece,Cities,28.4
-2014,Greece,Cities,24.1
-2015,Greece,Cities,19.6
-2016,Greece,Cities,18.1
-2017,Greece,Cities,22.1
-2018,Greece,Cities,22.8
-2019,Greece,Cities,27
-2020,Greece,Cities,28.8
-2023,Greece,Cities,26.9
-2004,Spain,Cities,25.4
-2005,Spain,Cities,25.1
-2006,Spain,Cities,25.6
-2007,Spain,Cities,21.6
-2008,Spain,Cities,18.9
-2009,Spain,Cities,20.4
-2010,Spain,Cities,17.2
-2011,Spain,Cities,13.2
-2012,Spain,Cities,13.4
-2013,Spain,Cities,19.3
-2014,Spain,Cities,15.6
-2015,Spain,Cities,13.8
-2016,Spain,Cities,12.8
-2017,Spain,Cities,12.2
-2018,Spain,Cities,14.8
-2019,Spain,Cities,16.4
-2020,Spain,Cities,17.4
-2023,Spain,Cities,16.6
-2004,France,Cities,30.9
-2005,France,Cities,24.9
-2006,France,Cities,23.1
-2007,France,Cities,23.4
-2008,France,Cities,20.8
-2009,France,Cities,22.6
-2010,France,Cities,22.8
-2011,France,Cities,22
-2012,France,Cities,20
-2013,France,Cities,23.7
-2014,France,Cities,21.2
-2015,France,Cities,19.9
-2016,France,Cities,20.8
-2017,France,Cities,19
-2018,France,Cities,20.4
-2019,France,Cities,22.1
-2020,France,Cities,27
-2023,France,Cities,23
-2010,Croatia,Cities,9.4
-2011,Croatia,Cities,6.6
-2012,Croatia,Cities,6.8
-2013,Croatia,Cities,6.6
-2014,Croatia,Cities,6.7
-2015,Croatia,Cities,7.6
-2016,Croatia,Cities,6.7
-2017,Croatia,Cities,6.2
-2018,Croatia,Cities,4.6
-2019,Croatia,Cities,4.2
-2020,Croatia,Cities,3.4
-2023,Croatia,Cities,2.6
-2004,Italy,Cities,26.9
-2005,Italy,Cities,25.1
-2006,Italy,Cities,25.8
-2007,Italy,Cities,27.4
-2008,Italy,Cities,24
-2009,Italy,Cities,25.7
-2010,Italy,Cities,21.1
-2011,Italy,Cities,21.7
-2012,Italy,Cities,21.8
-2013,Italy,Cities,22
-2014,Italy,Cities,23.6
-2015,Italy,Cities,29
-2016,Italy,Cities,23.2
-2017,Italy,Cities,18.8
-2018,Italy,Cities,17.2
-2019,Italy,Cities,13.9
-2020,Italy,Cities,12.6
-2023,Italy,Cities,10.6
-2005,Cyprus,Cities,8.3
-2006,Cyprus,Cities,13.7
-2007,Cyprus,Cities,13.8
-2008,Cyprus,Cities,10.6
-2009,Cyprus,Cities,8.3
-2010,Cyprus,Cities,14.9
-2011,Cyprus,Cities,15.7
-2012,Cyprus,Cities,16.7
-2013,Cyprus,Cities,14.4
-2014,Cyprus,Cities,13.6
-2015,Cyprus,Cities,10.1
-2016,Cyprus,Cities,12.4
-2017,Cyprus,Cities,15.3
-2018,Cyprus,Cities,15.8
-2019,Cyprus,Cities,15.2
-2020,Cyprus,Cities,8.6
-2023,Cyprus,Cities,10.4
-2005,Latvia,Cities,32.4
-2006,Latvia,Cities,31
-2007,Latvia,Cities,33.7
-2008,Latvia,Cities,35.1
-2009,Latvia,Cities,31.6
-2010,Latvia,Cities,34
-2011,Latvia,Cities,27.2
-2012,Latvia,Cities,22.7
-2013,Latvia,Cities,18.2
-2014,Latvia,Cities,19.9
-2015,Latvia,Cities,21.3
-2016,Latvia,Cities,17.8
-2017,Latvia,Cities,13.2
-2018,Latvia,Cities,17.2
-2019,Latvia,Cities,10.9
-2020,Latvia,Cities,8.8
-2023,Latvia,Cities,11.3
-2005,Lithuania,Cities,14.1
-2006,Lithuania,Cities,12
-2007,Lithuania,Cities,13.1
-2008,Lithuania,Cities,8.2
-2009,Lithuania,Cities,10.7
-2010,Lithuania,Cities,9.3
-2011,Lithuania,Cities,8.7
-2012,Lithuania,Cities,9.2
-2013,Lithuania,Cities,10.1
-2014,Lithuania,Cities,6.3
-2015,Lithuania,Cities,7
-2016,Lithuania,Cities,5.3
-2017,Lithuania,Cities,13.1
-2018,Lithuania,Cities,5
-2019,Lithuania,Cities,4.9
-2020,Lithuania,Cities,4.5
-2023,Lithuania,Cities,4.2
-2003,Luxembourg,Cities,20.6
-2004,Luxembourg,Cities,16.9
-2005,Luxembourg,Cities,18.4
-2006,Luxembourg,Cities,16.6
-2007,Luxembourg,Cities,13.6
-2008,Luxembourg,Cities,15.4
-2009,Luxembourg,Cities,13.5
-2010,Luxembourg,Cities,15
-2011,Luxembourg,Cities,15.2
-2012,Luxembourg,Cities,15.9
-2013,Luxembourg,Cities,14.3
-2014,Luxembourg,Cities,18.4
-2015,Luxembourg,Cities,20.4
-2016,Luxembourg,Cities,14.1
-2017,Luxembourg,Cities,16.4
-2018,Luxembourg,Cities,19
-2019,Luxembourg,Cities,14.8
-2020,Luxembourg,Cities,12.5
-2023,Luxembourg,Cities,19.5
-2005,Hungary,Cities,22.1
-2006,Hungary,Cities,16.4
-2007,Hungary,Cities,17.7
-2008,Hungary,Cities,14.9
-2009,Hungary,Cities,14.9
-2010,Hungary,Cities,13.5
-2011,Hungary,Cities,13.5
-2012,Hungary,Cities,10.5
-2013,Hungary,Cities,14
-2014,Hungary,Cities,16.9
-2015,Hungary,Cities,11.3
-2016,Hungary,Cities,9.8
-2017,Hungary,Cities,8.8
-2018,Hungary,Cities,5.6
-2019,Hungary,Cities,5.1
-2020,Hungary,Cities,5.2
-2023,Hungary,Cities,5
-2005,Malta,Cities,14.5
-2006,Malta,Cities,13.3
-2007,Malta,Cities,10.7
-2008,Malta,Cities,10.1
-2009,Malta,Cities,11.3
-2010,Malta,Cities,11.2
-2011,Malta,Cities,13.7
-2012,Malta,Cities,13.3
-2013,Malta,Cities,13.4
-2014,Malta,Cities,12.7
-2015,Malta,Cities,12
-2016,Malta,Cities,10.9
-2017,Malta,Cities,10.6
-2018,Malta,Cities,13.4
-2019,Malta,Cities,14.7
-2020,Malta,Cities,12.5
-2023,Malta,Cities,8.5
-2005,Netherlands,Cities,22.4
-2006,Netherlands,Cities,20.2
-2007,Netherlands,Cities,21.3
-2008,Netherlands,Cities,18
-2009,Netherlands,Cities,25.5
-2010,Netherlands,Cities,20.3
-2011,Netherlands,Cities,22.2
-2012,Netherlands,Cities,23.1
-2013,Netherlands,Cities,22.9
-2014,Netherlands,Cities,24
-2015,Netherlands,Cities,23
-2016,Netherlands,Cities,21.6
-2017,Netherlands,Cities,19.1
-2018,Netherlands,Cities,22.2
-2019,Netherlands,Cities,20.7
-2020,Netherlands,Cities,20.2
-2023,Netherlands,Cities,21.4
-2004,Austria,Cities,19.2
-2005,Austria,Cities,22.9
-2006,Austria,Cities,21.3
-2007,Austria,Cities,19.8
-2008,Austria,Cities,21.1
-2009,Austria,Cities,25.7
-2010,Austria,Cities,22.3
-2011,Austria,Cities,20.7
-2012,Austria,Cities,20.9
-2013,Austria,Cities,21.2
-2014,Austria,Cities,24.6
-2015,Austria,Cities,22.6
-2016,Austria,Cities,22
-2017,Austria,Cities,19.4
-2018,Austria,Cities,16.8
-2019,Austria,Cities,16.4
-2020,Austria,Cities,11.4
-2023,Austria,Cities,14.4
-2005,Poland,Cities,19.7
-2006,Poland,Cities,17.1
-2007,Poland,Cities,15.2
-2008,Poland,Cities,13.3
-2009,Poland,Cities,12.3
-2010,Poland,Cities,12.3
-2011,Poland,Cities,11.7
-2012,Poland,Cities,12.5
-2013,Poland,Cities,12.8
-2014,Poland,Cities,12.4
-2015,Poland,Cities,12.1
-2016,Poland,Cities,10.9
-2017,Poland,Cities,10.9
-2018,Poland,Cities,8.3
-2019,Poland,Cities,8.8
-2023,Poland,Cities,6.1
-2004,Portugal,Cities,22.9
-2005,Portugal,Cities,23.8
-2006,Portugal,Cities,21.3
-2007,Portugal,Cities,21.5
-2008,Portugal,Cities,19.3
-2009,Portugal,Cities,23.6
-2010,Portugal,Cities,18.9
-2011,Portugal,Cities,17.8
-2012,Portugal,Cities,16.9
-2013,Portugal,Cities,19.1
-2014,Portugal,Cities,16
-2015,Portugal,Cities,14.3
-2016,Portugal,Cities,10.7
-2017,Portugal,Cities,11.1
-2018,Portugal,Cities,9.3
-2019,Portugal,Cities,9
-2020,Portugal,Cities,8.7
-2023,Portugal,Cities,10.2
-2007,Romania,Cities,19.7
-2008,Romania,Cities,19.4
-2009,Romania,Cities,23.2
-2010,Romania,Cities,22.3
-2011,Romania,Cities,23.2
-2012,Romania,Cities,18.9
-2013,Romania,Cities,17.7
-2014,Romania,Cities,18
-2015,Romania,Cities,16.4
-2016,Romania,Cities,20.1
-2017,Romania,Cities,14.9
-2018,Romania,Cities,14.6
-2019,Romania,Cities,12.9
-2020,Romania,Cities,11
-2023,Romania,Cities,6.8
-2005,Slovenia,Cities,27.9
-2006,Slovenia,Cities,21.1
-2007,Slovenia,Cities,22.1
-2008,Slovenia,Cities,18
-2009,Slovenia,Cities,25.1
-2010,Slovenia,Cities,19
-2011,Slovenia,Cities,17.7
-2012,Slovenia,Cities,17.2
-2013,Slovenia,Cities,17.2
-2014,Slovenia,Cities,18.9
-2015,Slovenia,Cities,16.2
-2016,Slovenia,Cities,15.6
-2017,Slovenia,Cities,14.1
-2018,Slovenia,Cities,11.6
-2019,Slovenia,Cities,12.4
-2020,Slovenia,Cities,12.5
-2023,Slovenia,Cities,10.9
-2005,Slovakia,Cities,17.8
-2006,Slovakia,Cities,17.8
-2007,Slovakia,Cities,17.3
-2008,Slovakia,Cities,17
-2009,Slovakia,Cities,23.7
-2010,Slovakia,Cities,19
-2011,Slovakia,Cities,18.5
-2012,Slovakia,Cities,15.6
-2013,Slovakia,Cities,12.1
-2014,Slovakia,Cities,13.3
-2015,Slovakia,Cities,10.6
-2016,Slovakia,Cities,9.5
-2017,Slovakia,Cities,8.9
-2018,Slovakia,Cities,6
-2019,Slovakia,Cities,5.1
-2020,Slovakia,Cities,5.3
-2023,Slovakia,Cities,6
-2004,Finland,Cities,27.1
-2005,Finland,Cities,27.8
-2006,Finland,Cities,24.6
-2007,Finland,Cities,20.5
-2008,Finland,Cities,21.1
-2009,Finland,Cities,23.5
-2010,Finland,Cities,16.3
-2011,Finland,Cities,14.7
-2012,Finland,Cities,13.8
-2013,Finland,Cities,12.7
-2014,Finland,Cities,10
-2015,Finland,Cities,11
-2016,Finland,Cities,9
-2017,Finland,Cities,9.4
-2018,Finland,Cities,10.7
-2019,Finland,Cities,9.1
-2020,Finland,Cities,10.8
-2023,Finland,Cities,16.7
-2004,Sweden,Cities,13.9
-2005,Sweden,Cities,14.6
-2006,Sweden,Cities,21.8
-2007,Sweden,Cities,17.2
-2008,Sweden,Cities,19.3
-2009,Sweden,Cities,19.3
-2010,Sweden,Cities,16.3
-2011,Sweden,Cities,19
-2012,Sweden,Cities,18.3
-2013,Sweden,Cities,14.2
-2014,Sweden,Cities,15.5
-2015,Sweden,Cities,15
-2016,Sweden,Cities,17.5
-2017,Sweden,Cities,16.9
-2018,Sweden,Cities,17.8
-2019,Sweden,Cities,17.7
-2020,Sweden,Cities,19.9
-2023,Sweden,Cities,13.3
-2004,Iceland,Cities,5
-2005,Iceland,Cities,4.8
-2006,Iceland,Cities,3.3
-2007,Iceland,Cities,4.4
-2008,Iceland,Cities,4.3
-2009,Iceland,Cities,5.4
-2010,Iceland,Cities,5
-2011,Iceland,Cities,3.2
-2012,Iceland,Cities,4.4
-2013,Iceland,Cities,2.6
-2014,Iceland,Cities,2.5
-2015,Iceland,Cities,2.8
-2016,Iceland,Cities,2.8
-2017,Iceland,Cities,2.3
-2018,Iceland,Cities,3.6
-2019,Iceland,Cities,3.3
-2004,Norway,Cities,7.4
-2005,Norway,Cities,7
-2006,Norway,Cities,4.9
-2007,Norway,Cities,6.4
-2008,Norway,Cities,6.8
-2009,Norway,Cities,7.4
-2010,Norway,Cities,7.9
-2011,Norway,Cities,6.7
-2012,Norway,Cities,8
-2013,Norway,Cities,6.1
-2015,Norway,Cities,9.8
-2016,Norway,Cities,7.8
-2017,Norway,Cities,6.2
-2018,Norway,Cities,7.4
-2019,Norway,Cities,7.6
-2020,Norway,Cities,6.4
-2023,Norway,Cities,9.5
-2007,Switzerland,Cities,16.9
-2008,Switzerland,Cities,15.8
-2009,Switzerland,Cities,16.6
-2010,Switzerland,Cities,18.8
-2011,Switzerland,Cities,15.6
-2012,Switzerland,Cities,24.2
-2013,Switzerland,Cities,21.3
-2014,Switzerland,Cities,20.4
-2015,Switzerland,Cities,17.9
-2016,Switzerland,Cities,17.4
-2017,Switzerland,Cities,13.1
-2018,Switzerland,Cities,11.4
-2019,Switzerland,Cities,11.3
-2020,Switzerland,Cities,11.8
-2005,United Kingdom,Cities,33.6
-2006,United Kingdom,Cities,31
-2007,United Kingdom,Cities,30.2
-2008,United Kingdom,Cities,29
-2009,United Kingdom,Cities,29.2
-2010,United Kingdom,Cities,27.2
-2011,United Kingdom,Cities,25.3
-2012,United Kingdom,Cities,24.2
-2013,United Kingdom,Cities,22.1
-2014,United Kingdom,Cities,20.4
-2015,United Kingdom,Cities,20.7
-2016,United Kingdom,Cities,21.5
-2017,United Kingdom,Cities,26.1
-2018,United Kingdom,Cities,30.8
-2010,North Macedonia,Cities,10.2
-2011,North Macedonia,Cities,9.8
-2016,North Macedonia,Cities,9.5
-2017,North Macedonia,Cities,6
-2018,North Macedonia,Cities,8.6
-2019,North Macedonia,Cities,7.1
-2020,North Macedonia,Cities,7.8
-2017,Albania,Cities,0.6
-2018,Albania,Cities,0.5
-2019,Albania,Cities,1.3
-2020,Albania,Cities,1.1
-2013,Serbia,Cities,29.3
-2014,Serbia,Cities,31.4
-2015,Serbia,Cities,26.4
-2016,Serbia,Cities,29
-2017,Serbia,Cities,21.1
-2018,Serbia,Cities,20.6
-2019,Serbia,Cities,16.7
-2020,Serbia,Cities,16.2
-2003,Belgium,Towns and suburbs,12.9
-2004,Belgium,Towns and suburbs,13
-2005,Belgium,Towns and suburbs,9.3
-2006,Belgium,Towns and suburbs,11.2
-2007,Belgium,Towns and suburbs,9.8
-2008,Belgium,Towns and suburbs,7.5
-2009,Belgium,Towns and suburbs,10.8
-2010,Belgium,Towns and suburbs,11.3
-2011,Belgium,Towns and suburbs,8.4
-2012,Belgium,Towns and suburbs,10.7
-2013,Belgium,Towns and suburbs,14.5
-2014,Belgium,Towns and suburbs,12.5
-2015,Belgium,Towns and suburbs,12.2
-2016,Belgium,Towns and suburbs,9.2
-2017,Belgium,Towns and suburbs,8.9
-2018,Belgium,Towns and suburbs,7.7
-2019,Belgium,Towns and suburbs,10.1
-2020,Belgium,Towns and suburbs,6.6
-2023,Belgium,Towns and suburbs,8.3
-2005,Bulgaria,Towns and suburbs,30.3
-2006,Bulgaria,Towns and suburbs,30.3
-2007,Bulgaria,Towns and suburbs,22.9
-2008,Bulgaria,Towns and suburbs,31.2
-2009,Bulgaria,Towns and suburbs,26
-2010,Bulgaria,Towns and suburbs,28.5
-2011,Bulgaria,Towns and suburbs,31.6
-2012,Bulgaria,Towns and suburbs,22.4
-2013,Bulgaria,Towns and suburbs,24.3
-2014,Bulgaria,Towns and suburbs,25.8
-2015,Bulgaria,Towns and suburbs,22.1
-2016,Bulgaria,Towns and suburbs,20.2
-2017,Bulgaria,Towns and suburbs,18.5
-2018,Bulgaria,Towns and suburbs,15.6
-2019,Bulgaria,Towns and suburbs,13.5
-2020,Bulgaria,Towns and suburbs,13
-2023,Bulgaria,Towns and suburbs,11
-2005,Czechia,Towns and suburbs,16.6
-2006,Czechia,Towns and suburbs,13.4
-2007,Czechia,Towns and suburbs,11.3
-2008,Czechia,Towns and suburbs,12.3
-2009,Czechia,Towns and suburbs,13.8
-2010,Czechia,Towns and suburbs,11.3
-2011,Czechia,Towns and suburbs,12.2
-2012,Czechia,Towns and suburbs,13
-2013,Czechia,Towns and suburbs,15.8
-2014,Czechia,Towns and suburbs,13.7
-2015,Czechia,Towns and suburbs,12.8
-2016,Czechia,Towns and suburbs,12.1
-2017,Czechia,Towns and suburbs,9
-2018,Czechia,Towns and suburbs,8.5
-2019,Czechia,Towns and suburbs,7.5
-2020,Czechia,Towns and suburbs,5.5
-2023,Czechia,Towns and suburbs,6
-2003,Denmark,Towns and suburbs,9
-2004,Denmark,Towns and suburbs,14.5
-2005,Denmark,Towns and suburbs,12.8
-2006,Denmark,Towns and suburbs,13.4
-2007,Denmark,Towns and suburbs,11.5
-2008,Denmark,Towns and suburbs,14.5
-2009,Denmark,Towns and suburbs,12.8
-2010,Denmark,Towns and suburbs,11.8
-2011,Denmark,Towns and suburbs,12.9
-2012,Denmark,Towns and suburbs,8.1
-2013,Denmark,Towns and suburbs,6.9
-2014,Denmark,Towns and suburbs,6.4
-2015,Denmark,Towns and suburbs,6.1
-2016,Denmark,Towns and suburbs,7.5
-2017,Denmark,Towns and suburbs,6.5
-2018,Denmark,Towns and suburbs,5.4
-2019,Denmark,Towns and suburbs,4.9
-2020,Denmark,Towns and suburbs,5.5
-2023,Denmark,Towns and suburbs,5.2
-2005,Germany,Towns and suburbs,5.8
-2006,Germany,Towns and suburbs,7.1
-2007,Germany,Towns and suburbs,7.1
-2008,Germany,Towns and suburbs,7.1
-2009,Germany,Towns and suburbs,6.5
-2010,Germany,Towns and suburbs,6.9
-2011,Germany,Towns and suburbs,8.4
-2012,Germany,Towns and suburbs,9.2
-2013,Germany,Towns and suburbs,10.5
-2014,Germany,Towns and suburbs,9.7
-2015,Germany,Towns and suburbs,10.3
-2016,Germany,Towns and suburbs,11.2
-2017,Germany,Towns and suburbs,10.6
-2018,Germany,Towns and suburbs,9.2
-2019,Germany,Towns and suburbs,9.7
-2020,Germany,Towns and suburbs,5.2
-2023,Germany,Towns and suburbs,7.3
-2004,Estonia,Towns and suburbs,34.4
-2005,Estonia,Towns and suburbs,22.7
-2006,Estonia,Towns and suburbs,12.5
-2007,Estonia,Towns and suburbs,32
-2008,Estonia,Towns and suburbs,22
-2009,Estonia,Towns and suburbs,6
-2010,Estonia,Towns and suburbs,22.3
-2011,Estonia,Towns and suburbs,9.9
-2012,Estonia,Towns and suburbs,14.1
-2013,Estonia,Towns and suburbs,11
-2014,Estonia,Towns and suburbs,20.6
-2015,Estonia,Towns and suburbs,16
-2016,Estonia,Towns and suburbs,9.1
-2017,Estonia,Towns and suburbs,4.7
-2018,Estonia,Towns and suburbs,6.2
-2019,Estonia,Towns and suburbs,2.7
-2020,Estonia,Towns and suburbs,5.6
-2023,Estonia,Towns and suburbs,2.5
-2003,Ireland,Towns and suburbs,15.9
-2004,Ireland,Towns and suburbs,16
-2005,Ireland,Towns and suburbs,15.9
-2006,Ireland,Towns and suburbs,19.9
-2007,Ireland,Towns and suburbs,18
-2008,Ireland,Towns and suburbs,15
-2009,Ireland,Towns and suburbs,16
-2010,Ireland,Towns and suburbs,10.2
-2011,Ireland,Towns and suburbs,10.7
-2012,Ireland,Towns and suburbs,9.6
-2013,Ireland,Towns and suburbs,10.1
-2014,Ireland,Towns and suburbs,10.7
-2015,Ireland,Towns and suburbs,9.8
-2016,Ireland,Towns and suburbs,10
-2017,Ireland,Towns and suburbs,7.7
-2018,Ireland,Towns and suburbs,9.6
-2019,Ireland,Towns and suburbs,11.4
-2020,Ireland,Towns and suburbs,10.7
-2003,Greece,Towns and suburbs,14.7
-2004,Greece,Towns and suburbs,0
-2005,Greece,Towns and suburbs,17.8
-2006,Greece,Towns and suburbs,14.3
-2007,Greece,Towns and suburbs,15.5
-2008,Greece,Towns and suburbs,14.8
-2009,Greece,Towns and suburbs,18.2
-2010,Greece,Towns and suburbs,19.5
-2011,Greece,Towns and suburbs,25.7
-2012,Greece,Towns and suburbs,15.7
-2013,Greece,Towns and suburbs,23.7
-2014,Greece,Towns and suburbs,13.8
-2015,Greece,Towns and suburbs,13.3
-2016,Greece,Towns and suburbs,11.4
-2017,Greece,Towns and suburbs,12.6
-2018,Greece,Towns and suburbs,12.1
-2019,Greece,Towns and suburbs,16.4
-2020,Greece,Towns and suburbs,17.8
-2023,Greece,Towns and suburbs,16.7
-2004,Spain,Towns and suburbs,15
-2005,Spain,Towns and suburbs,16.7
-2006,Spain,Towns and suburbs,16.5
-2007,Spain,Towns and suburbs,15.7
-2008,Spain,Towns and suburbs,12.3
-2009,Spain,Towns and suburbs,14.7
-2010,Spain,Towns and suburbs,10.9
-2011,Spain,Towns and suburbs,11.3
-2012,Spain,Towns and suburbs,8.5
-2013,Spain,Towns and suburbs,10.2
-2014,Spain,Towns and suburbs,8.4
-2015,Spain,Towns and suburbs,7.2
-2016,Spain,Towns and suburbs,9.2
-2017,Spain,Towns and suburbs,5.2
-2018,Spain,Towns and suburbs,7.7
-2019,Spain,Towns and suburbs,7.2
-2020,Spain,Towns and suburbs,12.1
-2023,Spain,Towns and suburbs,10.9
-2004,France,Towns and suburbs,16.9
-2005,France,Towns and suburbs,13.2
-2006,France,Towns and suburbs,11.7
-2007,France,Towns and suburbs,11.9
-2008,France,Towns and suburbs,11.3
-2009,France,Towns and suburbs,10.4
-2010,France,Towns and suburbs,11.2
-2011,France,Towns and suburbs,10.1
-2012,France,Towns and suburbs,14.1
-2013,France,Towns and suburbs,15.1
-2014,France,Towns and suburbs,12.6
-2015,France,Towns and suburbs,13.4
-2016,France,Towns and suburbs,13.9
-2017,France,Towns and suburbs,14.3
-2018,France,Towns and suburbs,13.7
-2019,France,Towns and suburbs,14.7
-2020,France,Towns and suburbs,15.4
-2023,France,Towns and suburbs,13.3
-2010,Croatia,Towns and suburbs,3.2
-2011,Croatia,Towns and suburbs,3.1
-2012,Croatia,Towns and suburbs,2.6
-2013,Croatia,Towns and suburbs,1.1
-2014,Croatia,Towns and suburbs,1.4
-2015,Croatia,Towns and suburbs,2
-2016,Croatia,Towns and suburbs,2.9
-2017,Croatia,Towns and suburbs,2.6
-2018,Croatia,Towns and suburbs,2.7
-2019,Croatia,Towns and suburbs,3.1
-2020,Croatia,Towns and suburbs,3.1
-2023,Croatia,Towns and suburbs,1.4
-2004,Italy,Towns and suburbs,8.1
-2005,Italy,Towns and suburbs,7.9
-2006,Italy,Towns and suburbs,7.9
-2007,Italy,Towns and suburbs,9.1
-2008,Italy,Towns and suburbs,7.9
-2009,Italy,Towns and suburbs,10.1
-2010,Italy,Towns and suburbs,7.4
-2011,Italy,Towns and suburbs,10.8
-2012,Italy,Towns and suburbs,11.7
-2013,Italy,Towns and suburbs,13.4
-2014,Italy,Towns and suburbs,15.9
-2015,Italy,Towns and suburbs,14.9
-2016,Italy,Towns and suburbs,11.5
-2017,Italy,Towns and suburbs,10.5
-2018,Italy,Towns and suburbs,9.4
-2019,Italy,Towns and suburbs,7.5
-2020,Italy,Towns and suburbs,6.8
-2023,Italy,Towns and suburbs,4.5
-2005,Cyprus,Towns and suburbs,6.1
-2006,Cyprus,Towns and suburbs,9.2
-2007,Cyprus,Towns and suburbs,12.6
-2008,Cyprus,Towns and suburbs,7.3
-2009,Cyprus,Towns and suburbs,11.5
-2010,Cyprus,Towns and suburbs,10.1
-2011,Cyprus,Towns and suburbs,16.2
-2012,Cyprus,Towns and suburbs,18.2
-2013,Cyprus,Towns and suburbs,17
-2014,Cyprus,Towns and suburbs,13.3
-2015,Cyprus,Towns and suburbs,18.2
-2016,Cyprus,Towns and suburbs,6.6
-2017,Cyprus,Towns and suburbs,10
-2018,Cyprus,Towns and suburbs,14.2
-2019,Cyprus,Towns and suburbs,10.9
-2020,Cyprus,Towns and suburbs,16.2
-2023,Cyprus,Towns and suburbs,7.4
-2005,Latvia,Towns and suburbs,11.9
-2006,Latvia,Towns and suburbs,3.5
-2007,Latvia,Towns and suburbs,18.9
-2008,Latvia,Towns and suburbs,17.1
-2009,Latvia,Towns and suburbs,11.4
-2010,Latvia,Towns and suburbs,2.5
-2011,Latvia,Towns and suburbs,1.5
-2012,Latvia,Towns and suburbs,7.7
-2013,Latvia,Towns and suburbs,14.8
-2014,Latvia,Towns and suburbs,11.3
-2015,Latvia,Towns and suburbs,5.3
-2016,Latvia,Towns and suburbs,6.3
-2017,Latvia,Towns and suburbs,5.7
-2018,Latvia,Towns and suburbs,3.1
-2019,Latvia,Towns and suburbs,4.5
-2020,Latvia,Towns and suburbs,2.9
-2023,Latvia,Towns and suburbs,3.4
-2012,Lithuania,Towns and suburbs,4
-2013,Lithuania,Towns and suburbs,5.6
-2014,Lithuania,Towns and suburbs,5.5
-2015,Lithuania,Towns and suburbs,0
-2016,Lithuania,Towns and suburbs,0
-2017,Lithuania,Towns and suburbs,1.2
-2018,Lithuania,Towns and suburbs,2
-2019,Lithuania,Towns and suburbs,0.2
-2020,Lithuania,Towns and suburbs,3
-2023,Lithuania,Towns and suburbs,2.5
-2003,Luxembourg,Towns and suburbs,18.6
-2004,Luxembourg,Towns and suburbs,15.3
-2005,Luxembourg,Towns and suburbs,13.5
-2006,Luxembourg,Towns and suburbs,7.5
-2007,Luxembourg,Towns and suburbs,7.2
-2008,Luxembourg,Towns and suburbs,7.5
-2009,Luxembourg,Towns and suburbs,10.4
-2010,Luxembourg,Towns and suburbs,9.4
-2011,Luxembourg,Towns and suburbs,9.6
-2012,Luxembourg,Towns and suburbs,22.3
-2013,Luxembourg,Towns and suburbs,16.4
-2014,Luxembourg,Towns and suburbs,22.7
-2015,Luxembourg,Towns and suburbs,17.6
-2016,Luxembourg,Towns and suburbs,15.2
-2017,Luxembourg,Towns and suburbs,13.3
-2018,Luxembourg,Towns and suburbs,11.4
-2019,Luxembourg,Towns and suburbs,13.3
-2020,Luxembourg,Towns and suburbs,13
-2023,Luxembourg,Towns and suburbs,5.7
-2005,Hungary,Towns and suburbs,12.1
-2006,Hungary,Towns and suburbs,8.6
-2007,Hungary,Towns and suburbs,12.1
-2008,Hungary,Towns and suburbs,14.7
-2009,Hungary,Towns and suburbs,12.7
-2010,Hungary,Towns and suburbs,12
-2011,Hungary,Towns and suburbs,11.4
-2012,Hungary,Towns and suburbs,11.2
-2013,Hungary,Towns and suburbs,12.7
-2014,Hungary,Towns and suburbs,12.1
-2015,Hungary,Towns and suburbs,12.6
-2016,Hungary,Towns and suburbs,12.3
-2017,Hungary,Towns and suburbs,7
-2018,Hungary,Towns and suburbs,4.7
-2019,Hungary,Towns and suburbs,5.3
-2020,Hungary,Towns and suburbs,5
-2023,Hungary,Towns and suburbs,6.9
-2005,Malta,Towns and suburbs,2.9
-2006,Malta,Towns and suburbs,5.5
-2007,Malta,Towns and suburbs,6
-2008,Malta,Towns and suburbs,6.4
-2009,Malta,Towns and suburbs,5.5
-2010,Malta,Towns and suburbs,4.3
-2011,Malta,Towns and suburbs,4.4
-2012,Malta,Towns and suburbs,7.2
-2013,Malta,Towns and suburbs,9
-2014,Malta,Towns and suburbs,8.5
-2015,Malta,Towns and suburbs,2.4
-2016,Malta,Towns and suburbs,5.6
-2017,Malta,Towns and suburbs,4.8
-2018,Malta,Towns and suburbs,4
-2019,Malta,Towns and suburbs,4.1
-2020,Malta,Towns and suburbs,2.6
-2023,Malta,Towns and suburbs,6.5
-2005,Netherlands,Towns and suburbs,12.8
-2006,Netherlands,Towns and suburbs,10.9
-2007,Netherlands,Towns and suburbs,11.8
-2008,Netherlands,Towns and suburbs,9.8
-2009,Netherlands,Towns and suburbs,15.4
-2010,Netherlands,Towns and suburbs,10.3
-2011,Netherlands,Towns and suburbs,11.7
-2012,Netherlands,Towns and suburbs,16.1
-2013,Netherlands,Towns and suburbs,15.7
-2014,Netherlands,Towns and suburbs,15.3
-2015,Netherlands,Towns and suburbs,14.2
-2016,Netherlands,Towns and suburbs,12.2
-2017,Netherlands,Towns and suburbs,10.7
-2018,Netherlands,Towns and suburbs,12.4
-2019,Netherlands,Towns and suburbs,11.1
-2020,Netherlands,Towns and suburbs,10.5
-2023,Netherlands,Towns and suburbs,10.4
-2004,Austria,Towns and suburbs,7.7
-2005,Austria,Towns and suburbs,9.6
-2006,Austria,Towns and suburbs,10.8
-2007,Austria,Towns and suburbs,10.2
-2008,Austria,Towns and suburbs,8.2
-2009,Austria,Towns and suburbs,13
-2010,Austria,Towns and suburbs,11.6
-2011,Austria,Towns and suburbs,9.2
-2012,Austria,Towns and suburbs,10.4
-2013,Austria,Towns and suburbs,9.4
-2014,Austria,Towns and suburbs,11.2
-2015,Austria,Towns and suburbs,10.8
-2016,Austria,Towns and suburbs,11.1
-2017,Austria,Towns and suburbs,9.1
-2018,Austria,Towns and suburbs,8
-2019,Austria,Towns and suburbs,7.2
-2020,Austria,Towns and suburbs,4.1
-2023,Austria,Towns and suburbs,4.9
-2005,Poland,Towns and suburbs,4.1
-2006,Poland,Towns and suburbs,4.2
-2007,Poland,Towns and suburbs,3.6
-2008,Poland,Towns and suburbs,2.9
-2009,Poland,Towns and suburbs,2.9
-2010,Poland,Towns and suburbs,2.3
-2011,Poland,Towns and suburbs,2.9
-2012,Poland,Towns and suburbs,5.4
-2013,Poland,Towns and suburbs,5.7
-2014,Poland,Towns and suburbs,5.3
-2015,Poland,Towns and suburbs,4.4
-2016,Poland,Towns and suburbs,5.2
-2017,Poland,Towns and suburbs,5.5
-2018,Poland,Towns and suburbs,4.7
-2019,Poland,Towns and suburbs,3.2
-2023,Poland,Towns and suburbs,1.8
-2004,Portugal,Towns and suburbs,8.7
-2005,Portugal,Towns and suburbs,8
-2006,Portugal,Towns and suburbs,7.6
-2007,Portugal,Towns and suburbs,7.3
-2008,Portugal,Towns and suburbs,8.8
-2009,Portugal,Towns and suburbs,8.9
-2010,Portugal,Towns and suburbs,7.3
-2011,Portugal,Towns and suburbs,4.8
-2012,Portugal,Towns and suburbs,7.9
-2013,Portugal,Towns and suburbs,10.5
-2014,Portugal,Towns and suburbs,10.8
-2015,Portugal,Towns and suburbs,10
-2016,Portugal,Towns and suburbs,7.2
-2017,Portugal,Towns and suburbs,6.6
-2018,Portugal,Towns and suburbs,5.3
-2019,Portugal,Towns and suburbs,6
-2020,Portugal,Towns and suburbs,5.1
-2023,Portugal,Towns and suburbs,4.6
-2007,Romania,Towns and suburbs,12.6
-2008,Romania,Towns and suburbs,0.3
-2009,Romania,Towns and suburbs,2.7
-2010,Romania,Towns and suburbs,1.6
-2011,Romania,Towns and suburbs,0.2
-2012,Romania,Towns and suburbs,12.7
-2013,Romania,Towns and suburbs,14.6
-2014,Romania,Towns and suburbs,14.3
-2015,Romania,Towns and suburbs,13.7
-2016,Romania,Towns and suburbs,12.5
-2017,Romania,Towns and suburbs,11.6
-2018,Romania,Towns and suburbs,10.9
-2019,Romania,Towns and suburbs,8.4
-2020,Romania,Towns and suburbs,7.4
-2023,Romania,Towns and suburbs,6.4
-2005,Slovenia,Towns and suburbs,9.2
-2006,Slovenia,Towns and suburbs,9.3
-2007,Slovenia,Towns and suburbs,10.6
-2008,Slovenia,Towns and suburbs,9.6
-2009,Slovenia,Towns and suburbs,13.9
-2010,Slovenia,Towns and suburbs,9.4
-2011,Slovenia,Towns and suburbs,7.9
-2012,Slovenia,Towns and suburbs,6.7
-2013,Slovenia,Towns and suburbs,8.1
-2014,Slovenia,Towns and suburbs,9.2
-2015,Slovenia,Towns and suburbs,9.4
-2016,Slovenia,Towns and suburbs,8.6
-2017,Slovenia,Towns and suburbs,8.2
-2018,Slovenia,Towns and suburbs,8.4
-2019,Slovenia,Towns and suburbs,7.7
-2020,Slovenia,Towns and suburbs,6.9
-2023,Slovenia,Towns and suburbs,6.6
-2005,Slovakia,Towns and suburbs,8.5
-2006,Slovakia,Towns and suburbs,6.6
-2007,Slovakia,Towns and suburbs,5.5
-2008,Slovakia,Towns and suburbs,6.3
-2009,Slovakia,Towns and suburbs,9.2
-2010,Slovakia,Towns and suburbs,8.5
-2011,Slovakia,Towns and suburbs,8.8
-2012,Slovakia,Towns and suburbs,9.4
-2013,Slovakia,Towns and suburbs,10.8
-2014,Slovakia,Towns and suburbs,10.1
-2015,Slovakia,Towns and suburbs,7.8
-2016,Slovakia,Towns and suburbs,8.1
-2017,Slovakia,Towns and suburbs,7.6
-2018,Slovakia,Towns and suburbs,6.4
-2019,Slovakia,Towns and suburbs,7.8
-2020,Slovakia,Towns and suburbs,5.1
-2023,Slovakia,Towns and suburbs,2.9
-2004,Finland,Towns and suburbs,19.7
-2005,Finland,Towns and suburbs,22.6
-2006,Finland,Towns and suburbs,18.6
-2007,Finland,Towns and suburbs,16
-2008,Finland,Towns and suburbs,16.1
-2009,Finland,Towns and suburbs,14.5
-2010,Finland,Towns and suburbs,10.2
-2011,Finland,Towns and suburbs,8.5
-2012,Finland,Towns and suburbs,10.6
-2013,Finland,Towns and suburbs,8.6
-2014,Finland,Towns and suburbs,6.8
-2015,Finland,Towns and suburbs,6.3
-2016,Finland,Towns and suburbs,6.4
-2017,Finland,Towns and suburbs,5.3
-2018,Finland,Towns and suburbs,6.1
-2019,Finland,Towns and suburbs,5.6
-2020,Finland,Towns and suburbs,5.8
-2023,Finland,Towns and suburbs,10
-2004,Sweden,Towns and suburbs,11.2
-2005,Sweden,Towns and suburbs,10.2
-2006,Sweden,Towns and suburbs,13.6
-2007,Sweden,Towns and suburbs,14.6
-2008,Sweden,Towns and suburbs,15.9
-2009,Sweden,Towns and suburbs,14.8
-2010,Sweden,Towns and suburbs,11.4
-2011,Sweden,Towns and suburbs,12.1
-2012,Sweden,Towns and suburbs,11.6
-2013,Sweden,Towns and suburbs,8.6
-2014,Sweden,Towns and suburbs,10
-2015,Sweden,Towns and suburbs,9.6
-2016,Sweden,Towns and suburbs,11
-2017,Sweden,Towns and suburbs,10.8
-2018,Sweden,Towns and suburbs,13
-2019,Sweden,Towns and suburbs,10.2
-2020,Sweden,Towns and suburbs,10.4
-2023,Sweden,Towns and suburbs,7.1
-2014,Iceland,Towns and suburbs,2.2
-2015,Iceland,Towns and suburbs,1.8
-2016,Iceland,Towns and suburbs,2
-2017,Iceland,Towns and suburbs,1.9
-2018,Iceland,Towns and suburbs,2
-2019,Iceland,Towns and suburbs,2.6
-2004,Norway,Towns and suburbs,6.2
-2005,Norway,Towns and suburbs,4.8
-2006,Norway,Towns and suburbs,5.8
-2007,Norway,Towns and suburbs,5.2
-2008,Norway,Towns and suburbs,5.8
-2009,Norway,Towns and suburbs,4.9
-2010,Norway,Towns and suburbs,4.3
-2011,Norway,Towns and suburbs,3.5
-2012,Norway,Towns and suburbs,5
-2013,Norway,Towns and suburbs,3.7
-2015,Norway,Towns and suburbs,4.8
-2016,Norway,Towns and suburbs,4.1
-2017,Norway,Towns and suburbs,3.3
-2018,Norway,Towns and suburbs,3.7
-2019,Norway,Towns and suburbs,3.3
-2020,Norway,Towns and suburbs,3.7
-2023,Norway,Towns and suburbs,5.6
-2007,Switzerland,Towns and suburbs,9.8
-2008,Switzerland,Towns and suburbs,10
-2009,Switzerland,Towns and suburbs,8.2
-2010,Switzerland,Towns and suburbs,9.9
-2011,Switzerland,Towns and suburbs,10.4
-2012,Switzerland,Towns and suburbs,15.3
-2013,Switzerland,Towns and suburbs,13.2
-2014,Switzerland,Towns and suburbs,13.9
-2015,Switzerland,Towns and suburbs,11.3
-2016,Switzerland,Towns and suburbs,9.3
-2017,Switzerland,Towns and suburbs,7.8
-2018,Switzerland,Towns and suburbs,7.1
-2019,Switzerland,Towns and suburbs,6.5
-2020,Switzerland,Towns and suburbs,5.9
-2005,United Kingdom,Towns and suburbs,21.6
-2006,United Kingdom,Towns and suburbs,18.9
-2007,United Kingdom,Towns and suburbs,19.1
-2008,United Kingdom,Towns and suburbs,18.9
-2009,United Kingdom,Towns and suburbs,18.4
-2010,United Kingdom,Towns and suburbs,19
-2011,United Kingdom,Towns and suburbs,16.4
-2012,United Kingdom,Towns and suburbs,15.9
-2013,United Kingdom,Towns and suburbs,12.7
-2014,United Kingdom,Towns and suburbs,13.1
-2015,United Kingdom,Towns and suburbs,12.1
-2016,United Kingdom,Towns and suburbs,11.7
-2017,United Kingdom,Towns and suburbs,14.2
-2018,United Kingdom,Towns and suburbs,16.6
-2010,North Macedonia,Towns and suburbs,2.8
-2011,North Macedonia,Towns and suburbs,3
-2016,North Macedonia,Towns and suburbs,3.3
-2017,North Macedonia,Towns and suburbs,4.3
-2018,North Macedonia,Towns and suburbs,4.7
-2019,North Macedonia,Towns and suburbs,6.7
-2020,North Macedonia,Towns and suburbs,4.6
-2017,Albania,Towns and suburbs,0.5
-2018,Albania,Towns and suburbs,1.7
-2019,Albania,Towns and suburbs,0.3
-2020,Albania,Towns and suburbs,0.5
-2013,Serbia,Towns and suburbs,18.1
-2014,Serbia,Towns and suburbs,21.6
-2015,Serbia,Towns and suburbs,15.9
-2016,Serbia,Towns and suburbs,18.3
-2017,Serbia,Towns and suburbs,13.4
-2018,Serbia,Towns and suburbs,15.4
-2019,Serbia,Towns and suburbs,11.1
-2020,Serbia,Towns and suburbs,7.3
-2003,Belgium,Rural areas,11.6
-2004,Belgium,Rural areas,9
-2005,Belgium,Rural areas,14.7
-2006,Belgium,Rural areas,15
-2007,Belgium,Rural areas,16.6
-2008,Belgium,Rural areas,14.2
-2009,Belgium,Rural areas,7
-2010,Belgium,Rural areas,11
-2011,Belgium,Rural areas,6.3
-2012,Belgium,Rural areas,8.1
-2013,Belgium,Rural areas,13.4
-2014,Belgium,Rural areas,10.1
-2015,Belgium,Rural areas,12.1
-2016,Belgium,Rural areas,9
-2017,Belgium,Rural areas,10
-2018,Belgium,Rural areas,12
-2019,Belgium,Rural areas,11
-2020,Belgium,Rural areas,8.3
-2023,Belgium,Rural areas,6.2
-2005,Bulgaria,Rural areas,14.7
-2006,Bulgaria,Rural areas,14.7
-2007,Bulgaria,Rural areas,19.7
-2008,Bulgaria,Rural areas,17.2
-2009,Bulgaria,Rural areas,21.6
-2010,Bulgaria,Rural areas,21.3
-2011,Bulgaria,Rural areas,19.8
-2012,Bulgaria,Rural areas,17.5
-2013,Bulgaria,Rural areas,18.7
-2014,Bulgaria,Rural areas,19.9
-2015,Bulgaria,Rural areas,19.7
-2016,Bulgaria,Rural areas,17.2
-2017,Bulgaria,Rural areas,17.8
-2018,Bulgaria,Rural areas,17.5
-2019,Bulgaria,Rural areas,14.3
-2020,Bulgaria,Rural areas,12.9
-2023,Bulgaria,Rural areas,9.3
-2005,Czechia,Rural areas,10.4
-2006,Czechia,Rural areas,7.8
-2007,Czechia,Rural areas,7.2
-2008,Czechia,Rural areas,7.6
-2009,Czechia,Rural areas,10.9
-2010,Czechia,Rural areas,9.5
-2011,Czechia,Rural areas,9.9
-2012,Czechia,Rural areas,8.7
-2013,Czechia,Rural areas,9.4
-2014,Czechia,Rural areas,7.6
-2015,Czechia,Rural areas,6.8
-2016,Czechia,Rural areas,6.6
-2017,Czechia,Rural areas,4.2
-2018,Czechia,Rural areas,3.4
-2019,Czechia,Rural areas,3.2
-2020,Czechia,Rural areas,3.1
-2023,Czechia,Rural areas,2.6
-2003,Denmark,Rural areas,6.8
-2004,Denmark,Rural areas,9.7
-2005,Denmark,Rural areas,10.1
-2006,Denmark,Rural areas,9.6
-2007,Denmark,Rural areas,10.9
-2008,Denmark,Rural areas,11.4
-2009,Denmark,Rural areas,10.8
-2010,Denmark,Rural areas,10.3
-2011,Denmark,Rural areas,11.6
-2012,Denmark,Rural areas,6.3
-2013,Denmark,Rural areas,5.3
-2014,Denmark,Rural areas,5.3
-2015,Denmark,Rural areas,5
-2016,Denmark,Rural areas,4
-2017,Denmark,Rural areas,4
-2018,Denmark,Rural areas,3.8
-2019,Denmark,Rural areas,3.9
-2020,Denmark,Rural areas,4.6
-2023,Denmark,Rural areas,2.4
-2005,Germany,Rural areas,6.7
-2006,Germany,Rural areas,6.2
-2007,Germany,Rural areas,6.9
-2008,Germany,Rural areas,6.1
-2009,Germany,Rural areas,7.1
-2010,Germany,Rural areas,6.5
-2011,Germany,Rural areas,6.6
-2012,Germany,Rural areas,5.5
-2013,Germany,Rural areas,4.8
-2014,Germany,Rural areas,5.3
-2015,Germany,Rural areas,5.1
-2016,Germany,Rural areas,5.9
-2017,Germany,Rural areas,5.7
-2018,Germany,Rural areas,5.2
-2019,Germany,Rural areas,5.2
-2020,Germany,Rural areas,1.5
-2023,Germany,Rural areas,3.2
-2004,Estonia,Rural areas,20.1
-2005,Estonia,Rural areas,16.6
-2006,Estonia,Rural areas,13.2
-2007,Estonia,Rural areas,12.6
-2008,Estonia,Rural areas,12.1
-2009,Estonia,Rural areas,12.3
-2010,Estonia,Rural areas,12.4
-2011,Estonia,Rural areas,9.5
-2012,Estonia,Rural areas,9.8
-2013,Estonia,Rural areas,10.1
-2014,Estonia,Rural areas,7.3
-2015,Estonia,Rural areas,6.9
-2016,Estonia,Rural areas,5.3
-2017,Estonia,Rural areas,4.2
-2018,Estonia,Rural areas,5.4
-2019,Estonia,Rural areas,4.7
-2020,Estonia,Rural areas,4.3
-2023,Estonia,Rural areas,2.4
-2003,Ireland,Rural areas,5
-2004,Ireland,Rural areas,5
-2005,Ireland,Rural areas,4.4
-2006,Ireland,Rural areas,5.3
-2007,Ireland,Rural areas,5.3
-2008,Ireland,Rural areas,4.3
-2009,Ireland,Rural areas,7.5
-2010,Ireland,Rural areas,4.8
-2011,Ireland,Rural areas,4.8
-2012,Ireland,Rural areas,6.4
-2013,Ireland,Rural areas,8.6
-2014,Ireland,Rural areas,7.6
-2015,Ireland,Rural areas,7.3
-2016,Ireland,Rural areas,5.7
-2017,Ireland,Rural areas,5
-2018,Ireland,Rural areas,4.7
-2019,Ireland,Rural areas,3.5
-2020,Ireland,Rural areas,5.4
-2003,Greece,Rural areas,4.1
-2004,Greece,Rural areas,4.6
-2005,Greece,Rural areas,4.2
-2006,Greece,Rural areas,2.4
-2007,Greece,Rural areas,2.4
-2008,Greece,Rural areas,3.9
-2009,Greece,Rural areas,7.8
-2010,Greece,Rural areas,5.5
-2011,Greece,Rural areas,10.6
-2012,Greece,Rural areas,9.9
-2013,Greece,Rural areas,8.7
-2014,Greece,Rural areas,9.5
-2015,Greece,Rural areas,5
-2016,Greece,Rural areas,4.7
-2017,Greece,Rural areas,4.6
-2018,Greece,Rural areas,2.9
-2019,Greece,Rural areas,5.7
-2020,Greece,Rural areas,6.2
-2023,Greece,Rural areas,16.4
-2004,Spain,Rural areas,8.9
-2005,Spain,Rural areas,8.9
-2006,Spain,Rural areas,9.6
-2007,Spain,Rural areas,11.1
-2008,Spain,Rural areas,8.5
-2009,Spain,Rural areas,9.9
-2010,Spain,Rural areas,7
-2011,Spain,Rural areas,6
-2012,Spain,Rural areas,5.5
-2013,Spain,Rural areas,8.4
-2014,Spain,Rural areas,7.7
-2015,Spain,Rural areas,4.9
-2016,Spain,Rural areas,6.3
-2017,Spain,Rural areas,4.7
-2018,Spain,Rural areas,6.1
-2019,Spain,Rural areas,6.6
-2020,Spain,Rural areas,9.5
-2023,Spain,Rural areas,7.9
-2004,France,Rural areas,9.2
-2005,France,Rural areas,5.7
-2006,France,Rural areas,6
-2007,France,Rural areas,6.6
-2008,France,Rural areas,6.1
-2009,France,Rural areas,5.6
-2010,France,Rural areas,6.2
-2011,France,Rural areas,5.7
-2012,France,Rural areas,8
-2013,France,Rural areas,8.5
-2014,France,Rural areas,8.6
-2015,France,Rural areas,6.9
-2016,France,Rural areas,7.9
-2017,France,Rural areas,6.8
-2018,France,Rural areas,7.2
-2019,France,Rural areas,7.5
-2020,France,Rural areas,9.2
-2023,France,Rural areas,7
-2010,Croatia,Rural areas,2
-2011,Croatia,Rural areas,1.8
-2012,Croatia,Rural areas,1.5
-2013,Croatia,Rural areas,2
-2014,Croatia,Rural areas,1
-2015,Croatia,Rural areas,0.8
-2016,Croatia,Rural areas,0.8
-2017,Croatia,Rural areas,1.3
-2018,Croatia,Rural areas,1
-2019,Croatia,Rural areas,1.1
-2020,Croatia,Rural areas,0.9
-2023,Croatia,Rural areas,0.4
-2004,Italy,Rural areas,3.3
-2005,Italy,Rural areas,2.7
-2006,Italy,Rural areas,3.2
-2007,Italy,Rural areas,3.5
-2008,Italy,Rural areas,3.2
-2009,Italy,Rural areas,3.9
-2010,Italy,Rural areas,3.2
-2011,Italy,Rural areas,4.2
-2012,Italy,Rural areas,4
-2013,Italy,Rural areas,5.4
-2014,Italy,Rural areas,7.8
-2015,Italy,Rural areas,13.1
-2016,Italy,Rural areas,8.4
-2017,Italy,Rural areas,7
-2018,Italy,Rural areas,6.3
-2019,Italy,Rural areas,5.4
-2020,Italy,Rural areas,4.2
-2023,Italy,Rural areas,2.7
-2005,Cyprus,Rural areas,11.1
-2006,Cyprus,Rural areas,13.1
-2007,Cyprus,Rural areas,13.5
-2008,Cyprus,Rural areas,10.5
-2009,Cyprus,Rural areas,6.7
-2010,Cyprus,Rural areas,10
-2011,Cyprus,Rural areas,12.9
-2012,Cyprus,Rural areas,10.9
-2013,Cyprus,Rural areas,15.5
-2014,Cyprus,Rural areas,7.7
-2015,Cyprus,Rural areas,10.6
-2016,Cyprus,Rural areas,7.7
-2017,Cyprus,Rural areas,9.2
-2018,Cyprus,Rural areas,7.8
-2019,Cyprus,Rural areas,8.5
-2020,Cyprus,Rural areas,9.1
-2023,Cyprus,Rural areas,9.9
-2005,Latvia,Rural areas,14.2
-2006,Latvia,Rural areas,24.6
-2007,Latvia,Rural areas,21.9
-2008,Latvia,Rural areas,23.3
-2009,Latvia,Rural areas,20.4
-2010,Latvia,Rural areas,15.5
-2011,Latvia,Rural areas,12.5
-2012,Latvia,Rural areas,13.1
-2013,Latvia,Rural areas,6.1
-2014,Latvia,Rural areas,6.9
-2015,Latvia,Rural areas,4.6
-2016,Latvia,Rural areas,3.4
-2017,Latvia,Rural areas,3.5
-2018,Latvia,Rural areas,1.4
-2019,Latvia,Rural areas,1.3
-2020,Latvia,Rural areas,2.6
-2023,Latvia,Rural areas,1.4
-2005,Lithuania,Rural areas,5.5
-2006,Lithuania,Rural areas,4.7
-2007,Lithuania,Rural areas,2.9
-2008,Lithuania,Rural areas,2.8
-2009,Lithuania,Rural areas,3.5
-2010,Lithuania,Rural areas,2.5
-2011,Lithuania,Rural areas,1.9
-2012,Lithuania,Rural areas,1.5
-2013,Lithuania,Rural areas,3.3
-2014,Lithuania,Rural areas,3.3
-2015,Lithuania,Rural areas,3
-2016,Lithuania,Rural areas,2
-2017,Lithuania,Rural areas,4.6
-2018,Lithuania,Rural areas,2.8
-2019,Lithuania,Rural areas,1.9
-2020,Lithuania,Rural areas,2.1
-2023,Lithuania,Rural areas,1.3
-2003,Luxembourg,Rural areas,12.1
-2004,Luxembourg,Rural areas,11.4
-2005,Luxembourg,Rural areas,11.6
-2006,Luxembourg,Rural areas,4.7
-2007,Luxembourg,Rural areas,5
-2008,Luxembourg,Rural areas,5.5
-2009,Luxembourg,Rural areas,5
-2010,Luxembourg,Rural areas,2.8
-2011,Luxembourg,Rural areas,3.9
-2012,Luxembourg,Rural areas,7.4
-2013,Luxembourg,Rural areas,9.6
-2014,Luxembourg,Rural areas,11.9
-2015,Luxembourg,Rural areas,11.2
-2016,Luxembourg,Rural areas,9.4
-2017,Luxembourg,Rural areas,9.3
-2018,Luxembourg,Rural areas,8.6
-2019,Luxembourg,Rural areas,6.9
-2020,Luxembourg,Rural areas,7.2
-2023,Luxembourg,Rural areas,2.9
-2005,Hungary,Rural areas,5.8
-2006,Hungary,Rural areas,6.3
-2007,Hungary,Rural areas,10
-2008,Hungary,Rural areas,11.2
-2009,Hungary,Rural areas,9
-2010,Hungary,Rural areas,10.3
-2011,Hungary,Rural areas,9.1
-2012,Hungary,Rural areas,9.7
-2013,Hungary,Rural areas,11.5
-2014,Hungary,Rural areas,13.2
-2015,Hungary,Rural areas,9.4
-2016,Hungary,Rural areas,8.4
-2017,Hungary,Rural areas,5.7
-2018,Hungary,Rural areas,4
-2019,Hungary,Rural areas,5.6
-2020,Hungary,Rural areas,5.6
-2023,Hungary,Rural areas,6.2
-2014,Malta,Rural areas,0
-2015,Malta,Rural areas,0
-2016,Malta,Rural areas,0
-2023,Malta,Rural areas,4.8
-2005,Netherlands,Rural areas,11.6
-2006,Netherlands,Rural areas,8
-2007,Netherlands,Rural areas,7.5
-2008,Netherlands,Rural areas,7.2
-2009,Netherlands,Rural areas,10.3
-2010,Netherlands,Rural areas,8.6
-2011,Netherlands,Rural areas,10.3
-2012,Netherlands,Rural areas,8.8
-2013,Netherlands,Rural areas,9
-2014,Netherlands,Rural areas,10.8
-2015,Netherlands,Rural areas,9.2
-2016,Netherlands,Rural areas,8.1
-2017,Netherlands,Rural areas,8.1
-2018,Netherlands,Rural areas,8.1
-2019,Netherlands,Rural areas,9.4
-2020,Netherlands,Rural areas,7.5
-2023,Netherlands,Rural areas,9.1
-2004,Austria,Rural areas,2.9
-2005,Austria,Rural areas,4.8
-2006,Austria,Rural areas,4.6
-2007,Austria,Rural areas,4.7
-2008,Austria,Rural areas,3.4
-2009,Austria,Rural areas,6.7
-2010,Austria,Rural areas,6.6
-2011,Austria,Rural areas,5.7
-2012,Austria,Rural areas,5.9
-2013,Austria,Rural areas,5.5
-2014,Austria,Rural areas,6.9
-2015,Austria,Rural areas,7.3
-2016,Austria,Rural areas,6.2
-2017,Austria,Rural areas,5.6
-2018,Austria,Rural areas,5.2
-2019,Austria,Rural areas,3
-2020,Austria,Rural areas,2.4
-2023,Austria,Rural areas,2.4
-2005,Poland,Rural areas,3.8
-2006,Poland,Rural areas,3.2
-2007,Poland,Rural areas,3.3
-2008,Poland,Rural areas,3.6
-2009,Poland,Rural areas,3.3
-2010,Poland,Rural areas,2.8
-2011,Poland,Rural areas,2.7
-2012,Poland,Rural areas,2
-2013,Poland,Rural areas,2.3
-2014,Poland,Rural areas,2.5
-2015,Poland,Rural areas,2
-2016,Poland,Rural areas,2
-2017,Poland,Rural areas,1.6
-2018,Poland,Rural areas,2.1
-2019,Poland,Rural areas,1.6
-2023,Poland,Rural areas,1
-2004,Portugal,Rural areas,3.3
-2005,Portugal,Rural areas,3.6
-2006,Portugal,Rural areas,3
-2007,Portugal,Rural areas,3
-2008,Portugal,Rural areas,1.6
-2009,Portugal,Rural areas,3
-2010,Portugal,Rural areas,2.4
-2011,Portugal,Rural areas,2.6
-2012,Portugal,Rural areas,4.9
-2013,Portugal,Rural areas,6.7
-2014,Portugal,Rural areas,5.3
-2015,Portugal,Rural areas,4.8
-2016,Portugal,Rural areas,3.5
-2017,Portugal,Rural areas,4.1
-2018,Portugal,Rural areas,2.9
-2019,Portugal,Rural areas,3.3
-2020,Portugal,Rural areas,4.4
-2023,Portugal,Rural areas,3
-2007,Romania,Rural areas,12.9
-2008,Romania,Rural areas,9.6
-2009,Romania,Rural areas,12.1
-2010,Romania,Rural areas,11.5
-2011,Romania,Rural areas,12.5
-2012,Romania,Rural areas,10.2
-2013,Romania,Rural areas,14.8
-2014,Romania,Rural areas,12.2
-2015,Romania,Rural areas,10.4
-2016,Romania,Rural areas,10.8
-2017,Romania,Rural areas,8.8
-2018,Romania,Rural areas,10
-2019,Romania,Rural areas,8.2
-2020,Romania,Rural areas,8.2
-2023,Romania,Rural areas,4.9
-2005,Slovenia,Rural areas,4.7
-2006,Slovenia,Rural areas,5.5
-2007,Slovenia,Rural areas,5.4
-2008,Slovenia,Rural areas,4.4
-2009,Slovenia,Rural areas,6.3
-2010,Slovenia,Rural areas,5.3
-2011,Slovenia,Rural areas,5.4
-2012,Slovenia,Rural areas,5.3
-2013,Slovenia,Rural areas,6.3
-2014,Slovenia,Rural areas,7.2
-2015,Slovenia,Rural areas,6.3
-2016,Slovenia,Rural areas,5.5
-2017,Slovenia,Rural areas,5.3
-2018,Slovenia,Rural areas,6
-2019,Slovenia,Rural areas,6.2
-2020,Slovenia,Rural areas,5.4
-2023,Slovenia,Rural areas,5.1
-2005,Slovakia,Rural areas,5.5
-2006,Slovakia,Rural areas,4.8
-2007,Slovakia,Rural areas,4.6
-2008,Slovakia,Rural areas,6.8
-2009,Slovakia,Rural areas,7.1
-2010,Slovakia,Rural areas,5.8
-2011,Slovakia,Rural areas,5.9
-2012,Slovakia,Rural areas,6.4
-2013,Slovakia,Rural areas,6.1
-2014,Slovakia,Rural areas,5
-2015,Slovakia,Rural areas,5
-2016,Slovakia,Rural areas,4.3
-2017,Slovakia,Rural areas,3.5
-2018,Slovakia,Rural areas,3
-2019,Slovakia,Rural areas,4
-2020,Slovakia,Rural areas,3.2
-2023,Slovakia,Rural areas,2.6
-2004,Finland,Rural areas,10.9
-2005,Finland,Rural areas,10.6
-2006,Finland,Rural areas,10
-2007,Finland,Rural areas,8.3
-2008,Finland,Rural areas,8.4
-2009,Finland,Rural areas,8.8
-2010,Finland,Rural areas,5.2
-2011,Finland,Rural areas,5.4
-2012,Finland,Rural areas,5.9
-2013,Finland,Rural areas,5.7
-2014,Finland,Rural areas,4
-2015,Finland,Rural areas,3.7
-2016,Finland,Rural areas,3.5
-2017,Finland,Rural areas,3.1
-2018,Finland,Rural areas,3.2
-2019,Finland,Rural areas,3.7
-2020,Finland,Rural areas,3.3
-2023,Finland,Rural areas,5.5
-2004,Sweden,Rural areas,8.5
-2005,Sweden,Rural areas,8.2
-2006,Sweden,Rural areas,10.9
-2007,Sweden,Rural areas,11.4
-2008,Sweden,Rural areas,11.4
-2009,Sweden,Rural areas,10.6
-2010,Sweden,Rural areas,8.1
-2011,Sweden,Rural areas,8.3
-2012,Sweden,Rural areas,7.8
-2013,Sweden,Rural areas,6.7
-2014,Sweden,Rural areas,5.8
-2015,Sweden,Rural areas,7.8
-2016,Sweden,Rural areas,9.4
-2017,Sweden,Rural areas,9.5
-2018,Sweden,Rural areas,10.4
-2019,Sweden,Rural areas,9.1
-2020,Sweden,Rural areas,8.4
-2023,Sweden,Rural areas,6
-2004,Iceland,Rural areas,1.9
-2005,Iceland,Rural areas,1.8
-2006,Iceland,Rural areas,0.9
-2007,Iceland,Rural areas,1.8
-2008,Iceland,Rural areas,1.4
-2009,Iceland,Rural areas,2.1
-2010,Iceland,Rural areas,1.4
-2011,Iceland,Rural areas,0.9
-2012,Iceland,Rural areas,1.6
-2013,Iceland,Rural areas,1.6
-2014,Iceland,Rural areas,0.1
-2015,Iceland,Rural areas,0.2
-2016,Iceland,Rural areas,0.5
-2017,Iceland,Rural areas,1.1
-2018,Iceland,Rural areas,0.9
-2019,Iceland,Rural areas,0.9
-2004,Norway,Rural areas,2.9
-2005,Norway,Rural areas,1.7
-2006,Norway,Rural areas,1.6
-2007,Norway,Rural areas,1.8
-2008,Norway,Rural areas,2.3
-2009,Norway,Rural areas,2.3
-2010,Norway,Rural areas,2.3
-2011,Norway,Rural areas,2.6
-2012,Norway,Rural areas,3.1
-2013,Norway,Rural areas,2.8
-2015,Norway,Rural areas,3.3
-2016,Norway,Rural areas,2.3
-2017,Norway,Rural areas,2.1
-2018,Norway,Rural areas,1.9
-2019,Norway,Rural areas,1.6
-2020,Norway,Rural areas,2.1
-2023,Norway,Rural areas,2.4
-2007,Switzerland,Rural areas,6.4
-2008,Switzerland,Rural areas,6.2
-2009,Switzerland,Rural areas,5.3
-2010,Switzerland,Rural areas,5.1
-2011,Switzerland,Rural areas,4.5
-2012,Switzerland,Rural areas,9.9
-2013,Switzerland,Rural areas,9.6
-2014,Switzerland,Rural areas,10.2
-2015,Switzerland,Rural areas,6.7
-2016,Switzerland,Rural areas,7.3
-2017,Switzerland,Rural areas,6
-2018,Switzerland,Rural areas,3.9
-2019,Switzerland,Rural areas,2.6
-2020,Switzerland,Rural areas,2.9
-2005,United Kingdom,Rural areas,12.2
-2006,United Kingdom,Rural areas,12.3
-2007,United Kingdom,Rural areas,13.4
-2008,United Kingdom,Rural areas,14.2
-2009,United Kingdom,Rural areas,14.2
-2010,United Kingdom,Rural areas,12.9
-2011,United Kingdom,Rural areas,12
-2012,United Kingdom,Rural areas,9.4
-2013,United Kingdom,Rural areas,8.5
-2014,United Kingdom,Rural areas,7.6
-2015,United Kingdom,Rural areas,9.8
-2016,United Kingdom,Rural areas,7.5
-2017,United Kingdom,Rural areas,7.3
-2018,United Kingdom,Rural areas,10.4
-2016,North Macedonia,Rural areas,2.9
-2017,North Macedonia,Rural areas,2.2
-2018,North Macedonia,Rural areas,2.2
-2019,North Macedonia,Rural areas,5.3
-2020,North Macedonia,Rural areas,3.9
-2017,Albania,Rural areas,0.7
-2018,Albania,Rural areas,1.2
-2019,Albania,Rural areas,0.5
-2020,Albania,Rural areas,0.4
-2013,Serbia,Rural areas,12.8
-2014,Serbia,Rural areas,10.5
-2015,Serbia,Rural areas,8.6
-2016,Serbia,Rural areas,8.1
-2017,Serbia,Rural areas,8.1
-2018,Serbia,Rural areas,8.8
-2019,Serbia,Rural areas,5
-2020,Serbia,Rural areas,5
+2003,BE,DEG1,26.4
+2004,BE,DEG1,25.7
+2005,BE,DEG1,24.1
+2006,BE,DEG1,23.9
+2007,BE,DEG1,23.5
+2008,BE,DEG1,22.5
+2009,BE,DEG1,22.4
+2010,BE,DEG1,22.7
+2011,BE,DEG1,21.9
+2012,BE,DEG1,24.8
+2013,BE,DEG1,31.9
+2014,BE,DEG1,26.9
+2015,BE,DEG1,25.7
+2016,BE,DEG1,23.8
+2017,BE,DEG1,21
+2018,BE,DEG1,21.2
+2019,BE,DEG1,20.4
+2020,BE,DEG1,19.8
+2023,BE,DEG1,23.2
+2005,BG,DEG1,36.2
+2006,BG,DEG1,36.2
+2007,BG,DEG1,38.7
+2008,BG,DEG1,34.1
+2009,BG,DEG1,37.4
+2010,BG,DEG1,34.8
+2011,BG,DEG1,35
+2012,BG,DEG1,36.8
+2013,BG,DEG1,32.2
+2014,BG,DEG1,33.4
+2015,BG,DEG1,33.7
+2016,BG,DEG1,33.5
+2017,BG,DEG1,30.8
+2018,BG,DEG1,28
+2019,BG,DEG1,27.8
+2020,BG,DEG1,26.6
+2023,BG,DEG1,22.4
+2005,CZ,DEG1,23.7
+2006,CZ,DEG1,23
+2007,CZ,DEG1,21.3
+2008,CZ,DEG1,22.1
+2009,CZ,DEG1,28.9
+2010,CZ,DEG1,24.8
+2011,CZ,DEG1,22.7
+2012,CZ,DEG1,19
+2013,CZ,DEG1,17.5
+2014,CZ,DEG1,20.1
+2015,CZ,DEG1,17.4
+2016,CZ,DEG1,17.3
+2017,CZ,DEG1,15.8
+2018,CZ,DEG1,12.5
+2019,CZ,DEG1,13.7
+2020,CZ,DEG1,10.5
+2023,CZ,DEG1,12
+2003,DK,DEG1,14.2
+2004,DK,DEG1,19
+2005,DK,DEG1,19.6
+2006,DK,DEG1,18.3
+2007,DK,DEG1,19.5
+2008,DK,DEG1,22.1
+2009,DK,DEG1,25.7
+2010,DK,DEG1,20
+2011,DK,DEG1,21.9
+2012,DK,DEG1,16
+2013,DK,DEG1,15.6
+2014,DK,DEG1,15.8
+2015,DK,DEG1,12.2
+2016,DK,DEG1,13.9
+2017,DK,DEG1,13.1
+2018,DK,DEG1,13.2
+2019,DK,DEG1,12.8
+2020,DK,DEG1,11.1
+2023,DK,DEG1,10.9
+2005,DE,DEG1,14.3
+2006,DE,DEG1,18.7
+2007,DE,DEG1,17.7
+2008,DE,DEG1,19
+2009,DE,DEG1,18.7
+2010,DE,DEG1,17.5
+2011,DE,DEG1,18.2
+2012,DE,DEG1,21.4
+2013,DE,DEG1,22.9
+2014,DE,DEG1,22
+2015,DE,DEG1,23.3
+2016,DE,DEG1,22.4
+2017,DE,DEG1,23.6
+2018,DE,DEG1,23
+2019,DE,DEG1,21.9
+2020,DE,DEG1,14.3
+2023,DE,DEG1,17.1
+2004,EE,DEG1,36.9
+2005,EE,DEG1,30.8
+2006,EE,DEG1,28.2
+2007,EE,DEG1,30.7
+2008,EE,DEG1,22.6
+2009,EE,DEG1,28.1
+2010,EE,DEG1,24
+2011,EE,DEG1,20.5
+2012,EE,DEG1,22.2
+2013,EE,DEG1,15.4
+2014,EE,DEG1,14.1
+2015,EE,DEG1,15
+2016,EE,DEG1,12.7
+2017,EE,DEG1,11
+2018,EE,DEG1,8.7
+2019,EE,DEG1,9.5
+2020,EE,DEG1,6.3
+2023,EE,DEG1,6.7
+2003,IE,DEG1,26
+2004,IE,DEG1,24.1
+2005,IE,DEG1,24.6
+2006,IE,DEG1,26
+2007,IE,DEG1,24
+2008,IE,DEG1,18.5
+2009,IE,DEG1,21
+2010,IE,DEG1,16.6
+2011,IE,DEG1,16.4
+2012,IE,DEG1,16.3
+2013,IE,DEG1,16.7
+2014,IE,DEG1,15.1
+2015,IE,DEG1,16.3
+2016,IE,DEG1,14.4
+2017,IE,DEG1,16.3
+2018,IE,DEG1,16.3
+2019,IE,DEG1,12.1
+2020,IE,DEG1,17.3
+2003,EL,DEG1,14.8
+2004,EL,DEG1,12.7
+2005,EL,DEG1,14.3
+2006,EL,DEG1,13.9
+2007,EL,DEG1,18.1
+2008,EL,DEG1,20.9
+2009,EL,DEG1,25.7
+2010,EL,DEG1,33.3
+2011,EL,DEG1,28.1
+2012,EL,DEG1,29.5
+2013,EL,DEG1,28.4
+2014,EL,DEG1,24.1
+2015,EL,DEG1,19.6
+2016,EL,DEG1,18.1
+2017,EL,DEG1,22.1
+2018,EL,DEG1,22.8
+2019,EL,DEG1,27
+2020,EL,DEG1,28.8
+2023,EL,DEG1,26.9
+2004,ES,DEG1,25.4
+2005,ES,DEG1,25.1
+2006,ES,DEG1,25.6
+2007,ES,DEG1,21.6
+2008,ES,DEG1,18.9
+2009,ES,DEG1,20.4
+2010,ES,DEG1,17.2
+2011,ES,DEG1,13.2
+2012,ES,DEG1,13.4
+2013,ES,DEG1,19.3
+2014,ES,DEG1,15.6
+2015,ES,DEG1,13.8
+2016,ES,DEG1,12.8
+2017,ES,DEG1,12.2
+2018,ES,DEG1,14.8
+2019,ES,DEG1,16.4
+2020,ES,DEG1,17.4
+2023,ES,DEG1,16.6
+2004,FR,DEG1,30.9
+2005,FR,DEG1,24.9
+2006,FR,DEG1,23.1
+2007,FR,DEG1,23.4
+2008,FR,DEG1,20.8
+2009,FR,DEG1,22.6
+2010,FR,DEG1,22.8
+2011,FR,DEG1,22
+2012,FR,DEG1,20
+2013,FR,DEG1,23.7
+2014,FR,DEG1,21.2
+2015,FR,DEG1,19.9
+2016,FR,DEG1,20.8
+2017,FR,DEG1,19
+2018,FR,DEG1,20.4
+2019,FR,DEG1,22.1
+2020,FR,DEG1,27
+2023,FR,DEG1,23
+2010,HR,DEG1,9.4
+2011,HR,DEG1,6.6
+2012,HR,DEG1,6.8
+2013,HR,DEG1,6.6
+2014,HR,DEG1,6.7
+2015,HR,DEG1,7.6
+2016,HR,DEG1,6.7
+2017,HR,DEG1,6.2
+2018,HR,DEG1,4.6
+2019,HR,DEG1,4.2
+2020,HR,DEG1,3.4
+2023,HR,DEG1,2.6
+2004,IT,DEG1,26.9
+2005,IT,DEG1,25.1
+2006,IT,DEG1,25.8
+2007,IT,DEG1,27.4
+2008,IT,DEG1,24
+2009,IT,DEG1,25.7
+2010,IT,DEG1,21.1
+2011,IT,DEG1,21.7
+2012,IT,DEG1,21.8
+2013,IT,DEG1,22
+2014,IT,DEG1,23.6
+2015,IT,DEG1,29
+2016,IT,DEG1,23.2
+2017,IT,DEG1,18.8
+2018,IT,DEG1,17.2
+2019,IT,DEG1,13.9
+2020,IT,DEG1,12.6
+2023,IT,DEG1,10.6
+2005,CY,DEG1,8.3
+2006,CY,DEG1,13.7
+2007,CY,DEG1,13.8
+2008,CY,DEG1,10.6
+2009,CY,DEG1,8.3
+2010,CY,DEG1,14.9
+2011,CY,DEG1,15.7
+2012,CY,DEG1,16.7
+2013,CY,DEG1,14.4
+2014,CY,DEG1,13.6
+2015,CY,DEG1,10.1
+2016,CY,DEG1,12.4
+2017,CY,DEG1,15.3
+2018,CY,DEG1,15.8
+2019,CY,DEG1,15.2
+2020,CY,DEG1,8.6
+2023,CY,DEG1,10.4
+2005,LV,DEG1,32.4
+2006,LV,DEG1,31
+2007,LV,DEG1,33.7
+2008,LV,DEG1,35.1
+2009,LV,DEG1,31.6
+2010,LV,DEG1,34
+2011,LV,DEG1,27.2
+2012,LV,DEG1,22.7
+2013,LV,DEG1,18.2
+2014,LV,DEG1,19.9
+2015,LV,DEG1,21.3
+2016,LV,DEG1,17.8
+2017,LV,DEG1,13.2
+2018,LV,DEG1,17.2
+2019,LV,DEG1,10.9
+2020,LV,DEG1,8.8
+2023,LV,DEG1,11.3
+2005,LT,DEG1,14.1
+2006,LT,DEG1,12
+2007,LT,DEG1,13.1
+2008,LT,DEG1,8.2
+2009,LT,DEG1,10.7
+2010,LT,DEG1,9.3
+2011,LT,DEG1,8.7
+2012,LT,DEG1,9.2
+2013,LT,DEG1,10.1
+2014,LT,DEG1,6.3
+2015,LT,DEG1,7
+2016,LT,DEG1,5.3
+2017,LT,DEG1,13.1
+2018,LT,DEG1,5
+2019,LT,DEG1,4.9
+2020,LT,DEG1,4.5
+2023,LT,DEG1,4.2
+2003,LU,DEG1,20.6
+2004,LU,DEG1,16.9
+2005,LU,DEG1,18.4
+2006,LU,DEG1,16.6
+2007,LU,DEG1,13.6
+2008,LU,DEG1,15.4
+2009,LU,DEG1,13.5
+2010,LU,DEG1,15
+2011,LU,DEG1,15.2
+2012,LU,DEG1,15.9
+2013,LU,DEG1,14.3
+2014,LU,DEG1,18.4
+2015,LU,DEG1,20.4
+2016,LU,DEG1,14.1
+2017,LU,DEG1,16.4
+2018,LU,DEG1,19
+2019,LU,DEG1,14.8
+2020,LU,DEG1,12.5
+2023,LU,DEG1,19.5
+2005,HU,DEG1,22.1
+2006,HU,DEG1,16.4
+2007,HU,DEG1,17.7
+2008,HU,DEG1,14.9
+2009,HU,DEG1,14.9
+2010,HU,DEG1,13.5
+2011,HU,DEG1,13.5
+2012,HU,DEG1,10.5
+2013,HU,DEG1,14
+2014,HU,DEG1,16.9
+2015,HU,DEG1,11.3
+2016,HU,DEG1,9.8
+2017,HU,DEG1,8.8
+2018,HU,DEG1,5.6
+2019,HU,DEG1,5.1
+2020,HU,DEG1,5.2
+2023,HU,DEG1,5
+2005,MT,DEG1,14.5
+2006,MT,DEG1,13.3
+2007,MT,DEG1,10.7
+2008,MT,DEG1,10.1
+2009,MT,DEG1,11.3
+2010,MT,DEG1,11.2
+2011,MT,DEG1,13.7
+2012,MT,DEG1,13.3
+2013,MT,DEG1,13.4
+2014,MT,DEG1,12.7
+2015,MT,DEG1,12
+2016,MT,DEG1,10.9
+2017,MT,DEG1,10.6
+2018,MT,DEG1,13.4
+2019,MT,DEG1,14.7
+2020,MT,DEG1,12.5
+2023,MT,DEG1,8.5
+2005,NL,DEG1,22.4
+2006,NL,DEG1,20.2
+2007,NL,DEG1,21.3
+2008,NL,DEG1,18
+2009,NL,DEG1,25.5
+2010,NL,DEG1,20.3
+2011,NL,DEG1,22.2
+2012,NL,DEG1,23.1
+2013,NL,DEG1,22.9
+2014,NL,DEG1,24
+2015,NL,DEG1,23
+2016,NL,DEG1,21.6
+2017,NL,DEG1,19.1
+2018,NL,DEG1,22.2
+2019,NL,DEG1,20.7
+2020,NL,DEG1,20.2
+2023,NL,DEG1,21.6
+2004,AT,DEG1,19.2
+2005,AT,DEG1,22.9
+2006,AT,DEG1,21.3
+2007,AT,DEG1,19.8
+2008,AT,DEG1,21.1
+2009,AT,DEG1,25.7
+2010,AT,DEG1,22.3
+2011,AT,DEG1,20.7
+2012,AT,DEG1,20.9
+2013,AT,DEG1,21.2
+2014,AT,DEG1,24.6
+2015,AT,DEG1,22.6
+2016,AT,DEG1,22
+2017,AT,DEG1,19.4
+2018,AT,DEG1,16.8
+2019,AT,DEG1,16.4
+2020,AT,DEG1,11.4
+2023,AT,DEG1,14.4
+2005,PL,DEG1,19.7
+2006,PL,DEG1,17.1
+2007,PL,DEG1,15.2
+2008,PL,DEG1,13.3
+2009,PL,DEG1,12.3
+2010,PL,DEG1,12.3
+2011,PL,DEG1,11.7
+2012,PL,DEG1,12.5
+2013,PL,DEG1,12.8
+2014,PL,DEG1,12.4
+2015,PL,DEG1,12.1
+2016,PL,DEG1,10.9
+2017,PL,DEG1,10.9
+2018,PL,DEG1,8.3
+2019,PL,DEG1,8.8
+2023,PL,DEG1,6.1
+2004,PT,DEG1,22.9
+2005,PT,DEG1,23.8
+2006,PT,DEG1,21.3
+2007,PT,DEG1,21.5
+2008,PT,DEG1,19.3
+2009,PT,DEG1,23.6
+2010,PT,DEG1,18.9
+2011,PT,DEG1,17.8
+2012,PT,DEG1,16.9
+2013,PT,DEG1,19.1
+2014,PT,DEG1,16
+2015,PT,DEG1,14.3
+2016,PT,DEG1,10.7
+2017,PT,DEG1,11.1
+2018,PT,DEG1,9.3
+2019,PT,DEG1,9
+2020,PT,DEG1,8.7
+2023,PT,DEG1,10.2
+2007,RO,DEG1,19.7
+2008,RO,DEG1,19.4
+2009,RO,DEG1,23.2
+2010,RO,DEG1,22.3
+2011,RO,DEG1,23.2
+2012,RO,DEG1,18.9
+2013,RO,DEG1,17.7
+2014,RO,DEG1,18
+2015,RO,DEG1,16.4
+2016,RO,DEG1,20.1
+2017,RO,DEG1,14.9
+2018,RO,DEG1,14.6
+2019,RO,DEG1,12.9
+2020,RO,DEG1,11
+2023,RO,DEG1,6.8
+2005,SI,DEG1,27.9
+2006,SI,DEG1,21.1
+2007,SI,DEG1,22.1
+2008,SI,DEG1,18
+2009,SI,DEG1,25.1
+2010,SI,DEG1,19
+2011,SI,DEG1,17.7
+2012,SI,DEG1,17.2
+2013,SI,DEG1,17.2
+2014,SI,DEG1,18.9
+2015,SI,DEG1,16.2
+2016,SI,DEG1,15.6
+2017,SI,DEG1,14.1
+2018,SI,DEG1,11.6
+2019,SI,DEG1,12.4
+2020,SI,DEG1,12.5
+2023,SI,DEG1,10.9
+2005,SK,DEG1,17.8
+2006,SK,DEG1,17.8
+2007,SK,DEG1,17.3
+2008,SK,DEG1,17
+2009,SK,DEG1,23.7
+2010,SK,DEG1,19
+2011,SK,DEG1,18.5
+2012,SK,DEG1,15.6
+2013,SK,DEG1,12.1
+2014,SK,DEG1,13.3
+2015,SK,DEG1,10.6
+2016,SK,DEG1,9.5
+2017,SK,DEG1,8.9
+2018,SK,DEG1,6
+2019,SK,DEG1,5.1
+2020,SK,DEG1,5.3
+2023,SK,DEG1,6
+2004,FI,DEG1,27.1
+2005,FI,DEG1,27.8
+2006,FI,DEG1,24.6
+2007,FI,DEG1,20.5
+2008,FI,DEG1,21.1
+2009,FI,DEG1,23.5
+2010,FI,DEG1,16.3
+2011,FI,DEG1,14.7
+2012,FI,DEG1,13.8
+2013,FI,DEG1,12.7
+2014,FI,DEG1,10
+2015,FI,DEG1,11
+2016,FI,DEG1,9
+2017,FI,DEG1,9.4
+2018,FI,DEG1,10.7
+2019,FI,DEG1,9.1
+2020,FI,DEG1,10.8
+2023,FI,DEG1,16.7
+2004,SE,DEG1,13.9
+2005,SE,DEG1,14.6
+2006,SE,DEG1,21.8
+2007,SE,DEG1,17.2
+2008,SE,DEG1,19.3
+2009,SE,DEG1,19.3
+2010,SE,DEG1,16.3
+2011,SE,DEG1,19
+2012,SE,DEG1,18.3
+2013,SE,DEG1,14.2
+2014,SE,DEG1,15.5
+2015,SE,DEG1,15
+2016,SE,DEG1,17.5
+2017,SE,DEG1,16.9
+2018,SE,DEG1,17.8
+2019,SE,DEG1,17.7
+2020,SE,DEG1,19.9
+2023,SE,DEG1,13.3
+2004,IS,DEG1,5
+2005,IS,DEG1,4.8
+2006,IS,DEG1,3.3
+2007,IS,DEG1,4.4
+2008,IS,DEG1,4.3
+2009,IS,DEG1,5.4
+2010,IS,DEG1,5
+2011,IS,DEG1,3.2
+2012,IS,DEG1,4.4
+2013,IS,DEG1,2.6
+2014,IS,DEG1,2.5
+2015,IS,DEG1,2.8
+2016,IS,DEG1,2.8
+2017,IS,DEG1,2.3
+2018,IS,DEG1,3.6
+2019,IS,DEG1,3.3
+2004,NO,DEG1,7.4
+2005,NO,DEG1,7
+2006,NO,DEG1,4.9
+2007,NO,DEG1,6.4
+2008,NO,DEG1,6.8
+2009,NO,DEG1,7.4
+2010,NO,DEG1,7.9
+2011,NO,DEG1,6.7
+2012,NO,DEG1,8
+2013,NO,DEG1,6.1
+2015,NO,DEG1,9.8
+2016,NO,DEG1,7.8
+2017,NO,DEG1,6.2
+2018,NO,DEG1,7.4
+2019,NO,DEG1,7.6
+2020,NO,DEG1,6.4
+2023,NO,DEG1,9.5
+2007,CH,DEG1,16.9
+2008,CH,DEG1,15.8
+2009,CH,DEG1,16.6
+2010,CH,DEG1,18.8
+2011,CH,DEG1,15.6
+2012,CH,DEG1,24.2
+2013,CH,DEG1,21.3
+2014,CH,DEG1,20.4
+2015,CH,DEG1,17.9
+2016,CH,DEG1,17.4
+2017,CH,DEG1,13.1
+2018,CH,DEG1,11.4
+2019,CH,DEG1,11.3
+2020,CH,DEG1,11.8
+2023,CH,DEG1,12.9
+2005,UK,DEG1,33.6
+2006,UK,DEG1,31
+2007,UK,DEG1,30.2
+2008,UK,DEG1,29
+2009,UK,DEG1,29.2
+2010,UK,DEG1,27.2
+2011,UK,DEG1,25.3
+2012,UK,DEG1,24.2
+2013,UK,DEG1,22.1
+2014,UK,DEG1,20.4
+2015,UK,DEG1,20.7
+2016,UK,DEG1,21.5
+2017,UK,DEG1,26.1
+2018,UK,DEG1,30.8
+2010,MK,DEG1,10.2
+2011,MK,DEG1,9.8
+2016,MK,DEG1,9.5
+2017,MK,DEG1,6
+2018,MK,DEG1,8.6
+2019,MK,DEG1,7.1
+2020,MK,DEG1,7.8
+2017,AL,DEG1,0.6
+2018,AL,DEG1,0.5
+2019,AL,DEG1,1.3
+2020,AL,DEG1,1.1
+2013,RS,DEG1,29.3
+2014,RS,DEG1,31.4
+2015,RS,DEG1,26.4
+2016,RS,DEG1,29
+2017,RS,DEG1,21.1
+2018,RS,DEG1,20.6
+2019,RS,DEG1,16.7
+2020,RS,DEG1,16.2
+2003,BE,DEG2,12.9
+2004,BE,DEG2,13
+2005,BE,DEG2,9.3
+2006,BE,DEG2,11.2
+2007,BE,DEG2,9.8
+2008,BE,DEG2,7.5
+2009,BE,DEG2,10.8
+2010,BE,DEG2,11.3
+2011,BE,DEG2,8.4
+2012,BE,DEG2,10.7
+2013,BE,DEG2,14.5
+2014,BE,DEG2,12.5
+2015,BE,DEG2,12.2
+2016,BE,DEG2,9.2
+2017,BE,DEG2,8.9
+2018,BE,DEG2,7.7
+2019,BE,DEG2,10.1
+2020,BE,DEG2,6.6
+2023,BE,DEG2,8.3
+2005,BG,DEG2,30.3
+2006,BG,DEG2,30.3
+2007,BG,DEG2,22.9
+2008,BG,DEG2,31.2
+2009,BG,DEG2,26
+2010,BG,DEG2,28.5
+2011,BG,DEG2,31.6
+2012,BG,DEG2,22.4
+2013,BG,DEG2,24.3
+2014,BG,DEG2,25.8
+2015,BG,DEG2,22.1
+2016,BG,DEG2,20.2
+2017,BG,DEG2,18.5
+2018,BG,DEG2,15.6
+2019,BG,DEG2,13.5
+2020,BG,DEG2,13
+2023,BG,DEG2,11
+2005,CZ,DEG2,16.6
+2006,CZ,DEG2,13.4
+2007,CZ,DEG2,11.3
+2008,CZ,DEG2,12.3
+2009,CZ,DEG2,13.8
+2010,CZ,DEG2,11.3
+2011,CZ,DEG2,12.2
+2012,CZ,DEG2,13
+2013,CZ,DEG2,15.8
+2014,CZ,DEG2,13.7
+2015,CZ,DEG2,12.8
+2016,CZ,DEG2,12.1
+2017,CZ,DEG2,9
+2018,CZ,DEG2,8.5
+2019,CZ,DEG2,7.5
+2020,CZ,DEG2,5.5
+2023,CZ,DEG2,6
+2003,DK,DEG2,9
+2004,DK,DEG2,14.5
+2005,DK,DEG2,12.8
+2006,DK,DEG2,13.4
+2007,DK,DEG2,11.5
+2008,DK,DEG2,14.5
+2009,DK,DEG2,12.8
+2010,DK,DEG2,11.8
+2011,DK,DEG2,12.9
+2012,DK,DEG2,8.1
+2013,DK,DEG2,6.9
+2014,DK,DEG2,6.4
+2015,DK,DEG2,6.1
+2016,DK,DEG2,7.5
+2017,DK,DEG2,6.5
+2018,DK,DEG2,5.4
+2019,DK,DEG2,4.9
+2020,DK,DEG2,5.5
+2023,DK,DEG2,5.2
+2005,DE,DEG2,5.8
+2006,DE,DEG2,7.1
+2007,DE,DEG2,7.1
+2008,DE,DEG2,7.1
+2009,DE,DEG2,6.5
+2010,DE,DEG2,6.9
+2011,DE,DEG2,8.4
+2012,DE,DEG2,9.2
+2013,DE,DEG2,10.5
+2014,DE,DEG2,9.7
+2015,DE,DEG2,10.3
+2016,DE,DEG2,11.2
+2017,DE,DEG2,10.6
+2018,DE,DEG2,9.2
+2019,DE,DEG2,9.7
+2020,DE,DEG2,5.2
+2023,DE,DEG2,7.3
+2004,EE,DEG2,34.4
+2005,EE,DEG2,22.7
+2006,EE,DEG2,12.5
+2007,EE,DEG2,32
+2008,EE,DEG2,22
+2009,EE,DEG2,6
+2010,EE,DEG2,22.3
+2011,EE,DEG2,9.9
+2012,EE,DEG2,14.1
+2013,EE,DEG2,11
+2014,EE,DEG2,20.6
+2015,EE,DEG2,16
+2016,EE,DEG2,9.1
+2017,EE,DEG2,4.7
+2018,EE,DEG2,6.2
+2019,EE,DEG2,2.7
+2020,EE,DEG2,5.6
+2023,EE,DEG2,2.5
+2003,IE,DEG2,15.9
+2004,IE,DEG2,16
+2005,IE,DEG2,15.9
+2006,IE,DEG2,19.9
+2007,IE,DEG2,18
+2008,IE,DEG2,15
+2009,IE,DEG2,16
+2010,IE,DEG2,10.2
+2011,IE,DEG2,10.7
+2012,IE,DEG2,9.6
+2013,IE,DEG2,10.1
+2014,IE,DEG2,10.7
+2015,IE,DEG2,9.8
+2016,IE,DEG2,10
+2017,IE,DEG2,7.7
+2018,IE,DEG2,9.6
+2019,IE,DEG2,11.4
+2020,IE,DEG2,10.7
+2003,EL,DEG2,14.7
+2004,EL,DEG2,0
+2005,EL,DEG2,17.8
+2006,EL,DEG2,14.3
+2007,EL,DEG2,15.5
+2008,EL,DEG2,14.8
+2009,EL,DEG2,18.2
+2010,EL,DEG2,19.5
+2011,EL,DEG2,25.7
+2012,EL,DEG2,15.7
+2013,EL,DEG2,23.7
+2014,EL,DEG2,13.8
+2015,EL,DEG2,13.3
+2016,EL,DEG2,11.4
+2017,EL,DEG2,12.6
+2018,EL,DEG2,12.1
+2019,EL,DEG2,16.4
+2020,EL,DEG2,17.8
+2023,EL,DEG2,16.7
+2004,ES,DEG2,15
+2005,ES,DEG2,16.7
+2006,ES,DEG2,16.5
+2007,ES,DEG2,15.7
+2008,ES,DEG2,12.3
+2009,ES,DEG2,14.7
+2010,ES,DEG2,10.9
+2011,ES,DEG2,11.3
+2012,ES,DEG2,8.5
+2013,ES,DEG2,10.2
+2014,ES,DEG2,8.4
+2015,ES,DEG2,7.2
+2016,ES,DEG2,9.2
+2017,ES,DEG2,5.2
+2018,ES,DEG2,7.7
+2019,ES,DEG2,7.2
+2020,ES,DEG2,12.1
+2023,ES,DEG2,10.9
+2004,FR,DEG2,16.9
+2005,FR,DEG2,13.2
+2006,FR,DEG2,11.7
+2007,FR,DEG2,11.9
+2008,FR,DEG2,11.3
+2009,FR,DEG2,10.4
+2010,FR,DEG2,11.2
+2011,FR,DEG2,10.1
+2012,FR,DEG2,14.1
+2013,FR,DEG2,15.1
+2014,FR,DEG2,12.6
+2015,FR,DEG2,13.4
+2016,FR,DEG2,13.9
+2017,FR,DEG2,14.3
+2018,FR,DEG2,13.7
+2019,FR,DEG2,14.7
+2020,FR,DEG2,15.4
+2023,FR,DEG2,13.3
+2010,HR,DEG2,3.2
+2011,HR,DEG2,3.1
+2012,HR,DEG2,2.6
+2013,HR,DEG2,1.1
+2014,HR,DEG2,1.4
+2015,HR,DEG2,2
+2016,HR,DEG2,2.9
+2017,HR,DEG2,2.6
+2018,HR,DEG2,2.7
+2019,HR,DEG2,3.1
+2020,HR,DEG2,3.1
+2023,HR,DEG2,1.4
+2004,IT,DEG2,8.1
+2005,IT,DEG2,7.9
+2006,IT,DEG2,7.9
+2007,IT,DEG2,9.1
+2008,IT,DEG2,7.9
+2009,IT,DEG2,10.1
+2010,IT,DEG2,7.4
+2011,IT,DEG2,10.8
+2012,IT,DEG2,11.7
+2013,IT,DEG2,13.4
+2014,IT,DEG2,15.9
+2015,IT,DEG2,14.9
+2016,IT,DEG2,11.5
+2017,IT,DEG2,10.5
+2018,IT,DEG2,9.4
+2019,IT,DEG2,7.5
+2020,IT,DEG2,6.8
+2023,IT,DEG2,4.5
+2005,CY,DEG2,6.1
+2006,CY,DEG2,9.2
+2007,CY,DEG2,12.6
+2008,CY,DEG2,7.3
+2009,CY,DEG2,11.5
+2010,CY,DEG2,10.1
+2011,CY,DEG2,16.2
+2012,CY,DEG2,18.2
+2013,CY,DEG2,17
+2014,CY,DEG2,13.3
+2015,CY,DEG2,18.2
+2016,CY,DEG2,6.6
+2017,CY,DEG2,10
+2018,CY,DEG2,14.2
+2019,CY,DEG2,10.9
+2020,CY,DEG2,16.2
+2023,CY,DEG2,7.4
+2005,LV,DEG2,11.9
+2006,LV,DEG2,3.5
+2007,LV,DEG2,18.9
+2008,LV,DEG2,17.1
+2009,LV,DEG2,11.4
+2010,LV,DEG2,2.5
+2011,LV,DEG2,1.5
+2012,LV,DEG2,7.7
+2013,LV,DEG2,14.8
+2014,LV,DEG2,11.3
+2015,LV,DEG2,5.3
+2016,LV,DEG2,6.3
+2017,LV,DEG2,5.7
+2018,LV,DEG2,3.1
+2019,LV,DEG2,4.5
+2020,LV,DEG2,2.9
+2023,LV,DEG2,3.4
+2012,LT,DEG2,4
+2013,LT,DEG2,5.6
+2014,LT,DEG2,5.5
+2015,LT,DEG2,0
+2016,LT,DEG2,0
+2017,LT,DEG2,1.2
+2018,LT,DEG2,2
+2019,LT,DEG2,0.2
+2020,LT,DEG2,3
+2023,LT,DEG2,2.5
+2003,LU,DEG2,18.6
+2004,LU,DEG2,15.3
+2005,LU,DEG2,13.5
+2006,LU,DEG2,7.5
+2007,LU,DEG2,7.2
+2008,LU,DEG2,7.5
+2009,LU,DEG2,10.4
+2010,LU,DEG2,9.4
+2011,LU,DEG2,9.6
+2012,LU,DEG2,22.3
+2013,LU,DEG2,16.4
+2014,LU,DEG2,22.7
+2015,LU,DEG2,17.6
+2016,LU,DEG2,15.2
+2017,LU,DEG2,13.3
+2018,LU,DEG2,11.4
+2019,LU,DEG2,13.3
+2020,LU,DEG2,13
+2023,LU,DEG2,5.7
+2005,HU,DEG2,12.1
+2006,HU,DEG2,8.6
+2007,HU,DEG2,12.1
+2008,HU,DEG2,14.7
+2009,HU,DEG2,12.7
+2010,HU,DEG2,12
+2011,HU,DEG2,11.4
+2012,HU,DEG2,11.2
+2013,HU,DEG2,12.7
+2014,HU,DEG2,12.1
+2015,HU,DEG2,12.6
+2016,HU,DEG2,12.3
+2017,HU,DEG2,7
+2018,HU,DEG2,4.7
+2019,HU,DEG2,5.3
+2020,HU,DEG2,5
+2023,HU,DEG2,6.9
+2005,MT,DEG2,2.9
+2006,MT,DEG2,5.5
+2007,MT,DEG2,6
+2008,MT,DEG2,6.4
+2009,MT,DEG2,5.5
+2010,MT,DEG2,4.3
+2011,MT,DEG2,4.4
+2012,MT,DEG2,7.2
+2013,MT,DEG2,9
+2014,MT,DEG2,8.5
+2015,MT,DEG2,2.4
+2016,MT,DEG2,5.6
+2017,MT,DEG2,4.8
+2018,MT,DEG2,4
+2019,MT,DEG2,4.1
+2020,MT,DEG2,2.6
+2023,MT,DEG2,6.5
+2005,NL,DEG2,12.8
+2006,NL,DEG2,10.9
+2007,NL,DEG2,11.8
+2008,NL,DEG2,9.8
+2009,NL,DEG2,15.4
+2010,NL,DEG2,10.3
+2011,NL,DEG2,11.7
+2012,NL,DEG2,16.1
+2013,NL,DEG2,15.7
+2014,NL,DEG2,15.3
+2015,NL,DEG2,14.2
+2016,NL,DEG2,12.2
+2017,NL,DEG2,10.7
+2018,NL,DEG2,12.4
+2019,NL,DEG2,11.1
+2020,NL,DEG2,10.5
+2023,NL,DEG2,10.5
+2004,AT,DEG2,7.7
+2005,AT,DEG2,9.6
+2006,AT,DEG2,10.8
+2007,AT,DEG2,10.2
+2008,AT,DEG2,8.2
+2009,AT,DEG2,13
+2010,AT,DEG2,11.6
+2011,AT,DEG2,9.2
+2012,AT,DEG2,10.4
+2013,AT,DEG2,9.4
+2014,AT,DEG2,11.2
+2015,AT,DEG2,10.8
+2016,AT,DEG2,11.1
+2017,AT,DEG2,9.1
+2018,AT,DEG2,8
+2019,AT,DEG2,7.2
+2020,AT,DEG2,4.1
+2023,AT,DEG2,4.9
+2005,PL,DEG2,4.1
+2006,PL,DEG2,4.2
+2007,PL,DEG2,3.6
+2008,PL,DEG2,2.9
+2009,PL,DEG2,2.9
+2010,PL,DEG2,2.3
+2011,PL,DEG2,2.9
+2012,PL,DEG2,5.4
+2013,PL,DEG2,5.7
+2014,PL,DEG2,5.3
+2015,PL,DEG2,4.4
+2016,PL,DEG2,5.2
+2017,PL,DEG2,5.5
+2018,PL,DEG2,4.7
+2019,PL,DEG2,3.2
+2023,PL,DEG2,1.8
+2004,PT,DEG2,8.7
+2005,PT,DEG2,8
+2006,PT,DEG2,7.6
+2007,PT,DEG2,7.3
+2008,PT,DEG2,8.8
+2009,PT,DEG2,8.9
+2010,PT,DEG2,7.3
+2011,PT,DEG2,4.8
+2012,PT,DEG2,7.9
+2013,PT,DEG2,10.5
+2014,PT,DEG2,10.8
+2015,PT,DEG2,10
+2016,PT,DEG2,7.2
+2017,PT,DEG2,6.6
+2018,PT,DEG2,5.3
+2019,PT,DEG2,6
+2020,PT,DEG2,5.1
+2023,PT,DEG2,4.6
+2007,RO,DEG2,12.6
+2008,RO,DEG2,0.3
+2009,RO,DEG2,2.7
+2010,RO,DEG2,1.6
+2011,RO,DEG2,0.2
+2012,RO,DEG2,12.7
+2013,RO,DEG2,14.6
+2014,RO,DEG2,14.3
+2015,RO,DEG2,13.7
+2016,RO,DEG2,12.5
+2017,RO,DEG2,11.6
+2018,RO,DEG2,10.9
+2019,RO,DEG2,8.4
+2020,RO,DEG2,7.4
+2023,RO,DEG2,6.4
+2005,SI,DEG2,9.2
+2006,SI,DEG2,9.3
+2007,SI,DEG2,10.6
+2008,SI,DEG2,9.6
+2009,SI,DEG2,13.9
+2010,SI,DEG2,9.4
+2011,SI,DEG2,7.9
+2012,SI,DEG2,6.7
+2013,SI,DEG2,8.1
+2014,SI,DEG2,9.2
+2015,SI,DEG2,9.4
+2016,SI,DEG2,8.6
+2017,SI,DEG2,8.2
+2018,SI,DEG2,8.4
+2019,SI,DEG2,7.7
+2020,SI,DEG2,6.9
+2023,SI,DEG2,6.6
+2005,SK,DEG2,8.5
+2006,SK,DEG2,6.6
+2007,SK,DEG2,5.5
+2008,SK,DEG2,6.3
+2009,SK,DEG2,9.2
+2010,SK,DEG2,8.5
+2011,SK,DEG2,8.8
+2012,SK,DEG2,9.4
+2013,SK,DEG2,10.8
+2014,SK,DEG2,10.1
+2015,SK,DEG2,7.8
+2016,SK,DEG2,8.1
+2017,SK,DEG2,7.6
+2018,SK,DEG2,6.4
+2019,SK,DEG2,7.8
+2020,SK,DEG2,5.1
+2023,SK,DEG2,2.9
+2004,FI,DEG2,19.7
+2005,FI,DEG2,22.6
+2006,FI,DEG2,18.6
+2007,FI,DEG2,16
+2008,FI,DEG2,16.1
+2009,FI,DEG2,14.5
+2010,FI,DEG2,10.2
+2011,FI,DEG2,8.5
+2012,FI,DEG2,10.6
+2013,FI,DEG2,8.6
+2014,FI,DEG2,6.8
+2015,FI,DEG2,6.3
+2016,FI,DEG2,6.4
+2017,FI,DEG2,5.3
+2018,FI,DEG2,6.1
+2019,FI,DEG2,5.6
+2020,FI,DEG2,5.8
+2023,FI,DEG2,10
+2004,SE,DEG2,11.2
+2005,SE,DEG2,10.2
+2006,SE,DEG2,13.6
+2007,SE,DEG2,14.6
+2008,SE,DEG2,15.9
+2009,SE,DEG2,14.8
+2010,SE,DEG2,11.4
+2011,SE,DEG2,12.1
+2012,SE,DEG2,11.6
+2013,SE,DEG2,8.6
+2014,SE,DEG2,10
+2015,SE,DEG2,9.6
+2016,SE,DEG2,11
+2017,SE,DEG2,10.8
+2018,SE,DEG2,13
+2019,SE,DEG2,10.2
+2020,SE,DEG2,10.4
+2023,SE,DEG2,7.1
+2014,IS,DEG2,2.2
+2015,IS,DEG2,1.8
+2016,IS,DEG2,2
+2017,IS,DEG2,1.9
+2018,IS,DEG2,2
+2019,IS,DEG2,2.6
+2004,NO,DEG2,6.2
+2005,NO,DEG2,4.8
+2006,NO,DEG2,5.8
+2007,NO,DEG2,5.2
+2008,NO,DEG2,5.8
+2009,NO,DEG2,4.9
+2010,NO,DEG2,4.3
+2011,NO,DEG2,3.5
+2012,NO,DEG2,5
+2013,NO,DEG2,3.7
+2015,NO,DEG2,4.8
+2016,NO,DEG2,4.1
+2017,NO,DEG2,3.3
+2018,NO,DEG2,3.7
+2019,NO,DEG2,3.3
+2020,NO,DEG2,3.7
+2023,NO,DEG2,5.6
+2007,CH,DEG2,9.8
+2008,CH,DEG2,10
+2009,CH,DEG2,8.2
+2010,CH,DEG2,9.9
+2011,CH,DEG2,10.4
+2012,CH,DEG2,15.3
+2013,CH,DEG2,13.2
+2014,CH,DEG2,13.9
+2015,CH,DEG2,11.3
+2016,CH,DEG2,9.3
+2017,CH,DEG2,7.8
+2018,CH,DEG2,7.1
+2019,CH,DEG2,6.5
+2020,CH,DEG2,5.9
+2023,CH,DEG2,7.1
+2005,UK,DEG2,21.6
+2006,UK,DEG2,18.9
+2007,UK,DEG2,19.1
+2008,UK,DEG2,18.9
+2009,UK,DEG2,18.4
+2010,UK,DEG2,19
+2011,UK,DEG2,16.4
+2012,UK,DEG2,15.9
+2013,UK,DEG2,12.7
+2014,UK,DEG2,13.1
+2015,UK,DEG2,12.1
+2016,UK,DEG2,11.7
+2017,UK,DEG2,14.2
+2018,UK,DEG2,16.6
+2010,MK,DEG2,2.8
+2011,MK,DEG2,3
+2016,MK,DEG2,3.3
+2017,MK,DEG2,4.3
+2018,MK,DEG2,4.7
+2019,MK,DEG2,6.7
+2020,MK,DEG2,4.6
+2017,AL,DEG2,0.5
+2018,AL,DEG2,1.7
+2019,AL,DEG2,0.3
+2020,AL,DEG2,0.5
+2013,RS,DEG2,18.1
+2014,RS,DEG2,21.6
+2015,RS,DEG2,15.9
+2016,RS,DEG2,18.3
+2017,RS,DEG2,13.4
+2018,RS,DEG2,15.4
+2019,RS,DEG2,11.1
+2020,RS,DEG2,7.3
+2003,BE,DEG3,11.6
+2004,BE,DEG3,9
+2005,BE,DEG3,14.7
+2006,BE,DEG3,15
+2007,BE,DEG3,16.6
+2008,BE,DEG3,14.2
+2009,BE,DEG3,7
+2010,BE,DEG3,11
+2011,BE,DEG3,6.3
+2012,BE,DEG3,8.1
+2013,BE,DEG3,13.4
+2014,BE,DEG3,10.1
+2015,BE,DEG3,12.1
+2016,BE,DEG3,9
+2017,BE,DEG3,10
+2018,BE,DEG3,12
+2019,BE,DEG3,11
+2020,BE,DEG3,8.3
+2023,BE,DEG3,6.2
+2005,BG,DEG3,14.7
+2006,BG,DEG3,14.7
+2007,BG,DEG3,19.7
+2008,BG,DEG3,17.2
+2009,BG,DEG3,21.6
+2010,BG,DEG3,21.3
+2011,BG,DEG3,19.8
+2012,BG,DEG3,17.5
+2013,BG,DEG3,18.7
+2014,BG,DEG3,19.9
+2015,BG,DEG3,19.7
+2016,BG,DEG3,17.2
+2017,BG,DEG3,17.8
+2018,BG,DEG3,17.5
+2019,BG,DEG3,14.3
+2020,BG,DEG3,12.9
+2023,BG,DEG3,9.3
+2005,CZ,DEG3,10.4
+2006,CZ,DEG3,7.8
+2007,CZ,DEG3,7.2
+2008,CZ,DEG3,7.6
+2009,CZ,DEG3,10.9
+2010,CZ,DEG3,9.5
+2011,CZ,DEG3,9.9
+2012,CZ,DEG3,8.7
+2013,CZ,DEG3,9.4
+2014,CZ,DEG3,7.6
+2015,CZ,DEG3,6.8
+2016,CZ,DEG3,6.6
+2017,CZ,DEG3,4.2
+2018,CZ,DEG3,3.4
+2019,CZ,DEG3,3.2
+2020,CZ,DEG3,3.1
+2023,CZ,DEG3,2.6
+2003,DK,DEG3,6.8
+2004,DK,DEG3,9.7
+2005,DK,DEG3,10.1
+2006,DK,DEG3,9.6
+2007,DK,DEG3,10.9
+2008,DK,DEG3,11.4
+2009,DK,DEG3,10.8
+2010,DK,DEG3,10.3
+2011,DK,DEG3,11.6
+2012,DK,DEG3,6.3
+2013,DK,DEG3,5.3
+2014,DK,DEG3,5.3
+2015,DK,DEG3,5
+2016,DK,DEG3,4
+2017,DK,DEG3,4
+2018,DK,DEG3,3.8
+2019,DK,DEG3,3.9
+2020,DK,DEG3,4.6
+2023,DK,DEG3,2.4
+2005,DE,DEG3,6.7
+2006,DE,DEG3,6.2
+2007,DE,DEG3,6.9
+2008,DE,DEG3,6.1
+2009,DE,DEG3,7.1
+2010,DE,DEG3,6.5
+2011,DE,DEG3,6.6
+2012,DE,DEG3,5.5
+2013,DE,DEG3,4.8
+2014,DE,DEG3,5.3
+2015,DE,DEG3,5.1
+2016,DE,DEG3,5.9
+2017,DE,DEG3,5.7
+2018,DE,DEG3,5.2
+2019,DE,DEG3,5.2
+2020,DE,DEG3,1.5
+2023,DE,DEG3,3.2
+2004,EE,DEG3,20.1
+2005,EE,DEG3,16.6
+2006,EE,DEG3,13.2
+2007,EE,DEG3,12.6
+2008,EE,DEG3,12.1
+2009,EE,DEG3,12.3
+2010,EE,DEG3,12.4
+2011,EE,DEG3,9.5
+2012,EE,DEG3,9.8
+2013,EE,DEG3,10.1
+2014,EE,DEG3,7.3
+2015,EE,DEG3,6.9
+2016,EE,DEG3,5.3
+2017,EE,DEG3,4.2
+2018,EE,DEG3,5.4
+2019,EE,DEG3,4.7
+2020,EE,DEG3,4.3
+2023,EE,DEG3,2.4
+2003,IE,DEG3,5
+2004,IE,DEG3,5
+2005,IE,DEG3,4.4
+2006,IE,DEG3,5.3
+2007,IE,DEG3,5.3
+2008,IE,DEG3,4.3
+2009,IE,DEG3,7.5
+2010,IE,DEG3,4.8
+2011,IE,DEG3,4.8
+2012,IE,DEG3,6.4
+2013,IE,DEG3,8.6
+2014,IE,DEG3,7.6
+2015,IE,DEG3,7.3
+2016,IE,DEG3,5.7
+2017,IE,DEG3,5
+2018,IE,DEG3,4.7
+2019,IE,DEG3,3.5
+2020,IE,DEG3,5.4
+2003,EL,DEG3,4.1
+2004,EL,DEG3,4.6
+2005,EL,DEG3,4.2
+2006,EL,DEG3,2.4
+2007,EL,DEG3,2.4
+2008,EL,DEG3,3.9
+2009,EL,DEG3,7.8
+2010,EL,DEG3,5.5
+2011,EL,DEG3,10.6
+2012,EL,DEG3,9.9
+2013,EL,DEG3,8.7
+2014,EL,DEG3,9.5
+2015,EL,DEG3,5
+2016,EL,DEG3,4.7
+2017,EL,DEG3,4.6
+2018,EL,DEG3,2.9
+2019,EL,DEG3,5.7
+2020,EL,DEG3,6.2
+2023,EL,DEG3,16.4
+2004,ES,DEG3,8.9
+2005,ES,DEG3,8.9
+2006,ES,DEG3,9.6
+2007,ES,DEG3,11.1
+2008,ES,DEG3,8.5
+2009,ES,DEG3,9.9
+2010,ES,DEG3,7
+2011,ES,DEG3,6
+2012,ES,DEG3,5.5
+2013,ES,DEG3,8.4
+2014,ES,DEG3,7.7
+2015,ES,DEG3,4.9
+2016,ES,DEG3,6.3
+2017,ES,DEG3,4.7
+2018,ES,DEG3,6.1
+2019,ES,DEG3,6.6
+2020,ES,DEG3,9.5
+2023,ES,DEG3,7.9
+2004,FR,DEG3,9.2
+2005,FR,DEG3,5.7
+2006,FR,DEG3,6
+2007,FR,DEG3,6.6
+2008,FR,DEG3,6.1
+2009,FR,DEG3,5.6
+2010,FR,DEG3,6.2
+2011,FR,DEG3,5.7
+2012,FR,DEG3,8
+2013,FR,DEG3,8.5
+2014,FR,DEG3,8.6
+2015,FR,DEG3,6.9
+2016,FR,DEG3,7.9
+2017,FR,DEG3,6.8
+2018,FR,DEG3,7.2
+2019,FR,DEG3,7.5
+2020,FR,DEG3,9.2
+2023,FR,DEG3,7
+2010,HR,DEG3,2
+2011,HR,DEG3,1.8
+2012,HR,DEG3,1.5
+2013,HR,DEG3,2
+2014,HR,DEG3,1
+2015,HR,DEG3,0.8
+2016,HR,DEG3,0.8
+2017,HR,DEG3,1.3
+2018,HR,DEG3,1
+2019,HR,DEG3,1.1
+2020,HR,DEG3,0.9
+2023,HR,DEG3,0.4
+2004,IT,DEG3,3.3
+2005,IT,DEG3,2.7
+2006,IT,DEG3,3.2
+2007,IT,DEG3,3.5
+2008,IT,DEG3,3.2
+2009,IT,DEG3,3.9
+2010,IT,DEG3,3.2
+2011,IT,DEG3,4.2
+2012,IT,DEG3,4
+2013,IT,DEG3,5.4
+2014,IT,DEG3,7.8
+2015,IT,DEG3,13.1
+2016,IT,DEG3,8.4
+2017,IT,DEG3,7
+2018,IT,DEG3,6.3
+2019,IT,DEG3,5.4
+2020,IT,DEG3,4.2
+2023,IT,DEG3,2.7
+2005,CY,DEG3,11.1
+2006,CY,DEG3,13.1
+2007,CY,DEG3,13.5
+2008,CY,DEG3,10.5
+2009,CY,DEG3,6.7
+2010,CY,DEG3,10
+2011,CY,DEG3,12.9
+2012,CY,DEG3,10.9
+2013,CY,DEG3,15.5
+2014,CY,DEG3,7.7
+2015,CY,DEG3,10.6
+2016,CY,DEG3,7.7
+2017,CY,DEG3,9.2
+2018,CY,DEG3,7.8
+2019,CY,DEG3,8.5
+2020,CY,DEG3,9.1
+2023,CY,DEG3,9.9
+2005,LV,DEG3,14.2
+2006,LV,DEG3,24.6
+2007,LV,DEG3,21.9
+2008,LV,DEG3,23.3
+2009,LV,DEG3,20.4
+2010,LV,DEG3,15.5
+2011,LV,DEG3,12.5
+2012,LV,DEG3,13.1
+2013,LV,DEG3,6.1
+2014,LV,DEG3,6.9
+2015,LV,DEG3,4.6
+2016,LV,DEG3,3.4
+2017,LV,DEG3,3.5
+2018,LV,DEG3,1.4
+2019,LV,DEG3,1.3
+2020,LV,DEG3,2.6
+2023,LV,DEG3,1.4
+2005,LT,DEG3,5.5
+2006,LT,DEG3,4.7
+2007,LT,DEG3,2.9
+2008,LT,DEG3,2.8
+2009,LT,DEG3,3.5
+2010,LT,DEG3,2.5
+2011,LT,DEG3,1.9
+2012,LT,DEG3,1.5
+2013,LT,DEG3,3.3
+2014,LT,DEG3,3.3
+2015,LT,DEG3,3
+2016,LT,DEG3,2
+2017,LT,DEG3,4.6
+2018,LT,DEG3,2.8
+2019,LT,DEG3,1.9
+2020,LT,DEG3,2.1
+2023,LT,DEG3,1.3
+2003,LU,DEG3,12.1
+2004,LU,DEG3,11.4
+2005,LU,DEG3,11.6
+2006,LU,DEG3,4.7
+2007,LU,DEG3,5
+2008,LU,DEG3,5.5
+2009,LU,DEG3,5
+2010,LU,DEG3,2.8
+2011,LU,DEG3,3.9
+2012,LU,DEG3,7.4
+2013,LU,DEG3,9.6
+2014,LU,DEG3,11.9
+2015,LU,DEG3,11.2
+2016,LU,DEG3,9.4
+2017,LU,DEG3,9.3
+2018,LU,DEG3,8.6
+2019,LU,DEG3,6.9
+2020,LU,DEG3,7.2
+2023,LU,DEG3,2.9
+2005,HU,DEG3,5.8
+2006,HU,DEG3,6.3
+2007,HU,DEG3,10
+2008,HU,DEG3,11.2
+2009,HU,DEG3,9
+2010,HU,DEG3,10.3
+2011,HU,DEG3,9.1
+2012,HU,DEG3,9.7
+2013,HU,DEG3,11.5
+2014,HU,DEG3,13.2
+2015,HU,DEG3,9.4
+2016,HU,DEG3,8.4
+2017,HU,DEG3,5.7
+2018,HU,DEG3,4
+2019,HU,DEG3,5.6
+2020,HU,DEG3,5.6
+2023,HU,DEG3,6.2
+2014,MT,DEG3,0
+2015,MT,DEG3,0
+2016,MT,DEG3,0
+2023,MT,DEG3,4.8
+2005,NL,DEG3,11.6
+2006,NL,DEG3,8
+2007,NL,DEG3,7.5
+2008,NL,DEG3,7.2
+2009,NL,DEG3,10.3
+2010,NL,DEG3,8.6
+2011,NL,DEG3,10.3
+2012,NL,DEG3,8.8
+2013,NL,DEG3,9
+2014,NL,DEG3,10.8
+2015,NL,DEG3,9.2
+2016,NL,DEG3,8.1
+2017,NL,DEG3,8.1
+2018,NL,DEG3,8.1
+2019,NL,DEG3,9.4
+2020,NL,DEG3,7.5
+2023,NL,DEG3,9.7
+2004,AT,DEG3,2.9
+2005,AT,DEG3,4.8
+2006,AT,DEG3,4.6
+2007,AT,DEG3,4.7
+2008,AT,DEG3,3.4
+2009,AT,DEG3,6.7
+2010,AT,DEG3,6.6
+2011,AT,DEG3,5.7
+2012,AT,DEG3,5.9
+2013,AT,DEG3,5.5
+2014,AT,DEG3,6.9
+2015,AT,DEG3,7.3
+2016,AT,DEG3,6.2
+2017,AT,DEG3,5.6
+2018,AT,DEG3,5.2
+2019,AT,DEG3,3
+2020,AT,DEG3,2.4
+2023,AT,DEG3,2.4
+2005,PL,DEG3,3.8
+2006,PL,DEG3,3.2
+2007,PL,DEG3,3.3
+2008,PL,DEG3,3.6
+2009,PL,DEG3,3.3
+2010,PL,DEG3,2.8
+2011,PL,DEG3,2.7
+2012,PL,DEG3,2
+2013,PL,DEG3,2.3
+2014,PL,DEG3,2.5
+2015,PL,DEG3,2
+2016,PL,DEG3,2
+2017,PL,DEG3,1.6
+2018,PL,DEG3,2.1
+2019,PL,DEG3,1.6
+2023,PL,DEG3,1
+2004,PT,DEG3,3.3
+2005,PT,DEG3,3.6
+2006,PT,DEG3,3
+2007,PT,DEG3,3
+2008,PT,DEG3,1.6
+2009,PT,DEG3,3
+2010,PT,DEG3,2.4
+2011,PT,DEG3,2.6
+2012,PT,DEG3,4.9
+2013,PT,DEG3,6.7
+2014,PT,DEG3,5.3
+2015,PT,DEG3,4.8
+2016,PT,DEG3,3.5
+2017,PT,DEG3,4.1
+2018,PT,DEG3,2.9
+2019,PT,DEG3,3.3
+2020,PT,DEG3,4.4
+2023,PT,DEG3,3
+2007,RO,DEG3,12.9
+2008,RO,DEG3,9.6
+2009,RO,DEG3,12.1
+2010,RO,DEG3,11.5
+2011,RO,DEG3,12.5
+2012,RO,DEG3,10.2
+2013,RO,DEG3,14.8
+2014,RO,DEG3,12.2
+2015,RO,DEG3,10.4
+2016,RO,DEG3,10.8
+2017,RO,DEG3,8.8
+2018,RO,DEG3,10
+2019,RO,DEG3,8.2
+2020,RO,DEG3,8.2
+2023,RO,DEG3,4.9
+2005,SI,DEG3,4.7
+2006,SI,DEG3,5.5
+2007,SI,DEG3,5.4
+2008,SI,DEG3,4.4
+2009,SI,DEG3,6.3
+2010,SI,DEG3,5.3
+2011,SI,DEG3,5.4
+2012,SI,DEG3,5.3
+2013,SI,DEG3,6.3
+2014,SI,DEG3,7.2
+2015,SI,DEG3,6.3
+2016,SI,DEG3,5.5
+2017,SI,DEG3,5.3
+2018,SI,DEG3,6
+2019,SI,DEG3,6.2
+2020,SI,DEG3,5.4
+2023,SI,DEG3,5.1
+2005,SK,DEG3,5.5
+2006,SK,DEG3,4.8
+2007,SK,DEG3,4.6
+2008,SK,DEG3,6.8
+2009,SK,DEG3,7.1
+2010,SK,DEG3,5.8
+2011,SK,DEG3,5.9
+2012,SK,DEG3,6.4
+2013,SK,DEG3,6.1
+2014,SK,DEG3,5
+2015,SK,DEG3,5
+2016,SK,DEG3,4.3
+2017,SK,DEG3,3.5
+2018,SK,DEG3,3
+2019,SK,DEG3,4
+2020,SK,DEG3,3.2
+2023,SK,DEG3,2.6
+2004,FI,DEG3,10.9
+2005,FI,DEG3,10.6
+2006,FI,DEG3,10
+2007,FI,DEG3,8.3
+2008,FI,DEG3,8.4
+2009,FI,DEG3,8.8
+2010,FI,DEG3,5.2
+2011,FI,DEG3,5.4
+2012,FI,DEG3,5.9
+2013,FI,DEG3,5.7
+2014,FI,DEG3,4
+2015,FI,DEG3,3.7
+2016,FI,DEG3,3.5
+2017,FI,DEG3,3.1
+2018,FI,DEG3,3.2
+2019,FI,DEG3,3.7
+2020,FI,DEG3,3.3
+2023,FI,DEG3,5.5
+2004,SE,DEG3,8.5
+2005,SE,DEG3,8.2
+2006,SE,DEG3,10.9
+2007,SE,DEG3,11.4
+2008,SE,DEG3,11.4
+2009,SE,DEG3,10.6
+2010,SE,DEG3,8.1
+2011,SE,DEG3,8.3
+2012,SE,DEG3,7.8
+2013,SE,DEG3,6.7
+2014,SE,DEG3,5.8
+2015,SE,DEG3,7.8
+2016,SE,DEG3,9.4
+2017,SE,DEG3,9.5
+2018,SE,DEG3,10.4
+2019,SE,DEG3,9.1
+2020,SE,DEG3,8.4
+2023,SE,DEG3,6
+2004,IS,DEG3,1.9
+2005,IS,DEG3,1.8
+2006,IS,DEG3,0.9
+2007,IS,DEG3,1.8
+2008,IS,DEG3,1.4
+2009,IS,DEG3,2.1
+2010,IS,DEG3,1.4
+2011,IS,DEG3,0.9
+2012,IS,DEG3,1.6
+2013,IS,DEG3,1.6
+2014,IS,DEG3,0.1
+2015,IS,DEG3,0.2
+2016,IS,DEG3,0.5
+2017,IS,DEG3,1.1
+2018,IS,DEG3,0.9
+2019,IS,DEG3,0.9
+2004,NO,DEG3,2.9
+2005,NO,DEG3,1.7
+2006,NO,DEG3,1.6
+2007,NO,DEG3,1.8
+2008,NO,DEG3,2.3
+2009,NO,DEG3,2.3
+2010,NO,DEG3,2.3
+2011,NO,DEG3,2.6
+2012,NO,DEG3,3.1
+2013,NO,DEG3,2.8
+2015,NO,DEG3,3.3
+2016,NO,DEG3,2.3
+2017,NO,DEG3,2.1
+2018,NO,DEG3,1.9
+2019,NO,DEG3,1.6
+2020,NO,DEG3,2.1
+2023,NO,DEG3,2.4
+2007,CH,DEG3,6.4
+2008,CH,DEG3,6.2
+2009,CH,DEG3,5.3
+2010,CH,DEG3,5.1
+2011,CH,DEG3,4.5
+2012,CH,DEG3,9.9
+2013,CH,DEG3,9.6
+2014,CH,DEG3,10.2
+2015,CH,DEG3,6.7
+2016,CH,DEG3,7.3
+2017,CH,DEG3,6
+2018,CH,DEG3,3.9
+2019,CH,DEG3,2.6
+2020,CH,DEG3,2.9
+2023,CH,DEG3,5.1
+2005,UK,DEG3,12.2
+2006,UK,DEG3,12.3
+2007,UK,DEG3,13.4
+2008,UK,DEG3,14.2
+2009,UK,DEG3,14.2
+2010,UK,DEG3,12.9
+2011,UK,DEG3,12
+2012,UK,DEG3,9.4
+2013,UK,DEG3,8.5
+2014,UK,DEG3,7.6
+2015,UK,DEG3,9.8
+2016,UK,DEG3,7.5
+2017,UK,DEG3,7.3
+2018,UK,DEG3,10.4
+2016,MK,DEG3,2.9
+2017,MK,DEG3,2.2
+2018,MK,DEG3,2.2
+2019,MK,DEG3,5.3
+2020,MK,DEG3,3.9
+2017,AL,DEG3,0.7
+2018,AL,DEG3,1.2
+2019,AL,DEG3,0.5
+2020,AL,DEG3,0.4
+2013,RS,DEG3,12.8
+2014,RS,DEG3,10.5
+2015,RS,DEG3,8.6
+2016,RS,DEG3,8.1
+2017,RS,DEG3,8.1
+2018,RS,DEG3,8.8
+2019,RS,DEG3,5
+2020,RS,DEG3,5
