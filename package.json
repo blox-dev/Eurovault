@@ -1,0 +1,25 @@
+{
+  "name": "eurovault",
+  "version": "1.0.0",
+  "description": "European Statistics Visualisation Tool",
+  "homepage": "https://github.com/blox-dev/Eurovault2#readme",
+  "bugs": {
+    "url": "https://github.com/blox-dev/Eurovault2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blox-dev/Eurovault2.git"
+  },
+  "license": "MIT",
+  "author": "blox-dev",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "debug": "node --inspect index.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  }
+}

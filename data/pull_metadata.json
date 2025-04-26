@@ -1,0 +1,163 @@
+{
+    "SDG_08_10": {
+        "params": {
+            "unit": ["CLV20_EUR_HAB"]
+        },
+        "x":"Year",
+        "y":"Euro per capita",
+        "view":"Positive"
+    }, 
+    "EDUC_UOE_MOBS04": {
+        "params": {
+            "iscedf13" : ["F01", "F02", "F03", "F04", "F05", "F0511", "F0512", "F052", "F053", "F054", "F06", "F07", "F071",
+            "F072", "F073", "F08", "F09", "F091", "F0911", "F092", "F0921", "F0922", "F0923", "F10", "F1011", "F1012",
+            "F1013", "F1014", "F1015", "F104"]
+        },
+        "x":"Year",
+        "y":"Number of students",
+        "view":"Positive"
+    },
+    "ILC_SCP03": {
+        "params": {
+            "age": ["Y16-24", "Y25-34", "Y35-49", "Y50-64"],
+            "isced11": ["ED5-8", "ED3-4"]
+        },
+        "x":"Year",
+        "y":"Number of people",
+        "view":"Positive"
+    },
+    "YTH_DEMO_010": {
+        "params": {
+            "age": ["TOTAL", "Y_LT15", "Y15-19", "Y20-24", "Y25-29"]
+        },
+        "x":"Year",
+        "y":"Number of people",
+        "view":"Positive"
+    },
+    "EARN_SES18_23": {
+        "params": {
+            "indic_se": ["ERN"],
+            "sizeclas": ["GE10"],
+            "unit": ["EUR", "PPS"]
+        },
+        "x":"Year",
+        "y":"Monthly earnings",
+        "view":"Positive"
+    },
+    "EARN_SES18_20": {
+        "params": {}
+    },
+    "EI_CPHI_M": {
+        "params": {
+            "unit": ["HICP2015"],
+            "indic": ["CP-HI00"],
+            "sinceTimePeriod": [2015]
+        },
+        "x":"Year",
+        "y":"Harmonised consumer price index",
+        "view":"Positive"
+    },
+    "TIPSHO20": {
+        "params": {
+            "unit": ["I15_A_AVG"]
+        },
+        "x":"Year",
+        "y":"House price index",
+        "view":"Positive"
+    },
+    "ILC_MDDW06": {
+        "params": {
+            "incgrp": ["TOTAL"]
+        },
+        "x":"Year",
+        "y":"Crime percentage",
+        "view":"Negative"
+    },
+    "TEIBS030": {
+        "params": {},
+        "x":"Year",
+        "y":"Employment expectations indicator",
+        "view":"Positive"
+    },
+    "LFSA_ERGAEDN": {
+        "params": {
+            "age": ["Y_GE15", "Y15-24", "Y25-54","Y55-64","Y_GE65"],
+            "citizen": ["EU27_2020_FOR", "NEU27_2020_FOR", "FOR", "NAT", "TOTAL"],
+            "isced11": ["TOTAL", "ED0-2", "ED3_4", "ED5-8"]
+        },
+        "x":"Year",
+        "y":"Employment rate",
+        "view":"Positive"
+    },
+    "ILC_DI03": {
+        "params": {
+            "age": ["TOTAL", "Y16-24", "Y25-49", "Y50-64", "Y_GE65"],
+            "unit": ["EUR", "PPS"]
+        },
+        "x":"Year",
+        "y":"Median net income",
+        "view":"Positive"
+    },
+    "EDUC_UOE_FINE06": {
+        "params": {
+            "isced11": ["ED1_2", "ED3_4", "ED5-8"]
+        },
+        "x":"Year",
+        "y":"Education expenditure (percentage of GDP)",
+        "view":"Positive"
+    },
+    "NRG_PC_204": {
+        "params": {
+            "tax": ["X_VAT", "I_TAX"],
+            "currency": ["EUR", "PPS"],
+            "sinceTimePeriod": [2015]
+        },
+        "x":"Year",
+        "y":"Electricity prices for household consumers",
+        "view":"Negative"
+    },
+    "NRG_PC_202": {
+        "params": {
+            "tax": ["X_VAT", "I_TAX"],
+            "currency": ["EUR", "PPS"],
+            "sinceTimePeriod": [2015]
+        },
+        "x":"Year",
+        "y":"Gas prices for household consumers",
+        "view":"Negative"
+    },
+    "GOV_10A_EXP": {
+        "params": {
+            "sector": ["S13"],
+            "na_item": ["TE"],
+            "unit": ["PC_GDP", "PC_TOT"],
+            "cofog99": ["TOTAL","GF01","GF02","GF03","GF04","GF0405","GF05","GF06","GF07","GF0701","GF0702","GF0703","GF08","GF0801",
+                "GF0802","GF09","GF0904","GF10","GF1001","GF1002","GF1004","GF1005","GF1006"
+            ]
+        },
+        "x":"Year",
+        "y":"Government expenditure (percentage of GDP)",
+        "view":"Positive"
+    },
+    "SDG_09_10": {
+        "params": {},
+        "x":"Year",
+        "y":"Expenditure on R&D (percentage of GDP)",
+        "view":"Positive"
+    },
+    "RD_P_PERSSCI": {
+        "params": {
+            "unit": ["HC"],
+            "ford": ["TOTAL", "FORD1", "FORD2", "FORD3", "FORD4", "FORD5", "FORD6"]
+        },
+        "x":"Year",
+        "y":"Number of R&D workers",
+        "view":"Positive"
+    },
+    "TSC00007": {
+        "params": {},
+        "x":"Year",
+        "y":"Percentage of government expenditure",
+        "view":"Positive"
+    }
+}

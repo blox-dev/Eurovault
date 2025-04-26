@@ -1,3 +1,7 @@
+# Metadata files
+data/files
+data/metadata.json
+
 # Logs
 logs
 *.log
