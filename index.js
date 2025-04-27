@@ -7,13 +7,100 @@ const app = express();
 const DATA_FOLDER_PATH = path.resolve(__dirname, 'data');
 const FILES_FOLDER_PATH = path.join(DATA_FOLDER_PATH, 'files');
 const PUBLIC_FOLDER_PATH = path.resolve(__dirname, 'public');
-const VIEWS_PATH = path.join(__dirname, 'views', 'pages', 'index.html');
+const INDEX_PATH = path.join(__dirname, 'public', 'index.html');
 
 const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/";
 
-const geo = ["BE", "BG", "CZ", "DK", "DE", "EE", "IE", "EL", "ES", "FR", "HR", "IT", "CY", "LV", "LT", "LU", "HU", "MT", "NL", "AT", "PL",
-    "PT", "RO", "SI", "SK", "FI", "SE", "IS", "LI", "NO", "CH", "UK", "ME", "MK", "AL", "RS", "TR", "AD", "BY", "BA", "XK", "MD", "RU",
-    "SM", "UA", "AM", "AZ", "GE"];
+// According to 
+// https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Country_codes
+
+const geo = [
+    // European Union (EU)
+    "BE", // Belgium
+    "BG", // Bulgaria
+    "CZ", // Czechia
+    "DK", // Denmark
+    "DE", // Germany
+    "EE", // Estonia
+    "IE", // Ireland
+    "EL", // Greece
+    "ES", // Spain
+    "FR", // France
+    "HR", // Croatia
+    "IT", // Italy
+    "CY", // Cyprus
+    "LV", // Latvia
+    "LT", // Lithuania
+    "LU", // Luxembourg
+    "HU", // Hungary
+    "MT", // Malta
+    "NL", // Netherlands
+    "AT", // Austria
+    "PL", // Poland
+    "PT", // Portugal
+    "RO", // Romania
+    "SI", // Slovenia
+    "SK", // Slovakia
+    "FI", // Finland
+    "SE", // Sweden
+
+    // European Free Trade Association (EFTA)
+    "IS", // Iceland
+    "LI", // Liechtenstein
+    "NO", // Norway
+    "CH", // Switzerland
+
+    // EU candidate countries
+    "BA", // Bosnia and Herzegovina
+    "ME", // Montenegro
+    "MD", // Moldova
+    "MK", // North Macedonia
+    "GE", // Georgia
+    "AL", // Albania
+    "RS", // Serbia
+    "TR", // Türkiye
+    "UA", // Ukraine
+
+    // Potential candidates
+    "XK", // Kosovo (designation in line with UNSCR 1244/1999)
+
+    // // European Neighbourhood Policy (ENP) - East countries
+    "AM", // Armenia
+    "BY", // Belarus
+    "AZ", // Azerbaijan
+
+    // // European Neighbourhood Policy (ENP) - South countries
+    // "DZ", // Algeria
+    // "EG", // Egypt
+    // "IL", // Israel
+    // "JO", // Jordan
+    // "LB", // Lebanon
+    // "LY", // Libya
+    // "MA", // Morocco
+    // "PS", // Palestine
+    // "SY", // Syria
+    // "TN", // Tunisia
+
+    // // Other countries
+    // "AR", // Argentina
+    // "AU", // Australia
+    // "BR", // Brazil
+    // "CA", // Canada
+    // "CN_X_HK", // China (excluding Hong Kong)
+    // "HK", // Hong Kong
+    // "IN", // India
+    // "JP", // Japan
+    // "MX", // Mexico
+    // "NG", // Nigeria
+    // "NZ", // New Zealand
+    // "RU", // Russia
+    // "SG", // Singapore
+    // "ZA", // South Africa
+    // "KR", // South Korea
+    // "TW", // Taiwan
+    "UK", // United Kingdom
+    // "US", // United States
+];
 
 const sinceTimePeriod = 2000;
 const format = 'JSON';
@@ -43,7 +130,7 @@ app.get('/', async (req, res) => {
             metaData = JSON.parse(data);
             buildUrls(metaData);
 
-            res.sendFile(VIEWS_PATH);
+            res.sendFile(INDEX_PATH);
         } else {
             // metadata.json missing: load pull_metadata.json, update database first
             const data = await fs.promises.readFile(pullMetadataPath);
@@ -51,7 +138,7 @@ app.get('/', async (req, res) => {
             buildUrls(metaData);
 
             await updateDatabase(metaData);  // this will generate metadata.json
-            res.sendFile(VIEWS_PATH);
+            res.sendFile(INDEX_PATH);
         }
     } catch (error) {
         console.error(error);

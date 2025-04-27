@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Europe Vault</title>
+  <script src="public/lib/d3.v7.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    svg {
+      display: block;
+      margin: auto;
+      background-color: white;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body style="background-color:#EFEFEF">
+  <!-- Container for D3 Map -->
+  <div id="map-container" style="width:100%; height:100%">
+    <svg id="map" style="background-color:white;"></svg>
+    <div id="tooltip"
+      style="position: absolute; background: #fff; padding: 5px; border-radius: 5px; display: none; pointer-events: none;">
+    </div>
+  </div>
+
+  <script>
+    const svg = d3.select("#map");
+
+    // get parent dimensions
+    const parent = svg.node().parentNode;
+    const width = parent.clientWidth;
+    const height = parent.clientHeight;
+
+    // set SVG attributes
+    svg.attr("width", width)
+      .attr("height", height);
+
+    const projection = d3.geoMercator()
+    const path = d3.geoPath().projection(projection);
+
+    // Add a group for the map
+    const g = svg.append("g");
+
+    fetch('/public/europe.geojson')
+      .then(response => response.json())
+      .then(geoJSON => {
+        const europe = geoJSON;
+
+        projection.fitSize([width, height], europe);
+
+        g.selectAll("path")
+          .data(europe.features)
+          .enter()
+          .append("path")
+          .attr("d", path)
+          .attr("fill", "#cccccc")
+          .attr("stroke", "#333")
+          .attr("stroke-width", 0.5)
+          .attr("data-what", d => JSON.stringify(d.properties))
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("fill", "#ffcc00");
+            console.log(d3.select(this).attr("data-what"));
+            const tooltip = d3.select("#tooltip")
+              .style("left", (event.pageX + 5) + "px")
+              .style("top", (event.pageY - 28) + "px")
+              .style("display", "block")
+              .html(d.properties.ADMIN);
+          })
+          .on("mouseout", function (d) {
+            d3.select(this).attr("fill", "#cccccc");
+            d3.select("#tooltip").style("display", "none");
+          })
+
+        // --- Setup Zooming + Panning ---
+        const zoom = d3.zoom()
+          .scaleExtent([1, 10]) // min zoom 1x, max zoom 8x
+          .translateExtent([[0, 0], [width, height]]) // allow limited panning
+          .on("zoom", (event) => {
+            g.attr("transform", event.transform);
+          });
+
+        svg.call(zoom);
+      })
+      .catch(error => {
+        console.error('Error fetching europe.geojson:', error);
+      });
+
+    // Global object to store all datasets
+    const datasets = {};
+
+    // Fetch metadata
+    fetch('/data/metadata.json')
+      .then(response => response.json())
+      .then(metadata => {
+        console.log('Metadata loaded:', metadata);
+
+        // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
+        const datasetKeys = Object.keys(metadata);
+
+        // For each key, load the corresponding CSV file
+        const csvPromises = datasetKeys.map(key => {
+          const csvPath = `/data/files/${key}.csv`;
+          return d3.csv(csvPath)
+            .then(data => {
+              datasets[key] = data; // Store loaded CSV data into datasets object
+            })
+            .catch(error => {
+              console.error(`Error loading CSV for ${key}:`, error);
+            });
+        });
+
+        // When all CSVs are loaded
+        Promise.all(csvPromises)
+          .then(() => {
+            console.log('All CSVs loaded:', datasets);
+          });
+
+      })
+      .catch(error => {
+        console.error('Error fetching metadata:', error);
+      });
+
+  </script>
+</body>
+
+</html>
