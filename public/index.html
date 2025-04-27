@@ -31,8 +31,15 @@
 </head>
 
 <body style="background-color:#EFEFEF">
+  <!-- Container for controls -->
+  <div id="controls" style="padding: 10px; background-color: #ddd;">
+    <label for="dataset-select">Choose a dataset:</label>
+    <select id="dataset-select"></select>
+    <div id="filter-container" style="margin-top: 10px;"></div>
+  </div>
+
   <!-- Container for D3 Map -->
-  <div id="map-container" style="width:100%; height:100%">
+  <div id="map-container" style="width:100%; height:90%">
     <svg id="map" style="background-color:white;"></svg>
     <div id="tooltip"
       style="position: absolute; background: #fff; padding: 5px; border-radius: 5px; display: none; pointer-events: none;">
@@ -102,12 +109,14 @@
       });
 
     // Global object to store all datasets
-    const datasets = {};
+    let datasets = {};
+    let metadata = {};
 
     // Fetch metadata
     fetch('/data/metadata.json')
       .then(response => response.json())
-      .then(metadata => {
+      .then(data => {
+        metadata = data; // Store metadata in global variable
         console.log('Metadata loaded:', metadata);
 
         // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
@@ -129,12 +138,99 @@
         Promise.all(csvPromises)
           .then(() => {
             console.log('All CSVs loaded:', datasets);
+            setupControls(datasetKeys);
           });
 
       })
       .catch(error => {
         console.error('Error fetching metadata:', error);
       });
+
+    function setupControls(datasetKeys) {
+      const datasetSelect = document.getElementById('dataset-select');
+      const filterContainer = document.getElementById('filter-container');
+
+      // Populate dataset dropdown
+      datasetKeys.forEach((key, index) => {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = metadata[key].label;
+        datasetSelect.appendChild(option);
+      });
+
+      // Set default selection
+      datasetSelect.value = datasetKeys[0];
+      updateFilters(datasetKeys[0]);
+
+      // When dataset changes
+      datasetSelect.addEventListener('change', (e) => {
+        updateFilters(e.target.value);
+      });
+
+      function updateFilters(selectedDataset) {
+        filterContainer.innerHTML = ''; // Clear old filters
+
+        const params = metadata[selectedDataset].params || {};
+        const values = metadata[selectedDataset].values || {};
+
+        // Create dropdowns for each param
+        Object.keys(values).forEach(param => {
+          const label = document.createElement('label');
+          label.textContent = `Filter by ${param}:`;
+          label.style.marginRight = '5px';
+
+          const select = document.createElement('select');
+          select.id = `filter-${param}`;
+          select.style.marginRight = '20px';
+
+          const options = Object.keys(values[param]);
+          options.forEach(opt => {
+            const option = document.createElement('option');
+            option.value = opt;
+            option.textContent = values[param][opt];
+            select.appendChild(option);
+          });
+
+          // If param is constrained in metadata.params, set default to first one
+          if (params[param]) {
+            select.value = params[param][0];
+          } else {
+            select.value = options[0];
+          }
+
+          // Add change event
+          select.addEventListener('change', () => filterData(selectedDataset));
+
+          filterContainer.appendChild(label);
+          filterContainer.appendChild(select);
+        });
+
+        // Initial filtering
+        filterData(selectedDataset);
+      }
+
+      function filterData(selectedDataset) {
+        let data = datasets[selectedDataset];
+
+        const values = metadata[selectedDataset].values || {};
+        let filters = {};
+
+        // Gather selected filters
+        Object.keys(values).forEach(param => {
+          const selected = document.getElementById(`filter-${param}`).value;
+          filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
+        });
+
+        // Filter the dataset
+        const filtered = data.filter(row => {
+          return Object.keys(filters).every(param => {
+            return row[param] === filters[param];
+          });
+        });
+
+        console.log(`Filtered dataset for ${selectedDataset}:`, filtered);
+      }
+    }
 
   </script>
 </body>
