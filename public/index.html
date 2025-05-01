@@ -1,441 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Europe Vault</title>
+    <script src="public/lib/d3.v7.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-  <title>Europe Vault</title>
-  <script src="public/lib/d3.v7.min.js"></script>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+      body {
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        width: 100vw;
+      }
 
-    body {
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      width: 100vw;
-    }
+      svg {
+        display: block;
+        margin: auto;
+        background-color: white;
+        width: 100%;
+        height: 100%;
+      }
 
-    svg {
-      display: block;
-      margin: auto;
-      background-color: white;
-      width: 100%;
-      height: 100%;
-    }
+      path:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
 
-    path:hover {
-  cursor: pointer;
-}
-  </style>
-</head>
+  <body style="background-color: #efefef; overflow: hidden">
+    <!-- Container for controls -->
+    <div id="controls" style="padding: 10px; background-color: #ddd">
+      <label for="dataset-select">Choose a dataset:</label>
+      <select id="dataset-select"></select>
+      <div id="filter-container" style="margin-top: 10px"></div>
+    </div>
 
-<body style="background-color:#EFEFEF; overflow: hidden;">
-  <!-- Container for controls -->
-  <div id="controls" style="padding: 10px; background-color: #ddd;">
-    <label for="dataset-select">Choose a dataset:</label>
-    <select id="dataset-select"></select>
-    <div id="filter-container" style="margin-top: 10px;"></div>
-  </div>
+    <!-- Container for D3 Map -->
+    <div id="map-container" style="width: 100%; height: 90%">
+      <svg id="map" style="background-color: white"></svg>
+      <div
+        id="map-tooltip"
+        style="
+          position: absolute;
+          pointer-events: none;
+          background: #fff;
+          border: 1px solid #ccc;
+          padding: 5px;
+          font-size: 12px;
+          border-radius: 4px;
+          display: none;
+        "
+      ></div>
 
-  <!-- Container for D3 Map -->
-  <div id="map-container" style="width:100%; height:90%;">
-    <svg id="map" style="background-color:white;"></svg>
-    <div id="map-tooltip" style="position:absolute; pointer-events:none; background:#fff; border:1px solid #ccc; padding:5px; font-size:12px; border-radius:4px; display:none;"></div>
+      <div
+        id="info-panel"
+        style="
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          background: rgba(255, 255, 255, 0.85);
+          border-radius: 8px;
+          padding: 10px 14px;
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          font-size: 13px;
+          max-width: 240px;
+          /* pointer-events: none; */
+        "
+      >
+        <div id="info-title" style="font-weight: bold"></div>
+        <div id="info-description" style="margin-top: 4px"></div>
+        <div id="color-legend" style="margin-top: 10px"></div>
+        <div id="time-slider-container" style="margin-top: 12px"></div>
+      </div>
+    </div>
 
-<div id="info-panel" style="
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.85);
-  border-radius: 8px;
-  padding: 10px 14px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
-  font-size: 13px;
-  max-width: 240px;
-  /* pointer-events: none; */
-">
-  <div id="info-title" style="font-weight: bold;"></div>
-  <div id="info-description" style="margin-top: 4px;"></div>
-  <div id="color-legend" style="margin-top: 10px;"></div>
-  <div id="time-slider-container" style="margin-top: 12px;"></div>
-</div>
-  </div>
+    <script>
+      // Global variables
+      let filteredData = []; // Global for current filtered dataset
+      const colorPalette = d3.schemeBlues[6]; // 6-step blue
 
-  <script>
-    // Global variables
-    let filteredData = []; // Global for current filtered dataset
-    const colorPalette = d3.schemeBlues[6]; // 6-step blue
+      const svg = d3.select("#map");
 
-    const svg = d3.select("#map");
+      // get parent dimensions
+      const parent = svg.node().parentNode;
+      const width = parent.clientWidth;
+      const height = parent.clientHeight;
 
-    // get parent dimensions
-    const parent = svg.node().parentNode;
-    const width = parent.clientWidth;
-    const height = parent.clientHeight;
+      // set SVG attributes
+      svg.attr("width", width).attr("height", height);
 
-    // set SVG attributes
-    svg.attr("width", width)
-      .attr("height", height);
+      const projection = d3.geoMercator();
+      const path = d3.geoPath().projection(projection);
 
-    const projection = d3.geoMercator()
-    const path = d3.geoPath().projection(projection);
+      // Add a group for the map
+      const g = svg.append("g");
 
-    // Add a group for the map
-    const g = svg.append("g");
+      fetch("/public/europe.geojson")
+        .then((response) => response.json())
+        .then((geoJSON) => {
+          const europe = geoJSON;
 
-    fetch('/public/europe.geojson')
-      .then(response => response.json())
-      .then(geoJSON => {
-        const europe = geoJSON;
+          projection.fitSize([width, height], europe);
 
-        projection.fitSize([width, height], europe);
-
-        g.selectAll("path")
-          .data(europe.features)
-          .enter()
-          .append("path")
-          .attr("d", path)
-          .attr("fill", "#cccccc")
-          .attr("stroke", "#333")
-          .attr("stroke-width", 0.5)
+          g.selectAll("path")
+            .data(europe.features)
+            .enter()
+            .append("path")
+            .attr("d", path)
+            .attr("fill", "#cccccc")
+            .attr("stroke", "#333")
+            .attr("stroke-width", 0.5);
           // .attr("data-what", d => JSON.stringify(d.properties))
           // .on("mouseover", function (event, d) {
-            // d3.select(this).attr("fill", "#ffcc00");
-            // console.log(d3.select(this).attr("data-what"));
-            // const tooltip = d3.select("#tooltip")
-            //   .style("left", (event.pageX + 5) + "px")
-            //   .style("top", (event.pageY - 28) + "px")
-            //   .style("display", "block")
-            //   .html(d.properties.ADMIN);
+          // d3.select(this).attr("fill", "#ffcc00");
+          // console.log(d3.select(this).attr("data-what"));
+          // const tooltip = d3.select("#tooltip")
+          //   .style("left", (event.pageX + 5) + "px")
+          //   .style("top", (event.pageY - 28) + "px")
+          //   .style("display", "block")
+          //   .html(d.properties.ADMIN);
           // })
           // .on("mouseout", function (d) {
-            // d3.select(this).attr("fill", "#cccccc");
-            // d3.select("#tooltip").style("display", "none");
+          // d3.select(this).attr("fill", "#cccccc");
+          // d3.select("#tooltip").style("display", "none");
           // })
 
-        // --- Setup Zooming + Panning ---
-        const zoom = d3.zoom()
-          .scaleExtent([1, 10]) // min zoom 1x, max zoom 8x
-          .translateExtent([[0, 0], [width, height]]) // allow limited panning
-          .on("zoom", (event) => {
-            g.attr("transform", event.transform);
-          });
-
-        svg.call(zoom);
-      })
-      .catch(error => {
-        console.error('Error fetching europe.geojson:', error);
-      });
-
-    // Global object to store all datasets
-    let datasets = {};
-    let metadata = {};
-    const timeColorCache = {}; // Cache for time-based valuesByGeo
-
-    function parseTime(t) {
-      const match = t.match(/^(\d{4})(?:[-_]?([A-Za-z0-9]+))?$/);
-      return match
-        ? { year: +match[1], suffix: match[2] || "" }
-        : { year: -Infinity, suffix: "" }; // fallback
-    }
-
-    function compareTimes(a, b) {
-      const ta = parseTime(a);
-      const tb = parseTime(b);
-      if (ta.year !== tb.year) return ta.year - tb.year;
-      return ta.suffix.localeCompare(tb.suffix);
-    }
-
-    // Fetch metadata
-    fetch('/data/metadata.json')
-      .then(response => response.json())
-      .then(data => {
-        metadata = data; // Store metadata in global variable
-        console.log('Metadata loaded:', metadata);
-
-        // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
-        const datasetKeys = Object.keys(metadata);
-
-        // For each key, load the corresponding CSV file
-        const csvPromises = datasetKeys.map(key => {
-          const csvPath = `/data/files/${key}.csv`;
-          return d3.csv(csvPath)
-            .then(data => {
-              datasets[key] = data; // Store loaded CSV data into datasets object
-            })
-            .catch(error => {
-              console.error(`Error loading CSV for ${key}:`, error);
+          // --- Setup Zooming + Panning ---
+          const zoom = d3
+            .zoom()
+            .scaleExtent([1, 10]) // min zoom 1x, max zoom 8x
+            .translateExtent([
+              [0, 0],
+              [width, height],
+            ]) // allow limited panning
+            .on("zoom", (event) => {
+              g.attr("transform", event.transform);
             });
+
+          svg.call(zoom);
+        })
+        .catch((error) => {
+          console.error("Error fetching europe.geojson:", error);
         });
 
-        // When all CSVs are loaded
-        Promise.all(csvPromises)
-          .then(() => {
-            console.log('All CSVs loaded:', datasets);
+      // Global object to store all datasets
+      let datasets = {};
+      let metadata = {};
+      const timeColorCache = {}; // Cache for time-based valuesByGeo
+
+      function parseTime(t) {
+        const match = t.match(/^(\d{4})(?:[-_]?([A-Za-z0-9]+))?$/);
+        return match
+          ? { year: +match[1], suffix: match[2] || "" }
+          : { year: -Infinity, suffix: "" }; // fallback
+      }
+
+      function compareTimes(a, b) {
+        const ta = parseTime(a);
+        const tb = parseTime(b);
+        if (ta.year !== tb.year) return ta.year - tb.year;
+        return ta.suffix.localeCompare(tb.suffix);
+      }
+
+      // Fetch metadata
+      fetch("/data/metadata.json")
+        .then((response) => response.json())
+        .then((data) => {
+          metadata = data; // Store metadata in global variable
+          console.log("Metadata loaded:", metadata);
+
+          // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
+          const datasetKeys = Object.keys(metadata);
+
+          // For each key, load the corresponding CSV file
+          const csvPromises = datasetKeys.map((key) => {
+            const csvPath = `/data/files/${key}.csv`;
+            return d3
+              .csv(csvPath)
+              .then((data) => {
+                datasets[key] = data; // Store loaded CSV data into datasets object
+              })
+              .catch((error) => {
+                console.error(`Error loading CSV for ${key}:`, error);
+              });
+          });
+
+          // When all CSVs are loaded
+          Promise.all(csvPromises).then(() => {
+            console.log("All CSVs loaded:", datasets);
             setupControls(datasetKeys);
           });
+        })
+        .catch((error) => {
+          console.error("Error fetching metadata:", error);
+        });
 
-      })
-      .catch(error => {
-        console.error('Error fetching metadata:', error);
-      });
+      function setupControls(datasetKeys) {
+        const datasetSelect = document.getElementById("dataset-select");
+        const filterContainer = document.getElementById("filter-container");
 
-    function setupControls(datasetKeys) {
-      const datasetSelect = document.getElementById('dataset-select');
-      const filterContainer = document.getElementById('filter-container');
+        // Populate dataset dropdown
+        datasetKeys.forEach((key, index) => {
+          const option = document.createElement("option");
+          option.value = key;
+          option.textContent = metadata[key].label;
+          datasetSelect.appendChild(option);
+        });
 
-      // Populate dataset dropdown
-      datasetKeys.forEach((key, index) => {
-        const option = document.createElement('option');
-        option.value = key;
-        option.textContent = metadata[key].label;
-        datasetSelect.appendChild(option);
-      });
+        // Set default selection
+        datasetSelect.value = datasetKeys[0];
+        updateFilters(datasetKeys[0]);
 
-      // Set default selection
-      datasetSelect.value = datasetKeys[0];
-      updateFilters(datasetKeys[0]);
+        // When dataset changes
+        datasetSelect.addEventListener("change", (e) => {
+          updateFilters(e.target.value);
+        });
 
-      // When dataset changes
-      datasetSelect.addEventListener('change', (e) => {
-        updateFilters(e.target.value);
-      });
+        function updateFilters(selectedDataset) {
+          filterContainer.innerHTML = ""; // Clear old filters
 
-      function updateFilters(selectedDataset) {
-        filterContainer.innerHTML = ''; // Clear old filters
+          const params = metadata[selectedDataset].params || {};
+          const values = metadata[selectedDataset].values || {};
 
-        const params = metadata[selectedDataset].params || {};
-        const values = metadata[selectedDataset].values || {};
+          // Create dropdowns for each param
+          Object.keys(values).forEach((param) => {
+            const label = document.createElement("label");
+            label.textContent = `Filter by ${param}:`;
+            label.style.marginRight = "5px";
 
-        // Create dropdowns for each param
-        Object.keys(values).forEach(param => {
-          const label = document.createElement('label');
-          label.textContent = `Filter by ${param}:`;
-          label.style.marginRight = '5px';
+            const select = document.createElement("select");
+            select.id = `filter-${param}`;
+            select.style.marginRight = "20px";
 
-          const select = document.createElement('select');
-          select.id = `filter-${param}`;
-          select.style.marginRight = '20px';
+            const options = Object.keys(values[param]);
+            options.forEach((opt) => {
+              const option = document.createElement("option");
+              option.value = opt;
+              option.textContent = values[param][opt];
+              select.appendChild(option);
+            });
 
-          const options = Object.keys(values[param]);
-          options.forEach(opt => {
-            const option = document.createElement('option');
-            option.value = opt;
-            option.textContent = values[param][opt];
-            select.appendChild(option);
+            // If param is constrained in metadata.params, set default to first one
+            if (params[param]) {
+              select.value = params[param][0];
+            } else {
+              select.value = options[0];
+            }
+
+            // Add change event
+            select.addEventListener("change", () =>
+              filterData(selectedDataset)
+            );
+
+            filterContainer.appendChild(label);
+            filterContainer.appendChild(select);
           });
 
-          // If param is constrained in metadata.params, set default to first one
-          if (params[param]) {
-            select.value = params[param][0];
-          } else {
-            select.value = options[0];
+          // Initial filtering
+          filterData(selectedDataset);
+        }
+
+        function filterData(selectedDataset) {
+          let data = datasets[selectedDataset];
+
+          const values = metadata[selectedDataset].values || {};
+          let filters = {};
+
+          // Gather selected filters
+          Object.keys(values).forEach((param) => {
+            const selected = document.getElementById(`filter-${param}`).value;
+            filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
+          });
+
+          // Filter the dataset
+          filteredData = data.filter((row) => {
+            return Object.keys(filters).every((param) => {
+              return row[param] === filters[param];
+            });
+          });
+
+          console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
+          updateMapColors();
+        }
+
+        function updateMapColors(selectedTime = null) {
+          const timeChanged = selectedTime === null;
+          // 1. Determine if TIME exists
+          const hasTime = filteredData.length > 0 && "TIME" in filteredData[0];
+
+          // 2. If so, find the latest year
+
+          // const times = [...new Set(filteredData.map(d => d.TIME))];
+          // times.sort(compareTimes);
+          // const latestTime = times[times.length - 1];
+
+          let latestTime = selectedTime;
+          if (!selectedTime && hasTime) {
+            let times = [...new Set(filteredData.map((d) => d.TIME))];
+            times.sort(compareTimes);
+            latestTime = times[times.length - 1];
           }
 
-          // Add change event
-          select.addEventListener('change', () => filterData(selectedDataset));
+          // 3. Aggregate by GEO: keep only latest year values
+          // let valuesByGeo = {};
+          // filteredData.forEach(row => {
+          //   const geo = row.GEO;
+          //   if (!geo) return;
 
-          filterContainer.appendChild(label);
-          filterContainer.appendChild(select);
-        });
+          //   // if (!hasTime || +row.TIME === latestYear) {
+          //   if (!hasTime || row.TIME === latestTime) {
+          //     const val = parseFloat(row.VALUE);
+          //     valuesByGeo[geo] = val;
+          //   }
+          // });
 
-        // Initial filtering
-        filterData(selectedDataset);
-      }
-
-      function filterData(selectedDataset) {
-        let data = datasets[selectedDataset];
-
-        const values = metadata[selectedDataset].values || {};
-        let filters = {};
-
-        // Gather selected filters
-        Object.keys(values).forEach(param => {
-          const selected = document.getElementById(`filter-${param}`).value;
-          filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
-        });
-
-        // Filter the dataset
-        filteredData = data.filter(row => {
-          return Object.keys(filters).every(param => {
-            return row[param] === filters[param];
-          });
-        });
-
-        console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
-        updateMapColors();
-      }
-
-      function updateMapColors(selectedTime = null) {
-        const timeChanged = selectedTime === null;
-        // 1. Determine if TIME exists
-        const hasTime = filteredData.length > 0 && 'TIME' in filteredData[0];
-
-        // 2. If so, find the latest year
-
-      // const times = [...new Set(filteredData.map(d => d.TIME))];
-      // times.sort(compareTimes);
-      // const latestTime = times[times.length - 1];
-        
-      let latestTime = selectedTime;
-      if (!selectedTime && hasTime) {
-        let times = [...new Set(filteredData.map(d => d.TIME))];
-        times.sort(compareTimes);
-        latestTime = times[times.length - 1];
-      }
-
-        // 3. Aggregate by GEO: keep only latest year values
-        // let valuesByGeo = {};
-        // filteredData.forEach(row => {
-        //   const geo = row.GEO;
-        //   if (!geo) return;
-
-        //   // if (!hasTime || +row.TIME === latestYear) {
-        //   if (!hasTime || row.TIME === latestTime) {
-        //     const val = parseFloat(row.VALUE);
-        //     valuesByGeo[geo] = val;
-        //   }
-        // });
-
-        let valuesByGeo = timeColorCache[latestTime];
-      if (!valuesByGeo) {
-        valuesByGeo = {};
-        filteredData.forEach(row => {
-          const geo = row.GEO;
-          if (!geo) return;
-          if (!hasTime || row.TIME === latestTime) {
-            const val = parseFloat(row.VALUE);
-            valuesByGeo[geo] = val;
+          let valuesByGeo = timeColorCache[latestTime];
+          if (!valuesByGeo) {
+            valuesByGeo = {};
+            filteredData.forEach((row) => {
+              const geo = row.GEO;
+              if (!geo) return;
+              if (!hasTime || row.TIME === latestTime) {
+                const val = parseFloat(row.VALUE);
+                valuesByGeo[geo] = val;
+              }
+            });
+            timeColorCache[latestTime] = valuesByGeo; // Cache it
           }
-        });
-        timeColorCache[latestTime] = valuesByGeo; // Cache it
-      }
 
-        // 4. Compute min/max ignoring zeros
-        const nonZeroValues = Object.values(valuesByGeo).filter(v => v > 0);
-        const minVal = d3.min(nonZeroValues);
-        const maxVal = d3.max(nonZeroValues);
+          // 4. Compute min/max ignoring zeros
+          const nonZeroValues = Object.values(valuesByGeo).filter((v) => v > 0);
+          const minVal = d3.min(nonZeroValues);
+          const maxVal = d3.max(nonZeroValues);
 
-        const scale = d3.scaleQuantize()
-          .domain([minVal, maxVal])
-          .range(colorPalette);
+          const scale = d3
+            .scaleQuantize()
+            .domain([minVal, maxVal])
+            .range(colorPalette);
 
-        // 5. Re-color the countries
-        d3.selectAll("path")
-          .transition()
-          .duration(300)
-          .attr("fill", function (d) {
-            const geoCode = d.properties.EUROSTAT;
-            const val = valuesByGeo[geoCode] ?? 0;
+          // 5. Re-color the countries
+          d3.selectAll("path")
+            .transition()
+            .duration(300)
+            .attr("fill", function (d) {
+              const geoCode = d.properties.EUROSTAT;
+              const val = valuesByGeo[geoCode] ?? 0;
 
-            if (val === 0 || isNaN(val)) return "#cccccc"; // Grey for 0/missing
-            return scale(val);
-          });
+              if (val === 0 || isNaN(val)) return "#cccccc"; // Grey for 0/missing
+              return scale(val);
+            });
 
           // 5. Re-color and bind tooltip
-        // d3.selectAll("path")
-        //   .transition()
-        //   .duration(300)
-        //   .attr("fill", function (d) {
-        //     const geoCode = d.properties.EUROSTAT;
-        //     const val = valuesByGeo[geoCode] ?? 0;
-        //     if (val === 0 || isNaN(val)) return "#cccccc";
-        //     return scale(val);
-        //   });
+          // d3.selectAll("path")
+          //   .transition()
+          //   .duration(300)
+          //   .attr("fill", function (d) {
+          //     const geoCode = d.properties.EUROSTAT;
+          //     const val = valuesByGeo[geoCode] ?? 0;
+          //     if (val === 0 || isNaN(val)) return "#cccccc";
+          //     return scale(val);
+          //   });
 
-        d3.selectAll("path")
-          .on("mouseover", function (event, d) {
-            d3.select(this).raise()
-            .style("stroke-width", "2.5");
-            const geoCode = d.properties.EUROSTAT;
-            const countryName = d.properties.ADMIN;
-            const val = valuesByGeo[geoCode] ?? 0;
+          d3.selectAll("path")
+            .on("mouseover", function (event, d) {
+              d3.select(this).raise().style("stroke-width", "2.5");
+              const geoCode = d.properties.EUROSTAT;
+              const countryName = d.properties.ADMIN;
+              const val = valuesByGeo[geoCode] ?? 0;
 
-            const tooltip = d3.select("#map-tooltip");
-            tooltip
-              .style("display", "block")
-              .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
-          })
-          .on("mousemove", function (event) {
-            d3.select("#map-tooltip")
-              .style("left", (event.pageX + 10) + "px")
-              .style("top", (event.pageY + 10) + "px");
-          })
-          .on("mouseout", function () {
-            d3.select(this).style("stroke-width", "1");
-            d3.select("#map-tooltip").style("display", "none");
-          });
+              const tooltip = d3.select("#map-tooltip");
+              tooltip
+                .style("display", "block")
+                .html(
+                  `<strong>${countryName}</strong><br/>Value: ${val || "0"}`
+                );
+            })
+            .on("mousemove", function (event) {
+              d3.select("#map-tooltip")
+                .style("left", event.pageX + 10 + "px")
+                .style("top", event.pageY + 10 + "px");
+            })
+            .on("mouseout", function () {
+              d3.select(this).style("stroke-width", "1");
+              d3.select("#map-tooltip").style("display", "none");
+            });
 
-        // 6. Update info panel
-        const dataset = document.getElementById('dataset-select').value;
-        const meta = metadata[dataset];
-        const label = meta.label || dataset;
-        const description = meta.description || "";
-        const shouldShowDescription = description && description !== label;
+          // 6. Update info panel
+          const dataset = document.getElementById("dataset-select").value;
+          const meta = metadata[dataset];
+          const label = meta.label || dataset;
+          const description = meta.description || "";
+          const shouldShowDescription = description && description !== label;
 
-        d3.select("#info-title").text(label);
-        // d3.select("#info-description").text(shouldShowDescription ? description : "");
-        const descContainer = d3.select("#info-description");
-      descContainer.html(""); // Clear old
+          d3.select("#info-title").text(label);
+          // d3.select("#info-description").text(shouldShowDescription ? description : "");
+          const descContainer = d3.select("#info-description");
+          descContainer.html(""); // Clear old
 
-      if (shouldShowDescription) {
-        const isLong = description.length > 100;
-        const shortText = description.slice(0, 100) + "...";
-        
-        descContainer
-          .append("span")
-          .attr("id", "desc-text")
-          .text(isLong ? shortText : description);
+          if (shouldShowDescription) {
+            const isLong = description.length > 100;
+            const shortText = description.slice(0, 100) + "...";
 
-        if (isLong) {
-          descContainer.append("a")
-            .attr("href", "#")
-            .attr("id", "desc-toggle")
-            .style("display", "block")
-            .style("color", "#0077cc")
-            .style("margin-top", "4px")
-            .text("Read more...");
+            descContainer
+              .append("span")
+              .attr("id", "desc-text")
+              .text(isLong ? shortText : description);
 
-          // Toggle behavior
-          d3.select("#desc-toggle").on("click", function (event) {
-            event.preventDefault();
-            const current = d3.select("#desc-text").text();
-            const isExpanded = current === description;
+            if (isLong) {
+              descContainer
+                .append("a")
+                .attr("href", "#")
+                .attr("id", "desc-toggle")
+                .style("display", "block")
+                .style("color", "#0077cc")
+                .style("margin-top", "4px")
+                .text("Read more...");
 
-            d3.select("#desc-text").text(isExpanded ? shortText : description);
-            d3.select(this).text(isExpanded ? "Read more..." : "Read less...");
-          });
-        }
-      }
+              // Toggle behavior
+              d3.select("#desc-toggle").on("click", function (event) {
+                event.preventDefault();
+                const current = d3.select("#desc-text").text();
+                const isExpanded = current === description;
 
-        // 7. Update color legend
-        const legend = d3.select("#color-legend");
-        legend.html(""); // Clear previous
+                d3.select("#desc-text").text(
+                  isExpanded ? shortText : description
+                );
+                d3.select(this).text(
+                  isExpanded ? "Read more..." : "Read less..."
+                );
+              });
+            }
+          }
 
-        const thresholds = scale.thresholds ? scale.thresholds() : scale.range().map((_, i, arr) => {
-          const step = (maxVal - minVal) / arr.length;
-          return minVal + step * i;
-        });
+          // 7. Update color legend
+          const legend = d3.select("#color-legend");
+          legend.html(""); // Clear previous
 
-        thresholds.forEach((t, i) => {
-          const color = colorPalette[i];
-          const from = i === 0 ? minVal : thresholds[i - 1];
-          const to = t;
-          const label = from.toFixed(0) === to.toFixed(0) ? `${from.toFixed(2)}-${to.toFixed(2)}` : `${from.toFixed(0)}-${to.toFixed(0)}`;
-          legend.append("div").style("display", "flex").style("align-items", "center").style("margin-bottom", "2px")
-            .html(`
+          const thresholds = scale.thresholds
+            ? scale.thresholds()
+            : scale.range().map((_, i, arr) => {
+                const step = (maxVal - minVal) / arr.length;
+                return minVal + step * i;
+              });
+
+          thresholds.forEach((t, i) => {
+            const color = colorPalette[i];
+            const from = i === 0 ? minVal : thresholds[i - 1];
+            const to = t;
+            const label =
+              from.toFixed(0) === to.toFixed(0)
+                ? `${from.toFixed(2)}-${to.toFixed(2)}`
+                : `${from.toFixed(0)}-${to.toFixed(0)}`;
+            legend
+              .append("div")
+              .style("display", "flex")
+              .style("align-items", "center")
+              .style("margin-bottom", "2px").html(`
               <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
               <div>${label}</div>
             `);
-        });
+          });
 
-        legend.append("div").style("display", "flex").style("align-items", "center").style("margin-top", "6px")
-          .html(`<div style="width: 18px; height: 14px; background:#cccccc; margin-right:6px;"></div><div>No data / 0</div>`);
+          legend
+            .append("div")
+            .style("display", "flex")
+            .style("align-items", "center")
+            .style("margin-top", "6px")
+            .html(
+              `<div style="width: 18px; height: 14px; background:#cccccc; margin-right:6px;"></div><div>No data / 0</div>`
+            );
 
           // Update Time Slider
 
@@ -444,38 +483,38 @@
           if (!timeChanged) {
             return;
           }
-      sliderContainer.html(""); // Clear existing content
+          sliderContainer.html(""); // Clear existing content
 
-      if (hasTime) {
-        let times = [...new Set(filteredData.map(d => d.TIME))];
-        times.sort(compareTimes);
+          if (hasTime) {
+            let times = [...new Set(filteredData.map((d) => d.TIME))];
+            times.sort(compareTimes);
 
-        const timeToIndex = Object.fromEntries(times.map((t, i) => [t, i]));
+            const timeToIndex = Object.fromEntries(times.map((t, i) => [t, i]));
 
-        sliderContainer
-          .append("input")
-          .attr("type", "range")
-          .attr("min", 0)
-          .attr("max", times.length - 1)
-          .attr("value", times.length - 1)
-          .style("width", "100%")
-          .on("input", function () {
-            const index = +this.value;
-            const selectedTime = times[index];
-            updateMapColors(selectedTime);
-          });
+            sliderContainer
+              .append("input")
+              .attr("type", "range")
+              .attr("min", 0)
+              .attr("max", times.length - 1)
+              .attr("value", times.length - 1)
+              .style("width", "100%")
+              .on("input", function () {
+                const index = +this.value;
+                const selectedTime = times[index];
+                updateMapColors(selectedTime);
+              });
 
-        sliderContainer
-          .append("div")
-          .style("text-align", "center")
-          .style("font-size", "12px")
-          .style("margin-top", "4px")
-          .text(`Showing data for: ${selectedTime ? selectedTime : latestTime}`);
+            sliderContainer
+              .append("div")
+              .style("text-align", "center")
+              .style("font-size", "12px")
+              .style("margin-top", "4px")
+              .text(
+                `Showing data for: ${selectedTime ? selectedTime : latestTime}`
+              );
+          }
+        }
       }
-      }
-    }
-
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
