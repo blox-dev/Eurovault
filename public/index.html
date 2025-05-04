@@ -41,62 +41,91 @@
       <div id="filter-container" style="margin-top: 10px"></div>
     </div>
 
-    <!-- Container for D3 Map -->
-    <div id="map-container" style="width: 100%; height: 90%">
-      <svg id="map" style="background-color: white"></svg>
-      <div
-        id="map-tooltip"
-        style="
-          position: absolute;
-          pointer-events: none;
-          background: #fff;
-          border: 1px solid #ccc;
-          padding: 5px;
-          font-size: 12px;
-          border-radius: 4px;
-          display: none;
-        "
-      ></div>
+    <!-- Main container -->
+    <div id="main-container" style="display: flex; width: 100%; height: 90%">
+      <!-- Container for D3 Map -->
+      <div id="map-container" style="flex: 1">
+        <!-- <svg id="map" style="background-color: white"></svg> -->
+        <div
+          id="map-tooltip"
+          style="
+            position: absolute;
+            pointer-events: none;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 4px;
+            display: none;
+          "
+        ></div>
 
-      <div
-        id="info-panel"
-        style="
-          position: absolute;
-          bottom: 20px;
-          left: 20px;
-          background: rgba(255, 255, 255, 0.85);
-          border-radius: 8px;
-          padding: 10px 14px;
-          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-          font-size: 13px;
-          max-width: 240px;
-          /* pointer-events: none; */
-        "
-      >
-        <div id="info-title" style="font-weight: bold"></div>
-        <div id="info-description" style="margin-top: 4px"></div>
-        <div id="color-legend" style="margin-top: 10px"></div>
-        <div id="time-slider-container" style="margin-top: 12px"></div>
+        <div
+          id="info-panel"
+          style="
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 8px;
+            padding: 10px 14px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            font-size: 13px;
+            max-width: 240px;
+            /* pointer-events: none; */
+          "
+        >
+          <div id="info-title" style="font-weight: bold"></div>
+          <div id="info-description" style="margin-top: 4px"></div>
+          <div id="color-legend" style="margin-top: 10px"></div>
+          <div id="time-slider-container" style="margin-top: 12px"></div>
+        </div>
       </div>
+
+      <!-- Container for charts -->
+      <div
+        id="chart-container"
+        style="flex: 0; overflow: hidden; position: relative"
+      ></div>
     </div>
 
     <script>
       // Global variables
       let filteredData = []; // Global for current filtered dataset
+      let selectedDataset = null; // Global for current metadata
       const colorPalette = d3.schemeBlues[6]; // 6-step blue
 
-      const svg = d3.select("#map");
+      // const svg = d3.select("#map");
+      const svg = d3
+        .select("#map-container")
+        .append("svg")
+        .attr("id", "map-svg")
+        .attr("width", "100%")
+        .attr("height", "100%");
 
+      function resizeMap() {
+        const container = d3.select("#map-container");
+        width = container.node().getBoundingClientRect().width;
+        height = container.node().getBoundingClientRect().height;
+        console.log(width, height);
+        const svg = d3.select("#map-svg");
+        svg.attr("width", width).attr("height", height);
+
+        projection.fitSize([width, height], europe);
+
+        svg.selectAll("path").attr("d", pathGenerator); // Reapply path with new projection
+      }
       // get parent dimensions
-      const parent = svg.node().parentNode;
-      const width = parent.clientWidth;
-      const height = parent.clientHeight;
-
+      // const parent = svg.node().parentNode;
+      // const width = parent.clientWidth;
+      // const height = parent.clientHeight;
       // set SVG attributes
-      svg.attr("width", width).attr("height", height);
+      // svg.attr("width", width).attr("height", height);
 
       const projection = d3.geoMercator();
-      const path = d3.geoPath().projection(projection);
+      const pathGenerator = d3.geoPath().projection(projection);
+      let europe;
+      let width, height;
 
       // Add a group for the map
       const g = svg.append("g");
@@ -104,18 +133,26 @@
       fetch("/public/europe.geojson")
         .then((response) => response.json())
         .then((geoJSON) => {
-          const europe = geoJSON;
+          europe = geoJSON;
 
-          projection.fitSize([width, height], europe);
+          resizeMap();
+
+          // projection.fitSize([width, height], europe);
 
           g.selectAll("path")
             .data(europe.features)
             .enter()
             .append("path")
-            .attr("d", path)
+            .attr("d", pathGenerator)
             .attr("fill", "#cccccc")
             .attr("stroke", "#333")
-            .attr("stroke-width", 0.5);
+            .attr("stroke-width", 0.5)
+            .on("click", function (event, d) {
+              const geoCode = d.properties.EUROSTAT;
+              const countryName = d.properties.ADMIN;
+              // console.log(d.properties);
+              showCountryChart(geoCode, countryName);
+            });
           // .attr("data-what", d => JSON.stringify(d.properties))
           // .on("mouseover", function (event, d) {
           // d3.select(this).attr("fill", "#ffcc00");
@@ -134,10 +171,10 @@
           // --- Setup Zooming + Panning ---
           const zoom = d3
             .zoom()
-            .scaleExtent([1, 10]) // min zoom 1x, max zoom 8x
+            .scaleExtent([1, 10]) // min zoom 1x, max zoom 10x
             .translateExtent([
-              [0, 0],
-              [width, height],
+              [-100, -100],
+              [width + 100, height + 100],
             ]) // allow limited panning
             .on("zoom", (event) => {
               g.attr("transform", event.transform);
@@ -222,8 +259,9 @@
           updateFilters(e.target.value);
         });
 
-        function updateFilters(selectedDataset) {
+        function updateFilters(dataset) {
           filterContainer.innerHTML = ""; // Clear old filters
+          selectedDataset = dataset;
 
           const params = metadata[selectedDataset].params || {};
           const values = metadata[selectedDataset].values || {};
@@ -347,8 +385,12 @@
           // 5. Re-color the countries
           d3.selectAll("path")
             .transition()
-            .duration(300)
+            .duration(200)
             .attr("fill", function (d) {
+              if (!d || !d.properties) {
+                console.error(d);
+                return;
+              }
               const geoCode = d.properties.EUROSTAT;
               const val = valuesByGeo[geoCode] ?? 0;
 
@@ -356,20 +398,9 @@
               return scale(val);
             });
 
-          // 5. Re-color and bind tooltip
-          // d3.selectAll("path")
-          //   .transition()
-          //   .duration(300)
-          //   .attr("fill", function (d) {
-          //     const geoCode = d.properties.EUROSTAT;
-          //     const val = valuesByGeo[geoCode] ?? 0;
-          //     if (val === 0 || isNaN(val)) return "#cccccc";
-          //     return scale(val);
-          //   });
-
           d3.selectAll("path")
             .on("mouseover", function (event, d) {
-              d3.select(this).raise().style("stroke-width", "2.5");
+              d3.select(this).raise().style("stroke-width", "1.5");
               const geoCode = d.properties.EUROSTAT;
               const countryName = d.properties.ADMIN;
               const val = valuesByGeo[geoCode] ?? 0;
@@ -514,6 +545,159 @@
               );
           }
         }
+      }
+
+      function showCountryChart(geoCode, countryName) {
+        console.log(geoCode, countryName);
+        const container = d3.select("#main-container");
+        const mapContainer = d3.select("#map-container");
+        const chartContainer = d3.select("#chart-container");
+
+        // Resize map and chart containers
+        mapContainer.style("flex", "1");
+        chartContainer.style("flex", "1"); // Show chart
+
+        chartContainer.html(""); // Clear previous chart
+
+        const svg = chartContainer
+          .append("svg")
+          .attr("width", "100%")
+          .attr("height", "100%");
+
+        // Add close button
+        chartContainer
+          .append("button")
+          .text("X")
+          .style("position", "absolute")
+          .style("top", "10px")
+          .style("right", "10px")
+          .style("z-index", "10")
+          .style("font-size", "16px")
+          .style("padding", "2px 8px")
+          .on("click", () => {
+            // Remove chart, expand map
+            chartContainer.html("");
+            mapContainer.style("flex", "1");
+            chartContainer.style("flex", "0");
+            resizeMap();
+          });
+
+        // Filter the historical data
+        const countryData = filteredData
+          .filter((d) => d.GEO === geoCode && !isNaN(+d.VALUE))
+          .sort((a, b) => compareTimes(a.TIME, b.TIME));
+
+        const width = chartContainer.node().getBoundingClientRect().width;
+        const height = chartContainer.node().getBoundingClientRect().height;
+        const margin = { top: 50, right: 30, bottom: 80, left: 60 };
+
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+
+        const g = svg
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Scales
+        const x = d3
+          .scaleBand()
+          .domain(countryData.map((d) => d.TIME))
+          .range([0, plotWidth])
+          .padding(0.1);
+
+        const y = d3
+          .scaleLinear()
+          .domain([0, d3.max(countryData, (d) => +d.VALUE) || 1])
+          .nice()
+          .range([plotHeight, 0]);
+
+        // Axes
+        g.append("g")
+          .attr("transform", `translate(0,${plotHeight})`)
+          .call(
+            d3
+              .axisBottom(x)
+              .tickValues(
+                x
+                  .domain()
+                  .filter((d, i) => !(i % Math.ceil(x.domain().length / 20)))
+              )
+          )
+          .selectAll("text")
+          .attr("transform", "rotate(-45)")
+          .style("text-anchor", "end");
+
+        g.append("g").call(d3.axisLeft(y));
+
+        // Axis labels
+        g.append("text")
+          .attr("x", plotWidth / 2)
+          .attr("y", plotHeight + 60)
+          .attr("text-anchor", "middle")
+          .attr("fill", "black")
+          .text(metadata[selectedDataset]?.x || "Year");
+
+        g.append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -plotHeight / 2)
+          .attr("y", -45)
+          .attr("text-anchor", "middle")
+          .attr("fill", "black")
+          .text(metadata[selectedDataset]?.y || "Value");
+
+        // Chart title
+        const title = `${countryName} - ${
+          metadata[selectedDataset]?.label || ""
+        }`.slice(0, 40);
+        svg
+          .append("text")
+          .attr("x", width / 2)
+          .attr("y", 30)
+          .attr("text-anchor", "middle")
+          .style("font-size", "16px")
+          .style("font-weight", "bold")
+          .text(title);
+
+        // Bars
+        const bars = g
+          .selectAll(".bar")
+          .data(countryData)
+          .enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", (d) => x(d.TIME))
+          .attr("y", (d) => y(+d.VALUE))
+          .attr("width", x.bandwidth())
+          .attr("height", (d) => plotHeight - y(+d.VALUE))
+          .attr("fill", "#4682b4");
+
+        // Tooltip
+        const tooltip = chartContainer
+          .append("div")
+          .style("position", "absolute")
+          .style("background", "#fff")
+          .style("padding", "6px 10px")
+          .style("border", "1px solid #999")
+          .style("border-radius", "4px")
+          .style("pointer-events", "none")
+          .style("opacity", 0);
+
+        bars
+          .on("mouseover", function (event, d) {
+            d3.select(this).attr("fill", d3.color("#4682b4").darker(1));
+
+            tooltip.transition().duration(200).style("opacity", 0.95);
+            tooltip
+              .html(`Time: ${d.TIME}<br>Value: ${d.VALUE}`)
+              .style("left", event.pageX + 10 + "px")
+              .style("top", event.pageY - 28 + "px");
+          })
+          .on("mouseout", function () {
+            d3.select(this).attr("fill", "#4682b4");
+            tooltip.transition().duration(300).style("opacity", 0);
+          });
+
+        resizeMap();
       }
     </script>
   </body>
