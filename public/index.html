@@ -107,7 +107,6 @@
         const container = d3.select("#map-container");
         width = container.node().getBoundingClientRect().width;
         height = container.node().getBoundingClientRect().height;
-        console.log(width, height);
         const svg = d3.select("#map-svg");
         svg.attr("width", width).attr("height", height);
 
@@ -146,27 +145,12 @@
             .attr("d", pathGenerator)
             .attr("fill", "#cccccc")
             .attr("stroke", "#333")
-            .attr("stroke-width", 0.5)
+            .attr("stroke-width", 0.25)
             .on("click", function (event, d) {
               const geoCode = d.properties.EUROSTAT;
               const countryName = d.properties.ADMIN;
-              // console.log(d.properties);
               showCountryChart(geoCode, countryName);
             });
-          // .attr("data-what", d => JSON.stringify(d.properties))
-          // .on("mouseover", function (event, d) {
-          // d3.select(this).attr("fill", "#ffcc00");
-          // console.log(d3.select(this).attr("data-what"));
-          // const tooltip = d3.select("#tooltip")
-          //   .style("left", (event.pageX + 5) + "px")
-          //   .style("top", (event.pageY - 28) + "px")
-          //   .style("display", "block")
-          //   .html(d.properties.ADMIN);
-          // })
-          // .on("mouseout", function (d) {
-          // d3.select(this).attr("fill", "#cccccc");
-          // d3.select("#tooltip").style("display", "none");
-          // })
 
           // --- Setup Zooming + Panning ---
           const zoom = d3
@@ -292,9 +276,12 @@
             }
 
             // Add change event
-            select.addEventListener("change", () =>
-              filterData(selectedDataset)
-            );
+            select.addEventListener("change", () => {
+              for (const key in timeColorCache) {
+                delete timeColorCache[key];
+              }
+              filterData(selectedDataset, (nochange = true));
+            });
 
             filterContainer.appendChild(label);
             filterContainer.appendChild(select);
@@ -304,7 +291,7 @@
           filterData(selectedDataset);
         }
 
-        function filterData(selectedDataset) {
+        function filterData(selectedDataset, nochange = false) {
           let data = datasets[selectedDataset];
 
           const values = metadata[selectedDataset].values || {};
@@ -323,40 +310,31 @@
             });
           });
 
-          console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
-          updateMapColors();
+          // console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
+          updateMapColors(null, nochange);
+
+          const chart = d3.select("#chart-svg");
+          if (chart.size() === 1) {
+            const geoCode = chart.attr("data-geocode");
+            const countryName = chart.attr("data-country-name");
+            if (geoCode && countryName) {
+              showCountryChart(geoCode, countryName);
+            }
+          }
         }
 
-        function updateMapColors(selectedTime = null) {
+        function updateMapColors(selectedTime = null, nochange = false) {
           const timeChanged = selectedTime === null;
           // 1. Determine if TIME exists
           const hasTime = filteredData.length > 0 && "TIME" in filteredData[0];
 
           // 2. If so, find the latest year
-
-          // const times = [...new Set(filteredData.map(d => d.TIME))];
-          // times.sort(compareTimes);
-          // const latestTime = times[times.length - 1];
-
           let latestTime = selectedTime;
           if (!selectedTime && hasTime) {
             let times = [...new Set(filteredData.map((d) => d.TIME))];
             times.sort(compareTimes);
             latestTime = times[times.length - 1];
           }
-
-          // 3. Aggregate by GEO: keep only latest year values
-          // let valuesByGeo = {};
-          // filteredData.forEach(row => {
-          //   const geo = row.GEO;
-          //   if (!geo) return;
-
-          //   // if (!hasTime || +row.TIME === latestYear) {
-          //   if (!hasTime || row.TIME === latestTime) {
-          //     const val = parseFloat(row.VALUE);
-          //     valuesByGeo[geo] = val;
-          //   }
-          // });
 
           let valuesByGeo = timeColorCache[latestTime];
           if (!valuesByGeo) {
@@ -400,7 +378,7 @@
 
           d3.selectAll("path")
             .on("mouseover", function (event, d) {
-              d3.select(this).raise().style("stroke-width", "1.5");
+              d3.select(this).raise().style("stroke-width", 0.5);
               const geoCode = d.properties.EUROSTAT;
               const countryName = d.properties.ADMIN;
               const val = valuesByGeo[geoCode] ?? 0;
@@ -418,7 +396,7 @@
                 .style("top", event.pageY + 10 + "px");
             })
             .on("mouseout", function () {
-              d3.select(this).style("stroke-width", "1");
+              d3.select(this).style("stroke-width", 0.25);
               d3.select("#map-tooltip").style("display", "none");
             });
 
@@ -508,10 +486,15 @@
             );
 
           // Update Time Slider
-
           let sliderContainer = d3.select("#time-slider-container");
-          // console.log(selectedTime);
+
+          if (nochange) {
+            return;
+          }
           if (!timeChanged) {
+            d3.select("#slider-text-div").text(
+              `Showing data for: ${selectedTime}`
+            );
             return;
           }
           sliderContainer.html(""); // Clear existing content
@@ -537,6 +520,7 @@
 
             sliderContainer
               .append("div")
+              .attr("id", "slider-text-div")
               .style("text-align", "center")
               .style("font-size", "12px")
               .style("margin-top", "4px")
@@ -548,7 +532,6 @@
       }
 
       function showCountryChart(geoCode, countryName) {
-        console.log(geoCode, countryName);
         const container = d3.select("#main-container");
         const mapContainer = d3.select("#map-container");
         const chartContainer = d3.select("#chart-container");
@@ -561,6 +544,9 @@
 
         const svg = chartContainer
           .append("svg")
+          .attr("id", "chart-svg")
+          .attr("data-geocode", geoCode)
+          .attr("data-country-name", countryName)
           .attr("width", "100%")
           .attr("height", "100%");
 
@@ -646,9 +632,12 @@
           .text(metadata[selectedDataset]?.y || "Value");
 
         // Chart title
-        const title = `${countryName} - ${
+        let title = `${countryName} - ${
           metadata[selectedDataset]?.label || ""
-        }`.slice(0, 40);
+        }`;
+        if (title.length > 40) {
+          title = title.slice(0, 40) + "...";
+        }
         svg
           .append("text")
           .attr("x", width / 2)
@@ -682,15 +671,19 @@
           .style("pointer-events", "none")
           .style("opacity", 0);
 
+        const topOffset = chartContainer.node().getBoundingClientRect().top;
+        const leftOffset = chartContainer.node().getBoundingClientRect().left;
+
         bars
           .on("mouseover", function (event, d) {
             d3.select(this).attr("fill", d3.color("#4682b4").darker(1));
 
             tooltip.transition().duration(200).style("opacity", 0.95);
             tooltip
-              .html(`Time: ${d.TIME}<br>Value: ${d.VALUE}`)
-              .style("left", event.pageX + 10 + "px")
-              .style("top", event.pageY - 28 + "px");
+              // .html(`Time: ${d.TIME}<br>Value: ${d.VALUE}`)
+              .html(`${d.VALUE}`)
+              .style("left", event.pageX - leftOffset - 20 + "px")
+              .style("top", event.pageY - topOffset - 50 + "px");
           })
           .on("mouseout", function () {
             d3.select(this).attr("fill", "#4682b4");
