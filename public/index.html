@@ -44,21 +44,22 @@
     <!-- Main container -->
     <div id="main-container" style="display: flex; width: 100%; height: 90%">
       <!-- Container for D3 Map -->
-      <div id="map-container" style="flex: 1">
+      <div
+        id="map-tooltip"
+        style="
+          z-index: 1;
+          position: absolute;
+          pointer-events: none;
+          background: #fff;
+          border: 1px solid #ccc;
+          padding: 5px;
+          font-size: 12px;
+          border-radius: 4px;
+          display: none;
+        "
+      ></div>
+      <div id="map-container" style="flex: 1; position: relative">
         <!-- <svg id="map" style="background-color: white"></svg> -->
-        <div
-          id="map-tooltip"
-          style="
-            position: absolute;
-            pointer-events: none;
-            background: #fff;
-            border: 1px solid #ccc;
-            padding: 5px;
-            font-size: 12px;
-            border-radius: 4px;
-            display: none;
-          "
-        ></div>
 
         <div
           id="info-panel"
@@ -72,7 +73,6 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
             font-size: 13px;
             max-width: 240px;
-            /* pointer-events: none; */
           "
         >
           <div id="info-title" style="font-weight: bold"></div>
@@ -105,8 +105,10 @@
 
       function resizeMap() {
         const container = d3.select("#map-container");
-        width = container.node().getBoundingClientRect().width;
-        height = container.node().getBoundingClientRect().height;
+        const mapContainerBoundingRect = container.node().getBoundingClientRect();
+        width = mapContainerBoundingRect.width;
+        height = mapContainerBoundingRect.height;
+
         const svg = d3.select("#map-svg");
         svg.attr("width", width).attr("height", height);
 
@@ -390,10 +392,23 @@
                   `<strong>${countryName}</strong><br/>Value: ${val || "0"}`
                 );
             })
+            .on("touchstart", function (event, d) {
+              d3.select(this).raise().style("stroke-width", 0.5);
+              const geoCode = d.properties.EUROSTAT;
+              const countryName = d.properties.ADMIN;
+              const val = valuesByGeo[geoCode] ?? 0;
+
+              const tooltip = d3.select("#map-tooltip");
+              tooltip
+                .style("display", "block")
+                .html(
+                  `<strong>${countryName}</strong><br/>Value: ${val || "0"}`
+                );
+            })
             .on("mousemove", function (event) {
               d3.select("#map-tooltip")
-                .style("left", event.pageX + 10 + "px")
-                .style("top", event.pageY + 10 + "px");
+                .style("left", event.pageX + "px")
+                .style("top", event.pageY - 40 + "px");
             })
             .on("mouseout", function () {
               d3.select(this).style("stroke-width", 0.25);
@@ -573,8 +588,9 @@
           .filter((d) => d.GEO === geoCode && !isNaN(+d.VALUE))
           .sort((a, b) => compareTimes(a.TIME, b.TIME));
 
-        const width = chartContainer.node().getBoundingClientRect().width;
-        const height = chartContainer.node().getBoundingClientRect().height;
+        const chartContainerBoundingRect = chartContainer.node().getBoundingClientRect();
+        const width = chartContainerBoundingRect.width;
+        const height = chartContainerBoundingRect.height;
         const margin = { top: 50, right: 30, bottom: 80, left: 60 };
 
         const plotWidth = width - margin.left - margin.right;
@@ -671,8 +687,8 @@
           .style("pointer-events", "none")
           .style("opacity", 0);
 
-        const topOffset = chartContainer.node().getBoundingClientRect().top;
-        const leftOffset = chartContainer.node().getBoundingClientRect().left;
+        const topOffset = chartContainerBoundingRect.top;
+        const leftOffset = chartContainerBoundingRect.left;
 
         bars
           .on("mouseover", function (event, d) {
@@ -692,6 +708,19 @@
 
         resizeMap();
       }
+
+      window.addEventListener("resize", () => {
+        resizeMap();
+
+        const chart = d3.select("#chart-svg");
+        if (chart.size() === 1) {
+          const geoCode = chart.attr("data-geocode");
+          const countryName = chart.attr("data-country-name");
+          if (geoCode && countryName) {
+            showCountryChart(geoCode, countryName);
+          }
+        }
+      });
     </script>
   </body>
 </html>
