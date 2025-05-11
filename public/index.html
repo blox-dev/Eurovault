@@ -17,6 +17,7 @@
         font-family: Arial, sans-serif;
         height: 100vh;
         width: 100vw;
+        overflow: hidden auto;
       }
 
       svg {
@@ -30,63 +31,225 @@
       path:hover {
         cursor: pointer;
       }
+
+      /* Layout containers */
+      #main-container {
+        display: grid;
+        min-height: 100vh;
+        min-width: 100vw;
+      }
+
+      #map-container {
+        position: relative;
+        overflow: hidden;
+        grid-area: map;
+      }
+
+      #controls-container {
+        grid-area: controls;
+      }
+
+      #chart-container {
+        grid-area: chart;
+        position: relative;
+      }
+
+      .chart-close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        font-size: 16px;
+        padding: 2px 8px;
+      }
+
+      .chart-tooltip {
+        position: absolute;
+        background: #fff;
+        padding: 6px 10px;
+        border: 1px solid #999;
+        border-radius: 4px;
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      #map-tooltip {
+        z-index: 1;
+        position: absolute;
+        pointer-events: none;
+        background: #fff;
+        border: 1px solid #ccc;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 4px;
+        display: none;
+      }
+
+      #info-panel {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 8px;
+        padding: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        font-size: 13px;
+        max-width: 200px;
+      }
+
+      #info-title {
+        font-weight: bold;
+      }
+      #info-description {
+        margin-top: 4px;
+      }
+      #color-legend {
+        margin-top: 10px;
+      }
+      #time-slider-container {
+        margin-top: 12px;
+      }
+
+      /* Controls layout */
+      #controls-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+        background-color: #f8f8f8;
+        border: 1px solid #aaa;
+        overflow: auto;
+      }
+
+      /* Control panel styling */
+      .control-panel {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        margin: 0.2rem;
+        border-radius: 8px;
+        background: #ffffff;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .control-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 0.25rem;
+      }
+
+      .control-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .control-group label {
+        font-size: 0.8rem;
+        color: #555;
+      }
+
+      .control-group select {
+        max-width: 200px;
+        width: 100%;
+        padding: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        background-color: #f9f9f9;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: border-color 0.2s ease;
+      }
+
+      .control-group select:focus {
+        border-color: #4a90e2;
+        outline: none;
+        background-color: #fff;
+      }
+
+      .control-panel option {
+        white-space: normal;
+      }
+
+      /* Responsive layouts */
+      /* Desktop */
+      @media (min-width: 768px) {
+        #main-container {
+          grid-template-columns: 60% 40%;
+          grid-template-rows: 30% 70%;
+          grid-template-areas:
+            "map controls"
+            "map chart";
+        }
+
+        #chart-container {
+          overflow: hidden;
+          display: block;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        #main-container {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto 1fr;
+          grid-template-areas:
+            "controls"
+            "map";
+        }
+
+        #map-container {
+          width: 100vw;
+          height: 95vh;
+        }
+
+        #controls-container {
+          overflow: auto;
+        }
+
+        #chart-container {
+          display: none;
+        }
+      }
     </style>
   </head>
 
-  <body style="background-color: #efefef; overflow: hidden">
-    <!-- Container for controls -->
-    <div id="controls" style="padding: 10px; background-color: #ddd">
-      <label for="dataset-select">Choose a dataset:</label>
-      <select id="dataset-select"></select>
-      <div id="filter-container" style="margin-top: 10px"></div>
-    </div>
-
+  <body>
+    <div id="map-tooltip"></div>
     <!-- Main container -->
-    <div id="main-container" style="display: flex; width: 100%; height: 90%">
+    <div id="main-container">
       <!-- Container for D3 Map -->
-      <div
-        id="map-tooltip"
-        style="
-          z-index: 1;
-          position: absolute;
-          pointer-events: none;
-          background: #fff;
-          border: 1px solid #ccc;
-          padding: 5px;
-          font-size: 12px;
-          border-radius: 4px;
-          display: none;
-        "
-      ></div>
-      <div id="map-container" style="flex: 1; position: relative">
-        <!-- <svg id="map" style="background-color: white"></svg> -->
+      <div id="map-container">
+        <div id="info-panel">
+          <div id="info-title"></div>
+          <div id="info-description"></div>
+          <div id="color-legend"></div>
+          <div id="time-slider-container"></div>
+        </div>
+      </div>
 
-        <div
-          id="info-panel"
-          style="
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.85);
-            border-radius: 8px;
-            padding: 10px 14px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-            font-size: 13px;
-            max-width: 240px;
-          "
-        >
-          <div id="info-title" style="font-weight: bold"></div>
-          <div id="info-description" style="margin-top: 4px"></div>
-          <div id="color-legend" style="margin-top: 10px"></div>
-          <div id="time-slider-container" style="margin-top: 12px"></div>
+      <!-- Container for controls -->
+      <div id="controls-container">
+        <!-- Dataset Panel -->
+        <div id="dataset-panel" class="control-panel">
+          <h2 class="control-title">Dataset</h2>
+          <div class="control-group">
+            <select id="dataset-select"></select>
+          </div>
+        </div>
+
+        <!-- Filters Panel -->
+        <div id="filter-panel" class="control-panel">
+          <h2 class="control-title">Filters</h2>
         </div>
       </div>
 
       <!-- Container for charts -->
-      <div
-        id="chart-container"
-        style="flex: 0; overflow: hidden; position: relative"
-      ></div>
+      <div id="chart-container"></div>
     </div>
 
     <script>
@@ -103,33 +266,34 @@
         .attr("width", "100%")
         .attr("height", "100%");
 
-      function resizeMap() {
-        const container = d3.select("#map-container");
-        const mapContainerBoundingRect = container.node().getBoundingClientRect();
-        width = mapContainerBoundingRect.width;
-        height = mapContainerBoundingRect.height;
-
-        const svg = d3.select("#map-svg");
-        svg.attr("width", width).attr("height", height);
-
-        projection.fitSize([width, height], europe);
-
-        svg.selectAll("path").attr("d", pathGenerator); // Reapply path with new projection
-      }
-      // get parent dimensions
-      // const parent = svg.node().parentNode;
-      // const width = parent.clientWidth;
-      // const height = parent.clientHeight;
-      // set SVG attributes
-      // svg.attr("width", width).attr("height", height);
-
-      const projection = d3.geoMercator();
-      const pathGenerator = d3.geoPath().projection(projection);
-      let europe;
-      let width, height;
-
-      // Add a group for the map
-      const g = svg.append("g");
+        // get parent dimensions
+        // const parent = svg.node().parentNode;
+        // const width = parent.clientWidth;
+        // const height = parent.clientHeight;
+        // set SVG attributes
+        // svg.attr("width", width).attr("height", height);
+        
+        const projection = d3.geoMercator();
+        const pathGenerator = d3.geoPath().projection(projection);
+        let europe;
+        let width, height;
+        
+        // Add a group for the map
+        const g = svg.append("g");
+        
+        function resizeMap() {
+          const container = d3.select("#map-container");
+          const mapContainerBoundingRect = container.node().getBoundingClientRect();
+          width = mapContainerBoundingRect.width;
+          height = mapContainerBoundingRect.height;
+  
+          const svg = d3.select("#map-svg");
+          // svg.attr("width", width).attr("height", height);
+  
+          projection.fitSize([width, height], europe);
+  
+          svg.selectAll("path").attr("d", pathGenerator); // Reapply path with new projection
+        }
 
       fetch("/public/europe.geojson")
         .then((response) => response.json())
@@ -148,11 +312,17 @@
             .attr("fill", "#cccccc")
             .attr("stroke", "#333")
             .attr("stroke-width", 0.25)
+
+          // only on desktop
+          if (window.innerWidth > 768) {
+            g.selectAll("path")
             .on("click", function (event, d) {
               const geoCode = d.properties.EUROSTAT;
               const countryName = d.properties.ADMIN;
               showCountryChart(geoCode, countryName);
             });
+          }
+          console.log(window.innerWidth);
 
           // --- Setup Zooming + Panning ---
           const zoom = d3
@@ -226,7 +396,7 @@
 
       function setupControls(datasetKeys) {
         const datasetSelect = document.getElementById("dataset-select");
-        const filterContainer = document.getElementById("filter-container");
+        const filterPanel = document.getElementById("filter-panel");
 
         // Populate dataset dropdown
         datasetKeys.forEach((key, index) => {
@@ -246,7 +416,12 @@
         });
 
         function updateFilters(dataset) {
-          filterContainer.innerHTML = ""; // Clear old filters
+          const groupsToRemove = filterPanel.querySelectorAll(".control-group");
+
+          groupsToRemove.forEach((group) => {
+            filterPanel.removeChild(group);
+          });
+
           selectedDataset = dataset;
 
           const params = metadata[selectedDataset].params || {};
@@ -254,13 +429,14 @@
 
           // Create dropdowns for each param
           Object.keys(values).forEach((param) => {
+            const groupDiv = document.createElement("div");
+            groupDiv.classList.add("control-group");
+
             const label = document.createElement("label");
-            label.textContent = `Filter by ${param}:`;
-            label.style.marginRight = "5px";
+            label.textContent = param;
 
             const select = document.createElement("select");
             select.id = `filter-${param}`;
-            select.style.marginRight = "20px";
 
             const options = Object.keys(values[param]);
             options.forEach((opt) => {
@@ -285,8 +461,9 @@
               filterData(selectedDataset, (nochange = true));
             });
 
-            filterContainer.appendChild(label);
-            filterContainer.appendChild(select);
+            groupDiv.appendChild(label);
+            groupDiv.appendChild(select);
+            filterPanel.appendChild(groupDiv);
           });
 
           // Initial filtering
@@ -315,6 +492,9 @@
           // console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
           updateMapColors(null, nochange);
 
+          if (window.innerWidth <= 768) {
+            return;
+          }
           const chart = d3.select("#chart-svg");
           if (chart.size() === 1) {
             const geoCode = chart.attr("data-geocode");
@@ -368,7 +548,7 @@
             .duration(200)
             .attr("fill", function (d) {
               if (!d || !d.properties) {
-                console.error(d);
+                // console.error(d);
                 return;
               }
               const geoCode = d.properties.EUROSTAT;
@@ -423,7 +603,6 @@
           const shouldShowDescription = description && description !== label;
 
           d3.select("#info-title").text(label);
-          // d3.select("#info-description").text(shouldShowDescription ? description : "");
           const descContainer = d3.select("#info-description");
           descContainer.html(""); // Clear old
 
@@ -551,10 +730,6 @@
         const mapContainer = d3.select("#map-container");
         const chartContainer = d3.select("#chart-container");
 
-        // Resize map and chart containers
-        mapContainer.style("flex", "1");
-        chartContainer.style("flex", "1"); // Show chart
-
         chartContainer.html(""); // Clear previous chart
 
         const svg = chartContainer
@@ -569,18 +744,10 @@
         chartContainer
           .append("button")
           .text("X")
-          .style("position", "absolute")
-          .style("top", "10px")
-          .style("right", "10px")
-          .style("z-index", "10")
-          .style("font-size", "16px")
-          .style("padding", "2px 8px")
+          .classed("chart-close-button", true)
           .on("click", () => {
-            // Remove chart, expand map
+            // Remove chart
             chartContainer.html("");
-            mapContainer.style("flex", "1");
-            chartContainer.style("flex", "0");
-            resizeMap();
           });
 
         // Filter the historical data
@@ -679,38 +846,49 @@
         // Tooltip
         const tooltip = chartContainer
           .append("div")
-          .style("position", "absolute")
-          .style("background", "#fff")
-          .style("padding", "6px 10px")
-          .style("border", "1px solid #999")
-          .style("border-radius", "4px")
-          .style("pointer-events", "none")
-          .style("opacity", 0);
+          .classed("chart-tooltip", true)
 
         const topOffset = chartContainerBoundingRect.top;
         const leftOffset = chartContainerBoundingRect.left;
 
         bars
-          .on("mouseover", function (event, d) {
-            d3.select(this).attr("fill", d3.color("#4682b4").darker(1));
+        .on("mouseover", function (event, d) {
+          d3.select(this).attr("fill", d3.color("#4682b4").darker(1));
+          // console.log(d);
+          const bar = d3.select(event.currentTarget);
+          const xPos = +bar.attr("x") + x.bandwidth() / 2;
+          const yPos = +bar.attr("y");
 
-            tooltip.transition().duration(200).style("opacity", 0.95);
-            tooltip
-              // .html(`Time: ${d.TIME}<br>Value: ${d.VALUE}`)
-              .html(`${d.VALUE}`)
-              .style("left", event.pageX - leftOffset - 20 + "px")
-              .style("top", event.pageY - topOffset - 50 + "px");
-          })
-          .on("mouseout", function () {
-            d3.select(this).attr("fill", "#4682b4");
-            tooltip.transition().duration(300).style("opacity", 0);
-          });
+          tooltip.transition().duration(200).style("opacity", 0.95);
+            // .style("opacity", 1)
+          tooltip.html(`${d.VALUE}`);
 
-        resizeMap();
+          // Position tooltip centered above the bar
+          tooltip
+            .style("left", (margin.left + xPos - tooltip.node().offsetWidth / 2) + "px")
+            .style("top", (margin.top + yPos - 30) + "px"); // 30px above bar
+        })
+        .on("mouseout", function () {
+          d3.select(this).attr("fill", "#4682b4");
+          tooltip.transition().duration(300).style("opacity", 0);
+        });
       }
 
       window.addEventListener("resize", () => {
         resizeMap();
+
+        const svg = d3.select("#map-svg");
+
+        if (window.innerWidth <= 768) {
+          svg.selectAll("path").on("click", null);
+          return;
+        }
+
+        svg.selectAll("path").on("click", function (event, d) {
+              const geoCode = d.properties.EUROSTAT;
+              const countryName = d.properties.ADMIN;
+              showCountryChart(geoCode, countryName);
+        });
 
         const chart = d3.select("#chart-svg");
         if (chart.size() === 1) {
