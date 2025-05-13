@@ -257,11 +257,20 @@
       // Global variables
       let filteredData = []; // Global for current filtered dataset
       let selectedDataset = null; // Global for current metadata
+      let chartedCountries = new Set(); // Stores selected countries for line chart
+      let currentSelected = null; // Currently selected country for bar chart
+
+      // Permanent DOM elements
+      let mainContainer = d3.select("#main-container");
+      let mapContainer = d3.select("#map-container");
+      let controlsContainer = d3.select("#controls-container")
+      let chartContainer = d3.select("#chart-container");
+
       const colorPalette = d3.schemeBlues[6]; // 6-step blue
 
+
       // const svg = d3.select("#map");
-      const svg = d3
-        .select("#map-container")
+      const svg = mapContainer
         .append("svg")
         .attr("id", "map-svg")
         .attr("width", "100%")
@@ -283,8 +292,7 @@
         const g = svg.append("g");
         
         function resizeMap() {
-          const container = d3.select("#map-container");
-          const mapContainerBoundingRect = container.node().getBoundingClientRect();
+          const mapContainerBoundingRect = mapContainer.node().getBoundingClientRect();
           width = mapContainerBoundingRect.width;
           height = mapContainerBoundingRect.height;
   
@@ -319,8 +327,32 @@
             g.selectAll("path")
             .on("click", function (event, d) {
               const geoCode = d.properties.EUROSTAT;
-              const countryName = d.properties.ADMIN;
-              showCountryChart(geoCode, countryName);
+              
+              if (event.shiftKey) {
+                // Toggle country in chartedCountries
+                if (chartedCountries.has(geoCode) && chartedCountries.size > 1) {
+                  chartedCountries.delete(geoCode);
+                } else {
+                  chartedCountries.add(geoCode);
+                }
+
+                // Always include currentSelected if any
+
+                if (chartContainer.attr("data-chart-type") !== "line" && currentSelected && !chartedCountries.has(currentSelected)) {
+                  chartedCountries.add(currentSelected);
+                }
+
+                if (chartedCountries.size > 0) {
+                  showLineChart(Array.from(chartedCountries));
+                } else {
+                  chartContainer.html("");
+                }
+              } else {
+                // Normal click resets chartedCountries
+                chartedCountries.clear();
+                currentSelected = geoCode;
+                showCountryChart(geoCode);
+              }
             });
           }
 
@@ -413,6 +445,7 @@
         // When dataset changes
         datasetSelect.addEventListener("change", (e) => {
           updateFilters(e.target.value);
+
         });
 
         function updateFilters(dataset) {
@@ -495,14 +528,21 @@
           if (window.innerWidth <= 768) {
             return;
           }
-          const chart = d3.select("#chart-svg");
-          if (chart.size() === 1) {
-            const geoCode = chart.attr("data-geocode");
-            const countryName = chart.attr("data-country-name");
-            if (geoCode && countryName) {
-              showCountryChart(geoCode, countryName);
+
+          // const chart = d3.select("#chart-container");
+          const chartType = chartContainer.attr("data-chart-type");
+          console.log(chartType);
+          if (chartType) {
+            if (chartType == "bar") {
+              const geoCode = currentSelected;
+              if (geoCode) {
+                  showCountryChart(geoCode);
+                }
+              } else if (chartType == "line") {
+                console.log(chartedCountries);
+                showLineChart(Array.from(chartedCountries));
+              }
             }
-          }
         }
 
         function updateMapColors(selectedTime = null, nochange = false) {
@@ -543,12 +583,12 @@
             .range(colorPalette);
 
           // 5. Re-color the countries
-          d3.selectAll("path")
+          mapContainer.selectAll("path")
             .transition()
             .duration(200)
             .attr("fill", function (d) {
               if (!d || !d.properties) {
-                // console.error(d);
+                console.error(d, this);
                 return;
               }
               const geoCode = d.properties.EUROSTAT;
@@ -558,7 +598,7 @@
               return scale(val);
             });
 
-          d3.selectAll("path")
+          mapContainer.selectAll("path")
             .on("mouseover", function (event, d) {
               d3.select(this).raise().style("stroke-width", 0.5);
               const geoCode = d.properties.EUROSTAT;
@@ -725,18 +765,14 @@
         }
       }
 
-      function showCountryChart(geoCode, countryName) {
-        const container = d3.select("#main-container");
-        const mapContainer = d3.select("#map-container");
-        const chartContainer = d3.select("#chart-container");
+      function showCountryChart(geoCode) {
+        const countryName = europe.features.find(f => f.properties.EUROSTAT === geoCode).properties.ADMIN;
 
-        chartContainer.html(""); // Clear previous chart
+        chartContainer.html("").attr("data-chart-type", "bar"); // Clear previous chart
 
         const svg = chartContainer
           .append("svg")
           .attr("id", "chart-svg")
-          .attr("data-geocode", geoCode)
-          .attr("data-country-name", countryName)
           .attr("width", "100%")
           .attr("height", "100%");
 
@@ -747,7 +783,7 @@
           .classed("chart-close-button", true)
           .on("click", () => {
             // Remove chart
-            chartContainer.html("");
+            chartContainer.html("").attr("data-chart-type", "");
           });
 
         // Filter the historical data
@@ -874,6 +910,118 @@
         });
       }
 
+      function showLineChart(countries) {
+        // const chartContainer = d3.select("#chart-container");
+        chartContainer.html("").attr("data-chart-type", "line"); // Clear previous chart
+
+        const svg = chartContainer
+          .append("svg")
+          .attr("width", "100%")
+          .attr("height", "100%");
+
+        chartContainer
+          .append("button")
+          .text("X")
+          .classed("chart-close-button", true)
+          .on("click", () => {
+            chartContainer.html("");
+          });
+
+        const chartContainerBoundingRect = chartContainer.node().getBoundingClientRect();
+        const width = chartContainerBoundingRect.width;
+        const height = chartContainerBoundingRect.height;
+        const margin = { top: 50, right: 100, bottom: 60, left: 60 };
+
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+
+        const g = svg
+          .append("g")
+          .attr("transform", `translate(${margin.left},${margin.top})`);
+
+        // Build time domain and country data
+        let allTimes = new Set();
+        let countrySeries = [];
+
+        countries.forEach(geo => {
+          const rows = filteredData
+            .filter(d => d.GEO === geo && !isNaN(+d.VALUE))
+            .map(d => ({ time: d.TIME, value: +d.VALUE }))
+            .sort((a, b) => compareTimes(a.time, b.time));
+
+          rows.forEach(r => allTimes.add(r.time));
+
+          countrySeries.push({
+            geo,
+            name: europe.features.find(f => f.properties.EUROSTAT === geo).properties.ADMIN,
+            values: rows
+          });
+        });
+
+        const times = Array.from(allTimes).sort(compareTimes);
+
+        // Scales
+        const x = d3
+          .scaleBand()
+          .domain(times)
+          .range([0, plotWidth])
+          .padding(0.1);
+
+        const y = d3
+          .scaleLinear()
+          .domain([0, d3.max(countrySeries, c => d3.max(c.values, d => d.value)) || 1])
+          .nice()
+          .range([plotHeight, 0]);
+
+        const color = d3.scaleOrdinal()
+          .domain(countries)
+          .range(d3.schemeCategory10);
+
+        // Axes
+        g.append("g")
+          .attr("transform", `translate(0,${plotHeight})`)
+          .call(d3.axisBottom(x).tickValues(times.filter((_, i) => i % 2 === 0)))
+          .selectAll("text")
+          .attr("transform", "rotate(-45)")
+          .style("text-anchor", "end");
+
+        g.append("g").call(d3.axisLeft(y));
+
+        // Lines
+        const line = d3.line()
+          .x(d => x(d.time))
+          .y(d => y(d.value));
+
+        g.selectAll(".line")
+          .data(countrySeries)
+          .enter()
+          .append("path")
+          .attr("fill", "none")
+          .attr("stroke", d => color(d.geo))
+          .attr("stroke-width", 2)
+          .attr("d", d => line(d.values));
+
+        // Legend
+        const legend = svg
+          .append("g")
+          .attr("transform", `translate(${plotWidth + margin.left + 20}, ${margin.top})`);
+
+        countrySeries.forEach((d, i) => {
+          const group = legend.append("g").attr("transform", `translate(0, ${i * 20})`);
+          group
+            .append("rect")
+            .attr("width", 12)
+            .attr("height", 12)
+            .attr("fill", color(d.geo));
+          group
+            .append("text")
+            .attr("x", 16)
+            .attr("y", 10)
+            .text(d.name)
+            .style("font-size", "12px");
+        });
+      }
+
       window.addEventListener("resize", () => {
         resizeMap();
 
@@ -885,19 +1033,49 @@
         }
 
         svg.selectAll("path").on("click", function (event, d) {
-              const geoCode = d.properties.EUROSTAT;
-              const countryName = d.properties.ADMIN;
-              showCountryChart(geoCode, countryName);
+          const geoCode = d.properties.EUROSTAT;
+              
+              if (event.shiftKey) {
+                // Toggle country in chartedCountries
+                if (chartedCountries.has(geoCode) && chartedCountries.size > 1) {
+                  chartedCountries.delete(geoCode);
+                } else {
+                  chartedCountries.add(geoCode);
+                }
+
+                // Always include currentSelected if any
+
+                if (chartContainer.attr("data-chart-type") !== "line" && currentSelected && !chartedCountries.has(currentSelected)) {
+                  chartedCountries.add(currentSelected);
+                }
+
+                if (chartedCountries.size > 0) {
+                  showLineChart(Array.from(chartedCountries));
+                } else {
+                  chartContainer.html("");
+                }
+              } else {
+                // Normal click resets chartedCountries
+                chartedCountries.clear();
+                currentSelected = geoCode;
+                showCountryChart(geoCode);
+              }
         });
 
-        const chart = d3.select("#chart-svg");
-        if (chart.size() === 1) {
-          const geoCode = chart.attr("data-geocode");
-          const countryName = chart.attr("data-country-name");
-          if (geoCode && countryName) {
-            showCountryChart(geoCode, countryName);
-          }
-        }
+        // const chart = d3.select("#chart-svg");
+        const chartType = chartContainer.attr("data-chart-type");
+          console.log(chartType);
+          if (chartType) {
+            if (chartType == "bar") {
+              const geoCode = currentSelected;
+              if (geoCode) {
+                  showCountryChart(geoCode);
+                }
+              } else if (chartType == "line") {
+                console.log(chartedCountries);
+                showLineChart(Array.from(chartedCountries));
+              }
+            }
       });
     </script>
   </body>
