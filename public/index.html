@@ -29,7 +29,7 @@
         height: 100%;
       }
 
-      path:hover {
+      #map-container path:hover {
         cursor: pointer;
       }
 
@@ -54,22 +54,25 @@
         grid-area: chart;
         position: relative;
       }
-
+      
+      /* Tooltips */
       .chart-close-button {
         position: absolute;
         top: 10px;
         right: 10px;
-        z-index: 10;
-        font-size: 16px;
+        z-index: 1;
+        font-size: 1.1rem;
         padding: 2px 8px;
       }
 
-      .chart-tooltip {
+      #chart-tooltip {
         position: absolute;
+        z-index: 1;
         background: #fff;
-        padding: 6px 10px;
+        padding: 4px 8px;
         border: 1px solid #999;
         border-radius: 4px;
+        font-size: 0.8rem;
         pointer-events: none;
         opacity: 0;
       }
@@ -81,11 +84,19 @@
         background: #fff;
         border: 1px solid #ccc;
         padding: 5px;
-        font-size: 12px;
+        font-size: 0.8rem;
         border-radius: 4px;
         display: none;
       }
 
+      #controls-tooltip {
+        padding: 10px;
+        border: 5px solid red;
+        border-radius: 20px;
+        margin-top: 10px;
+      }
+
+      /* Map info panel */
       #info-panel {
         position: absolute;
         top: 20px;
@@ -94,7 +105,7 @@
         border-radius: 8px;
         padding: 5px;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        font-size: 13px;
+        font-size: 0.9rem;
         max-width: 200px;
       }
 
@@ -216,10 +227,30 @@
           display: none;
         }
       }
+
+      /* Helper classes */
+      .strike {
+        text-decoration: line-through;
+      }
+
+      .noselect {
+        -webkit-touch-callout: none; /* iOS Safari */
+          -webkit-user-select: none; /* Safari */
+          -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+              -ms-user-select: none; /* Internet Explorer/Edge */
+                  user-select: none; /* Non-prefixed version, currently
+                                        supported by Chrome, Edge, Opera and Firefox */
+      }
+
+      .hidden {
+        display: none;
+      }
     </style>
   </head>
 
   <body>
+    <div id="chart-tooltip"></div>
     <div id="map-tooltip"></div>
     <!-- Main container -->
     <div id="main-container">
@@ -250,7 +281,12 @@
       </div>
 
       <!-- Container for charts -->
-      <div id="chart-container"></div>
+      <div id="chart-container">
+        <div id="controls-tooltip">
+          <p><b>Click</b> on a country to see more details</p>
+          <p><b>Shift + Click</b> on countries to compare them</p>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -531,7 +567,6 @@
 
           // const chart = d3.select("#chart-container");
           const chartType = chartContainer.attr("data-chart-type");
-          console.log(chartType);
           if (chartType) {
             if (chartType == "bar") {
               const geoCode = currentSelected;
@@ -539,7 +574,6 @@
                   showCountryChart(geoCode);
                 }
               } else if (chartType == "line") {
-                console.log(chartedCountries);
                 showLineChart(Array.from(chartedCountries));
               }
             }
@@ -756,7 +790,7 @@
               .append("div")
               .attr("id", "slider-text-div")
               .style("text-align", "center")
-              .style("font-size", "12px")
+              .style("font-size", "0.8rem")
               .style("margin-top", "4px")
               .text(
                 `Showing data for: ${selectedTime ? selectedTime : latestTime}`
@@ -782,6 +816,8 @@
           .text("X")
           .classed("chart-close-button", true)
           .on("click", () => {
+            currentSelected = null;
+            chartedCountries.clear();
             // Remove chart
             chartContainer.html("").attr("data-chart-type", "");
           });
@@ -812,22 +848,15 @@
 
         const y = d3
           .scaleLinear()
-          .domain([0, d3.max(countryData, (d) => +d.VALUE) || 1])
+          .domain([d3.min(countryData, (d) => +d.VALUE) || 0, d3.max(countryData, (d) => +d.VALUE) || 1])
           .nice()
           .range([plotHeight, 0]);
 
+        const every = Math.ceil(x.domain().length / 10);
         // Axes
         g.append("g")
           .attr("transform", `translate(0,${plotHeight})`)
-          .call(
-            d3
-              .axisBottom(x)
-              .tickValues(
-                x
-                  .domain()
-                  .filter((d, i) => !(i % Math.ceil(x.domain().length / 20)))
-              )
-          )
+          .call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every == 0)))
           .selectAll("text")
           .attr("transform", "rotate(-45)")
           .style("text-anchor", "end");
@@ -862,7 +891,7 @@
           .attr("x", width / 2)
           .attr("y", 30)
           .attr("text-anchor", "middle")
-          .style("font-size", "16px")
+          .style("font-size", "1.1rem")
           .style("font-weight", "bold")
           .text(title);
 
@@ -880,9 +909,8 @@
           .attr("fill", "#4682b4");
 
         // Tooltip
-        const tooltip = chartContainer
-          .append("div")
-          .classed("chart-tooltip", true)
+        const tooltip = d3.select("#chart-tooltip").style("opacity", 0);
+          // .classed("chart-tooltip", true)
 
         const topOffset = chartContainerBoundingRect.top;
         const leftOffset = chartContainerBoundingRect.left;
@@ -890,19 +918,18 @@
         bars
         .on("mouseover", function (event, d) {
           d3.select(this).attr("fill", d3.color("#4682b4").darker(1));
-          // console.log(d);
           const bar = d3.select(event.currentTarget);
+          console.log(bar.attr("x"), bar.attr("y"));
           const xPos = +bar.attr("x") + x.bandwidth() / 2;
           const yPos = +bar.attr("y");
 
           tooltip.transition().duration(200).style("opacity", 0.95);
-            // .style("opacity", 1)
           tooltip.html(`${d.VALUE}`);
 
           // Position tooltip centered above the bar
           tooltip
-            .style("left", (margin.left + xPos - tooltip.node().offsetWidth / 2) + "px")
-            .style("top", (margin.top + yPos - 30) + "px"); // 30px above bar
+            .style("left", (leftOffset + margin.left + xPos - tooltip.node().offsetWidth / 2) + "px")
+            .style("top", (topOffset + margin.top + yPos - 30) + "px"); // 30px above bar
         })
         .on("mouseout", function () {
           d3.select(this).attr("fill", "#4682b4");
@@ -924,13 +951,15 @@
           .text("X")
           .classed("chart-close-button", true)
           .on("click", () => {
-            chartContainer.html("");
+            currentSelected = null;
+            chartedCountries.clear();
+            chartContainer.html("").attr("data-chart-type", "");
           });
 
         const chartContainerBoundingRect = chartContainer.node().getBoundingClientRect();
         const width = chartContainerBoundingRect.width;
         const height = chartContainerBoundingRect.height;
-        const margin = { top: 50, right: 100, bottom: 60, left: 60 };
+        const margin = { top: 50, right: 150, bottom: 80, left: 60 };
 
         const plotWidth = width - margin.left - margin.right;
         const plotHeight = height - margin.top - margin.bottom;
@@ -969,7 +998,7 @@
 
         const y = d3
           .scaleLinear()
-          .domain([0, d3.max(countrySeries, c => d3.max(c.values, d => d.value)) || 1])
+          .domain([d3.min(countrySeries, c => d3.min(c.values, d => d.value)) || 0, d3.max(countrySeries, c => d3.max(c.values, d => d.value)) || 1])
           .nice()
           .range([plotHeight, 0]);
 
@@ -977,15 +1006,49 @@
           .domain(countries)
           .range(d3.schemeCategory10);
 
+        const every = Math.ceil(x.domain().length / 10);
         // Axes
         g.append("g")
           .attr("transform", `translate(0,${plotHeight})`)
-          .call(d3.axisBottom(x).tickValues(times.filter((_, i) => i % 2 === 0)))
+          .call(d3.axisBottom(x).tickValues(x.domain().filter((_, i) => i % every === 0)))
           .selectAll("text")
           .attr("transform", "rotate(-45)")
           .style("text-anchor", "end");
 
         g.append("g").call(d3.axisLeft(y));
+
+        // Axis labels
+        g.append("text")
+          .attr("x", plotWidth / 2)
+          .attr("y", plotHeight + 60)
+          .attr("text-anchor", "middle")
+          .attr("fill", "black")
+          .text(metadata[selectedDataset]?.x || "Year");
+
+        g.append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -plotHeight / 2)
+          .attr("y", -45)
+          .attr("text-anchor", "middle")
+          .attr("fill", "black")
+          .text(metadata[selectedDataset]?.y || "Value");
+
+        // Chart title
+        let title = `${
+          metadata[selectedDataset]?.label || ""
+        }`;
+        if (title.length > 40) {
+          title = title.slice(0, 40) + "...";
+        }
+        svg
+          .append("text")
+          .attr("x", width / 2)
+          .attr("y", 30)
+          .attr("text-anchor", "middle")
+          .style("font-size", "1.1rem")
+          .style("font-weight", "bold")
+          .text(title);
+
 
         // Lines
         const line = d3.line()
@@ -996,10 +1059,50 @@
           .data(countrySeries)
           .enter()
           .append("path")
+          .attr("data-country", d => d.geo)
           .attr("fill", "none")
           .attr("stroke", d => color(d.geo))
           .attr("stroke-width", 2)
           .attr("d", d => line(d.values));
+
+        const tooltip = d3.select("#chart-tooltip").style("opacity", 0);
+
+        const leftOffset = chartContainerBoundingRect.left;
+        const topOffset = chartContainerBoundingRect.top;
+
+        // Add circles to each data point
+        countrySeries.forEach(series => {
+          g.selectAll(`.circle-${series.geo}`)
+            .data(series.values)
+            .enter()
+            .append("circle")
+            .attr("data-country", series.geo)
+            .attr("cx", d => x(d.time))
+            .attr("cy", d => y(d.value))
+            
+            .attr("r", 4)
+            .attr("fill", color(series.geo))
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 1)
+            .on("mouseover", function (event, d) {
+              tooltip
+                .text(`${series.name} (${d.time}): ${d.value}`);
+
+              const bar = d3.select(event.currentTarget);
+              const xPos = +bar.attr("cx") + x.bandwidth() / 2;
+              const yPos = +bar.attr("cy");
+
+              tooltip.transition().duration(200).style("opacity", 0.95);
+              
+              // Position tooltip centered above the bar
+              tooltip
+                .style("left", (leftOffset + margin.left + xPos - tooltip.node().offsetWidth / 2) + "px")
+                .style("top", (topOffset + margin.top + yPos - 30) + "px"); // 30px above bar
+            })
+            .on("mouseout", function () {
+              tooltip.transition().duration(200).style("opacity", 0);
+            });
+        });
 
         // Legend
         const legend = svg
@@ -1007,7 +1110,10 @@
           .attr("transform", `translate(${plotWidth + margin.left + 20}, ${margin.top})`);
 
         countrySeries.forEach((d, i) => {
-          const group = legend.append("g").attr("transform", `translate(0, ${i * 20})`);
+          const group = legend.append("g")
+            .attr("transform", `translate(0, ${i * 20})`)
+            .style("cursor", "pointer")
+            .attr("data-country", d.geo);
           group
             .append("rect")
             .attr("width", 12)
@@ -1018,7 +1124,20 @@
             .attr("x", 16)
             .attr("y", 10)
             .text(d.name)
-            .style("font-size", "12px");
+            .style("font-size", "12px")
+            .classed("noselect", true);
+
+          group.on("click", function (e) {
+            const elem = d3.select(this);
+            const hidden = !elem.classed("strike")
+            elem.classed("strike", hidden);
+            const geoCode = elem.attr("data-country");
+            if (geoCode) {
+              // Hide both the line and the circles
+              chartContainer.selectAll(`path[data-country='${geoCode}']`).classed("hidden", hidden);
+              chartContainer.selectAll(`circle[data-country='${geoCode}']`).classed("hidden", hidden);
+            }
+          })
         });
       }
 
@@ -1062,9 +1181,7 @@
               }
         });
 
-        // const chart = d3.select("#chart-svg");
         const chartType = chartContainer.attr("data-chart-type");
-          console.log(chartType);
           if (chartType) {
             if (chartType == "bar") {
               const geoCode = currentSelected;
@@ -1072,7 +1189,6 @@
                   showCountryChart(geoCode);
                 }
               } else if (chartType == "line") {
-                console.log(chartedCountries);
                 showLineChart(Array.from(chartedCountries));
               }
             }
