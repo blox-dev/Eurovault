@@ -1,0 +1,61 @@
+"use strict";
+
+import { showCountryChart, showLineChart } from "./chart.js";
+import { setupControls } from "./controls.js";
+import { chartContainer } from "./main.js";
+import { resizeMap, handleMapPathClick } from "./map.js";
+import { state } from "./state.js";
+
+export function fetchMetadata() {
+  fetch("/data/metadata.json")
+    .then((res) => res.json())
+    .then((data) => {
+      state.metadata = data; // Store metadata in global variable
+      
+      // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
+      const datasetKeys = Object.keys(state.metadata);
+      
+      // For each key, load the corresponding CSV file
+      const csvPromises = datasetKeys.map((key) =>
+        d3
+          .csv(`/data/files/${key}.csv`)
+          .then((csv) => (state.datasets[key] = csv)) // Store loaded CSV data into global datasets object
+          .catch((error) => {
+            console.error(`Error loading CSV for ${key}:`, error);
+          })
+      );
+
+      Promise.all(csvPromises).then(() => {
+        console.log("All CSVs loaded:", state.datasets);
+        setupControls(datasetKeys);
+      });
+    })
+    .catch((error) => {
+      console.error("Error fetching metadata:", error);
+    });
+}
+
+window.addEventListener("resize", () => {
+  resizeMap();
+
+  const svg = d3.select("#map-svg");
+
+  if (window.innerWidth <= 768) {
+    svg.selectAll("path").on("click", null);
+    return;
+  }
+
+  svg.selectAll("path").on("click", handleMapPathClick);
+
+  const chartType = chartContainer.attr("data-chart-type");
+  if (chartType) {
+    if (chartType == "bar") {
+      const geoCode = state.currentSelected;
+      if (geoCode) {
+        showCountryChart(geoCode);
+      }
+    } else if (chartType == "line") {
+      showLineChart(Array.from(state.chartedCountries));
+    }
+  }
+});
