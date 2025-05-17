@@ -482,6 +482,9 @@
 
         // When dataset changes
         datasetSelect.addEventListener("change", (e) => {
+          for (const key in timeColorCache) {
+            delete timeColorCache[key];
+          }
           updateFilters(e.target.value);
         });
 
