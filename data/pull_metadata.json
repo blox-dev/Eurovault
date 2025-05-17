@@ -153,11 +153,5 @@
         "x":"Year",
         "y":"Number of R&D workers",
         "view":"Positive"
-    },
-    "TSC00007": {
-        "params": {},
-        "x":"Year",
-        "y":"Percentage of government expenditure",
-        "view":"Positive"
     }
 }
