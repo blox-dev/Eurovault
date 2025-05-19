@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Metadata Editor</title>
+    <link rel="shortcut icon" href="public/favicon.ico" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="step-container">Loading...</div>
+
+    <script>
+      const step = localStorage.getItem("step") || "1";
+      fetch(`public/metadata/step${step}.html`)
+        .then((res) => res.text())
+        .then((html) => {
+          
+          let link = document.createElement("link");
+          link.href = `public/metadata/step${step}.css`;
+          link.rel = "stylesheet";
+          document.head.append(link);
+
+          document.getElementById("step-container").innerHTML = html;
+          
+          const script = document.createElement("script");
+          script.type = "module";
+          script.defer = true;
+          script.src = `public/metadata/step${step}.js`;
+          document.body.appendChild(script);
+          
+        })
+        .catch((err) => {
+          document.getElementById("step-container").innerHTML =
+            "Error loading step.";
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

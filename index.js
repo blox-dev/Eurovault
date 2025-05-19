@@ -146,6 +146,10 @@ app.get('/', async (req, res) => {
     }
 });
 
+app.get('/metadata', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'metadata', 'index.html'));
+});
+
 app.get('/links', (req, res) => {
     const pullMetadataPath = path.join(DATA_FOLDER_PATH, 'pull_metadata.json');
 
