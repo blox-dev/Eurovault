@@ -116,6 +116,22 @@ const language = 'EN';
 // Serve static files
 app.use('/data', express.static(DATA_FOLDER_PATH));
 app.use('/public', express.static(PUBLIC_FOLDER_PATH));
+app.use(express.json()); // To parse JSON bodies
+
+// Route to save metadata
+app.post('/save-metadata', (req, res) => {
+  const metadata = req.body;
+
+  const filePath = path.join(__dirname, 'data', 'metadata2.json');
+
+  fs.writeFile(filePath, JSON.stringify(metadata, null, 2), (err) => {
+    if (err) {
+      console.error('Error writing metadata:', err);
+      return res.status(500).send('Failed to save metadata');
+    }
+    res.send('Metadata saved successfully');
+  });
+});
 
 // Routes
 app.get('/', async (req, res) => {
