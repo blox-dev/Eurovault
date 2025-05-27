@@ -2,7 +2,6 @@ console.log(localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
 const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
-const metadataCache = {};
 const metadataFetchMap = {};
 
 let selectedTableCodes = new Set();
@@ -85,10 +84,41 @@ function renderSelectedTables() {
 
       currentEditingCode = node.code;
 
-      if (metadataCache[node.code]) {
-        parseMetadata(node.code, metadataCache[node.code]);
+      if (node.isSaved && !metadataFetchMap[node.code]) {
+        console.log("isSaved");
+        // TODO: maybe don't fetch again?
+        // Have to account for changes in the data structure at Eurostat
+        const res = await fetchMetadata(node);
+        if (res.message) {
+          return;
+        }
+        // Default selections if not manually configured
+        const result = {
+          label: res.label,
+          updated: res.updated,
+          description: res.extension?.description,
+          dimension: res.dimension,
+          dimensionPrefs: res.dimension,
+          x: "Year",
+          y: "Value",
+        };
+        
+        // Attach user preferences
+        if (node.dimensionPrefs) {
+          result.dimensionPrefs = node.dimensionPrefs;
+        }
+
+        metadataFetchMap[node.code] = result;
+        parseMetadata(node.code, result);
+      } else if (metadataFetchMap[node.code]) {
+        parseMetadata(node.code, metadataFetchMap[node.code]);
       } else {
-        fetchMetadata(node);
+        const res = await fetchMetadata(node);
+        if (res.message) {
+          return;
+        }
+        metadataFetchMap[node.code] = res;
+        parseMetadata(node.code, res);
       }
     };
 
@@ -113,28 +143,36 @@ async function fetchWithRetry(url, options = {}, retries = 3, delay = 2000) {
   }
 }
 
-function fetchMetadata(node) {
+async function fetchMetadata(node) {
   // Fetch only metadata, no values
   console.log("Fetch");
-  fetchWithRetry(`${BASE_URL}/${node.code}?geo=null`)
+  return fetchWithRetry(`${BASE_URL}/${node.code}?geo=null`)
     .then((data) => {
-      metadataCache[node.code] = data;
-      parseMetadata(node.code, data);
+      return data;
     })
     .catch((err) => {
       alert(`Failed to fetch metadata for ${node.code}:\n${err.message}`);
+      return err;
     });
 }
 
 function saveCurrentMetadata() {
   if (!currentEditingCode) return true;
 
-  const metadata = metadataCache[currentEditingCode];
+  const metadata = metadataFetchMap[currentEditingCode];
   const container = document.getElementById("edit-metadata-container");
   const form = container.querySelector("div");
   if (!form || !metadata) return true;
 
-  const result = { dimension: {} };
+  const result = {
+    label: metadata.label,
+    updated: metadata.updated,
+    description: metadata.extension?.description,
+    dimension: {},
+    x: "Year",
+    y: "Value",
+  };
+
   const errors = [];
 
   for (const key in metadata.dimension) {
@@ -152,7 +190,23 @@ function saveCurrentMetadata() {
     if (isRequired && selected.length === 0) {
       errors.push(`Please select at least one value for ${key}`);
     } else if (selected.length > 0) {
-      result.dimension[key] = selected;
+      const dimensionData = metadata.dimension[key];
+
+      result.dimension[key] = {
+        label: dimensionData.label,
+        category: {
+          index: Object.fromEntries(
+            Object.entries(dimensionData.category.index).filter(([key]) =>
+              selected.includes(key)
+            )
+          ),
+          label: Object.fromEntries(
+            Object.entries(dimensionData.category.label).filter(([key]) =>
+              selected.includes(key)
+            )
+          ),
+        } 
+      };
     }
   }
 
@@ -161,11 +215,7 @@ function saveCurrentMetadata() {
     return false;
   }
 
-  result.label = metadata.label;
-  result.lastModified = metadata.updated;
-  result.description = metadata.extension?.description;
-
-  metadataFetchMap[currentEditingCode] = result;
+  metadataFetchMap[currentEditingCode].dimensionPrefs = result.dimension;
   return true;
 }
 
@@ -195,9 +245,8 @@ function parseMetadata(code, data) {
 
     const inner = document.createElement("div");
     inner.style.display =
-      key === "time" || Object.values(dim.category?.index).length > 10
-        ? "none"
-        : "block";
+      // key === "time" || Object.values(dim.category?.index).length > 10
+      key === "time" ? "none" : "block";
     inner.style.paddingLeft = "15px";
 
     toggle.onclick = () => {
@@ -207,24 +256,30 @@ function parseMetadata(code, data) {
     const categories = dim.category?.index || {};
     const labels = dim.category?.label || {};
 
+    const selectedItems =
+      metadataFetchMap[code] && metadataFetchMap[code].dimensionPrefs
+        ? Object.keys(metadataFetchMap[code].dimensionPrefs[key].category.index)
+        : null;
+
+    console.log(selectedItems);
+
     for (const [cat, idx] of Object.entries(categories)) {
       const checkbox = document.createElement("input");
       checkbox.type = "checkbox";
       checkbox.value = cat;
       checkbox.name = key;
       checkbox.id = `${key}_${cat}`;
-      checkbox.checked = metadataFetchMap[code]
-        ? metadataFetchMap[code].dimension[key].includes(cat)
-        : true;
+      checkbox.checked = selectedItems ? selectedItems.includes(cat) : true;
 
       // time always checked and disabled
-      if (key === "time") {
+      if (key === "time" || Object.values(dim.category?.index).length === 1) {
+        checkbox.checked = true;
         checkbox.disabled = true;
       }
 
       const label = document.createElement("label");
       label.setAttribute("for", checkbox.id);
-      label.textContent = labels[cat] || cat;
+      label.textContent = labels[cat] ? `${labels[cat]} (${cat})` : cat;
 
       const line = document.createElement("div");
       line.appendChild(checkbox);
@@ -254,28 +309,38 @@ function parseMetadata(code, data) {
     const fetchPromises = [];
     for (const code of selectedTableCodes) {
       if (!metadataFetchMap[code]) {
-        const table = selectedTableDataMap.get(code);
         fetchPromises.push(
           fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
             .then((data) => {
-              metadataCache[code] = data;
 
               // Default selections if not manually configured
               const result = {
                 label: data.label,
                 updated: data.updated,
                 description: data.extension?.description,
-                dimension: {},
+                dimension: data.dimension,
+                dimensionPrefs: data.dimension,
                 x: "Year",
                 y: "Value",
               };
 
-              for (const [key, dim] of Object.entries(data.dimension)) {
-                if (key === "geo") continue;
-                result.dimension[key] = Object.keys(dim.category?.index || {});
-              }
 
               metadataFetchMap[code] = result;
+
+              // for (const [key, dim] of Object.entries(data.dimension)) {
+              //   if (key === "geo") continue;
+              //         const dimensionData = data.dimension[key];
+
+              //   result.dimension[key] = {
+              //     label: dimensionData.label,
+              //     category: Object.fromEntries(
+              //       Object.entries(dimensionData.category.label)
+              //     ),
+              //   };
+              //   // result.dimension[key] = Object.keys(dim.category?.index || {});
+              // }
+
+              // metadataFetchMap[code] = result;
             })
             .catch((err) => {
               alert(`Failed to fetch metadata for ${code}: ${err.message}`);
@@ -294,7 +359,7 @@ function parseMetadata(code, data) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        lastModified: getEurostatFormatCurrentTime(),
+        lastFetched: getEurostatFormatCurrentTime(),
         files: metadataFetchMap,
       }),
     })

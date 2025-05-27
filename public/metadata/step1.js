@@ -60,7 +60,27 @@ fetch("/data/table_of_contents.xml")
       console.error("Error setting initial view:" + err.message);
     }
 
-    renderSelectedTables();
+    // // Fetch existing metadata
+    fetch("/data/metadata2.json")
+      .then(response => response.json())
+      .then(data => {
+        console.log("Metadata2:", data);
+
+        for (let file of Object.keys(data.files)) {
+          selectedTableCodes.add(file);
+          
+          // Set flag on metadata tables
+          data.files[file].isSaved = true;
+          
+          data.files[file].title = data.files[file].label;
+          data.files[file].code = file;
+
+          selectedTableDataMap.set(file, data.files[file]);
+        }
+
+        renderSelectedTables();
+      });
+
   })
   .catch((err) => {
     document.getElementById("treeContainer").textContent =
@@ -170,7 +190,7 @@ function buildTreeHTML(nodes) {
       }
     } else if (node.type === "leaf") {
       const span = document.createElement("span");
-      let displayTitle = node.title;
+      let displayTitle = `${node.title} (${node.code})`;
       span.textContent = displayTitle;
       span.classList.add("leaf");
 
@@ -272,7 +292,7 @@ function renderSelectedTables() {
 
     // Eurostat link icon
     const linkIcon = document.createElement("a");
-    linkIcon.href = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/`;
+    linkIcon.href = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/default/table?lang=en`;
     linkIcon.target = "_blank";
     linkIcon.style.marginLeft = "10px";
     linkIcon.style.textDecoration = "none";

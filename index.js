@@ -118,11 +118,17 @@ app.use('/data', express.static(DATA_FOLDER_PATH));
 app.use('/public', express.static(PUBLIC_FOLDER_PATH));
 app.use(express.json()); // To parse JSON bodies
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json({limit: "50mb"}));
+app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+
 // Route to save metadata
 app.post('/save-metadata', (req, res) => {
   const metadata = req.body;
 
   const filePath = path.join(__dirname, 'data', 'metadata2.json');
+
+  buildUrls2(metadata.files);
 
   fs.writeFile(filePath, JSON.stringify(metadata, null, 2), (err) => {
     if (err) {
@@ -221,6 +227,35 @@ function buildUrls(data) {
         }
 
         const url = `${BASE_URL}${fileName}?${params.join("&")}`;
+        file.url = url;
+    }
+}
+
+function buildUrls2(data) {
+    for (const [fileName, file] of Object.entries(data)) {
+        const values = [];
+
+        if (!file.geo) {
+            values.push("geo=" + geo.join("&geo="));
+        }
+        if (!file.format) {
+            values.push(`format=${format}`);
+        }
+        if (!file.lang) {
+            values.push(`lang=${language}`);
+        }
+        // if (!file.sinceTimePeriod) {
+        //     values.push(`sinceTimePeriod=${sinceTimePeriod}`);
+        // }
+
+        for (const [key, dimension] of Object.entries(file.dimension)) {
+            if (key == "geo") {
+                continue;
+            }
+            values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);
+        }
+
+        const url = `${BASE_URL}${fileName}?${values.join("&")}`;
         file.url = url;
     }
 }

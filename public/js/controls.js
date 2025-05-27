@@ -36,7 +36,6 @@ export function setupControls(datasetKeys) {
 
     state.selectedDataset = dataset;
 
-    const params = state.metadata[state.selectedDataset].params || {};
     const values = state.metadata[state.selectedDataset].values || {};
 
     // Create dropdowns for each param
@@ -58,12 +57,7 @@ export function setupControls(datasetKeys) {
         select.appendChild(option);
       });
 
-      // If param is constrained in metadata.params, set default to first one
-      if (params[param]) {
-        select.value = params[param][0];
-      } else {
-        select.value = options[0];
-      }
+      select.value = options[0];
 
       // Add change event
       select.addEventListener("change", () => {

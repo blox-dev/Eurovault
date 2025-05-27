@@ -16,6 +16,7 @@
 
 #selected-tables-container {
   padding: 5px;
+  padding-bottom: 60px;
   grid-area: selected;
 }
 
@@ -24,6 +25,7 @@
   background-color: #eee;
   min-height: 100vh;
   padding: 5px;
+  padding-bottom: 60px;
 }
 
 #edit-metadata-container button {
