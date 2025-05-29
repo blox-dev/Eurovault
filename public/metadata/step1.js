@@ -1,18 +1,18 @@
-console.log(localStorage);
+console.log("localStorage", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
 
-let selectedTableCodes = new Set();
 let selectedTableDataMap = new Map();
 
 if (localStorage && localStorage.selectedTables) {
   const tables = JSON.parse(localStorage.selectedTables);
   console.log(tables);
   for (let i = 0; i < tables.length; i++) {
-    selectedTableCodes.add(tables[i].code);
     selectedTableDataMap.set(tables[i].code, tables[i]);
   }
 }
+
+console.log("selectedTableDataMap", selectedTableDataMap)
 
 let selectedTablesContainer = document.getElementById(
   "selected-tables-container"
@@ -65,10 +65,9 @@ fetch("/data/table_of_contents.xml")
       .then(response => response.json())
       .then(data => {
         console.log("Metadata2:", data);
+        console.log(Object.keys(data.files).length);
 
         for (let file of Object.keys(data.files)) {
-          selectedTableCodes.add(file);
-          
           // Set flag on metadata tables
           data.files[file].isSaved = true;
           
@@ -195,8 +194,7 @@ function buildTreeHTML(nodes) {
       span.classList.add("leaf");
 
       span.onclick = () => {
-        if (!selectedTableCodes.has(node.code)) {
-          selectedTableCodes.add(node.code);
+        if (!selectedTableDataMap.has(node.code)) {
           selectedTableDataMap.set(node.code, node);
           renderSelectedTables();
         }
@@ -282,7 +280,7 @@ function renderSelectedTables() {
   // Remove old items but keep the heading
   container.querySelectorAll("p").forEach((el) => el.remove());
 
-  selectedTableCodes.forEach((code) => {
+  selectedTableDataMap.keys().forEach((code) => {
     const node = selectedTableDataMap.get(code);
     const p = document.createElement("p");
 
@@ -304,7 +302,6 @@ function renderSelectedTables() {
     removeBtn.textContent = "Remove";
     removeBtn.style.marginLeft = "10px";
     removeBtn.onclick = () => {
-      selectedTableCodes.delete(code);
       selectedTableDataMap.delete(code);
       renderSelectedTables();
     };

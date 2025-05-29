@@ -116,7 +116,7 @@ const language = 'EN';
 // Serve static files
 app.use('/data', express.static(DATA_FOLDER_PATH));
 app.use('/public', express.static(PUBLIC_FOLDER_PATH));
-app.use(express.json()); // To parse JSON bodies
+// app.use(express.json()); // To parse JSON bodies
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json({limit: "50mb"}));
@@ -248,7 +248,7 @@ function buildUrls2(data) {
         //     values.push(`sinceTimePeriod=${sinceTimePeriod}`);
         // }
 
-        for (const [key, dimension] of Object.entries(file.dimension)) {
+        for (const [key, dimension] of Object.entries(file.dimensionPrefs)) {
             if (key == "geo") {
                 continue;
             }

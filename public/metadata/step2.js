@@ -1,21 +1,30 @@
-console.log(localStorage);
+console.log("localStorage:", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
 const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
 const metadataFetchMap = {};
 
-let selectedTableCodes = new Set();
 let selectedTableDataMap = new Map();
 let currentEditingCode = null; // Track currently editing table
 
-if (localStorage && localStorage.selectedTables) {
+if (localStorage) {
+  if (!(localStorage.selectedTables && localStorage.step && localStorage.step === "2")) {
+    // Something went wrong, reset to step 1
+    localStorage.setItem("step", "1");
+    window.location.reload(); // reload index.html and load step1
+  }
   const tables = JSON.parse(localStorage.selectedTables);
   console.log(tables);
   for (let i = 0; i < tables.length; i++) {
-    selectedTableCodes.add(tables[i].code);
     selectedTableDataMap.set(tables[i].code, tables[i]);
+    // TODO: put dimensionPrefs from saved nodes directly into metadataFetchMap on step load
+    if (tables[i].isSaved) {
+      metadataFetchMap[tables[i].code] = tables[i];
+    }
   }
 }
+
+console.log("selectedTableDataMap", selectedTableDataMap);
 
 function getEurostatFormatCurrentTime() {
   const date = new Date();
@@ -45,12 +54,15 @@ function renderSelectedTables() {
   // Remove old items but keep the heading
   container.querySelectorAll("p").forEach((el) => el.remove());
 
-  selectedTableCodes.forEach((code) => {
+  selectedTableDataMap.keys().forEach((code) => {
     const node = selectedTableDataMap.get(code);
     const p = document.createElement("p");
 
     const text = document.createElement("span");
     text.textContent = `${node.title} (${node.code})`;
+    if (node.isSaved) {
+      text.style.color= "red";
+    }
     p.appendChild(text);
 
     // Eurostat link icon
@@ -67,7 +79,6 @@ function renderSelectedTables() {
     removeBtn.textContent = "Remove";
     removeBtn.style.marginLeft = "10px";
     removeBtn.onclick = () => {
-      selectedTableCodes.delete(code);
       selectedTableDataMap.delete(code);
       renderSelectedTables();
     };
@@ -95,6 +106,8 @@ function renderSelectedTables() {
         // Default selections if not manually configured
         const result = {
           label: res.label,
+          title: res.label,
+          code: node.code,
           updated: res.updated,
           description: res.extension?.description,
           dimension: res.dimension,
@@ -109,6 +122,7 @@ function renderSelectedTables() {
         }
 
         metadataFetchMap[node.code] = result;
+        selectedTableDataMap.set(node.code, result);
         parseMetadata(node.code, result);
       } else if (metadataFetchMap[node.code]) {
         parseMetadata(node.code, metadataFetchMap[node.code]);
@@ -117,8 +131,22 @@ function renderSelectedTables() {
         if (res.message) {
           return;
         }
-        metadataFetchMap[node.code] = res;
-        parseMetadata(node.code, res);
+        // Default selections if not manually configured
+        const result = {
+          label: res.label,
+          title: res.label,
+          code: node.code,
+          updated: res.updated,
+          description: res.extension?.description,
+          dimension: res.dimension,
+          dimensionPrefs: res.dimension,
+          x: "Year",
+          y: "Value",
+        };
+
+        metadataFetchMap[node.code] = result;
+        selectedTableDataMap.set(node.code, result);
+        parseMetadata(node.code, result);
       }
     };
 
@@ -164,14 +192,15 @@ function saveCurrentMetadata() {
   const form = container.querySelector("div");
   if (!form || !metadata) return true;
 
-  const result = {
-    label: metadata.label,
-    updated: metadata.updated,
-    description: metadata.extension?.description,
-    dimension: {},
-    x: "Year",
-    y: "Value",
-  };
+  // const result = {
+  //   label: metadata.label,
+  //   updated: metadata.updated,
+  //   description: metadata.extension?.description,
+  //   dimension: {},
+  //   x: "Year",
+  //   y: "Value",
+  // };
+  let dimensionPrefs = {};
 
   const errors = [];
 
@@ -192,7 +221,7 @@ function saveCurrentMetadata() {
     } else if (selected.length > 0) {
       const dimensionData = metadata.dimension[key];
 
-      result.dimension[key] = {
+      dimensionPrefs[key] = {
         label: dimensionData.label,
         category: {
           index: Object.fromEntries(
@@ -215,13 +244,17 @@ function saveCurrentMetadata() {
     return false;
   }
 
-  metadataFetchMap[currentEditingCode].dimensionPrefs = result.dimension;
+  metadataFetchMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
+
+  const node = selectedTableDataMap.get(currentEditingCode);
+  node.dimensionPrefs = dimensionPrefs;
+  selectedTableDataMap.set(currentEditingCode, node);
   return true;
 }
 
 function parseMetadata(code, data) {
-  console.log(code);
-  console.log(data);
+  // console.log(code);
+  // console.log(data);
   const container = document.getElementById("edit-metadata-container");
   container.innerHTML = `<h2>Edit Metadata</h2>`; // Clear previous content
 
@@ -261,7 +294,7 @@ function parseMetadata(code, data) {
         ? Object.keys(metadataFetchMap[code].dimensionPrefs[key].category.index)
         : null;
 
-    console.log(selectedItems);
+    // console.log(selectedItems);
 
     for (const [cat, idx] of Object.entries(categories)) {
       const checkbox = document.createElement("input");
@@ -307,7 +340,7 @@ function parseMetadata(code, data) {
 
     // Fetch missing metadata if needed (all selected tables)
     const fetchPromises = [];
-    for (const code of selectedTableCodes) {
+    for (const code of selectedTableDataMap.keys()) {
       if (!metadataFetchMap[code]) {
         fetchPromises.push(
           fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
@@ -326,6 +359,7 @@ function parseMetadata(code, data) {
 
 
               metadataFetchMap[code] = result;
+              selectedTableDataMap.set(code, result);
 
               // for (const [key, dim] of Object.entries(data.dimension)) {
               //   if (key === "geo") continue;
@@ -351,7 +385,10 @@ function parseMetadata(code, data) {
 
     await Promise.all(fetchPromises);
 
-    localStorage.setItem("metadataFetchMap", JSON.stringify(metadataFetchMap));
+    localStorage.setItem(
+      "selectedTables",
+      JSON.stringify([...selectedTableDataMap.values()])
+    );
 
     fetch("/save-metadata", {
       method: "POST",
