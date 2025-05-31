@@ -1,14 +1,21 @@
 console.log("localStorage:", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
-const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
+const BASE_URL =
+  "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
 const metadataFetchMap = {};
 
 let selectedTableDataMap = new Map();
 let currentEditingCode = null; // Track currently editing table
 
 if (localStorage) {
-  if (!(localStorage.selectedTables && localStorage.step && localStorage.step === "2")) {
+  if (
+    !(
+      localStorage.selectedTables &&
+      localStorage.step &&
+      localStorage.step === "2"
+    )
+  ) {
     // Something went wrong, reset to step 1
     localStorage.setItem("step", "1");
     window.location.reload(); // reload index.html and load step1
@@ -60,8 +67,9 @@ function renderSelectedTables() {
 
     const text = document.createElement("span");
     text.textContent = `${node.title} (${node.code})`;
+    text.style.cursor = "pointer";
     if (node.isSaved) {
-      text.style.color= "red";
+      text.style.color = "red";
     }
     p.appendChild(text);
 
@@ -93,8 +101,6 @@ function renderSelectedTables() {
         }
       }
 
-      currentEditingCode = node.code;
-
       if (node.isSaved && !metadataFetchMap[node.code]) {
         console.log("isSaved");
         // TODO: maybe don't fetch again?
@@ -115,7 +121,7 @@ function renderSelectedTables() {
           x: "Year",
           y: "Value",
         };
-        
+
         // Attach user preferences
         if (node.dimensionPrefs) {
           result.dimensionPrefs = node.dimensionPrefs;
@@ -148,6 +154,21 @@ function renderSelectedTables() {
         selectedTableDataMap.set(node.code, result);
         parseMetadata(node.code, result);
       }
+
+      if (!currentEditingCode) {
+        // Show save buttons
+        const saveBtn = document.getElementById("saveBtn");
+        saveBtn.onclick = saveMetadata;
+        saveBtn.classList.remove("hidden");
+
+        const saveMapBtn = document.getElementById("saveMapBtn");
+        saveMapBtn.onclick = async () => {
+          await saveMetadata();
+          window.location.href = "/";
+        };
+        saveMapBtn.classList.remove("hidden");
+      }
+      currentEditingCode = node.code;
     };
 
     container.appendChild(p);
@@ -234,7 +255,7 @@ function saveCurrentMetadata() {
               selected.includes(key)
             )
           ),
-        } 
+        },
       };
     }
   }
@@ -327,91 +348,67 @@ function parseMetadata(code, data) {
     requiredSelections[key] = key !== "time";
   });
 
-  // Save button
-  const saveBtn = document.createElement("button");
-  saveBtn.textContent = "Save";
-  saveBtn.className = "bottom-right";
-  saveBtn.onclick = async () => {
-    const saved = saveCurrentMetadata();
-    if (!saved) {
-      alert("Please fix errors before saving.");
-      return;
-    }
-
-    // Fetch missing metadata if needed (all selected tables)
-    const fetchPromises = [];
-    for (const code of selectedTableDataMap.keys()) {
-      if (!metadataFetchMap[code]) {
-        fetchPromises.push(
-          fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
-            .then((data) => {
-
-              // Default selections if not manually configured
-              const result = {
-                label: data.label,
-                updated: data.updated,
-                description: data.extension?.description,
-                dimension: data.dimension,
-                dimensionPrefs: data.dimension,
-                x: "Year",
-                y: "Value",
-              };
-
-
-              metadataFetchMap[code] = result;
-              selectedTableDataMap.set(code, result);
-
-              // for (const [key, dim] of Object.entries(data.dimension)) {
-              //   if (key === "geo") continue;
-              //         const dimensionData = data.dimension[key];
-
-              //   result.dimension[key] = {
-              //     label: dimensionData.label,
-              //     category: Object.fromEntries(
-              //       Object.entries(dimensionData.category.label)
-              //     ),
-              //   };
-              //   // result.dimension[key] = Object.keys(dim.category?.index || {});
-              // }
-
-              // metadataFetchMap[code] = result;
-            })
-            .catch((err) => {
-              alert(`Failed to fetch metadata for ${code}: ${err.message}`);
-            })
-        );
-      }
-    }
-
-    await Promise.all(fetchPromises);
-
-    localStorage.setItem(
-      "selectedTables",
-      JSON.stringify([...selectedTableDataMap.values()])
-    );
-
-    fetch("/save-metadata", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        lastFetched: getEurostatFormatCurrentTime(),
-        files: metadataFetchMap,
-      }),
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to save metadata");
-        return res.text();
-      })
-      .then((msg) => alert(msg))
-      .catch((err) => alert(`Error: ${err.message}`));
-
-    console.log("All metadata saved to localStorage:", metadataFetchMap);
-  };
-
-  metadataForm.appendChild(saveBtn);
   container.appendChild(metadataForm);
+}
+
+async function saveMetadata() {
+  const saved = saveCurrentMetadata();
+  if (!saved) {
+    alert("Please fix errors before saving.");
+    return;
+  }
+
+  // Fetch missing metadata if needed (all selected tables)
+  const fetchPromises = [];
+  for (const code of selectedTableDataMap.keys()) {
+    if (!metadataFetchMap[code]) {
+      fetchPromises.push(
+        fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
+          .then((data) => {
+            // Default selections if not manually configured
+            const result = {
+              label: data.label,
+              updated: data.updated,
+              description: data.extension?.description,
+              dimension: data.dimension,
+              dimensionPrefs: data.dimension,
+              x: "Year",
+              y: "Value",
+            };
+
+            metadataFetchMap[code] = result;
+            selectedTableDataMap.set(code, result);
+          })
+          .catch((err) => {
+            alert(`Failed to fetch metadata for ${code}: ${err.message}`);
+          })
+      );
+    }
+  }
+
+  await Promise.all(fetchPromises);
+
+  localStorage.setItem(
+    "selectedTables",
+    JSON.stringify([...selectedTableDataMap.values()])
+  );
+
+  fetch("/save-metadata", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      updated: getEurostatFormatCurrentTime(),
+      files: metadataFetchMap,
+    }),
+  })
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to save metadata");
+      return res.text();
+    })
+    .then((msg) => alert(msg))
+    .catch((err) => alert(`Error: ${err.message}`));
 }
 
 renderSelectedTables();

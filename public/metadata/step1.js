@@ -14,10 +14,6 @@ if (localStorage && localStorage.selectedTables) {
 
 console.log("selectedTableDataMap", selectedTableDataMap)
 
-let selectedTablesContainer = document.getElementById(
-  "selected-tables-container"
-);
-
 fetch("/data/table_of_contents.xml")
   .then((response) => {
     if (!response.ok)
@@ -78,6 +74,7 @@ fetch("/data/table_of_contents.xml")
         }
 
         renderSelectedTables();
+        document.getElementById("nextBtn").classList.remove("hidden");
       });
 
   })
@@ -276,9 +273,8 @@ function searchAndToggle(ulElement, searchTerm) {
 }
 
 function renderSelectedTables() {
-  const container = document.getElementById("selected-tables-container");
-  // Remove old items but keep the heading
-  container.querySelectorAll("p").forEach((el) => el.remove());
+  const container = document.getElementById("selected-tables");
+  container.innerHTML = "";
 
   selectedTableDataMap.keys().forEach((code) => {
     const node = selectedTableDataMap.get(code);
@@ -294,7 +290,7 @@ function renderSelectedTables() {
     linkIcon.target = "_blank";
     linkIcon.style.marginLeft = "10px";
     linkIcon.style.textDecoration = "none";
-    linkIcon.textContent = "🔗"; // Use icon font or emoji
+    linkIcon.textContent = "🔗";
     p.appendChild(linkIcon);
 
     // Remove button
@@ -307,6 +303,10 @@ function renderSelectedTables() {
     };
     p.appendChild(removeBtn);
 
+    // Mark saved tables
+    if (node.isSaved) {
+      p.style.color = "red";
+    }
     container.appendChild(p);
   });
 }
@@ -324,4 +324,8 @@ document.getElementById("nextBtn").onclick = () => {
   );
   localStorage.setItem("step", "2");
   window.location.reload(); // reload index.html and load step2
+};
+
+document.getElementById("backBtn").onclick = () => {
+  window.location.href = "/"; // go to map
 };

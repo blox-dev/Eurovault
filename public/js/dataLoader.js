@@ -7,10 +7,10 @@ import { resizeMap, handleMapPathClick } from "./map.js";
 import { state } from "./state.js";
 
 export function fetchMetadata() {
-  fetch("/data/metadata.json")
+  fetch("/data/metadata2.json")
     .then((res) => res.json())
     .then((data) => {
-      state.metadata = data; // Store metadata in global variable
+      state.metadata = data.files; // Store metadata in global variable
       
       // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
       const datasetKeys = Object.keys(state.metadata);

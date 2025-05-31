@@ -1,5 +1,5 @@
 {
-  "lastFetched": "2025-05-29T09:44:52+0300",
+  "updated": "2025-05-29T23:17:55+0300",
   "files": {
     "ei_cphi_m": {
       "label": "Harmonised index of consumer prices - monthly data",
@@ -1586,7 +1586,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ei_cphi_m?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=M&unit=HICP2015&s_adj=NSA&indic=CP-HI00&time=1996-01&time=1996-02&time=1996-03&time=1996-04&time=1996-05&time=1996-06&time=1996-07&time=1996-08&time=1996-09&time=1996-10&time=1996-11&time=1996-12&time=1997-01&time=1997-02&time=1997-03&time=1997-04&time=1997-05&time=1997-06&time=1997-07&time=1997-08&time=1997-09&time=1997-10&time=1997-11&time=1997-12&time=1998-01&time=1998-02&time=1998-03&time=1998-04&time=1998-05&time=1998-06&time=1998-07&time=1998-08&time=1998-09&time=1998-10&time=1998-11&time=1998-12&time=1999-01&time=1999-02&time=1999-03&time=1999-04&time=1999-05&time=1999-06&time=1999-07&time=1999-08&time=1999-09&time=1999-10&time=1999-11&time=1999-12&time=2000-01&time=2000-02&time=2000-03&time=2000-04&time=2000-05&time=2000-06&time=2000-07&time=2000-08&time=2000-09&time=2000-10&time=2000-11&time=2000-12&time=2001-01&time=2001-02&time=2001-03&time=2001-04&time=2001-05&time=2001-06&time=2001-07&time=2001-08&time=2001-09&time=2001-10&time=2001-11&time=2001-12&time=2002-01&time=2002-02&time=2002-03&time=2002-04&time=2002-05&time=2002-06&time=2002-07&time=2002-08&time=2002-09&time=2002-10&time=2002-11&time=2002-12&time=2003-01&time=2003-02&time=2003-03&time=2003-04&time=2003-05&time=2003-06&time=2003-07&time=2003-08&time=2003-09&time=2003-10&time=2003-11&time=2003-12&time=2004-01&time=2004-02&time=2004-03&time=2004-04&time=2004-05&time=2004-06&time=2004-07&time=2004-08&time=2004-09&time=2004-10&time=2004-11&time=2004-12&time=2005-01&time=2005-02&time=2005-03&time=2005-04&time=2005-05&time=2005-06&time=2005-07&time=2005-08&time=2005-09&time=2005-10&time=2005-11&time=2005-12&time=2006-01&time=2006-02&time=2006-03&time=2006-04&time=2006-05&time=2006-06&time=2006-07&time=2006-08&time=2006-09&time=2006-10&time=2006-11&time=2006-12&time=2007-01&time=2007-02&time=2007-03&time=2007-04&time=2007-05&time=2007-06&time=2007-07&time=2007-08&time=2007-09&time=2007-10&time=2007-11&time=2007-12&time=2008-01&time=2008-02&time=2008-03&time=2008-04&time=2008-05&time=2008-06&time=2008-07&time=2008-08&time=2008-09&time=2008-10&time=2008-11&time=2008-12&time=2009-01&time=2009-02&time=2009-03&time=2009-04&time=2009-05&time=2009-06&time=2009-07&time=2009-08&time=2009-09&time=2009-10&time=2009-11&time=2009-12&time=2010-01&time=2010-02&time=2010-03&time=2010-04&time=2010-05&time=2010-06&time=2010-07&time=2010-08&time=2010-09&time=2010-10&time=2010-11&time=2010-12&time=2011-01&time=2011-02&time=2011-03&time=2011-04&time=2011-05&time=2011-06&time=2011-07&time=2011-08&time=2011-09&time=2011-10&time=2011-11&time=2011-12&time=2012-01&time=2012-02&time=2012-03&time=2012-04&time=2012-05&time=2012-06&time=2012-07&time=2012-08&time=2012-09&time=2012-10&time=2012-11&time=2012-12&time=2013-01&time=2013-02&time=2013-03&time=2013-04&time=2013-05&time=2013-06&time=2013-07&time=2013-08&time=2013-09&time=2013-10&time=2013-11&time=2013-12&time=2014-01&time=2014-02&time=2014-03&time=2014-04&time=2014-05&time=2014-06&time=2014-07&time=2014-08&time=2014-09&time=2014-10&time=2014-11&time=2014-12&time=2015-01&time=2015-02&time=2015-03&time=2015-04&time=2015-05&time=2015-06&time=2015-07&time=2015-08&time=2015-09&time=2015-10&time=2015-11&time=2015-12&time=2016-01&time=2016-02&time=2016-03&time=2016-04&time=2016-05&time=2016-06&time=2016-07&time=2016-08&time=2016-09&time=2016-10&time=2016-11&time=2016-12&time=2017-01&time=2017-02&time=2017-03&time=2017-04&time=2017-05&time=2017-06&time=2017-07&time=2017-08&time=2017-09&time=2017-10&time=2017-11&time=2017-12&time=2018-01&time=2018-02&time=2018-03&time=2018-04&time=2018-05&time=2018-06&time=2018-07&time=2018-08&time=2018-09&time=2018-10&time=2018-11&time=2018-12&time=2019-01&time=2019-02&time=2019-03&time=2019-04&time=2019-05&time=2019-06&time=2019-07&time=2019-08&time=2019-09&time=2019-10&time=2019-11&time=2019-12&time=2020-01&time=2020-02&time=2020-03&time=2020-04&time=2020-05&time=2020-06&time=2020-07&time=2020-08&time=2020-09&time=2020-10&time=2020-11&time=2020-12&time=2021-01&time=2021-02&time=2021-03&time=2021-04&time=2021-05&time=2021-06&time=2021-07&time=2021-08&time=2021-09&time=2021-10&time=2021-11&time=2021-12&time=2022-01&time=2022-02&time=2022-03&time=2022-04&time=2022-05&time=2022-06&time=2022-07&time=2022-08&time=2022-09&time=2022-10&time=2022-11&time=2022-12&time=2023-01&time=2023-02&time=2023-03&time=2023-04&time=2023-05&time=2023-06&time=2023-07&time=2023-08&time=2023-09&time=2023-10&time=2023-11&time=2023-12&time=2024-01&time=2024-02&time=2024-03&time=2024-04&time=2024-05&time=2024-06&time=2024-07&time=2024-08&time=2024-09&time=2024-10&time=2024-11&time=2024-12&time=2025-01&time=2025-02&time=2025-03&time=2025-04",
       "isSaved": true,
       "title": "Harmonised index of consumer prices - monthly data",
-      "code": "ei_cphi_m"
+      "code": "ei_cphi_m",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "earn_ses18_23": {
       "label": "Mean monthly earnings by sex, economic activity and educational attainment",
@@ -1933,7 +1934,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_23?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&indic_se=ERN&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&sex=T&sex=M&sex=F&sizeclas=GE10&unit=EUR&unit=PPS&time=2018",
       "isSaved": true,
       "title": "Mean monthly earnings by sex, economic activity and educational attainment",
-      "code": "earn_ses18_23"
+      "code": "earn_ses18_23",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "ilc_scp03": {
       "label": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
@@ -2228,7 +2230,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_scp03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&frequenc=NM12&frequenc=1-3&frequenc=GE1&frequenc=GE4&acl00=AC52A&acl00=AC521&acl00=AC522A&acl00=AC523H&acl00=AC525&isced11=ED3_4&isced11=ED5-8&age=Y16-24&age=Y25-34&age=Y35-49&age=Y50-64&sex=T&sex=M&sex=F&unit=PC&time=2006&time=2015&time=2022",
       "isSaved": true,
       "title": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
-      "code": "ilc_scp03"
+      "code": "ilc_scp03",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "educ_uoe_mobs04": {
       "label": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
@@ -2961,7 +2964,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_mobs04?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&isced11=ED5-8&isced11=ED5&isced11=ED6&isced11=ED7&isced11=ED8&iscedf13=F01&iscedf13=F02&iscedf13=F03&iscedf13=F04&iscedf13=F05&iscedf13=F0511&iscedf13=F0512&iscedf13=F052&iscedf13=F053&iscedf13=F054&iscedf13=F06&iscedf13=F07&iscedf13=F071&iscedf13=F072&iscedf13=F073&iscedf13=F08&iscedf13=F09&iscedf13=F091&iscedf13=F0911&iscedf13=F092&iscedf13=F0921&iscedf13=F0922&iscedf13=F0923&iscedf13=F10&iscedf13=F1011&iscedf13=F1012&iscedf13=F1013&iscedf13=F1014&iscedf13=F1015&iscedf13=F104&sex=T&sex=M&sex=F&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
-      "code": "educ_uoe_mobs04"
+      "code": "educ_uoe_mobs04",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "yth_demo_010": {
       "label": "Child and youth population on 1 January by sex and age",
@@ -3184,7 +3188,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_010?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=NR&age=TOTAL&age=Y_LT15&age=Y15-19&age=Y20-24&age=Y25-29&sex=T&sex=M&sex=F&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
       "title": "Child and youth population on 1 January by sex and age",
-      "code": "yth_demo_010"
+      "code": "yth_demo_010",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "sdg_08_10": {
       "label": "Real GDP per capita",
@@ -3392,7 +3397,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_08_10?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=CLV20_EUR_HAB&na_item=B1GQ&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
       "title": "Real GDP per capita",
-      "code": "sdg_08_10"
+      "code": "sdg_08_10",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "ilc_di03": {
       "label": "Mean and median income by age and sex",
@@ -3731,7 +3737,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_di03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y16-24&age=Y25-49&age=Y50-64&age=Y_GE65&sex=T&sex=M&sex=F&indic_il=MEI_E&indic_il=MED_E&unit=EUR&unit=PPS&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
       "title": "Mean and median income by age and sex",
-      "code": "ilc_di03"
+      "code": "ilc_di03",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "tipsho20": {
       "label": "House price index, nominal - annual data",
@@ -3919,7 +3926,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tipsho20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=I15_A_AVG&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
       "title": "House price index, nominal - annual data",
-      "code": "tipsho20"
+      "code": "tipsho20",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "educ_uoe_fine06": {
       "label": "Public expenditure on education by education level and programme orientation - as % of GDP",
@@ -4106,7 +4114,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_fine06?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC_GDP&isced11=ED1_2&isced11=ED3_4&isced11=ED5-8&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021",
       "isSaved": true,
       "title": "Public expenditure on education by education level and programme orientation - as % of GDP",
-      "code": "educ_uoe_fine06"
+      "code": "educ_uoe_fine06",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "ilc_mddw06": {
       "label": "Crime, violence or vandalism in the area by degree of urbanisation",
@@ -4321,7 +4330,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_mddw06?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&deg_urb=DEG1&deg_urb=DEG2&deg_urb=DEG3&incgrp=TOTAL&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2023",
       "isSaved": true,
       "title": "Crime, violence or vandalism in the area by degree of urbanisation",
-      "code": "ilc_mddw06"
+      "code": "ilc_mddw06",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "teibs030": {
       "label": "Employment expectations indicator",
@@ -4497,7 +4507,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/teibs030?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=M&unit=INX&s_adj=SA&indic=BS-EEI-I&time=2024-06&time=2024-07&time=2024-08&time=2024-09&time=2024-10&time=2024-11&time=2024-12&time=2025-01&time=2025-02&time=2025-03&time=2025-04&time=2025-05",
       "isSaved": true,
       "title": "Employment expectations indicator",
-      "code": "teibs030"
+      "code": "teibs030",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "earn_ses18_20": {
       "label": "Mean monthly earnings by sex, age and economic activity",
@@ -4848,7 +4859,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y_LT30&age=Y30-49&age=Y_GE50&indic_se=ERN&sex=T&sex=M&sex=F&sizeclas=GE10&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&unit=EUR&unit=NAC&unit=PPS&unit=PC&time=2018",
       "isSaved": true,
       "title": "Mean monthly earnings by sex, age and economic activity",
-      "code": "earn_ses18_20"
+      "code": "earn_ses18_20",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "lfsa_ergaedn": {
       "label": "Employment rates by sex, age, educational attainment level and citizenship",
@@ -5231,7 +5243,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ergaedn?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&citizen=EU27_2020_FOR&citizen=NEU27_2020_FOR&citizen=FOR&citizen=NAT&citizen=TOTAL&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&sex=T&sex=M&sex=F&age=Y15-24&age=Y_GE15&age=Y25-54&age=Y55-64&age=Y_GE65&unit=PC&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
       "title": "Employment rates by sex, age, educational attainment level and citizenship",
-      "code": "lfsa_ergaedn"
+      "code": "lfsa_ergaedn",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "nrg_pc_204": {
       "label": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
@@ -5578,7 +5591,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=S&product=6000&nrg_cons=TOT_KWH&nrg_cons=KWH_LT1000&nrg_cons=KWH1000-2499&nrg_cons=KWH2500-4999&nrg_cons=KWH5000-14999&nrg_cons=KWH_GE15000&unit=KWH&tax=X_VAT&tax=I_TAX&currency=EUR&currency=PPS&time=2007-S1&time=2007-S2&time=2008-S1&time=2008-S2&time=2009-S1&time=2009-S2&time=2010-S1&time=2010-S2&time=2011-S1&time=2011-S2&time=2012-S1&time=2012-S2&time=2013-S1&time=2013-S2&time=2014-S1&time=2014-S2&time=2015-S1&time=2015-S2&time=2016-S1&time=2016-S2&time=2017-S1&time=2017-S2&time=2018-S1&time=2018-S2&time=2019-S1&time=2019-S2&time=2020-S1&time=2020-S2&time=2021-S1&time=2021-S2&time=2022-S1&time=2022-S2&time=2023-S1&time=2023-S2&time=2024-S1&time=2024-S2",
       "isSaved": true,
       "title": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
-      "code": "nrg_pc_204"
+      "code": "nrg_pc_204",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "nrg_pc_202": {
       "label": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
@@ -5921,7 +5935,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_202?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=S&product=4100&nrg_cons=TOT_GJ&nrg_cons=GJ_LT20&nrg_cons=GJ20-199&nrg_cons=GJ_GE200&unit=KWH&unit=GJ_GCV&tax=X_VAT&tax=I_TAX&currency=EUR&currency=PPS&time=2007-S1&time=2007-S2&time=2008-S1&time=2008-S2&time=2009-S1&time=2009-S2&time=2010-S1&time=2010-S2&time=2011-S1&time=2011-S2&time=2012-S1&time=2012-S2&time=2013-S1&time=2013-S2&time=2014-S1&time=2014-S2&time=2015-S1&time=2015-S2&time=2016-S1&time=2016-S2&time=2017-S1&time=2017-S2&time=2018-S1&time=2018-S2&time=2019-S1&time=2019-S2&time=2020-S1&time=2020-S2&time=2021-S1&time=2021-S2&time=2022-S1&time=2022-S2&time=2023-S1&time=2023-S2&time=2024-S1&time=2024-S2",
       "isSaved": true,
       "title": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
-      "code": "nrg_pc_202"
+      "code": "nrg_pc_202",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "sdg_09_10": {
       "label": "Gross domestic expenditure on R&D by sector",
@@ -6139,7 +6154,8 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_09_10?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&sectperf=TOTAL&sectperf=BES&sectperf=GOV&sectperf=HES&sectperf=PNP&unit=PC_GDP&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "Gross domestic expenditure on R&D by sector",
-      "code": "sdg_09_10"
+      "code": "sdg_09_10",
+      "fetched": "2025-05-31T12:40:45+0300"
     },
     "rd_p_perssci": {
       "label": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
@@ -6626,7 +6642,9 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/rd_p_perssci?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&sectperf=TOTAL&sectperf=BES&sectperf=GOV&sectperf=HES&sectperf=PNP&prof_pos=TOTAL&prof_pos=RSE&sex=T&sex=F&ford=TOTAL&ford=FORD1&ford=FORD2&ford=FORD3&ford=FORD4&ford=FORD5&ford=FORD6&unit=HC&time=1980&time=1981&time=1982&time=1983&time=1984&time=1985&time=1986&time=1987&time=1988&time=1989&time=1990&time=1991&time=1992&time=1993&time=1994&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
-      "code": "rd_p_perssci"
+      "code": "rd_p_perssci",
+      "fetched": "2025-05-31T12:40:45+0300"
     }
-  }
+  },
+  "fetched": "2025-05-31T12:40:45+0300"
 }

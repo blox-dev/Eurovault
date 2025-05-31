@@ -7,7 +7,8 @@ import { state } from "./state.js";
 export const mainContainer = d3.select("#main-container");
 export const mapContainer = d3.select("#map-container");
 export const controlsContainer = d3.select("#controls-container");
-export const chartContainer = d3.select("#chart-container");
+export const chartContainer = d3.select("#chart-container-inner");
+export const controlsTooltip = d3.select("#controls-tooltip");
 
 export const colorPalette = d3.schemeBlues[6]; // 6-step blue
 

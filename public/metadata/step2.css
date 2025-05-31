@@ -48,3 +48,7 @@
   grid-template-rows: auto;
   grid-template-areas: "selected metadata";
 }
+
+.hidden {
+  display: none;
+}

@@ -128,7 +128,7 @@ app.post('/save-metadata', (req, res) => {
 
   const filePath = path.join(__dirname, 'data', 'metadata2.json');
 
-  buildUrls2(metadata.files);
+  buildUrls(metadata.files);
 
   fs.writeFile(filePath, JSON.stringify(metadata, null, 2), (err) => {
     if (err) {
@@ -141,30 +141,38 @@ app.post('/save-metadata', (req, res) => {
 
 // Routes
 app.get('/', async (req, res) => {
-    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata.json');
-    const pullMetadataPath = path.join(DATA_FOLDER_PATH, 'pull_metadata.json');
+    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
 
     try {
-        let metaData;
-        if (fs.existsSync(metadataPath)) {
-            // metadata.json exists: load it, no need to update
-            const data = await fs.promises.readFile(metadataPath);
-            metaData = JSON.parse(data);
-            buildUrls(metaData);
+        const data = await fs.promises.readFile(metadataPath, 'utf-8');
+        const metaData = JSON.parse(data);
 
-            res.sendFile(INDEX_PATH);
+        // metadata.updated, metadata.files[x].updated - when did we last update the data from eurostat
+        // metadata.fetched  - when did we last download the data from eurostat
+        // if 30 days passed since last metadata update or the files were never fetched, trigger update
+
+        let needsUpdate = false;
+
+        if (!metaData.fetched) {
+            needsUpdate = true;
         } else {
-            // metadata.json missing: load pull_metadata.json, update database first
-            const data = await fs.promises.readFile(pullMetadataPath);
-            metaData = JSON.parse(data);
-            buildUrls(metaData);
-
-            await updateDatabase(metaData);  // this will generate metadata.json
-            res.sendFile(INDEX_PATH);
+            const timestamp = Date.parse(metaData.fetched) + (30 * 24 * 60 * 60 * 1000);
+            //                                                day hour  min  sec  msec
+            if (timestamp < Date.parse(metaData.updated)) {
+                needsUpdate = true;
+            } 
         }
+
+        buildUrls(metaData.files);
+
+        if (needsUpdate) {
+            await updateDatabase(metaData); // will write metadata2.json back with new fetched
+        }
+        
+        res.sendFile(INDEX_PATH);
     } catch (error) {
         console.error(error);
-        res.status(500).send('Server error while reading metadata.');
+        res.status(500).send('Server error while reading metadata2.');
     }
 });
 
@@ -173,65 +181,37 @@ app.get('/metadata', (req, res) => {
 });
 
 app.get('/links', (req, res) => {
-    const pullMetadataPath = path.join(DATA_FOLDER_PATH, 'pull_metadata.json');
+    const pullMetadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
 
     fs.readFile(pullMetadataPath, (err, data) => {
         if (err) return res.status(404).send(err.message);
 
         const metaData = JSON.parse(data);
-        buildUrls(metaData);
+        buildUrls(metaData.files);
 
-        const html = generateHtml(metaData);
+        const html = generateHtml(metaData.files);
         res.send(html);
     });
 });
 
 app.get('/update', (req, res) => {
-    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata.json');
-    const pullMetadataPath = path.join(DATA_FOLDER_PATH, 'pull_metadata.json');
-    const readPath = fs.existsSync(metadataPath) ? metadataPath : pullMetadataPath;
+    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
 
-    fs.readFile(readPath, (err, data) => {
+    fs.readFile(metadataPath, (err, data) => {
         if (err) return res.status(404).send(err.message);
 
         const metaData = JSON.parse(data);
-        buildUrls(metaData);
-
-        const html = generateHtml(metaData);
+        buildUrls(metaData.files);
+        
+        const html = generateHtml(metaData.files);
         res.send(html);
-
+        
         // update in the background
         updateDatabase(metaData).catch(error => console.error("Error updating database (background):", error));
     });
 });
 
 function buildUrls(data) {
-    for (const [fileName, file] of Object.entries(data)) {
-        const params = [];
-
-        if (!file.params.geo) {
-            params.push("geo=" + geo.join("&geo="));
-        }
-        if (!file.params.format) {
-            params.push(`format=${format}`);
-        }
-        if (!file.params.lang) {
-            params.push(`lang=${language}`);
-        }
-        if (!file.params.sinceTimePeriod) {
-            params.push(`sinceTimePeriod=${sinceTimePeriod}`);
-        }
-
-        for (const [key, values] of Object.entries(file.params)) {
-            params.push(`${key}=${values.join(`&${key}=`)}`);
-        }
-
-        const url = `${BASE_URL}${fileName}?${params.join("&")}`;
-        file.url = url;
-    }
-}
-
-function buildUrls2(data) {
     for (const [fileName, file] of Object.entries(data)) {
         const values = [];
 
@@ -269,40 +249,67 @@ function generateHtml(data) {
     )).join('');
 }
 
+function getEurostatFormatCurrentTime() {
+  const date = new Date();
+
+  const pad = (num) => String(num).padStart(2, "0");
+
+  const yyyy = date.getFullYear();
+  const mm = pad(date.getMonth() + 1);
+  const dd = pad(date.getDate());
+  const hh = pad(date.getHours());
+  const min = pad(date.getMinutes());
+  const ss = pad(date.getSeconds());
+
+  // Get timezone offset in minutes and convert to ±HHMM
+  const tzOffset = -date.getTimezoneOffset(); // invert sign
+  const tzSign = tzOffset >= 0 ? "+" : "-";
+  const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));
+  const tzMinutes = pad(Math.abs(tzOffset) % 60);
+
+  const tzString = `${tzSign}${tzHours}${tzMinutes}`;
+
+  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
+}
+
 async function updateDatabase(metaData) {
-    const promises = Object.values(metaData).map(file =>
+    // metadata.updated, metadata.files[x].updated - when did we last update the data from eurostat
+    // metadata.fetched  - when did we last download the data from eurostat
+
+    // if 30 days passed since last metadata update or files never fetched, trigger update
+    let needsUpdate = false;
+
+    if (!metaData.fetched) {
+        needsUpdate = true;
+    } else {
+        const timestamp = Date.parse(metaData.fetched) + (30 * 24 * 60 * 60 * 1000);
+        //                                                day hour  min  sec  msec
+        if (timestamp < Date.parse(metaData.updated)) {
+            needsUpdate = true;
+        } 
+    }
+
+    if (!needsUpdate) {
+        console.log("NO DB UPDATE");
+        return;
+    }
+
+    console.log("START DB UPDATE");
+
+    const files = metaData.files;
+
+    let currentTime = getEurostatFormatCurrentTime();
+    
+    const promises = Object.entries(files).map(([fileName, file]) =>
         fetch(file.url)
             .then(res => res.json())
             .then(data => {
-                const fileName = data.extension.id;
-                const lastUpdated = Date.parse(data.updated);
-
-                if (lastUpdated <= Date.parse(metaData[fileName].lastUpdated)) {
-                    console.log(fileName, "not updated");
-                    return { message: "already updated" };
+                if (data.error) {
+                    throw data.error;
                 }
-
-                const vals = {};
-                const dims = { ...data.dimension };
-                delete dims['geo'];
-                delete dims['time'];
-
-                for (const [k, v] of Object.entries(dims)) {
-                    if (Object.values(v.category.label).length > 1) {
-                        vals[k] = { ...v.category.label };
-                    }
-                }
-
-                metaData[fileName] = {
-                    ...metaData[fileName],
-                    label: data.label,
-                    values: vals,
-                    description: data.extension.description || data.label,
-                    lastUpdated: data.updated
-                };
 
                 const csvData = JSON2CSV(data);
-                return { fileName, json: data, csv: csvData };
+                return { fileName: fileName, json: data, csv: csvData };
             })
             .catch(err => {
                 console.error(err);
@@ -314,24 +321,27 @@ async function updateDatabase(metaData) {
 
     for (const response of results) {
         if (response.message || response.error) {
+            console.log(response);
             continue;
         }
-
-        const { fileName, json: jsonData, csv: csvData } = response;
+        const { fileName: fileName, json: jsonData, csv: csvData } = response;
         const jsonFilePath = path.join(FILES_FOLDER_PATH, `${fileName}.json`);
         const csvFilePath = path.join(FILES_FOLDER_PATH, `${fileName}.csv`);
 
         await fs.promises.writeFile(jsonFilePath, JSON.stringify(jsonData));
-        console.log(`Data written to ${fileName}.json`);
-
+        console.log(`Updated ${fileName}.json`);
         await fs.promises.writeFile(csvFilePath, csvData);
-        console.log(`Data written to ${fileName}.csv`);
+        console.log(`Updated ${fileName}.csv`);
+
+        metaData.files[fileName].fetched = currentTime;
     }
 
-    // Save updated metadata
-    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata.json');
-    await fs.promises.writeFile(metadataPath, JSON.stringify(metaData));
-    console.log("Updated metadata.json");
+    metaData.fetched = currentTime;
+    const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
+    await fs.promises.writeFile(metadataPath, JSON.stringify(metaData, null, 2));
+    console.log("Updated metadata2.json");
+
+    console.log("END DB UPDATE");
 }
 
 function JSON2CSV(data) {

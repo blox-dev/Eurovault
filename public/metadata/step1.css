@@ -55,6 +55,7 @@ li {
 #tables-container {
   padding: 5px;
   grid-area: tables;
+  padding-bottom: 60px;
 }
 
 #selected-tables-container {
@@ -62,6 +63,7 @@ li {
   background-color: #eee;
   min-height: 100vh;
   padding: 5px;
+  padding-bottom: 60px;
 }
 
 #selected-tables-container p {
@@ -80,10 +82,22 @@ li {
   grid-template-areas: "tables selected";
 }
 
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 .bottom-right {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px 20px;
   cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }

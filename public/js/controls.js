@@ -27,8 +27,19 @@ export function setupControls(datasetKeys) {
     updateFilters(e.target.value);
   });
 
+  // edit-metadata-button
+  document.getElementById("edit-metadata-button").onclick = (event) => {
+    if (!localStorage) {
+      return;
+    }
+    localStorage.removeItem("selectedTables");
+    localStorage.setItem("step", 1);
+    window.location.href = "/metadata";
+  }
+
   function updateFilters(dataset) {
     const groupsToRemove = filterPanel.querySelectorAll(".control-group");
+    const controlTitle = filterPanel.querySelector(".control-title");
 
     groupsToRemove.forEach((group) => {
       filterPanel.removeChild(group);
@@ -36,24 +47,28 @@ export function setupControls(datasetKeys) {
 
     state.selectedDataset = dataset;
 
-    const values = state.metadata[state.selectedDataset].values || {};
+    // const values = state.metadata[state.selectedDataset].values || {};
+    const values = state.metadata[state.selectedDataset].dimensionPrefs || {};
 
     // Create dropdowns for each param
     Object.keys(values).forEach((param) => {
+      if (param === "time") {
+        return;
+      }
       const groupDiv = document.createElement("div");
       groupDiv.classList.add("control-group");
 
       const label = document.createElement("label");
-      label.textContent = param;
+      label.textContent = values[param].label;
 
       const select = document.createElement("select");
       select.id = `filter-${param}`;
 
-      const options = Object.keys(values[param]);
+      const options = Object.keys(values[param].category.label);
       options.forEach((opt) => {
         const option = document.createElement("option");
         option.value = opt;
-        option.textContent = values[param][opt];
+        option.textContent = values[param].category.label[opt];
         select.appendChild(option);
       });
 
@@ -69,7 +84,13 @@ export function setupControls(datasetKeys) {
 
       groupDiv.appendChild(label);
       groupDiv.appendChild(select);
-      filterPanel.appendChild(groupDiv);
+
+      if (options.length <= 1) {
+        select.disabled = true;
+        filterPanel.append(groupDiv);
+      } else {
+        filterPanel.prepend(groupDiv);
+      }
     });
 
     // Initial filtering
@@ -80,11 +101,15 @@ export function setupControls(datasetKeys) {
 function filterData(selectedDataset, nochange = false) {
   let data = state.datasets[selectedDataset];
 
-  const values = state.metadata[state.selectedDataset].values || {};
+  // const values = state.metadata[state.selectedDataset].values || {};
+  const values = state.metadata[state.selectedDataset].dimensionPrefs || {};
   let filters = {};
 
   // Gather selected filters
   Object.keys(values).forEach((param) => {
+    if (param === "time" || Object.keys(values[param].category.index).length === 1) {
+      return;
+    }
     const selected = document.getElementById(`filter-${param}`).value;
     filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
   });

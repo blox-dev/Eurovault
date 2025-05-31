@@ -1,16 +1,17 @@
 "use strict";
 
-import { chartContainer } from "./main.js";
+import { chartContainer, controlsTooltip } from "./main.js";
 import { europe } from "./map.js";
 import { state } from "./state.js";
 import { compareTimes } from "./utils.js";
 
 export function showCountryChart(geoCode) {
+  chartContainer.html("").attr("data-chart-type", "bar"); // Clear previous chart
+  controlsTooltip.classed("hidden", true);
+  
   const countryName = europe.features.find(
     (f) => f.properties.EUROSTAT === geoCode
   ).properties.ADMIN;
-
-  chartContainer.html("").attr("data-chart-type", "bar"); // Clear previous chart
 
   const svg = chartContainer
     .append("svg")
@@ -28,6 +29,7 @@ export function showCountryChart(geoCode) {
       state.chartedCountries.clear();
       // Remove chart
       chartContainer.html("").attr("data-chart-type", "");
+      controlsTooltip.classed("hidden", false);
     });
 
   // Filter the historical data
@@ -160,6 +162,7 @@ export function showCountryChart(geoCode) {
 
 export function showLineChart(countries) {
   chartContainer.html("").attr("data-chart-type", "line"); // Clear previous chart
+  controlsTooltip.classed("hidden", true);
 
   const svg = chartContainer
     .append("svg")
@@ -174,6 +177,7 @@ export function showLineChart(countries) {
       state.currentSelected = null;
       state.chartedCountries.clear();
       chartContainer.html("").attr("data-chart-type", "");
+      controlsTooltip.classed("hidden", false);
     });
 
   const chartContainerBoundingRect = chartContainer
