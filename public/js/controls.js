@@ -35,11 +35,10 @@ export function setupControls(datasetKeys) {
     localStorage.removeItem("selectedTables");
     localStorage.setItem("step", 1);
     window.location.href = "/metadata";
-  }
+  };
 
   function updateFilters(dataset) {
     const groupsToRemove = filterPanel.querySelectorAll(".control-group");
-    const controlTitle = filterPanel.querySelector(".control-title");
 
     groupsToRemove.forEach((group) => {
       filterPanel.removeChild(group);
@@ -107,7 +106,10 @@ function filterData(selectedDataset, nochange = false) {
 
   // Gather selected filters
   Object.keys(values).forEach((param) => {
-    if (param === "time" || Object.keys(values[param].category.index).length === 1) {
+    if (
+      param === "time" ||
+      Object.keys(values[param].category.index).length === 1
+    ) {
       return;
     }
     const selected = document.getElementById(`filter-${param}`).value;
@@ -232,41 +234,26 @@ function updateMapColors(selectedTime = null, nochange = false) {
   const meta = state.metadata[dataset];
   const label = meta.label || dataset;
   const description = meta.description || "";
-  const shouldShowDescription = description && description !== label;
 
-  d3.select("#info-title").text(label);
-  const descContainer = d3.select("#info-description");
-  descContainer.html(""); // Clear old
+  // Set title and label
+  d3.select("#info-label").text(label);
 
-  if (shouldShowDescription) {
-    const isLong = description.length > 100;
-    const shortText = description.slice(0, 100) + "...";
+  // Handle description panel
+  const descPanel = d3.select("#info-description");
+  descPanel.html(""); // Clear old
+  descPanel.classed("hidden", true); // Hide by default
+  const helpIcon = d3.select("#info-help");
 
-    descContainer
-      .append("span")
-      .attr("id", "desc-text")
-      .text(isLong ? shortText : description);
+  if (description) {
+    descPanel.text(description);
 
-    if (isLong) {
-      descContainer
-        .append("a")
-        .attr("href", "#")
-        .attr("id", "desc-toggle")
-        .style("display", "block")
-        .style("color", "#0077cc")
-        .style("margin-top", "4px")
-        .text("Read more...");
-
-      // Toggle behavior
-      d3.select("#desc-toggle").on("click", function (event) {
-        event.preventDefault();
-        const current = d3.select("#desc-text").text();
-        const isExpanded = current === description;
-
-        d3.select("#desc-text").text(isExpanded ? shortText : description);
-        d3.select(this).text(isExpanded ? "Read more..." : "Read less...");
-      });
-    }
+    helpIcon
+      .on("mouseenter", () => descPanel.classed("hidden", false))
+      .on("mouseleave", () => descPanel.classed("hidden", true))
+      .classed("hidden", false)
+      .classed("inline-block", true);
+  } else {
+    helpIcon.classed("hidden", true).classed("inline-block", false);
   }
 
   // 7. Update color legend

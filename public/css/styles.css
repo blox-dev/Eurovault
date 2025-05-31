@@ -94,27 +94,48 @@ svg {
 /* Map info panel */
 #info-panel {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255);
   border-radius: 8px;
   padding: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
-  max-width: 200px;
+  max-width: 180px;
 }
 
 #info-title {
   font-weight: bold;
 }
-#info-description {
-  margin-top: 4px;
-}
+
 #color-legend {
   margin-top: 10px;
 }
 #time-slider-container {
   margin-top: 12px;
+}
+
+#info-description {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 200px; /* show beside info-panel */
+  background: rgba(255, 255, 255);
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+}
+
+#info-help {
+  background-color: #0077cc;
+  color: white;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* Controls layout */
@@ -263,4 +284,8 @@ svg {
 
 .hidden {
   display: none;
+}
+
+.inline-block {
+  display: inline-block;
 }
