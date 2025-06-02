@@ -2,6 +2,7 @@
 
 import { showCountryChart, showLineChart } from "./chart.js";
 import { colorPalette, mapContainer, chartContainer } from "./main.js";
+import { resizeMap, handleMapPathClick } from "./map.js";
 import { state } from "./state.js";
 import { compareTimes } from "./utils.js";
 
@@ -332,3 +333,30 @@ function updateMapColors(selectedTime = null, nochange = false) {
       .text(`Showing data for: ${selectedTime ? selectedTime : latestTime}`);
   }
 }
+
+// Handle resize
+
+window.addEventListener("resize", () => {
+  resizeMap();
+
+  const svg = d3.select("#map-svg");
+
+  if (window.innerWidth <= 768) {
+    svg.selectAll("path").on("click", null);
+    return;
+  }
+
+  svg.selectAll("path").on("click", handleMapPathClick);
+
+  const chartType = chartContainer.attr("data-chart-type");
+  if (chartType) {
+    if (chartType == "bar") {
+      const geoCode = state.currentSelected;
+      if (geoCode) {
+        showCountryChart(geoCode);
+      }
+    } else if (chartType == "line") {
+      showLineChart(Array.from(state.chartedCountries));
+    }
+  }
+});
