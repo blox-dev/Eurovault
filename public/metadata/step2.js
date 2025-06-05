@@ -118,8 +118,6 @@ function renderSelectedTables() {
           description: res.extension?.description,
           dimension: res.dimension,
           dimensionPrefs: res.dimension,
-          x: "Year",
-          y: "Value",
         };
 
         // Attach user preferences
@@ -146,8 +144,6 @@ function renderSelectedTables() {
           description: res.extension?.description,
           dimension: res.dimension,
           dimensionPrefs: res.dimension,
-          x: "Year",
-          y: "Value",
         };
 
         metadataFetchMap[node.code] = result;
@@ -200,7 +196,9 @@ async function fetchMetadata(node) {
       return data;
     })
     .catch((err) => {
-      alert(`Failed to fetch metadata for ${node.code}:\n${err.message}`);
+      console.error(
+        `Failed to fetch metadata for ${node.code}:\n${err.message}`
+      );
       return err;
     });
 }
@@ -218,8 +216,6 @@ function saveCurrentMetadata() {
   //   updated: metadata.updated,
   //   description: metadata.extension?.description,
   //   dimension: {},
-  //   x: "Year",
-  //   y: "Value",
   // };
   let dimensionPrefs = {};
 
@@ -372,15 +368,15 @@ async function saveMetadata() {
               description: data.extension?.description,
               dimension: data.dimension,
               dimensionPrefs: data.dimension,
-              x: "Year",
-              y: "Value",
             };
 
             metadataFetchMap[code] = result;
             selectedTableDataMap.set(code, result);
           })
           .catch((err) => {
-            alert(`Failed to fetch metadata for ${code}: ${err.message}`);
+            console.error(
+              `Failed to fetch metadata for ${code}: ${err.message}`
+            );
           })
       );
     }
@@ -393,22 +389,25 @@ async function saveMetadata() {
     JSON.stringify([...selectedTableDataMap.values()])
   );
 
-  fetch("/save-metadata", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      updated: getEurostatFormatCurrentTime(),
-      files: metadataFetchMap,
-    }),
-  })
-    .then((res) => {
-      if (!res.ok) throw new Error("Failed to save metadata");
-      return res.text();
-    })
-    .then((msg) => alert(msg))
-    .catch((err) => alert(`Error: ${err.message}`));
+  try {
+    const res = await fetch("/save-metadata", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        updated: getEurostatFormatCurrentTime(),
+        files: metadataFetchMap,
+      }),
+    });
+
+    if (!res.ok) throw new Error("Failed to save metadata");
+
+    const msg = await res.text();
+    console.log(msg);
+  } catch (err) {
+    console.error(`Error: ${err.message}`);
+  }
 }
 
 renderSelectedTables();

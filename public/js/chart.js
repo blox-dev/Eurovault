@@ -86,7 +86,7 @@ export function showCountryChart(geoCode) {
     .attr("y", plotHeight + 60)
     .attr("text-anchor", "middle")
     .attr("fill", "black")
-    .text(state.metadata[state.selectedDataset]?.x || "Year");
+    .text(state.xlabel || "Year");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
@@ -94,7 +94,7 @@ export function showCountryChart(geoCode) {
     .attr("y", -45)
     .attr("text-anchor", "middle")
     .attr("fill", "black")
-    .text(state.metadata[state.selectedDataset]?.y || "Value");
+    .text(state.ylabel || "Value");
 
   // Chart title
   let title = `${countryName} - ${
@@ -140,7 +140,7 @@ export function showCountryChart(geoCode) {
       const yPos = +bar.attr("y");
 
       tooltip.transition().duration(200).style("opacity", 0.95);
-      tooltip.html(`${d.VALUE}`);
+      tooltip.text(`${d.TIME}: ${d.VALUE}`);
 
       // Position tooltip centered above the bar
       tooltip
@@ -249,7 +249,7 @@ export function showLineChart(countries) {
     .attr("y", plotHeight + 60)
     .attr("text-anchor", "middle")
     .attr("fill", "black")
-    .text(state.metadata[state.selectedDataset]?.x || "Year");
+    .text(state.xlabel || "Year");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
@@ -257,7 +257,7 @@ export function showLineChart(countries) {
     .attr("y", -45)
     .attr("text-anchor", "middle")
     .attr("fill", "black")
-    .text(state.metadata[state.selectedDataset]?.y || "Value");
+    .text(state.ylabel || "Value");
 
   // Chart title
   let title = `${state.metadata[state.selectedDataset]?.label || ""}`;

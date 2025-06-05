@@ -4,7 +4,7 @@ import { showCountryChart, showLineChart } from "./chart.js";
 import { colorPalette, mapContainer, chartContainer } from "./main.js";
 import { resizeMap, handleMapPathClick } from "./map.js";
 import { state } from "./state.js";
-import { compareTimes } from "./utils.js";
+import { compareTimes, shorten } from "./utils.js";
 
 export function setupControls(datasetKeys) {
   const datasetSelect = document.getElementById("dataset-select");
@@ -107,12 +107,35 @@ function filterData(selectedDataset, nochange = false) {
 
   // Gather selected filters
   Object.keys(values).forEach((param) => {
-    if (
-      param === "time" ||
-      Object.keys(values[param].category.index).length === 1
-    ) {
+    // store unit of measure
+    if (param === "unit") {
+      const selected = document.getElementById(`filter-${param}`).value;
+      state.ylabel = values.unit.category.label[selected];
+    }
+
+    // store unit of time
+    if (param === "time") {
+      // Take any element from the time category, as they share the same structure
+      const selected = Object.keys(values.time.category.label)[0];
+      if (selected.indexOf("Q") !== -1) {
+        state.xlabel = "Quarter";
+        return;
+      } else if (selected.indexOf("S") !== -1) {
+        state.xlabel = "Season";
+        return;
+      } else if (selected.indexOf("-") !== -1) {
+        state.xlabel = "Month";
+        return;
+      }
+      state.xlabel = "Year";
       return;
     }
+
+    // Ignore filters with one option
+    if (Object.keys(values[param].category.index).length === 1) {
+      return;
+    }
+
     const selected = document.getElementById(`filter-${param}`).value;
     filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
   });
@@ -268,6 +291,8 @@ function updateMapColors(selectedTime = null, nochange = false) {
         return minVal + step * i;
       });
 
+  const unit = shorten(state.ylabel) || "";
+
   thresholds.forEach((t, i) => {
     const color = colorPalette[i];
     const from = i === 0 ? minVal : thresholds[i - 1];
@@ -282,7 +307,7 @@ function updateMapColors(selectedTime = null, nochange = false) {
       .style("align-items", "center")
       .style("margin-bottom", "2px").html(`
               <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
-              <div>${label}</div>
+              <div>${unit ? `${label} ${unit}` : label}</div>
             `);
   });
 
