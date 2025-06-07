@@ -25,7 +25,16 @@ export function setupControls(datasetKeys) {
     for (const key in state.timeColorCache) {
       delete state.timeColorCache[key];
     }
-    updateFilters(e.target.value);
+    if (state.timeMatchLevel === "none") {
+      updateFilters(e.target.value, null);
+      return;
+    }
+
+    const slider = document.querySelector(
+      "#time-slider-container input[type=range]"
+    );
+    const selectedTime = slider ? state.times[+slider.value] : null;
+    updateFilters(e.target.value, selectedTime);
   });
 
   // edit-metadata-button
@@ -38,7 +47,7 @@ export function setupControls(datasetKeys) {
     window.location.href = "/metadata";
   };
 
-  function updateFilters(dataset) {
+  function updateFilters(dataset, selectedTime = null) {
     const groupsToRemove = filterPanel.querySelectorAll(".control-group");
 
     groupsToRemove.forEach((group) => {
@@ -79,7 +88,17 @@ export function setupControls(datasetKeys) {
         for (const key in state.timeColorCache) {
           delete state.timeColorCache[key];
         }
-        filterData(state.selectedDataset, true);
+        if (state.timeMatchLevel === "none") {
+          filterData(state.selectedDataset, null);
+          return;
+        }
+
+        const slider = document.querySelector(
+          "#time-slider-container input[type=range]"
+        );
+        const selectedTime = slider ? state.times[+slider.value] : null;
+
+        filterData(state.selectedDataset, selectedTime);
       });
 
       groupDiv.appendChild(label);
@@ -94,11 +113,11 @@ export function setupControls(datasetKeys) {
     });
 
     // Initial filtering
-    filterData(state.selectedDataset);
+    filterData(state.selectedDataset, selectedTime);
   }
 }
 
-function filterData(selectedDataset, nochange = false) {
+function filterData(selectedDataset, selectedTime = null) {
   let data = state.datasets[selectedDataset];
 
   // const values = state.metadata[state.selectedDataset].values || {};
@@ -148,7 +167,7 @@ function filterData(selectedDataset, nochange = false) {
   });
 
   // console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
-  updateMapColors(null, nochange);
+  updateMapColors(selectedTime);
 
   if (window.innerWidth <= 768) {
     return;
@@ -167,32 +186,71 @@ function filterData(selectedDataset, nochange = false) {
   }
 }
 
-function updateMapColors(selectedTime = null, nochange = false) {
-  const timeChanged = selectedTime === null;
+function findClosestTimeMatch(selectedTime, availableTimes) {
+  if (!selectedTime || !availableTimes || availableTimes.length === 0)
+    return null;
+
+  // 1. Exact match
+  if (availableTimes.includes(selectedTime)) return selectedTime;
+
+  if (state.timeMatchLevel === "strict") return null;
+
+  // 2. Extract year
+  const yearMatch = selectedTime.match(/^\d{4}/);
+  const year = yearMatch ? yearMatch[0] : null;
+
+  if (year) {
+    const sameYearMatches = availableTimes.filter((t) => t.startsWith(year));
+    if (sameYearMatches.length > 0) {
+      return sameYearMatches[0]; // return first match in same year
+    }
+  }
+
+  // 3. Start with selectedTime (e.g., "2023" matches "2023-Q2")
+  const prefixMatches = availableTimes.filter((t) =>
+    t.startsWith(selectedTime)
+  );
+  if (prefixMatches.length > 0) return prefixMatches[0];
+
+  // 4. End with selectedTime (e.g., "Q2" matches "2023-Q2")
+  const suffixMatches = availableTimes.filter((t) => t.endsWith(selectedTime));
+  if (suffixMatches.length > 0) return suffixMatches[0];
+
+  // 5. Loose fuzzy match
+  const looseMatches = availableTimes.filter((t) => t.includes(selectedTime));
+  if (looseMatches.length > 0) return looseMatches[0];
+
+  return null;
+}
+
+function updateMapColors(selectedTime = null, noUpdate = false) {
   // 1. Check if TIME column exists
   const hasTime =
     state.filteredData.length > 0 && "TIME" in state.filteredData[0];
 
-  // 2. If so, find the latest year
-  let latestTime = selectedTime;
-  if (!selectedTime && hasTime) {
-    let times = [...new Set(state.filteredData.map((d) => d.TIME))];
+  let times = [];
+  if (hasTime) {
+    times = [...new Set(state.filteredData.map((d) => d.TIME))];
     times.sort(compareTimes);
-    latestTime = times[times.length - 1];
   }
+  state.times = times;
 
-  let valuesByGeo = state.timeColorCache[latestTime];
+  // Find closest time to match with, or default with the latest time
+  const matchedTime = findClosestTimeMatch(selectedTime, times);
+  selectedTime = matchedTime || times[times.length - 1];
+
+  let valuesByGeo = state.timeColorCache[selectedTime];
   if (!valuesByGeo) {
     valuesByGeo = {};
     state.filteredData.forEach((row) => {
       const geo = row.GEO;
       if (!geo) return;
-      if (!hasTime || row.TIME === latestTime) {
+      if (!hasTime || row.TIME === selectedTime) {
         const val = parseFloat(row.VALUE);
         valuesByGeo[geo] = val;
       }
     });
-    state.timeColorCache[latestTime] = valuesByGeo;
+    state.timeColorCache[selectedTime] = valuesByGeo;
   }
 
   // 4. Compute min/max ignoring zeros
@@ -320,32 +378,28 @@ function updateMapColors(selectedTime = null, nochange = false) {
     );
 
   // Update Time Slider
-  let sliderContainer = d3.select("#time-slider-container");
-
-  if (nochange) {
-    return;
-  }
-  if (!timeChanged) {
+  if (noUpdate) {
     d3.select("#slider-text-div").text(`Showing data for: ${selectedTime}`);
     return;
   }
+
+  let sliderContainer = d3.select("#time-slider-container");
   sliderContainer.html(""); // Clear existing content
 
   if (hasTime) {
-    let times = [...new Set(state.filteredData.map((d) => d.TIME))];
-    times.sort(compareTimes);
+    const selectedIndex = times.indexOf(selectedTime);
 
     sliderContainer
       .append("input")
       .attr("type", "range")
       .attr("min", 0)
       .attr("max", times.length - 1)
-      .attr("value", times.length - 1)
+      .attr("value", selectedIndex)
       .style("width", "100%")
       .on("input", function () {
         const index = +this.value;
-        const selectedTime = times[index];
-        updateMapColors(selectedTime);
+        const newTime = times[index];
+        updateMapColors(newTime, true);
       });
 
     sliderContainer
@@ -354,7 +408,7 @@ function updateMapColors(selectedTime = null, nochange = false) {
       .style("text-align", "center")
       .style("font-size", "0.8rem")
       .style("margin-top", "4px")
-      .text(`Showing data for: ${selectedTime ? selectedTime : latestTime}`);
+      .text(`Showing data for: ${selectedTime}`);
   }
 }
 

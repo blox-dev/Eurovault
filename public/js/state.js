@@ -6,4 +6,5 @@ export let state = {
   chartedCountries: new Set(), // Stores selected countries for line chart
   currentSelected: null, // Currently selected country geocode for bar chart
   timeColorCache: {}, // Cache for time-based valuesByGeo
+  timeMatchLevel: "none", // none - does not attempt time matching, strict - only matches exact string, smart - matches loose terms
 };
