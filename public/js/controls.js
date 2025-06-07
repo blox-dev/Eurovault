@@ -197,10 +197,7 @@ function updateMapColors(selectedTime = null, nochange = false) {
 
   // 4. Compute min/max ignoring zeros
   const nonZeroValues = Object.values(valuesByGeo).filter((v) => v > 0);
-  const minVal = d3.min(nonZeroValues);
-  const maxVal = d3.max(nonZeroValues);
-
-  const scale = d3.scaleQuantize().domain([minVal, maxVal]).range(colorPalette);
+  const scale = d3.scaleQuantile().domain(nonZeroValues).range(colorPalette);
 
   // 5. Re-color the countries
   mapContainer
@@ -281,36 +278,38 @@ function updateMapColors(selectedTime = null, nochange = false) {
   }
 
   // 7. Update color legend
-  const legend = d3.select("#color-legend");
-  legend.html(""); // Clear previous
-
-  const thresholds = scale.thresholds
-    ? scale.thresholds()
-    : scale.range().map((_, i, arr) => {
-        const step = (maxVal - minVal) / arr.length;
-        return minVal + step * i;
-      });
-
+  const legend = d3.select("#color-legend").html("");
+  const thresholds = scale.quantiles();
   const unit = shorten(state.ylabel) || "";
 
-  thresholds.forEach((t, i) => {
+  const allThresholds = [
+    d3.min(nonZeroValues),
+    ...thresholds,
+    d3.max(nonZeroValues),
+  ];
+
+  allThresholds.forEach((val, i) => {
+    if (i === allThresholds.length - 1) return; // Skip last point (no range to next)
+
+    const from = allThresholds[i];
+    const to = allThresholds[i + 1];
     const color = colorPalette[i];
-    const from = i === 0 ? minVal : thresholds[i - 1];
-    const to = t;
     const label =
       from.toFixed(0) === to.toFixed(0)
         ? `${from.toFixed(2)}-${to.toFixed(2)}`
         : `${from.toFixed(0)}-${to.toFixed(0)}`;
+
     legend
       .append("div")
       .style("display", "flex")
       .style("align-items", "center")
       .style("margin-bottom", "2px").html(`
-              <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
-              <div>${unit ? `${label} ${unit}` : label}</div>
-            `);
+      <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
+      <div>${unit ? `${label} ${unit}` : label}</div>
+    `);
   });
 
+  // Add grey color for zero/missing
   legend
     .append("div")
     .style("display", "flex")

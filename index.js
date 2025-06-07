@@ -242,7 +242,7 @@ function buildUrls(data) {
 
 function generateHtml(data) {
     return Object.entries(data).map(([fileName, file]) => (
-        `<p>${fileName}: 
+        `<p>${file.label || file.title} - ${fileName}: 
             <a target="_blank" href="${file.url}">JSON</a> - 
             <a target="_blank" href="https://ec.europa.eu/eurostat/databrowser/view/${fileName}/default/table?lang=en">DATABASE</a>
         </p>`
