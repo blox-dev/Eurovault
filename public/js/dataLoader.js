@@ -24,7 +24,7 @@ export function fetchMetadata() {
 
       Promise.all(csvPromises).then(() => {
         console.log("All CSVs loaded:", state.datasets);
-        setupControls(datasetKeys);
+        setupControls(datasetKeys, "init");
       });
     })
     .catch((error) => {

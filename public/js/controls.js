@@ -6,7 +6,7 @@ import { resizeMap, handleMapPathClick } from "./map.js";
 import { state } from "./state.js";
 import { compareTimes, shorten } from "./utils.js";
 
-export function setupControls(datasetKeys) {
+export function setupControls(datasetKeys, updateSource = null) {
   const datasetSelect = document.getElementById("dataset-select");
   const filterPanel = document.getElementById("filter-panel");
 
@@ -19,22 +19,17 @@ export function setupControls(datasetKeys) {
   });
 
   datasetSelect.value = datasetKeys[0];
-  updateFilters(datasetKeys[0]);
+  updateFilters(datasetKeys[0], updateSource);
 
   datasetSelect.addEventListener("change", (e) => {
     for (const key in state.timeColorCache) {
       delete state.timeColorCache[key];
     }
-    if (state.timeMatchLevel === "none") {
-      updateFilters(e.target.value, null);
-      return;
-    }
-
     const slider = document.querySelector(
       "#time-slider-container input[type=range]"
     );
     const selectedTime = slider ? state.times[+slider.value] : null;
-    updateFilters(e.target.value, selectedTime);
+    updateFilters(e.target.value, "dataset", selectedTime);
   });
 
   // edit-metadata-button
@@ -47,7 +42,7 @@ export function setupControls(datasetKeys) {
     window.location.href = "/metadata";
   };
 
-  function updateFilters(dataset, selectedTime = null) {
+  function updateFilters(dataset, updateSource = null, selectedTime = null) {
     const groupsToRemove = filterPanel.querySelectorAll(".control-group");
 
     groupsToRemove.forEach((group) => {
@@ -88,17 +83,12 @@ export function setupControls(datasetKeys) {
         for (const key in state.timeColorCache) {
           delete state.timeColorCache[key];
         }
-        if (state.timeMatchLevel === "none") {
-          filterData(state.selectedDataset, null);
-          return;
-        }
-
         const slider = document.querySelector(
           "#time-slider-container input[type=range]"
         );
         const selectedTime = slider ? state.times[+slider.value] : null;
 
-        filterData(state.selectedDataset, selectedTime);
+        filterData(state.selectedDataset, "filter", selectedTime);
       });
 
       groupDiv.appendChild(label);
@@ -113,11 +103,11 @@ export function setupControls(datasetKeys) {
     });
 
     // Initial filtering
-    filterData(state.selectedDataset, selectedTime);
+    filterData(state.selectedDataset, updateSource, selectedTime);
   }
 }
 
-function filterData(selectedDataset, selectedTime = null) {
+function filterData(selectedDataset, updateSource = null, selectedTime = null) {
   let data = state.datasets[selectedDataset];
 
   // const values = state.metadata[state.selectedDataset].values || {};
@@ -167,7 +157,7 @@ function filterData(selectedDataset, selectedTime = null) {
   });
 
   // console.log(`Filtered dataset for ${selectedDataset}:`, filteredData);
-  updateMapColors(selectedTime);
+  updateMapColors(updateSource, selectedTime);
 
   if (window.innerWidth <= 768) {
     return;
@@ -186,14 +176,14 @@ function filterData(selectedDataset, selectedTime = null) {
   }
 }
 
-function findClosestTimeMatch(selectedTime, availableTimes) {
+function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
   if (!selectedTime || !availableTimes || availableTimes.length === 0)
     return null;
 
   // 1. Exact match
   if (availableTimes.includes(selectedTime)) return selectedTime;
 
-  if (state.timeMatchLevel === "strict") return null;
+  if (timeMatchLevel === "strict") return null;
 
   // 2. Extract year
   const yearMatch = selectedTime.match(/^\d{4}/);
@@ -223,7 +213,15 @@ function findClosestTimeMatch(selectedTime, availableTimes) {
   return null;
 }
 
-function updateMapColors(selectedTime = null, noUpdate = false) {
+function updateMapColors(updateSource = null, selectedTime = null) {
+  if (!["dataset", "filter", "timeSlider", "external", "init"].includes(updateSource)) {
+    throw new Error(`Unknown update source: ${updateSource}`);
+  }
+
+  const timeMatchLevel = state.timeMatchLevel;
+
+  // console.log("updateSource", updateSource);
+
   // 1. Check if TIME column exists
   const hasTime =
     state.filteredData.length > 0 && "TIME" in state.filteredData[0];
@@ -235,8 +233,16 @@ function updateMapColors(selectedTime = null, noUpdate = false) {
   }
   state.times = times;
 
+  // Update the time to be selected based on updateSource and timeMatchLevel
+  let matchedTime = null;
+
+  if (timeMatchLevel === "none" && ["dataset", "filter"].includes(updateSource)) {
+      selectedTime = null;
+  } else {
+    matchedTime = findClosestTimeMatch(selectedTime, times, timeMatchLevel);
+  }
+
   // Find closest time to match with, or default with the latest time
-  const matchedTime = findClosestTimeMatch(selectedTime, times);
   selectedTime = matchedTime || times[times.length - 1];
 
   let valuesByGeo = state.timeColorCache[selectedTime];
@@ -378,7 +384,7 @@ function updateMapColors(selectedTime = null, noUpdate = false) {
     );
 
   // Update Time Slider
-  if (noUpdate) {
+  if (updateSource === "timeSlider") {
     d3.select("#slider-text-div").text(`Showing data for: ${selectedTime}`);
     return;
   }
@@ -399,7 +405,7 @@ function updateMapColors(selectedTime = null, noUpdate = false) {
       .on("input", function () {
         const index = +this.value;
         const newTime = times[index];
-        updateMapColors(newTime, true);
+        updateMapColors("timeSlider", newTime);
       });
 
     sliderContainer
