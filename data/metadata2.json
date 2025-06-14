@@ -1,6 +1,1543 @@
 {
-  "updated": "2025-06-05T21:58:49+0300",
+  "updated": "2025-06-14T20:47:17+0300",
+  "order": [
+    "ilc_pw05",
+    "sdg_08_10",
+    "ilc_di03",
+    "earn_ses18_20",
+    "earn_ses18_23",
+    "ei_cphi_m",
+    "teibs030",
+    "lfsa_ergaedn",
+    "educ_uoe_mobs04",
+    "ilc_mddw06",
+    "educ_uoe_fine06",
+    "tipsho20",
+    "nrg_pc_204",
+    "nrg_pc_202",
+    "sdg_09_10",
+    "rd_p_perssci",
+    "ilc_scp03"
+  ],
   "files": {
+    "ilc_pw05": {
+      "label": "Overall life satisfaction by level of satisfaction, age and educational attainment",
+      "title": "Overall life satisfaction by level of satisfaction, age and educational attainment",
+      "code": "ilc_pw05",
+      "updated": "2025-05-23T11:00:00+0200",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "PC": 0
+            },
+            "label": {
+              "PC": "Percentage"
+            }
+          }
+        },
+        "lev_satis": {
+          "label": "Level of satisfaction",
+          "category": {
+            "index": {
+              "HIGH": 0,
+              "MED": 1,
+              "LOW": 2
+            },
+            "label": {
+              "HIGH": "High",
+              "MED": "Medium",
+              "LOW": "Low"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "life_sat": {
+          "label": "Life satisfaction",
+          "category": {
+            "index": {
+              "LIFE": 0
+            },
+            "label": {
+              "LIFE": "Life as a whole"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "Y16-19": 0,
+              "Y16-24": 1,
+              "Y16-29": 2,
+              "Y_GE16": 3,
+              "Y20-24": 4,
+              "Y25-29": 5,
+              "Y25-34": 6,
+              "Y30-64": 7,
+              "Y35-49": 8,
+              "Y50-64": 9,
+              "Y65-74": 10,
+              "Y_GE65": 11,
+              "Y_GE75": 12
+            },
+            "label": {
+              "Y16-19": "From 16 to 19 years",
+              "Y16-24": "From 16 to 24 years",
+              "Y16-29": "From 16 to 29 years",
+              "Y_GE16": "16 years or over",
+              "Y20-24": "From 20 to 24 years",
+              "Y25-29": "From 25 to 29 years",
+              "Y25-34": "From 25 to 34 years",
+              "Y30-64": "From 30 to 64 years",
+              "Y35-49": "From 35 to 49 years",
+              "Y50-64": "From 50 to 64 years",
+              "Y65-74": "From 65 to 74 years",
+              "Y_GE65": "65 years or over",
+              "Y_GE75": "75 years or over"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2013": 0,
+              "2018": 1,
+              "2021": 2,
+              "2022": 3,
+              "2023": 4,
+              "2024": 5
+            },
+            "label": {
+              "2013": "2013",
+              "2018": "2018",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "PC": 0
+            },
+            "label": {
+              "PC": "Percentage"
+            }
+          }
+        },
+        "lev_satis": {
+          "label": "Level of satisfaction",
+          "category": {
+            "index": {
+              "HIGH": 0,
+              "MED": 1,
+              "LOW": 2
+            },
+            "label": {
+              "HIGH": "High",
+              "MED": "Medium",
+              "LOW": "Low"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "life_sat": {
+          "label": "Life satisfaction",
+          "category": {
+            "index": {
+              "LIFE": 0
+            },
+            "label": {
+              "LIFE": "Life as a whole"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "Y16-19": 0,
+              "Y_GE16": 3,
+              "Y20-24": 4,
+              "Y25-34": 6,
+              "Y35-49": 8,
+              "Y50-64": 9,
+              "Y65-74": 10,
+              "Y_GE75": 12
+            },
+            "label": {
+              "Y16-19": "From 16 to 19 years",
+              "Y_GE16": "16 years or over",
+              "Y20-24": "From 20 to 24 years",
+              "Y25-34": "From 25 to 34 years",
+              "Y35-49": "From 35 to 49 years",
+              "Y50-64": "From 50 to 64 years",
+              "Y65-74": "From 65 to 74 years",
+              "Y_GE75": "75 years or over"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2013": 0,
+              "2018": 1,
+              "2021": 2,
+              "2022": 3,
+              "2023": 4,
+              "2024": 5
+            },
+            "label": {
+              "2013": "2013",
+              "2018": "2018",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_pw05?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&lev_satis=HIGH&lev_satis=MED&lev_satis=LOW&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&life_sat=LIFE&sex=T&sex=M&sex=F&age=Y16-19&age=Y_GE16&age=Y20-24&age=Y25-34&age=Y35-49&age=Y50-64&age=Y65-74&age=Y_GE75&time=2013&time=2018&time=2021&time=2022&time=2023&time=2024",
+      "isSaved": true
+    },
+    "sdg_08_10": {
+      "label": "Real GDP per capita",
+      "updated": "2025-05-23T23:00:00+0200",
+      "description": "<p>The indicator is calculated as the ratio of real GDP (GDP adjusted for inflation) to the average population of a specific year, where GDP is expressed in millions and population is expressed in thousands. Real GDP is published without decimals. GDP measures the value of the total final output of goods and services produced by an economy within a certain period of time. It includes goods and services that have markets (or which could have markets) and products which are produced by general government and non-profit institutions. It is a measure of economic activity and is commonly used as a proxy for the development in a country’s material living standards. However, it is not a complete measure of economic welfare. For example, GDP does not include most unpaid household work. Neither does GDP take account of negative effects of economic activity, like environmental degradation.</p>",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "CLV20_EUR_HAB": 0,
+              "CLV_PCH_PRE_HAB": 1
+            },
+            "label": {
+              "CLV20_EUR_HAB": "Chain linked volumes (2020), euro per capita",
+              "CLV_PCH_PRE_HAB": "Chain linked volumes, percentage change on previous period, per capita"
+            }
+          }
+        },
+        "na_item": {
+          "label": "National accounts indicator (ESA 2010)",
+          "category": {
+            "index": {
+              "B1GQ": 0
+            },
+            "label": {
+              "B1GQ": "Gross domestic product at market prices"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2000": 0,
+              "2001": 1,
+              "2002": 2,
+              "2003": 3,
+              "2004": 4,
+              "2005": 5,
+              "2006": 6,
+              "2007": 7,
+              "2008": 8,
+              "2009": 9,
+              "2010": 10,
+              "2011": 11,
+              "2012": 12,
+              "2013": 13,
+              "2014": 14,
+              "2015": 15,
+              "2016": 16,
+              "2017": 17,
+              "2018": 18,
+              "2019": 19,
+              "2020": 20,
+              "2021": 21,
+              "2022": 22,
+              "2023": 23,
+              "2024": 24
+            },
+            "label": {
+              "2000": "2000",
+              "2001": "2001",
+              "2002": "2002",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
+              "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "CLV20_EUR_HAB": 0
+            },
+            "label": {
+              "CLV20_EUR_HAB": "Chain linked volumes (2020), euro per capita"
+            }
+          }
+        },
+        "na_item": {
+          "label": "National accounts indicator (ESA 2010)",
+          "category": {
+            "index": {
+              "B1GQ": 0
+            },
+            "label": {
+              "B1GQ": "Gross domestic product at market prices"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2000": 0,
+              "2001": 1,
+              "2002": 2,
+              "2003": 3,
+              "2004": 4,
+              "2005": 5,
+              "2006": 6,
+              "2007": 7,
+              "2008": 8,
+              "2009": 9,
+              "2010": 10,
+              "2011": 11,
+              "2012": 12,
+              "2013": 13,
+              "2014": 14,
+              "2015": 15,
+              "2016": 16,
+              "2017": 17,
+              "2018": 18,
+              "2019": 19,
+              "2020": 20,
+              "2021": 21,
+              "2022": 22,
+              "2023": 23,
+              "2024": 24
+            },
+            "label": {
+              "2000": "2000",
+              "2001": "2001",
+              "2002": "2002",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
+              "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_08_10?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=CLV20_EUR_HAB&na_item=B1GQ&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
+      "isSaved": true,
+      "title": "Real GDP per capita",
+      "code": "sdg_08_10"
+    },
+    "ilc_di03": {
+      "label": "Mean and median income by age and sex",
+      "updated": "2025-05-23T11:00:00+0200",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "Y_LT6": 1,
+              "Y6-10": 2,
+              "Y6-11": 3,
+              "Y11-15": 4,
+              "Y12-17": 5,
+              "Y_LT16": 6,
+              "Y16-24": 7,
+              "Y16-64": 8,
+              "Y_GE16": 9,
+              "Y_LT18": 10,
+              "Y18-24": 11,
+              "Y18-64": 12,
+              "Y_GE18": 13,
+              "Y25-49": 14,
+              "Y25-54": 15,
+              "Y50-64": 16,
+              "Y55-64": 17,
+              "Y_LT60": 18,
+              "Y_GE60": 19,
+              "Y_LT65": 20,
+              "Y65-74": 21,
+              "Y_GE65": 22,
+              "Y_LT75": 23,
+              "Y_GE75": 24
+            },
+            "label": {
+              "TOTAL": "Total",
+              "Y_LT6": "Less than 6 years",
+              "Y6-10": "From 6 to 10 years",
+              "Y6-11": "From 6 to 11 years",
+              "Y11-15": "From 11 to 15 years",
+              "Y12-17": "From 12 to 17 years",
+              "Y_LT16": "Less than 16 years",
+              "Y16-24": "From 16 to 24 years",
+              "Y16-64": "From 16 to 64 years",
+              "Y_GE16": "16 years or over",
+              "Y_LT18": "Less than 18 years",
+              "Y18-24": "From 18 to 24 years",
+              "Y18-64": "From 18 to 64 years",
+              "Y_GE18": "18 years or over",
+              "Y25-49": "From 25 to 49 years",
+              "Y25-54": "From 25 to 54 years",
+              "Y50-64": "From 50 to 64 years",
+              "Y55-64": "From 55 to 64 years",
+              "Y_LT60": "Less than 60 years",
+              "Y_GE60": "60 years or over",
+              "Y_LT65": "Less than 65 years",
+              "Y65-74": "From 65 to 74 years",
+              "Y_GE65": "65 years or over",
+              "Y_LT75": "Less than 75 years",
+              "Y_GE75": "75 years or over"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "indic_il": {
+          "label": "Income and living conditions indicator",
+          "category": {
+            "index": {
+              "MEI_E": 0,
+              "MED_E": 1
+            },
+            "label": {
+              "MEI_E": "Mean equivalised net income",
+              "MED_E": "Median equivalised net income"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "NAC": 1,
+              "PPS": 2
+            },
+            "label": {
+              "EUR": "Euro",
+              "NAC": "National currency",
+              "PPS": "Purchasing power standard (PPS)"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "1995": 0,
+              "1996": 1,
+              "1997": 2,
+              "1998": 3,
+              "1999": 4,
+              "2000": 5,
+              "2001": 6,
+              "2003": 7,
+              "2004": 8,
+              "2005": 9,
+              "2006": 10,
+              "2007": 11,
+              "2008": 12,
+              "2009": 13,
+              "2010": 14,
+              "2011": 15,
+              "2012": 16,
+              "2013": 17,
+              "2014": 18,
+              "2015": 19,
+              "2016": 20,
+              "2017": 21,
+              "2018": 22,
+              "2019": 23,
+              "2020": 24,
+              "2021": 25,
+              "2022": 26,
+              "2023": 27,
+              "2024": 28
+            },
+            "label": {
+              "1995": "1995",
+              "1996": "1996",
+              "1997": "1997",
+              "1998": "1998",
+              "1999": "1999",
+              "2000": "2000",
+              "2001": "2001",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
+              "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "Y16-24": 7,
+              "Y25-49": 14,
+              "Y50-64": 16,
+              "Y_GE65": 22
+            },
+            "label": {
+              "TOTAL": "Total",
+              "Y16-24": "From 16 to 24 years",
+              "Y25-49": "From 25 to 49 years",
+              "Y50-64": "From 50 to 64 years",
+              "Y_GE65": "65 years or over"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "indic_il": {
+          "label": "Income and living conditions indicator",
+          "category": {
+            "index": {
+              "MEI_E": 0,
+              "MED_E": 1
+            },
+            "label": {
+              "MEI_E": "Mean equivalised net income",
+              "MED_E": "Median equivalised net income"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "PPS": 2
+            },
+            "label": {
+              "EUR": "Euro",
+              "PPS": "Purchasing power standard (PPS)"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "1995": 0,
+              "1996": 1,
+              "1997": 2,
+              "1998": 3,
+              "1999": 4,
+              "2000": 5,
+              "2001": 6,
+              "2003": 7,
+              "2004": 8,
+              "2005": 9,
+              "2006": 10,
+              "2007": 11,
+              "2008": 12,
+              "2009": 13,
+              "2010": 14,
+              "2011": 15,
+              "2012": 16,
+              "2013": 17,
+              "2014": 18,
+              "2015": 19,
+              "2016": 20,
+              "2017": 21,
+              "2018": 22,
+              "2019": 23,
+              "2020": 24,
+              "2021": 25,
+              "2022": 26,
+              "2023": 27,
+              "2024": 28
+            },
+            "label": {
+              "1995": "1995",
+              "1996": "1996",
+              "1997": "1997",
+              "1998": "1998",
+              "1999": "1999",
+              "2000": "2000",
+              "2001": "2001",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
+              "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_di03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y16-24&age=Y25-49&age=Y50-64&age=Y_GE65&sex=T&sex=M&sex=F&indic_il=MEI_E&indic_il=MED_E&unit=EUR&unit=PPS&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
+      "isSaved": true,
+      "title": "Mean and median income by age and sex",
+      "code": "ilc_di03"
+    },
+    "earn_ses18_20": {
+      "label": "Mean monthly earnings by sex, age and economic activity",
+      "updated": "2024-01-03T23:00:00+0100",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "Y_LT30": 1,
+              "Y30-49": 2,
+              "Y_GE50": 3
+            },
+            "label": {
+              "TOTAL": "Total",
+              "Y_LT30": "Less than 30 years",
+              "Y30-49": "From 30 to 49 years",
+              "Y_GE50": "50 years or over"
+            }
+          }
+        },
+        "indic_se": {
+          "label": "Structure of earnings indicator",
+          "category": {
+            "index": {
+              "ERN": 0,
+              "OPAY": 1,
+              "OP_E_PC": 2,
+              "SPAY": 3,
+              "SP_E_PC": 4
+            },
+            "label": {
+              "ERN": "Gross earnings",
+              "OPAY": "Overtime pay",
+              "OP_E_PC": "Overtime pay as a percentage of earnings",
+              "SPAY": "Shift pay",
+              "SP_E_PC": "Shift pay as a percentage of earnings"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "sizeclas": {
+          "label": "Size classes in number of employees",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "GE10": 1
+            },
+            "label": {
+              "TOTAL": "Total",
+              "GE10": "10 employees or more"
+            }
+          }
+        },
+        "nace_r2": {
+          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
+          "category": {
+            "index": {
+              "B-S": 0,
+              "B-S_X_O": 1,
+              "B-N": 2,
+              "B-F": 3,
+              "B-E": 4,
+              "B": 5,
+              "C": 6,
+              "D": 7,
+              "E": 8,
+              "F": 9,
+              "G-S": 10,
+              "G-S_X_O": 11,
+              "G-J": 12,
+              "G": 13,
+              "H": 14,
+              "I": 15,
+              "J": 16,
+              "K-N": 17,
+              "K": 18,
+              "L": 19,
+              "M": 20,
+              "N": 21,
+              "O-S": 22,
+              "O": 23,
+              "P-S": 24,
+              "P": 25,
+              "Q": 26,
+              "R": 27,
+              "S": 28
+            },
+            "label": {
+              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
+              "B-N": "Business economy",
+              "B-F": "Industry and construction",
+              "B-E": "Industry (except construction)",
+              "B": "Mining and quarrying",
+              "C": "Manufacturing",
+              "D": "Electricity, gas, steam and air conditioning supply",
+              "E": "Water supply; sewerage, waste management and remediation activities",
+              "F": "Construction",
+              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
+              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
+              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+              "H": "Transportation and storage",
+              "I": "Accommodation and food service activities",
+              "J": "Information and communication",
+              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
+              "K": "Financial and insurance activities",
+              "L": "Real estate activities",
+              "M": "Professional, scientific and technical activities",
+              "N": "Administrative and support service activities",
+              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "O": "Public administration and defence; compulsory social security",
+              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "P": "Education",
+              "Q": "Human health and social work activities",
+              "R": "Arts, entertainment and recreation",
+              "S": "Other service activities"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "NAC": 1,
+              "PPS": 2,
+              "PC": 3
+            },
+            "label": {
+              "EUR": "Euro",
+              "NAC": "National currency",
+              "PPS": "Purchasing power standard (PPS)",
+              "PC": "Percentage"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2018": 0
+            },
+            "label": {
+              "2018": "2018"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "Y_LT30": 1,
+              "Y30-49": 2,
+              "Y_GE50": 3
+            },
+            "label": {
+              "TOTAL": "Total",
+              "Y_LT30": "Less than 30 years",
+              "Y30-49": "From 30 to 49 years",
+              "Y_GE50": "50 years or over"
+            }
+          }
+        },
+        "indic_se": {
+          "label": "Structure of earnings indicator",
+          "category": {
+            "index": {
+              "ERN": 0
+            },
+            "label": {
+              "ERN": "Gross earnings"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "sizeclas": {
+          "label": "Size classes in number of employees",
+          "category": {
+            "index": {
+              "GE10": 1
+            },
+            "label": {
+              "GE10": "10 employees or more"
+            }
+          }
+        },
+        "nace_r2": {
+          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
+          "category": {
+            "index": {
+              "B-S": 0,
+              "B-S_X_O": 1,
+              "B-N": 2,
+              "B-F": 3,
+              "B-E": 4,
+              "B": 5,
+              "C": 6,
+              "D": 7,
+              "E": 8,
+              "F": 9,
+              "G-S": 10,
+              "G-S_X_O": 11,
+              "G-J": 12,
+              "G": 13,
+              "H": 14,
+              "I": 15,
+              "J": 16,
+              "K-N": 17,
+              "K": 18,
+              "L": 19,
+              "M": 20,
+              "N": 21,
+              "O-S": 22,
+              "O": 23,
+              "P-S": 24,
+              "P": 25,
+              "Q": 26,
+              "R": 27,
+              "S": 28
+            },
+            "label": {
+              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
+              "B-N": "Business economy",
+              "B-F": "Industry and construction",
+              "B-E": "Industry (except construction)",
+              "B": "Mining and quarrying",
+              "C": "Manufacturing",
+              "D": "Electricity, gas, steam and air conditioning supply",
+              "E": "Water supply; sewerage, waste management and remediation activities",
+              "F": "Construction",
+              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
+              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
+              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+              "H": "Transportation and storage",
+              "I": "Accommodation and food service activities",
+              "J": "Information and communication",
+              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
+              "K": "Financial and insurance activities",
+              "L": "Real estate activities",
+              "M": "Professional, scientific and technical activities",
+              "N": "Administrative and support service activities",
+              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "O": "Public administration and defence; compulsory social security",
+              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "P": "Education",
+              "Q": "Human health and social work activities",
+              "R": "Arts, entertainment and recreation",
+              "S": "Other service activities"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "NAC": 1,
+              "PPS": 2,
+              "PC": 3
+            },
+            "label": {
+              "EUR": "Euro",
+              "NAC": "National currency",
+              "PPS": "Purchasing power standard (PPS)",
+              "PC": "Percentage"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2018": 0
+            },
+            "label": {
+              "2018": "2018"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y_LT30&age=Y30-49&age=Y_GE50&indic_se=ERN&sex=T&sex=M&sex=F&sizeclas=GE10&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&unit=EUR&unit=NAC&unit=PPS&unit=PC&time=2018",
+      "isSaved": true,
+      "title": "Mean monthly earnings by sex, age and economic activity",
+      "code": "earn_ses18_20"
+    },
+    "earn_ses18_23": {
+      "label": "Mean monthly earnings by sex, economic activity and educational attainment",
+      "updated": "2024-01-03T23:00:00+0100",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "indic_se": {
+          "label": "Structure of earnings indicator",
+          "category": {
+            "index": {
+              "ERN": 0,
+              "OPAY": 1,
+              "OP_E_PC": 2,
+              "SPAY": 3,
+              "SP_E_PC": 4
+            },
+            "label": {
+              "ERN": "Gross earnings",
+              "OPAY": "Overtime pay",
+              "OP_E_PC": "Overtime pay as a percentage of earnings",
+              "SPAY": "Shift pay",
+              "SP_E_PC": "Shift pay as a percentage of earnings"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "nace_r2": {
+          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
+          "category": {
+            "index": {
+              "B-S": 0,
+              "B-S_X_O": 1,
+              "B-N": 2,
+              "B-F": 3,
+              "B-E": 4,
+              "B": 5,
+              "C": 6,
+              "D": 7,
+              "E": 8,
+              "F": 9,
+              "G-S": 10,
+              "G-S_X_O": 11,
+              "G-J": 12,
+              "G": 13,
+              "H": 14,
+              "I": 15,
+              "J": 16,
+              "K-N": 17,
+              "K": 18,
+              "L": 19,
+              "M": 20,
+              "N": 21,
+              "O-S": 22,
+              "O": 23,
+              "P-S": 24,
+              "P": 25,
+              "Q": 26,
+              "R": 27,
+              "S": 28
+            },
+            "label": {
+              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
+              "B-N": "Business economy",
+              "B-F": "Industry and construction",
+              "B-E": "Industry (except construction)",
+              "B": "Mining and quarrying",
+              "C": "Manufacturing",
+              "D": "Electricity, gas, steam and air conditioning supply",
+              "E": "Water supply; sewerage, waste management and remediation activities",
+              "F": "Construction",
+              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
+              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
+              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+              "H": "Transportation and storage",
+              "I": "Accommodation and food service activities",
+              "J": "Information and communication",
+              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
+              "K": "Financial and insurance activities",
+              "L": "Real estate activities",
+              "M": "Professional, scientific and technical activities",
+              "N": "Administrative and support service activities",
+              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "O": "Public administration and defence; compulsory social security",
+              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "P": "Education",
+              "Q": "Human health and social work activities",
+              "R": "Arts, entertainment and recreation",
+              "S": "Other service activities"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "sizeclas": {
+          "label": "Size classes in number of employees",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "GE10": 1
+            },
+            "label": {
+              "TOTAL": "Total",
+              "GE10": "10 employees or more"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "NAC": 1,
+              "PPS": 2,
+              "PC": 3
+            },
+            "label": {
+              "EUR": "Euro",
+              "NAC": "National currency",
+              "PPS": "Purchasing power standard (PPS)",
+              "PC": "Percentage"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2018": 0
+            },
+            "label": {
+              "2018": "2018"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "indic_se": {
+          "label": "Structure of earnings indicator",
+          "category": {
+            "index": {
+              "ERN": 0
+            },
+            "label": {
+              "ERN": "Gross earnings"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "nace_r2": {
+          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
+          "category": {
+            "index": {
+              "B-S": 0,
+              "B-S_X_O": 1,
+              "B-N": 2,
+              "B-F": 3,
+              "B-E": 4,
+              "B": 5,
+              "C": 6,
+              "D": 7,
+              "E": 8,
+              "F": 9,
+              "G-S": 10,
+              "G-S_X_O": 11,
+              "G-J": 12,
+              "G": 13,
+              "H": 14,
+              "I": 15,
+              "J": 16,
+              "K-N": 17,
+              "K": 18,
+              "L": 19,
+              "M": 20,
+              "N": 21,
+              "O-S": 22,
+              "O": 23,
+              "P-S": 24,
+              "P": 25,
+              "Q": 26,
+              "R": 27,
+              "S": 28
+            },
+            "label": {
+              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
+              "B-N": "Business economy",
+              "B-F": "Industry and construction",
+              "B-E": "Industry (except construction)",
+              "B": "Mining and quarrying",
+              "C": "Manufacturing",
+              "D": "Electricity, gas, steam and air conditioning supply",
+              "E": "Water supply; sewerage, waste management and remediation activities",
+              "F": "Construction",
+              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
+              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
+              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
+              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+              "H": "Transportation and storage",
+              "I": "Accommodation and food service activities",
+              "J": "Information and communication",
+              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
+              "K": "Financial and insurance activities",
+              "L": "Real estate activities",
+              "M": "Professional, scientific and technical activities",
+              "N": "Administrative and support service activities",
+              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "O": "Public administration and defence; compulsory social security",
+              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
+              "P": "Education",
+              "Q": "Human health and social work activities",
+              "R": "Arts, entertainment and recreation",
+              "S": "Other service activities"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "sizeclas": {
+          "label": "Size classes in number of employees",
+          "category": {
+            "index": {
+              "GE10": 1
+            },
+            "label": {
+              "GE10": "10 employees or more"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "EUR": 0,
+              "PPS": 2
+            },
+            "label": {
+              "EUR": "Euro",
+              "PPS": "Purchasing power standard (PPS)"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2018": 0
+            },
+            "label": {
+              "2018": "2018"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_23?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&indic_se=ERN&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&sex=T&sex=M&sex=F&sizeclas=GE10&unit=EUR&unit=PPS&time=2018",
+      "isSaved": true,
+      "title": "Mean monthly earnings by sex, economic activity and educational attainment",
+      "code": "earn_ses18_23"
+    },
     "ei_cphi_m": {
       "label": "Harmonised index of consumer prices - monthly data",
       "updated": "2025-05-19T11:00:00+0200",
@@ -1584,12 +3121,185 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ei_cphi_m?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=M&unit=HICP2015&s_adj=NSA&indic=CP-HI00&time=1996-01&time=1996-02&time=1996-03&time=1996-04&time=1996-05&time=1996-06&time=1996-07&time=1996-08&time=1996-09&time=1996-10&time=1996-11&time=1996-12&time=1997-01&time=1997-02&time=1997-03&time=1997-04&time=1997-05&time=1997-06&time=1997-07&time=1997-08&time=1997-09&time=1997-10&time=1997-11&time=1997-12&time=1998-01&time=1998-02&time=1998-03&time=1998-04&time=1998-05&time=1998-06&time=1998-07&time=1998-08&time=1998-09&time=1998-10&time=1998-11&time=1998-12&time=1999-01&time=1999-02&time=1999-03&time=1999-04&time=1999-05&time=1999-06&time=1999-07&time=1999-08&time=1999-09&time=1999-10&time=1999-11&time=1999-12&time=2000-01&time=2000-02&time=2000-03&time=2000-04&time=2000-05&time=2000-06&time=2000-07&time=2000-08&time=2000-09&time=2000-10&time=2000-11&time=2000-12&time=2001-01&time=2001-02&time=2001-03&time=2001-04&time=2001-05&time=2001-06&time=2001-07&time=2001-08&time=2001-09&time=2001-10&time=2001-11&time=2001-12&time=2002-01&time=2002-02&time=2002-03&time=2002-04&time=2002-05&time=2002-06&time=2002-07&time=2002-08&time=2002-09&time=2002-10&time=2002-11&time=2002-12&time=2003-01&time=2003-02&time=2003-03&time=2003-04&time=2003-05&time=2003-06&time=2003-07&time=2003-08&time=2003-09&time=2003-10&time=2003-11&time=2003-12&time=2004-01&time=2004-02&time=2004-03&time=2004-04&time=2004-05&time=2004-06&time=2004-07&time=2004-08&time=2004-09&time=2004-10&time=2004-11&time=2004-12&time=2005-01&time=2005-02&time=2005-03&time=2005-04&time=2005-05&time=2005-06&time=2005-07&time=2005-08&time=2005-09&time=2005-10&time=2005-11&time=2005-12&time=2006-01&time=2006-02&time=2006-03&time=2006-04&time=2006-05&time=2006-06&time=2006-07&time=2006-08&time=2006-09&time=2006-10&time=2006-11&time=2006-12&time=2007-01&time=2007-02&time=2007-03&time=2007-04&time=2007-05&time=2007-06&time=2007-07&time=2007-08&time=2007-09&time=2007-10&time=2007-11&time=2007-12&time=2008-01&time=2008-02&time=2008-03&time=2008-04&time=2008-05&time=2008-06&time=2008-07&time=2008-08&time=2008-09&time=2008-10&time=2008-11&time=2008-12&time=2009-01&time=2009-02&time=2009-03&time=2009-04&time=2009-05&time=2009-06&time=2009-07&time=2009-08&time=2009-09&time=2009-10&time=2009-11&time=2009-12&time=2010-01&time=2010-02&time=2010-03&time=2010-04&time=2010-05&time=2010-06&time=2010-07&time=2010-08&time=2010-09&time=2010-10&time=2010-11&time=2010-12&time=2011-01&time=2011-02&time=2011-03&time=2011-04&time=2011-05&time=2011-06&time=2011-07&time=2011-08&time=2011-09&time=2011-10&time=2011-11&time=2011-12&time=2012-01&time=2012-02&time=2012-03&time=2012-04&time=2012-05&time=2012-06&time=2012-07&time=2012-08&time=2012-09&time=2012-10&time=2012-11&time=2012-12&time=2013-01&time=2013-02&time=2013-03&time=2013-04&time=2013-05&time=2013-06&time=2013-07&time=2013-08&time=2013-09&time=2013-10&time=2013-11&time=2013-12&time=2014-01&time=2014-02&time=2014-03&time=2014-04&time=2014-05&time=2014-06&time=2014-07&time=2014-08&time=2014-09&time=2014-10&time=2014-11&time=2014-12&time=2015-01&time=2015-02&time=2015-03&time=2015-04&time=2015-05&time=2015-06&time=2015-07&time=2015-08&time=2015-09&time=2015-10&time=2015-11&time=2015-12&time=2016-01&time=2016-02&time=2016-03&time=2016-04&time=2016-05&time=2016-06&time=2016-07&time=2016-08&time=2016-09&time=2016-10&time=2016-11&time=2016-12&time=2017-01&time=2017-02&time=2017-03&time=2017-04&time=2017-05&time=2017-06&time=2017-07&time=2017-08&time=2017-09&time=2017-10&time=2017-11&time=2017-12&time=2018-01&time=2018-02&time=2018-03&time=2018-04&time=2018-05&time=2018-06&time=2018-07&time=2018-08&time=2018-09&time=2018-10&time=2018-11&time=2018-12&time=2019-01&time=2019-02&time=2019-03&time=2019-04&time=2019-05&time=2019-06&time=2019-07&time=2019-08&time=2019-09&time=2019-10&time=2019-11&time=2019-12&time=2020-01&time=2020-02&time=2020-03&time=2020-04&time=2020-05&time=2020-06&time=2020-07&time=2020-08&time=2020-09&time=2020-10&time=2020-11&time=2020-12&time=2021-01&time=2021-02&time=2021-03&time=2021-04&time=2021-05&time=2021-06&time=2021-07&time=2021-08&time=2021-09&time=2021-10&time=2021-11&time=2021-12&time=2022-01&time=2022-02&time=2022-03&time=2022-04&time=2022-05&time=2022-06&time=2022-07&time=2022-08&time=2022-09&time=2022-10&time=2022-11&time=2022-12&time=2023-01&time=2023-02&time=2023-03&time=2023-04&time=2023-05&time=2023-06&time=2023-07&time=2023-08&time=2023-09&time=2023-10&time=2023-11&time=2023-12&time=2024-01&time=2024-02&time=2024-03&time=2024-04&time=2024-05&time=2024-06&time=2024-07&time=2024-08&time=2024-09&time=2024-10&time=2024-11&time=2024-12&time=2025-01&time=2025-02&time=2025-03&time=2025-04",
       "isSaved": true,
       "title": "Harmonised index of consumer prices - monthly data",
-      "code": "ei_cphi_m",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "ei_cphi_m"
     },
-    "earn_ses18_23": {
-      "label": "Mean monthly earnings by sex, economic activity and educational attainment",
-      "updated": "2024-01-03T23:00:00+0100",
+    "teibs030": {
+      "label": "Employment expectations indicator",
+      "updated": "2025-05-27T11:00:00+0200",
+      "description": "<p>The employment expectations indicator (EEI) is a composite indicator produced by the Directorate General for Economic and Financial Affairs (DG ECFIN) of the European Commission. It summarises managers’ employment plans in the four surveyed business sectors (industry, services, retail trade, construction) and thus provides a timely indication of changes in expected dependent employment at Member states, EU and euro area levels. The indicator is constructed as a weighted average of the employment expectations of managers in all four surveyed business sectors. Once the weighted average of all four standardised balance series is computed, the resulting time-series is scaled to have a long-term mean of 100 and a standard deviation of 10. Values greater than 100 indicate that managers’ employment expectations are high by historical standards, while the opposite holds true for values below 100. Assuming approximate normality, the imposed standard deviation of 10 implies that in about 68% of the cases the EEI will be within the range of 90 to 110. Data are seasonally adjusted (SA). Further details on the construction of the EEI can be found in the user <a href=\"https://ec.europa.eu/economy_finance/db_indicators/surveys/documents/methodological_guidelines/bcs_user_guide.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">guide </a>of the Joint Harmonised EU Programme of Business and Consumer Surveys. Source: DG ECFIN</p>",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "M": 0
+            },
+            "label": {
+              "M": "Monthly"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "INX": 0
+            },
+            "label": {
+              "INX": "Index"
+            }
+          }
+        },
+        "s_adj": {
+          "label": "Seasonal adjustment",
+          "category": {
+            "index": {
+              "SA": 0
+            },
+            "label": {
+              "SA": "Seasonally adjusted data, not calendar adjusted data"
+            }
+          }
+        },
+        "indic": {
+          "label": "Indicator",
+          "category": {
+            "index": {
+              "BS-EEI-I": 0
+            },
+            "label": {
+              "BS-EEI-I": "Employment expectations indicator over the next 3 months"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2024-06": 0,
+              "2024-07": 1,
+              "2024-08": 2,
+              "2024-09": 3,
+              "2024-10": 4,
+              "2024-11": 5,
+              "2024-12": 6,
+              "2025-01": 7,
+              "2025-02": 8,
+              "2025-03": 9,
+              "2025-04": 10,
+              "2025-05": 11
+            },
+            "label": {
+              "2024-06": "2024-06",
+              "2024-07": "2024-07",
+              "2024-08": "2024-08",
+              "2024-09": "2024-09",
+              "2024-10": "2024-10",
+              "2024-11": "2024-11",
+              "2024-12": "2024-12",
+              "2025-01": "2025-01",
+              "2025-02": "2025-02",
+              "2025-03": "2025-03",
+              "2025-04": "2025-04",
+              "2025-05": "2025-05"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "M": 0
+            },
+            "label": {
+              "M": "Monthly"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "INX": 0
+            },
+            "label": {
+              "INX": "Index"
+            }
+          }
+        },
+        "s_adj": {
+          "label": "Seasonal adjustment",
+          "category": {
+            "index": {
+              "SA": 0
+            },
+            "label": {
+              "SA": "Seasonally adjusted data, not calendar adjusted data"
+            }
+          }
+        },
+        "indic": {
+          "label": "Indicator",
+          "category": {
+            "index": {
+              "BS-EEI-I": 0
+            },
+            "label": {
+              "BS-EEI-I": "Employment expectations indicator over the next 3 months"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2024-06": 0,
+              "2024-07": 1,
+              "2024-08": 2,
+              "2024-09": 3,
+              "2024-10": 4,
+              "2024-11": 5,
+              "2024-12": 6,
+              "2025-01": 7,
+              "2025-02": 8,
+              "2025-03": 9,
+              "2025-04": 10,
+              "2025-05": 11
+            },
+            "label": {
+              "2024-06": "2024-06",
+              "2024-07": "2024-07",
+              "2024-08": "2024-08",
+              "2024-09": "2024-09",
+              "2024-10": "2024-10",
+              "2024-11": "2024-11",
+              "2024-12": "2024-12",
+              "2025-01": "2025-01",
+              "2025-02": "2025-02",
+              "2025-03": "2025-03",
+              "2025-04": "2025-04",
+              "2025-05": "2025-05"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/teibs030?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=M&unit=INX&s_adj=SA&indic=BS-EEI-I&time=2024-06&time=2024-07&time=2024-08&time=2024-09&time=2024-10&time=2024-11&time=2024-12&time=2025-01&time=2025-02&time=2025-03&time=2025-04&time=2025-05",
+      "isSaved": true,
+      "title": "Employment expectations indicator",
+      "code": "teibs030"
+    },
+    "lfsa_ergaedn": {
+      "label": "Employment rates by sex, age, educational attainment level and citizenship",
+      "updated": "2025-04-14T23:00:00+0200",
       "dimension": {
         "freq": {
           "label": "Time frequency",
@@ -1602,193 +3312,28 @@
             }
           }
         },
-        "indic_se": {
-          "label": "Structure of earnings indicator",
+        "citizen": {
+          "label": "Country of citizenship",
           "category": {
             "index": {
-              "ERN": 0,
-              "OPAY": 1,
-              "OP_E_PC": 2,
-              "SPAY": 3,
-              "SP_E_PC": 4
+              "EU27_2020": 0,
+              "EU27_2020_FOR": 1,
+              "NEU27_2020_FOR": 2,
+              "FOR": 3,
+              "NAT": 4,
+              "STLS": 5,
+              "TOTAL": 6,
+              "NRP": 7
             },
             "label": {
-              "ERN": "Gross earnings",
-              "OPAY": "Overtime pay",
-              "OP_E_PC": "Overtime pay as a percentage of earnings",
-              "SPAY": "Shift pay",
-              "SP_E_PC": "Shift pay as a percentage of earnings"
-            }
-          }
-        },
-        "isced11": {
-          "label": "International Standard Classification of Education (ISCED 2011)",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "ED0-2": 1,
-              "ED3_4": 2,
-              "ED5-8": 3
-            },
-            "label": {
-              "TOTAL": "All ISCED 2011 levels",
-              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
-              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED5-8": "Tertiary education (levels 5-8)"
-            }
-          }
-        },
-        "nace_r2": {
-          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
-          "category": {
-            "index": {
-              "B-S": 0,
-              "B-S_X_O": 1,
-              "B-N": 2,
-              "B-F": 3,
-              "B-E": 4,
-              "B": 5,
-              "C": 6,
-              "D": 7,
-              "E": 8,
-              "F": 9,
-              "G-S": 10,
-              "G-S_X_O": 11,
-              "G-J": 12,
-              "G": 13,
-              "H": 14,
-              "I": 15,
-              "J": 16,
-              "K-N": 17,
-              "K": 18,
-              "L": 19,
-              "M": 20,
-              "N": 21,
-              "O-S": 22,
-              "O": 23,
-              "P-S": 24,
-              "P": 25,
-              "Q": 26,
-              "R": 27,
-              "S": 28
-            },
-            "label": {
-              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
-              "B-N": "Business economy",
-              "B-F": "Industry and construction",
-              "B-E": "Industry (except construction)",
-              "B": "Mining and quarrying",
-              "C": "Manufacturing",
-              "D": "Electricity, gas, steam and air conditioning supply",
-              "E": "Water supply; sewerage, waste management and remediation activities",
-              "F": "Construction",
-              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
-              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
-              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-              "H": "Transportation and storage",
-              "I": "Accommodation and food service activities",
-              "J": "Information and communication",
-              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
-              "K": "Financial and insurance activities",
-              "L": "Real estate activities",
-              "M": "Professional, scientific and technical activities",
-              "N": "Administrative and support service activities",
-              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "O": "Public administration and defence; compulsory social security",
-              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "P": "Education",
-              "Q": "Human health and social work activities",
-              "R": "Arts, entertainment and recreation",
-              "S": "Other service activities"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "sizeclas": {
-          "label": "Size classes in number of employees",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "GE10": 1
-            },
-            "label": {
+              "EU27_2020": "European Union - 27 countries (from 2020)",
+              "EU27_2020_FOR": "EU27 countries (from 2020) except reporting country",
+              "NEU27_2020_FOR": "Non-EU27 countries (from 2020) nor reporting country",
+              "FOR": "Foreign country",
+              "NAT": "Reporting country",
+              "STLS": "Stateless",
               "TOTAL": "Total",
-              "GE10": "10 employees or more"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "EUR": 0,
-              "NAC": 1,
-              "PPS": 2,
-              "PC": 3
-            },
-            "label": {
-              "EUR": "Euro",
-              "NAC": "National currency",
-              "PPS": "Purchasing power standard (PPS)",
-              "PC": "Percentage"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2018": 0
-            },
-            "label": {
-              "2018": "2018"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "indic_se": {
-          "label": "Structure of earnings indicator",
-          "category": {
-            "index": {
-              "ERN": 0
-            },
-            "label": {
-              "ERN": "Gross earnings"
+              "NRP": "No response"
             }
           }
         },
@@ -1799,80 +3344,21 @@
               "TOTAL": 0,
               "ED0-2": 1,
               "ED3_4": 2,
-              "ED5-8": 3
+              "ED3_4GEN": 3,
+              "ED3_4VOC": 4,
+              "ED5-8": 5,
+              "NAP": 6,
+              "NRP": 7
             },
             "label": {
               "TOTAL": "All ISCED 2011 levels",
               "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
               "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED5-8": "Tertiary education (levels 5-8)"
-            }
-          }
-        },
-        "nace_r2": {
-          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
-          "category": {
-            "index": {
-              "B-S": 0,
-              "B-S_X_O": 1,
-              "B-N": 2,
-              "B-F": 3,
-              "B-E": 4,
-              "B": 5,
-              "C": 6,
-              "D": 7,
-              "E": 8,
-              "F": 9,
-              "G-S": 10,
-              "G-S_X_O": 11,
-              "G-J": 12,
-              "G": 13,
-              "H": 14,
-              "I": 15,
-              "J": 16,
-              "K-N": 17,
-              "K": 18,
-              "L": 19,
-              "M": 20,
-              "N": 21,
-              "O-S": 22,
-              "O": 23,
-              "P-S": 24,
-              "P": 25,
-              "Q": 26,
-              "R": 27,
-              "S": 28
-            },
-            "label": {
-              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
-              "B-N": "Business economy",
-              "B-F": "Industry and construction",
-              "B-E": "Industry (except construction)",
-              "B": "Mining and quarrying",
-              "C": "Manufacturing",
-              "D": "Electricity, gas, steam and air conditioning supply",
-              "E": "Water supply; sewerage, waste management and remediation activities",
-              "F": "Construction",
-              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
-              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
-              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-              "H": "Transportation and storage",
-              "I": "Accommodation and food service activities",
-              "J": "Information and communication",
-              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
-              "K": "Financial and insurance activities",
-              "L": "Real estate activities",
-              "M": "Professional, scientific and technical activities",
-              "N": "Administrative and support service activities",
-              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "O": "Public administration and defence; compulsory social security",
-              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "P": "Education",
-              "Q": "Human health and social work activities",
-              "R": "Arts, entertainment and recreation",
-              "S": "Other service activities"
+              "ED3_4GEN": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4) - general",
+              "ED3_4VOC": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4) - vocational",
+              "ED5-8": "Tertiary education (levels 5-8)",
+              "NAP": "Not applicable",
+              "NRP": "No response"
             }
           }
         },
@@ -1891,179 +3377,48 @@
             }
           }
         },
-        "sizeclas": {
-          "label": "Size classes in number of employees",
-          "category": {
-            "index": {
-              "GE10": 1
-            },
-            "label": {
-              "GE10": "10 employees or more"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "EUR": 0,
-              "PPS": 2
-            },
-            "label": {
-              "EUR": "Euro",
-              "PPS": "Purchasing power standard (PPS)"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2018": 0
-            },
-            "label": {
-              "2018": "2018"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_23?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&indic_se=ERN&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&sex=T&sex=M&sex=F&sizeclas=GE10&unit=EUR&unit=PPS&time=2018",
-      "isSaved": true,
-      "title": "Mean monthly earnings by sex, economic activity and educational attainment",
-      "code": "earn_ses18_23",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "ilc_scp03": {
-      "label": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
-      "updated": "2024-04-24T23:00:00+0200",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "frequenc": {
-          "label": "Frequency",
-          "category": {
-            "index": {
-              "NM12": 0,
-              "1-3": 1,
-              "GE1": 2,
-              "GE4": 3
-            },
-            "label": {
-              "NM12": "Not in the last 12 months",
-              "1-3": "From 1 to 3 times",
-              "GE1": "At least once",
-              "GE4": "At least 4 times"
-            }
-          }
-        },
-        "acl00": {
-          "label": "Classification of activities for time use",
-          "category": {
-            "index": {
-              "AC52A": 0,
-              "AC521": 1,
-              "AC522A": 2,
-              "AC523H": 3,
-              "AC525": 4
-            },
-            "label": {
-              "AC52A": "Cultural activities (cinema, live performances or cultural sites)",
-              "AC521": "Cinema",
-              "AC522A": "Live performances (theatre, concerts, ballet)",
-              "AC523H": "Cultural sites (historical monuments, museums, art galleries or archaeological sites)",
-              "AC525": "Sports events"
-            }
-          }
-        },
-        "isced11": {
-          "label": "International Standard Classification of Education (ISCED 2011)",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "ED0-2": 1,
-              "ED3_4": 2,
-              "ED5-8": 3
-            },
-            "label": {
-              "TOTAL": "All ISCED 2011 levels",
-              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
-              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED5-8": "Tertiary education (levels 5-8)"
-            }
-          }
-        },
         "age": {
           "label": "Age class",
           "category": {
             "index": {
-              "Y16-24": 0,
-              "Y16-29": 1,
-              "Y16-44": 2,
-              "Y16-64": 3,
-              "Y_GE16": 4,
-              "Y_GE18": 5,
-              "Y20-64": 6,
-              "Y25-29": 7,
-              "Y25-34": 8,
+              "Y15-24": 0,
+              "Y15-39": 1,
+              "Y15-59": 2,
+              "Y15-64": 3,
+              "Y_GE15": 4,
+              "Y20-64": 5,
+              "Y25-49": 6,
+              "Y25-54": 7,
+              "Y25-59": 8,
               "Y25-64": 9,
-              "Y30-54": 10,
-              "Y35-44": 11,
-              "Y35-49": 12,
-              "Y45-54": 13,
-              "Y45-64": 14,
-              "Y50-64": 15,
+              "Y_GE25": 10,
+              "Y40-59": 11,
+              "Y40-64": 12,
+              "Y50-59": 13,
+              "Y50-64": 14,
+              "Y_GE50": 15,
               "Y55-64": 16,
-              "Y65-74": 17,
-              "Y_GE65": 18,
-              "Y75-84": 19,
-              "Y_GE75": 20
+              "Y_GE65": 17
             },
             "label": {
-              "Y16-24": "From 16 to 24 years",
-              "Y16-29": "From 16 to 29 years",
-              "Y16-44": "From 16 to 44 years",
-              "Y16-64": "From 16 to 64 years",
-              "Y_GE16": "16 years or over",
-              "Y_GE18": "18 years or over",
+              "Y15-24": "From 15 to 24 years",
+              "Y15-39": "From 15 to 39 years",
+              "Y15-59": "From 15 to 59 years",
+              "Y15-64": "From 15 to 64 years",
+              "Y_GE15": "15 years or over",
               "Y20-64": "From 20 to 64 years",
-              "Y25-29": "From 25 to 29 years",
-              "Y25-34": "From 25 to 34 years",
+              "Y25-49": "From 25 to 49 years",
+              "Y25-54": "From 25 to 54 years",
+              "Y25-59": "From 25 to 59 years",
               "Y25-64": "From 25 to 64 years",
-              "Y30-54": "From 30 to 54 years",
-              "Y35-44": "From 35 to 44 years",
-              "Y35-49": "From 35 to 49 years",
-              "Y45-54": "From 45 to 54 years",
-              "Y45-64": "From 45 to 64 years",
+              "Y_GE25": "25 years or over",
+              "Y40-59": "From 40 to 59 years",
+              "Y40-64": "From 40 to 64 years",
+              "Y50-59": "From 50 to 59 years",
               "Y50-64": "From 50 to 64 years",
+              "Y_GE50": "50 years or over",
               "Y55-64": "From 55 to 64 years",
-              "Y65-74": "From 65 to 74 years",
-              "Y_GE65": "65 years or over",
-              "Y75-84": "From 75 to 84 years",
-              "Y_GE75": "75 years or over"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
+              "Y_GE65": "65 years or over"
             }
           }
         },
@@ -2089,14 +3444,68 @@
           "label": "Time",
           "category": {
             "index": {
-              "2006": 0,
-              "2015": 1,
-              "2022": 2
+              "1995": 0,
+              "1996": 1,
+              "1997": 2,
+              "1998": 3,
+              "1999": 4,
+              "2000": 5,
+              "2001": 6,
+              "2002": 7,
+              "2003": 8,
+              "2004": 9,
+              "2005": 10,
+              "2006": 11,
+              "2007": 12,
+              "2008": 13,
+              "2009": 14,
+              "2010": 15,
+              "2011": 16,
+              "2012": 17,
+              "2013": 18,
+              "2014": 19,
+              "2015": 20,
+              "2016": 21,
+              "2017": 22,
+              "2018": 23,
+              "2019": 24,
+              "2020": 25,
+              "2021": 26,
+              "2022": 27,
+              "2023": 28,
+              "2024": 29
             },
             "label": {
+              "1995": "1995",
+              "1996": "1996",
+              "1997": "1997",
+              "1998": "1998",
+              "1999": "1999",
+              "2000": "2000",
+              "2001": "2001",
+              "2002": "2002",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
               "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
               "2015": "2015",
-              "2022": "2022"
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
             }
           }
         }
@@ -2113,39 +3522,22 @@
             }
           }
         },
-        "frequenc": {
-          "label": "Frequency",
+        "citizen": {
+          "label": "Country of citizenship",
           "category": {
             "index": {
-              "NM12": 0,
-              "1-3": 1,
-              "GE1": 2,
-              "GE4": 3
+              "EU27_2020_FOR": 1,
+              "NEU27_2020_FOR": 2,
+              "FOR": 3,
+              "NAT": 4,
+              "TOTAL": 6
             },
             "label": {
-              "NM12": "Not in the last 12 months",
-              "1-3": "From 1 to 3 times",
-              "GE1": "At least once",
-              "GE4": "At least 4 times"
-            }
-          }
-        },
-        "acl00": {
-          "label": "Classification of activities for time use",
-          "category": {
-            "index": {
-              "AC52A": 0,
-              "AC521": 1,
-              "AC522A": 2,
-              "AC523H": 3,
-              "AC525": 4
-            },
-            "label": {
-              "AC52A": "Cultural activities (cinema, live performances or cultural sites)",
-              "AC521": "Cinema",
-              "AC522A": "Live performances (theatre, concerts, ballet)",
-              "AC523H": "Cultural sites (historical monuments, museums, art galleries or archaeological sites)",
-              "AC525": "Sports events"
+              "EU27_2020_FOR": "EU27 countries (from 2020) except reporting country",
+              "NEU27_2020_FOR": "Non-EU27 countries (from 2020) nor reporting country",
+              "FOR": "Foreign country",
+              "NAT": "Reporting country",
+              "TOTAL": "Total"
             }
           }
         },
@@ -2153,29 +3545,16 @@
           "label": "International Standard Classification of Education (ISCED 2011)",
           "category": {
             "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
               "ED3_4": 2,
-              "ED5-8": 3
+              "ED5-8": 5
             },
             "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
               "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
               "ED5-8": "Tertiary education (levels 5-8)"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "Y16-24": 0,
-              "Y25-34": 8,
-              "Y35-49": 12,
-              "Y50-64": 15
-            },
-            "label": {
-              "Y16-24": "From 16 to 24 years",
-              "Y25-34": "From 25 to 34 years",
-              "Y35-49": "From 35 to 49 years",
-              "Y50-64": "From 50 to 64 years"
             }
           }
         },
@@ -2194,6 +3573,25 @@
             }
           }
         },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "Y15-24": 0,
+              "Y_GE15": 4,
+              "Y25-54": 7,
+              "Y55-64": 16,
+              "Y_GE65": 17
+            },
+            "label": {
+              "Y15-24": "From 15 to 24 years",
+              "Y_GE15": "15 years or over",
+              "Y25-54": "From 25 to 54 years",
+              "Y55-64": "From 55 to 64 years",
+              "Y_GE65": "65 years or over"
+            }
+          }
+        },
         "unit": {
           "label": "Unit of measure",
           "category": {
@@ -2209,23 +3607,76 @@
           "label": "Time",
           "category": {
             "index": {
-              "2006": 0,
-              "2015": 1,
-              "2022": 2
+              "1995": 0,
+              "1996": 1,
+              "1997": 2,
+              "1998": 3,
+              "1999": 4,
+              "2000": 5,
+              "2001": 6,
+              "2002": 7,
+              "2003": 8,
+              "2004": 9,
+              "2005": 10,
+              "2006": 11,
+              "2007": 12,
+              "2008": 13,
+              "2009": 14,
+              "2010": 15,
+              "2011": 16,
+              "2012": 17,
+              "2013": 18,
+              "2014": 19,
+              "2015": 20,
+              "2016": 21,
+              "2017": 22,
+              "2018": 23,
+              "2019": 24,
+              "2020": 25,
+              "2021": 26,
+              "2022": 27,
+              "2023": 28,
+              "2024": 29
             },
             "label": {
+              "1995": "1995",
+              "1996": "1996",
+              "1997": "1997",
+              "1998": "1998",
+              "1999": "1999",
+              "2000": "2000",
+              "2001": "2001",
+              "2002": "2002",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
               "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
               "2015": "2015",
-              "2022": "2022"
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
             }
           }
         }
       },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_scp03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&frequenc=NM12&frequenc=1-3&frequenc=GE1&frequenc=GE4&acl00=AC52A&acl00=AC521&acl00=AC522A&acl00=AC523H&acl00=AC525&isced11=ED3_4&isced11=ED5-8&age=Y16-24&age=Y25-34&age=Y35-49&age=Y50-64&sex=T&sex=M&sex=F&unit=PC&time=2006&time=2015&time=2022",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ergaedn?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&citizen=EU27_2020_FOR&citizen=NEU27_2020_FOR&citizen=FOR&citizen=NAT&citizen=TOTAL&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&sex=T&sex=M&sex=F&age=Y15-24&age=Y_GE15&age=Y25-54&age=Y55-64&age=Y_GE65&unit=PC&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
-      "title": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
-      "code": "ilc_scp03",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "title": "Employment rates by sex, age, educational attainment level and citizenship",
+      "code": "lfsa_ergaedn"
     },
     "educ_uoe_mobs04": {
       "label": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
@@ -2956,1148 +4407,7 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_mobs04?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&isced11=ED5-8&isced11=ED5&isced11=ED6&isced11=ED7&isced11=ED8&iscedf13=F01&iscedf13=F02&iscedf13=F03&iscedf13=F04&iscedf13=F05&iscedf13=F0511&iscedf13=F0512&iscedf13=F052&iscedf13=F053&iscedf13=F054&iscedf13=F06&iscedf13=F07&iscedf13=F071&iscedf13=F072&iscedf13=F073&iscedf13=F08&iscedf13=F09&iscedf13=F091&iscedf13=F0911&iscedf13=F092&iscedf13=F0921&iscedf13=F0922&iscedf13=F0923&iscedf13=F10&iscedf13=F1011&iscedf13=F1012&iscedf13=F1013&iscedf13=F1014&iscedf13=F1015&iscedf13=F104&sex=T&sex=M&sex=F&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
-      "code": "educ_uoe_mobs04",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "yth_demo_010": {
-      "label": "Child and youth population on 1 January by sex and age",
-      "updated": "2025-05-23T23:00:00+0200",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "NR": 0
-            },
-            "label": {
-              "NR": "Number"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y_LT15": 1,
-              "Y15-19": 2,
-              "Y15-29": 3,
-              "Y_LT18": 4,
-              "Y20-24": 5,
-              "Y25-29": 6
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y_LT15": "Less than 15 years",
-              "Y15-19": "From 15 to 19 years",
-              "Y15-29": "From 15 to 29 years",
-              "Y_LT18": "Less than 18 years",
-              "Y20-24": "From 20 to 24 years",
-              "Y25-29": "From 25 to 29 years"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2008": 0,
-              "2009": 1,
-              "2010": 2,
-              "2011": 3,
-              "2012": 4,
-              "2013": 5,
-              "2014": 6,
-              "2015": 7,
-              "2016": 8,
-              "2017": 9,
-              "2018": 10,
-              "2019": 11,
-              "2020": 12,
-              "2021": 13,
-              "2022": 14,
-              "2023": 15,
-              "2024": 16
-            },
-            "label": {
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "NR": 0
-            },
-            "label": {
-              "NR": "Number"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y_LT15": 1,
-              "Y15-19": 2,
-              "Y20-24": 5,
-              "Y25-29": 6
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y_LT15": "Less than 15 years",
-              "Y15-19": "From 15 to 19 years",
-              "Y20-24": "From 20 to 24 years",
-              "Y25-29": "From 25 to 29 years"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2008": 0,
-              "2009": 1,
-              "2010": 2,
-              "2011": 3,
-              "2012": 4,
-              "2013": 5,
-              "2014": 6,
-              "2015": 7,
-              "2016": 8,
-              "2017": 9,
-              "2018": 10,
-              "2019": 11,
-              "2020": 12,
-              "2021": 13,
-              "2022": 14,
-              "2023": 15,
-              "2024": 16
-            },
-            "label": {
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/yth_demo_010?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=NR&age=TOTAL&age=Y_LT15&age=Y15-19&age=Y20-24&age=Y25-29&sex=T&sex=M&sex=F&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
-      "isSaved": true,
-      "title": "Child and youth population on 1 January by sex and age",
-      "code": "yth_demo_010",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "sdg_08_10": {
-      "label": "Real GDP per capita",
-      "updated": "2025-05-23T23:00:00+0200",
-      "description": "<p>The indicator is calculated as the ratio of real GDP (GDP adjusted for inflation) to the average population of a specific year, where GDP is expressed in millions and population is expressed in thousands. Real GDP is published without decimals. GDP measures the value of the total final output of goods and services produced by an economy within a certain period of time. It includes goods and services that have markets (or which could have markets) and products which are produced by general government and non-profit institutions. It is a measure of economic activity and is commonly used as a proxy for the development in a country’s material living standards. However, it is not a complete measure of economic welfare. For example, GDP does not include most unpaid household work. Neither does GDP take account of negative effects of economic activity, like environmental degradation.</p>",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "CLV20_EUR_HAB": 0,
-              "CLV_PCH_PRE_HAB": 1
-            },
-            "label": {
-              "CLV20_EUR_HAB": "Chain linked volumes (2020), euro per capita",
-              "CLV_PCH_PRE_HAB": "Chain linked volumes, percentage change on previous period, per capita"
-            }
-          }
-        },
-        "na_item": {
-          "label": "National accounts indicator (ESA 2010)",
-          "category": {
-            "index": {
-              "B1GQ": 0
-            },
-            "label": {
-              "B1GQ": "Gross domestic product at market prices"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2000": 0,
-              "2001": 1,
-              "2002": 2,
-              "2003": 3,
-              "2004": 4,
-              "2005": 5,
-              "2006": 6,
-              "2007": 7,
-              "2008": 8,
-              "2009": 9,
-              "2010": 10,
-              "2011": 11,
-              "2012": 12,
-              "2013": 13,
-              "2014": 14,
-              "2015": 15,
-              "2016": 16,
-              "2017": 17,
-              "2018": 18,
-              "2019": 19,
-              "2020": 20,
-              "2021": 21,
-              "2022": 22,
-              "2023": 23,
-              "2024": 24
-            },
-            "label": {
-              "2000": "2000",
-              "2001": "2001",
-              "2002": "2002",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "CLV20_EUR_HAB": 0
-            },
-            "label": {
-              "CLV20_EUR_HAB": "Chain linked volumes (2020), euro per capita"
-            }
-          }
-        },
-        "na_item": {
-          "label": "National accounts indicator (ESA 2010)",
-          "category": {
-            "index": {
-              "B1GQ": 0
-            },
-            "label": {
-              "B1GQ": "Gross domestic product at market prices"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2000": 0,
-              "2001": 1,
-              "2002": 2,
-              "2003": 3,
-              "2004": 4,
-              "2005": 5,
-              "2006": 6,
-              "2007": 7,
-              "2008": 8,
-              "2009": 9,
-              "2010": 10,
-              "2011": 11,
-              "2012": 12,
-              "2013": 13,
-              "2014": 14,
-              "2015": 15,
-              "2016": 16,
-              "2017": 17,
-              "2018": 18,
-              "2019": 19,
-              "2020": 20,
-              "2021": 21,
-              "2022": 22,
-              "2023": 23,
-              "2024": 24
-            },
-            "label": {
-              "2000": "2000",
-              "2001": "2001",
-              "2002": "2002",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_08_10?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=CLV20_EUR_HAB&na_item=B1GQ&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
-      "isSaved": true,
-      "title": "Real GDP per capita",
-      "code": "sdg_08_10",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "ilc_di03": {
-      "label": "Mean and median income by age and sex",
-      "updated": "2025-05-23T11:00:00+0200",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y_LT6": 1,
-              "Y6-10": 2,
-              "Y6-11": 3,
-              "Y11-15": 4,
-              "Y12-17": 5,
-              "Y_LT16": 6,
-              "Y16-24": 7,
-              "Y16-64": 8,
-              "Y_GE16": 9,
-              "Y_LT18": 10,
-              "Y18-24": 11,
-              "Y18-64": 12,
-              "Y_GE18": 13,
-              "Y25-49": 14,
-              "Y25-54": 15,
-              "Y50-64": 16,
-              "Y55-64": 17,
-              "Y_LT60": 18,
-              "Y_GE60": 19,
-              "Y_LT65": 20,
-              "Y65-74": 21,
-              "Y_GE65": 22,
-              "Y_LT75": 23,
-              "Y_GE75": 24
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y_LT6": "Less than 6 years",
-              "Y6-10": "From 6 to 10 years",
-              "Y6-11": "From 6 to 11 years",
-              "Y11-15": "From 11 to 15 years",
-              "Y12-17": "From 12 to 17 years",
-              "Y_LT16": "Less than 16 years",
-              "Y16-24": "From 16 to 24 years",
-              "Y16-64": "From 16 to 64 years",
-              "Y_GE16": "16 years or over",
-              "Y_LT18": "Less than 18 years",
-              "Y18-24": "From 18 to 24 years",
-              "Y18-64": "From 18 to 64 years",
-              "Y_GE18": "18 years or over",
-              "Y25-49": "From 25 to 49 years",
-              "Y25-54": "From 25 to 54 years",
-              "Y50-64": "From 50 to 64 years",
-              "Y55-64": "From 55 to 64 years",
-              "Y_LT60": "Less than 60 years",
-              "Y_GE60": "60 years or over",
-              "Y_LT65": "Less than 65 years",
-              "Y65-74": "From 65 to 74 years",
-              "Y_GE65": "65 years or over",
-              "Y_LT75": "Less than 75 years",
-              "Y_GE75": "75 years or over"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "indic_il": {
-          "label": "Income and living conditions indicator",
-          "category": {
-            "index": {
-              "MEI_E": 0,
-              "MED_E": 1
-            },
-            "label": {
-              "MEI_E": "Mean equivalised net income",
-              "MED_E": "Median equivalised net income"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "EUR": 0,
-              "NAC": 1,
-              "PPS": 2
-            },
-            "label": {
-              "EUR": "Euro",
-              "NAC": "National currency",
-              "PPS": "Purchasing power standard (PPS)"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "1995": 0,
-              "1996": 1,
-              "1997": 2,
-              "1998": 3,
-              "1999": 4,
-              "2000": 5,
-              "2001": 6,
-              "2003": 7,
-              "2004": 8,
-              "2005": 9,
-              "2006": 10,
-              "2007": 11,
-              "2008": 12,
-              "2009": 13,
-              "2010": 14,
-              "2011": 15,
-              "2012": 16,
-              "2013": 17,
-              "2014": 18,
-              "2015": 19,
-              "2016": 20,
-              "2017": 21,
-              "2018": 22,
-              "2019": 23,
-              "2020": 24,
-              "2021": 25,
-              "2022": 26,
-              "2023": 27,
-              "2024": 28
-            },
-            "label": {
-              "1995": "1995",
-              "1996": "1996",
-              "1997": "1997",
-              "1998": "1998",
-              "1999": "1999",
-              "2000": "2000",
-              "2001": "2001",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y16-24": 7,
-              "Y25-49": 14,
-              "Y50-64": 16,
-              "Y_GE65": 22
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y16-24": "From 16 to 24 years",
-              "Y25-49": "From 25 to 49 years",
-              "Y50-64": "From 50 to 64 years",
-              "Y_GE65": "65 years or over"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "indic_il": {
-          "label": "Income and living conditions indicator",
-          "category": {
-            "index": {
-              "MEI_E": 0,
-              "MED_E": 1
-            },
-            "label": {
-              "MEI_E": "Mean equivalised net income",
-              "MED_E": "Median equivalised net income"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "EUR": 0,
-              "PPS": 2
-            },
-            "label": {
-              "EUR": "Euro",
-              "PPS": "Purchasing power standard (PPS)"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "1995": 0,
-              "1996": 1,
-              "1997": 2,
-              "1998": 3,
-              "1999": 4,
-              "2000": 5,
-              "2001": 6,
-              "2003": 7,
-              "2004": 8,
-              "2005": 9,
-              "2006": 10,
-              "2007": 11,
-              "2008": 12,
-              "2009": 13,
-              "2010": 14,
-              "2011": 15,
-              "2012": 16,
-              "2013": 17,
-              "2014": 18,
-              "2015": 19,
-              "2016": 20,
-              "2017": 21,
-              "2018": 22,
-              "2019": 23,
-              "2020": 24,
-              "2021": 25,
-              "2022": 26,
-              "2023": 27,
-              "2024": 28
-            },
-            "label": {
-              "1995": "1995",
-              "1996": "1996",
-              "1997": "1997",
-              "1998": "1998",
-              "1999": "1999",
-              "2000": "2000",
-              "2001": "2001",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_di03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y16-24&age=Y25-49&age=Y50-64&age=Y_GE65&sex=T&sex=M&sex=F&indic_il=MEI_E&indic_il=MED_E&unit=EUR&unit=PPS&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
-      "isSaved": true,
-      "title": "Mean and median income by age and sex",
-      "code": "ilc_di03",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "tipsho20": {
-      "label": "House price index, nominal - annual data",
-      "updated": "2025-04-08T11:00:00+0200",
-      "description": "The House price index captures price changes of all residential properties purchased by households (flats, detached houses, terraced houses, etc.), both new and existing, independently of their final use and their previous owners. Only market prices are considered, self-build dwellings are therefore excluded. The land component is included. The data are expressed as annual average index 2015=100, as 3 years % change and annual average rate of change.",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "I15_A_AVG": 0,
-              "RCH_A_AVG": 1,
-              "PCH_3Y": 2
-            },
-            "label": {
-              "I15_A_AVG": "Annual average index, 2015=100",
-              "RCH_A_AVG": "Annual average rate of change",
-              "PCH_3Y": "Percentage change (t/t-3)"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2000": 0,
-              "2001": 1,
-              "2002": 2,
-              "2003": 3,
-              "2004": 4,
-              "2005": 5,
-              "2006": 6,
-              "2007": 7,
-              "2008": 8,
-              "2009": 9,
-              "2010": 10,
-              "2011": 11,
-              "2012": 12,
-              "2013": 13,
-              "2014": 14,
-              "2015": 15,
-              "2016": 16,
-              "2017": 17,
-              "2018": 18,
-              "2019": 19,
-              "2020": 20,
-              "2021": 21,
-              "2022": 22,
-              "2023": 23,
-              "2024": 24
-            },
-            "label": {
-              "2000": "2000",
-              "2001": "2001",
-              "2002": "2002",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "I15_A_AVG": 0
-            },
-            "label": {
-              "I15_A_AVG": "Annual average index, 2015=100"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2000": 0,
-              "2001": 1,
-              "2002": 2,
-              "2003": 3,
-              "2004": 4,
-              "2005": 5,
-              "2006": 6,
-              "2007": 7,
-              "2008": 8,
-              "2009": 9,
-              "2010": 10,
-              "2011": 11,
-              "2012": 12,
-              "2013": 13,
-              "2014": 14,
-              "2015": 15,
-              "2016": 16,
-              "2017": 17,
-              "2018": 18,
-              "2019": 19,
-              "2020": 20,
-              "2021": 21,
-              "2022": 22,
-              "2023": 23,
-              "2024": 24
-            },
-            "label": {
-              "2000": "2000",
-              "2001": "2001",
-              "2002": "2002",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tipsho20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=I15_A_AVG&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
-      "isSaved": true,
-      "title": "House price index, nominal - annual data",
-      "code": "tipsho20",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "educ_uoe_fine06": {
-      "label": "Public expenditure on education by education level and programme orientation - as % of GDP",
-      "updated": "2024-11-14T23:00:00+0100",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "PC_GDP": 0
-            },
-            "label": {
-              "PC_GDP": "Percentage of gross domestic product (GDP)"
-            }
-          }
-        },
-        "isced11": {
-          "label": "International Standard Classification of Education (ISCED 2011)",
-          "category": {
-            "index": {
-              "ED0": 0,
-              "ED01": 1,
-              "ED02-8": 2,
-              "ED02": 3,
-              "ED1_2": 4,
-              "ED1": 5,
-              "ED2": 6,
-              "ED24": 7,
-              "ED25": 8,
-              "ED3_4": 9,
-              "ED3": 10,
-              "ED34_44": 11,
-              "ED34": 12,
-              "ED35_45": 13,
-              "ED35": 14,
-              "ED4": 15,
-              "ED44": 16,
-              "ED45": 17,
-              "ED5-8": 18,
-              "ED9": 19
-            },
-            "label": {
-              "ED0": "Early childhood education",
-              "ED01": "Early childhood educational development",
-              "ED02-8": "Pre-primary to tertiary education",
-              "ED02": "Pre-primary education",
-              "ED1_2": "Primary and lower secondary education (levels 1 and 2)",
-              "ED1": "Primary education",
-              "ED2": "Lower secondary education",
-              "ED24": "Lower secondary education - general",
-              "ED25": "Lower secondary education - vocational",
-              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED3": "Upper secondary education",
-              "ED34_44": "Upper secondary and post-secondary non-tertiary education - general (levels 34 and 44)",
-              "ED34": "Upper secondary education - general",
-              "ED35_45": "Upper secondary and post-secondary non-tertiary education - vocational (levels 35 and 45)",
-              "ED35": "Upper secondary education - vocational",
-              "ED4": "Post-secondary non-tertiary education",
-              "ED44": "Post-secondary non-tertiary education - general",
-              "ED45": "Post-secondary non-tertiary education - vocational",
-              "ED5-8": "Tertiary education (levels 5-8)",
-              "ED9": "Not elsewhere classified"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2012": 0,
-              "2013": 1,
-              "2014": 2,
-              "2015": 3,
-              "2016": 4,
-              "2017": 5,
-              "2018": 6,
-              "2019": 7,
-              "2020": 8,
-              "2021": 9
-            },
-            "label": {
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "PC_GDP": 0
-            },
-            "label": {
-              "PC_GDP": "Percentage of gross domestic product (GDP)"
-            }
-          }
-        },
-        "isced11": {
-          "label": "International Standard Classification of Education (ISCED 2011)",
-          "category": {
-            "index": {
-              "ED1_2": 4,
-              "ED3_4": 9,
-              "ED5-8": 18
-            },
-            "label": {
-              "ED1_2": "Primary and lower secondary education (levels 1 and 2)",
-              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED5-8": "Tertiary education (levels 5-8)"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2012": 0,
-              "2013": 1,
-              "2014": 2,
-              "2015": 3,
-              "2016": 4,
-              "2017": 5,
-              "2018": 6,
-              "2019": 7,
-              "2020": 8,
-              "2021": 9
-            },
-            "label": {
-              "2012": "2012",
-              "2013": "2013",
-              "2014": "2014",
-              "2015": "2015",
-              "2016": "2016",
-              "2017": "2017",
-              "2018": "2018",
-              "2019": "2019",
-              "2020": "2020",
-              "2021": "2021"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_fine06?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC_GDP&isced11=ED1_2&isced11=ED3_4&isced11=ED5-8&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021",
-      "isSaved": true,
-      "title": "Public expenditure on education by education level and programme orientation - as % of GDP",
-      "code": "educ_uoe_fine06",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "educ_uoe_mobs04"
     },
     "ilc_mddw06": {
       "label": "Crime, violence or vandalism in the area by degree of urbanisation",
@@ -4310,187 +4620,11 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_mddw06?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&deg_urb=DEG1&deg_urb=DEG2&deg_urb=DEG3&incgrp=TOTAL&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2023",
       "isSaved": true,
       "title": "Crime, violence or vandalism in the area by degree of urbanisation",
-      "code": "ilc_mddw06",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "ilc_mddw06"
     },
-    "teibs030": {
-      "label": "Employment expectations indicator",
-      "updated": "2025-05-27T11:00:00+0200",
-      "description": "<p>The employment expectations indicator (EEI) is a composite indicator produced by the Directorate General for Economic and Financial Affairs (DG ECFIN) of the European Commission. It summarises managers’ employment plans in the four surveyed business sectors (industry, services, retail trade, construction) and thus provides a timely indication of changes in expected dependent employment at Member states, EU and euro area levels. The indicator is constructed as a weighted average of the employment expectations of managers in all four surveyed business sectors. Once the weighted average of all four standardised balance series is computed, the resulting time-series is scaled to have a long-term mean of 100 and a standard deviation of 10. Values greater than 100 indicate that managers’ employment expectations are high by historical standards, while the opposite holds true for values below 100. Assuming approximate normality, the imposed standard deviation of 10 implies that in about 68% of the cases the EEI will be within the range of 90 to 110. Data are seasonally adjusted (SA). Further details on the construction of the EEI can be found in the user <a href=\"https://ec.europa.eu/economy_finance/db_indicators/surveys/documents/methodological_guidelines/bcs_user_guide.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">guide </a>of the Joint Harmonised EU Programme of Business and Consumer Surveys. Source: DG ECFIN</p>",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "M": 0
-            },
-            "label": {
-              "M": "Monthly"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "INX": 0
-            },
-            "label": {
-              "INX": "Index"
-            }
-          }
-        },
-        "s_adj": {
-          "label": "Seasonal adjustment",
-          "category": {
-            "index": {
-              "SA": 0
-            },
-            "label": {
-              "SA": "Seasonally adjusted data, not calendar adjusted data"
-            }
-          }
-        },
-        "indic": {
-          "label": "Indicator",
-          "category": {
-            "index": {
-              "BS-EEI-I": 0
-            },
-            "label": {
-              "BS-EEI-I": "Employment expectations indicator over the next 3 months"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2024-06": 0,
-              "2024-07": 1,
-              "2024-08": 2,
-              "2024-09": 3,
-              "2024-10": 4,
-              "2024-11": 5,
-              "2024-12": 6,
-              "2025-01": 7,
-              "2025-02": 8,
-              "2025-03": 9,
-              "2025-04": 10,
-              "2025-05": 11
-            },
-            "label": {
-              "2024-06": "2024-06",
-              "2024-07": "2024-07",
-              "2024-08": "2024-08",
-              "2024-09": "2024-09",
-              "2024-10": "2024-10",
-              "2024-11": "2024-11",
-              "2024-12": "2024-12",
-              "2025-01": "2025-01",
-              "2025-02": "2025-02",
-              "2025-03": "2025-03",
-              "2025-04": "2025-04",
-              "2025-05": "2025-05"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "M": 0
-            },
-            "label": {
-              "M": "Monthly"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "INX": 0
-            },
-            "label": {
-              "INX": "Index"
-            }
-          }
-        },
-        "s_adj": {
-          "label": "Seasonal adjustment",
-          "category": {
-            "index": {
-              "SA": 0
-            },
-            "label": {
-              "SA": "Seasonally adjusted data, not calendar adjusted data"
-            }
-          }
-        },
-        "indic": {
-          "label": "Indicator",
-          "category": {
-            "index": {
-              "BS-EEI-I": 0
-            },
-            "label": {
-              "BS-EEI-I": "Employment expectations indicator over the next 3 months"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2024-06": 0,
-              "2024-07": 1,
-              "2024-08": 2,
-              "2024-09": 3,
-              "2024-10": 4,
-              "2024-11": 5,
-              "2024-12": 6,
-              "2025-01": 7,
-              "2025-02": 8,
-              "2025-03": 9,
-              "2025-04": 10,
-              "2025-05": 11
-            },
-            "label": {
-              "2024-06": "2024-06",
-              "2024-07": "2024-07",
-              "2024-08": "2024-08",
-              "2024-09": "2024-09",
-              "2024-10": "2024-10",
-              "2024-11": "2024-11",
-              "2024-12": "2024-12",
-              "2025-01": "2025-01",
-              "2025-02": "2025-02",
-              "2025-03": "2025-03",
-              "2025-04": "2025-04",
-              "2025-05": "2025-05"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/teibs030?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=M&unit=INX&s_adj=SA&indic=BS-EEI-I&time=2024-06&time=2024-07&time=2024-08&time=2024-09&time=2024-10&time=2024-11&time=2024-12&time=2025-01&time=2025-02&time=2025-03&time=2025-04&time=2025-05",
-      "isSaved": true,
-      "title": "Employment expectations indicator",
-      "code": "teibs030",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "earn_ses18_20": {
-      "label": "Mean monthly earnings by sex, age and economic activity",
-      "updated": "2024-01-03T23:00:00+0100",
+    "educ_uoe_fine06": {
+      "label": "Public expenditure on education by education level and programme orientation - as % of GDP",
+      "updated": "2024-11-14T23:00:00+0100",
       "dimension": {
         "freq": {
           "label": "Time frequency",
@@ -4503,378 +4637,14 @@
             }
           }
         },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y_LT30": 1,
-              "Y30-49": 2,
-              "Y_GE50": 3
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y_LT30": "Less than 30 years",
-              "Y30-49": "From 30 to 49 years",
-              "Y_GE50": "50 years or over"
-            }
-          }
-        },
-        "indic_se": {
-          "label": "Structure of earnings indicator",
-          "category": {
-            "index": {
-              "ERN": 0,
-              "OPAY": 1,
-              "OP_E_PC": 2,
-              "SPAY": 3,
-              "SP_E_PC": 4
-            },
-            "label": {
-              "ERN": "Gross earnings",
-              "OPAY": "Overtime pay",
-              "OP_E_PC": "Overtime pay as a percentage of earnings",
-              "SPAY": "Shift pay",
-              "SP_E_PC": "Shift pay as a percentage of earnings"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "sizeclas": {
-          "label": "Size classes in number of employees",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "GE10": 1
-            },
-            "label": {
-              "TOTAL": "Total",
-              "GE10": "10 employees or more"
-            }
-          }
-        },
-        "nace_r2": {
-          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
-          "category": {
-            "index": {
-              "B-S": 0,
-              "B-S_X_O": 1,
-              "B-N": 2,
-              "B-F": 3,
-              "B-E": 4,
-              "B": 5,
-              "C": 6,
-              "D": 7,
-              "E": 8,
-              "F": 9,
-              "G-S": 10,
-              "G-S_X_O": 11,
-              "G-J": 12,
-              "G": 13,
-              "H": 14,
-              "I": 15,
-              "J": 16,
-              "K-N": 17,
-              "K": 18,
-              "L": 19,
-              "M": 20,
-              "N": 21,
-              "O-S": 22,
-              "O": 23,
-              "P-S": 24,
-              "P": 25,
-              "Q": 26,
-              "R": 27,
-              "S": 28
-            },
-            "label": {
-              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
-              "B-N": "Business economy",
-              "B-F": "Industry and construction",
-              "B-E": "Industry (except construction)",
-              "B": "Mining and quarrying",
-              "C": "Manufacturing",
-              "D": "Electricity, gas, steam and air conditioning supply",
-              "E": "Water supply; sewerage, waste management and remediation activities",
-              "F": "Construction",
-              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
-              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
-              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-              "H": "Transportation and storage",
-              "I": "Accommodation and food service activities",
-              "J": "Information and communication",
-              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
-              "K": "Financial and insurance activities",
-              "L": "Real estate activities",
-              "M": "Professional, scientific and technical activities",
-              "N": "Administrative and support service activities",
-              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "O": "Public administration and defence; compulsory social security",
-              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "P": "Education",
-              "Q": "Human health and social work activities",
-              "R": "Arts, entertainment and recreation",
-              "S": "Other service activities"
-            }
-          }
-        },
         "unit": {
           "label": "Unit of measure",
           "category": {
             "index": {
-              "EUR": 0,
-              "NAC": 1,
-              "PPS": 2,
-              "PC": 3
+              "PC_GDP": 0
             },
             "label": {
-              "EUR": "Euro",
-              "NAC": "National currency",
-              "PPS": "Purchasing power standard (PPS)",
-              "PC": "Percentage"
-            }
-          }
-        },
-        "geo": {
-          "label": "Geopolitical entity (reporting)",
-          "category": {
-            "index": {},
-            "label": {}
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2018": 0
-            },
-            "label": {
-              "2018": "2018"
-            }
-          }
-        }
-      },
-      "dimensionPrefs": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "TOTAL": 0,
-              "Y_LT30": 1,
-              "Y30-49": 2,
-              "Y_GE50": 3
-            },
-            "label": {
-              "TOTAL": "Total",
-              "Y_LT30": "Less than 30 years",
-              "Y30-49": "From 30 to 49 years",
-              "Y_GE50": "50 years or over"
-            }
-          }
-        },
-        "indic_se": {
-          "label": "Structure of earnings indicator",
-          "category": {
-            "index": {
-              "ERN": 0
-            },
-            "label": {
-              "ERN": "Gross earnings"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "sizeclas": {
-          "label": "Size classes in number of employees",
-          "category": {
-            "index": {
-              "GE10": 1
-            },
-            "label": {
-              "GE10": "10 employees or more"
-            }
-          }
-        },
-        "nace_r2": {
-          "label": "Statistical classification of economic activities in the European Community (NACE Rev. 2)",
-          "category": {
-            "index": {
-              "B-S": 0,
-              "B-S_X_O": 1,
-              "B-N": 2,
-              "B-F": 3,
-              "B-E": 4,
-              "B": 5,
-              "C": 6,
-              "D": 7,
-              "E": 8,
-              "F": 9,
-              "G-S": 10,
-              "G-S_X_O": 11,
-              "G-J": 12,
-              "G": 13,
-              "H": 14,
-              "I": 15,
-              "J": 16,
-              "K-N": 17,
-              "K": 18,
-              "L": 19,
-              "M": 20,
-              "N": 21,
-              "O-S": 22,
-              "O": 23,
-              "P-S": 24,
-              "P": 25,
-              "Q": 26,
-              "R": 27,
-              "S": 28
-            },
-            "label": {
-              "B-S": "Industry, construction and services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "B-S_X_O": "Industry, construction and services (except public administration, defense, compulsory social security)",
-              "B-N": "Business economy",
-              "B-F": "Industry and construction",
-              "B-E": "Industry (except construction)",
-              "B": "Mining and quarrying",
-              "C": "Manufacturing",
-              "D": "Electricity, gas, steam and air conditioning supply",
-              "E": "Water supply; sewerage, waste management and remediation activities",
-              "F": "Construction",
-              "G-S": "Services (except activities of households as employers and extra-territorial organisations and bodies)",
-              "G-S_X_O": "Services (except public administration, defense, compulsory social security, activities of households as employers and extra-territorial organisations and bodies)",
-              "G-J": "Wholesale and retail trade; transport; accommodation and food service activities; information and communication",
-              "G": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
-              "H": "Transportation and storage",
-              "I": "Accommodation and food service activities",
-              "J": "Information and communication",
-              "K-N": "Financial and insurance activities; real estate activities; professional, scientific and technical activities; administrative and support service activities",
-              "K": "Financial and insurance activities",
-              "L": "Real estate activities",
-              "M": "Professional, scientific and technical activities",
-              "N": "Administrative and support service activities",
-              "O-S": "Public administration and defence; compulsory social security; education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "O": "Public administration and defence; compulsory social security",
-              "P-S": "Education; human health and social work activities; arts, entertainment and recreation; other service activities",
-              "P": "Education",
-              "Q": "Human health and social work activities",
-              "R": "Arts, entertainment and recreation",
-              "S": "Other service activities"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "EUR": 0,
-              "NAC": 1,
-              "PPS": 2,
-              "PC": 3
-            },
-            "label": {
-              "EUR": "Euro",
-              "NAC": "National currency",
-              "PPS": "Purchasing power standard (PPS)",
-              "PC": "Percentage"
-            }
-          }
-        },
-        "time": {
-          "label": "Time",
-          "category": {
-            "index": {
-              "2018": 0
-            },
-            "label": {
-              "2018": "2018"
-            }
-          }
-        }
-      },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/earn_ses18_20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&age=TOTAL&age=Y_LT30&age=Y30-49&age=Y_GE50&indic_se=ERN&sex=T&sex=M&sex=F&sizeclas=GE10&nace_r2=B-S&nace_r2=B-S_X_O&nace_r2=B-N&nace_r2=B-F&nace_r2=B-E&nace_r2=B&nace_r2=C&nace_r2=D&nace_r2=E&nace_r2=F&nace_r2=G-S&nace_r2=G-S_X_O&nace_r2=G-J&nace_r2=G&nace_r2=H&nace_r2=I&nace_r2=J&nace_r2=K-N&nace_r2=K&nace_r2=L&nace_r2=M&nace_r2=N&nace_r2=O-S&nace_r2=O&nace_r2=P-S&nace_r2=P&nace_r2=Q&nace_r2=R&nace_r2=S&unit=EUR&unit=NAC&unit=PPS&unit=PC&time=2018",
-      "isSaved": true,
-      "title": "Mean monthly earnings by sex, age and economic activity",
-      "code": "earn_ses18_20",
-      "fetched": "2025-05-31T12:40:45+0300"
-    },
-    "lfsa_ergaedn": {
-      "label": "Employment rates by sex, age, educational attainment level and citizenship",
-      "updated": "2025-04-14T23:00:00+0200",
-      "dimension": {
-        "freq": {
-          "label": "Time frequency",
-          "category": {
-            "index": {
-              "A": 0
-            },
-            "label": {
-              "A": "Annual"
-            }
-          }
-        },
-        "citizen": {
-          "label": "Country of citizenship",
-          "category": {
-            "index": {
-              "EU27_2020": 0,
-              "EU27_2020_FOR": 1,
-              "NEU27_2020_FOR": 2,
-              "FOR": 3,
-              "NAT": 4,
-              "STLS": 5,
-              "TOTAL": 6,
-              "NRP": 7
-            },
-            "label": {
-              "EU27_2020": "European Union - 27 countries (from 2020)",
-              "EU27_2020_FOR": "EU27 countries (from 2020) except reporting country",
-              "NEU27_2020_FOR": "Non-EU27 countries (from 2020) nor reporting country",
-              "FOR": "Foreign country",
-              "NAT": "Reporting country",
-              "STLS": "Stateless",
-              "TOTAL": "Total",
-              "NRP": "No response"
+              "PC_GDP": "Percentage of gross domestic product (GDP)"
             }
           }
         },
@@ -4882,95 +4652,48 @@
           "label": "International Standard Classification of Education (ISCED 2011)",
           "category": {
             "index": {
-              "TOTAL": 0,
-              "ED0-2": 1,
-              "ED3_4": 2,
-              "ED3_4GEN": 3,
-              "ED3_4VOC": 4,
-              "ED5-8": 5,
-              "NAP": 6,
-              "NRP": 7
+              "ED0": 0,
+              "ED01": 1,
+              "ED02-8": 2,
+              "ED02": 3,
+              "ED1_2": 4,
+              "ED1": 5,
+              "ED2": 6,
+              "ED24": 7,
+              "ED25": 8,
+              "ED3_4": 9,
+              "ED3": 10,
+              "ED34_44": 11,
+              "ED34": 12,
+              "ED35_45": 13,
+              "ED35": 14,
+              "ED4": 15,
+              "ED44": 16,
+              "ED45": 17,
+              "ED5-8": 18,
+              "ED9": 19
             },
             "label": {
-              "TOTAL": "All ISCED 2011 levels",
-              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED0": "Early childhood education",
+              "ED01": "Early childhood educational development",
+              "ED02-8": "Pre-primary to tertiary education",
+              "ED02": "Pre-primary education",
+              "ED1_2": "Primary and lower secondary education (levels 1 and 2)",
+              "ED1": "Primary education",
+              "ED2": "Lower secondary education",
+              "ED24": "Lower secondary education - general",
+              "ED25": "Lower secondary education - vocational",
               "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
-              "ED3_4GEN": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4) - general",
-              "ED3_4VOC": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4) - vocational",
+              "ED3": "Upper secondary education",
+              "ED34_44": "Upper secondary and post-secondary non-tertiary education - general (levels 34 and 44)",
+              "ED34": "Upper secondary education - general",
+              "ED35_45": "Upper secondary and post-secondary non-tertiary education - vocational (levels 35 and 45)",
+              "ED35": "Upper secondary education - vocational",
+              "ED4": "Post-secondary non-tertiary education",
+              "ED44": "Post-secondary non-tertiary education - general",
+              "ED45": "Post-secondary non-tertiary education - vocational",
               "ED5-8": "Tertiary education (levels 5-8)",
-              "NAP": "Not applicable",
-              "NRP": "No response"
-            }
-          }
-        },
-        "sex": {
-          "label": "Sex",
-          "category": {
-            "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
-            },
-            "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
-            }
-          }
-        },
-        "age": {
-          "label": "Age class",
-          "category": {
-            "index": {
-              "Y15-24": 0,
-              "Y15-39": 1,
-              "Y15-59": 2,
-              "Y15-64": 3,
-              "Y_GE15": 4,
-              "Y20-64": 5,
-              "Y25-49": 6,
-              "Y25-54": 7,
-              "Y25-59": 8,
-              "Y25-64": 9,
-              "Y_GE25": 10,
-              "Y40-59": 11,
-              "Y40-64": 12,
-              "Y50-59": 13,
-              "Y50-64": 14,
-              "Y_GE50": 15,
-              "Y55-64": 16,
-              "Y_GE65": 17
-            },
-            "label": {
-              "Y15-24": "From 15 to 24 years",
-              "Y15-39": "From 15 to 39 years",
-              "Y15-59": "From 15 to 59 years",
-              "Y15-64": "From 15 to 64 years",
-              "Y_GE15": "15 years or over",
-              "Y20-64": "From 20 to 64 years",
-              "Y25-49": "From 25 to 49 years",
-              "Y25-54": "From 25 to 54 years",
-              "Y25-59": "From 25 to 59 years",
-              "Y25-64": "From 25 to 64 years",
-              "Y_GE25": "25 years or over",
-              "Y40-59": "From 40 to 59 years",
-              "Y40-64": "From 40 to 64 years",
-              "Y50-59": "From 50 to 59 years",
-              "Y50-64": "From 50 to 64 years",
-              "Y_GE50": "50 years or over",
-              "Y55-64": "From 55 to 64 years",
-              "Y_GE65": "65 years or over"
-            }
-          }
-        },
-        "unit": {
-          "label": "Unit of measure",
-          "category": {
-            "index": {
-              "PC": 0
-            },
-            "label": {
-              "PC": "Percentage"
+              "ED9": "Not elsewhere classified"
             }
           }
         },
@@ -4985,55 +4708,18 @@
           "label": "Time",
           "category": {
             "index": {
-              "1995": 0,
-              "1996": 1,
-              "1997": 2,
-              "1998": 3,
-              "1999": 4,
-              "2000": 5,
-              "2001": 6,
-              "2002": 7,
-              "2003": 8,
-              "2004": 9,
-              "2005": 10,
-              "2006": 11,
-              "2007": 12,
-              "2008": 13,
-              "2009": 14,
-              "2010": 15,
-              "2011": 16,
-              "2012": 17,
-              "2013": 18,
-              "2014": 19,
-              "2015": 20,
-              "2016": 21,
-              "2017": 22,
-              "2018": 23,
-              "2019": 24,
-              "2020": 25,
-              "2021": 26,
-              "2022": 27,
-              "2023": 28,
-              "2024": 29
+              "2012": 0,
+              "2013": 1,
+              "2014": 2,
+              "2015": 3,
+              "2016": 4,
+              "2017": 5,
+              "2018": 6,
+              "2019": 7,
+              "2020": 8,
+              "2021": 9
             },
             "label": {
-              "1995": "1995",
-              "1996": "1996",
-              "1997": "1997",
-              "1998": "1998",
-              "1999": "1999",
-              "2000": "2000",
-              "2001": "2001",
-              "2002": "2002",
-              "2003": "2003",
-              "2004": "2004",
-              "2005": "2005",
-              "2006": "2006",
-              "2007": "2007",
-              "2008": "2008",
-              "2009": "2009",
-              "2010": "2010",
-              "2011": "2011",
               "2012": "2012",
               "2013": "2013",
               "2014": "2014",
@@ -5043,10 +4729,7 @@
               "2018": "2018",
               "2019": "2019",
               "2020": "2020",
-              "2021": "2021",
-              "2022": "2022",
-              "2023": "2023",
-              "2024": "2024"
+              "2021": "2021"
             }
           }
         }
@@ -5063,22 +4746,14 @@
             }
           }
         },
-        "citizen": {
-          "label": "Country of citizenship",
+        "unit": {
+          "label": "Unit of measure",
           "category": {
             "index": {
-              "EU27_2020_FOR": 1,
-              "NEU27_2020_FOR": 2,
-              "FOR": 3,
-              "NAT": 4,
-              "TOTAL": 6
+              "PC_GDP": 0
             },
             "label": {
-              "EU27_2020_FOR": "EU27 countries (from 2020) except reporting country",
-              "NEU27_2020_FOR": "Non-EU27 countries (from 2020) nor reporting country",
-              "FOR": "Foreign country",
-              "NAT": "Reporting country",
-              "TOTAL": "Total"
+              "PC_GDP": "Percentage of gross domestic product (GDP)"
             }
           }
         },
@@ -5086,50 +4761,65 @@
           "label": "International Standard Classification of Education (ISCED 2011)",
           "category": {
             "index": {
-              "TOTAL": 0,
-              "ED0-2": 1,
-              "ED3_4": 2,
-              "ED5-8": 5
+              "ED1_2": 4,
+              "ED3_4": 9,
+              "ED5-8": 18
             },
             "label": {
-              "TOTAL": "All ISCED 2011 levels",
-              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED1_2": "Primary and lower secondary education (levels 1 and 2)",
               "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
               "ED5-8": "Tertiary education (levels 5-8)"
             }
           }
         },
-        "sex": {
-          "label": "Sex",
+        "time": {
+          "label": "Time",
           "category": {
             "index": {
-              "T": 0,
-              "M": 1,
-              "F": 2
+              "2012": 0,
+              "2013": 1,
+              "2014": 2,
+              "2015": 3,
+              "2016": 4,
+              "2017": 5,
+              "2018": 6,
+              "2019": 7,
+              "2020": 8,
+              "2021": 9
             },
             "label": {
-              "T": "Total",
-              "M": "Males",
-              "F": "Females"
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021"
             }
           }
-        },
-        "age": {
-          "label": "Age class",
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/educ_uoe_fine06?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC_GDP&isced11=ED1_2&isced11=ED3_4&isced11=ED5-8&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021",
+      "isSaved": true,
+      "title": "Public expenditure on education by education level and programme orientation - as % of GDP",
+      "code": "educ_uoe_fine06"
+    },
+    "tipsho20": {
+      "label": "House price index, nominal - annual data",
+      "updated": "2025-04-08T11:00:00+0200",
+      "description": "The House price index captures price changes of all residential properties purchased by households (flats, detached houses, terraced houses, etc.), both new and existing, independently of their final use and their previous owners. Only market prices are considered, self-build dwellings are therefore excluded. The land component is included. The data are expressed as annual average index 2015=100, as 3 years % change and annual average rate of change.",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
           "category": {
             "index": {
-              "Y15-24": 0,
-              "Y_GE15": 4,
-              "Y25-54": 7,
-              "Y55-64": 16,
-              "Y_GE65": 17
+              "A": 0
             },
             "label": {
-              "Y15-24": "From 15 to 24 years",
-              "Y_GE15": "15 years or over",
-              "Y25-54": "From 25 to 54 years",
-              "Y55-64": "From 55 to 64 years",
-              "Y_GE65": "65 years or over"
+              "A": "Annual"
             }
           }
         },
@@ -5137,54 +4827,55 @@
           "label": "Unit of measure",
           "category": {
             "index": {
-              "PC": 0
+              "I15_A_AVG": 0,
+              "RCH_A_AVG": 1,
+              "PCH_3Y": 2
             },
             "label": {
-              "PC": "Percentage"
+              "I15_A_AVG": "Annual average index, 2015=100",
+              "RCH_A_AVG": "Annual average rate of change",
+              "PCH_3Y": "Percentage change (t/t-3)"
             }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
           }
         },
         "time": {
           "label": "Time",
           "category": {
             "index": {
-              "1995": 0,
-              "1996": 1,
-              "1997": 2,
-              "1998": 3,
-              "1999": 4,
-              "2000": 5,
-              "2001": 6,
-              "2002": 7,
-              "2003": 8,
-              "2004": 9,
-              "2005": 10,
-              "2006": 11,
-              "2007": 12,
-              "2008": 13,
-              "2009": 14,
-              "2010": 15,
-              "2011": 16,
-              "2012": 17,
-              "2013": 18,
-              "2014": 19,
-              "2015": 20,
-              "2016": 21,
-              "2017": 22,
-              "2018": 23,
-              "2019": 24,
-              "2020": 25,
-              "2021": 26,
-              "2022": 27,
-              "2023": 28,
-              "2024": 29
+              "2000": 0,
+              "2001": 1,
+              "2002": 2,
+              "2003": 3,
+              "2004": 4,
+              "2005": 5,
+              "2006": 6,
+              "2007": 7,
+              "2008": 8,
+              "2009": 9,
+              "2010": 10,
+              "2011": 11,
+              "2012": 12,
+              "2013": 13,
+              "2014": 14,
+              "2015": 15,
+              "2016": 16,
+              "2017": 17,
+              "2018": 18,
+              "2019": 19,
+              "2020": 20,
+              "2021": 21,
+              "2022": 22,
+              "2023": 23,
+              "2024": 24
             },
             "label": {
-              "1995": "1995",
-              "1996": "1996",
-              "1997": "1997",
-              "1998": "1998",
-              "1999": "1999",
               "2000": "2000",
               "2001": "2001",
               "2002": "2002",
@@ -5214,11 +4905,93 @@
           }
         }
       },
-      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/lfsa_ergaedn?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&citizen=EU27_2020_FOR&citizen=NEU27_2020_FOR&citizen=FOR&citizen=NAT&citizen=TOTAL&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&sex=T&sex=M&sex=F&age=Y15-24&age=Y_GE15&age=Y25-54&age=Y55-64&age=Y_GE65&unit=PC&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "I15_A_AVG": 0
+            },
+            "label": {
+              "I15_A_AVG": "Annual average index, 2015=100"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2000": 0,
+              "2001": 1,
+              "2002": 2,
+              "2003": 3,
+              "2004": 4,
+              "2005": 5,
+              "2006": 6,
+              "2007": 7,
+              "2008": 8,
+              "2009": 9,
+              "2010": 10,
+              "2011": 11,
+              "2012": 12,
+              "2013": 13,
+              "2014": 14,
+              "2015": 15,
+              "2016": 16,
+              "2017": 17,
+              "2018": 18,
+              "2019": 19,
+              "2020": 20,
+              "2021": 21,
+              "2022": 22,
+              "2023": 23,
+              "2024": 24
+            },
+            "label": {
+              "2000": "2000",
+              "2001": "2001",
+              "2002": "2002",
+              "2003": "2003",
+              "2004": "2004",
+              "2005": "2005",
+              "2006": "2006",
+              "2007": "2007",
+              "2008": "2008",
+              "2009": "2009",
+              "2010": "2010",
+              "2011": "2011",
+              "2012": "2012",
+              "2013": "2013",
+              "2014": "2014",
+              "2015": "2015",
+              "2016": "2016",
+              "2017": "2017",
+              "2018": "2018",
+              "2019": "2019",
+              "2020": "2020",
+              "2021": "2021",
+              "2022": "2022",
+              "2023": "2023",
+              "2024": "2024"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/tipsho20?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=I15_A_AVG&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true,
-      "title": "Employment rates by sex, age, educational attainment level and citizenship",
-      "code": "lfsa_ergaedn",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "title": "House price index, nominal - annual data",
+      "code": "tipsho20"
     },
     "nrg_pc_204": {
       "label": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
@@ -5563,8 +5336,7 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_204?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=S&product=6000&nrg_cons=TOT_KWH&nrg_cons=KWH_LT1000&nrg_cons=KWH1000-2499&nrg_cons=KWH2500-4999&nrg_cons=KWH5000-14999&nrg_cons=KWH_GE15000&unit=KWH&tax=X_VAT&tax=I_TAX&currency=EUR&currency=PPS&time=2007-S1&time=2007-S2&time=2008-S1&time=2008-S2&time=2009-S1&time=2009-S2&time=2010-S1&time=2010-S2&time=2011-S1&time=2011-S2&time=2012-S1&time=2012-S2&time=2013-S1&time=2013-S2&time=2014-S1&time=2014-S2&time=2015-S1&time=2015-S2&time=2016-S1&time=2016-S2&time=2017-S1&time=2017-S2&time=2018-S1&time=2018-S2&time=2019-S1&time=2019-S2&time=2020-S1&time=2020-S2&time=2021-S1&time=2021-S2&time=2022-S1&time=2022-S2&time=2023-S1&time=2023-S2&time=2024-S1&time=2024-S2",
       "isSaved": true,
       "title": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
-      "code": "nrg_pc_204",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "nrg_pc_204"
     },
     "nrg_pc_202": {
       "label": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
@@ -5905,8 +5677,7 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nrg_pc_202?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=S&product=4100&nrg_cons=TOT_GJ&nrg_cons=GJ_LT20&nrg_cons=GJ20-199&nrg_cons=GJ_GE200&unit=KWH&unit=GJ_GCV&tax=X_VAT&tax=I_TAX&currency=EUR&currency=PPS&time=2007-S1&time=2007-S2&time=2008-S1&time=2008-S2&time=2009-S1&time=2009-S2&time=2010-S1&time=2010-S2&time=2011-S1&time=2011-S2&time=2012-S1&time=2012-S2&time=2013-S1&time=2013-S2&time=2014-S1&time=2014-S2&time=2015-S1&time=2015-S2&time=2016-S1&time=2016-S2&time=2017-S1&time=2017-S2&time=2018-S1&time=2018-S2&time=2019-S1&time=2019-S2&time=2020-S1&time=2020-S2&time=2021-S1&time=2021-S2&time=2022-S1&time=2022-S2&time=2023-S1&time=2023-S2&time=2024-S1&time=2024-S2",
       "isSaved": true,
       "title": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
-      "code": "nrg_pc_202",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "nrg_pc_202"
     },
     "sdg_09_10": {
       "label": "Gross domestic expenditure on R&D by sector",
@@ -6122,8 +5893,7 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sdg_09_10?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&sectperf=TOTAL&sectperf=BES&sectperf=GOV&sectperf=HES&sectperf=PNP&unit=PC_GDP&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "Gross domestic expenditure on R&D by sector",
-      "code": "sdg_09_10",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "sdg_09_10"
     },
     "rd_p_perssci": {
       "label": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
@@ -6608,8 +6378,300 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/rd_p_perssci?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&sectperf=TOTAL&sectperf=BES&sectperf=GOV&sectperf=HES&sectperf=PNP&prof_pos=TOTAL&prof_pos=RSE&sex=T&sex=F&ford=TOTAL&ford=FORD1&ford=FORD2&ford=FORD3&ford=FORD4&ford=FORD5&ford=FORD6&unit=HC&time=1980&time=1981&time=1982&time=1983&time=1984&time=1985&time=1986&time=1987&time=1988&time=1989&time=1990&time=1991&time=1992&time=1993&time=1994&time=1995&time=1996&time=1997&time=1998&time=1999&time=2000&time=2001&time=2002&time=2003&time=2004&time=2005&time=2006&time=2007&time=2008&time=2009&time=2010&time=2011&time=2012&time=2013&time=2014&time=2015&time=2016&time=2017&time=2018&time=2019&time=2020&time=2021&time=2022&time=2023",
       "isSaved": true,
       "title": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
-      "code": "rd_p_perssci",
-      "fetched": "2025-05-31T12:40:45+0300"
+      "code": "rd_p_perssci"
+    },
+    "ilc_scp03": {
+      "label": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
+      "updated": "2024-04-24T23:00:00+0200",
+      "dimension": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "frequenc": {
+          "label": "Frequency",
+          "category": {
+            "index": {
+              "NM12": 0,
+              "1-3": 1,
+              "GE1": 2,
+              "GE4": 3
+            },
+            "label": {
+              "NM12": "Not in the last 12 months",
+              "1-3": "From 1 to 3 times",
+              "GE1": "At least once",
+              "GE4": "At least 4 times"
+            }
+          }
+        },
+        "acl00": {
+          "label": "Classification of activities for time use",
+          "category": {
+            "index": {
+              "AC52A": 0,
+              "AC521": 1,
+              "AC522A": 2,
+              "AC523H": 3,
+              "AC525": 4
+            },
+            "label": {
+              "AC52A": "Cultural activities (cinema, live performances or cultural sites)",
+              "AC521": "Cinema",
+              "AC522A": "Live performances (theatre, concerts, ballet)",
+              "AC523H": "Cultural sites (historical monuments, museums, art galleries or archaeological sites)",
+              "AC525": "Sports events"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "TOTAL": 0,
+              "ED0-2": 1,
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "TOTAL": "All ISCED 2011 levels",
+              "ED0-2": "Less than primary, primary and lower secondary education (levels 0-2)",
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "Y16-24": 0,
+              "Y16-29": 1,
+              "Y16-44": 2,
+              "Y16-64": 3,
+              "Y_GE16": 4,
+              "Y_GE18": 5,
+              "Y20-64": 6,
+              "Y25-29": 7,
+              "Y25-34": 8,
+              "Y25-64": 9,
+              "Y30-54": 10,
+              "Y35-44": 11,
+              "Y35-49": 12,
+              "Y45-54": 13,
+              "Y45-64": 14,
+              "Y50-64": 15,
+              "Y55-64": 16,
+              "Y65-74": 17,
+              "Y_GE65": 18,
+              "Y75-84": 19,
+              "Y_GE75": 20
+            },
+            "label": {
+              "Y16-24": "From 16 to 24 years",
+              "Y16-29": "From 16 to 29 years",
+              "Y16-44": "From 16 to 44 years",
+              "Y16-64": "From 16 to 64 years",
+              "Y_GE16": "16 years or over",
+              "Y_GE18": "18 years or over",
+              "Y20-64": "From 20 to 64 years",
+              "Y25-29": "From 25 to 29 years",
+              "Y25-34": "From 25 to 34 years",
+              "Y25-64": "From 25 to 64 years",
+              "Y30-54": "From 30 to 54 years",
+              "Y35-44": "From 35 to 44 years",
+              "Y35-49": "From 35 to 49 years",
+              "Y45-54": "From 45 to 54 years",
+              "Y45-64": "From 45 to 64 years",
+              "Y50-64": "From 50 to 64 years",
+              "Y55-64": "From 55 to 64 years",
+              "Y65-74": "From 65 to 74 years",
+              "Y_GE65": "65 years or over",
+              "Y75-84": "From 75 to 84 years",
+              "Y_GE75": "75 years or over"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "PC": 0
+            },
+            "label": {
+              "PC": "Percentage"
+            }
+          }
+        },
+        "geo": {
+          "label": "Geopolitical entity (reporting)",
+          "category": {
+            "index": {},
+            "label": {}
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2006": 0,
+              "2015": 1,
+              "2022": 2
+            },
+            "label": {
+              "2006": "2006",
+              "2015": "2015",
+              "2022": "2022"
+            }
+          }
+        }
+      },
+      "dimensionPrefs": {
+        "freq": {
+          "label": "Time frequency",
+          "category": {
+            "index": {
+              "A": 0
+            },
+            "label": {
+              "A": "Annual"
+            }
+          }
+        },
+        "frequenc": {
+          "label": "Frequency",
+          "category": {
+            "index": {
+              "NM12": 0,
+              "1-3": 1,
+              "GE1": 2,
+              "GE4": 3
+            },
+            "label": {
+              "NM12": "Not in the last 12 months",
+              "1-3": "From 1 to 3 times",
+              "GE1": "At least once",
+              "GE4": "At least 4 times"
+            }
+          }
+        },
+        "acl00": {
+          "label": "Classification of activities for time use",
+          "category": {
+            "index": {
+              "AC52A": 0,
+              "AC521": 1,
+              "AC522A": 2,
+              "AC523H": 3,
+              "AC525": 4
+            },
+            "label": {
+              "AC52A": "Cultural activities (cinema, live performances or cultural sites)",
+              "AC521": "Cinema",
+              "AC522A": "Live performances (theatre, concerts, ballet)",
+              "AC523H": "Cultural sites (historical monuments, museums, art galleries or archaeological sites)",
+              "AC525": "Sports events"
+            }
+          }
+        },
+        "isced11": {
+          "label": "International Standard Classification of Education (ISCED 2011)",
+          "category": {
+            "index": {
+              "ED3_4": 2,
+              "ED5-8": 3
+            },
+            "label": {
+              "ED3_4": "Upper secondary and post-secondary non-tertiary education (levels 3 and 4)",
+              "ED5-8": "Tertiary education (levels 5-8)"
+            }
+          }
+        },
+        "age": {
+          "label": "Age class",
+          "category": {
+            "index": {
+              "Y16-24": 0,
+              "Y25-34": 8,
+              "Y35-49": 12,
+              "Y50-64": 15
+            },
+            "label": {
+              "Y16-24": "From 16 to 24 years",
+              "Y25-34": "From 25 to 34 years",
+              "Y35-49": "From 35 to 49 years",
+              "Y50-64": "From 50 to 64 years"
+            }
+          }
+        },
+        "sex": {
+          "label": "Sex",
+          "category": {
+            "index": {
+              "T": 0,
+              "M": 1,
+              "F": 2
+            },
+            "label": {
+              "T": "Total",
+              "M": "Males",
+              "F": "Females"
+            }
+          }
+        },
+        "unit": {
+          "label": "Unit of measure",
+          "category": {
+            "index": {
+              "PC": 0
+            },
+            "label": {
+              "PC": "Percentage"
+            }
+          }
+        },
+        "time": {
+          "label": "Time",
+          "category": {
+            "index": {
+              "2006": 0,
+              "2015": 1,
+              "2022": 2
+            },
+            "label": {
+              "2006": "2006",
+              "2015": "2015",
+              "2022": "2022"
+            }
+          }
+        }
+      },
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_scp03?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&frequenc=NM12&frequenc=1-3&frequenc=GE1&frequenc=GE4&acl00=AC52A&acl00=AC521&acl00=AC522A&acl00=AC523H&acl00=AC525&isced11=ED3_4&isced11=ED5-8&age=Y16-24&age=Y25-34&age=Y35-49&age=Y50-64&sex=T&sex=M&sex=F&unit=PC&time=2006&time=2015&time=2022",
+      "isSaved": true,
+      "title": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
+      "code": "ilc_scp03"
     }
   }
 }
