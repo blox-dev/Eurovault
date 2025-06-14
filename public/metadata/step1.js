@@ -61,9 +61,9 @@ fetch("/data/table_of_contents.xml")
       .then(response => response.json())
       .then(data => {
         console.log("Metadata2:", data);
-        console.log(Object.keys(data.files).length);
+        console.log(data.order.length);
 
-        for (let file of Object.keys(data.files)) {
+        for (let file of data.order) {
           // Set flag on metadata tables
           data.files[file].isSaved = true;
           
@@ -272,45 +272,6 @@ function searchAndToggle(ulElement, searchTerm) {
   return hasMatch;
 }
 
-function renderSelectedTables() {
-  const container = document.getElementById("selected-tables");
-  container.innerHTML = "";
-
-  selectedTableDataMap.keys().forEach((code) => {
-    const node = selectedTableDataMap.get(code);
-    const p = document.createElement("p");
-
-    const text = document.createElement("span");
-    text.textContent = `${node.title} (${node.code})`;
-    p.appendChild(text);
-
-    // Eurostat link icon
-    const linkIcon = document.createElement("a");
-    linkIcon.href = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/default/table?lang=en`;
-    linkIcon.target = "_blank";
-    linkIcon.style.marginLeft = "10px";
-    linkIcon.style.textDecoration = "none";
-    linkIcon.textContent = "🔗";
-    p.appendChild(linkIcon);
-
-    // Remove button
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
-    removeBtn.style.marginLeft = "10px";
-    removeBtn.onclick = () => {
-      selectedTableDataMap.delete(code);
-      renderSelectedTables();
-    };
-    p.appendChild(removeBtn);
-
-    // Mark saved tables
-    if (node.isSaved) {
-      p.style.color = "red";
-    }
-    container.appendChild(p);
-  });
-}
-
 document.getElementById("searchBox").addEventListener("input", (e) => {
   const searchTerm = e.target.value.trim();
   searchTreeDOM(searchTerm.length >= 3 ? searchTerm : "");
@@ -329,3 +290,132 @@ document.getElementById("nextBtn").onclick = () => {
 document.getElementById("backBtn").onclick = () => {
   window.location.href = "/"; // go to map
 };
+
+// Table logic
+
+let draggingEl = null;
+let startIndex = null;
+let isDragging = false;
+let selectedIndex = null;
+
+function renderSelectedTables() {
+  const tbody = document.querySelector("#selected-tables-table tbody");
+  if (!tbody) return;
+  tbody.innerHTML = "";
+
+  const data = [...selectedTableDataMap.values()];
+
+  data.forEach((item, index) => {
+    const tr = document.createElement("tr");
+    tr.dataset.code = item.code;
+
+    if (item.isSaved) {
+      tr.classList.add("saved");
+    }
+
+    const eurostatLink = `https://ec.europa.eu/eurostat/databrowser/view/${item.code}/default/table?lang=en`;
+
+    tr.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${item.title} (${item.code})</td>
+      <td><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
+    `;
+
+    if (index === selectedIndex) {
+      tr.classList.add("selected-row");
+    }
+
+    // Drag logic
+    addDragEvents(tr);
+
+    // Remove button
+    tr.querySelector("a.link-remove").addEventListener("click", (e) => {
+      e.stopPropagation();
+      selectedTableDataMap.delete(item.code);
+      renderSelectedTables();
+    });
+
+    tbody.appendChild(tr);
+  });
+}
+
+function addDragEvents(row) {
+  row.addEventListener("mousedown", (e) => {
+    if (e.button !== 0 || e.target.closest("a")) return;
+
+    // Remove .selected-row from all rows
+
+  const tbody = document.querySelector("#selected-tables-table tbody");
+    tbody
+      .querySelectorAll("tr.selected-row")
+      .forEach((r) => r.classList.remove("selected-row"));
+
+    draggingEl = row;
+    startIndex = [...row.parentNode.children].indexOf(row);
+    draggingEl.classList.add("dragged");
+    isDragging = true;
+    document.querySelector("#selected-tables").classList.add("dragging");
+
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+  });
+}
+
+function onMouseMove(e) {
+  const tbody = document.querySelector("#selected-tables-table tbody");
+  if (!draggingEl) return;
+
+  const mouseY = e.clientY;
+  let inserted = false;
+
+  for (let row of tbody.children) {
+    if (row === draggingEl) continue;
+
+    const rect = row.getBoundingClientRect();
+    const midpoint = rect.top + rect.height / 2;
+
+    if (mouseY < midpoint) {
+      tbody.insertBefore(draggingEl, row);
+      inserted = true;
+      break;
+    }
+  }
+
+  if (!inserted) {
+    tbody.appendChild(draggingEl);
+  }
+}
+
+function onMouseUp(e) {
+  document.removeEventListener("mousemove", onMouseMove);
+  document.removeEventListener("mouseup", onMouseUp);
+  document.querySelector("#selected-tables").classList.remove("dragging");
+
+  if (!isDragging) return;
+  isDragging = false;
+
+  const tbody = document.querySelector("#selected-tables-table tbody");
+
+  const dropInsideTable = tbody.contains(e.target);
+  if (!dropInsideTable) {
+    selectedIndex = startIndex;
+    renderSelectedTables();
+    return;
+  }
+
+  const rows = [...tbody.children];
+  const newOrder = [];
+
+  for (let row of rows) {
+    const code = row.dataset.code;
+    const item = selectedTableDataMap.get(code);
+    if (item) newOrder.push([code, item]);
+  }
+
+  selectedIndex = rows.indexOf(draggingEl);
+
+  selectedTableDataMap = new Map(newOrder);
+  renderSelectedTables();
+
+  draggingEl = null;
+}

@@ -15,14 +15,14 @@
 }
 
 #selected-tables-container {
-  padding: 5px;
+  /* padding: 5px; */
   padding-bottom: 60px;
   grid-area: selected;
 }
 
 #edit-metadata-container {
   grid-area: metadata;
-  background-color: #eee;
+  background-color: #ddd;
   min-height: 100vh;
   padding: 5px;
   padding-bottom: 60px;
@@ -51,4 +51,41 @@
 
 .hidden {
   display: none;
+}
+
+/* Prevent selection */
+table,
+th,
+td {
+  user-select: none;
+}
+
+#selected-tables a {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  /* margin-top: 20px; */
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+.saved td{
+  background-color: #FFF4F2;
+}
+
+.fetch-dataset {
+  cursor: pointer;
+}
+
+.selected-row td.fetch-dataset, .selected-row td.actions{
+  background-color: #ddd;
+  border-right-color: #ddd;
 }

@@ -60,7 +60,7 @@ li {
 
 #selected-tables-container {
   grid-area: selected;
-  background-color: #eee;
+  background-color: #ddd;
   min-height: 100vh;
   padding: 5px;
   padding-bottom: 60px;
@@ -74,6 +74,55 @@ li {
 #selected-tables-container button {
   cursor: pointer;
 }
+
+#selected-tables.dragging {
+  user-select: none;
+  cursor: grabbing !important;
+}
+table tbody tr.selected-row > td {
+  background-color: #99ccff; /* Stronger specificity */
+}
+
+.saved td{
+  background-color: #FFF4F2;
+}
+
+table tbody tr.dragged > td {
+  background-color: #cce5ff;
+}
+
+/* Prevent selection */
+table,
+th,
+td {
+  user-select: none;
+}
+
+#selected-tables a {
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+}
+
+tr.dragged {
+  background-color: #99ccff !important;
+}
+
+tr.selected-row {
+  background-color: #99ccff !important;
+}
+
 
 #main-container {
   display: grid;

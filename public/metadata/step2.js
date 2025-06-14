@@ -45,7 +45,7 @@ function getEurostatFormatCurrentTime() {
   const min = pad(date.getMinutes());
   const ss = pad(date.getSeconds());
 
-  // Get timezone offset in minutes and convert to ±HHMM
+  // Get timezone offset in minutes and convert to HHMM
   const tzOffset = -date.getTimezoneOffset(); // invert sign
   const tzSign = tzOffset >= 0 ? "+" : "-";
   const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));
@@ -57,117 +57,120 @@ function getEurostatFormatCurrentTime() {
 }
 
 function renderSelectedTables() {
-  const container = document.getElementById("selected-tables-container");
-  // Remove old items but keep the heading
-  container.querySelectorAll("p").forEach((el) => el.remove());
+  const tbody = document.querySelector("#selected-tables-table tbody");
+  if (!tbody) return;
+  tbody.innerHTML = "";
 
-  selectedTableDataMap.keys().forEach((code) => {
-    const node = selectedTableDataMap.get(code);
-    const p = document.createElement("p");
+  const data = [...selectedTableDataMap.values()];
 
-    const text = document.createElement("span");
-    text.textContent = `${node.title} (${node.code})`;
-    text.style.cursor = "pointer";
+  data.forEach((node, index) => {
+    const tr = document.createElement("tr");
+
     if (node.isSaved) {
-      text.style.color = "red";
+      tr.classList.add("saved");
     }
-    p.appendChild(text);
 
-    // Eurostat link icon
-    const linkIcon = document.createElement("a");
-    linkIcon.href = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/`;
-    linkIcon.target = "_blank";
-    linkIcon.style.marginLeft = "10px";
-    linkIcon.style.textDecoration = "none";
-    linkIcon.textContent = "🔗"; // Use icon font or emoji
-    p.appendChild(linkIcon);
+    const eurostatLink = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/default/table?lang=en`;
+
+    tr.innerHTML = `
+      <td>${index + 1}</td>
+      <td class="fetch-dataset">${node.title} (${node.code})</td>
+      <td class="actions"><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
+    `;
+    // Fetch logic
+    tr.querySelector("td.fetch-dataset").addEventListener(
+      "click",
+      async (e) => {
+        // update stuff
+        tbody
+          .querySelectorAll("tr.selected-row")
+          .forEach((r) => r.classList.remove("selected-row"));
+
+        e?.target?.parentElement.classList.add("selected-row");
+
+        if (currentEditingCode) {
+          const saved = saveCurrentMetadata();
+          if (!saved) {
+            alert("Please fix errors before switching tables.");
+            return;
+          }
+        }
+
+        if (node.isSaved && !metadataFetchMap[node.code]) {
+          console.log("isSaved");
+          // TODO: maybe don't fetch again?
+          // Have to account for changes in the data structure at Eurostat
+          const res = await fetchMetadata(node);
+          if (res.message) {
+            return;
+          }
+          // Default selections if not manually configured
+          const result = {
+            label: res.label,
+            title: res.label,
+            code: node.code,
+            updated: res.updated,
+            description: res.extension?.description,
+            dimension: res.dimension,
+            dimensionPrefs: res.dimension,
+          };
+
+          // Attach user preferences
+          if (node.dimensionPrefs) {
+            result.dimensionPrefs = node.dimensionPrefs;
+          }
+
+          metadataFetchMap[node.code] = result;
+          selectedTableDataMap.set(node.code, result);
+          parseMetadata(node.code, result);
+        } else if (metadataFetchMap[node.code]) {
+          parseMetadata(node.code, metadataFetchMap[node.code]);
+        } else {
+          const res = await fetchMetadata(node);
+          if (res.message) {
+            return;
+          }
+          // Default selections if not manually configured
+          const result = {
+            label: res.label,
+            title: res.label,
+            code: node.code,
+            updated: res.updated,
+            description: res.extension?.description,
+            dimension: res.dimension,
+            dimensionPrefs: res.dimension,
+          };
+
+          metadataFetchMap[node.code] = result;
+          selectedTableDataMap.set(node.code, result);
+          parseMetadata(node.code, result);
+        }
+
+        if (!currentEditingCode) {
+          // Show save buttons
+          const saveBtn = document.getElementById("saveBtn");
+          saveBtn.onclick = saveMetadata;
+          saveBtn.classList.remove("hidden");
+
+          const saveMapBtn = document.getElementById("saveMapBtn");
+          saveMapBtn.onclick = async () => {
+            await saveMetadata();
+            window.location.href = "/";
+          };
+          saveMapBtn.classList.remove("hidden");
+        }
+        currentEditingCode = node.code;
+      }
+    );
 
     // Remove button
-    const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
-    removeBtn.style.marginLeft = "10px";
-    removeBtn.onclick = () => {
-      selectedTableDataMap.delete(code);
+    tr.querySelector("a.link-remove").addEventListener("click", (e) => {
+      e.stopPropagation();
+      selectedTableDataMap.delete(node.code);
       renderSelectedTables();
-    };
-    p.appendChild(removeBtn);
+    });
 
-    text.onclick = async function () {
-      if (currentEditingCode) {
-        const saved = saveCurrentMetadata();
-        if (!saved) {
-          alert("Please fix errors before switching tables.");
-          return;
-        }
-      }
-
-      if (node.isSaved && !metadataFetchMap[node.code]) {
-        console.log("isSaved");
-        // TODO: maybe don't fetch again?
-        // Have to account for changes in the data structure at Eurostat
-        const res = await fetchMetadata(node);
-        if (res.message) {
-          return;
-        }
-        // Default selections if not manually configured
-        const result = {
-          label: res.label,
-          title: res.label,
-          code: node.code,
-          updated: res.updated,
-          description: res.extension?.description,
-          dimension: res.dimension,
-          dimensionPrefs: res.dimension,
-        };
-
-        // Attach user preferences
-        if (node.dimensionPrefs) {
-          result.dimensionPrefs = node.dimensionPrefs;
-        }
-
-        metadataFetchMap[node.code] = result;
-        selectedTableDataMap.set(node.code, result);
-        parseMetadata(node.code, result);
-      } else if (metadataFetchMap[node.code]) {
-        parseMetadata(node.code, metadataFetchMap[node.code]);
-      } else {
-        const res = await fetchMetadata(node);
-        if (res.message) {
-          return;
-        }
-        // Default selections if not manually configured
-        const result = {
-          label: res.label,
-          title: res.label,
-          code: node.code,
-          updated: res.updated,
-          description: res.extension?.description,
-          dimension: res.dimension,
-          dimensionPrefs: res.dimension,
-        };
-
-        metadataFetchMap[node.code] = result;
-        selectedTableDataMap.set(node.code, result);
-        parseMetadata(node.code, result);
-      }
-
-      if (!currentEditingCode) {
-        // Show save buttons
-        const saveBtn = document.getElementById("saveBtn");
-        saveBtn.onclick = saveMetadata;
-        saveBtn.classList.remove("hidden");
-
-        const saveMapBtn = document.getElementById("saveMapBtn");
-        saveMapBtn.onclick = async () => {
-          await saveMetadata();
-          window.location.href = "/";
-        };
-        saveMapBtn.classList.remove("hidden");
-      }
-      currentEditingCode = node.code;
-    };
-
-    container.appendChild(p);
+    tbody.appendChild(tr);
   });
 }
 
@@ -231,9 +234,7 @@ function saveCurrentMetadata() {
       .filter((c) => c.checked)
       .map((c) => c.value);
 
-    const isRequired = key !== "time";
-
-    if (isRequired && selected.length === 0) {
+    if (selected.length === 0) {
       errors.push(`Please select at least one value for ${key}`);
     } else if (selected.length > 0) {
       const dimensionData = metadata.dimension[key];
@@ -294,9 +295,7 @@ function parseMetadata(code, data) {
     toggle.style.cursor = "pointer";
 
     const inner = document.createElement("div");
-    inner.style.display =
-      // key === "time" || Object.values(dim.category?.index).length > 10
-      key === "time" ? "none" : "block";
+    inner.style.display = "block";
     inner.style.paddingLeft = "15px";
 
     toggle.onclick = () => {
@@ -321,10 +320,10 @@ function parseMetadata(code, data) {
       checkbox.id = `${key}_${cat}`;
       checkbox.checked = selectedItems ? selectedItems.includes(cat) : true;
 
-      // time always checked and disabled
+      // time always checked
       if (key === "time" || Object.values(dim.category?.index).length === 1) {
         checkbox.checked = true;
-        checkbox.disabled = true;
+        // checkbox.disabled = true;
       }
 
       const label = document.createElement("label");
@@ -397,6 +396,7 @@ async function saveMetadata() {
       },
       body: JSON.stringify({
         updated: getEurostatFormatCurrentTime(),
+        order: [...selectedTableDataMap.keys()],
         files: metadataFetchMap,
       }),
     });

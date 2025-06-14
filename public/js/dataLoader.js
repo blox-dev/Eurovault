@@ -10,7 +10,7 @@ export function fetchMetadata() {
       state.metadata = data.files; // Store metadata in global variable
       
       // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
-      const datasetKeys = Object.keys(state.metadata);
+      const datasetKeys = data.order || Object.keys(state.metadata);
       
       // For each key, load the corresponding CSV file
       const csvPromises = datasetKeys.map((key) =>
