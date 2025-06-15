@@ -1,6 +1,6 @@
 "use strict";
 
-function parseTime(t) {
+export function parseTime(t) {
   const match = t.match(/^(\d{4})(?:[-_]?([A-Za-z0-9]+))?$/);
   return match
     ? { year: +match[1], suffix: match[2] || "" }

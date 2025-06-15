@@ -75,7 +75,7 @@ export function handleMapPathClick(event, d) {
       state.chartedCountries.size > 1
     ) {
       state.chartedCountries.delete(geoCode);
-    } else {
+    } else if (state.chartedCountries.size < 10){
       state.chartedCountries.add(geoCode);
     }
 

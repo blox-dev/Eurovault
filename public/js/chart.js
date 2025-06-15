@@ -3,7 +3,7 @@
 import { chartContainer, controlsTooltip } from "./main.js";
 import { europe } from "./map.js";
 import { state } from "./state.js";
-import { compareTimes } from "./utils.js";
+import { compareTimes, parseTime } from "./utils.js";
 
 export function showCountryChart(geoCode) {
   chartContainer.html("").attr("data-chart-type", "bar"); // Clear previous chart
@@ -51,10 +51,20 @@ export function showCountryChart(geoCode) {
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
+  const times = countryData.map((d) => d.TIME);
+
+  if (times.length === 1 && times[0]) {
+    // If there is only one time, the chart looks stretched
+    // So we add padding time values
+    const time = parseTime(times[0]);
+    times.unshift(time.suffix ? (time.year - 1) + "-" + time.suffix : "" + (time.year - 1));
+    times.push(time.suffix ? (time.year + 1) + "-" + time.suffix : "" + (time.year + 1));
+  }
+
   // Scales
   const x = d3
     .scaleBand()
-    .domain(countryData.map((d) => d.TIME))
+    .domain(times)
     .range([0, plotWidth])
     .padding(0.1);
 
@@ -216,8 +226,16 @@ export function showLineChart(countries) {
 
   const times = Array.from(allTimes).sort(compareTimes);
 
+  if (times.length === 1 && times[0]) {
+    // If there is only one time, the chart looks stretched
+    // So we add padding time values
+    const time = parseTime(times[0]);
+    times.unshift(time.suffix ? (time.year - 1) + "-" + time.suffix : "" + (time.year - 1));
+    times.push(time.suffix ? (time.year + 1) + "-" + time.suffix : "" + (time.year + 1));
+  }
+
   // Scales
-  const x = d3.scaleBand().domain(times).range([0, plotWidth]).padding(0.1);
+  const x = d3.scalePoint().domain(times).range([0, plotWidth]).padding(0.1);
 
   const y = d3
     .scaleLinear()
@@ -241,7 +259,9 @@ export function showLineChart(countries) {
     .attr("transform", "rotate(-45)")
     .style("text-anchor", "end");
 
-  g.append("g").call(d3.axisLeft(y));
+  g.append("g")
+    .attr("class", "y-axis")
+    .call(d3.axisLeft(y));
 
   // Axis labels
   g.append("text")
@@ -327,14 +347,48 @@ export function showLineChart(countries) {
               tooltip.node().offsetWidth / 2 +
               "px"
           )
-          .style("top", topOffset + margin.top + yPos - 30 + "px"); // 30px above bar
+          .style("top", topOffset + margin.top + yPos - 30 + "px");
       })
       .on("mouseout", function () {
         tooltip.transition().duration(200).style("opacity", 0);
       });
   });
 
-  // Legend
+  let visibleCountries = new Set(countrySeries.map((d) => d.geo));
+
+  function updateYScale() {
+    const visibleSeries = countrySeries.filter((d) =>
+      visibleCountries.has(d.geo)
+    );
+
+    const newYDomain = [
+      d3.min(visibleSeries, (c) => d3.min(c.values, (d) => d.value)) || 0,
+      d3.max(visibleSeries, (c) => d3.max(c.values, (d) => d.value)) || 1,
+    ];
+
+    y.domain(newYDomain).nice();
+
+    g.select(".y-axis")
+      .transition()
+      .duration(500)
+      .call(d3.axisLeft(y));
+
+    g.selectAll("path[data-country]")
+      .transition()
+      .duration(500)
+      .attr("d", (d) => line(d.values))
+      .style("display", (d) => (visibleCountries.has(d.geo) ? null : "none"));
+
+    g.selectAll("circle[data-country]")
+      .transition()
+      .duration(500)
+      .attr("cy", (d) => y(d.value))
+      .style("display", function () {
+        const geo = d3.select(this).attr("data-country");
+        return visibleCountries.has(geo) ? null : "none";
+      });
+  }
+
   const legend = svg
     .append("g")
     .attr(
@@ -363,18 +417,28 @@ export function showLineChart(countries) {
 
     group.on("click", function (e) {
       const elem = d3.select(this);
-      const hidden = !elem.classed("strike");
-      elem.classed("strike", hidden);
       const geoCode = elem.attr("data-country");
-      if (geoCode) {
-        // Hide both the line and the circles
-        chartContainer
-          .selectAll(`path[data-country='${geoCode}']`)
-          .classed("hidden", hidden);
-        chartContainer
-          .selectAll(`circle[data-country='${geoCode}']`)
-          .classed("hidden", hidden);
+
+      const isHidden = elem.classed("strike");
+      elem.classed("strike", !isHidden);
+
+      if (isHidden) {
+        visibleCountries.add(geoCode);
+      } else {
+        visibleCountries.delete(geoCode);
       }
+
+      chartContainer
+        .selectAll(`path[data-country='${geoCode}']`)
+        .classed("hidden", !visibleCountries.has(geoCode));
+        // .style("display", visibleCountries.has(geoCode) ? null : "none");
+
+      chartContainer
+        .selectAll(`circle[data-country='${geoCode}']`)
+        .classed("hidden", !visibleCountries.has(geoCode));
+        // .style("display", visibleCountries.has(geoCode) ? null : "none");
+
+      updateYScale();
     });
   });
 }
