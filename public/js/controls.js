@@ -222,15 +222,8 @@ function updateMapColors(updateSource = null, selectedTime = null) {
 
   // console.log("updateSource", updateSource);
 
-  // 1. Check if TIME column exists
-  const hasTime =
-    state.filteredData.length > 0 && "TIME" in state.filteredData[0];
-
-  let times = [];
-  if (hasTime) {
-    times = [...new Set(state.filteredData.map((d) => d.TIME))];
-    times.sort(compareTimes);
-  }
+  let times = [...new Set(state.filteredData.map((d) => d.TIME))];
+  times.sort(compareTimes);
   state.times = times;
 
   // Update the time to be selected based on updateSource and timeMatchLevel
@@ -251,7 +244,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     state.filteredData.forEach((row) => {
       const geo = row.GEO;
       if (!geo) return;
-      if (!hasTime || row.TIME === selectedTime) {
+      if (row.TIME === selectedTime) {
         const val = parseFloat(row.VALUE);
         valuesByGeo[geo] = val;
       }
@@ -343,6 +336,13 @@ function updateMapColors(updateSource = null, selectedTime = null) {
 
   // 7. Update color legend
   const legend = d3.select("#color-legend").html("");
+
+  if(!state.filteredData.length) {
+    // No reason to display data-specific information
+    // When there is no data
+    return;
+  }
+
   const thresholds = scale.quantiles();
   const unit = shorten(state.ylabel) || "";
 
@@ -392,7 +392,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
   let sliderContainer = d3.select("#time-slider-container");
   sliderContainer.html(""); // Clear existing content
 
-  if (hasTime) {
+  if (times.length > 1) {
     const selectedIndex = times.indexOf(selectedTime);
 
     sliderContainer

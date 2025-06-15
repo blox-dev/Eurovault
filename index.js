@@ -345,26 +345,32 @@ async function updateDatabase(metaData) {
 }
 
 function JSON2CSV(data) {
-    const importantCols = data.id.filter((_, i) => data.size[i] > 1).reverse();
-    const importantSizes = data.size.filter(size => size > 1).reverse();
+    const alwaysInclude = ['time'];
 
-    const dimensionLabels = Object.entries(data.dimension)
-        .filter(([k]) => importantCols.includes(k))
-        .map(([k, v]) => Object.keys(v.category.label))
-        .reverse();
+    const includedDimensions = data.id.filter((dim, i) => data.size[i] > 1 || alwaysInclude.includes(dim));
 
-    let csv = importantCols.map(c => c.toUpperCase()).join(',') + ',VALUE\n';
+    const dimensionInfo = includedDimensions.map(dim => ({
+        name: dim,
+        size: data.size[data.id.indexOf(dim)],
+        labels: Object.keys(data.dimension[dim].category.label)
+    }));
 
-    for (const [indexStr, value] of Object.entries(data.value)) {
-        let index = parseInt(indexStr);
-        let labels = [];
+    const header = includedDimensions.map(dim => dim.toUpperCase()).join(',') + ',VALUE\n';
+    let csv = header;
 
-        importantSizes.forEach(size => {
-            labels.push(index % size);
-            index = Math.floor(index / size);
-        });
+    for (const [flatIndexStr, value] of Object.entries(data.value)) {
+        let flatIndex = parseInt(flatIndexStr, 10);
+        const labelIndices = [];
 
-        labels = labels.map((labelIndex, i) => dimensionLabels[i][labelIndex]);
+        // Convert flat index to multidimensional index (reverse order)
+        for (let i = dimensionInfo.length - 1; i >= 0; i--) {
+            const { size } = dimensionInfo[i];
+            labelIndices.unshift(flatIndex % size);
+            flatIndex = Math.floor(flatIndex / size);
+        }
+
+        const labels = labelIndices.map((idx, i) => dimensionInfo[i].labels[idx]);
+
         csv += [...labels, value].join(',') + '\n';
     }
 
