@@ -112,13 +112,8 @@ function renderSelectedTables() {
             updated: res.updated,
             description: res.extension?.description,
             dimension: res.dimension,
-            dimensionPrefs: res.dimension,
+            dimensionPrefs: node.dimensionPrefs || res.dimension,
           };
-
-          // Attach user preferences
-          if (node.dimensionPrefs) {
-            result.dimensionPrefs = node.dimensionPrefs;
-          }
 
           metadataFetchMap[node.code] = result;
           selectedTableDataMap.set(node.code, result);
@@ -154,8 +149,8 @@ function renderSelectedTables() {
 
           const saveMapBtn = document.getElementById("saveMapBtn");
           saveMapBtn.onclick = async () => {
-            await saveMetadata();
-            window.location.href = "/";
+            const success = await saveMetadata();
+            if (success) window.location.href = "/";
           };
           saveMapBtn.classList.remove("hidden");
         }
@@ -191,6 +186,33 @@ async function fetchWithRetry(url, options = {}, retries = 3, delay = 2000) {
   }
 }
 
+function deepEqual(object1, object2) {
+  const keys1 = Object.keys(object1);
+  const keys2 = Object.keys(object2);
+
+  if (keys1.length !== keys2.length) {
+    return false;
+  }
+
+  for (const key of keys1) {
+    const val1 = object1[key];
+    const val2 = object2[key];
+    const areObjects = isObject(val1) && isObject(val2);
+    if (
+      (areObjects && !deepEqual(val1, val2)) ||
+      (!areObjects && val1 !== val2)
+    ) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isObject(object) {
+  return object != null && typeof object === "object";
+}
+
 async function fetchMetadata(node) {
   // Fetch only metadata, no values
   console.log("Fetch");
@@ -214,12 +236,6 @@ function saveCurrentMetadata() {
   const form = container.querySelector("div");
   if (!form || !metadata) return true;
 
-  // const result = {
-  //   label: metadata.label,
-  //   updated: metadata.updated,
-  //   description: metadata.extension?.description,
-  //   dimension: {},
-  // };
   let dimensionPrefs = {};
 
   const errors = [];
@@ -262,7 +278,16 @@ function saveCurrentMetadata() {
     return false;
   }
 
-  metadataFetchMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
+  if (
+    !deepEqual(
+      metadataFetchMap[currentEditingCode].dimensionPrefs,
+      dimensionPrefs
+    )
+  ) {
+    // Flag for file reset when saving
+    metadataFetchMap[currentEditingCode].hasChanges = true;
+    metadataFetchMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
+  }
 
   const node = selectedTableDataMap.get(currentEditingCode);
   node.dimensionPrefs = dimensionPrefs;
@@ -271,8 +296,6 @@ function saveCurrentMetadata() {
 }
 
 function parseMetadata(code, data) {
-  // console.log(code);
-  // console.log(data);
   const container = document.getElementById("edit-metadata-container");
   container.innerHTML = `<h2>Edit Metadata</h2>`; // Clear previous content
 
@@ -356,7 +379,7 @@ async function saveMetadata() {
   // Fetch missing metadata if needed (all selected tables)
   const fetchPromises = [];
   for (const code of selectedTableDataMap.keys()) {
-    if (!metadataFetchMap[code]) {
+    if (!metadataFetchMap[code] || metadataFetchMap[code].hasChanges) {
       fetchPromises.push(
         fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
           .then((data) => {
@@ -366,8 +389,12 @@ async function saveMetadata() {
               updated: data.updated,
               description: data.extension?.description,
               dimension: data.dimension,
-              dimensionPrefs: data.dimension,
+              dimensionPrefs: (metadataFetchMap[code] && metadataFetchMap[code].dimensionPrefs) || data.dimension,
             };
+
+            if (Object.keys(result.dimensionPrefs).includes("geo")) {
+              delete result.dimensionPrefs.geo;
+            }
 
             metadataFetchMap[code] = result;
             selectedTableDataMap.set(code, result);
@@ -405,8 +432,10 @@ async function saveMetadata() {
 
     const msg = await res.text();
     console.log(msg);
+    return true;
   } catch (err) {
     console.error(`Error: ${err.message}`);
+    return false;
   }
 }
 

@@ -147,27 +147,9 @@ app.get('/', async (req, res) => {
         const data = await fs.promises.readFile(metadataPath, 'utf-8');
         const metaData = JSON.parse(data);
 
-        // metadata.updated, metadata.files[x].updated - when did we last update the data from eurostat
-        // metadata.fetched  - when did we last download the data from eurostat
-        // if 30 days passed since last metadata update or the files were never fetched, trigger update
-
-        let needsUpdate = false;
-
-        if (!metaData.fetched) {
-            needsUpdate = true;
-        } else {
-            const timestamp = Date.parse(metaData.fetched) + (30 * 24 * 60 * 60 * 1000);
-            //                                                day hour  min  sec  msec
-            if (timestamp < Date.parse(metaData.updated)) {
-                needsUpdate = true;
-            } 
-        }
-
         buildUrls(metaData.files);
 
-        if (needsUpdate) {
-            await updateDatabase(metaData); // will write metadata2.json back with new fetched
-        }
+        await updateDatabase(metaData); // may overwrite metadata2.json
         
         res.sendFile(INDEX_PATH);
     } catch (error) {
@@ -272,36 +254,29 @@ function getEurostatFormatCurrentTime() {
   return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
 }
 
+function moreThan30DaysApart (dateString1, dateString2) {
+    const date1 = Date.parse(dateString1);
+    const date2 = Date.parse(dateString2);
+
+    return Math.abs(date1 - date2) > (30 * 24 * 60 * 60 * 1000);
+    //                      day  hour min  sec  msec
+}
+
 async function updateDatabase(metaData) {
-    // metadata.updated, metadata.files[x].updated - when did we last update the data from eurostat
-    // metadata.fetched  - when did we last download the data from eurostat
-
-    // if 30 days passed since last metadata update or files never fetched, trigger update
-    let needsUpdate = false;
-
-    if (!metaData.fetched) {
-        needsUpdate = true;
-    } else {
-        const timestamp = Date.parse(metaData.fetched) + (30 * 24 * 60 * 60 * 1000);
-        //                                                day hour  min  sec  msec
-        if (timestamp < Date.parse(metaData.updated)) {
-            needsUpdate = true;
-        } 
-    }
-
-    if (!needsUpdate) {
-        console.log("NO DB UPDATE");
-        return;
-    }
-
-    console.log("START DB UPDATE");
+    console.log(`[${new Date().toLocaleTimeString()}] START DB UPDATE`);
 
     const files = metaData.files;
 
     let currentTime = getEurostatFormatCurrentTime();
     
-    const promises = Object.entries(files).map(([fileName, file]) =>
-        fetch(file.url)
+    const promises = Object.entries(files).map(([fileName, file]) => {
+        // metadata.updated, file.updated - when did we last update the data from eurostat
+        // metadata.fetched, file.fetched  - when did we last download the data from eurostat
+        // if we never downloaded data or 30 days passed since last download, trigger update
+        if (file.fetched && !moreThan30DaysApart(currentTime, file.fetched)) {
+            return {filename: fileName, message: "No update", reason: "Fresh" };
+        }
+        return fetch(file.url)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {
@@ -313,9 +288,9 @@ async function updateDatabase(metaData) {
             })
             .catch(err => {
                 console.error(err);
-                return { error: err };
+                return { filename: fileName, message: "Failed to fetch", reason: err };
             })
-    );
+    });
 
     const results = await Promise.all(promises);
 
@@ -341,7 +316,7 @@ async function updateDatabase(metaData) {
     await fs.promises.writeFile(metadataPath, JSON.stringify(metaData, null, 2));
     console.log("Updated metadata2.json");
 
-    console.log("END DB UPDATE");
+    console.log(`[${new Date().toLocaleTimeString()}] END DB UPDATE`);
 }
 
 function JSON2CSV(data) {
