@@ -64,6 +64,7 @@ export function setupControls(datasetKeys, updateSource = null) {
 
       const label = document.createElement("label");
       label.textContent = values[param].label;
+      label.htmlFor = `filter-${param}`;
 
       const select = document.createElement("select");
       select.id = `filter-${param}`;
