@@ -10,8 +10,8 @@ export function showCountryChart(geoCode) {
   controlsTooltip.classed("hidden", true);
   
   const countryName = europe.features.find(
-    (f) => f.properties.EUROSTAT === geoCode
-  ).properties.ADMIN;
+    (f) => f.properties.CNTR_ID === geoCode
+  ).properties.NAME_ENGL;
 
   const svg = chartContainer
     .append("svg")
@@ -218,8 +218,8 @@ export function showLineChart(countries) {
 
     countrySeries.push({
       geo,
-      name: europe.features.find((f) => f.properties.EUROSTAT === geo)
-        .properties.ADMIN,
+      name: europe.features.find((f) => f.properties.CNTR_ID === geo)
+        .properties.NAME_ENGL,
       values: rows,
     });
   });

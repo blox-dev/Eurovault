@@ -30,7 +30,7 @@ export function fetchMapData() {
   projection = d3.geoMercator();
   pathGenerator = d3.geoPath().projection(projection);
 
-  fetch("/public/europe.geojson")
+  fetch("/public/geojson/CNTR_RG_60M_2024_4326_min.geojson")
     .then((res) => res.json())
     .then((geoJSON) => {
       europe = geoJSON;
@@ -54,8 +54,8 @@ export function fetchMapData() {
           .zoom()
           .scaleExtent([1, 10])
           .translateExtent([
-            [-100, -100],
-            [width + 100, height + 100],
+            [-200, -200],
+            [width + 200, height + 200],
           ])
           .on("zoom", (event) => g.attr("transform", event.transform))
       );
@@ -67,7 +67,7 @@ export function fetchMapData() {
 }
 
 export function handleMapPathClick(event, d) {
-  const geoCode = d.properties.EUROSTAT;
+  const geoCode = d.properties.CNTR_ID;
 
   if (event.shiftKey) {
     if (

@@ -267,7 +267,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
         console.error(d, this);
         return;
       }
-      const geoCode = d.properties.EUROSTAT;
+      const geoCode = d.properties.CNTR_ID;
       const val = valuesByGeo[geoCode] ?? 0;
 
       if (val === 0 || isNaN(val)) return "#cccccc"; // Grey for 0/missing
@@ -278,8 +278,8 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     .selectAll("path")
     .on("mouseover", function (event, d) {
       d3.select(this).raise().style("stroke-width", 0.5);
-      const geoCode = d.properties.EUROSTAT;
-      const countryName = d.properties.ADMIN;
+      const geoCode = d.properties.CNTR_ID;
+      const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
       const tooltip = d3.select("#map-tooltip");
@@ -289,8 +289,8 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     })
     .on("touchstart", function (event, d) {
       d3.select(this).raise().style("stroke-width", 0.5);
-      const geoCode = d.properties.EUROSTAT;
-      const countryName = d.properties.ADMIN;
+      const geoCode = d.properties.CNTR_ID;
+      const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
       const tooltip = d3.select("#map-tooltip");
