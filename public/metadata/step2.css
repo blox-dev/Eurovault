@@ -14,7 +14,7 @@
   cursor: pointer;
 }
 
-#selected-tables-container {
+#dataset-container {
   /* padding: 5px; */
   padding-bottom: 60px;
   grid-area: selected;
@@ -33,12 +33,12 @@
   padding: 5px 10px;
 }
 
-#selected-tables-container p {
+#dataset-container p {
   margin: 5px 0;
   display: flex;
   align-items: center;
 }
-#selected-tables-container button {
+#dataset-container button {
   cursor: pointer;
 }
 
@@ -60,7 +60,7 @@ td {
   user-select: none;
 }
 
-#selected-tables a {
+#dataset-table a {
   text-decoration: none;
 }
 

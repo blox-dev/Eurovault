@@ -2,17 +2,17 @@ console.log("localStorage", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
 
-let selectedTableDataMap = new Map();
+let datasetMap = new Map();
 
-if (localStorage && localStorage.selectedTables) {
-  const tables = JSON.parse(localStorage.selectedTables);
-  console.log(tables);
-  for (let i = 0; i < tables.length; i++) {
-    selectedTableDataMap.set(tables[i].code, tables[i]);
+if (localStorage && localStorage.selectedDatasets) {
+  const datasets = JSON.parse(localStorage.selectedDatasets);
+  console.log(datasets);
+  for (let i = 0; i < datasets.length; i++) {
+    datasetMap.set(datasets[i].code, datasets[i]);
   }
 }
 
-console.log("selectedTableDataMap", selectedTableDataMap)
+console.log("datasetMap", datasetMap);
 
 fetch("/data/table_of_contents.xml")
   .then((response) => {
@@ -33,7 +33,7 @@ fetch("/data/table_of_contents.xml")
     );
 
     if (topLevelBranches.length === 0) {
-      document.getElementById("treeContainer").textContent =
+      document.getElementById("table-of-contents").textContent =
         "No top-level branches found.";
       return;
     }
@@ -64,28 +64,28 @@ fetch("/data/table_of_contents.xml")
         console.log(data.order.length);
 
         for (let file of data.order) {
-          // Set flag on metadata tables
+          // Set flag on datasets
           data.files[file].isSaved = true;
           
           data.files[file].title = data.files[file].label;
           data.files[file].code = file;
 
-          selectedTableDataMap.set(file, data.files[file]);
+          datasetMap.set(file, data.files[file]);
         }
 
-        renderSelectedTables();
+        renderDatasets();
         document.getElementById("nextBtn").classList.remove("hidden");
       });
 
   })
   .catch((err) => {
-    document.getElementById("treeContainer").textContent =
+    document.getElementById("table-of-contents").textContent =
       "Error loading tree: " + err.message;
     console.error(err);
   });
 
 function renderTree(treeData) {
-  const container = document.getElementById("treeContainer");
+  const container = document.getElementById("table-of-contents");
   container.innerHTML = "";
   const tree = buildTreeHTML(treeData);
   if (!tree.children.length) {
@@ -112,7 +112,7 @@ function parseBranch(branchNode) {
       if (node.nodeType !== 1) continue;
 
       // Currently eurovault can only display country-level data, not regional
-      // TODO: maybe some tables are slipping through this selection
+      // TODO: maybe some datasets are slipping through this selection
       // https://ec.europa.eu/eurostat/web/nuts/overview
       const title = getTagValue(node, "title", "(untitled)");
       if (title.includes("NUTS")) continue;
@@ -191,9 +191,9 @@ function buildTreeHTML(nodes) {
       span.classList.add("leaf");
 
       span.onclick = () => {
-        if (!selectedTableDataMap.has(node.code)) {
-          selectedTableDataMap.set(node.code, node);
-          renderSelectedTables();
+        if (!datasetMap.has(node.code)) {
+          datasetMap.set(node.code, node);
+          renderDatasets();
         }
       };
       li.appendChild(span);
@@ -222,7 +222,7 @@ function autoExpandIfSingle(folderLi) {
 }
 
 function searchTreeDOM(term) {
-  const rootUl = document.getElementById("treeContainer").querySelector("ul");
+  const rootUl = document.getElementById("table-of-contents").querySelector("ul");
   if (!rootUl) return;
 
   const found = searchAndToggle(rootUl, term.toLowerCase());
@@ -280,8 +280,8 @@ document.getElementById("searchBox").addEventListener("input", (e) => {
 document.getElementById("nextBtn").onclick = () => {
   // Save data to localStorage
   localStorage.setItem(
-    "selectedTables",
-    JSON.stringify([...selectedTableDataMap.values()])
+    "selectedDatasets",
+    JSON.stringify([...datasetMap.values()])
   );
   localStorage.setItem("step", "2");
   window.location.reload(); // reload index.html and load step2
@@ -291,19 +291,19 @@ document.getElementById("backBtn").onclick = () => {
   window.location.href = "/"; // go to map
 };
 
-// Table logic
+// Dataset table logic
 
 let draggingEl = null;
 let startIndex = null;
 let isDragging = false;
 let selectedIndex = null;
 
-function renderSelectedTables() {
-  const tbody = document.querySelector("#selected-tables-table tbody");
+function renderDatasets() {
+  const tbody = document.querySelector("#dataset-table tbody");
   if (!tbody) return;
   tbody.innerHTML = "";
 
-  const data = [...selectedTableDataMap.values()];
+  const data = [...datasetMap.values()];
 
   data.forEach((item, index) => {
     const tr = document.createElement("tr");
@@ -331,8 +331,8 @@ function renderSelectedTables() {
     // Remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
       e.stopPropagation();
-      selectedTableDataMap.delete(item.code);
-      renderSelectedTables();
+      datasetMap.delete(item.code);
+      renderDatasets();
     });
 
     tbody.appendChild(tr);
@@ -345,7 +345,7 @@ function addDragEvents(row) {
 
     // Remove .selected-row from all rows
 
-  const tbody = document.querySelector("#selected-tables-table tbody");
+  const tbody = document.querySelector("#dataset-table tbody");
     tbody
       .querySelectorAll("tr.selected-row")
       .forEach((r) => r.classList.remove("selected-row"));
@@ -354,7 +354,7 @@ function addDragEvents(row) {
     startIndex = [...row.parentNode.children].indexOf(row);
     draggingEl.classList.add("dragged");
     isDragging = true;
-    document.querySelector("#selected-tables").classList.add("dragging");
+    document.querySelector("#dataset-table").classList.add("dragging");
 
     document.addEventListener("mousemove", onMouseMove);
     document.addEventListener("mouseup", onMouseUp);
@@ -362,7 +362,7 @@ function addDragEvents(row) {
 }
 
 function onMouseMove(e) {
-  const tbody = document.querySelector("#selected-tables-table tbody");
+  const tbody = document.querySelector("#dataset-table tbody");
   if (!draggingEl) return;
 
   const mouseY = e.clientY;
@@ -389,17 +389,17 @@ function onMouseMove(e) {
 function onMouseUp(e) {
   document.removeEventListener("mousemove", onMouseMove);
   document.removeEventListener("mouseup", onMouseUp);
-  document.querySelector("#selected-tables").classList.remove("dragging");
+  document.querySelector("#dataset-table").classList.remove("dragging");
 
   if (!isDragging) return;
   isDragging = false;
 
-  const tbody = document.querySelector("#selected-tables-table tbody");
+  const tbody = document.querySelector("#dataset-table tbody");
 
   const dropInsideTable = tbody.contains(e.target);
   if (!dropInsideTable) {
     selectedIndex = startIndex;
-    renderSelectedTables();
+    renderDatasets();
     return;
   }
 
@@ -408,14 +408,14 @@ function onMouseUp(e) {
 
   for (let row of rows) {
     const code = row.dataset.code;
-    const item = selectedTableDataMap.get(code);
+    const item = datasetMap.get(code);
     if (item) newOrder.push([code, item]);
   }
 
   selectedIndex = rows.indexOf(draggingEl);
 
-  selectedTableDataMap = new Map(newOrder);
-  renderSelectedTables();
+  datasetMap = new Map(newOrder);
+  renderDatasets();
 
   draggingEl = null;
 }

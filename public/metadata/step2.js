@@ -1,17 +1,16 @@
 console.log("localStorage:", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
-const BASE_URL =
-  "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
-const metadataFetchMap = {};
+const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
+const metadataMap = {};
 
-let selectedTableDataMap = new Map();
-let currentEditingCode = null; // Track currently editing table
+let datasetMap = new Map();
+let currentEditingCode = null; // Track currently editing dataset
 
 if (localStorage) {
   if (
     !(
-      localStorage.selectedTables &&
+      localStorage.selectedDatasets &&
       localStorage.step &&
       localStorage.step === "2"
     )
@@ -20,18 +19,18 @@ if (localStorage) {
     localStorage.setItem("step", "1");
     window.location.reload(); // reload index.html and load step1
   }
-  const tables = JSON.parse(localStorage.selectedTables);
-  console.log(tables);
-  for (let i = 0; i < tables.length; i++) {
-    selectedTableDataMap.set(tables[i].code, tables[i]);
-    // TODO: put dimensionPrefs from saved nodes directly into metadataFetchMap on step load
-    if (tables[i].isSaved) {
-      metadataFetchMap[tables[i].code] = tables[i];
+  const datasets = JSON.parse(localStorage.selectedDatasets);
+  console.log(datasets);
+  for (let i = 0; i < datasets.length; i++) {
+    datasetMap.set(datasets[i].code, datasets[i]);
+    // TODO: put dimensionPrefs from saved nodes directly into metadataMap on step load
+    if (datasets[i].isSaved) {
+      metadataMap[datasets[i].code] = datasets[i];
     }
   }
 }
 
-console.log("selectedTableDataMap", selectedTableDataMap);
+console.log("datasetMap", datasetMap);
 
 function getEurostatFormatCurrentTime() {
   const date = new Date();
@@ -56,12 +55,12 @@ function getEurostatFormatCurrentTime() {
   return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
 }
 
-function renderSelectedTables() {
-  const tbody = document.querySelector("#selected-tables-table tbody");
+function renderDatasets() {
+  const tbody = document.querySelector("#dataset-table tbody");
   if (!tbody) return;
   tbody.innerHTML = "";
 
-  const data = [...selectedTableDataMap.values()];
+  const data = [...datasetMap.values()];
 
   data.forEach((node, index) => {
     const tr = document.createElement("tr");
@@ -91,12 +90,12 @@ function renderSelectedTables() {
         if (currentEditingCode) {
           const saved = saveCurrentMetadata();
           if (!saved) {
-            alert("Please fix errors before switching tables.");
+            alert("Please fix errors before switching datasets.");
             return;
           }
         }
 
-        if (node.isSaved && !metadataFetchMap[node.code]) {
+        if (node.isSaved && !metadataMap[node.code]) {
           console.log("isSaved");
           // TODO: maybe don't fetch again?
           // Have to account for changes in the data structure at Eurostat
@@ -115,11 +114,11 @@ function renderSelectedTables() {
             dimensionPrefs: node.dimensionPrefs || res.dimension,
           };
 
-          metadataFetchMap[node.code] = result;
-          selectedTableDataMap.set(node.code, result);
+          metadataMap[node.code] = result;
+          datasetMap.set(node.code, result);
           parseMetadata(node.code, result);
-        } else if (metadataFetchMap[node.code]) {
-          parseMetadata(node.code, metadataFetchMap[node.code]);
+        } else if (metadataMap[node.code]) {
+          parseMetadata(node.code, metadataMap[node.code]);
         } else {
           const res = await fetchMetadata(node);
           if (res.message) {
@@ -136,8 +135,8 @@ function renderSelectedTables() {
             dimensionPrefs: res.dimension,
           };
 
-          metadataFetchMap[node.code] = result;
-          selectedTableDataMap.set(node.code, result);
+          metadataMap[node.code] = result;
+          datasetMap.set(node.code, result);
           parseMetadata(node.code, result);
         }
 
@@ -161,8 +160,8 @@ function renderSelectedTables() {
     // Remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
       e.stopPropagation();
-      selectedTableDataMap.delete(node.code);
-      renderSelectedTables();
+      datasetMap.delete(node.code);
+      renderDatasets();
     });
 
     tbody.appendChild(tr);
@@ -231,7 +230,7 @@ async function fetchMetadata(node) {
 function saveCurrentMetadata() {
   if (!currentEditingCode) return true;
 
-  const metadata = metadataFetchMap[currentEditingCode];
+  const metadata = metadataMap[currentEditingCode];
   const container = document.getElementById("edit-metadata-container");
   const form = container.querySelector("div");
   if (!form || !metadata) return true;
@@ -280,18 +279,18 @@ function saveCurrentMetadata() {
 
   if (
     !deepEqual(
-      metadataFetchMap[currentEditingCode].dimensionPrefs,
+      metadataMap[currentEditingCode].dimensionPrefs,
       dimensionPrefs
     )
   ) {
     // Flag for file reset when saving
-    metadataFetchMap[currentEditingCode].hasChanges = true;
-    metadataFetchMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
+    metadataMap[currentEditingCode].hasChanges = true;
+    metadataMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
   }
 
-  const node = selectedTableDataMap.get(currentEditingCode);
+  const node = datasetMap.get(currentEditingCode);
   node.dimensionPrefs = dimensionPrefs;
-  selectedTableDataMap.set(currentEditingCode, node);
+  datasetMap.set(currentEditingCode, node);
   return true;
 }
 
@@ -329,8 +328,8 @@ function parseMetadata(code, data) {
     const labels = dim.category?.label || {};
 
     const selectedItems =
-      metadataFetchMap[code] && metadataFetchMap[code].dimensionPrefs
-        ? Object.keys(metadataFetchMap[code].dimensionPrefs[key].category.index)
+      metadataMap[code] && metadataMap[code].dimensionPrefs
+        ? Object.keys(metadataMap[code].dimensionPrefs[key].category.index)
         : null;
 
     // console.log(selectedItems);
@@ -376,10 +375,10 @@ async function saveMetadata() {
     return;
   }
 
-  // Fetch missing metadata if needed (all selected tables)
+  // Fetch missing metadata if needed (all selected datasets)
   const fetchPromises = [];
-  for (const code of selectedTableDataMap.keys()) {
-    if (!metadataFetchMap[code] || metadataFetchMap[code].hasChanges) {
+  for (const code of datasetMap.keys()) {
+    if (!metadataMap[code] || metadataMap[code].hasChanges) {
       fetchPromises.push(
         fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
           .then((data) => {
@@ -389,15 +388,15 @@ async function saveMetadata() {
               updated: data.updated,
               description: data.extension?.description,
               dimension: data.dimension,
-              dimensionPrefs: (metadataFetchMap[code] && metadataFetchMap[code].dimensionPrefs) || data.dimension,
+              dimensionPrefs: (metadataMap[code] && metadataMap[code].dimensionPrefs) || data.dimension,
             };
 
             if (Object.keys(result.dimensionPrefs).includes("geo")) {
               delete result.dimensionPrefs.geo;
             }
 
-            metadataFetchMap[code] = result;
-            selectedTableDataMap.set(code, result);
+            metadataMap[code] = result;
+            datasetMap.set(code, result);
           })
           .catch((err) => {
             console.error(
@@ -411,8 +410,8 @@ async function saveMetadata() {
   await Promise.all(fetchPromises);
 
   localStorage.setItem(
-    "selectedTables",
-    JSON.stringify([...selectedTableDataMap.values()])
+    "selectedDatasets",
+    JSON.stringify([...datasetMap.values()])
   );
 
   try {
@@ -423,8 +422,8 @@ async function saveMetadata() {
       },
       body: JSON.stringify({
         updated: getEurostatFormatCurrentTime(),
-        order: [...selectedTableDataMap.keys()],
-        files: metadataFetchMap,
+        order: [...datasetMap.keys()],
+        files: metadataMap,
       }),
     });
 
@@ -439,13 +438,13 @@ async function saveMetadata() {
   }
 }
 
-renderSelectedTables();
+renderDatasets();
 
 document.getElementById("backBtn").onclick = () => {
   // Save data to localStorage
   localStorage.setItem(
-    "selectedTables",
-    JSON.stringify([...selectedTableDataMap.values()])
+    "selectedDatasets",
+    JSON.stringify([...datasetMap.values()])
   );
   localStorage.setItem("step", "1");
   window.location.reload(); // reload index.html and load step1
