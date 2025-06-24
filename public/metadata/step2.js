@@ -385,6 +385,8 @@ async function saveMetadata() {
             // Default selections if not manually configured
             const result = {
               label: data.label,
+              title: data.label,
+              code: code,
               updated: data.updated,
               description: data.extension?.description,
               dimension: data.dimension,
