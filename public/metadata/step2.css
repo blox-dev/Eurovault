@@ -21,16 +21,62 @@
 }
 
 #edit-metadata-container {
-  grid-area: metadata;
   background-color: #ddd;
-  min-height: 100vh;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   padding-bottom: 60px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#edit-metadata-container h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#edit-metadata-container > div {
+  margin-bottom: 15px;
 }
 
 #edit-metadata-container button {
-  margin-bottom: 5px;
-  padding: 5px 10px;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  padding: 6px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+#edit-metadata-container button:hover {
+  background-color: #ccc;
+}
+
+#edit-metadata-container div > div {
+  margin-left: 15px;
+}
+
+/* Styling each checkbox + label row */
+#edit-metadata-container input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Make entire row clickable */
+#edit-metadata-container label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 4px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#edit-metadata-container label:hover {
+  background-color: #eaeaea;
 }
 
 #dataset-container p {
@@ -88,4 +134,14 @@ td {
 .selected-row td.fetch-dataset, .selected-row td.actions{
   background-color: #ddd;
   border-right-color: #ddd;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                              supported by Chrome, Edge, Opera and Firefox */
 }

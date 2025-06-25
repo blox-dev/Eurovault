@@ -73,7 +73,7 @@ function renderDatasets() {
 
     tr.innerHTML = `
       <td>${index + 1}</td>
-      <td class="fetch-dataset">${node.title} (${node.code})</td>
+      <td class="fetch-dataset" title="Edit metadata">${node.title} (${node.code})</td>
       <td class="actions"><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
     `;
     // Fetch logic
@@ -351,6 +351,7 @@ function parseMetadata(code, data) {
       const label = document.createElement("label");
       label.setAttribute("for", checkbox.id);
       label.textContent = labels[cat] ? `${labels[cat]} (${cat})` : cat;
+      label.classList.add("noselect");
 
       const line = document.createElement("div");
       line.appendChild(checkbox);

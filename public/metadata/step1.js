@@ -316,8 +316,8 @@ function renderDatasets() {
     const eurostatLink = `https://ec.europa.eu/eurostat/databrowser/view/${item.code}/default/table?lang=en`;
 
     tr.innerHTML = `
-      <td>${index + 1}</td>
-      <td>${item.title} (${item.code})</td>
+      <td title="Drag and drop">${index + 1}</td>
+      <td title="Drag and drop">${item.title} (${item.code})</td>
       <td><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
     `;
 
