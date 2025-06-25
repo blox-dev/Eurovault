@@ -21,6 +21,7 @@
 }
 
 #edit-metadata-container {
+  grid-area: metadata;
   background-color: #ddd;
   padding-left: 5px;
   padding-right: 5px;
