@@ -1,26 +1,7 @@
 {
   "updated": "2025-06-14T20:47:17+0300",
-  "order": [
-    "ilc_pw05",
-    "sdg_08_10",
-    "ilc_di03",
-    "earn_ses18_20",
-    "earn_ses18_23",
-    "ei_cphi_m",
-    "teibs030",
-    "lfsa_ergaedn",
-    "educ_uoe_mobs04",
-    "ilc_mddw06",
-    "educ_uoe_fine06",
-    "tipsho20",
-    "nrg_pc_204",
-    "nrg_pc_202",
-    "sdg_09_10",
-    "rd_p_perssci",
-    "ilc_scp03"
-  ],
-  "files": {
-    "ilc_pw05": {
+  "files": [
+    {
       "label": "Overall life satisfaction by level of satisfaction, age and educational attainment",
       "title": "Overall life satisfaction by level of satisfaction, age and educational attainment",
       "code": "ilc_pw05",
@@ -301,7 +282,7 @@
       "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/ilc_pw05?geo=BE&geo=BG&geo=CZ&geo=DK&geo=DE&geo=EE&geo=IE&geo=EL&geo=ES&geo=FR&geo=HR&geo=IT&geo=CY&geo=LV&geo=LT&geo=LU&geo=HU&geo=MT&geo=NL&geo=AT&geo=PL&geo=PT&geo=RO&geo=SI&geo=SK&geo=FI&geo=SE&geo=IS&geo=LI&geo=NO&geo=CH&geo=BA&geo=ME&geo=MD&geo=MK&geo=GE&geo=AL&geo=RS&geo=TR&geo=UA&geo=XK&geo=AM&geo=BY&geo=AZ&geo=UK&format=JSON&lang=EN&freq=A&unit=PC&lev_satis=HIGH&lev_satis=MED&lev_satis=LOW&isced11=TOTAL&isced11=ED0-2&isced11=ED3_4&isced11=ED5-8&life_sat=LIFE&sex=T&sex=M&sex=F&age=Y16-19&age=Y_GE16&age=Y20-24&age=Y25-34&age=Y35-49&age=Y50-64&age=Y65-74&age=Y_GE75&time=2013&time=2018&time=2021&time=2022&time=2023&time=2024",
       "isSaved": true
     },
-    "sdg_08_10": {
+    {
       "label": "Real GDP per capita",
       "updated": "2025-05-23T23:00:00+0200",
       "description": "<p>The indicator is calculated as the ratio of real GDP (GDP adjusted for inflation) to the average population of a specific year, where GDP is expressed in millions and population is expressed in thousands. Real GDP is published without decimals. GDP measures the value of the total final output of goods and services produced by an economy within a certain period of time. It includes goods and services that have markets (or which could have markets) and products which are produced by general government and non-profit institutions. It is a measure of economic activity and is commonly used as a proxy for the development in a country’s material living standards. However, it is not a complete measure of economic welfare. For example, GDP does not include most unpaid household work. Neither does GDP take account of negative effects of economic activity, like environmental degradation.</p>",
@@ -507,7 +488,7 @@
       "title": "Real GDP per capita",
       "code": "sdg_08_10"
     },
-    "ilc_di03": {
+    {
       "label": "Mean and median income by age and sex",
       "updated": "2025-05-23T11:00:00+0200",
       "dimension": {
@@ -844,7 +825,7 @@
       "title": "Mean and median income by age and sex",
       "code": "ilc_di03"
     },
-    "earn_ses18_20": {
+    {
       "label": "Mean monthly earnings by sex, age and economic activity",
       "updated": "2024-01-03T23:00:00+0100",
       "dimension": {
@@ -1193,7 +1174,7 @@
       "title": "Mean monthly earnings by sex, age and economic activity",
       "code": "earn_ses18_20"
     },
-    "earn_ses18_23": {
+    {
       "label": "Mean monthly earnings by sex, economic activity and educational attainment",
       "updated": "2024-01-03T23:00:00+0100",
       "dimension": {
@@ -1538,7 +1519,7 @@
       "title": "Mean monthly earnings by sex, economic activity and educational attainment",
       "code": "earn_ses18_23"
     },
-    "ei_cphi_m": {
+    {
       "label": "Harmonised index of consumer prices - monthly data",
       "updated": "2025-05-19T11:00:00+0200",
       "dimension": {
@@ -3123,7 +3104,7 @@
       "title": "Harmonised index of consumer prices - monthly data",
       "code": "ei_cphi_m"
     },
-    "teibs030": {
+    {
       "label": "Employment expectations indicator",
       "updated": "2025-05-27T11:00:00+0200",
       "description": "<p>The employment expectations indicator (EEI) is a composite indicator produced by the Directorate General for Economic and Financial Affairs (DG ECFIN) of the European Commission. It summarises managers’ employment plans in the four surveyed business sectors (industry, services, retail trade, construction) and thus provides a timely indication of changes in expected dependent employment at Member states, EU and euro area levels. The indicator is constructed as a weighted average of the employment expectations of managers in all four surveyed business sectors. Once the weighted average of all four standardised balance series is computed, the resulting time-series is scaled to have a long-term mean of 100 and a standard deviation of 10. Values greater than 100 indicate that managers’ employment expectations are high by historical standards, while the opposite holds true for values below 100. Assuming approximate normality, the imposed standard deviation of 10 implies that in about 68% of the cases the EEI will be within the range of 90 to 110. Data are seasonally adjusted (SA). Further details on the construction of the EEI can be found in the user <a href=\"https://ec.europa.eu/economy_finance/db_indicators/surveys/documents/methodological_guidelines/bcs_user_guide.pdf\" rel=\"noopener noreferrer\" target=\"_blank\">guide </a>of the Joint Harmonised EU Programme of Business and Consumer Surveys. Source: DG ECFIN</p>",
@@ -3297,7 +3278,7 @@
       "title": "Employment expectations indicator",
       "code": "teibs030"
     },
-    "lfsa_ergaedn": {
+    {
       "label": "Employment rates by sex, age, educational attainment level and citizenship",
       "updated": "2025-04-14T23:00:00+0200",
       "dimension": {
@@ -3678,7 +3659,7 @@
       "title": "Employment rates by sex, age, educational attainment level and citizenship",
       "code": "lfsa_ergaedn"
     },
-    "educ_uoe_mobs04": {
+    {
       "label": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
       "updated": "2025-04-30T23:00:00+0200",
       "dimension": {
@@ -4409,7 +4390,7 @@
       "title": "Distribution of mobile students from abroad enrolled at education level by sex and field of education",
       "code": "educ_uoe_mobs04"
     },
-    "ilc_mddw06": {
+    {
       "label": "Crime, violence or vandalism in the area by degree of urbanisation",
       "updated": "2025-05-26T23:00:00+0200",
       "dimension": {
@@ -4622,7 +4603,7 @@
       "title": "Crime, violence or vandalism in the area by degree of urbanisation",
       "code": "ilc_mddw06"
     },
-    "educ_uoe_fine06": {
+    {
       "label": "Public expenditure on education by education level and programme orientation - as % of GDP",
       "updated": "2024-11-14T23:00:00+0100",
       "dimension": {
@@ -4807,7 +4788,7 @@
       "title": "Public expenditure on education by education level and programme orientation - as % of GDP",
       "code": "educ_uoe_fine06"
     },
-    "tipsho20": {
+    {
       "label": "House price index, nominal - annual data",
       "updated": "2025-04-08T11:00:00+0200",
       "description": "The House price index captures price changes of all residential properties purchased by households (flats, detached houses, terraced houses, etc.), both new and existing, independently of their final use and their previous owners. Only market prices are considered, self-build dwellings are therefore excluded. The land component is included. The data are expressed as annual average index 2015=100, as 3 years % change and annual average rate of change.",
@@ -4993,7 +4974,7 @@
       "title": "House price index, nominal - annual data",
       "code": "tipsho20"
     },
-    "nrg_pc_204": {
+    {
       "label": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
       "updated": "2025-04-27T11:00:00+0200",
       "dimension": {
@@ -5338,7 +5319,7 @@
       "title": "Electricity prices for household consumers - bi-annual data (from 2007 onwards)",
       "code": "nrg_pc_204"
     },
-    "nrg_pc_202": {
+    {
       "label": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
       "updated": "2025-05-21T23:00:00+0200",
       "dimension": {
@@ -5679,7 +5660,7 @@
       "title": "Gas prices for household consumers - bi-annual data (from 2007 onwards)",
       "code": "nrg_pc_202"
     },
-    "sdg_09_10": {
+    {
       "label": "Gross domestic expenditure on R&D by sector",
       "updated": "2025-05-02T11:00:00+0200",
       "description": "<p>The indicator measures gross domestic expenditure on research and development (GERD) as a percentage of the gross domestic product (GDP) — also called R&amp;D intensity. The OECD’s Frascati Manual on collecting R&amp;D data defines research and experimental development as creative and systematic work undertaken in order to increase the stock of knowledge — including knowledge of humankind, culture and society — and to devise new applications of available knowledge.&nbsp;</p>",
@@ -5895,7 +5876,7 @@
       "title": "Gross domestic expenditure on R&D by sector",
       "code": "sdg_09_10"
     },
-    "rd_p_perssci": {
+    {
       "label": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
       "updated": "2025-05-02T11:00:00+0200",
       "dimension": {
@@ -6380,7 +6361,7 @@
       "title": "R&D personnel and researchers by sector of performance, fields of R&D and sex",
       "code": "rd_p_perssci"
     },
-    "ilc_scp03": {
+    {
       "label": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
       "updated": "2024-04-24T23:00:00+0200",
       "dimension": {
@@ -6673,5 +6654,5 @@
       "title": "Persons participating in cultural or sport activities in the last 12 months by sex, age, educational attainment, activity type and frequency",
       "code": "ilc_scp03"
     }
-  }
+  ]
 }

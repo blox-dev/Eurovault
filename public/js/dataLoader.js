@@ -7,11 +7,19 @@ export function fetchMetadata() {
   fetch("/data/metadata2.json")
     .then((res) => res.json())
     .then((data) => {
-      state.metadata = data.files; // Store metadata in global variable
-      
+      state.metadata = {}; // Store metadata in global variable
+
+      for (let file of data.files) {
+        if (file.success === false) {
+          // do not display incomplete data
+          continue;
+        }
+        state.metadata[file.code] = file;
+      }
+
       // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
-      const datasetKeys = data.order || Object.keys(state.metadata);
-      
+      const datasetKeys = Object.keys(state.metadata);
+
       // For each key, load the corresponding CSV file
       const csvPromises = datasetKeys.map((key) =>
         d3

@@ -61,16 +61,16 @@ fetch("/data/table_of_contents.xml")
       .then(response => response.json())
       .then(data => {
         console.log("Metadata2:", data);
-        console.log(data.order.length);
+        console.log(data.files.length);
 
-        for (let file of data.order) {
+        for (let file of data.files) {
           // Set flag on datasets
-          data.files[file].isSaved = true;
+          file.isSaved = true;
           
-          data.files[file].title = data.files[file].label;
-          data.files[file].code = file;
+          // file.title = data.files[file].label;
+          // data.files[file].code = file;
 
-          datasetMap.set(file, data.files[file]);
+          datasetMap.set(file.code, file);
         }
 
         renderDatasets();

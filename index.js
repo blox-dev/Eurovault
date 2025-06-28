@@ -145,11 +145,11 @@ app.get('/', async (req, res) => {
 
     try {
         const data = await fs.promises.readFile(metadataPath, 'utf-8');
-        const metaData = JSON.parse(data);
+        const metadata = JSON.parse(data);
 
-        buildUrls(metaData.files);
+        buildUrls(metadata.files);
 
-        await updateDatabase(metaData); // may overwrite metadata2.json
+        await updateDatabase(metadata); // may overwrite metadata2.json
         
         res.sendFile(INDEX_PATH);
     } catch (error) {
@@ -168,10 +168,10 @@ app.get('/links', (req, res) => {
     fs.readFile(pullMetadataPath, (err, data) => {
         if (err) return res.status(404).send(err.message);
 
-        const metaData = JSON.parse(data);
-        buildUrls(metaData.files);
+        const metadata = JSON.parse(data);
+        buildUrls(metadata.files);
 
-        const html = generateHtml(metaData.files);
+        const html = generateHtml(metadata.files);
         res.send(html);
     });
 });
@@ -182,19 +182,20 @@ app.get('/update', (req, res) => {
     fs.readFile(metadataPath, (err, data) => {
         if (err) return res.status(404).send(err.message);
 
-        const metaData = JSON.parse(data);
-        buildUrls(metaData.files);
+        const metadata = JSON.parse(data);
+        buildUrls(metadata.files);
         
-        const html = generateHtml(metaData.files);
+        const html = generateHtml(metadata.files);
         res.send(html);
         
         // update in the background
-        updateDatabase(metaData).catch(error => console.error("Error updating database (background):", error));
+        updateDatabase(metadata).catch(error => console.error("Error updating database (background):", error));
     });
 });
 
 function buildUrls(data) {
-    for (const [fileName, file] of Object.entries(data)) {
+    for (const file of data) {
+        const filename = file.code;
         const values = [];
 
         if (!file.geo) {
@@ -217,16 +218,16 @@ function buildUrls(data) {
             values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);
         }
 
-        const url = `${BASE_URL}${fileName}?${values.join("&")}`;
+        const url = `${BASE_URL}${filename}?${values.join("&")}`;
         file.url = url;
     }
 }
 
 function generateHtml(data) {
-    return Object.entries(data).map(([fileName, file]) => (
-        `<p>${file.label || file.title} - ${fileName}: 
+    return Object.entries(data).map(([filename, file]) => (
+        `<p>${file.label || file.title} - ${filename}: 
             <a target="_blank" href="${file.url}">JSON</a> - 
-            <a target="_blank" href="https://ec.europa.eu/eurostat/databrowser/view/${fileName}/default/table?lang=en">DATABASE</a>
+            <a target="_blank" href="https://ec.europa.eu/eurostat/databrowser/view/${filename}/default/table?lang=en">DATABASE</a>
         </p>`
     )).join('');
 }
@@ -262,58 +263,72 @@ function moreThan30DaysApart (dateString1, dateString2) {
     //                      day  hour min  sec  msec
 }
 
-async function updateDatabase(metaData) {
+async function updateDatabase(metadata) {
     console.log(`[${new Date().toLocaleTimeString()}] START DB UPDATE`);
 
-    const files = metaData.files;
+    const files = metadata.files;
 
     let currentTime = getEurostatFormatCurrentTime();
     
-    const promises = Object.entries(files).map(([fileName, file]) => {
+    const promises = files.map((file) => {
         // metadata.updated, file.updated - when did we last update the data from eurostat
         // metadata.fetched, file.fetched  - when did we last download the data from eurostat
         // if we never downloaded data or 30 days passed since last download, trigger update
+        const filename = file.code;
         if (file.fetched && !moreThan30DaysApart(currentTime, file.fetched)) {
-            return {filename: fileName, message: "No update", reason: "Fresh" };
+            return {filename: filename, status: "info", message: "No update", reason: "Fresh" };
         }
         return fetch(file.url)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {
-                    throw data.error;
+                    return {filename: filename, status: "error", message: "Fetch error", reason: data.error}
                 }
 
                 const csvData = JSON2CSV(data);
-                return { fileName: fileName, json: data, csv: csvData };
+                return { filename: filename, status: "success", json: data, csv: csvData };
             })
             .catch(err => {
-                console.error(err);
-                return { filename: fileName, message: "Failed to fetch", reason: err };
+                return { filename: filename, status: "error", message: "Failed to fetch", reason: err };
             })
     });
 
     const results = await Promise.all(promises);
 
     for (const response of results) {
-        if (response.message || response.error) {
-            console.log(response);
+        const file = metadata.files.filter(x => x.code === response.filename)[0];
+
+        if (response.status === "error") {
+            // error response
+            console.error(response);
+            file.success = false;
+            file.errorMessage = {message: response.message, reason: response.reason};
             continue;
         }
-        const { fileName: fileName, json: jsonData, csv: csvData } = response;
-        const jsonFilePath = path.join(FILES_FOLDER_PATH, `${fileName}.json`);
-        const csvFilePath = path.join(FILES_FOLDER_PATH, `${fileName}.csv`);
+        if (response.status === "warning" || response.status === "info") {
+            console.warn(response);
+            file.success = true;
+            continue;
+        }
+        if (response.status !== "success") {
+            continue;
+        }
+        const { filename: filename, json: jsonData, csv: csvData } = response;
+        const jsonFilePath = path.join(FILES_FOLDER_PATH, `${filename}.json`);
+        const csvFilePath = path.join(FILES_FOLDER_PATH, `${filename}.csv`);
 
         await fs.promises.writeFile(jsonFilePath, JSON.stringify(jsonData));
-        console.log(`Updated ${fileName}.json`);
+        console.log(`Updated ${filename}.json`);
         await fs.promises.writeFile(csvFilePath, csvData);
-        console.log(`Updated ${fileName}.csv`);
+        console.log(`Updated ${filename}.csv`);
 
-        metaData.files[fileName].fetched = currentTime;
+        file.success = true;
+        file.fetched = currentTime;
     }
 
-    metaData.fetched = currentTime;
+    metadata.fetched = currentTime;
     const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
-    await fs.promises.writeFile(metadataPath, JSON.stringify(metaData, null, 2));
+    await fs.promises.writeFile(metadataPath, JSON.stringify(metadata, null, 2));
     console.log("Updated metadata2.json");
 
     console.log(`[${new Date().toLocaleTimeString()}] END DB UPDATE`);

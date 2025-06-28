@@ -418,6 +418,12 @@ async function saveMetadata() {
   );
 
   try {
+    let files = [];
+    datasetMap.forEach((_value, key) => {
+      if (key in metadataMap) {
+        files.push(metadataMap[key]);
+      }
+    })
     const res = await fetch("/save-metadata", {
       method: "POST",
       headers: {
@@ -425,8 +431,7 @@ async function saveMetadata() {
       },
       body: JSON.stringify({
         updated: getEurostatFormatCurrentTime(),
-        order: [...datasetMap.keys()],
-        files: metadataMap,
+        files: files,
       }),
     });
 
