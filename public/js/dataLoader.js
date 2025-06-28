@@ -19,21 +19,17 @@ export function fetchMetadata() {
 
       // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
       const datasetKeys = Object.keys(state.metadata);
+      const firstKey = datasetKeys[0];
 
-      // For each key, load the corresponding CSV file
-      const csvPromises = datasetKeys.map((key) =>
-        d3
-          .csv(`/data/files/${key}.csv`)
-          .then((csv) => (state.datasets[key] = csv)) // Store loaded CSV data into global datasets object
-          .catch((error) => {
-            console.error(`Error loading CSV for ${key}:`, error);
-          })
-      );
-
-      Promise.all(csvPromises).then(() => {
-        console.log("All CSVs loaded:", state.datasets);
-        setupControls(datasetKeys, "init");
-      });
+      // Load only the first dataset
+      d3.csv(`/data/files/${firstKey}.csv`)
+        .then((csv) => {
+          state.datasets[firstKey] = csv;
+          setupControls(datasetKeys, "init");
+        })
+        .catch((error) => {
+          console.error(`Error loading CSV for ${firstKey}:`, error);
+        });
     })
     .catch((error) => {
       console.error("Error fetching metadata:", error);

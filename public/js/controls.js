@@ -29,7 +29,28 @@ export function setupControls(datasetKeys, updateSource = null) {
       "#time-slider-container input[type=range]"
     );
     const selectedTime = slider ? state.times[+slider.value] : null;
-    updateFilters(e.target.value, "dataset", selectedTime);
+    const selectedKey = e.target.value;
+
+  // If already loaded, just update filters
+  if (state.datasets[selectedKey]) {
+    updateFilters(selectedKey, "dataset", selectedTime);
+  } else {
+    // Load new CSV
+    d3.csv(`/data/files/${selectedKey}.csv`)
+      .then((csv) => {
+        // Clear old dataset(s)
+        for (const key in state.datasets) {
+          delete state.datasets[key];
+        }
+
+        state.datasets[selectedKey] = csv;
+
+        updateFilters(selectedKey, "dataset", selectedTime);
+      })
+      .catch((error) => {
+        console.error(`Error loading CSV for ${selectedKey}:`, error);
+      });
+  }
   });
 
   // edit-metadata-button
