@@ -102,7 +102,6 @@ const geo = [
     // "US", // United States
 ];
 
-const sinceTimePeriod = 2000;
 const format = 'JSON';
 const language = 'EN';
 
@@ -207,12 +206,13 @@ function buildUrls(data) {
         if (!file.lang) {
             values.push(`lang=${language}`);
         }
-        // if (!file.sinceTimePeriod) {
-        //     values.push(`sinceTimePeriod=${sinceTimePeriod}`);
-        // }
 
         for (const [key, dimension] of Object.entries(file.dimensionPrefs)) {
             if (key == "geo") {
+                continue;
+            }
+            if (key == "time" && dimension.sinceTimePeriod) {
+                values.push(`sinceTimePeriod=${dimension.sinceTimePeriod}`);
                 continue;
             }
             values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);

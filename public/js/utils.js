@@ -1,7 +1,15 @@
 "use strict";
 
 export function parseTime(t) {
-  const match = t.match(/^(\d{4})(?:[-_]?([A-Za-z0-9]+))?$/);
+  if (typeof t === "number" && Number.isFinite(t)) {
+    return { year: t, suffix: "" };
+  }
+
+  if (typeof t !== "string") {
+    return { year: -Infinity, suffix: "" };
+  }
+  
+  const match = t.match(/^(\d+)(?:[-_]?([A-Za-z0-9]+))?$/);
   return match
     ? { year: +match[1], suffix: match[2] || "" }
     : { year: -Infinity, suffix: "" };

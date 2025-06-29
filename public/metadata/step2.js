@@ -1,3 +1,6 @@
+// TODO BUG: refreshing the page after saving changes metadata loses
+// track of the saved changes since the metadata file is not
+// imported in the beginning and we rely solely on localstorage
 console.log("localStorage:", localStorage);
 
 const NS = "urn:eu.europa.ec.eurostat.navtree";
@@ -88,9 +91,9 @@ function renderDatasets() {
         e?.target?.parentElement.classList.add("selected-row");
 
         if (currentEditingCode) {
-          const saved = saveCurrentMetadata();
-          if (!saved) {
-            alert("Please fix errors before switching datasets.");
+          const result = saveCurrentMetadata();
+          if (!result.success) {
+            alert(`Please fix errors before switching datasets:\n\n- ${result.errors?.join('\n- ')}`);
             return;
           }
         }
@@ -227,13 +230,35 @@ async function fetchMetadata(node) {
     });
 }
 
+function parseTime(t) {
+  if (typeof t === "number" && Number.isFinite(t)) {
+    return { year: t, suffix: "" };
+  }
+
+  if (typeof t !== "string") {
+    return { year: -Infinity, suffix: "" };
+  }
+
+  const match = t.match(/^(\d+)(?:[-_]?([A-Za-z0-9]+))?$/);
+  return match
+    ? { year: +match[1], suffix: match[2] || "" }
+    : { year: -Infinity, suffix: "" };
+}
+
+function compareTimes(a, b) {
+  const ta = parseTime(a);
+  const tb = parseTime(b);
+  if (ta.year !== tb.year) return ta.year - tb.year;
+  return ta.suffix.localeCompare(tb.suffix);
+}
+
 function saveCurrentMetadata() {
-  if (!currentEditingCode) return true;
+  if (!currentEditingCode) return {success: true};
 
   const metadata = metadataMap[currentEditingCode];
   const container = document.getElementById("edit-metadata-container");
   const form = container.querySelector("div");
-  if (!form || !metadata) return true;
+  if (!form || !metadata) return {success: true};
 
   let dimensionPrefs = {};
 
@@ -272,9 +297,46 @@ function saveCurrentMetadata() {
     }
   }
 
+  if ("time" in metadata.dimension) {
+    const sinceCheckbox = form.querySelector("#sinceTimePeriodCheckbox");
+    const sinceInput = form.querySelector("#sinceTimePeriodInput");
+
+    if (sinceCheckbox?.checked) {
+      const sinceVal = sinceInput?.value?.trim();
+      if (!sinceVal) {
+        errors.push("Please enter a valid value for 'Since Time Period'.");
+      } else {
+        const parsedSinceVal = parseTime(sinceVal);
+        if (parsedSinceVal.year === -Infinity) {
+          errors.push("'Since Time Period' must be a number.");
+        }
+
+        const timeCategories = Object.keys(
+          metadata.dimension.time.category.index
+        );
+
+        const maxTime = timeCategories.reduce((max, c) => compareTimes(max, c) > 0 ? max : c);
+
+        if (parsedSinceVal.year < 1000 || compareTimes(sinceVal, maxTime) > 0) {
+          // The eurostat api minimum value for sinceTimePeriod is 1000
+          errors.push(`'Since Time Period' must be between 1000 and ${maxTime}`);
+        } else {
+          dimensionPrefs.time = dimensionPrefs.time || {
+            label: metadata.dimension.time.label,
+            category: dimensionPrefs.time?.category || {
+              index: {},
+              label: {},
+            },
+          };
+          dimensionPrefs.time.sinceTimePeriod = sinceVal;
+        }
+      }
+    }
+  }
+
   if (errors.length > 0) {
     console.warn("Errors while saving current metadata:", errors);
-    return false;
+    return {success: false, errors: errors};
   }
 
   if (
@@ -291,7 +353,7 @@ function saveCurrentMetadata() {
   const node = datasetMap.get(currentEditingCode);
   node.dimensionPrefs = dimensionPrefs;
   datasetMap.set(currentEditingCode, node);
-  return true;
+  return {success: true};
 }
 
 function parseMetadata(code, data) {
@@ -359,6 +421,55 @@ function parseMetadata(code, data) {
       inner.appendChild(line);
     }
 
+    if (key === "time") {
+      // Add sinceTimePeriod checkbox and input
+      const sinceWrapper = document.createElement("div");
+      sinceWrapper.style.marginTop = "10px";
+
+      const sinceCheckbox = document.createElement("input");
+      sinceCheckbox.type = "checkbox";
+      sinceCheckbox.id = "sinceTimePeriodCheckbox";
+
+      const sinceLabel = document.createElement("label");
+      sinceLabel.textContent = "Since Time Period:";
+      sinceLabel.setAttribute("for", "sinceTimePeriodCheckbox");
+      // sinceLabel.style.marginLeft = "5px";
+      sinceLabel.classList.add("noselect");
+
+      const sinceInput = document.createElement("input");
+      sinceInput.type = "text";
+      sinceInput.placeholder = "e.g., 2004-S2";
+      sinceInput.id = "sinceTimePeriodInput";
+      // sinceInput.style.marginLeft = "10px";
+      // sinceInput.style.width = "100px";
+
+      // Preload from dimensionPrefs if exists
+      const pref = metadataMap[code]?.dimensionPrefs?.time?.sinceTimePeriod;
+      if (pref) {
+        sinceCheckbox.checked = true;
+        sinceInput.value = pref;
+      }
+
+      function toggleTimeCheckboxes(disabled) {
+        const timeCheckboxes = inner.querySelectorAll(`input[name="time"]`);
+        timeCheckboxes.forEach((cb) => {
+          cb.disabled = disabled;
+          cb.parentElement.style.opacity = disabled ? 0.5 : 1;
+        });
+      }
+
+      sinceCheckbox.addEventListener("change", () => {
+        toggleTimeCheckboxes(sinceCheckbox.checked);
+      });
+
+      toggleTimeCheckboxes(sinceCheckbox.checked); // Initial state
+
+      sinceWrapper.appendChild(sinceCheckbox);
+      sinceWrapper.appendChild(sinceLabel);
+      sinceWrapper.appendChild(sinceInput);
+      inner.prepend(sinceWrapper);
+    }
+
     wrapper.appendChild(toggle);
     wrapper.appendChild(inner);
     metadataForm.appendChild(wrapper);
@@ -370,9 +481,9 @@ function parseMetadata(code, data) {
 }
 
 async function saveMetadata() {
-  const saved = saveCurrentMetadata();
-  if (!saved) {
-    alert("Please fix errors before saving.");
+  const result = saveCurrentMetadata();
+  if (!result.success) {
+    alert(`Please fix errors before saving:\n\n- ${result.errors?.join('\n- ')}`);
     return;
   }
 
@@ -423,7 +534,7 @@ async function saveMetadata() {
       if (key in metadataMap) {
         files.push(metadataMap[key]);
       }
-    })
+    });
     const res = await fetch("/save-metadata", {
       method: "POST",
       headers: {
