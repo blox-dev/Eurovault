@@ -9,7 +9,7 @@ const FILES_FOLDER_PATH = path.join(DATA_FOLDER_PATH, 'files');
 const PUBLIC_FOLDER_PATH = path.resolve(__dirname, 'public');
 const INDEX_PATH = path.join(__dirname, 'public', 'index.html');
 
-const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/";
+const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
 
 // According to 
 // https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Country_codes
@@ -138,6 +138,105 @@ app.post('/save-metadata', (req, res) => {
   });
 });
 
+app.post('/fetch-metadata', async (req, res) => {
+  const { nodeCode, extraParams = {}, controlParams = {} } = req.body;
+
+  // Construct URL with optional query string
+  let url = `${BASE_URL}/${nodeCode}`;
+  const query = new URLSearchParams(extraParams).toString();
+  if (query) url += `?${query}`;
+
+  const attemptFetch = async (attemptUrl) => {
+    try {
+      const response = await fetch(attemptUrl);
+      const json = await response.json();
+      return { ok: response.ok, data: json };
+    } catch (err) {
+      return { ok: false, error: err.message };
+    }
+  };
+
+  // First API attempt
+  const result = await attemptFetch(url);
+
+  // Handle specific error types
+  if (result.ok && !result.data?.error) {
+    return res.json({
+      code: nodeCode,
+      status: 'success',
+      id: 0,
+      message: "Fetched metadata",
+      data: result.data,
+    });
+  }
+
+  // Parse known error types
+  const apiError = result.data?.error?.[0];
+
+  if (apiError) {
+    const { status, label } = apiError;
+
+    // Case: EXTRACTION_TOO_BIG -> Retry with sinceTimePeriod
+    if (label.includes("EXTRACTION_TOO_BIG") && !extraParams.sinceTimePeriod) {
+      const retryUrl = `${BASE_URL}/${nodeCode}?${new URLSearchParams({
+        ...extraParams,
+        sinceTimePeriod: '9999',
+      }).toString()}`;
+
+      const retryResult = await attemptFetch(retryUrl);
+
+      if (retryResult.ok && !retryResult.data?.error) {
+        return res.json({
+          code: nodeCode,
+          status: 'success',
+          id: 0,
+          message: "Fetched metadata",
+          data: retryResult.data,
+        });
+      }
+
+      return res.json({
+        code: nodeCode,
+        status: 'error',
+        id: 210,
+        message: 'Error while fixing EXTRACTION_TOO_BIG',
+        reason: retryResult.data?.error?.[0]?.label || 'Unknown retry failure',
+        userAction: ['remove'],
+      });
+    };
+
+    // Async response, let user retry manually
+    if (label.includes("ASYNCHRONOUS_RESPONSE")) {
+      return res.json({
+        code: nodeCode,
+        status: 'warning',
+        id: 100,
+        message: 'ASYNCHRONOUS_RESPONSE',
+        reason: label,
+        userAction: ['retry', 'remove'],
+      });
+    };
+
+    // Unknown error: fail by default
+    return res.json({
+      code: nodeCode,
+      status: 'error',
+      id: 201,
+      message: 'Unhandled Eurostat error',
+      reason: label,
+      userAction: ['remove'],
+    });
+  }
+
+  // Unhandled fetch/network error
+  return res.status(500).json({
+    status: 'error',
+    code: nodeCode,
+    error: result.error || 'Unknown error',
+    userAction: ['remove'],
+  });
+});
+
 // Routes
 app.get('/', async (req, res) => {
     const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
@@ -194,6 +293,9 @@ app.get('/update', (req, res) => {
 
 function buildUrls(data) {
     for (const file of data) {
+        if (file._status?.metadata?.status !== "success") {
+          continue;
+        }
         const filename = file.code;
         const values = [];
 
@@ -218,7 +320,7 @@ function buildUrls(data) {
             values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);
         }
 
-        const url = `${BASE_URL}${filename}?${values.join("&")}`;
+        const url = `${BASE_URL}/${filename}?${values.join("&")}`;
         file.url = url;
     }
 }
@@ -274,56 +376,65 @@ async function updateDatabase(metadata) {
         // metadata.updated, file.updated - when did we last update the data from eurostat
         // metadata.fetched, file.fetched  - when did we last download the data from eurostat
         // if we never downloaded data or 30 days passed since last download, trigger update
-        const filename = file.code;
-        if (file.fetched && !moreThan30DaysApart(currentTime, file.fetched)) {
-            return {filename: filename, status: "info", message: "No update", reason: "Fresh" };
+        const code = file.code;
+        if (!file._status?.metadata?.status) {
+          return {code: code, status: "error", id: 599, message: "Metadata error", reason: "Something is very wrong with the metadata"};
+        }
+        if (file._status.metadata.status !== "success") {
+          return {code: code, status: "error", id: 500, message: "Metadata error", reason: "Metadata not fetched"};
+        }
+        if ((file._status.data?.status === "success") && !moreThan30DaysApart(currentTime, file._status.data?.fetched)) {
+          return {code: code, status: "success", id: 302, message: "No update", reason: "Data updated less than 30 days ago" };
         }
         return fetch(file.url)
             .then(res => res.json())
             .then(data => {
                 if (data.error) {
-                    return {filename: filename, status: "error", message: "Fetch error", reason: data.error}
+                    return {code: code, status: "error", id: 501, message: "Failed to fetch data", reason: data.error}
                 }
 
                 const csvData = JSON2CSV(data);
-                return { filename: filename, status: "success", json: data, csv: csvData };
+                return { code: code, status: "success", id: 300, message: "Fetched data", json: data, csv: csvData };
             })
             .catch(err => {
-                return { filename: filename, status: "error", message: "Failed to fetch", reason: err };
+                return { code: code, status: "error", id: 501, message: "Failed to fetch data", reason: err };
             })
     });
 
     const results = await Promise.all(promises);
 
     for (const response of results) {
-        const file = metadata.files.filter(x => x.code === response.filename)[0];
+        const file = metadata.files.filter(x => x.code === response.code)[0];
 
-        if (response.status === "error") {
-            // error response
-            console.error(response);
-            file.success = false;
-            file.errorMessage = {message: response.message, reason: response.reason};
-            continue;
+        // Copy all properties except 'json' and 'csv'
+        let dataStatus = {};
+        for (var key in response) {
+          if (response.hasOwnProperty(key) && key !== "json" && key !== "csv") {
+            dataStatus[key] = response[key];
+          }
         }
-        if (response.status === "warning" || response.status === "info") {
-            console.warn(response);
-            file.success = true;
-            continue;
-        }
+
+        file._status.data = dataStatus;
+
         if (response.status !== "success") {
-            continue;
+          console.error(response);
+          continue;
         }
-        const { filename: filename, json: jsonData, csv: csvData } = response;
-        const jsonFilePath = path.join(FILES_FOLDER_PATH, `${filename}.json`);
-        const csvFilePath = path.join(FILES_FOLDER_PATH, `${filename}.csv`);
+        
+        if (response.id === 302) {
+          // Data doesn't need an update
+          file._status.data.fetched = currentTime;
+          continue;
+        }
+
+        const { code: code, json: jsonData, csv: csvData } = response;
+        const jsonFilePath = path.join(FILES_FOLDER_PATH, `${code}.json`);
+        const csvFilePath = path.join(FILES_FOLDER_PATH, `${code}.csv`);
 
         await fs.promises.writeFile(jsonFilePath, JSON.stringify(jsonData));
-        console.log(`Updated ${filename}.json`);
+        console.log(`Updated ${code}.json`);
         await fs.promises.writeFile(csvFilePath, csvData);
-        console.log(`Updated ${filename}.csv`);
-
-        file.success = true;
-        file.fetched = currentTime;
+        console.log(`Updated ${code}.csv`);
     }
 
     metadata.fetched = currentTime;

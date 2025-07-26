@@ -124,8 +124,16 @@ td {
   background: white;
 }
 
-.saved td{
-  background-color: #FFF4F2;
+.error td {
+  background-color: #f8d7da;
+}
+
+.warning td {
+  background-color: #fff3cd;
+}
+
+.success td {
+  background-color: #d4edda;
 }
 
 .fetch-dataset {
@@ -133,8 +141,8 @@ td {
 }
 
 .selected-row td.fetch-dataset, .selected-row td.actions{
-  background-color: #ddd;
-  border-right-color: #ddd;
+  background-color: #ddd !important;
+  border-right-color: #ddd !important;
 }
 
 .noselect {

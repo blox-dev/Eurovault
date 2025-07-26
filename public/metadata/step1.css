@@ -83,10 +83,6 @@ table tbody tr.selected-row > td {
   background-color: #99ccff; /* Stronger specificity */
 }
 
-.saved td{
-  background-color: #FFF4F2;
-}
-
 table tbody tr.dragged > td {
   background-color: #cce5ff;
 }

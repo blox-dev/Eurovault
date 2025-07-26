@@ -64,12 +64,7 @@ fetch("/data/table_of_contents.xml")
         console.log(data.files.length);
 
         for (let file of data.files) {
-          // Set flag on datasets
-          file.isSaved = true;
-          
-          // file.title = data.files[file].label;
-          // data.files[file].code = file;
-
+          // Saved metadata goes into datasetMap
           datasetMap.set(file.code, file);
         }
 
@@ -102,7 +97,7 @@ function renderTree(treeData) {
 }
 
 function parseBranch(branchNode) {
-  const title = getTagValue(branchNode, "title", "(untitled)");
+  const label = getTagValue(branchNode, "title", "(untitled)");
   const code = getTagValue(branchNode, "code");
   const children = [];
 
@@ -114,8 +109,8 @@ function parseBranch(branchNode) {
       // Currently eurovault can only display country-level data, not regional
       // TODO: maybe some datasets are slipping through this selection
       // https://ec.europa.eu/eurostat/web/nuts/overview
-      const title = getTagValue(node, "title", "(untitled)");
-      if (title.includes("NUTS")) continue;
+      const label = getTagValue(node, "title", "(untitled)");
+      if (label.includes("NUTS")) continue;
 
       if (node.localName === "branch") {
         const childBranch = parseBranch(node);
@@ -130,13 +125,13 @@ function parseBranch(branchNode) {
 
   if (children.length === 0) return null;
 
-  return { type: "branch", title, code, children };
+  return { type: "branch", label: label, code, children };
 }
 
 function parseLeaf(leafNode) {
   return {
     type: "leaf",
-    title: getTagValue(leafNode, "title", "(untitled)"),
+    label: getTagValue(leafNode, "title", "(untitled)"),
     code: getTagValue(leafNode, "code"),
     lastModified: getTagValue(leafNode, "lastModified"),
     shortDescription: getTagValue(leafNode, "shortDescription"),
@@ -162,7 +157,7 @@ function buildTreeHTML(nodes) {
 
     if (node.type === "branch") {
       const span = document.createElement("span");
-      span.textContent = "> " + node.title;
+      span.textContent = "> " + node.label;
       span.classList.add("folder");
       span.dataset.expanded = "false";
 
@@ -173,7 +168,7 @@ function buildTreeHTML(nodes) {
       span.onclick = () => {
         const expanded = span.dataset.expanded === "true";
         span.dataset.expanded = String(!expanded);
-        span.textContent = (expanded ? "> " : "v ") + node.title;
+        span.textContent = (expanded ? "> " : "v ") + node.label;
         childUl.classList.toggle("hidden");
 
         if (!expanded) autoExpandIfSingle(li);
@@ -186,7 +181,7 @@ function buildTreeHTML(nodes) {
       }
     } else if (node.type === "leaf") {
       const span = document.createElement("span");
-      let displayTitle = `${node.title} (${node.code})`;
+      let displayTitle = `${node.label} (${node.code})`;
       span.textContent = displayTitle;
       span.classList.add("leaf");
 
@@ -308,18 +303,21 @@ function renderDatasets() {
   data.forEach((item, index) => {
     const tr = document.createElement("tr");
     tr.dataset.code = item.code;
-
-    if (item.isSaved) {
-      tr.classList.add("saved");
-    }
+    tr.id = `${item.code}_tr`;
 
     const eurostatLink = `https://ec.europa.eu/eurostat/databrowser/view/${item.code}/default/table?lang=en`;
 
     tr.innerHTML = `
-      <td title="Drag and drop">${index + 1}</td>
-      <td title="Drag and drop">${item.title} (${item.code})</td>
-      <td><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
+      <td id="${item.code}_index_container" title="Drag and drop"><span id="${item.code}_index">${index + 1}</span></td>
+      <td id="${item.code}_description"><span id="${item.code}_description" title="Drag and drop">${item.label} (${item.code})</span><span id="${item.code}_saved"></span></td>
+      <td id="${item.code}_actions"><a id="${item.code}_eurostat_link" class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a id="${item.code}_remove_link" href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
     `;
+
+    if (item._status?.metadata?.status) {
+      const savedSpan = tr.querySelector(`#${item.code}_saved`);
+      savedSpan.innerHTML = " &#x1f4be;";
+      savedSpan.title = "Saved";
+    }
 
     if (index === selectedIndex) {
       tr.classList.add("selected-row");

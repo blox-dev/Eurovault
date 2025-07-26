@@ -10,7 +10,7 @@ export function fetchMetadata() {
       state.metadata = {}; // Store metadata in global variable
 
       for (let file of data.files) {
-        if (file.success === false) {
+        if (file._status?.data?.status !== "success") {
           // do not display incomplete data
           continue;
         }

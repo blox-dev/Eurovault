@@ -3,7 +3,6 @@
 // imported in the beginning and we rely solely on localstorage
 console.log("localStorage:", localStorage);
 
-const NS = "urn:eu.europa.ec.eurostat.navtree";
 const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data";
 const metadataMap = {};
 
@@ -27,7 +26,7 @@ if (localStorage) {
   for (let i = 0; i < datasets.length; i++) {
     datasetMap.set(datasets[i].code, datasets[i]);
     // TODO: put dimensionPrefs from saved nodes directly into metadataMap on step load
-    if (datasets[i].isSaved) {
+    if (datasets[i]._status?.metadata?.status) {
       metadataMap[datasets[i].code] = datasets[i];
     }
   }
@@ -67,18 +66,40 @@ function renderDatasets() {
 
   data.forEach((node, index) => {
     const tr = document.createElement("tr");
-
-    if (node.isSaved) {
-      tr.classList.add("saved");
-    }
+    tr.id = `${node.code}_tr`;
 
     const eurostatLink = `https://ec.europa.eu/eurostat/databrowser/view/${node.code}/default/table?lang=en`;
 
     tr.innerHTML = `
-      <td>${index + 1}</td>
-      <td class="fetch-dataset" title="Edit metadata">${node.title} (${node.code})</td>
-      <td class="actions"><a class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
+      <td id="${node.code}_index_container"><span id="${node.code}_index">${index + 1}</span></td>
+      <td id="${node.code}_description_container" class="fetch-dataset" title="Click to edit"><span id="${node.code}_description">${node.label} (${node.code})</span><span id="${node.code}_saved"></span></td>
+      <td id="${node.code}_actions" class="actions"><a id="${node.code}_eurostat_link" class="link-database" href="${eurostatLink}" title="Open dataset" target="_blank" style="margin-right:10px">&#x1F517;</a><a id="${node.code}_remove_link" href="#" title="Delete row" class="link-remove">&#x274C;</a></td>
     `;
+
+    if (node._status?.metadata?.status) {
+      const savedSpan = tr.querySelector(`#${node.code}_saved`);
+      savedSpan.innerHTML = " &#x1f4be;";
+      savedSpan.title = "Saved";
+
+      switch (node._status?.metadata?.status) {
+        case "error": {
+          tr.classList.add("error");
+          break;
+        }
+        case "warning": {
+          tr.classList.add("warning");
+          break;
+        }
+        case "success": {
+          tr.classList.add("success");
+          break;
+        }
+        default: {
+          break;
+        }
+      }
+    }
+
     // Fetch logic
     tr.querySelector("td.fetch-dataset").addEventListener(
       "click",
@@ -88,74 +109,70 @@ function renderDatasets() {
           .querySelectorAll("tr.selected-row")
           .forEach((r) => r.classList.remove("selected-row"));
 
-        e?.target?.parentElement.classList.add("selected-row");
+        tr.classList.add("selected-row");
 
         if (currentEditingCode) {
-          const result = saveCurrentMetadata();
-          if (!result.success) {
-            alert(`Please fix errors before switching datasets:\n\n- ${result.errors?.join('\n- ')}`);
+          const saveResponse = saveCurrentMetadata();
+          if (!saveResponse.success) {
+            alert(`Please fix errors before switching datasets:\n\n- ${saveResponse.errors?.join('\n- ')}`);
             return;
           }
         }
 
-        if (node.isSaved && !metadataMap[node.code]) {
-          console.log("isSaved");
-          // TODO: maybe don't fetch again?
-          // Have to account for changes in the data structure at Eurostat
-          const res = await fetchMetadata(node);
-          if (res.message) {
-            return;
-          }
-          // Default selections if not manually configured
-          const result = {
-            label: res.label,
-            title: res.label,
-            code: node.code,
-            updated: res.updated,
-            description: res.extension?.description,
-            dimension: res.dimension,
-            dimensionPrefs: node.dimensionPrefs || res.dimension,
-          };
-
-          metadataMap[node.code] = result;
-          datasetMap.set(node.code, result);
-          parseMetadata(node.code, result);
-        } else if (metadataMap[node.code]) {
+        if (metadataMap[node.code]) {
           parseMetadata(node.code, metadataMap[node.code]);
         } else {
-          const res = await fetchMetadata(node);
-          if (res.message) {
-            return;
+          console.log("isSaved?", node._status?.metadata?.status);
+          
+          const metadataResponse = await fetchBackendMetadata(node.code, handleMetadataResponse);
+          console.log("metadataResponse", metadataResponse);
+
+          // Copy all properties except 'data'
+          var metadata = {};
+          for (var key in metadataResponse) {
+            if (metadataResponse.hasOwnProperty(key) && key !== "data") {
+              metadata[key] = metadataResponse[key];
+            }
           }
-          // Default selections if not manually configured
-          const result = {
-            label: res.label,
-            title: res.label,
-            code: node.code,
-            updated: res.updated,
-            description: res.extension?.description,
-            dimension: res.dimension,
-            dimensionPrefs: res.dimension,
-          };
+
+          let result;
+
+          if (metadataResponse.hasOwnProperty("data")) {
+            // successful
+            result = {
+              _status: {
+                metadata: metadata,
+              },
+              label: metadataResponse.data.label,
+              // title: metadataResponse.data.label,
+              code: node.code,
+              updated: metadataResponse.data.updated,
+              description: metadataResponse.data.extension?.description,
+              dimension: metadataResponse.data.dimension,
+              dimensionPrefs: node.dimensionPrefs || metadataResponse.data.dimension,
+            }
+
+            if (Object.keys(result.dimensionPrefs).includes("geo")) {
+              delete result.dimensionPrefs.geo;
+            }
+          } else {
+            // some type of error occured, details in _status.metadata
+            result = {
+              _status: {
+                metadata: metadata,
+              },
+              code: node.code,
+              label: node.label,
+            };
+          }
 
           metadataMap[node.code] = result;
           datasetMap.set(node.code, result);
           parseMetadata(node.code, result);
+
+          renderButtons();
         }
 
-        if (!currentEditingCode) {
-          // Show save buttons
-          const saveBtn = document.getElementById("saveBtn");
-          saveBtn.onclick = saveMetadata;
-          saveBtn.classList.remove("hidden");
-
-          const saveMapBtn = document.getElementById("saveMapBtn");
-          saveMapBtn.onclick = async () => {
-            const success = await saveMetadata();
-            if (success) window.location.href = "/";
-          };
-          saveMapBtn.classList.remove("hidden");
-        }
         currentEditingCode = node.code;
       }
     );
@@ -163,7 +180,9 @@ function renderDatasets() {
     // Remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
       e.stopPropagation();
+      currentEditingCode = null;
       datasetMap.delete(node.code);
+      delete metadataMap[node.code];
       renderDatasets();
     });
 
@@ -230,6 +249,68 @@ async function fetchMetadata(node) {
     });
 }
 
+async function fetchBackendMetadata(nodeCode, handler) {
+  const body = {
+    nodeCode: nodeCode,
+    extraParams: { geo: "null" }, // API-specific
+    controlParams: {}, // Future use
+  };
+
+  const response = await fetch('/fetch-metadata', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  const result = await response.json();
+
+  if (handler) {
+    handler(result);
+  }
+
+  return result;
+}
+
+function handleMetadataResponse(response) {
+  switch (response.status) {
+    case 'success': {
+      const code = response.code;
+      const data = response.data;
+      console.log(code, 'success');
+      const elem = document.getElementById(`${code}_tr`);
+      elem.classList.remove("success", "warning", "error");
+      elem.classList.add("success");
+      break;
+    }
+    case 'warning': {
+      const code = response.code;
+      const message = response.message;
+      const reason = response.reason;
+      const userAction = response.userAction;
+      console.warn(code, 'warning', message, reason, userAction);
+      const elem = document.getElementById(`${code}_tr`);
+      elem.classList.remove("success", "warning", "error");
+      elem.classList.add("warning");
+      break;
+    }
+    case 'error': {
+      const code = response.code;
+      const message = response.message;
+      const reason = response.reason;
+      const userAction = response.userAction;
+      console.error(code, 'error', message, reason, userAction);
+      const elem = document.getElementById(`${code}_tr`);
+      elem.classList.remove("success", "warning", "error");
+      elem.classList.add("error");
+      break;
+    }
+    default: {
+      console.error('Unhandled response status', response);
+      break; 
+    }
+  }
+}
+
 function parseTime(t) {
   if (typeof t === "number" && Number.isFinite(t)) {
     return { year: t, suffix: "" };
@@ -259,6 +340,11 @@ function saveCurrentMetadata() {
   const container = document.getElementById("edit-metadata-container");
   const form = container.querySelector("div");
   if (!form || !metadata) return {success: true};
+
+  if (metadata?._status?.metadata?.status !== "success") {
+    // success: True, as in, sure, you can go ahead and store the result, don't check it
+    return {success: true};
+  }
 
   let dimensionPrefs = {};
 
@@ -360,6 +446,61 @@ function parseMetadata(code, data) {
   const container = document.getElementById("edit-metadata-container");
   container.innerHTML = `<h2>Edit Metadata</h2>`; // Clear previous content
 
+  if (!data._status?.metadata?.status) {
+    console.error("you missed something");
+    console.log(data);
+  }
+
+  if(data._status.metadata.status !== "success") {
+    const message = data._status.metadata.message;
+    const reason = data._status.metadata.reason;
+    let code = data._status.metadata.code;
+    let status = data._status.metadata.status;
+    let userAction = data._status.metadata.userAction;
+
+    container.innerHTML = `<div><h2>Metadata ${status}</h2><div id="error_div"><h4>${reason}</h4></div><div id="userActionDiv"></div>`;
+    
+    const userActionDiv = container.querySelector("#userActionDiv");
+
+    for (let i = 0; i < userAction.length ; i++) {
+      if (userAction[i] === "remove") {
+        const removeButton = document.createElement("button");
+        removeButton.innerText = `Remove dataset`;
+        removeButton.addEventListener('click', async (e) => {
+          console.log(e);
+          console.log(data._status.metadata);
+
+          if (confirm(`Are you sure you want to remove ${code}?`)) {
+            e.stopPropagation();
+            datasetMap.delete(code);
+            delete metadataMap[code];
+            currentEditingCode = null;
+            renderDatasets();
+          }
+        });
+        userActionDiv.appendChild(removeButton);
+      } else if (userAction[i] === "retry") {
+        const retryButton = document.createElement("button");
+        retryButton.innerText = "Retry";
+        retryButton.addEventListener('click', async (e) => {
+          console.log(e);
+          console.log(data._status.metadata);
+
+          e.stopPropagation();
+          datasetMap.delete(code);
+          delete metadataMap[code];
+          // currentEditingCode = null;
+          const elem = document.getElementById(`${code}_description_container`);
+          elem.click();
+        });
+        userActionDiv.appendChild(retryButton);
+      } else {
+        console.error(`Unknown user action: ${userAction[i]}`);
+      }
+    }
+    return;
+  }
+
   const dimensions = data.dimension;
   const metadataForm = document.createElement("div");
 
@@ -433,15 +574,12 @@ function parseMetadata(code, data) {
       const sinceLabel = document.createElement("label");
       sinceLabel.textContent = "Since Time Period:";
       sinceLabel.setAttribute("for", "sinceTimePeriodCheckbox");
-      // sinceLabel.style.marginLeft = "5px";
       sinceLabel.classList.add("noselect");
 
       const sinceInput = document.createElement("input");
       sinceInput.type = "text";
       sinceInput.placeholder = "e.g., 2004-S2";
       sinceInput.id = "sinceTimePeriodInput";
-      // sinceInput.style.marginLeft = "10px";
-      // sinceInput.style.width = "100px";
 
       // Preload from dimensionPrefs if exists
       const pref = metadataMap[code]?.dimensionPrefs?.time?.sinceTimePeriod;
@@ -480,7 +618,7 @@ function parseMetadata(code, data) {
   container.appendChild(metadataForm);
 }
 
-async function saveMetadata() {
+async function fetchAllMetadata() {
   const result = saveCurrentMetadata();
   if (!result.success) {
     alert(`Please fix errors before saving:\n\n- ${result.errors?.join('\n- ')}`);
@@ -492,21 +630,49 @@ async function saveMetadata() {
   for (const code of datasetMap.keys()) {
     if (!metadataMap[code] || metadataMap[code].hasChanges) {
       fetchPromises.push(
-        fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
-          .then((data) => {
-            // Default selections if not manually configured
-            const result = {
-              label: data.label,
-              title: data.label,
-              code: code,
-              updated: data.updated,
-              description: data.extension?.description,
-              dimension: data.dimension,
-              dimensionPrefs: (metadataMap[code] && metadataMap[code].dimensionPrefs) || data.dimension,
-            };
+        // fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
+        fetchBackendMetadata(code, handleMetadataResponse)
+          .then((metadataResponse) => {
 
-            if (Object.keys(result.dimensionPrefs).includes("geo")) {
-              delete result.dimensionPrefs.geo;
+            console.log("metadataResponse", metadataResponse);
+
+            // Copy all properties except 'data'
+            var metadata = {};
+            for (var key in metadataResponse) {
+              if (metadataResponse.hasOwnProperty(key) && key !== "data") {
+                metadata[key] = metadataResponse[key];
+              }
+            }
+
+            let result;
+
+            if (metadataResponse.hasOwnProperty("data")) {
+              // successful
+              result = {
+                _status: {
+                  metadata: metadata,
+                },
+                label: metadataResponse.data.label,
+                // title: metadataResponse.data.label,
+                code: code,
+                updated: metadataResponse.data.updated,
+                description: metadataResponse.data.extension?.description,
+                dimension: metadataResponse.data.dimension,
+                dimensionPrefs: (metadataMap[code] && metadataMap[code].dimensionPrefs) || metadataResponse.data.dimension,
+              }
+
+              if (Object.keys(result.dimensionPrefs).includes("geo")) {
+                delete result.dimensionPrefs.geo;
+              }
+            } else {
+              // some type of error occured, details in _status.metadata
+              result = {
+                _status: {
+                  metadata: metadata,
+                },
+                code: code,
+                label: datasetMap.get(code).label,
+              };
             }
 
             metadataMap[code] = result;
@@ -522,7 +688,9 @@ async function saveMetadata() {
   }
 
   await Promise.all(fetchPromises);
+}
 
+async function saveAllMetadata() {
   localStorage.setItem(
     "selectedDatasets",
     JSON.stringify([...datasetMap.values()])
@@ -557,7 +725,43 @@ async function saveMetadata() {
   }
 }
 
+const fetchMetadataBtn = document.getElementById("fetchMetadataBtn");
+const saveMetadataBtn = document.getElementById("saveMetadataBtn");
+
+fetchMetadataBtn.onclick = async() => {
+  await fetchAllMetadata();
+  renderButtons();
+};
+
+saveMetadataBtn.onclick = async() => {
+  const success = await saveAllMetadata();
+  renderButtons();
+  if (success && confirm("Metadata saved successfully. Do you want to go to the map?")) {
+    window.location.href = "/";
+  }
+};
+
+function renderButtons() {
+  let allFetched = true;
+  for (const code of datasetMap.keys()) {
+    if (!metadataMap[code]) {
+      allFetched = false;
+      break;
+    }
+  }
+
+  if (!allFetched) {
+    fetchMetadataBtn.classList.remove("hidden");
+    saveMetadataBtn.classList.add("hidden");
+  } else {
+    saveMetadataBtn.classList.remove("hidden");
+    fetchMetadataBtn.classList.add("hidden");
+  }
+}
+
 renderDatasets();
+
+renderButtons();
 
 document.getElementById("backBtn").onclick = () => {
   // Save data to localStorage
