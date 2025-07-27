@@ -2,20 +2,20 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  padding: 10px 20px;
-  cursor: pointer;
 }
 
 .bottom-right {
   position: fixed;
   bottom: 20px;
   right: 20px;
+}
+
+.button-main {
   padding: 10px 20px;
   cursor: pointer;
 }
 
 #dataset-container {
-  /* padding: 5px; */
   padding-bottom: 60px;
   grid-area: selected;
 }
@@ -23,7 +23,7 @@
 #edit-metadata-container {
   grid-area: metadata;
   background-color: #ddd;
-  padding-left: 5px;
+  padding-left: 10px;
   padding-right: 5px;
   padding-bottom: 60px;
   font-family: Arial, sans-serif;
@@ -31,16 +31,16 @@
   line-height: 1.5;
 }
 
-#edit-metadata-container h2 {
+#edit-metadata-title {
   margin-bottom: 20px;
   font-size: 18px;
 }
 
-#edit-metadata-container > div {
+#edit-metadata-div {
   margin-bottom: 15px;
 }
 
-#edit-metadata-container button {
+.metadata-toggle-button {
   background-color: #eee;
   border: 1px solid #aaa;
   padding: 6px 12px;
@@ -49,25 +49,34 @@
   width: 100%;
   text-align: left;
   transition: background-color 0.2s ease;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: block;
 }
 
-#edit-metadata-container button:hover {
+.metadata-toggle-button:hover {
   background-color: #ccc;
 }
 
-#edit-metadata-container div > div {
-  margin-left: 15px;
+.metadata-category {
+  margin-bottom: 10px;
+}
+
+
+.metadata-line-container {
+  margin-left: 30px;
+  display: block;
 }
 
 /* Styling each checkbox + label row */
-#edit-metadata-container input[type="checkbox"] {
+.metadata-checkbox[type="checkbox"] {
   transform: scale(1.2);
   margin-right: 10px;
   cursor: pointer;
 }
 
 /* Make entire row clickable */
-#edit-metadata-container label {
+.metadata-checkbox-label {
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -76,7 +85,7 @@
   transition: background-color 0.1s ease-in-out;
 }
 
-#edit-metadata-container label:hover {
+.metadata-checkbox-label:hover {
   background-color: #eaeaea;
 }
 

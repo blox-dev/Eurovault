@@ -179,11 +179,13 @@ function renderDatasets() {
 
     // Remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
-      e.stopPropagation();
-      currentEditingCode = null;
-      datasetMap.delete(node.code);
-      delete metadataMap[node.code];
-      renderDatasets();
+      if(confirm(`Are you sure you want to remove ${node.code}?`)) {
+        e.stopPropagation();
+        currentEditingCode = null;
+        datasetMap.delete(node.code);
+        delete metadataMap[node.code];
+        renderDatasets();
+      }
     });
 
     tbody.appendChild(tr);
@@ -443,8 +445,9 @@ function saveCurrentMetadata() {
 }
 
 function parseMetadata(code, data) {
-  const container = document.getElementById("edit-metadata-container");
-  container.innerHTML = `<h2>Edit Metadata</h2>`; // Clear previous content
+  const metadataTitle = document.getElementById("edit-metadata-title");
+  const metadataDiv = document.getElementById("edit-metadata-div");
+  metadataDiv.innerHTML = ""; // Clear previous content
 
   if (!data._status?.metadata?.status) {
     console.error("you missed something");
@@ -458,14 +461,15 @@ function parseMetadata(code, data) {
     let status = data._status.metadata.status;
     let userAction = data._status.metadata.userAction;
 
-    container.innerHTML = `<div><h2>Metadata ${status}</h2><div id="error_div"><h4>${reason}</h4></div><div id="userActionDiv"></div>`;
-    
-    const userActionDiv = container.querySelector("#userActionDiv");
+    metadataTitle.innerText = `Metadata ${status}`;
+    metadataDiv.innerHTML = `<div id="error_div"><h4>${reason}</h4></div><div id="userActionDiv"></div>`;
+    const userActionDiv = metadataDiv.querySelector("#userActionDiv");
 
     for (let i = 0; i < userAction.length ; i++) {
       if (userAction[i] === "remove") {
         const removeButton = document.createElement("button");
-        removeButton.innerText = `Remove dataset`;
+        removeButton.classList.add("button-main");
+        removeButton.innerText = "Remove dataset";
         removeButton.addEventListener('click', async (e) => {
           console.log(e);
           console.log(data._status.metadata);
@@ -476,11 +480,14 @@ function parseMetadata(code, data) {
             delete metadataMap[code];
             currentEditingCode = null;
             renderDatasets();
+            metadataTitle.innerText = "Edit metadata";
+            metadataDiv.innerHTML = "";
           }
         });
         userActionDiv.appendChild(removeButton);
       } else if (userAction[i] === "retry") {
         const retryButton = document.createElement("button");
+        retryButton.classList.add("button-main");
         retryButton.innerText = "Retry";
         retryButton.addEventListener('click', async (e) => {
           console.log(e);
@@ -511,17 +518,14 @@ function parseMetadata(code, data) {
       return;
     }
     const wrapper = document.createElement("div");
-    wrapper.style.marginBottom = "10px";
+    wrapper.classList.add("metadata-category");
 
     const toggle = document.createElement("button");
+    toggle.classList.add("metadata-toggle-button");
     toggle.textContent = dim.label || key;
-    toggle.style.display = "block";
-    toggle.style.marginBottom = "5px";
-    toggle.style.cursor = "pointer";
 
     const inner = document.createElement("div");
-    inner.style.display = "block";
-    inner.style.paddingLeft = "15px";
+    inner.classList.add("metadata-line-container");
 
     toggle.onclick = () => {
       inner.style.display = inner.style.display === "none" ? "block" : "none";
@@ -539,6 +543,7 @@ function parseMetadata(code, data) {
 
     for (const [cat, idx] of Object.entries(categories)) {
       const checkbox = document.createElement("input");
+      checkbox.classList.add("metadata-checkbox");
       checkbox.type = "checkbox";
       checkbox.value = cat;
       checkbox.name = key;
@@ -552,11 +557,13 @@ function parseMetadata(code, data) {
       }
 
       const label = document.createElement("label");
+      label.classList.add("metadata-checkbox-label");
       label.setAttribute("for", checkbox.id);
       label.textContent = labels[cat] ? `${labels[cat]} (${cat})` : cat;
       label.classList.add("noselect");
 
       const line = document.createElement("div");
+      line.classList.add("metadata-line");
       line.appendChild(checkbox);
       line.appendChild(label);
       inner.appendChild(line);
@@ -615,7 +622,7 @@ function parseMetadata(code, data) {
     requiredSelections[key] = key !== "time";
   });
 
-  container.appendChild(metadataForm);
+  metadataDiv.appendChild(metadataForm);
 }
 
 async function fetchAllMetadata() {
@@ -729,11 +736,15 @@ const fetchMetadataBtn = document.getElementById("fetchMetadataBtn");
 const saveMetadataBtn = document.getElementById("saveMetadataBtn");
 
 fetchMetadataBtn.onclick = async() => {
+  fetchMetadataBtn.disabled = true;
+  fetchMetadataBtn.style.cursor = "wait";
   await fetchAllMetadata();
   renderButtons();
 };
 
 saveMetadataBtn.onclick = async() => {
+  saveMetadataBtn.disabled = true;
+  saveMetadataBtn.style.cursor = "wait";
   const success = await saveAllMetadata();
   renderButtons();
   if (success && confirm("Metadata saved successfully. Do you want to go to the map?")) {
@@ -749,6 +760,12 @@ function renderButtons() {
       break;
     }
   }
+
+  fetchMetadataBtn.disabled = false;
+  fetchMetadataBtn.style.cursor = "";
+  saveMetadataBtn.disabled = false;
+  saveMetadataBtn.style.cursor = "";
+  
 
   if (!allFetched) {
     fetchMetadataBtn.classList.remove("hidden");
