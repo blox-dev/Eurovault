@@ -356,15 +356,22 @@ function saveCurrentMetadata() {
     if (key === "geo") continue;
 
     const checkboxes = form.querySelectorAll(`input[name="${key}"]`);
-    if (!checkboxes.length) continue;
+    
+    //if (!checkboxes.length) continue;
 
-    const selected = Array.from(checkboxes)
+    // technically there has to be at least one checkbox, but we cover this edge case anyway
+
+    const checkboxArray = Array.from(checkboxes);
+    
+    const hasValues = checkboxArray.length !== 0;
+
+    const selected = checkboxArray
       .filter((c) => c.checked)
       .map((c) => c.value);
 
-    if (selected.length === 0) {
+    if (selected.length === 0 && hasValues) {
       errors.push(`Please select at least one value for ${key}`);
-    } else if (selected.length > 0) {
+    } else {
       const dimensionData = metadata.dimension[key];
 
       dimensionPrefs[key] = {
@@ -385,40 +392,78 @@ function saveCurrentMetadata() {
     }
   }
 
-  if ("time" in metadata.dimension) {
+if ("time" in metadata.dimension) {
     const sinceCheckbox = form.querySelector("#sinceTimePeriodCheckbox");
+    const untilCheckbox = form.querySelector("#untilTimePeriodCheckbox");
+    const lastCheckbox = form.querySelector("#lastTimePeriodCheckbox");
+
     const sinceInput = form.querySelector("#sinceTimePeriodInput");
+    const untilInput = form.querySelector("#untilTimePeriodInput");
+    const lastInput = form.querySelector("#lastTimePeriodInput");
 
-    if (sinceCheckbox?.checked) {
-      const sinceVal = sinceInput?.value?.trim();
-      if (!sinceVal) {
-        errors.push("Please enter a valid value for 'Since Time Period'.");
-      } else {
-        const parsedSinceVal = parseTime(sinceVal);
-        if (parsedSinceVal.year === -Infinity) {
-          errors.push("'Since Time Period' must be a number.");
-        }
+    // Disallow Last + (Since/Until) combo
+    if (lastCheckbox?.checked && (sinceCheckbox?.checked || untilCheckbox?.checked)) {
+      errors.push("'Last Time Period' cannot be used in combination with 'Since Time Period' or 'Until Time Period'");
+    }
 
-        const timeCategories = Object.keys(
-          metadata.dimension.time.category.index
-        );
+    function validateTimePeriodInput(label, value, minTime = 0, maxTime = 9999) {
+      if (!value) return [`Please enter a valid value for '${label}'`];
 
-        const maxTime = timeCategories.reduce((max, c) => compareTimes(max, c) > 0 ? max : c);
+      const parsed = parseTime(value);
+      if (parsed.year === -Infinity) return [`'${label}' must be a number.`];
 
-        if (parsedSinceVal.year < 1000 || compareTimes(sinceVal, maxTime) > 0) {
-          // The eurostat api minimum value for sinceTimePeriod is 1000
-          errors.push(`'Since Time Period' must be between 1000 and ${maxTime}`);
-        } else {
-          dimensionPrefs.time = dimensionPrefs.time || {
-            label: metadata.dimension.time.label,
-            category: dimensionPrefs.time?.category || {
-              index: {},
-              label: {},
-            },
-          };
-          dimensionPrefs.time.sinceTimePeriod = sinceVal;
+      if (compareTimes(value, minTime) < 0 || compareTimes(value, maxTime) > 0) {
+        return [`'${label}' must be between ${minTime} and ${maxTime}`];
+      }
+      return [];
+    }
+
+    // Determine min/max time from metadata
+    let minTime = 1000, maxTime = 9999;
+    const timeCategories = Object.keys(metadata.dimension.time.category.index);
+    if (timeCategories.length) {
+      minTime = timeCategories.reduce((min, c) => compareTimes(min, c) < 0 ? min : c);
+      maxTime = timeCategories.reduce((max, c) => compareTimes(max, c) > 0 ? max : c);
+    }
+
+    // Define checkbox/input/validation rules in one place
+    const checks = [
+      { checkbox: sinceCheckbox, input: sinceInput, label: "Since Time Period", min: minTime, max: maxTime },
+      { checkbox: untilCheckbox, input: untilInput, label: "Until Time Period", min: minTime, max: maxTime },
+      { checkbox: lastCheckbox, input: lastInput, label: "Last Time Period", min: 1, max: 9999 }
+    ];
+
+    let validInputs = true;
+    for (const { checkbox, input, label, min, max } of checks) {
+      if (checkbox?.checked) {
+        const errs = validateTimePeriodInput(label, input?.value?.trim(), min, max);
+        if (errs.length) {
+          errors.push(...errs);
+          validInputs = false;
         }
       }
+    }
+
+    // Additional since/until comparison check
+    if (validInputs && sinceCheckbox?.checked && untilCheckbox?.checked) {
+      if (compareTimes(sinceInput?.value?.trim(), untilInput?.value?.trim()) > 0) {
+        errors.push("'Since Time Period' must be before 'Until Time Period'");
+        validInputs = false;
+      }
+    }
+
+    // Save preferences if all validations passed
+    if (validInputs) {
+      const timePrefs = dimensionPrefs.time || {
+        label: metadata.dimension.time.label,
+        category: dimensionPrefs.time?.category || { index: {}, label: {} },
+      };
+
+      if (sinceCheckbox?.checked) timePrefs.sinceTimePeriod = sinceInput?.value?.trim();
+      if (untilCheckbox?.checked) timePrefs.untilTimePeriod = untilInput?.value?.trim();
+      if (lastCheckbox?.checked) timePrefs.lastTimePeriod = lastInput?.value?.trim();
+
+      dimensionPrefs.time = timePrefs;
     }
   }
 
@@ -570,49 +615,127 @@ function parseMetadata(code, data) {
     }
 
     if (key === "time") {
-      // Add sinceTimePeriod checkbox and input
-      const sinceWrapper = document.createElement("div");
-      sinceWrapper.style.marginTop = "10px";
+      // Add sinceTimePeriod, untilTimePeriod checkboxes and inputs
+      const timePeriodControlsWrapper = document.createElement("div");
+      timePeriodControlsWrapper.id = "timePeriodControlsWrapper";
 
       const sinceCheckbox = document.createElement("input");
       sinceCheckbox.type = "checkbox";
       sinceCheckbox.id = "sinceTimePeriodCheckbox";
+      sinceCheckbox.classList.add("metadata-checkbox");
 
       const sinceLabel = document.createElement("label");
       sinceLabel.textContent = "Since Time Period:";
       sinceLabel.setAttribute("for", "sinceTimePeriodCheckbox");
-      sinceLabel.classList.add("noselect");
+      sinceLabel.classList.add("metadata-checkbox-label", "noselect");
 
       const sinceInput = document.createElement("input");
       sinceInput.type = "text";
-      sinceInput.placeholder = "e.g., 2004-S2";
+      sinceInput.placeholder = "e.g., 2010-S2";
       sinceInput.id = "sinceTimePeriodInput";
+      sinceInput.classList.add("hidden");
+
+      const untilCheckbox = document.createElement("input");
+      untilCheckbox.type = "checkbox";
+      untilCheckbox.id = "untilTimePeriodCheckbox";
+      untilCheckbox.classList.add("metadata-checkbox");
+
+      const untilLabel = document.createElement("label");
+      untilLabel.textContent = "Until Time Period:";
+      untilLabel.setAttribute("for", "untilTimePeriodCheckbox");
+      untilLabel.classList.add("metadata-checkbox-label", "noselect");
+
+      const untilInput = document.createElement("input");
+      untilInput.type = "text";
+      untilInput.placeholder = "e.g., 2020";
+      untilInput.id = "untilTimePeriodInput";
+      untilInput.classList.add("hidden");
+
+      const lastCheckbox = document.createElement("input");
+      lastCheckbox.type = "checkbox";
+      lastCheckbox.id = "lastTimePeriodCheckbox";
+      lastCheckbox.classList.add("metadata-checkbox");
+
+      const lastLabel = document.createElement("label");
+      lastLabel.textContent = "Last Time Period:";
+      lastLabel.setAttribute("for", "lastTimePeriodCheckbox");
+      lastLabel.classList.add("metadata-checkbox-label", "noselect");
+
+      const lastInput = document.createElement("input");
+      lastInput.type = "text";
+      lastInput.placeholder = "e.g., 3";
+      lastInput.id = "lastTimePeriodInput";
+      lastInput.classList.add("hidden");
 
       // Preload from dimensionPrefs if exists
-      const pref = metadataMap[code]?.dimensionPrefs?.time?.sinceTimePeriod;
-      if (pref) {
+      const sinceTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.sinceTimePeriod;
+      const untilTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.untilTimePeriod;
+      const lastTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.lastTimePeriod;
+
+      if (sinceTimePeriodPref) {
         sinceCheckbox.checked = true;
-        sinceInput.value = pref;
+        sinceInput.value = sinceTimePeriodPref;
+        sinceInput.classList.remove("hidden");
+      }
+      if (untilTimePeriodPref) {
+        untilCheckbox.checked = true;
+        untilInput.value = untilTimePeriodPref;
+        untilInput.classList.remove("hidden");
+      }
+      if (lastTimePeriodPref) {
+        lastCheckbox.checked = true;
+        lastInput.value = lastTimePeriodPref;
+        lastInput.classList.remove("hidden");
       }
 
-      function toggleTimeCheckboxes(disabled) {
+      function toggleTimeCheckboxes(sinceTimePeriod = false, untilTimePeriod = false, lastTimePeriod = false) {
+        sinceTimePeriod ? sinceInput.classList.remove("hidden") : sinceInput.classList.add("hidden");
+        untilTimePeriod ? untilInput.classList.remove("hidden") : untilInput.classList.add("hidden");
+        lastTimePeriod ? lastInput.classList.remove("hidden") : lastInput.classList.add("hidden");
+        
+        const anyTimeControlsChecked = sinceTimePeriod || untilTimePeriod || lastTimePeriod;
+
         const timeCheckboxes = inner.querySelectorAll(`input[name="time"]`);
         timeCheckboxes.forEach((cb) => {
-          cb.disabled = disabled;
-          cb.parentElement.style.opacity = disabled ? 0.5 : 1;
+          cb.disabled = anyTimeControlsChecked;
+          cb.parentElement.style.opacity = anyTimeControlsChecked ? 0.5 : 1;
         });
       }
 
       sinceCheckbox.addEventListener("change", () => {
-        toggleTimeCheckboxes(sinceCheckbox.checked);
+        toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked);
       });
 
-      toggleTimeCheckboxes(sinceCheckbox.checked); // Initial state
+      untilCheckbox.addEventListener("change", () => {
+        toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked);
+      });
 
-      sinceWrapper.appendChild(sinceCheckbox);
-      sinceWrapper.appendChild(sinceLabel);
-      sinceWrapper.appendChild(sinceInput);
-      inner.prepend(sinceWrapper);
+      lastCheckbox.addEventListener("change", () => {
+        toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked);
+      });
+
+      toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked); // Initial state
+
+      const line1 = document.createElement("div");
+      const line2 = document.createElement("div");
+      const line3 = document.createElement("div");
+
+      line1.appendChild(sinceCheckbox);
+      line1.appendChild(sinceLabel);
+      line1.appendChild(sinceInput);
+
+      line2.appendChild(untilCheckbox);
+      line2.appendChild(untilLabel);
+      line2.appendChild(untilInput);
+
+      line3.appendChild(lastCheckbox);
+      line3.appendChild(lastLabel);
+      line3.appendChild(lastInput);
+
+      timePeriodControlsWrapper.appendChild(line1);
+      timePeriodControlsWrapper.appendChild(line2);
+      timePeriodControlsWrapper.appendChild(line3);
+      inner.prepend(timePeriodControlsWrapper);
     }
 
     wrapper.appendChild(toggle);
@@ -698,6 +821,11 @@ async function fetchAllMetadata() {
 }
 
 async function saveAllMetadata() {
+  const result = saveCurrentMetadata();
+  if (!result.success) {
+    alert(`Please fix errors before saving:\n\n- ${result.errors?.join('\n- ')}`);
+    return;
+  }
   localStorage.setItem(
     "selectedDatasets",
     JSON.stringify([...datasetMap.values()])

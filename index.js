@@ -313,11 +313,25 @@ function buildUrls(data) {
             if (key == "geo") {
                 continue;
             }
-            if (key == "time" && dimension.sinceTimePeriod) {
+            if (key == "time") {
+              let skip = false;
+              if (dimension.sinceTimePeriod) {
                 values.push(`sinceTimePeriod=${dimension.sinceTimePeriod}`);
-                continue;
+                skip = true;
+              }
+              if (dimension.untilTimePeriod) {
+                values.push(`untilTimePeriod=${dimension.untilTimePeriod}`);
+                skip = true;
+              }
+              if (dimension.lastTimePeriod) {
+                values.push(`lastTimePeriod=${dimension.lastTimePeriod}`);
+                skip = true;
+              }
+              if (skip) continue;
             }
-            values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);
+            if (Object.keys(dimension.category.label).length) {
+              values.push(`${key}=${Object.keys(dimension.category.label).join(`&${key}=`)}`);
+            }
         }
 
         const url = `${BASE_URL}/${filename}?${values.join("&")}`;
