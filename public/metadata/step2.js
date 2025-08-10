@@ -558,6 +558,8 @@ function parseMetadata(code, data) {
 
   const requiredSelections = {};
 
+  const hasOwn = Object.prototype.hasOwnProperty;
+
   Object.entries(dimensions).forEach(([key, dim]) => {
     if (key === "geo") {
       return;
@@ -579,13 +581,6 @@ function parseMetadata(code, data) {
     const categories = dim.category?.index || {};
     const labels = dim.category?.label || {};
 
-    const selectedItems =
-      metadataMap[code] && metadataMap[code].dimensionPrefs
-        ? Object.keys(metadataMap[code].dimensionPrefs[key].category.index)
-        : null;
-
-    // console.log(selectedItems);
-
     for (const [cat, idx] of Object.entries(categories)) {
       const checkbox = document.createElement("input");
       checkbox.classList.add("metadata-checkbox");
@@ -593,13 +588,9 @@ function parseMetadata(code, data) {
       checkbox.value = cat;
       checkbox.name = key;
       checkbox.id = `${key}_${cat}`;
-      checkbox.checked = selectedItems ? selectedItems.includes(cat) : true;
 
-      // time always checked
-      if (key === "time" || Object.values(dim.category?.index).length === 1) {
-        checkbox.checked = true;
-        // checkbox.disabled = true;
-      }
+      const prefs = metadataMap[code]?.dimensionPrefs?.[key]?.category?.index;
+      checkbox.checked = prefs ? hasOwn.call(prefs, cat) : true;
 
       const label = document.createElement("label");
       label.classList.add("metadata-checkbox-label");
