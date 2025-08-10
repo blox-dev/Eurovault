@@ -104,13 +104,6 @@ function renderDatasets() {
     tr.querySelector("td.fetch-dataset").addEventListener(
       "click",
       async (e) => {
-        // update stuff
-        tbody
-          .querySelectorAll("tr.selected-row")
-          .forEach((r) => r.classList.remove("selected-row"));
-
-        tr.classList.add("selected-row");
-
         if (currentEditingCode) {
           const saveResponse = saveCurrentMetadata();
           if (!saveResponse.success) {
@@ -118,6 +111,11 @@ function renderDatasets() {
             return;
           }
         }
+        tbody
+          .querySelectorAll("tr.selected-row")
+          .forEach((r) => r.classList.remove("selected-row"));
+
+        tr.classList.add("selected-row");
 
         if (metadataMap[node.code]) {
           parseMetadata(node.code, metadataMap[node.code]);
