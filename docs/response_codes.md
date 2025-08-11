@@ -38,6 +38,7 @@ Fields:
 
 ### Warning - 4xx
 
+- status: "warning", id: 400, message: "ASYNCHRONOUS_RESPONSE"
 
 ### Error - 5xx
 
@@ -45,5 +46,7 @@ Fields:
 - status: "error", id: 500, message: "Metadata error", reason: "Metadata not fetched"
 
 - status: "error", id: 501, message: "Failed to fetch data", reason: data.error
+
+- status: "error", id: 502, message: "Failed to fetch data", reason: The request fetched no data
 
 - status: "error", id: 599, message: "Metadata error", reason: "Something is very wrong with the metadata"

@@ -385,10 +385,20 @@ async function updateDatabase(metadata) {
     const files = metadata.files;
 
     let currentTime = getEurostatFormatCurrentTime();
+
+    function isEmpty(obj) {
+      for (var prop in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, prop)) {
+          return false;
+        }
+      }
+      return true;
+    }
     
     const promises = files.map((file) => {
-        // metadata.updated, file.updated - when did we last update the data from eurostat
-        // metadata.fetched, file.fetched  - when did we last download the data from eurostat
+        // file.updated - when did eurostat last update the data
+        // file.fetched  - when did we last download the data from eurostat
+        // metadata.updated - when did we last update the metadata file
         // if we never downloaded data or 30 days passed since last download, trigger update
         const code = file.code;
         if (!file._status?.metadata?.status) {
@@ -404,7 +414,15 @@ async function updateDatabase(metadata) {
             .then(res => res.json())
             .then(data => {
                 if (data.error) {
-                    return {code: code, status: "error", id: 501, message: "Failed to fetch data", reason: data.error}
+                  // mark asynchronous response as warning only
+                  if (data.error.label?.includes("ASYNCHRONOUS_RESPONSE")) {
+                    return {code: code, status: "warning", id: 400, message: 'ASYNCHRONOUS_RESPONSE', reason: label};
+                  }
+                  return {code: code, status: "error", id: 501, message: "Failed to fetch data", reason: data.error};
+                }
+                // no data in response
+                if (isEmpty(data.value)) {
+                    return { code: code, status: "error", id: 502, message: "Failed to fetch data", reason: "The request fetched no data" };
                 }
 
                 const csvData = JSON2CSV(data);
@@ -437,7 +455,6 @@ async function updateDatabase(metadata) {
         
         if (response.id === 302) {
           // Data doesn't need an update
-          file._status.data.fetched = currentTime;
           continue;
         }
 
@@ -449,9 +466,11 @@ async function updateDatabase(metadata) {
         console.log(`Updated ${code}.json`);
         await fs.promises.writeFile(csvFilePath, csvData);
         console.log(`Updated ${code}.csv`);
+
+        file._status.data.fetched = currentTime;
     }
 
-    metadata.fetched = currentTime;
+    // metadata.fetched = currentTime;
     const metadataPath = path.join(DATA_FOLDER_PATH, 'metadata2.json');
     await fs.promises.writeFile(metadataPath, JSON.stringify(metadata, null, 2));
     console.log("Updated metadata2.json");
