@@ -176,7 +176,7 @@ app.post('/fetch-metadata', async (req, res) => {
   if (apiError) {
     const { status, label } = apiError;
 
-    // Case: EXTRACTION_TOO_BIG -> Retry with sinceTimePeriod
+    // Case: EXTRACTION_TOO_BIG -> Step1. Retry with sinceTimePeriod
     if (label.includes("EXTRACTION_TOO_BIG") && !extraParams.sinceTimePeriod) {
       const retryUrl = `${BASE_URL}/${nodeCode}?${new URLSearchParams({
         ...extraParams,
@@ -185,23 +185,69 @@ app.post('/fetch-metadata', async (req, res) => {
 
       const retryResult = await attemptFetch(retryUrl);
 
-      if (retryResult.ok && !retryResult.data?.error) {
+      if (!retryResult.ok || retryResult.data?.error) {
         return res.json({
           code: nodeCode,
-          status: 'success',
-          id: 0,
-          message: "Fetched metadata",
-          data: retryResult.data,
+          status: 'error',
+          id: 210,
+          message: 'Error while fixing EXTRACTION_TOO_BIG',
+          reason: retryResult.data?.error?.[0]?.label || 'Unknown retry failure',
+          userAction: ['remove'],
         });
+      }
+
+      let retryData = retryResult.data;
+      let dimension = retryData.dimension;
+
+      // Step2. Fetch time dimension values by constructing minimal query
+      let newParams = {...extraParams};
+      for (const [dimName, values] of Object.entries(dimension)) {
+        const keys = Object.keys(values?.category?.index);
+        if (keys.length) {
+          newParams[dimName] = keys[0];
+        }
+      }
+
+      const timeUrl = `${BASE_URL}/${nodeCode}?${new URLSearchParams({
+        ...newParams
+      }).toString()}`;
+
+      const timeResult = await attemptFetch(timeUrl);
+
+      if (!timeResult.ok || timeResult.data?.error) {
+        return res.json({
+          code: nodeCode,
+          status: 'error',
+          id: 210,
+          message: 'Error while fixing EXTRACTION_TOO_BIG',
+          reason: timeResult.data?.error?.[0]?.label || 'Unknown retry failure',
+          userAction: ['remove'],
+        });
+      }
+
+      const timeData = timeResult.data?.dimension?.time;
+
+      // Step 3. Inject timeData into retryResult and return it
+      if (timeData) {
+        retryData.dimension.time = timeData;
+
+        const timeIndex = timeResult.data.id.findIndex(x => x === "time");
+        if (timeIndex != -1) {
+          const timeSize = timeResult.data.size[timeIndex];
+
+          const retryTimeIndex = retryData.id.findIndex(x => x === "time");
+          if (timeIndex != -1) {
+            retryData.size[retryTimeIndex] = timeSize;
+          }
+        } 
       }
 
       return res.json({
         code: nodeCode,
-        status: 'error',
-        id: 210,
-        message: 'Error while fixing EXTRACTION_TOO_BIG',
-        reason: retryResult.data?.error?.[0]?.label || 'Unknown retry failure',
-        userAction: ['remove'],
+        status: 'success',
+        id: 0,
+        message: "Fetched metadata",
+        data: retryData,
       });
     };
 
