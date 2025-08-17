@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import {compareTimes, parseTime} from './public/js/utils.js';
+import {getEurostatFormatCurrentTime, compareTimes, parseTime} from './public/js/utils.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -566,35 +566,12 @@ function generateHtml(data) {
     )).join('');
 }
 
-function getEurostatFormatCurrentTime() {
-  const date = new Date();
-
-  const pad = (num) => String(num).padStart(2, "0");
-
-  const yyyy = date.getFullYear();
-  const mm = pad(date.getMonth() + 1);
-  const dd = pad(date.getDate());
-  const hh = pad(date.getHours());
-  const min = pad(date.getMinutes());
-  const ss = pad(date.getSeconds());
-
-  // Get timezone offset in minutes and convert to ±HHMM
-  const tzOffset = -date.getTimezoneOffset(); // invert sign
-  const tzSign = tzOffset >= 0 ? "+" : "-";
-  const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));
-  const tzMinutes = pad(Math.abs(tzOffset) % 60);
-
-  const tzString = `${tzSign}${tzHours}${tzMinutes}`;
-
-  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
-}
-
 function moreThan30DaysApart (dateString1, dateString2) {
     const date1 = Date.parse(dateString1);
     const date2 = Date.parse(dateString2);
 
     return Math.abs(date1 - date2) > (30 * 24 * 60 * 60 * 1000);
-    //                      day  hour min  sec  msec
+    //                                day  hour min  sec  msec
 }
 
 async function updateDatabase(metadata) {

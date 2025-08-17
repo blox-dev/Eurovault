@@ -1,3 +1,5 @@
+import {getEurostatFormatCurrentTime, compareTimes, parseTime} from '../js/utils.js';
+
 // TODO BUG: refreshing the page after saving changes metadata loses
 // track of the saved changes since the metadata file is not
 // imported in the beginning and we rely solely on localstorage
@@ -33,29 +35,6 @@ if (localStorage) {
 }
 
 console.log("datasetMap", datasetMap);
-
-function getEurostatFormatCurrentTime() {
-  const date = new Date();
-
-  const pad = (num) => String(num).padStart(2, "0");
-
-  const yyyy = date.getFullYear();
-  const mm = pad(date.getMonth() + 1);
-  const dd = pad(date.getDate());
-  const hh = pad(date.getHours());
-  const min = pad(date.getMinutes());
-  const ss = pad(date.getSeconds());
-
-  // Get timezone offset in minutes and convert to HHMM
-  const tzOffset = -date.getTimezoneOffset(); // invert sign
-  const tzSign = tzOffset >= 0 ? "+" : "-";
-  const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));
-  const tzMinutes = pad(Math.abs(tzOffset) % 60);
-
-  const tzString = `${tzSign}${tzHours}${tzMinutes}`;
-
-  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
-}
 
 function renderDatasets() {
   const tbody = document.querySelector("#dataset-table tbody");
@@ -309,28 +288,6 @@ function handleMetadataResponse(response) {
       break; 
     }
   }
-}
-
-function parseTime(t) {
-  if (typeof t === "number" && Number.isFinite(t)) {
-    return { year: t, suffix: "" };
-  }
-
-  if (typeof t !== "string") {
-    return { year: -Infinity, suffix: "" };
-  }
-
-  const match = t.match(/^(\d+)(?:[-_]?([A-Za-z0-9]+))?$/);
-  return match
-    ? { year: +match[1], suffix: match[2] || "" }
-    : { year: -Infinity, suffix: "" };
-}
-
-function compareTimes(a, b) {
-  const ta = parseTime(a);
-  const tb = parseTime(b);
-  if (ta.year !== tb.year) return ta.year - tb.year;
-  return ta.suffix.localeCompare(tb.suffix);
 }
 
 function saveCurrentMetadata() {

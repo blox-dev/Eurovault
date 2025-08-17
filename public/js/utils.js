@@ -8,7 +8,7 @@ export function parseTime(t) {
   if (typeof t !== "string") {
     return { year: -Infinity, suffix: "" };
   }
-  
+
   const match = t.match(/^(\d+)(?:[-_]?([A-Za-z0-9]+))?$/);
   return match
     ? { year: +match[1], suffix: match[2] || "" }
@@ -160,4 +160,27 @@ export function shorten(input) {
   const cleaned = removeExplanation(input);
   const phraseReplaced = applyPhraseRules(cleaned);
   return applyWordRules(phraseReplaced);
+}
+
+export function getEurostatFormatCurrentTime() {
+  const date = new Date();
+
+  const pad = (num) => String(num).padStart(2, "0");
+
+  const yyyy = date.getFullYear();
+  const mm = pad(date.getMonth() + 1);
+  const dd = pad(date.getDate());
+  const hh = pad(date.getHours());
+  const min = pad(date.getMinutes());
+  const ss = pad(date.getSeconds());
+
+  // Get timezone offset in minutes and convert to ±HHMM
+  const tzOffset = -date.getTimezoneOffset(); // invert sign
+  const tzSign = tzOffset >= 0 ? "+" : "-";
+  const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));
+  const tzMinutes = pad(Math.abs(tzOffset) % 60);
+
+  const tzString = `${tzSign}${tzHours}${tzMinutes}`;
+
+  return `${yyyy}-${mm}-${dd}T${hh}:${min}:${ss}${tzString}`;
 }
