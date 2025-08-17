@@ -838,10 +838,16 @@ async function saveAllMetadata() {
       }),
     });
 
-    if (!res.ok) throw new Error("Failed to save metadata");
+    const data = await res.json();
 
-    const msg = await res.text();
-    console.log(msg);
+    if (!res.ok || !data.success) {
+      // Validation or server error
+      console.error("Validation failed:", data.errors);
+      alert(`Failed to save metadata:\n\n- ${data.errors?.join('\n- ')}`);
+      return false;
+    }
+
+    console.log(data.message);
     return true;
   } catch (err) {
     console.error(`Error: ${err.message}`);

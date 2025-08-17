@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import {compareTimes, parseTime} from './public/js/utils.js';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
@@ -107,6 +109,7 @@ const geo = [
 
 const format = 'JSON';
 const language = 'EN';
+const MAX_ROWS = 5000000;
 
 // Ensure folder structure
 [DATA_FOLDER_PATH, FILES_FOLDER_PATH, PUBLIC_FOLDER_PATH].forEach(folder => {
@@ -122,9 +125,174 @@ app.use('/public', express.static(PUBLIC_FOLDER_PATH));
 app.use(express.json({ limit: "50mb" }));
 app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }));
 
+function validateMetadataObject(metadata) {
+  const errors = [];
+
+  // Root-level check
+  if (!metadata.files || !Array.isArray(metadata.files)) {
+    errors.push("Root object must contain 'files' as an array.");
+    return errors;
+  }
+
+  for (let index = 0; index < metadata.files.length ; index++) {
+    let file = metadata.files[index];
+    
+    // --- Basic structural checks ---
+    if (!file.code || typeof file.code !== "string") {
+      errors.push(`File [${index}]: Missing file code`);
+      continue;
+    }
+    const fileId = file.code;
+
+    if (!file._status || typeof file._status !== "object") {
+      errors.push(`File ${fileId}: Missing or invalid _status`);
+      continue;
+    }
+    if (!file._status.metadata || typeof file._status.metadata !== "object") {
+      errors.push(`File ${fileId}: Missing or invalid _status.metadata`);
+    }
+
+    if (!file.dimension || typeof file.dimension !== "object") {
+      errors.push(`File ${fileId}: Missing or invalid dimension`);
+      continue;
+    }
+    if (!file.dimensionPrefs || typeof file.dimensionPrefs !== "object") {
+      errors.push(`File ${fileId}: Missing or invalid dimensionPrefs`);
+      continue;
+    }
+
+    // Count total number of rows, must be under 5mil (eurostat)
+    // Start by multiplying with number of countries fetched
+    let totalRows = geo.length;
+
+    // --- dimensionPrefs vs dimension check ---
+    for (const prefKey of Object.keys(file.dimensionPrefs)) {
+      if (!(prefKey in file.dimension)) {
+        errors.push(`File ${fileId}: dimensionPrefs has key '${prefKey}' not present in dimension`);
+      } else {
+        // Check that all categories in prefs exist in dimension
+        const prefCat = file.dimensionPrefs[prefKey].category || {};
+        const dimCat = file.dimension[prefKey].category || {};
+        const dimIndex = dimCat.index || {};
+        const catKeys = Object.keys(prefCat.index || {});
+
+        if (!catKeys.length) {
+          errors.push(`File ${fileId}: ${prefKey} has 0 selected values.`);
+        }
+
+        // we handle time approximation below
+        if (prefKey !== "time" && catKeys.length) {
+          totalRows *= catKeys.length;
+        }
+        for (const catKey of catKeys) {
+          if (!(catKey in dimIndex)) {
+            errors.push(`File ${fileId}: dimensionPrefs[${prefKey}] has invalid category '${catKey}' not in dimension`);
+          }
+        }
+      }
+    }
+
+    // --- Time validations (if present) ---
+    if (file.dimension.time) {
+      const timeCategories = Object.keys(file.dimension.time.category.index || {});
+      let minTime = "1000", maxTime = "9999";
+      if (timeCategories.length) {
+        minTime = timeCategories.reduce((min, c) => compareTimes(min, c) < 0 ? min : c);
+        maxTime = timeCategories.reduce((max, c) => compareTimes(max, c) > 0 ? max : c);
+      }
+
+      const prefs = file.dimensionPrefs.time || {};
+      const { sinceTimePeriod, untilTimePeriod, lastTimePeriod } = prefs;
+
+      if (lastTimePeriod && (sinceTimePeriod || untilTimePeriod)) {
+        errors.push(`File ${fileId}: 'Last Time Period' cannot be combined with 'Since/Until Time Period'`);
+      }
+
+      function validateTime(label, value, min, max) {
+        if (!value) return [`${label} is missing`];
+        const parsed = parseTime(value);
+        if (parsed.year === -Infinity) return [`${label} must be numeric`];
+        if (compareTimes(value, min) < 0 || compareTimes(value, max) > 0) {
+          return [`${label} must be between ${min} and ${max}`];
+        }
+        return [];
+      }
+
+      let validInputs = true;
+
+      if (sinceTimePeriod) {
+        const valErrors = validateTime("Since Time Period", sinceTimePeriod, minTime, maxTime);
+        if (valErrors.length) {
+          validInputs = false;
+        }
+        errors.push(...valErrors);
+      }
+      if (untilTimePeriod) {
+        const valErrors = validateTime("Until Time Period", untilTimePeriod, minTime, maxTime);
+        if (valErrors.length) {
+          validInputs = false;
+        }
+        errors.push(...valErrors);
+      }
+      if (lastTimePeriod) {
+        const valErrors = validateTime("Last Time Period", lastTimePeriod, "1", "9999");
+        if (valErrors.length) {
+          validInputs = false;
+        }
+        errors.push(...valErrors);        
+      }
+
+      if (validInputs && sinceTimePeriod && untilTimePeriod) {
+        if (compareTimes(sinceTimePeriod, untilTimePeriod) > 0) {
+          errors.push(`File ${fileId}: 'Since Time Period' must be before 'Until Time Period'`);
+        }
+      }
+
+      // time approximation
+      let totalTimes;
+
+      if (!validInputs) {
+        totalTimes = timeCategories.length;
+      } else {
+        if (lastTimePeriod) {
+          totalTimes = Math.min(lastTimePeriod, timeCategories.length);
+        } else {
+          let betweenTimes = timeCategories.filter(x => {
+            if (sinceTimePeriod && compareTimes(x, sinceTimePeriod) < 0) {
+              return false;
+            }
+            if (untilTimePeriod && compareTimes(x, untilTimePeriod) > 0) {
+              return false;
+            }
+            return true;
+          })
+          totalTimes = betweenTimes.length;
+        }
+      }
+
+      totalRows *= totalTimes;
+    }
+
+    if (totalRows >= MAX_ROWS) {
+      errors.push(`File ${fileId}: The requested extraction is too big, estimated ${totalRows} rows, max authorised is ${MAX_ROWS}, please change your filters to reduce the extraction size`);
+    }
+  }
+
+  return errors;
+}
+
 // Route to save metadata
 app.post('/save-metadata', (req, res) => {
   const metadata = req.body;
+
+  let errors = validateMetadataObject(metadata);
+
+  if (errors.length > 0) {
+    return res.status(400).json({
+      success: false,
+      errors: errors,
+    });
+  }
 
   const filePath = path.join(__dirname, 'data', 'metadata2.json');
 
@@ -133,9 +301,12 @@ app.post('/save-metadata', (req, res) => {
   fs.writeFile(filePath, JSON.stringify(metadata, null, 2), (err) => {
     if (err) {
       console.error('Error writing metadata:', err);
-      return res.status(500).send('Failed to save metadata');
+      return res.status(500).json({
+        success: false,
+        errors: ['Failed to save metadata'],
+      });
     }
-    res.send('Metadata saved successfully');
+    res.json({ success: true, message: 'Metadata saved successfully' });
   });
 });
 
