@@ -436,6 +436,7 @@ if ("time" in metadata.dimension) {
     // Flag for file reset when saving
     metadataMap[currentEditingCode].hasChanges = true;
     metadataMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
+    metadataMap[currentEditingCode]._status.data = {};
   }
 
   const node = datasetMap.get(currentEditingCode);
