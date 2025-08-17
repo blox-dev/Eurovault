@@ -1,7 +1,10 @@
-const express = require('express');
-const fs = require('fs');
-const fetch_old = require('node-fetch');
-const path = require('path');
+import express from 'express';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
 
 const DATA_FOLDER_PATH = path.resolve(__dirname, 'data');
@@ -115,11 +118,9 @@ const language = 'EN';
 // Serve static files
 app.use('/data', express.static(DATA_FOLDER_PATH));
 app.use('/public', express.static(PUBLIC_FOLDER_PATH));
-// app.use(express.json()); // To parse JSON bodies
 
-var bodyParser = require('body-parser');
-app.use(bodyParser.json({limit: "50mb"}));
-app.use(bodyParser.urlencoded({limit: "50mb", extended: true, parameterLimit:50000}));
+app.use(express.json({ limit: "50mb" }));
+app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 50000 }));
 
 // Route to save metadata
 app.post('/save-metadata', (req, res) => {
