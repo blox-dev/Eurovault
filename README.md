@@ -1,15 +1,12 @@
 # EuroVault
 
-## Overview
-
 European Statistics Visualisation Tool
 
 ## Features
 
-- **Interactive Map**: Easily view and compare data across EU countries.
-- **Clear Visuals**: Data is displayed in an intuitive way to help users make informed decisions.
-- **Customizable Preferences**: Choose what matters most to you, such as cost of living, job opportunities, or quality of life.
-- **Up-to-Date Information**: Access the latest statistics from Eurostat.
+- **Interactive Map**: View and compare data across EU countries
+- **Customizable Preferences**: Choose what data you want to see, by selecting different datasets, parameters and time periods
+- **Up-to-Date Information**: Access the latest statistics from Eurostat through the metadata editor
 
 ## Technologies Used
 
@@ -18,16 +15,14 @@ European Statistics Visualisation Tool
   - [Map](https://ec.europa.eu/eurostat/web/gisco/geodata/administrative-units)
   <!-- - [Codelist](https://webgate.ec.europa.eu/fusionregistry/search.html?search=SCL_UNIT) -->
 - **Frameworks & Libraries**:
-  - [D3.js](https://d3js.org/) (Displays the interactive map and process statistical data)
+  - [D3.js](https://d3js.org/)
   - [Node.js](https://nodejs.org/)
 
 ## Installation
 
-Want to try it out? Follow these steps:
-
 ### Prerequisites
 
-Make sure you have Node.js installed (version 14.0 or later).
+Make sure you have [Node.js](https://nodejs.org/en/download) installed (version 14.0 or later)
 
 ### Steps
 
@@ -47,16 +42,17 @@ Make sure you have Node.js installed (version 14.0 or later).
 
 ## Usage
 
-1. Open your browser and go to `http://localhost:3000/`.
-2. Browse the interactive map to compare EU countries.
-3. Use filters to find the best country for your needs.
-4. Download and explore more datasets using the data editor.
+1. Open your browser and go to `http://localhost:3000/`
+2. Browse the interactive map to compare EU countries
+3. Use the dataset picker, filters and time scale to explore data
+4. Download and explore more datasets using the metadata editor
 
 ## Video Demo
 
-Check out our demo video to see EuroVault in action:  
-[Watch the video](https://blox-dev.github.io/demos/eurovault.mp4)
+Check out our live demo to see EuroVault in action: 
+
+[Try the demo](https://blox-dev.github.io/demos/live/eurovault/index.html)
 
 ## License
 
-This project is available under the MIT License.
+This project is available under the MIT License

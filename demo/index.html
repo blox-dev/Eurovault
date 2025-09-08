@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Europe Vault</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="lib/d3.v7.min.js"></script>
+  </head>
+
+  <body>
+    <div id="chart-tooltip"></div>
+    <div id="map-tooltip"></div>
+    <!-- Main container -->
+    <div id="main-container">
+      <!-- Container for D3 Map -->
+      <div id="map-container">
+        <div id="info-panel">
+          <div id="info-title">
+            <span id="info-label"></span>
+            <span id="info-help" class="hidden">?</span>
+          </div>
+          <div id="color-legend"></div>
+          <div id="time-slider-container"></div>
+        </div>
+        <div id="info-description" class="hidden"></div>
+      </div>
+
+      <!-- Container for controls -->
+      <div id="controls-container">
+        <!-- Dataset Panel -->
+        <div id="dataset-panel" class="control-panel">
+          <h2 class="control-title">Dataset</h2>
+          <div class="control-group">
+            <select id="dataset-select"></select>
+          </div>
+        </div>
+
+        <!-- Filters Panel -->
+        <div id="filters-panel" class="control-panel">
+          <h2 class="control-title">Filters</h2>
+          <div id="filter-panel">
+          </div>
+        </div>
+      </div>
+
+      <!-- Container for charts -->
+      <div id="chart-container">
+        <div id="controls-tooltip">
+          <p><b>&lArr; Use</b> the slider to change the timeline</p>
+          <p><b>Click</b> on a country to see more details</p>
+          <p><b>Shift + Click</b> on countries to compare them</p>
+          <p>To see more data, check out the full version <a href="https://github.com/blox-dev/Eurovault" target="_blank" rel="noreferrer">here</a></p>
+        </div>
+        <div id="chart-container-inner"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
