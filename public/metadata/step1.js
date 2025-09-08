@@ -57,10 +57,10 @@ fetch("/data/table_of_contents.xml")
     }
 
     // // Fetch existing metadata
-    fetch("/data/metadata2.json")
+    fetch("/data/metadata.json")
       .then(response => response.json())
       .then(data => {
-        console.log("Metadata2:", data);
+        console.log("Metadata:", data);
         console.log(data.files.length);
 
         for (let file of data.files) {

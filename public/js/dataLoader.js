@@ -4,7 +4,7 @@ import { setupControls } from "./controls.js";
 import { state } from "./state.js";
 
 export function fetchMetadata() {
-  fetch("/data/metadata2.json")
+  fetch("/data/metadata.json")
     .then((res) => res.json())
     .then((data) => {
       state.metadata = {}; // Store metadata in global variable
