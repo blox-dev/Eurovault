@@ -45,20 +45,26 @@ export function fetchMapData() {
         .attr("stroke", "#333")
         .attr("stroke-width", 0.25);
 
+      let mapTooltip = d3.select("#map-tooltip");
+      const zoom = d3
+        .zoom()
+        .scaleExtent([1, 10])
+        .translateExtent([
+          [-200, -200],
+          [width + 200, height + 200],
+        ]);
+
       // only on desktop
       if (window.innerWidth > 768) {
+        zoom.on("zoom", (event) => g.attr("transform", event.transform));
         g.selectAll("path").on("click", handleMapPathClick);
+      } else {
+        zoom.on("zoom", (event) => {
+          g.attr("transform", event.transform);
+          mapTooltip.style("display", "none");
+        });
       }
-      svg.call(
-        d3
-          .zoom()
-          .scaleExtent([1, 10])
-          .translateExtent([
-            [-200, -200],
-            [width + 200, height + 200],
-          ])
-          .on("zoom", (event) => g.attr("transform", event.transform))
-      );
+      svg.call(zoom);
       fetchMetadata();
     })
     .catch((error) => {
@@ -75,7 +81,7 @@ export function handleMapPathClick(event, d) {
       state.chartedCountries.size > 1
     ) {
       state.chartedCountries.delete(geoCode);
-    } else if (state.chartedCountries.size < 10){
+    } else if (state.chartedCountries.size < 10) {
       state.chartedCountries.add(geoCode);
     }
 

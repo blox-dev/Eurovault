@@ -230,6 +230,8 @@ svg {
 /* Desktop */
 @media (min-width: 768px) {
   #main-container {
+    width: 100%;
+    height: 100%;
     grid-template-columns: 60% 40%;
     grid-template-rows: 30% 70%;
     grid-template-areas:
