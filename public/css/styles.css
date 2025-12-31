@@ -148,7 +148,6 @@ svg {
   overflow: auto;
 }
 
-/* Control panel styling */
 .control-panel {
   display: flex;
   flex-direction: column;
@@ -226,8 +225,6 @@ svg {
   background-color: #fff;
 }
 
-/* Responsive layouts */
-/* Desktop */
 @media (min-width: 768px) {
   #main-container {
     width: 100%;
@@ -245,7 +242,6 @@ svg {
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   #main-container {
     grid-template-columns: 1fr;

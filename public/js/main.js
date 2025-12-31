@@ -3,7 +3,7 @@
 import { fetchMapData } from "./map.js";
 import { state } from "./state.js";
 
-// Permanent DOM elements
+// permanent DOM elements
 export const mainContainer = d3.select("#main-container");
 export const mapContainer = d3.select("#map-container");
 export const controlsContainer = d3.select("#controls-container");

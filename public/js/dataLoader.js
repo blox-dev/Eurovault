@@ -7,7 +7,7 @@ export function fetchMetadata() {
   fetch("/data/metadata.json")
     .then((res) => res.json())
     .then((data) => {
-      state.metadata = {}; // Store metadata in global variable
+      state.metadata = {}; // store metadata in global variable
 
       for (let file of data.files) {
         if (file._status?.data?.status !== "success") {
@@ -17,11 +17,11 @@ export function fetchMetadata() {
         state.metadata[file.code] = file;
       }
 
-      // Get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
+      // get all the dataset keys (e.g., 'SDG_08_10', 'EDUC_UOE_MOBS04', etc.)
       const datasetKeys = Object.keys(state.metadata);
       const firstKey = datasetKeys[0];
 
-      // Load only the first dataset
+      // load only the first dataset
       d3.csv(`/data/files/${firstKey}.csv`)
         .then((csv) => {
           state.datasets[firstKey] = csv;

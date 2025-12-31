@@ -10,7 +10,7 @@ export function setupControls(datasetKeys, updateSource = null) {
   const datasetSelect = document.getElementById("dataset-select");
   const filterPanel = document.getElementById("filter-panel");
 
-  // Populate dataset dropdown
+  // populate dataset dropdown
   datasetKeys.forEach((key, index) => {
     const option = document.createElement("option");
     option.value = key;
@@ -31,14 +31,14 @@ export function setupControls(datasetKeys, updateSource = null) {
     const selectedTime = slider ? state.times[+slider.value] : null;
     const selectedKey = e.target.value;
 
-  // If already loaded, just update filters
+  // if already loaded, just update filters
   if (state.datasets[selectedKey]) {
     updateFilters(selectedKey, "dataset", selectedTime);
   } else {
-    // Load new CSV
+    // load new CSV
     d3.csv(`/data/files/${selectedKey}.csv`)
       .then((csv) => {
-        // Clear old dataset(s)
+        // clear old dataset(s)
         for (const key in state.datasets) {
           delete state.datasets[key];
         }
@@ -53,7 +53,6 @@ export function setupControls(datasetKeys, updateSource = null) {
   }
   });
 
-  // edit-metadata-button
   document.getElementById("edit-metadata-button").onclick = (event) => {
     if (!localStorage) {
       return;
@@ -75,7 +74,7 @@ export function setupControls(datasetKeys, updateSource = null) {
     // const values = state.metadata[state.selectedDataset].values || {};
     const values = state.metadata[state.selectedDataset].dimensionPrefs || {};
 
-    // Create dropdowns for each param
+    // create dropdowns for each param
     Object.keys(values).forEach((param) => {
       if (param === "time") {
         return;
@@ -100,7 +99,6 @@ export function setupControls(datasetKeys, updateSource = null) {
 
       select.value = options[0];
 
-      // Add change event
       select.addEventListener("change", () => {
         for (const key in state.timeColorCache) {
           delete state.timeColorCache[key];
@@ -124,7 +122,7 @@ export function setupControls(datasetKeys, updateSource = null) {
       }
     });
 
-    // Initial filtering
+    // initial filtering
     filterData(state.selectedDataset, updateSource, selectedTime);
   }
 }
@@ -136,7 +134,7 @@ function filterData(selectedDataset, updateSource = null, selectedTime = null) {
   const values = state.metadata[state.selectedDataset].dimensionPrefs || {};
   let filters = {};
 
-  // Gather selected filters
+  // gather selected filters
   Object.keys(values).forEach((param) => {
     // store unit of measure
     if (param === "unit") {
@@ -146,7 +144,7 @@ function filterData(selectedDataset, updateSource = null, selectedTime = null) {
 
     // store unit of time
     if (param === "time") {
-      // Take any element from the time category, as they share the same structure
+      // take any element from the time category, as they share the same structure
       const selected = Object.keys(values.time.category.label)[0];
       if (selected.indexOf("Q") !== -1) {
         state.xlabel = "Quarter";
@@ -162,7 +160,7 @@ function filterData(selectedDataset, updateSource = null, selectedTime = null) {
       return;
     }
 
-    // Ignore filters with one option
+    // ignore filters with one option
     if (Object.keys(values[param].category.index).length === 1) {
       return;
     }
@@ -171,7 +169,7 @@ function filterData(selectedDataset, updateSource = null, selectedTime = null) {
     filters[param.toUpperCase()] = selected; // CSV uses uppercase column names
   });
 
-  // Filter the dataset
+  // filter the dataset
   state.filteredData = data.filter((row) => {
     return Object.keys(filters).every((param) => {
       return row[param] === filters[param];
@@ -202,12 +200,12 @@ function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
   if (!selectedTime || !availableTimes || availableTimes.length === 0)
     return null;
 
-  // 1. Exact match
+  // exact match
   if (availableTimes.includes(selectedTime)) return selectedTime;
 
   if (timeMatchLevel === "strict") return null;
 
-  // 2. Extract year
+  // extract year
   const yearMatch = selectedTime.match(/^\d{4}/);
   const year = yearMatch ? yearMatch[0] : null;
 
@@ -218,17 +216,17 @@ function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
     }
   }
 
-  // 3. Start with selectedTime (e.g., "2023" matches "2023-Q2")
+  // start with selectedTime (e.g., "2023" matches "2023-Q2")
   const prefixMatches = availableTimes.filter((t) =>
     t.startsWith(selectedTime)
   );
   if (prefixMatches.length > 0) return prefixMatches[0];
 
-  // 4. End with selectedTime (e.g., "Q2" matches "2023-Q2")
+  // end with selectedTime (e.g., "Q2" matches "2023-Q2")
   const suffixMatches = availableTimes.filter((t) => t.endsWith(selectedTime));
   if (suffixMatches.length > 0) return suffixMatches[0];
 
-  // 5. Loose fuzzy match
+  // loose match
   const looseMatches = availableTimes.filter((t) => t.includes(selectedTime));
   if (looseMatches.length > 0) return looseMatches[0];
 
@@ -248,7 +246,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
   times.sort(compareTimes);
   state.times = times;
 
-  // Update the time to be selected based on updateSource and timeMatchLevel
+  // update the time to be selected based on updateSource and timeMatchLevel
   let matchedTime = null;
 
   if (timeMatchLevel === "none" && ["dataset", "filter"].includes(updateSource)) {
@@ -257,7 +255,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     matchedTime = findClosestTimeMatch(selectedTime, times, timeMatchLevel);
   }
 
-  // Find closest time to match with, or default with the latest time
+  // find closest time to match with, or default with the latest time
   selectedTime = matchedTime || times[times.length - 1];
 
   let valuesByGeo = state.timeColorCache[selectedTime];
@@ -274,11 +272,11 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     state.timeColorCache[selectedTime] = valuesByGeo;
   }
 
-  // 4. Compute min/max ignoring zeros
+  // compute min/max ignoring zeros
   const nonZeroValues = Object.values(valuesByGeo).filter((v) => v > 0);
   const scale = d3.scaleQuantile().domain(nonZeroValues).range(colorPalette);
 
-  // 5. Re-color the countries
+  // recolor the countries
   mapContainer
     .selectAll("path")
     .transition()
@@ -291,7 +289,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       const geoCode = d.properties.CNTR_ID;
       const val = valuesByGeo[geoCode] ?? 0;
 
-      if (val === 0 || isNaN(val)) return "#cccccc"; // Grey for 0/missing
+      if (val === 0 || isNaN(val)) return "#cccccc"; // grey for 0/missing
       return scale(val);
     });
 
@@ -329,19 +327,19 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       d3.select("#map-tooltip").style("display", "none");
     });
 
-  // 6. Update info panel
+  // update info panel
   const dataset = document.getElementById("dataset-select").value;
   const meta = state.metadata[dataset];
   const label = meta.label || dataset;
   const description = meta.description || "";
 
-  // Set title and label
+  // set title and label
   d3.select("#info-label").text(label);
 
-  // Handle description panel
+  // handle description panel
   const descPanel = d3.select("#info-description");
-  descPanel.html(""); // Clear old
-  descPanel.classed("hidden", true); // Hide by default
+  descPanel.html("");
+  descPanel.classed("hidden", true); // hide by default
   const helpIcon = d3.select("#info-help");
 
   if (description) {
@@ -356,12 +354,12 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     helpIcon.classed("hidden", true).classed("inline-block", false);
   }
 
-  // 7. Update color legend
+  // update color legend
   const legend = d3.select("#color-legend").html("");
 
   if(!state.filteredData.length) {
-    // No reason to display data-specific information
-    // When there is no data
+    // no reason to display data-specific information
+    // when there is no data
     return;
   }
 
@@ -375,7 +373,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
   ];
 
   allThresholds.forEach((val, i) => {
-    if (i === allThresholds.length - 1) return; // Skip last point (no range to next)
+    if (i === allThresholds.length - 1) return; // skip last point (no range to next)
 
     const from = allThresholds[i];
     const to = allThresholds[i + 1];
@@ -395,7 +393,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     `);
   });
 
-  // Add grey color for zero/missing
+  // add grey color for zero/missing
   legend
     .append("div")
     .style("display", "flex")
@@ -405,14 +403,14 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       `<div style="width: 18px; height: 14px; background:#cccccc; margin-right:6px;"></div><div>No data / 0</div>`
     );
 
-  // Update Time Slider
+  // update time slider
   if (updateSource === "timeSlider") {
     d3.select("#slider-text-div").text(`Showing data for: ${selectedTime}`);
     return;
   }
 
   let sliderContainer = d3.select("#time-slider-container");
-  sliderContainer.html(""); // Clear existing content
+  sliderContainer.html("");
 
   if (times.length > 1) {
     const selectedIndex = times.indexOf(selectedTime);
@@ -439,8 +437,6 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       .text(`Showing data for: ${selectedTime}`);
   }
 }
-
-// Handle resize
 
 window.addEventListener("resize", () => {
   resizeMap();

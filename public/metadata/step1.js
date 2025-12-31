@@ -41,7 +41,7 @@ fetch("/data/table_of_contents.xml")
     const fullTreeData = topLevelBranches.map(parseBranch).filter(Boolean);
     const tree = renderTree(fullTreeData);
 
-    // Set up initial view
+    // set up initial view
     try {
       for (let i = 0; i < tree.children.length; ++i) {
         tree.children[i].firstChild.click();
@@ -56,7 +56,7 @@ fetch("/data/table_of_contents.xml")
       console.error("Error setting initial view:" + err.message);
     }
 
-    // // Fetch existing metadata
+    // fetch existing metadata
     fetch("/data/metadata.json")
       .then(response => response.json())
       .then(data => {
@@ -64,7 +64,7 @@ fetch("/data/table_of_contents.xml")
         console.log(data.files.length);
 
         for (let file of data.files) {
-          // Saved metadata goes into datasetMap
+          // saved metadata goes into datasetMap
           datasetMap.set(file.code, file);
         }
 
@@ -260,7 +260,7 @@ function searchAndToggle(ulElement, searchTerm) {
         span.textContent = "> " + span.textContent.slice(2);
       }
     }
-    // Hide non-matching nodes
+    // hide non-matching nodes
     // li.style.display = match || childMatch ? "" : "none";
     if (match || childMatch) hasMatch = true;
   }
@@ -273,7 +273,7 @@ document.getElementById("searchBox").addEventListener("input", (e) => {
 });
 
 document.getElementById("nextBtn").onclick = () => {
-  // Save data to localStorage
+  // save data to localStorage
   localStorage.setItem(
     "selectedDatasets",
     JSON.stringify([...datasetMap.values()])
@@ -286,8 +286,8 @@ document.getElementById("backBtn").onclick = () => {
   window.location.href = "/"; // go to map
 };
 
-// Dataset table logic
 
+// dataset table logic
 let draggingEl = null;
 let startIndex = null;
 let isDragging = false;
@@ -323,10 +323,10 @@ function renderDatasets() {
       tr.classList.add("selected-row");
     }
 
-    // Drag logic
+    // drag logic
     addDragEvents(tr);
 
-    // Remove button
+    // remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
       e.stopPropagation();
       datasetMap.delete(item.code);

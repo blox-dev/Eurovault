@@ -128,9 +128,9 @@ const wordRules = {
 };
 
 function removeExplanation(str) {
-  // Remove all parentheses and their contents
+  // remove all parentheses and their contents
   str = str.replace(/\s*\([^)]*\)/g, "");
-  // Remove commas
+  // remove commas
   return str.replace(/,/g, "").trim().toLowerCase();
 }
 
@@ -174,7 +174,7 @@ export function getEurostatFormatCurrentTime() {
   const min = pad(date.getMinutes());
   const ss = pad(date.getSeconds());
 
-  // Get timezone offset in minutes and convert to ±HHMM
+  // get timezone offset in minutes and convert to HHMM
   const tzOffset = -date.getTimezoneOffset(); // invert sign
   const tzSign = tzOffset >= 0 ? "+" : "-";
   const tzHours = pad(Math.floor(Math.abs(tzOffset) / 60));

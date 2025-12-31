@@ -9,7 +9,7 @@ const BASE_URL = "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0
 const metadataMap = {};
 
 let datasetMap = new Map();
-let currentEditingCode = null; // Track currently editing dataset
+let currentEditingCode = null; // track currently editing dataset
 
 if (localStorage) {
   if (
@@ -19,7 +19,7 @@ if (localStorage) {
       localStorage.step === "2"
     )
   ) {
-    // Something went wrong, reset to step 1
+    // something went wrong, reset to step 1
     localStorage.setItem("step", "1");
     window.location.reload(); // reload index.html and load step1
   }
@@ -105,8 +105,8 @@ function renderDatasets() {
           console.log("metadataResponse", metadataResponse);
 
           // Copy all properties except 'data'
-          var metadata = {};
-          for (var key in metadataResponse) {
+          let metadata = {};
+          for (const key in metadataResponse) {
             if (metadataResponse.hasOwnProperty(key) && key !== "data") {
               metadata[key] = metadataResponse[key];
             }
@@ -154,7 +154,7 @@ function renderDatasets() {
       }
     );
 
-    // Remove button
+    // remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
       if(confirm(`Are you sure you want to remove ${node.code}?`)) {
         e.stopPropagation();
@@ -214,7 +214,7 @@ function isObject(object) {
 }
 
 async function fetchMetadata(node) {
-  // Fetch only metadata, no values
+  // fetch only metadata, no values
   console.log("Fetch");
   return fetchWithRetry(`${BASE_URL}/${node.code}?geo=null`)
     .then((data) => {
@@ -232,7 +232,7 @@ async function fetchBackendMetadata(nodeCode, handler) {
   const body = {
     nodeCode: nodeCode,
     extraParams: { geo: "null" }, // API-specific
-    controlParams: {}, // Future use
+    controlParams: {}, // future use
   };
 
   const response = await fetch('/fetch-metadata', {
@@ -356,7 +356,7 @@ if ("time" in metadata.dimension) {
     const untilInput = form.querySelector("#untilTimePeriodInput");
     const lastInput = form.querySelector("#lastTimePeriodInput");
 
-    // Disallow Last + (Since/Until) combo
+    // disallow Last + (Since/Until) combo
     if (lastCheckbox?.checked && (sinceCheckbox?.checked || untilCheckbox?.checked)) {
       errors.push("'Last Time Period' cannot be used in combination with 'Since Time Period' or 'Until Time Period'");
     }
@@ -373,7 +373,7 @@ if ("time" in metadata.dimension) {
       return [];
     }
 
-    // Determine min/max time from metadata
+    // determine min/max time from metadata
     let minTime = 1000, maxTime = 9999;
     const timeCategories = Object.keys(metadata.dimension.time.category.index);
     if (timeCategories.length) {
@@ -381,7 +381,7 @@ if ("time" in metadata.dimension) {
       maxTime = timeCategories.reduce((max, c) => compareTimes(max, c) > 0 ? max : c);
     }
 
-    // Define checkbox/input/validation rules in one place
+    // define checkbox/input/validation rules in one place
     const checks = [
       { checkbox: sinceCheckbox, input: sinceInput, label: "Since Time Period", min: minTime, max: maxTime },
       { checkbox: untilCheckbox, input: untilInput, label: "Until Time Period", min: minTime, max: maxTime },
@@ -399,7 +399,7 @@ if ("time" in metadata.dimension) {
       }
     }
 
-    // Additional since/until comparison check
+    // additional since/until comparison check
     if (validInputs && sinceCheckbox?.checked && untilCheckbox?.checked) {
       if (compareTimes(sinceInput?.value?.trim(), untilInput?.value?.trim()) > 0) {
         errors.push("'Since Time Period' must be before 'Until Time Period'");
@@ -407,7 +407,7 @@ if ("time" in metadata.dimension) {
       }
     }
 
-    // Save preferences if all validations passed
+    // save preferences if all validations passed
     if (validInputs) {
       const timePrefs = dimensionPrefs.time || {
         label: metadata.dimension.time.label,
@@ -433,7 +433,7 @@ if ("time" in metadata.dimension) {
       dimensionPrefs
     )
   ) {
-    // Flag for file reset when saving
+    // flag for file reset when saving
     metadataMap[currentEditingCode].hasChanges = true;
     metadataMap[currentEditingCode].dimensionPrefs = dimensionPrefs;
     metadataMap[currentEditingCode]._status.data = {};
@@ -448,7 +448,7 @@ if ("time" in metadata.dimension) {
 function parseMetadata(code, data) {
   const metadataTitle = document.getElementById("edit-metadata-title");
   const metadataDiv = document.getElementById("edit-metadata-div");
-  metadataDiv.innerHTML = ""; // Clear previous content
+  metadataDiv.innerHTML = "";
 
   if (!data._status?.metadata?.status) {
     console.error("you missed something");
@@ -562,7 +562,7 @@ function parseMetadata(code, data) {
     }
 
     if (key === "time") {
-      // Add sinceTimePeriod, untilTimePeriod checkboxes and inputs
+      // add sinceTimePeriod, untilTimePeriod checkboxes and inputs
       const timePeriodControlsWrapper = document.createElement("div");
       timePeriodControlsWrapper.id = "timePeriodControlsWrapper";
 
@@ -614,7 +614,7 @@ function parseMetadata(code, data) {
       lastInput.id = "lastTimePeriodInput";
       lastInput.classList.add("hidden");
 
-      // Preload from dimensionPrefs if exists
+      // preload from dimensionPrefs if exists
       const sinceTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.sinceTimePeriod;
       const untilTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.untilTimePeriod;
       const lastTimePeriodPref = metadataMap[code]?.dimensionPrefs?.time?.lastTimePeriod;
@@ -661,7 +661,8 @@ function parseMetadata(code, data) {
         toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked);
       });
 
-      toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked); // Initial state
+      // initial state
+      toggleTimeCheckboxes(sinceCheckbox.checked, untilCheckbox.checked, lastCheckbox.checked);
 
       const line1 = document.createElement("div");
       const line2 = document.createElement("div");
@@ -702,7 +703,7 @@ async function fetchAllMetadata() {
     return;
   }
 
-  // Fetch missing metadata if needed (all selected datasets)
+  // fetch missing metadata if needed (all selected datasets)
   const fetchPromises = [];
   for (const code of datasetMap.keys()) {
     if (!metadataMap[code] || metadataMap[code].hasChanges) {
@@ -713,9 +714,9 @@ async function fetchAllMetadata() {
 
             console.log("metadataResponse", metadataResponse);
 
-            // Copy all properties except 'data'
-            var metadata = {};
-            for (var key in metadataResponse) {
+            // copy all properties except 'data'
+            let metadata = {};
+            for (const key in metadataResponse) {
               if (metadataResponse.hasOwnProperty(key) && key !== "data") {
                 metadata[key] = metadataResponse[key];
               }
@@ -862,11 +863,12 @@ renderDatasets();
 renderButtons();
 
 document.getElementById("backBtn").onclick = () => {
-  // Save data to localStorage
+  // save data to localStorage
   localStorage.setItem(
     "selectedDatasets",
     JSON.stringify([...datasetMap.values()])
   );
+  // reload index.html and load step1
   localStorage.setItem("step", "1");
-  window.location.reload(); // reload index.html and load step1
+  window.location.reload();
 };

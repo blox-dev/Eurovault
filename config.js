@@ -1,4 +1,3 @@
-// config.js
 const env = process.env.NODE_ENV || 'dev';
 
 const configs = {

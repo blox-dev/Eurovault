@@ -68,14 +68,14 @@
   display: block;
 }
 
-/* Styling each checkbox + label row */
+/* styling each checkbox + label row */
 .metadata-checkbox[type="checkbox"] {
   transform: scale(1.2);
   margin-right: 10px;
   cursor: pointer;
 }
 
-/* Make entire row clickable */
+/* make entire row clickable */
 .metadata-checkbox-label {
   cursor: pointer;
   display: inline-flex;
@@ -109,7 +109,7 @@
   display: none;
 }
 
-/* Prevent selection */
+/* prevent selection */
 table,
 th,
 td {
@@ -123,7 +123,6 @@ td {
 table {
   width: 100%;
   border-collapse: collapse;
-  /* margin-top: 20px; */
 }
 
 th,

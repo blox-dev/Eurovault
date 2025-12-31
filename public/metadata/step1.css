@@ -80,14 +80,13 @@ li {
   cursor: grabbing !important;
 }
 table tbody tr.selected-row > td {
-  background-color: #99ccff; /* Stronger specificity */
+  background-color: #99ccff;
 }
 
 table tbody tr.dragged > td {
   background-color: #cce5ff;
 }
 
-/* Prevent selection */
 table,
 th,
 td {

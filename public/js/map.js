@@ -15,7 +15,8 @@ export function resizeMap() {
   width = bounds.width;
   height = bounds.height;
   projection.fitSize([width, height], europe);
-  svg.selectAll("path").attr("d", pathGenerator); // Reapply path with new projection
+  // reapply path with new projection
+  svg.selectAll("path").attr("d", pathGenerator);
 }
 
 export function fetchMapData() {
@@ -25,7 +26,7 @@ export function fetchMapData() {
     .attr("width", "100%")
     .attr("height", "100%");
 
-  // Add a group for the map
+  // add a group for the map
   const g = svg.append("g");
   projection = d3.geoMercator();
   pathGenerator = d3.geoPath().projection(projection);
@@ -99,7 +100,7 @@ export function handleMapPathClick(event, d) {
       chartContainer.html("");
     }
   } else {
-    // Normal click reset chartedCountries
+    // normal click reset chartedCountries
     state.chartedCountries.clear();
     state.currentSelected = geoCode;
     showCountryChart(geoCode);

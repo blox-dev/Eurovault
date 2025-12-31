@@ -5,16 +5,16 @@ const VALID_TIME_MATCH_LEVELS = [
 ];
 
 export let state = {
-  datasets: {}, // Global object to store all datasets
-  metadata: {}, // Global object to store all metadata
-  filteredData: [], // Current filtered dataset
-  selectedDataset: null, // Current metadata
-  chartedCountries: new Set(), // Stores selected countries for line chart
-  currentSelected: null, // Currently selected country geocode for bar chart
-  timeColorCache: {}, // Cache for time-based valuesByGeo
+  datasets: {}, // global object to store all datasets
+  metadata: {}, // global object to store all metadata
+  filteredData: [], // current filtered dataset
+  selectedDataset: null, // current metadata
+  chartedCountries: new Set(), // stores selected countries for line chart
+  currentSelected: null, // currently selected country geocode for bar chart
+  timeColorCache: {}, // cache for time-based valuesByGeo
 };
 
-let timeMatchLevel = "none"; // Default value
+let timeMatchLevel = "none"; // default value
 
 Object.defineProperty(state, "timeMatchLevel", {
   get() {
@@ -25,7 +25,7 @@ Object.defineProperty(state, "timeMatchLevel", {
       console.warn(
         `Invalid timeMatchLevel: ${value}. Possible values: [${VALID_TIME_MATCH_LEVELS.join(", ")}]`
       );
-      return false; // Prevent assignment
+      return false; // prevent assignment
     }
     timeMatchLevel = value;
   },

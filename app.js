@@ -114,14 +114,14 @@ const format = 'JSON';
 const language = 'EN';
 const MAX_ROWS = 5000000;
 
-// Ensure folder structure
+// ensure folder structure
 [DATA_FOLDER_PATH, FILES_FOLDER_PATH, PUBLIC_FOLDER_PATH].forEach(folder => {
     if (!fs.existsSync(folder)) {
         fs.mkdirSync(folder, { recursive: true });
     }
 });
 
-// Serve static files
+// serve static files
 app.use('/data', express.static(DATA_FOLDER_PATH));
 app.use('/public', express.static(PUBLIC_FOLDER_PATH));
 
@@ -131,7 +131,7 @@ app.use(express.urlencoded({ limit: "50mb", extended: true, parameterLimit: 5000
 function validateMetadataObject(metadata) {
   const errors = [];
 
-  // Root-level check
+  // root-level check
   if (!metadata.files || !Array.isArray(metadata.files)) {
     errors.push("Root object must contain 'files' as an array.");
     return errors;
@@ -140,7 +140,7 @@ function validateMetadataObject(metadata) {
   for (let index = 0; index < metadata.files.length ; index++) {
     let file = metadata.files[index];
     
-    // --- Basic structural checks ---
+    // basic structural checks
     if (!file.code || typeof file.code !== "string") {
       errors.push(`File [${index}]: Missing file code`);
       continue;
@@ -164,16 +164,16 @@ function validateMetadataObject(metadata) {
       continue;
     }
 
-    // Count total number of rows, must be under 5mil (eurostat)
-    // Start by multiplying with number of countries fetched
+    // count total number of rows, must be under 5mil (eurostat)
+    // start by multiplying with number of countries fetched
     let totalRows = geo.length;
 
-    // --- dimensionPrefs vs dimension check ---
+    // dimensionPrefs vs dimension check
     for (const prefKey of Object.keys(file.dimensionPrefs)) {
       if (!(prefKey in file.dimension)) {
         errors.push(`File ${fileId}: dimensionPrefs has key '${prefKey}' not present in dimension`);
       } else {
-        // Check that all categories in prefs exist in dimension
+        // check that all categories in prefs exist in dimension
         const prefCat = file.dimensionPrefs[prefKey].category || {};
         const dimCat = file.dimension[prefKey].category || {};
         const dimIndex = dimCat.index || {};
@@ -195,7 +195,7 @@ function validateMetadataObject(metadata) {
       }
     }
 
-    // --- Time validations (if present) ---
+    // time validations (if present)
     if (file.dimension.time) {
       const timeCategories = Object.keys(file.dimension.time.category.index || {});
       let minTime = "1000", maxTime = "9999";
@@ -284,7 +284,6 @@ function validateMetadataObject(metadata) {
   return errors;
 }
 
-// Route to save metadata
 app.post('/save-metadata', (req, res) => {
   const metadata = req.body;
 
@@ -316,7 +315,7 @@ app.post('/save-metadata', (req, res) => {
 app.post('/fetch-metadata', async (req, res) => {
   const { nodeCode, extraParams = {}, controlParams = {} } = req.body;
 
-  // Construct URL with optional query string
+  // construct URL with optional query string
   let url = `${BASE_URL}/${nodeCode}`;
   const query = new URLSearchParams(extraParams).toString();
   if (query) url += `?${query}`;
@@ -331,10 +330,8 @@ app.post('/fetch-metadata', async (req, res) => {
     }
   };
 
-  // First API attempt
   const result = await attemptFetch(url);
 
-  // Handle specific error types
   if (result.ok && !result.data?.error) {
     return res.json({
       code: nodeCode,
@@ -345,13 +342,13 @@ app.post('/fetch-metadata', async (req, res) => {
     });
   }
 
-  // Parse known error types
+  // parse known error types
   const apiError = result.data?.error?.[0];
 
   if (apiError) {
     const { status, label } = apiError;
 
-    // Case: EXTRACTION_TOO_BIG -> Step1. Retry with sinceTimePeriod
+    // EXTRACTION_TOO_BIG -> retry with sinceTimePeriod
     if (label.includes("EXTRACTION_TOO_BIG") && !extraParams.sinceTimePeriod) {
       const retryUrl = `${BASE_URL}/${nodeCode}?${new URLSearchParams({
         ...extraParams,
@@ -374,7 +371,7 @@ app.post('/fetch-metadata', async (req, res) => {
       let retryData = retryResult.data;
       let dimension = retryData.dimension;
 
-      // Step2. Fetch time dimension values by constructing minimal query
+      // fetch time dimension values by constructing minimal query
       let newParams = {...extraParams};
       for (const [dimName, values] of Object.entries(dimension)) {
         const keys = Object.keys(values?.category?.index);
@@ -402,7 +399,7 @@ app.post('/fetch-metadata', async (req, res) => {
 
       const timeData = timeResult.data?.dimension?.time;
 
-      // Step 3. Inject timeData into retryResult and return it
+      // inject timeData into retryResult and return it
       if (timeData) {
         retryData.dimension.time = timeData;
 
@@ -411,7 +408,7 @@ app.post('/fetch-metadata', async (req, res) => {
           const timeSize = timeResult.data.size[timeIndex];
 
           const retryTimeIndex = retryData.id.findIndex(x => x === "time");
-          if (timeIndex != -1) {
+          if (retryTimeIndex != -1) {
             retryData.size[retryTimeIndex] = timeSize;
           }
         } 
@@ -426,7 +423,7 @@ app.post('/fetch-metadata', async (req, res) => {
       });
     };
 
-    // Async response, let user retry manually
+    // async response, let user retry manually
     if (label.includes("ASYNCHRONOUS_RESPONSE")) {
       return res.json({
         code: nodeCode,
@@ -438,7 +435,7 @@ app.post('/fetch-metadata', async (req, res) => {
       });
     };
 
-    // Unknown error: fail by default
+    // unknown error: fail by default
     return res.json({
       code: nodeCode,
       status: 'error',
@@ -449,7 +446,7 @@ app.post('/fetch-metadata', async (req, res) => {
     });
   }
 
-  // Unhandled fetch/network error
+  // unhandled fetch/network error
   return res.status(500).json({
     status: 'error',
     code: nodeCode,
@@ -458,7 +455,6 @@ app.post('/fetch-metadata', async (req, res) => {
   });
 });
 
-// Routes
 app.get('/', async (req, res) => {
     const metadataPath = path.join(DATA_FOLDER_PATH, METADATA_FILE);
 
@@ -468,7 +464,8 @@ app.get('/', async (req, res) => {
 
         buildUrls(metadata.files);
 
-        await updateDatabase(metadata); // may overwrite METADATA_FILE
+        // may overwrite METADATA_FILE
+        await updateDatabase(metadata);
         
         res.sendFile(INDEX_PATH);
     } catch (error) {
@@ -685,7 +682,7 @@ async function updateDatabase(metadata) {
     for (const response of results) {
         const file = metadata.files.filter(x => x.code === response.code)[0];
 
-        // Copy all properties except 'json' and 'csv'
+        // copy all properties except 'json' and 'csv'
         let dataStatus = {};
         for (var key in response) {
           if (response.hasOwnProperty(key) && key !== "json" && key !== "csv") {
@@ -701,7 +698,7 @@ async function updateDatabase(metadata) {
         }
         
         if (response.id === 302) {
-          // Data doesn't need an update
+          // data doesn't need an update
           continue;
         }
 
@@ -743,7 +740,7 @@ function JSON2CSV(data) {
         let flatIndex = parseInt(flatIndexStr, 10);
         const labelIndices = [];
 
-        // Convert flat index to multidimensional index (reverse order)
+        // convert flat index to multidimensional index (reverse order)
         for (let i = dimensionInfo.length - 1; i >= 0; i--) {
             const { size } = dimensionInfo[i];
             labelIndices.unshift(flatIndex % size);

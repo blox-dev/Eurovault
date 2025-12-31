@@ -6,9 +6,9 @@ import { state } from "./state.js";
 import { compareTimes, parseTime } from "./utils.js";
 
 export function showCountryChart(geoCode) {
-  chartContainer.html("").attr("data-chart-type", "bar"); // Clear previous chart
+  chartContainer.html("").attr("data-chart-type", "bar");
   controlsTooltip.classed("hidden", true);
-  
+
   const countryName = europe.features.find(
     (f) => f.properties.CNTR_ID === geoCode
   ).properties.NAME_ENGL;
@@ -19,7 +19,7 @@ export function showCountryChart(geoCode) {
     .attr("width", "100%")
     .attr("height", "100%");
 
-  // Add close button
+  // add close button
   chartContainer
     .append("button")
     .text("X")
@@ -27,12 +27,12 @@ export function showCountryChart(geoCode) {
     .on("click", () => {
       state.currentSelected = null;
       state.chartedCountries.clear();
-      // Remove chart
+
       chartContainer.html("").attr("data-chart-type", "");
       controlsTooltip.classed("hidden", false);
     });
 
-  // Filter the historical data
+  // filter the historical data
   const countryData = state.filteredData
     .filter((d) => d.GEO === geoCode && !isNaN(+d.VALUE))
     .sort((a, b) => compareTimes(a.TIME, b.TIME));
@@ -54,19 +54,19 @@ export function showCountryChart(geoCode) {
   const times = countryData.map((d) => d.TIME);
 
   if (times.length === 1 && times[0]) {
-    // If there is only one time, the chart looks stretched
-    // So we add padding time values
+    // ff there is only one time, the chart looks stretched
+    // so we add padding time values
     const time = parseTime(times[0]);
-    times.unshift(time.suffix ? (time.year - 1) + "-" + time.suffix : "" + (time.year - 1));
-    times.push(time.suffix ? (time.year + 1) + "-" + time.suffix : "" + (time.year + 1));
+    times.unshift(
+      time.suffix ? time.year - 1 + "-" + time.suffix : "" + (time.year - 1)
+    );
+    times.push(
+      time.suffix ? time.year + 1 + "-" + time.suffix : "" + (time.year + 1)
+    );
   }
 
-  // Scales
-  const x = d3
-    .scaleBand()
-    .domain(times)
-    .range([0, plotWidth])
-    .padding(0.1);
+  // scales
+  const x = d3.scaleBand().domain(times).range([0, plotWidth]).padding(0.1);
 
   const y = d3
     .scaleLinear()
@@ -78,7 +78,7 @@ export function showCountryChart(geoCode) {
     .range([plotHeight, 0]);
 
   const every = Math.ceil(x.domain().length / 10);
-  // Axes
+  // axes
   g.append("g")
     .attr("transform", `translate(0,${plotHeight})`)
     .call(
@@ -90,7 +90,7 @@ export function showCountryChart(geoCode) {
 
   g.append("g").call(d3.axisLeft(y));
 
-  // Axis labels
+  // axis labels
   g.append("text")
     .attr("x", plotWidth / 2)
     .attr("y", plotHeight + 60)
@@ -106,7 +106,7 @@ export function showCountryChart(geoCode) {
     .attr("fill", "black")
     .text(state.ylabel || "Value");
 
-  // Chart title
+  // chart title
   let title = `${countryName} - ${
     state.metadata[state.selectedDataset]?.label || ""
   }`;
@@ -122,7 +122,7 @@ export function showCountryChart(geoCode) {
     .style("font-weight", "bold")
     .text(title);
 
-  // Bars
+  // bars
   const bars = g
     .selectAll(".bar")
     .data(countryData)
@@ -135,7 +135,7 @@ export function showCountryChart(geoCode) {
     .attr("height", (d) => plotHeight - y(+d.VALUE))
     .attr("fill", "#4682b4");
 
-  // Tooltip
+  // tooltip
   const tooltip = d3.select("#chart-tooltip").style("opacity", 0);
 
   const topOffset = chartContainerBoundingRect.top;
@@ -152,7 +152,7 @@ export function showCountryChart(geoCode) {
       tooltip.transition().duration(200).style("opacity", 0.95);
       tooltip.text(`${d.TIME}: ${d.VALUE}`);
 
-      // Position tooltip centered above the bar
+      // position tooltip centered above the bar
       tooltip
         .style(
           "left",
@@ -162,7 +162,7 @@ export function showCountryChart(geoCode) {
             tooltip.node().offsetWidth / 2 +
             "px"
         )
-        .style("top", topOffset + margin.top + yPos - 30 + "px"); // 30px above bar
+        .style("top", topOffset + margin.top + yPos - 30 + "px");
     })
     .on("mouseout", function () {
       d3.select(this).attr("fill", "#4682b4");
@@ -171,7 +171,7 @@ export function showCountryChart(geoCode) {
 }
 
 export function showLineChart(countries) {
-  chartContainer.html("").attr("data-chart-type", "line"); // Clear previous chart
+  chartContainer.html("").attr("data-chart-type", "line");
   controlsTooltip.classed("hidden", true);
 
   const svg = chartContainer
@@ -204,7 +204,7 @@ export function showLineChart(countries) {
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-  // Build time domain and country data
+  // build time domain and country data
   let allTimes = new Set();
   let countrySeries = [];
 
@@ -218,8 +218,8 @@ export function showLineChart(countries) {
 
     countrySeries.push({
       geo,
-      name: europe.features.find((f) => f.properties.CNTR_ID === geo)
-        .properties.NAME_ENGL,
+      name: europe.features.find((f) => f.properties.CNTR_ID === geo).properties
+        .NAME_ENGL,
       values: rows,
     });
   });
@@ -227,14 +227,18 @@ export function showLineChart(countries) {
   const times = Array.from(allTimes).sort(compareTimes);
 
   if (times.length === 1 && times[0]) {
-    // If there is only one time, the chart looks stretched
-    // So we add padding time values
+    // if there is only one time, the chart looks stretched
+    // so we add padding time values
     const time = parseTime(times[0]);
-    times.unshift(time.suffix ? (time.year - 1) + "-" + time.suffix : "" + (time.year - 1));
-    times.push(time.suffix ? (time.year + 1) + "-" + time.suffix : "" + (time.year + 1));
+    times.unshift(
+      time.suffix ? time.year - 1 + "-" + time.suffix : "" + (time.year - 1)
+    );
+    times.push(
+      time.suffix ? time.year + 1 + "-" + time.suffix : "" + (time.year + 1)
+    );
   }
 
-  // Scales
+  // scales
   const x = d3.scalePoint().domain(times).range([0, plotWidth]).padding(0.1);
 
   const y = d3
@@ -249,7 +253,7 @@ export function showLineChart(countries) {
   const color = d3.scaleOrdinal().domain(countries).range(d3.schemeCategory10);
 
   const every = Math.ceil(x.domain().length / 10);
-  // Axes
+  // axes
   g.append("g")
     .attr("transform", `translate(0,${plotHeight})`)
     .call(
@@ -259,11 +263,9 @@ export function showLineChart(countries) {
     .attr("transform", "rotate(-45)")
     .style("text-anchor", "end");
 
-  g.append("g")
-    .attr("class", "y-axis")
-    .call(d3.axisLeft(y));
+  g.append("g").attr("class", "y-axis").call(d3.axisLeft(y));
 
-  // Axis labels
+  // axis labels
   g.append("text")
     .attr("x", plotWidth / 2)
     .attr("y", plotHeight + 60)
@@ -279,7 +281,7 @@ export function showLineChart(countries) {
     .attr("fill", "black")
     .text(state.ylabel || "Value");
 
-  // Chart title
+  // chart title
   let title = `${state.metadata[state.selectedDataset]?.label || ""}`;
   if (title.length > 40) {
     title = title.slice(0, 40) + "...";
@@ -293,7 +295,7 @@ export function showLineChart(countries) {
     .style("font-weight", "bold")
     .text(title);
 
-  // Lines
+  // lines
   const line = d3
     .line()
     .x((d) => x(d.time))
@@ -314,7 +316,7 @@ export function showLineChart(countries) {
   const leftOffset = chartContainerBoundingRect.left;
   const topOffset = chartContainerBoundingRect.top;
 
-  // Add circles to each data point
+  // add circles to each data point
   countrySeries.forEach((series) => {
     g.selectAll(`.circle-${series.geo}`)
       .data(series.values)
@@ -337,7 +339,7 @@ export function showLineChart(countries) {
 
         tooltip.transition().duration(200).style("opacity", 0.95);
 
-        // Position tooltip centered above the bar
+        // position tooltip centered above the bar
         tooltip
           .style(
             "left",
@@ -368,10 +370,7 @@ export function showLineChart(countries) {
 
     y.domain(newYDomain).nice();
 
-    g.select(".y-axis")
-      .transition()
-      .duration(500)
-      .call(d3.axisLeft(y));
+    g.select(".y-axis").transition().duration(500).call(d3.axisLeft(y));
 
     g.selectAll("path[data-country]")
       .transition()
@@ -431,12 +430,12 @@ export function showLineChart(countries) {
       chartContainer
         .selectAll(`path[data-country='${geoCode}']`)
         .classed("hidden", !visibleCountries.has(geoCode));
-        // .style("display", visibleCountries.has(geoCode) ? null : "none");
+      // .style("display", visibleCountries.has(geoCode) ? null : "none");
 
       chartContainer
         .selectAll(`circle[data-country='${geoCode}']`)
         .classed("hidden", !visibleCountries.has(geoCode));
-        // .style("display", visibleCountries.has(geoCode) ? null : "none");
+      // .style("display", visibleCountries.has(geoCode) ? null : "none");
 
       updateYScale();
     });
