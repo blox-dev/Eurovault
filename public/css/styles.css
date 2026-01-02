@@ -132,7 +132,6 @@ svg {
   margin-left: 6px;
 }
 
-
 .legend-box--nodata {
   background: #cccccc;
 }
@@ -234,6 +233,12 @@ svg {
 
 .control-panel option {
   white-space: normal;
+}
+
+#slider-text-div {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 4px;
 }
 
 #dataset-description {

@@ -233,6 +233,105 @@ function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
   return null;
 }
 
+function formatRange(from, to) {
+    return from.toFixed(0) === to.toFixed(0)
+      ? `${from.toFixed(2)}-${to.toFixed(2)}`
+      : `${from.toFixed(0)}-${to.toFixed(0)}`;
+}
+
+function renderColorLegend(scale) {
+    const legend = d3.select("#color-legend");
+
+    const thresholds = scale.quantiles();
+    const domain = scale.domain();
+
+    const allThresholds = [
+      domain[0],
+      ...thresholds,
+      domain[domain.length - 1],
+    ];
+
+    const unit = shorten(state.ylabel) || "";
+    
+    function renderLegend() {
+      legend.html("");
+      legend
+    .classed("expanded", state.expandedLegend)
+    .classed("collapsed", !state.expandedLegend);
+
+    if (!state.expandedLegend) {
+      // COLLAPSED VIEW
+      const row = legend
+        .append("div")
+        .attr("class", "legend-row legend-row--collapsed")
+        .on("click", () => {
+          state.expandedLegend = true;
+          renderLegend();
+        });
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", colorPalette[0]);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(`${formatRange(allThresholds[0], allThresholds[allThresholds.length - 1])}${unit ? ` ${unit}` : ""}`);
+
+      row
+        .append("div")
+        .attr("class", "legend-box-right")
+        .style("background", colorPalette[colorPalette.length - 1]);
+
+      row.append("div").attr("class", "legend-chevron");
+
+      return;
+    }
+
+    // EXPANDED VIEW
+    allThresholds.forEach((_, i) => {
+      if (i === allThresholds.length - 1) return;
+
+      const from = allThresholds[i];
+      const to = allThresholds[i + 1];
+
+      const row = legend.append("div").attr("class", "legend-row");
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", colorPalette[i]);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(`${formatRange(from, to)}${unit ? ` ${unit}` : ""}`);
+
+      if (i === 0) {
+        row
+          .classed("legend-toggle", true)
+          .on("click", () => {
+            state.expandedLegend = false;
+            renderLegend();
+          })
+          .append("div")
+          .attr("class", "legend-chevron");
+      }
+    });
+
+    // NO DATA ROW
+    const noDataRow = legend
+      .append("div")
+      .attr("class", "legend-row legend-row--nodata");
+
+    noDataRow.append("div").attr("class", "legend-box legend-box--nodata");
+
+    noDataRow.append("div").attr("class", "legend-label").text("No data / 0");
+    }
+    renderLegend();
+  }
+
 function updateMapColors(updateSource = null, selectedTime = null) {
   if (!["dataset", "filter", "timeSlider", "external", "init"].includes(updateSource)) {
     throw new Error(`Unknown update source: ${updateSource}`);
@@ -293,6 +392,8 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       return scale(val);
     });
 
+  if (updateSource === "init") {
+    const tooltip = d3.select("#map-tooltip");
   mapContainer
     .selectAll("path")
     .on("mouseover", function (event, d) {
@@ -301,7 +402,6 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
-      const tooltip = d3.select("#map-tooltip");
       tooltip
         .style("display", "block")
         .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
@@ -312,27 +412,25 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
-      const tooltip = d3.select("#map-tooltip");
       tooltip
         .style("display", "block")
         .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
     })
     .on("mousemove", function (event) {
-      d3.select("#map-tooltip")
+      tooltip
         .style("left", event.pageX + "px")
         .style("top", event.pageY - 40 + "px");
     })
     .on("mouseout", function () {
       d3.select(this).style("stroke-width", 0.25);
-      d3.select("#map-tooltip").style("display", "none");
+      tooltip
+        .style("display", "none");
     });
+  }
 
   // update info panel
-  const dataset = document.getElementById("dataset-select").value;
-  const meta = state.metadata[dataset];
-
   if (["dataset", "external", "init"].includes(updateSource)) {
-    const description = meta.description || "";
+    const description = state.metadata[state.selectedDataset].description || "";
     const descPanel = d3.select("#dataset-description").html("");
 
     const maxChars = 40;
@@ -366,113 +464,13 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     }
   }
 
-  // update color legend
-  const legend = d3.select("#color-legend").html("");
-
   if (!state.filteredData.length) {
     // no reason to display data-specific information
     // when there is no data
     return;
   }
 
-  const thresholds = scale.quantiles();
-  const unit = shorten(state.ylabel) || "";
-
-  const allThresholds = [
-    d3.min(nonZeroValues),
-    ...thresholds,
-    d3.max(nonZeroValues),
-  ];
-
-  const minVal = allThresholds[0];
-  const maxVal = allThresholds[allThresholds.length - 1];
-  const firstColor = colorPalette[0];
-  const lastColor = colorPalette[colorPalette.length - 1];
-
-  const formatRange = (from, to) =>
-    from.toFixed(0) === to.toFixed(0)
-      ? `${from.toFixed(2)}-${to.toFixed(2)}`
-      : `${from.toFixed(0)}-${to.toFixed(0)}`;
-
-  function renderLegend() {
-    legend.html("");
-      legend
-    .classed("expanded", state.expandedLegend)
-    .classed("collapsed", !state.expandedLegend);
-
-    if (!state.expandedLegend) {
-      // COLLAPSED VIEW
-      const row = legend
-        .append("div")
-        .attr("class", "legend-row legend-row--collapsed")
-        .on("click", () => {
-          state.expandedLegend = true;
-          renderLegend();
-        });
-
-      row
-        .append("div")
-        .attr("class", "legend-box")
-        .style("background", firstColor);
-
-      row
-        .append("div")
-        .attr("class", "legend-label")
-        .html(`${formatRange(minVal, maxVal)}${unit ? ` ${unit}` : ""}`);
-
-      row
-        .append("div")
-        .attr("class", "legend-box-right")
-        .style("background", lastColor);
-
-      row.append("div").attr("class", "legend-chevron");
-
-      return;
-    }
-
-    // EXPANDED VIEW
-    allThresholds.forEach((_, i) => {
-      if (i === allThresholds.length - 1) return;
-
-      const from = allThresholds[i];
-      const to = allThresholds[i + 1];
-
-      const row = legend.append("div").attr("class", "legend-row");
-
-      row
-        .append("div")
-        .attr("class", "legend-box")
-        .style("background", colorPalette[i]);
-
-      row
-        .append("div")
-        .attr("class", "legend-label")
-        .html(`${formatRange(from, to)}${unit ? ` ${unit}` : ""}`);
-
-      if (i === 0) {
-        row
-          .classed("legend-toggle", true)
-          .on("click", () => {
-            state.expandedLegend = false;
-            renderLegend();
-          })
-          .append("div")
-          .attr("class", "legend-chevron");
-      }
-    });
-
-    // NO DATA ROW
-    const noDataRow = legend
-      .append("div")
-      .attr("class", "legend-row legend-row--nodata");
-
-    noDataRow.append("div").attr("class", "legend-box legend-box--nodata");
-
-    noDataRow.append("div").attr("class", "legend-label").text("No data / 0");
-  }
-
-  // initial render
-  renderLegend();
+  renderColorLegend(scale);
 
   // update time slider
   if (updateSource === "timeSlider") {
@@ -502,9 +500,6 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     sliderContainer
       .append("div")
       .attr("id", "slider-text-div")
-      .style("text-align", "center")
-      .style("font-size", "0.8rem")
-      .style("margin-top", "4px")
       .text(`Showing data for: ${selectedTime}`);
   }
 }

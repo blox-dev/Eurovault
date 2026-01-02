@@ -94,16 +94,16 @@ export function showCountryChart(geoCode) {
   g.append("text")
     .attr("x", plotWidth / 2)
     .attr("y", plotHeight + 60)
-    .attr("text-anchor", "middle")
     .attr("fill", "black")
+    .style("text-anchor", "middle")
     .text(state.xlabel || "Year");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
     .attr("x", -plotHeight / 2)
     .attr("y", -45)
-    .attr("text-anchor", "middle")
     .attr("fill", "black")
+    .style("text-anchor", "middle")
     .text(state.ylabel || "Value");
 
   // chart title
@@ -117,7 +117,7 @@ export function showCountryChart(geoCode) {
     .append("text")
     .attr("x", width / 2)
     .attr("y", 30)
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .style("font-size", "1.1rem")
     .style("font-weight", "bold")
     .text(title);
@@ -269,16 +269,16 @@ export function showLineChart(countries) {
   g.append("text")
     .attr("x", plotWidth / 2)
     .attr("y", plotHeight + 60)
-    .attr("text-anchor", "middle")
     .attr("fill", "black")
+    .style("text-anchor", "middle")
     .text(state.xlabel || "Year");
 
   g.append("text")
     .attr("transform", "rotate(-90)")
     .attr("x", -plotHeight / 2)
     .attr("y", -45)
-    .attr("text-anchor", "middle")
     .attr("fill", "black")
+    .style("text-anchor", "middle")
     .text(state.ylabel || "Value");
 
   // chart title
@@ -290,7 +290,7 @@ export function showLineChart(countries) {
     .append("text")
     .attr("x", width / 2)
     .attr("y", 30)
-    .attr("text-anchor", "middle")
+    .style("text-anchor", "middle")
     .style("font-size", "1.1rem")
     .style("font-weight", "bold")
     .text(title);
@@ -399,8 +399,8 @@ export function showLineChart(countries) {
     const group = legend
       .append("g")
       .attr("transform", `translate(0, ${i * 20})`)
-      .style("cursor", "pointer")
-      .attr("data-country", d.geo);
+      .attr("data-country", d.geo)
+      .style("cursor", "pointer");
     group
       .append("rect")
       .attr("width", 12)
