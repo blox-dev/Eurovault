@@ -393,40 +393,38 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       return scale(val);
     });
 
-  if (updateSource === "init") {
-    const tooltip = d3.select("#map-tooltip");
-    mapContainer
-      .selectAll("path")
-      .on("mouseover", function (event, d) {
-        d3.select(this).raise().style("stroke-width", 0.5);
-        const geoCode = d.properties.CNTR_ID;
-        const countryName = d.properties.NAME_ENGL;
-        const val = valuesByGeo[geoCode] ?? 0;
+  const tooltip = d3.select("#map-tooltip");
+  mapContainer
+    .selectAll("path")
+    .on("mouseover", function (event, d) {
+      d3.select(this).raise().style("stroke-width", 0.5);
+      const geoCode = d.properties.CNTR_ID;
+      const countryName = d.properties.NAME_ENGL;
+      const val = valuesByGeo[geoCode] ?? 0;
 
-        tooltip
-          .style("display", "block")
-          .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
-      })
-      .on("touchstart", function (event, d) {
-        d3.select(this).raise().style("stroke-width", 0.5);
-        const geoCode = d.properties.CNTR_ID;
-        const countryName = d.properties.NAME_ENGL;
-        const val = valuesByGeo[geoCode] ?? 0;
+      tooltip
+        .style("display", "block")
+        .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
+    })
+    .on("touchstart", function (event, d) {
+      d3.select(this).raise().style("stroke-width", 0.5);
+      const geoCode = d.properties.CNTR_ID;
+      const countryName = d.properties.NAME_ENGL;
+      const val = valuesByGeo[geoCode] ?? 0;
 
-        tooltip
-          .style("display", "block")
-          .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
-      })
-      .on("mousemove", function (event) {
-        tooltip
-          .style("left", event.pageX + "px")
-          .style("top", event.pageY - 40 + "px");
-      })
-      .on("mouseout", function () {
-        d3.select(this).style("stroke-width", 0.25);
-        tooltip.style("display", "none");
-      });
-  }
+      tooltip
+        .style("display", "block")
+        .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
+    })
+    .on("mousemove", function (event) {
+      tooltip
+        .style("left", event.pageX + "px")
+        .style("top", event.pageY - 40 + "px");
+    })
+    .on("mouseout", function () {
+      d3.select(this).style("stroke-width", 0.25);
+      tooltip.style("display", "none");
+    });
 
   // update info panel
   if (["dataset", "external", "init"].includes(updateSource)) {
