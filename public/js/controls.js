@@ -31,26 +31,26 @@ export function setupControls(datasetKeys, updateSource = null) {
     const selectedTime = slider ? state.times[+slider.value] : null;
     const selectedKey = e.target.value;
 
-  // if already loaded, just update filters
-  if (state.datasets[selectedKey]) {
-    updateFilters(selectedKey, "dataset", selectedTime);
-  } else {
-    // load new CSV
-    d3.csv(`/data/files/${selectedKey}.csv`)
-      .then((csv) => {
-        // clear old dataset(s)
-        for (const key in state.datasets) {
-          delete state.datasets[key];
-        }
+    // if already loaded, just update filters
+    if (state.datasets[selectedKey]) {
+      updateFilters(selectedKey, "dataset", selectedTime);
+    } else {
+      // load new CSV
+      d3.csv(`/data/files/${selectedKey}.csv`)
+        .then((csv) => {
+          // clear old dataset(s)
+          for (const key in state.datasets) {
+            delete state.datasets[key];
+          }
 
-        state.datasets[selectedKey] = csv;
+          state.datasets[selectedKey] = csv;
 
-        updateFilters(selectedKey, "dataset", selectedTime);
-      })
-      .catch((error) => {
-        console.error(`Error loading CSV for ${selectedKey}:`, error);
-      });
-  }
+          updateFilters(selectedKey, "dataset", selectedTime);
+        })
+        .catch((error) => {
+          console.error(`Error loading CSV for ${selectedKey}:`, error);
+        });
+    }
   });
 
   document.getElementById("edit-metadata-button").onclick = (event) => {
@@ -234,30 +234,26 @@ function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
 }
 
 function formatRange(from, to) {
-    return from.toFixed(0) === to.toFixed(0)
-      ? `${from.toFixed(2)}-${to.toFixed(2)}`
-      : `${from.toFixed(0)}-${to.toFixed(0)}`;
+  return from.toFixed(0) === to.toFixed(0)
+    ? `${from.toFixed(2)}-${to.toFixed(2)}`
+    : `${from.toFixed(0)}-${to.toFixed(0)}`;
 }
 
 function renderColorLegend(scale) {
-    const legend = d3.select("#color-legend");
+  const legend = d3.select("#color-legend");
 
-    const thresholds = scale.quantiles();
-    const domain = scale.domain();
+  const thresholds = scale.quantiles();
+  const domain = scale.domain();
 
-    const allThresholds = [
-      domain[0],
-      ...thresholds,
-      domain[domain.length - 1],
-    ];
+  const allThresholds = [domain[0], ...thresholds, domain[domain.length - 1]];
 
-    const unit = shorten(state.ylabel) || "";
-    
-    function renderLegend() {
-      legend.html("");
-      legend
-    .classed("expanded", state.expandedLegend)
-    .classed("collapsed", !state.expandedLegend);
+  const unit = shorten(state.ylabel) || "";
+
+  function renderLegend() {
+    legend.html("");
+    legend
+      .classed("expanded", state.expandedLegend)
+      .classed("collapsed", !state.expandedLegend);
 
     if (!state.expandedLegend) {
       // COLLAPSED VIEW
@@ -277,7 +273,12 @@ function renderColorLegend(scale) {
       row
         .append("div")
         .attr("class", "legend-label")
-        .html(`${formatRange(allThresholds[0], allThresholds[allThresholds.length - 1])}${unit ? ` ${unit}` : ""}`);
+        .html(
+          `${formatRange(
+            allThresholds[0],
+            allThresholds[allThresholds.length - 1]
+          )}${unit ? ` ${unit}` : ""}`
+        );
 
       row
         .append("div")
@@ -328,9 +329,9 @@ function renderColorLegend(scale) {
     noDataRow.append("div").attr("class", "legend-box legend-box--nodata");
 
     noDataRow.append("div").attr("class", "legend-label").text("No data / 0");
-    }
-    renderLegend();
   }
+  renderLegend();
+}
 
 function updateMapColors(updateSource = null, selectedTime = null) {
   if (!["dataset", "filter", "timeSlider", "external", "init"].includes(updateSource)) {
@@ -394,38 +395,37 @@ function updateMapColors(updateSource = null, selectedTime = null) {
 
   if (updateSource === "init") {
     const tooltip = d3.select("#map-tooltip");
-  mapContainer
-    .selectAll("path")
-    .on("mouseover", function (event, d) {
-      d3.select(this).raise().style("stroke-width", 0.5);
-      const geoCode = d.properties.CNTR_ID;
-      const countryName = d.properties.NAME_ENGL;
-      const val = valuesByGeo[geoCode] ?? 0;
+    mapContainer
+      .selectAll("path")
+      .on("mouseover", function (event, d) {
+        d3.select(this).raise().style("stroke-width", 0.5);
+        const geoCode = d.properties.CNTR_ID;
+        const countryName = d.properties.NAME_ENGL;
+        const val = valuesByGeo[geoCode] ?? 0;
 
-      tooltip
-        .style("display", "block")
-        .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
-    })
-    .on("touchstart", function (event, d) {
-      d3.select(this).raise().style("stroke-width", 0.5);
-      const geoCode = d.properties.CNTR_ID;
-      const countryName = d.properties.NAME_ENGL;
-      const val = valuesByGeo[geoCode] ?? 0;
+        tooltip
+          .style("display", "block")
+          .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
+      })
+      .on("touchstart", function (event, d) {
+        d3.select(this).raise().style("stroke-width", 0.5);
+        const geoCode = d.properties.CNTR_ID;
+        const countryName = d.properties.NAME_ENGL;
+        const val = valuesByGeo[geoCode] ?? 0;
 
-      tooltip
-        .style("display", "block")
-        .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
-    })
-    .on("mousemove", function (event) {
-      tooltip
-        .style("left", event.pageX + "px")
-        .style("top", event.pageY - 40 + "px");
-    })
-    .on("mouseout", function () {
-      d3.select(this).style("stroke-width", 0.25);
-      tooltip
-        .style("display", "none");
-    });
+        tooltip
+          .style("display", "block")
+          .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
+      })
+      .on("mousemove", function (event) {
+        tooltip
+          .style("left", event.pageX + "px")
+          .style("top", event.pageY - 40 + "px");
+      })
+      .on("mouseout", function () {
+        d3.select(this).style("stroke-width", 0.25);
+        tooltip.style("display", "none");
+      });
   }
 
   // update info panel

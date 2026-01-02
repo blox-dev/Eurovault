@@ -58,8 +58,8 @@ fetch("/data/table_of_contents.xml")
 
     // fetch existing metadata
     fetch("/data/metadata.json")
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log("Metadata:", data);
         console.log(data.files.length);
 
@@ -71,7 +71,6 @@ fetch("/data/table_of_contents.xml")
         renderDatasets();
         document.getElementById("nextBtn").classList.remove("hidden");
       });
-
   })
   .catch((err) => {
     document.getElementById("table-of-contents").textContent =
@@ -217,7 +216,9 @@ function autoExpandIfSingle(folderLi) {
 }
 
 function searchTreeDOM(term) {
-  const rootUl = document.getElementById("table-of-contents").querySelector("ul");
+  const rootUl = document
+    .getElementById("table-of-contents")
+    .querySelector("ul");
   if (!rootUl) return;
 
   const found = searchAndToggle(rootUl, term.toLowerCase());
@@ -286,7 +287,6 @@ document.getElementById("backBtn").onclick = () => {
   window.location.href = "/"; // go to map
 };
 
-
 // dataset table logic
 let draggingEl = null;
 let startIndex = null;
@@ -343,7 +343,7 @@ function addDragEvents(row) {
 
     // Remove .selected-row from all rows
 
-  const tbody = document.querySelector("#dataset-table tbody");
+    const tbody = document.querySelector("#dataset-table tbody");
     tbody
       .querySelectorAll("tr.selected-row")
       .forEach((r) => r.classList.remove("selected-row"));

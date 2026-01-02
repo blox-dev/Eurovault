@@ -62,7 +62,6 @@
   margin-bottom: 10px;
 }
 
-
 .metadata-line-container {
   margin-left: 30px;
   display: block;
@@ -148,7 +147,8 @@ td {
   cursor: pointer;
 }
 
-.selected-row td.fetch-dataset, .selected-row td.actions{
+.selected-row td.fetch-dataset,
+.selected-row td.actions {
   background-color: #ddd !important;
   border-right-color: #ddd !important;
 }

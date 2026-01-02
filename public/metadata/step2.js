@@ -100,8 +100,11 @@ function renderDatasets() {
           parseMetadata(node.code, metadataMap[node.code]);
         } else {
           console.log("isSaved?", node._status?.metadata?.status);
-          
-          const metadataResponse = await fetchBackendMetadata(node.code, handleMetadataResponse);
+
+          const metadataResponse = await fetchBackendMetadata(
+            node.code,
+            handleMetadataResponse
+          );
           console.log("metadataResponse", metadataResponse);
 
           // Copy all properties except 'data'
@@ -156,7 +159,7 @@ function renderDatasets() {
 
     // remove button
     tr.querySelector("a.link-remove").addEventListener("click", (e) => {
-      if(confirm(`Are you sure you want to remove ${node.code}?`)) {
+      if (confirm(`Are you sure you want to remove ${node.code}?`)) {
         e.stopPropagation();
         currentEditingCode = null;
         datasetMap.delete(node.code);
@@ -235,9 +238,9 @@ async function fetchBackendMetadata(nodeCode, handler) {
     controlParams: {}, // future use
   };
 
-  const response = await fetch('/fetch-metadata', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+  const response = await fetch("/fetch-metadata", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
   });
 
@@ -252,55 +255,55 @@ async function fetchBackendMetadata(nodeCode, handler) {
 
 function handleMetadataResponse(response) {
   switch (response.status) {
-    case 'success': {
+    case "success": {
       const code = response.code;
       const data = response.data;
-      console.log(code, 'success');
+      console.log(code, "success");
       const elem = document.getElementById(`${code}_tr`);
       elem.classList.remove("success", "warning", "error");
       elem.classList.add("success");
       break;
     }
-    case 'warning': {
+    case "warning": {
       const code = response.code;
       const message = response.message;
       const reason = response.reason;
       const userAction = response.userAction;
-      console.warn(code, 'warning', message, reason, userAction);
+      console.warn(code, "warning", message, reason, userAction);
       const elem = document.getElementById(`${code}_tr`);
       elem.classList.remove("success", "warning", "error");
       elem.classList.add("warning");
       break;
     }
-    case 'error': {
+    case "error": {
       const code = response.code;
       const message = response.message;
       const reason = response.reason;
       const userAction = response.userAction;
-      console.error(code, 'error', message, reason, userAction);
+      console.error(code, "error", message, reason, userAction);
       const elem = document.getElementById(`${code}_tr`);
       elem.classList.remove("success", "warning", "error");
       elem.classList.add("error");
       break;
     }
     default: {
-      console.error('Unhandled response status', response);
-      break; 
+      console.error("Unhandled response status", response);
+      break;
     }
   }
 }
 
 function saveCurrentMetadata() {
-  if (!currentEditingCode) return {success: true};
+  if (!currentEditingCode) return { success: true };
 
   const metadata = metadataMap[currentEditingCode];
   const container = document.getElementById("edit-metadata-container");
   const form = container.querySelector("div");
-  if (!form || !metadata) return {success: true};
+  if (!form || !metadata) return { success: true };
 
   if (metadata?._status?.metadata?.status !== "success") {
     // success: True, as in, sure, you can go ahead and store the result, don't check it
-    return {success: true};
+    return { success: true };
   }
 
   let dimensionPrefs = {};
@@ -311,18 +314,16 @@ function saveCurrentMetadata() {
     if (key === "geo") continue;
 
     const checkboxes = form.querySelectorAll(`input[name="${key}"]`);
-    
+
     //if (!checkboxes.length) continue;
 
     // technically there has to be at least one checkbox, but we cover this edge case anyway
 
     const checkboxArray = Array.from(checkboxes);
-    
+
     const hasValues = checkboxArray.length !== 0;
 
-    const selected = checkboxArray
-      .filter((c) => c.checked)
-      .map((c) => c.value);
+    const selected = checkboxArray.filter((c) => c.checked).map((c) => c.value);
 
     if (selected.length === 0 && hasValues) {
       errors.push(`Please select at least one value for ${key}`);
@@ -347,7 +348,7 @@ function saveCurrentMetadata() {
     }
   }
 
-if ("time" in metadata.dimension) {
+  if ("time" in metadata.dimension) {
     const sinceCheckbox = form.querySelector("#sinceTimePeriodCheckbox");
     const untilCheckbox = form.querySelector("#untilTimePeriodCheckbox");
     const lastCheckbox = form.querySelector("#lastTimePeriodCheckbox");
@@ -424,14 +425,11 @@ if ("time" in metadata.dimension) {
 
   if (errors.length > 0) {
     console.warn("Errors while saving current metadata:", errors);
-    return {success: false, errors: errors};
+    return { success: false, errors: errors };
   }
 
   if (
-    !deepEqual(
-      metadataMap[currentEditingCode].dimensionPrefs,
-      dimensionPrefs
-    )
+    !deepEqual(metadataMap[currentEditingCode].dimensionPrefs, dimensionPrefs)
   ) {
     // flag for file reset when saving
     metadataMap[currentEditingCode].hasChanges = true;
@@ -442,7 +440,7 @@ if ("time" in metadata.dimension) {
   const node = datasetMap.get(currentEditingCode);
   node.dimensionPrefs = dimensionPrefs;
   datasetMap.set(currentEditingCode, node);
-  return {success: true};
+  return { success: true };
 }
 
 function parseMetadata(code, data) {
@@ -455,7 +453,7 @@ function parseMetadata(code, data) {
     console.log(data);
   }
 
-  if(data._status.metadata.status !== "success") {
+  if (data._status.metadata.status !== "success") {
     const message = data._status.metadata.message;
     const reason = data._status.metadata.reason;
     let code = data._status.metadata.code;
@@ -466,12 +464,12 @@ function parseMetadata(code, data) {
     metadataDiv.innerHTML = `<div id="error_div"><h4>${reason}</h4></div><div id="userActionDiv"></div>`;
     const userActionDiv = metadataDiv.querySelector("#userActionDiv");
 
-    for (let i = 0; i < userAction.length ; i++) {
+    for (let i = 0; i < userAction.length; i++) {
       if (userAction[i] === "remove") {
         const removeButton = document.createElement("button");
         removeButton.classList.add("button-main");
         removeButton.innerText = "Remove dataset";
-        removeButton.addEventListener('click', async (e) => {
+        removeButton.addEventListener("click", async (e) => {
           console.log(e);
           console.log(data._status.metadata);
 
@@ -490,7 +488,7 @@ function parseMetadata(code, data) {
         const retryButton = document.createElement("button");
         retryButton.classList.add("button-main");
         retryButton.innerText = "Retry";
-        retryButton.addEventListener('click', async (e) => {
+        retryButton.addEventListener("click", async (e) => {
           console.log(e);
           console.log(data._status.metadata);
 
@@ -639,7 +637,7 @@ function parseMetadata(code, data) {
         sinceTimePeriod ? sinceInput.classList.remove("hidden") : sinceInput.classList.add("hidden");
         untilTimePeriod ? untilInput.classList.remove("hidden") : untilInput.classList.add("hidden");
         lastTimePeriod ? lastInput.classList.remove("hidden") : lastInput.classList.add("hidden");
-        
+
         const anyTimeControlsChecked = sinceTimePeriod || untilTimePeriod || lastTimePeriod;
 
         const timeCheckboxes = inner.querySelectorAll(`input[name="time"]`);
@@ -711,7 +709,6 @@ async function fetchAllMetadata() {
         // fetchWithRetry(`${BASE_URL}/${code}?geo=null`)
         fetchBackendMetadata(code, handleMetadataResponse)
           .then((metadataResponse) => {
-
             console.log("metadataResponse", metadataResponse);
 
             // copy all properties except 'data'
@@ -802,7 +799,7 @@ async function saveAllMetadata() {
     if (!res.ok || !data.success) {
       // Validation or server error
       console.error("Validation failed:", data.errors);
-      alert(`Failed to save metadata:\n\n- ${data.errors?.join('\n- ')}`);
+      alert(`Failed to save metadata:\n\n- ${data.errors?.join("\n- ")}`);
       return false;
     }
 
@@ -817,14 +814,14 @@ async function saveAllMetadata() {
 const fetchMetadataBtn = document.getElementById("fetchMetadataBtn");
 const saveMetadataBtn = document.getElementById("saveMetadataBtn");
 
-fetchMetadataBtn.onclick = async() => {
+fetchMetadataBtn.onclick = async () => {
   fetchMetadataBtn.disabled = true;
   fetchMetadataBtn.style.cursor = "wait";
   await fetchAllMetadata();
   renderButtons();
 };
 
-saveMetadataBtn.onclick = async() => {
+saveMetadataBtn.onclick = async () => {
   saveMetadataBtn.disabled = true;
   saveMetadataBtn.style.cursor = "wait";
   const success = await saveAllMetadata();
@@ -847,7 +844,6 @@ function renderButtons() {
   fetchMetadataBtn.style.cursor = "";
   saveMetadataBtn.disabled = false;
   saveMetadataBtn.style.cursor = "";
-  
 
   if (!allFetched) {
     fetchMetadataBtn.classList.remove("hidden");

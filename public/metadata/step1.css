@@ -118,7 +118,6 @@ tr.selected-row {
   background-color: #99ccff !important;
 }
 
-
 #main-container {
   display: grid;
   grid-template-columns: 50% 50%;
