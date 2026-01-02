@@ -23,7 +23,7 @@ svg {
   cursor: pointer;
 }
 
-/* Layout containers */
+/* layout containers */
 #main-container {
   display: grid;
   min-height: 100vh;
@@ -50,9 +50,10 @@ svg {
   height: 100%;
 }
 
-/* Tooltips */
+/* tooltips */
 .chart-close-button {
   position: absolute;
+  cursor: pointer;
   top: 10px;
   right: 10px;
   z-index: 1;
@@ -91,7 +92,7 @@ svg {
   margin-top: 10px;
 }
 
-/* Map info panel */
+/* map info panel */
 #info-panel {
   position: absolute;
   top: 10px;
@@ -101,44 +102,75 @@ svg {
   padding: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   font-size: 0.9rem;
-  max-width: 180px;
+  /* max-width: 180px; */
 }
 
-#info-title {
-  font-weight: bold;
+/* legend */
+.legend-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
 }
 
-#color-legend {
-  margin-top: 10px;
-}
-#time-slider-container {
-  margin-top: 12px;
-}
-
-#info-description {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 200px; /* show beside info-panel */
-  background: rgba(255, 255, 255);
-  border-radius: 8px;
-  padding: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  font-size: 0.9rem;
-}
-
-#info-help {
-  background-color: #0077cc;
-  color: white;
-  border-radius: 50%;
-  width: 17px;
-  height: 17px;
-  text-align: center;
+.legend-row--collapsed {
   cursor: pointer;
-  user-select: none;
 }
 
-/* Controls layout */
+.legend-row--nodata {
+  margin-top: 6px;
+}
+
+.legend-box {
+  width: 18px;
+  height: 14px;
+  margin-right: 6px;
+}
+
+.legend-box-right {
+  width: 18px;
+  height: 14px;
+  margin-left: 6px;
+}
+
+.legend-box--nodata {
+  background: #cccccc;
+}
+
+.legend-label {
+  white-space: nowrap;
+}
+
+.legend-chevron {
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+  position: relative;
+}
+
+.legend-chevron::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.expanded .legend-chevron::before {
+  transform: rotate(45deg);
+}
+
+.collapsed .legend-chevron::before {
+  transform: rotate(-45deg);
+}
+
+.legend-toggle {
+  cursor: pointer;
+}
+
+/* controls layout */
 #controls-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,8 +180,8 @@ svg {
   overflow: auto;
 }
 
-/* Control panel styling */
 .control-panel {
+  word-break: break-word;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -203,6 +235,31 @@ svg {
   white-space: normal;
 }
 
+#slider-text-div {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+#dataset-description {
+  display: inline;
+}
+
+.dataset-description-toggle {
+  margin-left: 6px;
+  cursor: pointer;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.dataset-description-toggle:hover {
+  text-decoration: underline;
+}
+
+.show-toggle {
+  word-break: normal;
+}
+
 #edit-metadata-button {
   max-width: 120px;
   padding: 0.4rem 0.75rem;
@@ -226,11 +283,11 @@ svg {
   background-color: #fff;
 }
 
-/* Responsive layouts */
-/* Desktop */
+/* mobile layout */
 @media (min-width: 768px) {
   #main-container {
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     grid-template-columns: 60% 40%;
     grid-template-rows: 30% 70%;
     grid-template-areas:
@@ -244,7 +301,6 @@ svg {
   }
 }
 
-/* Mobile */
 @media (max-width: 767px) {
   #main-container {
     grid-template-columns: 1fr;
@@ -268,7 +324,7 @@ svg {
   }
 }
 
-/* Helper classes */
+/* helper classes */
 .strike {
   text-decoration: line-through;
 }

@@ -216,6 +216,7 @@ let state = {
   chartedCountries: new Set(), // Stores selected countries for line chart
   currentSelected: null, // Currently selected country geocode for bar chart
   timeColorCache: {}, // Cache for time-based valuesByGeo
+  expandedLegend: window.innerWidth > 768, // legend is expanded on larger devices
 };
 
 let timeMatchLevel = "none"; // Default value
@@ -1901,6 +1902,106 @@ function findClosestTimeMatch(selectedTime, availableTimes, timeMatchLevel) {
   return null;
 }
 
+function formatRange(from, to) {
+  return from.toFixed(0) === to.toFixed(0)
+    ? `${from.toFixed(2)}-${to.toFixed(2)}`
+    : `${from.toFixed(0)}-${to.toFixed(0)}`;
+}
+
+function renderColorLegend(scale) {
+  const legend = d3.select("#color-legend");
+
+  const thresholds = scale.quantiles();
+  const domain = scale.domain();
+
+  const allThresholds = [domain[0], ...thresholds, domain[domain.length - 1]];
+
+  const unit = shorten(state.ylabel) || "";
+
+  function renderLegend() {
+    legend.html("");
+    legend
+      .classed("expanded", state.expandedLegend)
+      .classed("collapsed", !state.expandedLegend);
+
+    if (!state.expandedLegend) {
+      // COLLAPSED VIEW
+      const row = legend
+        .append("div")
+        .attr("class", "legend-row legend-row--collapsed")
+        .on("click", () => {
+          state.expandedLegend = true;
+          renderLegend();
+        });
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", window.eurovault.colorPalette[0]);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(
+          `${formatRange(
+            allThresholds[0],
+            allThresholds[allThresholds.length - 1]
+          )}${unit ? ` ${unit}` : ""}`
+        );
+
+      row
+        .append("div")
+        .attr("class", "legend-box-right")
+        .style("background", window.eurovault.colorPalette[window.eurovault.colorPalette.length - 1]);
+
+      row.append("div").attr("class", "legend-chevron");
+
+      return;
+    }
+
+    // EXPANDED VIEW
+    allThresholds.forEach((_, i) => {
+      if (i === allThresholds.length - 1) return;
+
+      const from = allThresholds[i];
+      const to = allThresholds[i + 1];
+
+      const row = legend.append("div").attr("class", "legend-row");
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", window.eurovault.colorPalette[i]);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(`${formatRange(from, to)}${unit ? ` ${unit}` : ""}`);
+
+      if (i === 0) {
+        row
+          .classed("legend-toggle", true)
+          .on("click", () => {
+            state.expandedLegend = false;
+            renderLegend();
+          })
+          .append("div")
+          .attr("class", "legend-chevron");
+      }
+    });
+
+    // NO DATA ROW
+    const noDataRow = legend
+      .append("div")
+      .attr("class", "legend-row legend-row--nodata");
+
+    noDataRow.append("div").attr("class", "legend-box legend-box--nodata");
+
+    noDataRow.append("div").attr("class", "legend-label").text("No data / 0");
+  }
+  renderLegend();
+}
+
 function updateMapColors(updateSource = null, selectedTime = null) {
   if (!["dataset", "filter", "timeSlider", "external", "init"].includes(updateSource)) {
     throw new Error(`Unknown update source: ${updateSource}`);
@@ -1961,6 +2062,7 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       return scale(val);
     });
 
+  const tooltip = d3.select("#map-tooltip");
   window.eurovault.mapContainer
     .selectAll("path")
     .on("mouseover", function (event, d) {
@@ -1969,7 +2071,6 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
-      const tooltip = d3.select("#map-tooltip");
       tooltip
         .style("display", "block")
         .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
@@ -1980,96 +2081,63 @@ function updateMapColors(updateSource = null, selectedTime = null) {
       const countryName = d.properties.NAME_ENGL;
       const val = valuesByGeo[geoCode] ?? 0;
 
-      const tooltip = d3.select("#map-tooltip");
       tooltip
         .style("display", "block")
         .html(`<strong>${countryName}</strong><br/>Value: ${val || "0"}`);
     })
     .on("mousemove", function (event) {
-      d3.select("#map-tooltip")
+      tooltip
         .style("left", event.pageX + "px")
         .style("top", event.pageY - 40 + "px");
     })
     .on("mouseout", function () {
       d3.select(this).style("stroke-width", 0.25);
-      d3.select("#map-tooltip").style("display", "none");
+      tooltip.style("display", "none");
     });
 
-  // 6. Update info panel
-  const dataset = document.getElementById("dataset-select").value;
-  const meta = window.eurovault.state.metadata[dataset];
-  const label = meta.label || dataset;
-  const description = meta.description || "";
+  // update info panel
+  if (["dataset", "external", "init"].includes(updateSource)) {
+    const description = state.metadata[state.selectedDataset].description || "";
+    const descPanel = d3.select("#dataset-description").html("");
 
-  // Set title and label
-  d3.select("#info-label").text(label);
+    const maxChars = 40;
+    const shortText =
+      description.length > maxChars
+        ? description.slice(0, maxChars) + "..."
+        : description;
 
-  // Handle description panel
-  const descPanel = d3.select("#info-description");
-  descPanel.html(""); // Clear old
-  descPanel.classed("hidden", true); // Hide by default
-  const helpIcon = d3.select("#info-help");
+    // dataset description is collapsed by default
+    let expanded = false;
 
-  if (description) {
-    descPanel.text(description);
+    const textSpan = descPanel
+      .append("span")
+      .attr("class", "dataset-description-text")
+      .text(shortText);
 
-    helpIcon
-      .on("mouseenter", () => descPanel.classed("hidden", false))
-      .on("mouseleave", () => descPanel.classed("hidden", true))
-      .classed("hidden", false)
-      .classed("inline-block", true);
-  } else {
-    helpIcon.classed("hidden", true).classed("inline-block", false);
+    if (description.length > maxChars) {
+      descPanel
+        .append("a")
+        .attr("href", "#")
+        .attr("class", "dataset-description-toggle")
+        .text("Show more")
+        .on("click", (event) => {
+          event.preventDefault();
+          expanded = !expanded;
+          textSpan.text(expanded ? description : shortText);
+          d3.select(event.currentTarget).text(
+            expanded ? "Show less" : "Show more"
+          );
+        });
+    }
   }
 
-  // 7. Update color legend
-  const legend = d3.select("#color-legend").html("");
-
-  if(!window.eurovault.state.filteredData.length) {
-    // No reason to display data-specific information
-    // When there is no data
+  if (!state.filteredData.length) {
+    // no reason to display data-specific information
+    // when there is no data
     return;
   }
 
-  const thresholds = scale.quantiles();
-  const unit = shorten(window.eurovault.state.ylabel) || "";
-
-  const allThresholds = [
-    d3.min(nonZeroValues),
-    ...thresholds,
-    d3.max(nonZeroValues),
-  ];
-
-  allThresholds.forEach((val, i) => {
-    if (i === allThresholds.length - 1) return; // Skip last point (no range to next)
-
-    const from = allThresholds[i];
-    const to = allThresholds[i + 1];
-    const color = window.eurovault.colorPalette[i];
-    const label =
-      from.toFixed(0) === to.toFixed(0)
-        ? `${from.toFixed(2)}-${to.toFixed(2)}`
-        : `${from.toFixed(0)}-${to.toFixed(0)}`;
-
-    legend
-      .append("div")
-      .style("display", "flex")
-      .style("align-items", "center")
-      .style("margin-bottom", "2px").html(`
-      <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
-      <div>${unit ? `${label} ${unit}` : label}</div>
-    `);
-  });
-
-  // Add grey color for zero/missing
-  legend
-    .append("div")
-    .style("display", "flex")
-    .style("align-items", "center")
-    .style("margin-top", "6px")
-    .html(
-      `<div style="width: 18px; height: 14px; background:#cccccc; margin-right:6px;"></div><div>No data / 0</div>`
-    );
+  renderColorLegend(scale);
 
   // Update Time Slider
   if (updateSource === "timeSlider") {
