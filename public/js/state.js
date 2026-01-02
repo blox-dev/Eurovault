@@ -12,6 +12,7 @@ export let state = {
   chartedCountries: new Set(), // stores selected countries for line chart
   currentSelected: null, // currently selected country geocode for bar chart
   timeColorCache: {}, // cache for time-based valuesByGeo
+  expandedLegend: window.innerWidth > 768, // legend is expanded on larger devices
 };
 
 let timeMatchLevel = "none"; // default value

@@ -330,34 +330,46 @@ function updateMapColors(updateSource = null, selectedTime = null) {
   // update info panel
   const dataset = document.getElementById("dataset-select").value;
   const meta = state.metadata[dataset];
-  const label = meta.label || dataset;
-  const description = meta.description || "";
 
-  // set title and label
-  d3.select("#info-label").text(label);
+  if (["dataset", "external", "init"].includes(updateSource)) {
+    const description = meta.description || "";
+    const descPanel = d3.select("#dataset-description").html("");
 
-  // handle description panel
-  const descPanel = d3.select("#info-description");
-  descPanel.html("");
-  descPanel.classed("hidden", true); // hide by default
-  const helpIcon = d3.select("#info-help");
+    const maxChars = 40;
+    const shortText =
+      description.length > maxChars
+        ? description.slice(0, maxChars) + "..."
+        : description;
 
-  if (description) {
-    descPanel.text(description);
+    // dataset description is collapsed by default
+    let expanded = false;
 
-    helpIcon
-      .on("mouseenter", () => descPanel.classed("hidden", false))
-      .on("mouseleave", () => descPanel.classed("hidden", true))
-      .classed("hidden", false)
-      .classed("inline-block", true);
-  } else {
-    helpIcon.classed("hidden", true).classed("inline-block", false);
+    const textSpan = descPanel
+      .append("span")
+      .attr("class", "dataset-description-text")
+      .text(shortText);
+
+    if (description.length > maxChars) {
+      descPanel
+        .append("a")
+        .attr("href", "#")
+        .attr("class", "dataset-description-toggle")
+        .text("Show more")
+        .on("click", (event) => {
+          event.preventDefault();
+          expanded = !expanded;
+          textSpan.text(expanded ? description : shortText);
+          d3.select(event.currentTarget).text(
+            expanded ? "Show less" : "Show more"
+          );
+        });
+    }
   }
 
   // update color legend
   const legend = d3.select("#color-legend").html("");
 
-  if(!state.filteredData.length) {
+  if (!state.filteredData.length) {
     // no reason to display data-specific information
     // when there is no data
     return;
@@ -372,36 +384,95 @@ function updateMapColors(updateSource = null, selectedTime = null) {
     d3.max(nonZeroValues),
   ];
 
-  allThresholds.forEach((val, i) => {
-    if (i === allThresholds.length - 1) return; // skip last point (no range to next)
+  const minVal = allThresholds[0];
+  const maxVal = allThresholds[allThresholds.length - 1];
+  const firstColor = colorPalette[0];
+  const lastColor = colorPalette[colorPalette.length - 1];
 
-    const from = allThresholds[i];
-    const to = allThresholds[i + 1];
-    const color = colorPalette[i];
-    const label =
-      from.toFixed(0) === to.toFixed(0)
-        ? `${from.toFixed(2)}-${to.toFixed(2)}`
-        : `${from.toFixed(0)}-${to.toFixed(0)}`;
+  const formatRange = (from, to) =>
+    from.toFixed(0) === to.toFixed(0)
+      ? `${from.toFixed(2)}-${to.toFixed(2)}`
+      : `${from.toFixed(0)}-${to.toFixed(0)}`;
 
-    legend
+  function renderLegend() {
+    legend.html("");
+      legend
+    .classed("expanded", state.expandedLegend)
+    .classed("collapsed", !state.expandedLegend);
+
+    if (!state.expandedLegend) {
+      // COLLAPSED VIEW
+      const row = legend
+        .append("div")
+        .attr("class", "legend-row legend-row--collapsed")
+        .on("click", () => {
+          state.expandedLegend = true;
+          renderLegend();
+        });
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", firstColor);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(`${formatRange(minVal, maxVal)}${unit ? ` ${unit}` : ""}`);
+
+      row
+        .append("div")
+        .attr("class", "legend-box-right")
+        .style("background", lastColor);
+
+      row.append("div").attr("class", "legend-chevron");
+
+      return;
+    }
+
+    // EXPANDED VIEW
+    allThresholds.forEach((_, i) => {
+      if (i === allThresholds.length - 1) return;
+
+      const from = allThresholds[i];
+      const to = allThresholds[i + 1];
+
+      const row = legend.append("div").attr("class", "legend-row");
+
+      row
+        .append("div")
+        .attr("class", "legend-box")
+        .style("background", colorPalette[i]);
+
+      row
+        .append("div")
+        .attr("class", "legend-label")
+        .html(`${formatRange(from, to)}${unit ? ` ${unit}` : ""}`);
+
+      if (i === 0) {
+        row
+          .classed("legend-toggle", true)
+          .on("click", () => {
+            state.expandedLegend = false;
+            renderLegend();
+          })
+          .append("div")
+          .attr("class", "legend-chevron");
+      }
+    });
+
+    // NO DATA ROW
+    const noDataRow = legend
       .append("div")
-      .style("display", "flex")
-      .style("align-items", "center")
-      .style("margin-bottom", "2px").html(`
-      <div style="width: 18px; height: 14px; background:${color}; margin-right:6px;"></div>
-      <div>${unit ? `${label} ${unit}` : label}</div>
-    `);
-  });
+      .attr("class", "legend-row legend-row--nodata");
 
-  // add grey color for zero/missing
-  legend
-    .append("div")
-    .style("display", "flex")
-    .style("align-items", "center")
-    .style("margin-top", "6px")
-    .html(
-      `<div style="width: 18px; height: 14px; background:#cccccc; margin-right:6px;"></div><div>No data / 0</div>`
-    );
+    noDataRow.append("div").attr("class", "legend-box legend-box--nodata");
+
+    noDataRow.append("div").attr("class", "legend-label").text("No data / 0");
+  }
+
+  // initial render
+  renderLegend();
 
   // update time slider
   if (updateSource === "timeSlider") {
